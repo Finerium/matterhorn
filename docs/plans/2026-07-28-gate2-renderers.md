@@ -30,7 +30,7 @@ day one. Porting rules bind (blueprint 4.1): port, do not redesign.
   them (they are quarantined seeds, deleted at Gate C; the sources they cite live in the
   seed root's own sources.json, never in `content/`).
 - **Screenshot harness.** A dev-only Vite entry (`app/harness.html` + `app/src/harness/`)
-  renders one component per URL query (`?panel=claim_map&fixture=mbg-stop&lang=en&theme=light`),
+  renders one component per URL query (`?panel=claim_map&narrative=mbg-stop&lang=en&theme=light`),
   loading fixture JSON via fetch (no static import). Excluded from production builds by
   mode flag; the import-graph test (`tests/unit/no-fixtures-in-app.spec.ts`) asserts no
   `app/src` file statically imports from `tests/`.
