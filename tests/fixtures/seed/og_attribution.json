@@ -1,0 +1,30 @@
+{
+  "seed": true,
+  "policy": "Seed root: no og images were fetched and none ship. Every entry is status fallback, so the styled placeholder renders and the outlet name plus outbound link carry the attribution. The shipping policy (blueprint 7.3, C7) is that cached og images render only inside attributed link previews; this root exercises the fallback path of that policy and nothing else.",
+  "entries": [
+    {
+      "narrative_id": "mbg-stop",
+      "image_url_original": null,
+      "outlet": "Tribunnews",
+      "fetched_at": null,
+      "status": "fallback",
+      "note": "Seed placeholder. No image was fetched for the seed root, so the styled placeholder renders."
+    },
+    {
+      "narrative_id": "mbg-poisoning",
+      "image_url_original": null,
+      "outlet": "CNN Indonesia",
+      "fetched_at": null,
+      "status": "fallback",
+      "note": "Seed placeholder. No image was fetched for the seed root, so the styled placeholder renders."
+    },
+    {
+      "narrative_id": "ppn-panic",
+      "image_url_original": null,
+      "outlet": "Bisnis.com",
+      "fetched_at": null,
+      "status": "fallback",
+      "note": "Seed placeholder. No image was fetched for the seed root, so the styled placeholder renders."
+    }
+  ]
+}

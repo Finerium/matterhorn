@@ -1,0 +1,485 @@
+{
+  "seed": true,
+  "id": "ppn-panic",
+  "pack": "id",
+  "lean": "gov",
+  "status": "published",
+  "headline": {
+    "en": "12% VAT Makes Everything More Expensive",
+    "id": "PPN 12% bikin semua harga naik"
+  },
+  "original": {
+    "text": "PPN 12% bikin semua harga naik (viral forward)",
+    "lang": "id"
+  },
+  "outlet": "Bisnis.com",
+  "published_date": "2025-01-02",
+  "url": "https://ekonomi.bisnis.com/read/20250102/259/1828262/ppn-12-barang-mewah-berlaku-penuh-mulai-februari-2025-begini-penjelasannya",
+  "og": {
+    "image_path": null,
+    "fetched_at": null,
+    "attribution": "Seed placeholder, no image fetched. Card art belongs to Bisnis.com.",
+    "fallback": true
+  },
+  "tags": [
+    "scope-inflation",
+    "missing-link",
+    "emotional-trigger"
+  ],
+  "counts": {
+    "missing": 1,
+    "unsourced": 1,
+    "disputed": 0,
+    "supported": 0,
+    "hidden": 2
+  },
+  "provenance": {
+    "analyzed_by": "seed-fixture",
+    "narrated_by": "seed-fixture",
+    "source_count": 4,
+    "computed_at": "2026-07-28",
+    "run_id": "seed-0"
+  },
+  "family": {
+    "skeleton": "a rule restricted to one class of goods narrated as if it applied to the whole basket",
+    "members": [
+      {
+        "outlet": "Bisnis.com",
+        "headline": "PPN 12% Barang Mewah Berlaku Penuh mulai Februari 2025, Begini Penjelasannya",
+        "url": "https://ekonomi.bisnis.com/read/20250102/259/1828262/ppn-12-barang-mewah-berlaku-penuh-mulai-februari-2025-begini-penjelasannya",
+        "date": "2025-01-02"
+      },
+      {
+        "outlet": "Antara News",
+        "headline": "Kemenkeu rilis aturan PPN 12 persen hanya untuk barang mewah",
+        "url": "https://www.antaranews.com/berita/4559522/kemenkeu-rilis-aturan-ppn-12-persen-hanya-untuk-barang-mewah",
+        "date": "2025-01-01"
+      }
+    ]
+  },
+  "scaffold_default": "S0",
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "What step does the forward need between the rate change and higher prices for everything?",
+          "id": "Langkah apa yang dibutuhkan pesan berantai itu antara perubahan tarif dan naiknya semua harga?"
+        },
+        "options": [
+          {
+            "en": "A scope that covers the whole basket",
+            "id": "Cakupan yang meliputi seluruh keranjang belanja"
+          },
+          {
+            "en": "A louder forward",
+            "id": "Pesan berantai yang lebih keras"
+          },
+          {
+            "en": "A longer chain of shares",
+            "id": "Rantai penerusan yang lebih panjang"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "PMK 131/2024 sets the scope to luxury goods already under PPnBM, so the step the forward needs is the one the claim map marks as missing.",
+          "id": "PMK 131/2024 menetapkan cakupannya pada barang mewah yang sudah kena PPnBM, sehingga langkah yang dibutuhkan pesan itu adalah langkah yang ditandai peta klaim sebagai hilang."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "How much of the household basket does the 12 percent rate reach?",
+          "id": "Seberapa besar bagian keranjang rumah tangga yang dijangkau tarif 12 persen?"
+        },
+        "options": [
+          {
+            "en": "The whole basket",
+            "id": "Seluruh keranjang"
+          },
+          {
+            "en": "The luxury goods already under PPnBM",
+            "id": "Barang mewah yang sudah kena PPnBM"
+          },
+          {
+            "en": "Only imported goods",
+            "id": "Hanya barang impor"
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The scale panel places a luxury sliver against the basket. Its two figures are seed placeholders carrying the estimate flag, not measurements.",
+          "id": "Panel skala menempatkan irisan barang mewah terhadap keranjang itu. Dua angkanya adalah penanda sementara berbendera perkiraan, bukan hasil pengukuran."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "Who met the cost of the panic first?",
+          "id": "Siapa yang lebih dulu menanggung biaya kepanikan itu?"
+        },
+        "options": [
+          {
+            "en": "Households that changed their spending over a scope that never applied to them",
+            "id": "Rumah tangga yang mengubah belanjanya karena cakupan yang tidak pernah berlaku bagi mereka"
+          },
+          {
+            "en": "The tax office",
+            "id": "Kantor pajak"
+          },
+          {
+            "en": "Luxury retailers only",
+            "id": "Hanya peritel barang mewah"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The echo panel records weeks of mispriced fear after the clarifying regulation was already public.",
+          "id": "Panel gema mencatat berpekan-pekan kepanikan harga yang keliru setelah aturan penjelasnya sudah terbuka untuk umum."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before the reveal: how wide is the rule the forward is describing?",
+      "id": "Sebelum jawabannya dibuka: seberapa luas aturan yang digambarkan pesan berantai itu?"
+    },
+    "options": [
+      {
+        "en": "Everything in the basket",
+        "id": "Segala isi keranjang"
+      },
+      {
+        "en": "A luxury sliver of it",
+        "id": "Sepotong kecil barang mewah di dalamnya"
+      },
+      {
+        "en": "Nothing at all",
+        "id": "Tidak ada sama sekali"
+      }
+    ]
+  },
+  "panels": [
+    {
+      "type": "claim_map",
+      "el_id": "p-claim",
+      "spine": [
+        {
+          "el_id": "n1",
+          "label": {
+            "en": "VAT rises to 12 percent",
+            "id": "PPN naik menjadi 12 persen"
+          },
+          "value": {
+            "amount": 12,
+            "unit": "percent",
+            "display": {
+              "en": "12%",
+              "id": "12%"
+            },
+            "source_id": "id-pajak-pmk131",
+            "as_of": "2025-01-01"
+          }
+        },
+        {
+          "el_id": "n2",
+          "label": {
+            "en": "It applies to everything",
+            "id": "Aturan itu berlaku untuk semuanya"
+          }
+        },
+        {
+          "el_id": "n3",
+          "label": {
+            "en": "Everything gets more expensive",
+            "id": "Semua barang menjadi lebih mahal"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "el_id": "e0",
+          "from": "n1",
+          "to": "n2",
+          "status": "missing",
+          "ev": {
+            "quote": "“…berlaku penuh untuk barang mewah mulai Februari 2025.”",
+            "source_id": "id-bisnis-ppn-luxury",
+            "why": {
+              "en": "The clarifying regulation is public and predates most of the spread, and it restricts the rise to goods already under the luxury sales tax.",
+              "id": "Aturan penjelasnya terbuka untuk umum dan terbit sebelum sebagian besar penyebaran, dan aturan itu membatasi kenaikan pada barang yang sudah dikenai pajak penjualan barang mewah."
+            }
+          }
+        },
+        {
+          "el_id": "e1",
+          "from": "n2",
+          "to": "n3",
+          "status": "unsourced",
+          "ev": {
+            "quote": "No price pass through source appears in the forwarded variants.",
+            "why": {
+              "en": "The price level conclusion inherits the scope step, and that step carries no attribution.",
+              "id": "Kesimpulan tingkat harga mewarisi langkah cakupan, dan langkah itu tidak disertai atribusi."
+            }
+          }
+        }
+      ],
+      "hidden": [
+        {
+          "el_id": "h0",
+          "label": {
+            "en": "The luxury base was already under PPnBM",
+            "id": "Basis barang mewah sudah kena PPnBM"
+          },
+          "why_hidden": {
+            "en": "The affected base is narrow by construction, and the forward never says so.",
+            "id": "Basis yang terdampak sempit karena konstruksinya, dan pesan berantai itu tidak pernah mengatakannya."
+          },
+          "ev": {
+            "quote": "The 12 percent rate applies only to goods already subject to the luxury sales tax.",
+            "source_id": "id-pajak-pmk131"
+          }
+        },
+        {
+          "el_id": "h1",
+          "label": {
+            "en": "Rp38.6T stimulus announced alongside",
+            "id": "Stimulus Rp38,6 T diumumkan berbarengan"
+          },
+          "value": {
+            "amount": 38.6,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp38.6T",
+              "id": "Rp38,6 T"
+            },
+            "source_id": "id-setneg-ppn-stimulus",
+            "as_of": "2025-01-01"
+          },
+          "why_hidden": {
+            "en": "Context announced in the same breath as the rate, and omitted from every forwarded variant.",
+            "id": "Konteks yang diumumkan bersamaan dengan tarifnya, dan dihilangkan dari setiap salinan yang diteruskan."
+          },
+          "ev": {
+            "quote": "Stimulus package of Rp38.6T stated in the presidential press transcript.",
+            "source_id": "id-setneg-ppn-stimulus"
+          }
+        }
+      ]
+    },
+    {
+      "type": "scale_check",
+      "el_id": "p-scale",
+      "denominator": {
+        "label": {
+          "en": "Household consumption basket, illustrative denominator",
+          "id": "Keranjang konsumsi rumah tangga, denominator ilustratif"
+        },
+        "value": {
+          "amount": 100,
+          "unit": "percent",
+          "display": {
+            "en": "100% of the basket",
+            "id": "100% keranjang"
+          },
+          "source_id": "id-seed-illustrative-basket",
+          "flags": [
+            "estimate"
+          ]
+        }
+      },
+      "segments": [
+        {
+          "el_id": "sg0",
+          "label": {
+            "en": "Luxury goods already under PPnBM",
+            "id": "Barang mewah yang sudah kena PPnBM"
+          },
+          "value": {
+            "amount": 4,
+            "unit": "percent",
+            "display": {
+              "en": "4% of the basket",
+              "id": "4% keranjang"
+            },
+            "source_id": "id-seed-illustrative-basket",
+            "flags": [
+              "estimate"
+            ]
+          }
+        }
+      ],
+      "takeaway": {
+        "en": "A rate change on a luxury sliver cannot reprice the whole basket, and the scope was public from day two. Both figures on this panel are seed placeholders, flagged as estimates until they are grounded on a real base.",
+        "id": "Perubahan tarif pada sepotong kecil barang mewah tidak dapat menetapkan ulang harga seluruh keranjang, dan cakupannya sudah terbuka sejak hari kedua. Kedua angka pada panel ini adalah penanda sementara, diberi bendera perkiraan sampai keduanya dipijakkan pada basis nyata."
+      },
+      "context_chips": [
+        {
+          "el_id": "cx0",
+          "label": {
+            "en": "Stimulus announced alongside the rate",
+            "id": "Stimulus yang diumumkan bersama tarif"
+          },
+          "value": {
+            "amount": 38.6,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp38.6T",
+              "id": "Rp38,6 T"
+            },
+            "source_id": "id-setneg-ppn-stimulus",
+            "as_of": "2025-01-01"
+          }
+        }
+      ]
+    }
+  ],
+  "echo": {
+    "type": "echo",
+    "el_id": "p-echo",
+    "current_motif": {
+      "en": "A restricted measure narrated as universal, with the alarm outliving the clarification.",
+      "id": "Aturan terbatas yang diceritakan seolah berlaku umum, dengan kecemasan yang hidup lebih lama daripada penjelasannya."
+    },
+    "historical": {
+      "case_id": "B-04",
+      "motif": {
+        "en": "Scope inflation on a tax rule, carried by forwarded messages.",
+        "id": "Inflasi cakupan pada aturan pajak, dibawa oleh pesan berantai."
+      },
+      "outcome": {
+        "en": "Documented outcome: weeks of mispriced fear followed, after PMK 131/2024 had already restricted the rise to luxury goods, and the clarification took a multi channel effort to travel.",
+        "id": "Hasil terdokumentasi: berpekan-pekan kepanikan harga yang keliru menyusul, setelah PMK 131/2024 sudah membatasi kenaikan itu pada barang mewah, dan penjelasannya perlu upaya lintas kanal untuk menyebar."
+      },
+      "citations": [
+        "id-bisnis-ppn-luxury",
+        "id-pajak-pmk131"
+      ]
+    },
+    "disclaimer_key": "echo_disclaimer"
+  },
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "The rate rise exists. The scope claim is where the alarm lives.",
+          "els": [
+            "p-claim",
+            "n1",
+            "n2"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "PMK 131/2024 restricts the 12 percent rate to luxury goods already under PPnBM, so the everything edge has no source behind it.",
+          "els": [
+            "e0",
+            "e1",
+            "h0"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "The forward priced the whole consumption basket, while the rule prices a luxury sliver of it.",
+          "els": [
+            "p-scale",
+            "sg0",
+            "h1"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Same motif, on file: a restricted measure narrated as universal, matched to case B-04 and cited, never predictive.",
+          "els": [
+            "p-echo"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Kenaikan tarifnya nyata. Klaim cakupannya adalah tempat kecemasan itu tinggal.",
+          "els": [
+            "p-claim",
+            "n1",
+            "n2"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "PMK 131/2024 membatasi tarif 12 persen pada barang mewah yang sudah kena PPnBM, sehingga tepi semuanya itu tidak punya sumber di belakangnya.",
+          "els": [
+            "e0",
+            "e1",
+            "h0"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Pesan berantai itu menghargai seluruh keranjang konsumsi, sedangkan aturannya menghargai sepotong kecil barang mewah di dalamnya.",
+          "els": [
+            "p-scale",
+            "sg0",
+            "h1"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Motif yang sama, sudah terarsip: aturan terbatas yang diceritakan seolah berlaku umum, dicocokkan dengan kasus B-04 dan dikutip, tidak pernah meramal.",
+          "els": [
+            "p-echo"
+          ]
+        }
+      ]
+    }
+  },
+  "manifest": {
+    "run_id": "seed-0",
+    "generated_at": "2026-07-28T00:00:00Z",
+    "steps": [
+      {
+        "role": "A5",
+        "model": "seed-fixture",
+        "started_at": "2026-07-28T00:00:00Z",
+        "finished_at": "2026-07-28T00:00:01Z",
+        "input_hash": "seed-fixture"
+      },
+      {
+        "role": "A7",
+        "model": "seed-fixture",
+        "started_at": "2026-07-28T00:00:01Z",
+        "finished_at": "2026-07-28T00:00:02Z",
+        "input_hash": "seed-fixture"
+      },
+      {
+        "role": "A10",
+        "model": "seed-fixture",
+        "started_at": "2026-07-28T00:00:02Z",
+        "finished_at": "2026-07-28T00:00:03Z",
+        "input_hash": "seed-fixture"
+      },
+      {
+        "role": "A11",
+        "model": "seed-fixture",
+        "started_at": "2026-07-28T00:00:03Z",
+        "finished_at": "2026-07-28T00:00:04Z",
+        "input_hash": "seed-fixture"
+      }
+    ],
+    "gates": {
+      "symmetry": {
+        "verdict": "pass",
+        "token": "625c381ba568811cd5b1a47761491ead57a6cc89f4d915505570ae2662477b36"
+      },
+      "fidelity": {
+        "verdict": "pass",
+        "token": "625c381ba568811cd5b1a47761491ead57a6cc89f4d915505570ae2662477b36"
+      }
+    }
+  }
+}

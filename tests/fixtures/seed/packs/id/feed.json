@@ -1,0 +1,20 @@
+{
+  "seed": true,
+  "pack": "id",
+  "updated_at": "2026-07-28T00:00:00Z",
+  "items": [
+    {
+      "narrative_id": "mbg-stop",
+      "slot": "hero"
+    },
+    {
+      "narrative_id": "mbg-poisoning",
+      "slot": "compact"
+    },
+    {
+      "narrative_id": "ppn-panic",
+      "slot": "compact",
+      "via_dissect": true
+    }
+  ]
+}

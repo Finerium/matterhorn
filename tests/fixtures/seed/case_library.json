@@ -1,0 +1,86 @@
+{
+  "seed": true,
+  "cases": [
+    {
+      "id": "B-01",
+      "title": {
+        "en": "Fabricated casualty claim",
+        "id": "Klaim korban yang direkayasa"
+      },
+      "period": "May 2019",
+      "motif": {
+        "en": "Moral shock carried by a count nobody could source.",
+        "id": "Kejutan moral yang dibawa angka yang tidak bisa dilacak sumbernya."
+      },
+      "documented_outcome": {
+        "en": "A claim of 60 killed circulated after the post election riots, and Komnas HAM later documented 10 unlawful killings.",
+        "id": "Klaim 60 orang tewas beredar setelah kerusuhan pascapemilu, dan Komnas HAM kemudian mendokumentasikan 10 pembunuhan di luar hukum."
+      },
+      "citations": [
+        "id-tempo-cekfakta-60",
+        "id-aljazeera-2019-riots",
+        "id-liputan6-amnesty-2019"
+      ]
+    },
+    {
+      "id": "B-02",
+      "title": {
+        "en": "Omnibus Law claim wave",
+        "id": "Gelombang klaim Omnibus Law"
+      },
+      "period": "Oct 2020",
+      "motif": {
+        "en": "Scope inflation alongside provisions that were never in the text.",
+        "id": "Inflasi cakupan berdampingan dengan pasal yang tidak pernah ada dalam naskahnya."
+      },
+      "documented_outcome": {
+        "en": "Kominfo catalogued 12 circulating claims about the law, among them that the minimum wage had been abolished, and nationwide demonstrations followed.",
+        "id": "Kominfo mendata 12 klaim yang beredar tentang undang-undang itu, di antaranya bahwa upah minimum dihapus, dan demonstrasi nasional menyusul."
+      },
+      "citations": [
+        "id-suara-kominfo-12hoax",
+        "id-kompas-omnibus-8hoax"
+      ]
+    },
+    {
+      "id": "B-03",
+      "title": {
+        "en": "Moral shock acceleration",
+        "id": "Akselerasi kejutan moral"
+      },
+      "period": "Aug 2025",
+      "motif": {
+        "en": "Moral shock compressing mobilisation into hours.",
+        "id": "Kejutan moral yang memampatkan mobilisasi menjadi hitungan jam."
+      },
+      "documented_outcome": {
+        "en": "A viral video mobilised protests within hours, and regional escalations included a DPRD building fire in Makassar that killed three people.",
+        "id": "Video viral memobilisasi protes dalam hitungan jam, dan eskalasi daerah mencakup kebakaran gedung DPRD di Makassar yang menewaskan tiga orang."
+      },
+      "citations": [
+        "id-detik-timeline-aug2025",
+        "id-jakartapost-makassar-fire"
+      ]
+    },
+    {
+      "id": "B-04",
+      "title": {
+        "en": "PPN scope inflation panic",
+        "id": "Kepanikan inflasi cakupan PPN"
+      },
+      "period": "Jan 2025",
+      "motif": {
+        "en": "Scope inflation plus urgency on a rule that had already been clarified.",
+        "id": "Inflasi cakupan ditambah desakan mendesak pada aturan yang sudah dijelaskan."
+      },
+      "documented_outcome": {
+        "en": "Alarm persisted for weeks after PMK 131/2024 restricted the rise to luxury goods already under the luxury sales tax.",
+        "id": "Kecemasan bertahan berpekan-pekan setelah PMK 131/2024 membatasi kenaikan itu pada barang mewah yang sudah dikenai pajak penjualan barang mewah."
+      },
+      "citations": [
+        "id-bisnis-ppn-luxury",
+        "id-pajak-pmk131"
+      ]
+    }
+  ]
+}

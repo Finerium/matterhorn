@@ -1,0 +1,49 @@
+{
+  "seed": true,
+  "symmetry": {
+    "gov": 4,
+    "neutral": 2,
+    "opp": 4,
+    "computed_at": "2026-07-28T00:00:00Z"
+  },
+  "metrics": [
+    {
+      "key": "audit_pass",
+      "label": {
+        "en": "Symmetry Auditor pass rate",
+        "id": "Tingkat kelulusan Auditor Simetri"
+      },
+      "kind": "design_target",
+      "value": "98.6%",
+      "run_id": "seed-0"
+    },
+    {
+      "key": "latency_median",
+      "label": {
+        "en": "Median time from the causal gate to a live dissection",
+        "id": "Waktu median dari gerbang kausal sampai diseksi tayang"
+      },
+      "kind": "design_target",
+      "value": "3h 41m",
+      "run_id": "seed-0"
+    },
+    {
+      "key": "orphan_numbers",
+      "label": {
+        "en": "Numbers rendered without a source identifier",
+        "id": "Angka yang ditampilkan tanpa identitas sumber"
+      },
+      "kind": "design_target",
+      "value": "0",
+      "run_id": "seed-0"
+    }
+  ],
+  "policy_65": {
+    "en": "Matterhorn takes no position on whether any protest, boycott, or campaign should happen. Echo surfaces the documented costs of acting on broken causal models; it never frames collective action itself as the harm. Protest can be legitimate on imperfect information; the product’s contribution is that participants and observers see the structure of what they are being told.",
+    "id": "Matterhorn tidak mengambil posisi tentang apakah suatu protes, boikot, atau kampanye sebaiknya terjadi. Echo memunculkan biaya terdokumentasi dari bertindak di atas model sebab akibat yang rusak; ia tidak pernah membingkai tindakan kolektif itu sendiri sebagai kerugiannya. Protes dapat sah dilakukan di atas informasi yang tidak sempurna; sumbangan produk ini adalah agar peserta dan pengamat melihat struktur dari apa yang sedang disampaikan kepada mereka."
+  },
+  "disclosure": {
+    "en": "Every dissection on this page was produced by an automated agent fleet and is labelled as such. Each artifact names the models that generated it, and the analysis is computed once, before anyone asks for it. These seed artifacts were transcribed from the design fixture data and are not published analysis.",
+    "id": "Setiap diseksi di halaman ini diproduksi oleh armada agen otomatis dan diberi label demikian. Tiap artefak menyebut model yang menghasilkannya, dan analisisnya dihitung sekali, sebelum ada yang memintanya. Artefak benih ini disalin dari data purwarupa desain dan bukan analisis yang diterbitkan."
+  }
+}

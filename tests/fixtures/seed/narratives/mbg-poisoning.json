@@ -1,0 +1,579 @@
+{
+  "seed": true,
+  "id": "mbg-poisoning",
+  "pack": "id",
+  "lean": "opp",
+  "status": "published",
+  "headline": {
+    "en": "BGN Chief: MBG Poisoning Victims Reach 6,517",
+    "id": "Kepala BGN: Korban Keracunan MBG Capai 6.517 Orang"
+  },
+  "original": {
+    "text": "Kepala BGN: korban keracunan MBG capai 6.517 orang",
+    "lang": "id"
+  },
+  "outlet": "CNN Indonesia",
+  "published_date": "2025-10-01",
+  "url": "https://www.cnnindonesia.com/nasional/20251001125738-20-1279693/kepala-bgn-korban-keracunan-mbg-capai-6517-orang-sejak-januari-2025",
+  "og": {
+    "image_path": null,
+    "fetched_at": null,
+    "attribution": "Seed placeholder, no image fetched. Card art belongs to CNN Indonesia.",
+    "fallback": true
+  },
+  "tags": [
+    "competing-counts",
+    "no-denominator",
+    "hidden-stakeholder"
+  ],
+  "counts": {
+    "missing": 0,
+    "unsourced": 0,
+    "disputed": 1,
+    "supported": 1,
+    "hidden": 2,
+    "conflicts": 3
+  },
+  "provenance": {
+    "analyzed_by": "seed-fixture",
+    "narrated_by": "seed-fixture",
+    "source_count": 4,
+    "computed_at": "2026-07-28",
+    "run_id": "seed-0"
+  },
+  "family": {
+    "skeleton": "one institution's running count published without the two counts that disagree with it",
+    "members": [
+      {
+        "outlet": "CNN Indonesia",
+        "headline": "Kepala BGN: Korban Keracunan MBG Capai 6.517 Orang Sejak Januari 2025",
+        "url": "https://www.cnnindonesia.com/nasional/20251001125738-20-1279693/kepala-bgn-korban-keracunan-mbg-capai-6517-orang-sejak-januari-2025",
+        "date": "2025-10-01"
+      },
+      {
+        "outlet": "Bloomberg Technoz",
+        "headline": "Beda Data KLB Keracunan MBG: BPOM vs BGN",
+        "url": "https://www.bloombergtechnoz.com/detail-news/85713/beda-data-klb-keracunan-mbg-bpom-vs-bgn",
+        "date": "2025-10-01"
+      },
+      {
+        "outlet": "CNN Indonesia",
+        "headline": "Data JPPI: Per September, 8.649 Anak Keracunan MBG",
+        "url": "https://www.cnnindonesia.com/nasional/20250929085833-20-1278711/data-jppi-per-september-8649-anak-keracunan-mbg",
+        "date": "2025-09-29"
+      }
+    ]
+  },
+  "scaffold_default": "S1",
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "What would have to be shown before incident counts support a claim about the program as a whole?",
+          "id": "Apa yang harus ditunjukkan sebelum jumlah insiden mendukung klaim tentang program secara keseluruhan?"
+        },
+        "options": [
+          {
+            "en": "A rate per meal served",
+            "id": "Tingkat kejadian per porsi yang disajikan"
+          },
+          {
+            "en": "A louder headline",
+            "id": "Judul yang lebih keras"
+          },
+          {
+            "en": "One more institution repeating the count",
+            "id": "Satu lembaga lagi yang mengulang angka itu"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The claim map marks that edge as disputed: no per meal rate is offered by any of the three counters.",
+          "id": "Peta klaim menandai tepi itu sebagai diperselisihkan: tidak ada tingkat per porsi yang ditawarkan oleh ketiga pencatat."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "Against what base should the largest official count be read?",
+          "id": "Terhadap basis apa angka resmi terbesar sebaiknya dibaca?"
+        },
+        "options": [
+          {
+            "en": "The number of articles about it",
+            "id": "Jumlah artikel tentangnya"
+          },
+          {
+            "en": "The daily meals the program serves",
+            "id": "Porsi harian yang disajikan program"
+          },
+          {
+            "en": "The number of institutions counting",
+            "id": "Jumlah lembaga yang mencatat"
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The scale panel places the largest official count against the registered beneficiary base of 63.13M.",
+          "id": "Panel skala menempatkan angka resmi terbesar terhadap basis 63,13 juta penerima terdaftar."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "Who meets the consequence of an unresolved count first?",
+          "id": "Siapa yang lebih dulu menghadapi akibat dari angka yang tidak pernah direkonsiliasi?"
+        },
+        "options": [
+          {
+            "en": "Families whose children eat the meals",
+            "id": "Keluarga yang anaknya memakan porsi itu"
+          },
+          {
+            "en": "The national desk editors",
+            "id": "Redaktur meja nasional"
+          },
+          {
+            "en": "Nobody in particular",
+            "id": "Tidak ada pihak tertentu"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The households served daily are what all three tallies are counting, so they meet the safety question first.",
+          "id": "Rumah tangga yang dilayani setiap hari adalah objek hitungan ketiga rekapitulasi itu, sehingga mereka lebih dulu menghadapi pertanyaan keselamatan."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before the reveal: where is the weakest edge? Tap it.",
+      "id": "Sebelum jawabannya dibuka: di mana tepi terlemahnya? Ketuk."
+    },
+    "options": [
+      {
+        "en": "Incidents happened",
+        "id": "Insiden terjadi"
+      },
+      {
+        "en": "The counts agree",
+        "id": "Angka-angkanya sepakat"
+      },
+      {
+        "en": "The program is inherently unsafe",
+        "id": "Program itu tidak aman secara inheren"
+      }
+    ]
+  },
+  "panels": [
+    {
+      "type": "claim_map",
+      "el_id": "p-claim",
+      "spine": [
+        {
+          "el_id": "n1",
+          "label": {
+            "en": "Poisoning incidents occurred",
+            "id": "Insiden keracunan terjadi"
+          }
+        },
+        {
+          "el_id": "n2",
+          "label": {
+            "en": "Victims reach 6,517, the BGN running count",
+            "id": "Korban mencapai 6.517, angka berjalan BGN"
+          },
+          "value": {
+            "amount": 6517,
+            "unit": "count",
+            "display": {
+              "en": "6,517 cases",
+              "id": "6.517 kasus"
+            },
+            "source_id": "id-cnn-bgn-poisoning-6517",
+            "as_of": "2025-10-01",
+            "flags": [
+              "self_reported"
+            ]
+          }
+        },
+        {
+          "el_id": "n3",
+          "label": {
+            "en": "The program is inherently unsafe",
+            "id": "Program itu tidak aman secara inheren"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "el_id": "e0",
+          "from": "n1",
+          "to": "n2",
+          "status": "supported",
+          "ev": {
+            "quote": "“Korban keracunan MBG capai 6.517 orang.”",
+            "source_id": "id-cnn-bgn-poisoning-6517",
+            "why": {
+              "en": "The count exists in the BGN lineage, and the dueling panel shows its two siblings.",
+              "id": "Angka itu ada dalam garis pencatatan BGN, dan panel angka bersaing menampilkan dua saudaranya."
+            }
+          }
+        },
+        {
+          "el_id": "e1",
+          "from": "n2",
+          "to": "n3",
+          "status": "disputed",
+          "ev": {
+            "quote": "Counts on the record: 6,517 (BGN), 9,089 (BPOM), 8,649 (JPPI).",
+            "source_id": "id-bloombergtechnoz-bpom-9089",
+            "why": {
+              "en": "An inherent safety conclusion needs a rate rather than a raw count, and the raw counts disagree with each other.",
+              "id": "Kesimpulan tentang keamanan inheren membutuhkan tingkat kejadian, bukan angka mentah, dan angka mentahnya saling berselisih."
+            }
+          }
+        }
+      ],
+      "hidden": [
+        {
+          "el_id": "h0",
+          "label": {
+            "en": "Three official counts, three methods",
+            "id": "Tiga angka resmi, tiga metode"
+          },
+          "why_hidden": {
+            "en": "Who counts, what counts, and which period differ by counter, and the headline renders one lineage without its siblings.",
+            "id": "Siapa yang mencatat, apa yang dihitung, dan periode mana berbeda antar pencatat, dan judul itu menampilkan satu garis tanpa saudaranya."
+          },
+          "ev": {
+            "quote": "BPOM recorded 103 outbreak events with 9,089 affected across 83 districts in 28 provinces.",
+            "source_id": "id-bloombergtechnoz-bpom-9089"
+          }
+        },
+        {
+          "el_id": "h1",
+          "label": {
+            "en": "Per meal base rate absent",
+            "id": "Tingkat dasar per porsi tidak ada"
+          },
+          "value": {
+            "amount": 63130000,
+            "unit": "people",
+            "display": {
+              "en": "63.13M beneficiaries",
+              "id": "63,13 juta penerima"
+            },
+            "source_id": "id-antara-mbg-realisasi-mei2026",
+            "as_of": "2026-05-31"
+          },
+          "why_hidden": {
+            "en": "Even the largest count needs a denominator before a claim about the program as a whole follows.",
+            "id": "Bahkan angka terbesar pun membutuhkan denominator sebelum klaim tentang program secara keseluruhan dapat ditarik."
+          },
+          "ev": {
+            "quote": "63.13M registered beneficiaries as of May 2026.",
+            "source_id": "id-antara-mbg-realisasi-mei2026"
+          }
+        }
+      ]
+    },
+    {
+      "type": "dueling",
+      "el_id": "p-duel",
+      "counts": [
+        {
+          "el_id": "d0",
+          "who": "BGN",
+          "method": {
+            "en": "Running count of verified case reports, stated to a parliamentary commission.",
+            "id": "Angka berjalan dari laporan kasus terverifikasi, disampaikan ke komisi DPR."
+          },
+          "period": "since January 2025, stated 1 Oct 2025",
+          "value": {
+            "amount": 6517,
+            "unit": "count",
+            "display": {
+              "en": "6,517 cases",
+              "id": "6.517 kasus"
+            },
+            "source_id": "id-cnn-bgn-poisoning-6517",
+            "as_of": "2025-10-01",
+            "flags": [
+              "self_reported"
+            ]
+          }
+        },
+        {
+          "el_id": "d1",
+          "who": "BPOM",
+          "method": {
+            "en": "Food safety outbreak intake across districts and provinces.",
+            "id": "Penerimaan laporan kejadian luar biasa keamanan pangan lintas kabupaten dan provinsi."
+          },
+          "period": "as of 1 Oct 2025",
+          "value": {
+            "amount": 9089,
+            "unit": "count",
+            "display": {
+              "en": "9,089 cases",
+              "id": "9.089 kasus"
+            },
+            "source_id": "id-bloombergtechnoz-bpom-9089",
+            "as_of": "2025-10-01"
+          }
+        },
+        {
+          "el_id": "d2",
+          "who": "JPPI",
+          "method": {
+            "en": "Civil society network tally collected from member reports.",
+            "id": "Rekapitulasi jaringan masyarakat sipil yang dikumpulkan dari laporan anggota."
+          },
+          "period": "per 27 Sep 2025",
+          "value": {
+            "amount": 8649,
+            "unit": "count",
+            "display": {
+              "en": "8,649 cases",
+              "id": "8.649 kasus"
+            },
+            "source_id": "id-cnn-jppi-8649",
+            "as_of": "2025-09-27"
+          }
+        }
+      ],
+      "rule_line": {
+        "en": "Different methods, different windows. No winner is chosen here, because who counts, what counts, and which period differ.",
+        "id": "Metode berbeda, jendela waktu berbeda. Tidak ada pemenang yang dipilih di sini, karena siapa yang mencatat, apa yang dihitung, dan periodenya berbeda."
+      }
+    },
+    {
+      "type": "scale_check",
+      "el_id": "p-scale",
+      "denominator": {
+        "label": {
+          "en": "Registered beneficiaries, daily meals",
+          "id": "Penerima terdaftar, porsi harian"
+        },
+        "value": {
+          "amount": 63130000,
+          "unit": "people",
+          "display": {
+            "en": "63.13M beneficiaries",
+            "id": "63,13 juta penerima"
+          },
+          "source_id": "id-antara-mbg-realisasi-mei2026",
+          "as_of": "2026-05-31"
+        }
+      },
+      "segments": [
+        {
+          "el_id": "sg0",
+          "label": {
+            "en": "Largest official count, BPOM",
+            "id": "Angka resmi terbesar, BPOM"
+          },
+          "value": {
+            "amount": 9089,
+            "unit": "count",
+            "display": {
+              "en": "9,089 cases",
+              "id": "9.089 kasus"
+            },
+            "source_id": "id-bloombergtechnoz-bpom-9089",
+            "as_of": "2025-10-01"
+          }
+        }
+      ],
+      "takeaway": {
+        "en": "A real safety file and a very small per meal rate can both hold at once, and the conflict between the counts is the honest headline.",
+        "id": "Berkas keselamatan yang nyata dan tingkat kejadian per porsi yang sangat kecil dapat berlaku bersamaan, dan perselisihan antar angka itulah judul yang jujur."
+      },
+      "context_chips": [
+        {
+          "el_id": "cx0",
+          "label": {
+            "en": "BGN running count",
+            "id": "Angka berjalan BGN"
+          },
+          "value": {
+            "amount": 6517,
+            "unit": "count",
+            "display": {
+              "en": "6,517 cases",
+              "id": "6.517 kasus"
+            },
+            "source_id": "id-cnn-bgn-poisoning-6517",
+            "as_of": "2025-10-01",
+            "flags": [
+              "self_reported"
+            ]
+          }
+        },
+        {
+          "el_id": "cx1",
+          "label": {
+            "en": "JPPI network tally",
+            "id": "Rekapitulasi jaringan JPPI"
+          },
+          "value": {
+            "amount": 8649,
+            "unit": "count",
+            "display": {
+              "en": "8,649 cases",
+              "id": "8.649 kasus"
+            },
+            "source_id": "id-cnn-jppi-8649",
+            "as_of": "2025-09-27"
+          }
+        }
+      ]
+    }
+  ],
+  "echo": null,
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "That poisoning incidents occurred is supported across all three counters.",
+          "els": [
+            "p-claim",
+            "n1",
+            "e0"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "The edge in dispute is the leap from incidents to a program that is inherently unsafe, asserted without a per meal base rate.",
+          "els": [
+            "e1",
+            "n3",
+            "h1"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Three official counts coexist because three methodologies coexist, and picking one would itself be an editorial act.",
+          "els": [
+            "p-duel",
+            "d0",
+            "d1",
+            "d2"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "The 6,517 in the headline is the BGN October running count, one lineage among three.",
+          "els": [
+            "d0",
+            "h0"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Even the largest official count has to be read against the daily scale of the program.",
+          "els": [
+            "p-scale",
+            "sg0"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Bahwa insiden keracunan terjadi didukung oleh ketiga pencatat.",
+          "els": [
+            "p-claim",
+            "n1",
+            "e0"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Tepi yang diperselisihkan adalah lompatan dari insiden ke program yang tidak aman secara inheren, dinyatakan tanpa tingkat dasar per porsi.",
+          "els": [
+            "e1",
+            "n3",
+            "h1"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Tiga angka resmi hidup berdampingan karena tiga metodologi hidup berdampingan, dan memilih satu justru merupakan tindakan redaksional.",
+          "els": [
+            "p-duel",
+            "d0",
+            "d1",
+            "d2"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Angka 6.517 dalam judul adalah angka berjalan BGN per Oktober, satu garis pencatatan di antara tiga.",
+          "els": [
+            "d0",
+            "h0"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Bahkan angka resmi terbesar pun harus dibaca terhadap skala harian program.",
+          "els": [
+            "p-scale",
+            "sg0"
+          ]
+        }
+      ]
+    }
+  },
+  "manifest": {
+    "run_id": "seed-0",
+    "generated_at": "2026-07-28T00:00:00Z",
+    "steps": [
+      {
+        "role": "A5",
+        "model": "seed-fixture",
+        "started_at": "2026-07-28T00:00:00Z",
+        "finished_at": "2026-07-28T00:00:01Z",
+        "input_hash": "seed-fixture"
+      },
+      {
+        "role": "A7",
+        "model": "seed-fixture",
+        "started_at": "2026-07-28T00:00:01Z",
+        "finished_at": "2026-07-28T00:00:02Z",
+        "input_hash": "seed-fixture"
+      },
+      {
+        "role": "A10",
+        "model": "seed-fixture",
+        "started_at": "2026-07-28T00:00:02Z",
+        "finished_at": "2026-07-28T00:00:03Z",
+        "input_hash": "seed-fixture"
+      },
+      {
+        "role": "A11",
+        "model": "seed-fixture",
+        "started_at": "2026-07-28T00:00:03Z",
+        "finished_at": "2026-07-28T00:00:04Z",
+        "input_hash": "seed-fixture"
+      }
+    ],
+    "gates": {
+      "symmetry": {
+        "verdict": "pass",
+        "token": "e84ba4eb0589879af28695499b55a46964ded888cbeabcc41e3e7fba1599d9aa"
+      },
+      "fidelity": {
+        "verdict": "pass",
+        "token": "e84ba4eb0589879af28695499b55a46964ded888cbeabcc41e3e7fba1599d9aa"
+      }
+    }
+  }
+}

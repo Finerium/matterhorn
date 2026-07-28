@@ -1,0 +1,1046 @@
+{
+  "seed": true,
+  "id": "mbg-stop",
+  "pack": "id",
+  "lean": "opp",
+  "status": "published",
+  "headline": {
+    "en": "Stop MBG Permanently to Save the State Budget",
+    "id": "Setop MBG Permanen demi Selamatkan APBN"
+  },
+  "original": {
+    "text": "Setop MBG Permanen demi Selamatkan APBN",
+    "lang": "id"
+  },
+  "outlet": "Tribunnews",
+  "published_date": "2026-06-14",
+  "url": "https://www.tribunnews.com/nasional/7844542",
+  "og": {
+    "image_path": null,
+    "fetched_at": null,
+    "attribution": "Seed placeholder, no image fetched. Card art belongs to Tribunnews.",
+    "fallback": true
+  },
+  "tags": [
+    "missing-link",
+    "hidden-stakeholder",
+    "no-denominator"
+  ],
+  "counts": {
+    "missing": 1,
+    "unsourced": 1,
+    "disputed": 0,
+    "supported": 1,
+    "hidden": 4
+  },
+  "provenance": {
+    "analyzed_by": "seed-fixture",
+    "narrated_by": "seed-fixture",
+    "source_count": 9,
+    "computed_at": "2026-07-28",
+    "run_id": "seed-0"
+  },
+  "family": {
+    "skeleton": "one budget lever framed as sufficient to rescue the state budget",
+    "members": [
+      {
+        "outlet": "Tribunnews",
+        "headline": "Setop MBG Permanen demi Selamatkan APBN",
+        "url": "https://www.tribunnews.com/nasional/7844542",
+        "date": "2026-06-14"
+      },
+      {
+        "outlet": "Kompas video",
+        "headline": "Anggota DPR desak pangkas anggaran MBG, selamatkan ekonomi",
+        "url": "https://video.kompas.com/watch/1936616",
+        "date": "2026-06"
+      },
+      {
+        "outlet": "Antara Gorontalo",
+        "headline": "Pagu MBG 2026 dipangkas menjadi Rp268 triliun",
+        "url": "https://gorontalo.antaranews.com/berita/405133",
+        "date": "2026-06"
+      }
+    ]
+  },
+  "scaffold_default": "S3",
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "The claim is that stopping MBG saves the economy. What mechanism does the story state?",
+          "id": "Klaimnya: menyetop MBG menyelamatkan ekonomi. Mekanisme apa yang dinyatakan cerita itu?"
+        },
+        "options": [
+          {
+            "en": "Unspent funds are reallocated to productive sectors",
+            "id": "Dana yang tidak terpakai dialihkan ke sektor produktif"
+          },
+          {
+            "en": "A lower deficit lowers rates, lifting growth",
+            "id": "Defisit yang lebih rendah menurunkan suku bunga dan mengangkat pertumbuhan"
+          },
+          {
+            "en": "It never states one",
+            "id": "Cerita itu tidak pernah menyatakannya"
+          }
+        ],
+        "correct": 2,
+        "note": {
+          "en": "No article in this family states a pathway from unspent funds to growth. The claim map renders that as a gap.",
+          "id": "Tidak ada artikel dalam keluarga ini yang menyatakan jalur dari dana tak terpakai ke pertumbuhan. Peta klaim menggambarkannya sebagai celah."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "Rp88.15T sounds enormous. Against what should it be read?",
+          "id": "Rp88,15 T terdengar sangat besar. Terhadap apa angka itu sebaiknya dibaca?"
+        },
+        "options": [
+          {
+            "en": "Total 2026 state spending, Rp3,786.5T in the draft architecture",
+            "id": "Total belanja negara 2026, Rp3.786,5 T dalam arsitektur draf"
+          },
+          {
+            "en": "Last year's MBG budget",
+            "id": "Anggaran MBG tahun lalu"
+          },
+          {
+            "en": "The education budget alone",
+            "id": "Anggaran pendidikan saja"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "Realized MBG spending sits inside total state spending, and it is smaller than a sixth of one year of debt interest.",
+          "id": "Realisasi belanja MBG berada di dalam total belanja negara, dan besarnya kurang dari seperenam bunga utang satu tahun."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "If MBG stops today, who pays first?",
+          "id": "Jika MBG berhenti hari ini, siapa yang membayar lebih dulu?"
+        },
+        "options": [
+          {
+            "en": "The central budget, immediately",
+            "id": "Anggaran pusat, seketika"
+          },
+          {
+            "en": "Kitchens, suppliers and 1.28M program workers, within weeks",
+            "id": "Dapur, pemasok dan 1,28 juta pekerja program, dalam hitungan pekan"
+          },
+          {
+            "en": "Nobody: the saving is neutral",
+            "id": "Tidak ada siapa pun: penghematan itu netral"
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "29,679 kitchens and 142,387 supplier contracts absorb the shock in weeks; any fiscal benefit is diffuse and delayed.",
+          "id": "29.679 dapur dan 142.387 kontrak pemasok menyerap guncangannya dalam hitungan pekan; manfaat fiskal apa pun menyebar dan tertunda."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before the reveal: which step of this chain do you expect to be missing?",
+      "id": "Sebelum jawabannya dibuka: langkah mana dari rantai ini yang Anda perkirakan hilang?"
+    },
+    "options": [
+      {
+        "en": "The saving itself",
+        "id": "Penghematannya sendiri"
+      },
+      {
+        "en": "The path from an unspent line to a rescued economy",
+        "id": "Jalur dari pos yang tidak terpakai ke ekonomi yang terselamatkan"
+      },
+      {
+        "en": "The list of who the program pays",
+        "id": "Daftar pihak yang dibayar program"
+      }
+    ]
+  },
+  "panels": [
+    {
+      "type": "claim_map",
+      "el_id": "p-claim",
+      "spine": [
+        {
+          "el_id": "n1",
+          "label": {
+            "en": "Stop MBG permanently",
+            "id": "Setop MBG permanen"
+          }
+        },
+        {
+          "el_id": "n2",
+          "label": {
+            "en": "APBN spends up to Rp88.15T less per year",
+            "id": "APBN membelanjakan hingga Rp88,15 T lebih sedikit per tahun"
+          },
+          "value": {
+            "amount": 88.15,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp88.15T",
+              "id": "Rp88,15 T"
+            },
+            "source_id": "id-antara-mbg-realisasi-mei2026",
+            "as_of": "2026-05-31"
+          }
+        },
+        {
+          "el_id": "n3",
+          "label": {
+            "en": "The state budget is rescued",
+            "id": "APBN diselamatkan"
+          }
+        },
+        {
+          "el_id": "n4",
+          "label": {
+            "en": "The economy is saved",
+            "id": "Ekonomi terselamatkan"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "el_id": "e0",
+          "from": "n1",
+          "to": "n2",
+          "status": "supported",
+          "ev": {
+            "quote": "“Realisasi anggaran MBG mencapai Rp88,15 triliun per Mei 2026.”",
+            "source_id": "id-antara-mbg-realisasi-mei2026",
+            "why": {
+              "en": "The saving exists and is correctly sized, so the edge from the action to the saving is grounded.",
+              "id": "Penghematan itu ada dan ukurannya tepat, sehingga tepi dari tindakan ke penghematan berpijak pada dokumen."
+            }
+          }
+        },
+        {
+          "el_id": "e1",
+          "from": "n2",
+          "to": "n3",
+          "status": "missing",
+          "ev": {
+            "quote": "No sentence in the three outlet family states how unspent funds become fiscal rescue.",
+            "why": {
+              "en": "A causal chain needs a pathway. None is offered, and the denominator makes one implausible at this scale.",
+              "id": "Rantai sebab akibat membutuhkan jalur. Tidak ada yang ditawarkan, dan denominatornya membuat jalur seperti itu sulit dipercaya pada skala ini."
+            }
+          }
+        },
+        {
+          "el_id": "e2",
+          "from": "n3",
+          "to": "n4",
+          "status": "unsourced",
+          "ev": {
+            "quote": "“…demi menyelamatkan ekonomi nasional.” (implied close of the Kompas video variant)",
+            "why": {
+              "en": "The economy wide claim rests on the rescued budget claim, which is itself unsupported.",
+              "id": "Klaim tingkat ekonomi bertumpu pada klaim anggaran yang terselamatkan, yang sendirinya tidak didukung dokumen."
+            }
+          }
+        }
+      ],
+      "hidden": [
+        {
+          "el_id": "h0",
+          "label": {
+            "en": "142,387 supplier contracts break",
+            "id": "142.387 kontrak pemasok putus"
+          },
+          "value": {
+            "amount": 142387,
+            "unit": "count",
+            "display": {
+              "en": "142,387 suppliers",
+              "id": "142.387 pemasok"
+            },
+            "source_id": "id-cnbc-mbg-workers-suppliers",
+            "as_of": "2026-05-23",
+            "flags": [
+              "self_reported"
+            ]
+          },
+          "why_hidden": {
+            "en": "Documented existing counterparties of the program, and the narrative never mentions them.",
+            "id": "Mitra kontrak program yang terdokumentasi, dan narasi itu tidak pernah menyebut mereka."
+          },
+          "ev": {
+            "quote": "“BGN mencatat 142.387 pemasok, di antaranya 59.921 UMKM.”",
+            "source_id": "id-cnbc-mbg-workers-suppliers"
+          }
+        },
+        {
+          "el_id": "h1",
+          "label": {
+            "en": "1.28M program workers exposed",
+            "id": "1,28 juta pekerja program terpapar"
+          },
+          "value": {
+            "amount": 1280000,
+            "unit": "people",
+            "display": {
+              "en": "1.28M workers",
+              "id": "1,28 juta pekerja"
+            },
+            "source_id": "id-cnbc-mbg-workers-suppliers",
+            "as_of": "2026-05-23",
+            "flags": [
+              "self_reported"
+            ]
+          },
+          "why_hidden": {
+            "en": "Cooks, drivers and nutritionists on program payrolls, whose exposure is immediate on a stop.",
+            "id": "Juru masak, sopir dan ahli gizi pada daftar gaji program, yang keterpaparannya langsung terjadi begitu program berhenti."
+          },
+          "ev": {
+            "quote": "“Program MBG menyerap 1,28 juta tenaga kerja.”",
+            "source_id": "id-cnbc-mbg-workers-suppliers"
+          }
+        },
+        {
+          "el_id": "h2",
+          "label": {
+            "en": "Vendor micro-loans turn default-risky",
+            "id": "Kredit mikro vendor berisiko macet"
+          },
+          "why_hidden": {
+            "en": "Kitchens borrowed to build capacity, so an abrupt stop converts documented loans into default risk. Qualitative and cited, never projected.",
+            "id": "Dapur meminjam untuk membangun kapasitas, sehingga penghentian mendadak mengubah pinjaman terdokumentasi menjadi risiko gagal bayar. Kualitatif dan terkutip, tidak pernah diproyeksikan."
+          },
+          "ev": {
+            "quote": "Reported cases of SPPG kitchens financing capacity through micro-credit.",
+            "source_id": "id-seed-npl-case-reporting"
+          }
+        },
+        {
+          "el_id": "h3",
+          "label": {
+            "en": "63.13M beneficiaries lose the meal",
+            "id": "63,13 juta penerima kehilangan makanan"
+          },
+          "value": {
+            "amount": 63130000,
+            "unit": "people",
+            "display": {
+              "en": "63.13M beneficiaries",
+              "id": "63,13 juta penerima"
+            },
+            "source_id": "id-antara-mbg-realisasi-mei2026",
+            "as_of": "2026-05-31"
+          },
+          "why_hidden": {
+            "en": "The consumption side counterparty of the saving. Direction stated, and no projected curves.",
+            "id": "Mitra sisi konsumsi dari penghematan itu. Arahnya dinyatakan, tanpa kurva proyeksi."
+          },
+          "ev": {
+            "quote": "63.13M registered beneficiaries as of May 2026.",
+            "source_id": "id-antara-mbg-realisasi-mei2026"
+          }
+        }
+      ]
+    },
+    {
+      "type": "scale_check",
+      "el_id": "p-scale",
+      "denominator": {
+        "label": {
+          "en": "Total 2026 state spending",
+          "id": "Total belanja negara 2026"
+        },
+        "value": {
+          "amount": 3786.5,
+          "unit": "IDR_T",
+          "display": {
+            "en": "Rp3,786.5T",
+            "id": "Rp3.786,5 T"
+          },
+          "source_id": "id-setneg-rapbn2026-address",
+          "flags": [
+            "draft_figure"
+          ]
+        }
+      },
+      "segments": [
+        {
+          "el_id": "sg0",
+          "label": {
+            "en": "MBG realized",
+            "id": "MBG terealisasi"
+          },
+          "value": {
+            "amount": 88.15,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp88.15T",
+              "id": "Rp88,15 T"
+            },
+            "source_id": "id-antara-mbg-realisasi-mei2026",
+            "as_of": "2026-05-31"
+          }
+        },
+        {
+          "el_id": "sg1",
+          "label": {
+            "en": "Energy subsidy",
+            "id": "Subsidi energi"
+          },
+          "value": {
+            "amount": 210.1,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp210.1T",
+              "id": "Rp210,1 T"
+            },
+            "source_id": "id-antara-energy-subsidy-draft",
+            "flags": [
+              "draft_figure"
+            ]
+          }
+        },
+        {
+          "el_id": "sg2",
+          "label": {
+            "en": "Debt interest",
+            "id": "Bunga utang"
+          },
+          "value": {
+            "amount": 599.44,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp599.44T",
+              "id": "Rp599,44 T"
+            },
+            "source_id": "id-bisnis-debt-interest-2026"
+          }
+        }
+      ],
+      "takeaway": {
+        "en": "The maximum saving from stopping MBG is smaller than one sixth of one year of debt interest payments.",
+        "id": "Penghematan maksimum dari menyetop MBG lebih kecil daripada seperenam pembayaran bunga utang satu tahun."
+      },
+      "context_chips": [
+        {
+          "el_id": "cx0",
+          "label": {
+            "en": "Total government debt, March 2026",
+            "id": "Total utang pemerintah, Maret 2026"
+          },
+          "value": {
+            "amount": 9920.42,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp9,920.42T",
+              "id": "Rp9.920,42 T"
+            },
+            "source_id": "id-cnbc-debt-position-mar2026",
+            "as_of": "2026-03-31"
+          }
+        },
+        {
+          "el_id": "cx1",
+          "label": {
+            "en": "MBG 2026 allocation after the efficiency round",
+            "id": "Alokasi MBG 2026 setelah ronde efisiensi"
+          },
+          "value": {
+            "amount": 268,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp268T",
+              "id": "Rp268 T"
+            },
+            "source_id": "id-antara-mbg-realisasi-mei2026"
+          }
+        },
+        {
+          "el_id": "cx2",
+          "label": {
+            "en": "2026 deficit, draft architecture",
+            "id": "Defisit 2026, arsitektur draf"
+          },
+          "value": {
+            "amount": 638.8,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp638.8T",
+              "id": "Rp638,8 T"
+            },
+            "source_id": "id-setneg-rapbn2026-address",
+            "flags": [
+              "draft_figure"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "money_flow",
+      "el_id": "p-flow",
+      "root": {
+        "label": {
+          "en": "APBN 2026 to BGN",
+          "id": "APBN 2026 ke BGN"
+        },
+        "value": {
+          "amount": 268,
+          "unit": "IDR_T",
+          "display": {
+            "en": "Rp268T pagu",
+            "id": "Pagu Rp268 T"
+          },
+          "source_id": "id-antara-mbg-realisasi-mei2026"
+        }
+      },
+      "rows": [
+        {
+          "el_id": "m1",
+          "label": {
+            "en": "29,679 SPPG kitchens",
+            "id": "29.679 dapur SPPG"
+          },
+          "value": {
+            "amount": 29679,
+            "unit": "count",
+            "display": {
+              "en": "29,679 kitchens",
+              "id": "29.679 dapur"
+            },
+            "source_id": "id-kompas-mbg-sppg-mei2026",
+            "as_of": "2026-05-31"
+          },
+          "severed_if_stopped": true,
+          "note": {
+            "en": "Operations and wages run off this line.",
+            "id": "Operasi dan upah berjalan dari pos ini."
+          }
+        },
+        {
+          "el_id": "m2",
+          "label": {
+            "en": "142,387 suppliers",
+            "id": "142.387 pemasok"
+          },
+          "value": {
+            "amount": 142387,
+            "unit": "count",
+            "display": {
+              "en": "142,387 suppliers",
+              "id": "142.387 pemasok"
+            },
+            "source_id": "id-cnbc-mbg-workers-suppliers",
+            "as_of": "2026-05-23",
+            "flags": [
+              "self_reported"
+            ]
+          },
+          "severed_if_stopped": true,
+          "note": {
+            "en": "59,921 UMKM, 13,306 koperasi and 1,410 BUMDes sit inside this row.",
+            "id": "59.921 UMKM, 13.306 koperasi dan 1.410 BUMDes berada di dalam baris ini."
+          }
+        },
+        {
+          "el_id": "m3",
+          "label": {
+            "en": "1.28M program workers",
+            "id": "1,28 juta pekerja program"
+          },
+          "value": {
+            "amount": 1280000,
+            "unit": "people",
+            "display": {
+              "en": "1.28M workers",
+              "id": "1,28 juta pekerja"
+            },
+            "source_id": "id-cnbc-mbg-workers-suppliers",
+            "as_of": "2026-05-23",
+            "flags": [
+              "self_reported"
+            ]
+          },
+          "severed_if_stopped": true
+        },
+        {
+          "el_id": "m4",
+          "label": {
+            "en": "63.13M beneficiaries",
+            "id": "63,13 juta penerima"
+          },
+          "value": {
+            "amount": 63130000,
+            "unit": "people",
+            "display": {
+              "en": "63.13M beneficiaries",
+              "id": "63,13 juta penerima"
+            },
+            "source_id": "id-antara-mbg-realisasi-mei2026",
+            "as_of": "2026-05-31"
+          },
+          "severed_if_stopped": true,
+          "note": {
+            "en": "Meals and household budget relief, documented and current, not a projection.",
+            "id": "Makanan dan kelonggaran anggaran rumah tangga, terdokumentasi dan berjalan, bukan proyeksi."
+          }
+        }
+      ]
+    },
+    {
+      "type": "incidence",
+      "el_id": "p-inc",
+      "horizons": [
+        {
+          "key": "weeks",
+          "label": {
+            "en": "First weeks",
+            "id": "Pekan pertama"
+          }
+        },
+        {
+          "key": "months",
+          "label": {
+            "en": "Months 1 to 3",
+            "id": "Bulan 1 sampai 3"
+          }
+        },
+        {
+          "key": "beyond",
+          "label": {
+            "en": "6 months and beyond",
+            "id": "6 bulan ke atas"
+          }
+        }
+      ],
+      "lanes": [
+        {
+          "el_id": "i0",
+          "who": {
+            "en": "SPPG kitchens",
+            "id": "Dapur SPPG"
+          },
+          "cells": [
+            {
+              "horizon": "weeks",
+              "text": {
+                "en": "Operations and wages stop.",
+                "id": "Operasi dan upah berhenti."
+              },
+              "value": {
+                "amount": 29679,
+                "unit": "count",
+                "display": {
+                  "en": "29,679 kitchens",
+                  "id": "29.679 dapur"
+                },
+                "source_id": "id-kompas-mbg-sppg-mei2026",
+                "as_of": "2026-05-31"
+              },
+              "ev": {
+                "quote": "29,679 SPPG operating as of May 2026.",
+                "source_id": "id-kompas-mbg-sppg-mei2026"
+              }
+            }
+          ]
+        },
+        {
+          "el_id": "i1",
+          "who": {
+            "en": "Suppliers",
+            "id": "Pemasok"
+          },
+          "cells": [
+            {
+              "horizon": "months",
+              "text": {
+                "en": "Contracts break and capacity loans turn default-risky.",
+                "id": "Kontrak putus dan kredit kapasitas berisiko macet."
+              },
+              "value": {
+                "amount": 142387,
+                "unit": "count",
+                "display": {
+                  "en": "142,387 suppliers",
+                  "id": "142.387 pemasok"
+                },
+                "source_id": "id-cnbc-mbg-workers-suppliers",
+                "as_of": "2026-05-23",
+                "flags": [
+                  "self_reported"
+                ]
+              },
+              "ev": {
+                "quote": "“BGN mencatat 142.387 pemasok.”",
+                "source_id": "id-cnbc-mbg-workers-suppliers"
+              }
+            }
+          ]
+        },
+        {
+          "el_id": "i2",
+          "who": {
+            "en": "Households",
+            "id": "Rumah tangga"
+          },
+          "cells": [
+            {
+              "horizon": "beyond",
+              "text": {
+                "en": "Meal and budget relief ends. Direction only, no projected curve.",
+                "id": "Bantuan makanan dan kelonggaran anggaran berakhir. Arah saja, tanpa kurva proyeksi."
+              },
+              "value": {
+                "amount": 63130000,
+                "unit": "people",
+                "display": {
+                  "en": "63.13M beneficiaries",
+                  "id": "63,13 juta penerima"
+                },
+                "source_id": "id-antara-mbg-realisasi-mei2026",
+                "as_of": "2026-05-31"
+              },
+              "ev": {
+                "quote": "63.13M registered beneficiaries as of May 2026.",
+                "source_id": "id-antara-mbg-realisasi-mei2026"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "options",
+      "el_id": "p-options",
+      "options": [
+        {
+          "el_id": "o-1",
+          "label": {
+            "en": "Phased restructuring",
+            "id": "Restrukturisasi bertahap"
+          },
+          "proponent": {
+            "name": "Fiscal economists named in reporting",
+            "source_id": "id-seed-options-proponents"
+          },
+          "tradeoff": {
+            "en": "Slower saving, a supply chain wind down that is honored, fewer broken contracts.",
+            "id": "Penghematan lebih lambat, penghentian rantai pasok yang dihormati, lebih sedikit kontrak yang putus."
+          }
+        },
+        {
+          "el_id": "o-2",
+          "label": {
+            "en": "Quality control first continuation",
+            "id": "Lanjut dengan kendali mutu lebih dulu"
+          },
+          "proponent": {
+            "name": "Program and ministry proponents",
+            "source_id": "id-seed-options-proponents"
+          },
+          "tradeoff": {
+            "en": "Keeps 1.28M jobs, keeps the full fiscal load, answers the safety file.",
+            "id": "Mempertahankan 1,28 juta pekerjaan, mempertahankan seluruh beban fiskal, menjawab berkas keselamatan."
+          }
+        },
+        {
+          "el_id": "o-3",
+          "label": {
+            "en": "Permanent stop",
+            "id": "Setop permanen"
+          },
+          "proponent": {
+            "name": "As argued by its proponents",
+            "source_id": "id-seed-options-proponents"
+          },
+          "tradeoff": {
+            "en": "Maximum saving, and immediate incidence on four documented groups.",
+            "id": "Penghematan maksimum, dan insidensi langsung pada empat kelompok terdokumentasi."
+          }
+        }
+      ],
+      "playbook": [
+        {
+          "el_id": "pb-1",
+          "action": {
+            "en": "Read the primary document.",
+            "id": "Baca dokumen primernya."
+          },
+          "channel": {
+            "en": "APBN 2026 realisasi, Kemenkeu, linked",
+            "id": "Realisasi APBN 2026, Kemenkeu, tertaut"
+          }
+        },
+        {
+          "el_id": "pb-2",
+          "action": {
+            "en": "Run the three questions.",
+            "id": "Jalankan tiga pertanyaannya."
+          },
+          "channel": {
+            "en": "Mechanism, compared to what, who pays first",
+            "id": "Mekanisme, dibandingkan dengan apa, siapa yang membayar lebih dulu"
+          }
+        },
+        {
+          "el_id": "pb-3",
+          "action": {
+            "en": "Use the official channel.",
+            "id": "Gunakan kanal resmi."
+          },
+          "channel": {
+            "en": "LAPOR!, DPR hearing schedules, public consultations",
+            "id": "LAPOR!, jadwal RDP DPR, konsultasi publik"
+          }
+        },
+        {
+          "el_id": "pb-4",
+          "action": {
+            "en": "Share the Nuance Card, not the headline.",
+            "id": "Bagikan Kartu Nuansa, bukan judulnya."
+          },
+          "channel": {
+            "en": "Structure travels better than outrage",
+            "id": "Struktur menyebar lebih baik daripada kemarahan"
+          }
+        }
+      ]
+    },
+    {
+      "type": "family",
+      "el_id": "p-family"
+    }
+  ],
+  "echo": null,
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "The budget arithmetic itself checks out: stopping MBG frees up to Rp88.15T a year.",
+          "els": [
+            "p-claim",
+            "n1",
+            "n2"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "The step the headline needs, how an unspent budget line becomes a rescued economy, is never stated.",
+          "els": [
+            "e1",
+            "n3"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "And four documented stakeholder groups are priced at zero on the way there.",
+          "els": [
+            "h0",
+            "h1",
+            "h2",
+            "h3"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Placed against the whole 2026 spending line, the lever shrinks.",
+          "els": [
+            "p-scale",
+            "sg0"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Debt interest alone is nearly seven times larger.",
+          "els": [
+            "sg2"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "These are documented existing flows: contracts, wages and meals on record, not projections.",
+          "els": [
+            "p-flow",
+            "m1",
+            "m2"
+          ]
+        },
+        {
+          "id": "v-7",
+          "text": "The stop toggle shows what an abrupt halt severs. Struck rows are flows that break.",
+          "els": [
+            "m3",
+            "m4"
+          ]
+        },
+        {
+          "id": "v-8",
+          "text": "Losses land on specific groups within weeks, and any fiscal benefit is diffuse and delayed.",
+          "els": [
+            "p-inc",
+            "i0",
+            "i1",
+            "i2"
+          ]
+        },
+        {
+          "id": "v-9",
+          "text": "The options panel lists the positions named actors occupy, without ranking them.",
+          "els": [
+            "p-options",
+            "o-1"
+          ]
+        },
+        {
+          "id": "v-10",
+          "text": "The family panel lists the outlets that carried the same skeleton.",
+          "els": [
+            "p-family"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Aritmetika anggarannya sendiri konsisten: menyetop MBG membebaskan hingga Rp88,15 T per tahun.",
+          "els": [
+            "p-claim",
+            "n1",
+            "n2"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Langkah yang dibutuhkan judul, bagaimana pos anggaran yang tidak terpakai menjadi ekonomi yang terselamatkan, tidak pernah dinyatakan.",
+          "els": [
+            "e1",
+            "n3"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Dan empat kelompok pemangku kepentingan yang terdokumentasi dihargai nol dalam perjalanan ke sana.",
+          "els": [
+            "h0",
+            "h1",
+            "h2",
+            "h3"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Ditempatkan terhadap seluruh belanja 2026, tuas itu mengecil.",
+          "els": [
+            "p-scale",
+            "sg0"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Bunga utang saja hampir tujuh kali lebih besar.",
+          "els": [
+            "sg2"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Ini aliran yang sudah berjalan dan terdokumentasi: kontrak, upah dan makanan yang tercatat, bukan proyeksi.",
+          "els": [
+            "p-flow",
+            "m1",
+            "m2"
+          ]
+        },
+        {
+          "id": "v-7",
+          "text": "Sakelar setop menunjukkan apa yang terputus oleh penghentian mendadak. Baris yang dicoret adalah aliran yang putus.",
+          "els": [
+            "m3",
+            "m4"
+          ]
+        },
+        {
+          "id": "v-8",
+          "text": "Kerugian mendarat pada kelompok tertentu dalam hitungan pekan, sedangkan manfaat fiskalnya menyebar dan tertunda.",
+          "els": [
+            "p-inc",
+            "i0",
+            "i1",
+            "i2"
+          ]
+        },
+        {
+          "id": "v-9",
+          "text": "Panel opsi mendaftar posisi yang ditempati para aktor yang disebut, tanpa memeringkatnya.",
+          "els": [
+            "p-options",
+            "o-1"
+          ]
+        },
+        {
+          "id": "v-10",
+          "text": "Panel keluarga mendaftar media yang membawa kerangka yang sama.",
+          "els": [
+            "p-family"
+          ]
+        }
+      ]
+    }
+  },
+  "manifest": {
+    "run_id": "seed-0",
+    "generated_at": "2026-07-28T00:00:00Z",
+    "steps": [
+      {
+        "role": "A5",
+        "model": "seed-fixture",
+        "started_at": "2026-07-28T00:00:00Z",
+        "finished_at": "2026-07-28T00:00:01Z",
+        "input_hash": "seed-fixture"
+      },
+      {
+        "role": "A7",
+        "model": "seed-fixture",
+        "started_at": "2026-07-28T00:00:01Z",
+        "finished_at": "2026-07-28T00:00:02Z",
+        "input_hash": "seed-fixture"
+      },
+      {
+        "role": "A10",
+        "model": "seed-fixture",
+        "started_at": "2026-07-28T00:00:02Z",
+        "finished_at": "2026-07-28T00:00:03Z",
+        "input_hash": "seed-fixture"
+      },
+      {
+        "role": "A11",
+        "model": "seed-fixture",
+        "started_at": "2026-07-28T00:00:03Z",
+        "finished_at": "2026-07-28T00:00:04Z",
+        "input_hash": "seed-fixture"
+      }
+    ],
+    "gates": {
+      "symmetry": {
+        "verdict": "pass",
+        "token": "e11fa2bcaaf5e0e3af8c1983ff6731bd748d2fd854855d92a1e645c1b84121da"
+      },
+      "fidelity": {
+        "verdict": "pass",
+        "token": "e11fa2bcaaf5e0e3af8c1983ff6731bd748d2fd854855d92a1e645c1b84121da"
+      }
+    }
+  }
+}

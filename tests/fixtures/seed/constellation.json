@@ -1,0 +1,50 @@
+{
+  "seed": true,
+  "nodes": [
+    {
+      "id": "node-mbg-stop",
+      "narrative_id": "mbg-stop",
+      "label": {
+        "en": "MBG stop as budget rescue",
+        "id": "Setop MBG sebagai penyelamatan anggaran"
+      },
+      "pack": "id"
+    },
+    {
+      "id": "node-mbg-poisoning",
+      "narrative_id": "mbg-poisoning",
+      "label": {
+        "en": "MBG poisoning counts",
+        "id": "Angka keracunan MBG"
+      },
+      "pack": "id"
+    },
+    {
+      "id": "node-ppn-panic",
+      "narrative_id": "ppn-panic",
+      "label": {
+        "en": "12% VAT alarm",
+        "id": "Kecemasan PPN 12%"
+      },
+      "pack": "id"
+    }
+  ],
+  "links": [
+    {
+      "a": "node-mbg-stop",
+      "b": "node-mbg-poisoning",
+      "via": {
+        "en": "shared node: BGN",
+        "id": "simpul bersama: BGN"
+      }
+    },
+    {
+      "a": "node-mbg-stop",
+      "b": "node-ppn-panic",
+      "via": {
+        "en": "shared node: APBN",
+        "id": "simpul bersama: APBN"
+      }
+    }
+  ]
+}

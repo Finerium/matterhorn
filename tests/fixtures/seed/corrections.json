@@ -1,0 +1,23 @@
+{
+  "seed": true,
+  "entries": [
+    {
+      "date": "2026-06-24",
+      "narrative_id": "mbg-jobs",
+      "summary": {
+        "en": "The claim that MBG absorbs 1.28M workers was flagged by BGN. The entry stays open while the figure is re-read, and the review chip was visible within 24 hours.",
+        "id": "Klaim bahwa MBG menyerap 1,28 juta pekerja ditandai oleh BGN. Entri ini tetap terbuka selama angkanya dibaca ulang, dan chip peninjauan terlihat dalam 24 jam."
+      },
+      "status": "under_review"
+    },
+    {
+      "date": "2026-06-02",
+      "narrative_id": "judol-turnover",
+      "summary": {
+        "en": "The net deposit figure in the judol dissection was updated to the PPATK Q1 2026 series, and the correction was published with equal prominence.",
+        "id": "Angka setoran neto dalam diseksi judol diperbarui ke seri PPATK kuartal I 2026, dan koreksinya diterbitkan dengan keutamaan yang setara."
+      },
+      "status": "corrected"
+    }
+  ]
+}

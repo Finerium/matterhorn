@@ -1,0 +1,29 @@
+{
+  "seed": true,
+  "entries": [
+    {
+      "match": "exact",
+      "pattern": "https://www.tribunnews.com/nasional/7844542",
+      "narrative_id": "mbg-stop",
+      "role": "canonical"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.cnnindonesia.com/nasional/20251001125738-20-1279693/kepala-bgn-korban-keracunan-mbg-capai-6517-orang-sejak-januari-2025",
+      "narrative_id": "mbg-poisoning",
+      "role": "canonical"
+    },
+    {
+      "match": "prefix",
+      "pattern": "https://ekonomi.bisnis.com/read/20250102/259/1828262",
+      "narrative_id": "ppn-panic",
+      "role": "canonical"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.antaranews.com/berita/4559522/kemenkeu-rilis-aturan-ppn-12-persen-hanya-untuk-barang-mewah",
+      "narrative_id": "ppn-panic",
+      "role": "fresh_demo"
+    }
+  ]
+}
