@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "A10.schema.json",
+  "title": "A10 Symmetry Auditor verdict",
+  "description": "pass or block on the symmetry gate, with reasons. A10 returns a judgment and nothing else: the `token` field is minted by the runner over the candidate bytes on a pass, because a sha256 is not something a language model can compute. A block with no reasons is not a verdict anyone can act on, so the schema demands at least one.",
+  "type": "object",
+  "required": ["verdict", "reasons"],
+  "properties": {
+    "verdict": { "enum": ["pass", "block"] },
+    "reasons": {
+      "type": "array",
+      "description": "On a block, one entry per asymmetry found: which treatment differed, on which side, and where.",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "token": {
+      "type": "string",
+      "description": "Written by the runner, never by the slot.",
+      "minLength": 1
+    },
+    "model": {
+      "type": "string",
+      "description": "The identity the agent reports from its own system context.",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": { "type": "object", "required": ["verdict"], "properties": { "verdict": { "const": "block" } } },
+      "then": { "properties": { "reasons": { "type": "array", "minItems": 1 } } }
+    }
+  ]
+}

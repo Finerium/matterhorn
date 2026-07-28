@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "A6.schema.json",
+  "title": "A6 Hidden-Node Hunter output",
+  "description": "Branches the story priced at zero: parties the stated mechanism touches and the article never names as touched, plus the denominators and counterfactuals it left out. Proposals only. A6 grounds nothing and mints no numbers; A7 either cites each proposal or drops it (PRD T4). A6 runs on a fresh context that has never seen A5's conversation.",
+  "type": "object",
+  "required": ["hidden"],
+  "properties": {
+    "hidden": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["el_id", "label", "why_hidden"],
+        "properties": {
+          "el_id": { "type": "string", "minLength": 1 },
+          "label": { "$ref": "#/$defs/L10n" },
+          "why_hidden": {
+            "$ref": "#/$defs/L10n",
+            "description": "Which stated step reaches this party or quantity, and where the article stops following it."
+          },
+          "where_to_look": {
+            "type": "string",
+            "description": "Optional. The kind of document that would settle it, so A7 knows where to hunt in the registry.",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "model": {
+      "type": "string",
+      "description": "The identity the agent reports from its own system context.",
+      "minLength": 1
+    }
+  },
+  "$defs": {
+    "L10n": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "id"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "id": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

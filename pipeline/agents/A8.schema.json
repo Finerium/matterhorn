@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "A8.schema.json",
+  "title": "A8 Cascade Historian output",
+  "description": "An Echo panel or null. Null is the ordinary answer: an echo asserts that a documented past episode shares this narrative's motif, and most narratives have no such case in the library. Echo text is retrospective and cited, never a forecast, which is what the future-tense-harm lint enforces on the way out.",
+  "type": "object",
+  "required": ["echo"],
+  "properties": {
+    "echo": { "$ref": "narrative.schema.json#/properties/echo" },
+    "why_null": {
+      "type": "string",
+      "description": "Present when echo is null: which cases were considered and why none matched. Silence with a reason is an answer; silence alone is not.",
+      "minLength": 1
+    },
+    "model": {
+      "type": "string",
+      "description": "The identity the agent reports from its own system context.",
+      "minLength": 1
+    }
+  }
+}

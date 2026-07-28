@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "A5.schema.json",
+  "title": "A5 Causal Extractor output",
+  "description": "The asserted spine the article implies, its edges with the quote each rests on, and the structural skeleton of the panels 7.1 asks for. Structure only: A5 mints no numbers and grounds nothing, which is A7's job. `asserted_graph` is the ONLY field the DAG hands to A6 (PRD D5), so anything A5 wants to keep for itself can sit beside it. The root is open on purpose: a slot output is intermediate state, and the closed contract is the published artifact.",
+  "type": "object",
+  "required": ["asserted_graph", "panel_skeleton"],
+  "properties": {
+    "asserted_graph": {
+      "type": "object",
+      "required": ["spine", "edges"],
+      "properties": {
+        "spine": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["el_id", "label"],
+            "properties": {
+              "el_id": { "type": "string", "minLength": 1 },
+              "label": { "$ref": "#/$defs/L10n" }
+            }
+          }
+        },
+        "edges": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["el_id", "from", "to", "quote"],
+            "properties": {
+              "el_id": { "type": "string", "minLength": 1 },
+              "from": { "type": "string", "minLength": 1 },
+              "to": { "type": "string", "minLength": 1 },
+              "quote": {
+                "type": "string",
+                "description": "The article's own words carrying this step, or a plain statement that the article carries none.",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "panel_skeleton": {
+      "type": "array",
+      "minItems": 1,
+      "description": "One entry per panel 7.1 asks this narrative for, claim_map first. Shape only: no values, no evidence, no numbers.",
+      "items": {
+        "type": "object",
+        "required": ["type", "el_id"],
+        "properties": {
+          "type": {
+            "enum": [
+              "claim_map",
+              "scale_check",
+              "money_flow",
+              "incidence",
+              "dueling",
+              "echo",
+              "options",
+              "family"
+            ]
+          },
+          "el_id": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "model": {
+      "type": "string",
+      "description": "The identity the agent reports from its own system context. The runner logs it into manifest.steps.",
+      "minLength": 1
+    }
+  },
+  "$defs": {
+    "L10n": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "id"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "id": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

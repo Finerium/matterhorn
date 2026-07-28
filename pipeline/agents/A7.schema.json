@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "A7.schema.json",
+  "title": "A7 Evidence Grounder output",
+  "description": "The grounded panel stack. A7 is the ONLY minter of numbers in the fleet, and every number it mints travels inside a Value whose source_id resolves in the source registry it was handed. Panels are validated against the shipping contract itself (narrative.schema.json), not a copy of it, so a panel that cannot ship cannot be ingested either. Candidates A7 could not cite are reported in `dropped` rather than rendered (PRD T4).",
+  "type": "object",
+  "required": ["panels"],
+  "properties": {
+    "panels": { "$ref": "narrative.schema.json#/properties/panels" },
+    "dropped": {
+      "type": "array",
+      "description": "A6 proposals that no registry source could carry. Naming them is how the run stays honest about what was looked for and not found.",
+      "items": {
+        "type": "object",
+        "required": ["label", "why"],
+        "properties": {
+          "el_id": { "type": "string", "minLength": 1 },
+          "label": { "type": "string", "minLength": 1 },
+          "why": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "model": {
+      "type": "string",
+      "description": "The identity the agent reports from its own system context.",
+      "minLength": 1
+    }
+  }
+}

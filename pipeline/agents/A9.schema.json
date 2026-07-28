@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "A9.schema.json",
+  "title": "A9 Narrator output",
+  "description": "The reading layer: narration in both locales with every sentence bound to the graph elements it describes, three sparring questions, and the prediction tap. Generated in language, one call per locale, never translated from the other. The three fields are validated against the shipping contract itself, so narration that cannot ship cannot be ingested.",
+  "type": "object",
+  "required": ["narration", "sparring", "prediction_tap"],
+  "properties": {
+    "narration": { "$ref": "narrative.schema.json#/properties/narration" },
+    "sparring": { "$ref": "narrative.schema.json#/properties/sparring" },
+    "prediction_tap": { "$ref": "narrative.schema.json#/properties/prediction_tap" },
+    "editorial_notes": {
+      "type": "array",
+      "description": "Answers and judgment calls for content-review.md: why an option was marked correct, which phrasing the lexicon forced, what stayed unsaid.",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "model": {
+      "type": "string",
+      "description": "The identity the agent reports from its own system context.",
+      "minLength": 1
+    }
+  }
+}

@@ -1,0 +1,617 @@
+{
+  "note": "The Gate C work order, authored from verified data. Blueprint 7.1 fixes the ten narratives; the Phase 0 snapshot (docs/understanding.md section 8, .crown/notes.md, content/sources.json) fixes the articles. Stage A1 reads this file and nothing else. Every `headline` marked `reconstructed: true` is a description of the claim, NOT a verbatim title: nobody recorded the exact wording, and inventing one and printing it as a quotation would be the thing this product exists to catch. Verbatim titles are copied character for character from content/sources.json, which is where their liveness and retrieval date are recorded. Leans, tags, panel plans and scaffold defaults are the 7.1 defaults the run starts from; A7 and A9 may narrow them, and a gate may reject them.",
+  "snapshot_date": "2026-07-28",
+  "fresh_demo": {
+    "narrative_id": "ppn-panic",
+    "url": "https://www.antaranews.com/berita/4559522/kemenkeu-rilis-aturan-ppn-12-persen-hanya-untuk-barang-mewah"
+  },
+  "narratives": [
+    {
+      "id": "mbg-stop",
+      "pack": "id",
+      "lean": "opp",
+      "skeleton": "one budget lever framed as sufficient to rescue the state budget, carried without the size of the budget it is measured against",
+      "original": {
+        "text": "Menantang Pemerintah Setop MBG Permanen: demi Selamatkan APBN dan Permudah Ungkap Korupsi",
+        "lang": "id"
+      },
+      "headline": {
+        "en": "Stop MBG Permanently to Save the State Budget",
+        "id": "Setop MBG Permanen demi Selamatkan APBN"
+      },
+      "outlet": "Tribunnews",
+      "published_date": "2026-06-20",
+      "url": "https://www.tribunnews.com/nasional/7844542",
+      "tags": [
+        "missing-link",
+        "hidden-stakeholder",
+        "no-denominator"
+      ],
+      "scaffold_default": "S3",
+      "panels": [
+        "claim_map",
+        "scale_check",
+        "money_flow",
+        "incidence",
+        "options",
+        "family"
+      ],
+      "og": {
+        "image_path": "/assets/og/mbg-stop.jpg",
+        "fetched_at": "2026-07-28",
+        "attribution": "Link preview image from Tribunnews, shown with the outlet name and an outbound link.",
+        "fallback": false
+      },
+      "members": [
+        {
+          "id": "mbg-stop-m1",
+          "lang": "id",
+          "headline": "Menantang Pemerintah Setop MBG Permanen: demi Selamatkan APBN dan Permudah Ungkap Korupsi",
+          "outlet": "Tribunnews",
+          "date": "2026-06-20",
+          "url": "https://www.tribunnews.com/nasional/7844542/menantang-pemerintah-setop-mbg-permanen-demi-selamatkan-apbn-dan-permudah-ungkap-korupsi",
+          "note": "Full-slug canonical, real headline and date verified live at Phase 0 snapshot (2026-07-28); bare-id form 404s."
+        },
+        {
+          "id": "mbg-stop-m2",
+          "lang": "id",
+          "headline": "Anggota DPR desak pangkas anggaran MBG, selamatkan ekonomi",
+          "outlet": "Kompas video",
+          "date": "2026-06",
+          "url": "https://video.kompas.com/watch/1936616",
+          "reconstructed": true,
+          "note": "Carried into the build from the design fixture data, not from the Phase 0 snapshot: neither the exact title nor the exact date was re-verified, and this entry is not in content/sources.json. Treat the wording as a description of the segment."
+        },
+        {
+          "id": "mbg-stop-m3",
+          "lang": "id",
+          "headline": "Purbaya sebut realisasi anggaran MBG capai Rp88,15 triliun",
+          "outlet": "Antara News",
+          "date": "2026-06-05",
+          "url": "https://www.antaranews.com/berita/5595513/purbaya-sebut-realisasi-anggaran-mbg-capai-rp8815-triliun",
+          "note": "Verbatim title from content/sources.json (id-antara-mbg-realisasi-mei2026). The live replacement for the dead gorontalo.antaranews.com/berita/405133 the fixture carried. It documents the same allocation cut, Rp335T to Rp268T, from the other side of the argument."
+        }
+      ]
+    },
+    {
+      "id": "mbg-cut",
+      "pack": "id",
+      "lean": "neutral",
+      "skeleton": "the same budget lever reported as an arithmetic fact, which is what makes the family visible: one skeleton, two temperatures, two outlets",
+      "original": {
+        "text": "Pagu MBG 2026 dipangkas dari Rp335 triliun menjadi Rp268 triliun",
+        "lang": "id"
+      },
+      "headline": {
+        "en": "The 2026 MBG Allocation Is Cut to Rp268 Trillion",
+        "id": "Pagu MBG 2026 Dipangkas Menjadi Rp268 Triliun"
+      },
+      "outlet": "Kompas.com",
+      "published_date": "2026-06-06",
+      "url": "https://money.kompas.com/read/2026/06/06/213559526/anggaran-mbg-terserap-rp-8815-triliun-hingga-mei-2026",
+      "tags": [
+        "no-denominator",
+        "missing-link"
+      ],
+      "scaffold_default": "S2",
+      "panels": [
+        "claim_map",
+        "scale_check",
+        "family"
+      ],
+      "og": {
+        "image_path": "/assets/og/mbg-cut.jpg",
+        "fetched_at": "2026-07-28",
+        "attribution": "Link preview image from Kompas.com, shown with the outlet name and an outbound link.",
+        "fallback": false
+      },
+      "members": [
+        {
+          "id": "mbg-cut-m1",
+          "lang": "id",
+          "headline": "Anggaran MBG Terserap Rp 88,15 Triliun hingga Mei 2026",
+          "outlet": "Kompas.com",
+          "date": "2026-06-06",
+          "url": "https://money.kompas.com/read/2026/06/06/213559526/anggaran-mbg-terserap-rp-8815-triliun-hingga-mei-2026",
+          "note": "Verbatim title from content/sources.json (id-kompas-mbg-sppg-mei2026)."
+        },
+        {
+          "id": "mbg-cut-m2",
+          "lang": "id",
+          "headline": "Realisasi Belanja MBG Tembus Rp88 Triliun sampai Mei 2026",
+          "outlet": "Databoks (Katadata)",
+          "date": "2026-05",
+          "url": "https://databoks.katadata.co.id/ekonomi-makro/statistik/6a2653afd21cc/realisasi-belanja-mbg-tembus-rp88-triliun-sampai-mei-2026",
+          "note": "Verbatim title from content/sources.json (id-databoks-mbg-chart). Publication day not recorded at snapshot; the month is."
+        },
+        {
+          "id": "mbg-cut-m3",
+          "lang": "id",
+          "headline": "Purbaya sebut realisasi anggaran MBG capai Rp88,15 triliun",
+          "outlet": "Antara News",
+          "date": "2026-06-05",
+          "url": "https://www.antaranews.com/berita/5595513/purbaya-sebut-realisasi-anggaran-mbg-capai-rp8815-triliun",
+          "note": "Verbatim title from content/sources.json. Shared with the mbg-stop family on purpose: the same article carries the cut and the realisation, which is the point the family panel makes."
+        }
+      ]
+    },
+    {
+      "id": "mbg-poisoning",
+      "pack": "id",
+      "lean": "opp",
+      "skeleton": "one institution's running count published as the count, without the two other counts that disagree with it and without the method that separates them",
+      "original": {
+        "text": "Kepala BGN: korban keracunan MBG capai 6.517 orang",
+        "lang": "id"
+      },
+      "headline": {
+        "en": "BGN Chief: MBG Poisoning Victims Reach 6,517",
+        "id": "Kepala BGN: Korban Keracunan MBG Capai 6.517 Orang"
+      },
+      "outlet": "CNN Indonesia",
+      "published_date": "2025-10-01",
+      "url": "https://www.cnnindonesia.com/nasional/20251001125738-20-1279693/kepala-bgn-korban-keracunan-mbg-capai-6517-orang-sejak-januari-2025",
+      "tags": [
+        "competing-counts",
+        "no-denominator",
+        "hidden-stakeholder"
+      ],
+      "scaffold_default": "S1",
+      "panels": [
+        "claim_map",
+        "dueling",
+        "incidence"
+      ],
+      "og": {
+        "image_path": "/assets/og/mbg-poisoning.jpg",
+        "fetched_at": "2026-07-28",
+        "attribution": "Link preview image from CNN Indonesia, shown with the outlet name and an outbound link.",
+        "fallback": false
+      },
+      "members": [
+        {
+          "id": "mbg-poisoning-m1",
+          "lang": "id",
+          "headline": "Kepala BGN: Korban Keracunan MBG Capai 6.517 Orang Sejak Januari 2025",
+          "outlet": "CNN Indonesia",
+          "date": "2025-10-01",
+          "url": "https://www.cnnindonesia.com/nasional/20251001125738-20-1279693/kepala-bgn-korban-keracunan-mbg-capai-6517-orang-sejak-januari-2025",
+          "note": "Verbatim title from content/sources.json (id-cnn-bgn-poisoning-6517). BGN counting incidents in its own program: the figure ships flagged self_reported."
+        },
+        {
+          "id": "mbg-poisoning-m2",
+          "lang": "id",
+          "headline": "Beda Data KLB Keracunan MBG: BPOM vs BGN",
+          "outlet": "Bloomberg Technoz",
+          "date": "2025-10-01",
+          "url": "https://www.bloombergtechnoz.com/detail-news/85713/beda-data-klb-keracunan-mbg-bpom-vs-bgn",
+          "note": "Verbatim title from content/sources.json (id-bloombergtechnoz-bpom-9089). Carries the BPOM count of 9,089 as a direct quote of Taruna Ikrar. The 9,083 variant reported by one outlet does not ship; the 4,711 figure the PRD carried was never verified and does not ship at all."
+        },
+        {
+          "id": "mbg-poisoning-m3",
+          "lang": "id",
+          "headline": "Data JPPI: Per September, 8.649 Anak Keracunan MBG",
+          "outlet": "CNN Indonesia",
+          "date": "2025-09-29",
+          "url": "https://www.cnnindonesia.com/nasional/20250929085833-20-1278711/data-jppi-per-september-8649-anak-keracunan-mbg",
+          "note": "Verbatim title from content/sources.json (id-cnn-jppi-8649). The third count, from a civil-society network. The three are never reconciled, which is the dueling panel."
+        }
+      ]
+    },
+    {
+      "id": "mbg-jobs",
+      "pack": "id",
+      "lean": "gov",
+      "skeleton": "a programme's own headcount, self reported and derived rather than counted, carried as an independent measure of the programme's worth",
+      "original": {
+        "text": "Program MBG Serap 1,28 Juta Tenaga Kerja, UMKM-Peternak Kecipratan",
+        "lang": "id"
+      },
+      "headline": {
+        "en": "MBG Absorbed 1.28 Million Workers",
+        "id": "Program MBG Serap 1,28 Juta Tenaga Kerja"
+      },
+      "outlet": "CNBC Indonesia",
+      "published_date": "2026-05-23",
+      "url": "https://www.cnbcindonesia.com/news/20260523162405-4-737426/program-mbg-serap-128-juta-tenaga-kerja-umkm-peternak-kecipratan",
+      "tags": [
+        "single-source",
+        "no-denominator",
+        "unsourced-figure"
+      ],
+      "scaffold_default": "S1",
+      "panels": [
+        "claim_map",
+        "scale_check"
+      ],
+      "og": {
+        "image_path": "/assets/og/mbg-jobs.jpg",
+        "fetched_at": "2026-07-28",
+        "attribution": "Link preview image from CNBC Indonesia, shown with the outlet name and an outbound link.",
+        "fallback": false
+      },
+      "members": [
+        {
+          "id": "mbg-jobs-m1",
+          "lang": "id",
+          "headline": "Program MBG Serap 1,28 Juta Tenaga Kerja, UMKM-Peternak Kecipratan",
+          "outlet": "CNBC Indonesia",
+          "date": "2026-05-23",
+          "url": "https://www.cnbcindonesia.com/news/20260523162405-4-737426/program-mbg-serap-128-juta-tenaga-kerja-umkm-peternak-kecipratan",
+          "note": "Verbatim title from content/sources.json (id-cnbc-mbg-workers-suppliers). BGN self reported; the slug reads 128-juta and the body reads 1,28 juta."
+        },
+        {
+          "id": "mbg-jobs-m2",
+          "lang": "id",
+          "headline": "MBG Disebut Serap 987.000 Tenaga Kerja, 40.000 UMKM Ikut Bergerak",
+          "outlet": "Kompas.com",
+          "date": "2026-02-15",
+          "url": "https://money.kompas.com/read/2026/02/15/181700126/mbg-disebut-serap-987.000-tenaga-kerja-40.000-umkm-ikut-bergerak",
+          "note": "Verbatim title from content/sources.json (id-kompas-mbg-workers-feb2026). The February baseline is live, which reverses the blueprint D-6 default, but it is a derived estimate (about 47 kitchen workers times about 21,000 SPPG), so it ships flagged estimate and self_reported with the arithmetic exposed."
+        },
+        {
+          "id": "mbg-jobs-m3",
+          "lang": "id",
+          "headline": "Anggaran MBG Terserap Rp 88,15 Triliun hingga Mei 2026",
+          "outlet": "Kompas.com",
+          "date": "2026-06-06",
+          "url": "https://money.kompas.com/read/2026/06/06/213559526/anggaran-mbg-terserap-rp-8815-triliun-hingga-mei-2026",
+          "note": "Verbatim title from content/sources.json. Pins the 29,679 SPPG kitchen count that the per-kitchen derivation rests on."
+        }
+      ]
+    },
+    {
+      "id": "judol-turnover",
+      "pack": "id",
+      "lean": "gov",
+      "skeleton": "a fall in one measure of a market read as the size of the fall in the market, with the measure that moved differently left out",
+      "original": {
+        "text": "PPATK: Perputaran dana judi online Rp40,3 triliun pada triwulan I-2026",
+        "lang": "id"
+      },
+      "headline": {
+        "en": "Online Gambling Turnover Falls to Rp40.3 Trillion in Q1 2026",
+        "id": "Perputaran Dana Judi Online Turun ke Rp40,3 Triliun pada Triwulan I-2026"
+      },
+      "outlet": "Antara News",
+      "published_date": "2026-07-23",
+      "url": "https://www.antaranews.com/berita/5663168",
+      "tags": [
+        "no-denominator",
+        "competing-counts"
+      ],
+      "scaffold_default": "S1",
+      "panels": [
+        "claim_map",
+        "scale_check",
+        "dueling"
+      ],
+      "og": {
+        "image_path": "/assets/og/judol-turnover.jpg",
+        "fetched_at": "2026-07-28",
+        "attribution": "Link preview image from Antara News, shown with the outlet name and an outbound link.",
+        "fallback": false
+      },
+      "members": [
+        {
+          "id": "judol-turnover-m1",
+          "lang": "id",
+          "headline": "PPATK: Perputaran dana judi online Rp40,3 triliun pada triwulan I-2026",
+          "outlet": "Antara News",
+          "date": "2026-07-23",
+          "url": "https://www.antaranews.com/berita/5663168",
+          "note": "Verbatim title from content/sources.json (id-antara-judol-q1-2026). Quoted to PPATK head Ivan Yustiavandana, with total deposits Rp10.59T in the same quarter."
+        },
+        {
+          "id": "judol-turnover-m2",
+          "lang": "id",
+          "headline": "PPATK: Perputaran Dana Judi Online Turun 20%, Tersisa Rp286,84 T",
+          "outlet": "CNBC Indonesia",
+          "date": "2026-07-23",
+          "url": "https://www.cnbcindonesia.com/news/20260723082823-4-753122/ppatk-perputaran-dana-judi-online-turun-20-tersisa-rp28684-t",
+          "note": "Verbatim title from content/sources.json (id-cnbc-judol-2025). The turnover series: Rp359.81T in 2024 to Rp286.84T in 2025."
+        },
+        {
+          "id": "judol-turnover-m3",
+          "lang": "id",
+          "headline": "PPATK Catat Ada Penurunan Perputaran Uang Judol di Era Prabowo",
+          "outlet": "Kompas.com",
+          "date": "2026-07-23",
+          "url": "https://nasional.kompas.com/read/2026/07/23/22413221/ppatk-catat-ada-penurunan-perputaran-uang-judol-di-era-prabowo",
+          "note": "Verbatim title from content/sources.json (id-kompas-judol-deposits). Carries the net deposit series, Rp51.3T to Rp36.01T, which is the denominator the turnover headline is missing."
+        }
+      ]
+    },
+    {
+      "id": "ppn-panic",
+      "pack": "id",
+      "lean": "gov",
+      "skeleton": "a rule restricted to one class of goods narrated as if it applied to the whole basket",
+      "original": {
+        "text": "PPN 12% bikin semua harga naik",
+        "lang": "id"
+      },
+      "headline": {
+        "en": "12% VAT Makes Everything More Expensive",
+        "id": "PPN 12% Bikin Semua Harga Naik"
+      },
+      "outlet": "Bisnis.com",
+      "published_date": "2025-01-02",
+      "url": "https://ekonomi.bisnis.com/read/20250102/259/1828262/ppn-12-barang-mewah-berlaku-penuh-mulai-februari-2025-begini-penjelasannya",
+      "tags": [
+        "scope-inflation",
+        "missing-link",
+        "emotional-trigger"
+      ],
+      "scaffold_default": "S0",
+      "panels": [
+        "claim_map",
+        "scale_check",
+        "echo"
+      ],
+      "og": {
+        "image_path": "/assets/og/ppn-panic.jpg",
+        "fetched_at": "2026-07-28",
+        "attribution": "Link preview image from Antara News, the designated fresh-dissect article, shown with the outlet name and an outbound link.",
+        "fallback": false
+      },
+      "members": [
+        {
+          "id": "ppn-panic-m1",
+          "lang": "id",
+          "headline": "PPN 12% Barang Mewah Berlaku Penuh mulai Februari 2025, Begini Penjelasannya",
+          "outlet": "Bisnis.com",
+          "date": "2025-01-02",
+          "url": "https://ekonomi.bisnis.com/read/20250102/259/1828262/ppn-12-barang-mewah-berlaku-penuh-mulai-februari-2025-begini-penjelasannya",
+          "note": "Verbatim title from content/sources.json (id-bisnis-ppn-luxury). Restored at its full slug; the bare-id form 403s and was never dead."
+        },
+        {
+          "id": "ppn-panic-m2",
+          "lang": "id",
+          "headline": "Kemenkeu rilis aturan PPN 12 persen hanya untuk barang mewah",
+          "outlet": "Antara News",
+          "date": "2025-01-01",
+          "url": "https://www.antaranews.com/berita/4559522/kemenkeu-rilis-aturan-ppn-12-persen-hanya-untuk-barang-mewah",
+          "note": "Verbatim title from content/sources.json (id-antara-ppn-luxury). THE designated fresh-dissect article (blueprint 7.2.9, D-9): the only URL that runs the staged progress demo."
+        },
+        {
+          "id": "ppn-panic-m3",
+          "lang": "id",
+          "headline": "PMK 131/2024: Tarif PPN Sebelas-Dua Belas",
+          "outlet": "Direktorat Jenderal Pajak",
+          "date": "2024-12-31",
+          "url": "https://www.pajak.go.id/en/node/113453",
+          "note": "Verbatim title from content/sources.json (id-pajak-pmk131). The primary rule: 12 percent applies to luxury goods under PPnBM, and non-luxury keeps an effective 11 percent through the 11/12 nilai lain base. Grounding for the CF-5 scale panel, which ships only if A7 can put a sourced denominator against a sourced numerator."
+        }
+      ]
+    },
+    {
+      "id": "tariffs-pay",
+      "pack": "en",
+      "lean": "gov",
+      "skeleton": "one revenue lever framed as funding an entire agenda, carried without the cost side it is being measured against",
+      "original": {
+        "text": "Tariffs will pay for all of it",
+        "lang": "en"
+      },
+      "headline": {
+        "en": "Tariffs Will Pay for All of It",
+        "id": "Tarif Impor Akan Membiayai Semuanya"
+      },
+      "outlet": "FactCheck.org",
+      "published_date": "2026-01-20",
+      "url": "https://www.factcheck.org/2026/01/trumps-tariffs-dont-come-close-to-funding-everything-hes-proposed/",
+      "tags": [
+        "missing-link",
+        "no-denominator",
+        "competing-counts"
+      ],
+      "scaffold_default": "S0",
+      "panels": [
+        "claim_map",
+        "scale_check",
+        "money_flow",
+        "incidence"
+      ],
+      "og": {
+        "image_path": "/assets/og/tariffs-pay.jpg",
+        "fetched_at": "2026-07-28",
+        "attribution": "Link preview image from FactCheck.org, shown with the outlet name and an outbound link.",
+        "fallback": false
+      },
+      "members": [
+        {
+          "id": "tariffs-pay-m1",
+          "lang": "en",
+          "headline": "Trump's Tariffs Don't Come Close to Funding Everything He's Proposed",
+          "outlet": "FactCheck.org",
+          "date": "2026-01-20",
+          "url": "https://www.factcheck.org/2026/01/trumps-tariffs-dont-come-close-to-funding-everything-hes-proposed/",
+          "note": "Verbatim title from content/sources.json (en-factcheck-tariffs). The claim under dissection is the circulating one, not this title."
+        },
+        {
+          "id": "tariffs-pay-m2",
+          "lang": "en",
+          "headline": "CBO's New Projections Show $1 Trillion Less in Tariff Savings",
+          "outlet": "Committee for a Responsible Federal Budget",
+          "date": "2025-11-25",
+          "url": "https://www.crfb.org/blogs/cbos-new-projections-show-1-trillion-less-tariff-savings",
+          "note": "Verbatim title from content/sources.json (en-crfb-tariff-projections). $3.0T including interest against CBO's $2.5T primary, plus the IEEPA contingency that caveats every tariff revenue figure."
+        },
+        {
+          "id": "tariffs-pay-m3",
+          "lang": "en",
+          "headline": "Top 13 Fiscal Charts of 2025",
+          "outlet": "Committee for a Responsible Federal Budget",
+          "date": "2025-12-31",
+          "url": "https://www.crfb.org/blogs/top-13-fiscal-charts-2025",
+          "note": "Verbatim title from content/sources.json (en-crfb-top13-2025). The cost side: OBBBA adds $4.1T through 2034 conventionally scored."
+        }
+      ]
+    },
+    {
+      "id": "usaid-deficit",
+      "pack": "en",
+      "lean": "gov",
+      "skeleton": "a spending line the public believes is a quarter of the budget, carried as though the belief were the size",
+      "original": {
+        "text": "Foreign aid is about a quarter of the federal budget",
+        "lang": "en",
+        "reconstructed": true,
+        "note": "No verbatim wording of the circulating claim was recorded at snapshot. This is a description of the claim in the words of this build, and A9 may not present it as a quotation."
+      },
+      "headline": {
+        "en": "Foreign Aid Is a Quarter of the Federal Budget",
+        "id": "Bantuan Luar Negeri Menyerap Seperempat Anggaran Federal"
+      },
+      "outlet": "KFF",
+      "published_date": "2025-03-04",
+      "url": "https://www.kff.org/global-health-policy/kff-health-tracking-poll-february-2025-the-publics-views-on-global-health-and-usaid/",
+      "tags": [
+        "no-denominator",
+        "scope-inflation"
+      ],
+      "scaffold_default": "S1",
+      "panels": [
+        "claim_map",
+        "scale_check"
+      ],
+      "og": {
+        "image_path": "/assets/og/usaid-deficit.jpg",
+        "fetched_at": "2026-07-28",
+        "attribution": "Link preview image from KFF, shown with the outlet name and an outbound link.",
+        "fallback": false
+      },
+      "members": [
+        {
+          "id": "usaid-deficit-m1",
+          "lang": "en",
+          "headline": "KFF Health Tracking Poll February 2025: The Public's Views on Global Health and USAID",
+          "outlet": "KFF",
+          "date": "2025-03-04",
+          "url": "https://www.kff.org/global-health-policy/kff-health-tracking-poll-february-2025-the-publics-views-on-global-health-and-usaid/",
+          "note": "Verbatim title from content/sources.json (en-kff-tracking-feb2025). Average guess 26 percent of the federal budget against about 1 percent actual; 11 percent guessed correctly; support flips 58 to 34 once informed. The $43.8B dollar figure is NOT on this page and does not ship."
+        },
+        {
+          "id": "usaid-deficit-m2",
+          "lang": "en",
+          "headline": "Final Monthly Treasury Statement, Fiscal Year 2025 (September 2025 issue)",
+          "outlet": "U.S. Department of the Treasury",
+          "date": "2025-09",
+          "url": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_202509.pdf",
+          "note": "Verbatim title from content/sources.json (en-treasury-mts-fy2025). The denominator: total federal net receipts $5,234,616M. Not a news article, and listed here because the family panel shows what the claim would have to be read against."
+        }
+      ]
+    },
+    {
+      "id": "migrant-crime",
+      "pack": "en",
+      "lean": "gov",
+      "skeleton": "one class of person named as the driver of a crime trend, with the three measurements of that trend never put on the same page",
+      "original": {
+        "text": "Immigrants are driving the crime wave",
+        "lang": "en",
+        "reconstructed": true,
+        "note": "No verbatim wording of the circulating claim was recorded at snapshot. This is a description of the claim in the words of this build, and A9 may not present it as a quotation."
+      },
+      "headline": {
+        "en": "Immigrants Are Driving the Crime Wave",
+        "id": "Imigran Menjadi Penggerak Lonjakan Kejahatan"
+      },
+      "outlet": "Cato Institute",
+      "published_date": "2025-08",
+      "url": "https://www.cato.org/policy-analysis/immigrants-cut-victimization-rates-boost-crime-reporting",
+      "tags": [
+        "competing-counts",
+        "cherry-window",
+        "single-source"
+      ],
+      "scaffold_default": "S1",
+      "panels": [
+        "claim_map",
+        "dueling"
+      ],
+      "og": {
+        "image_path": null,
+        "fetched_at": null,
+        "attribution": "No link preview image: cato.org serves an anti-bot challenge page with no og metadata to automated clients, so the styled placeholder ships and the gap is listed in the Report.",
+        "fallback": true
+      },
+      "members": [
+        {
+          "id": "migrant-crime-m1",
+          "lang": "en",
+          "headline": "Immigrants Cut Victimization Rates, Boost Crime Reporting (Policy Analysis No. 1003)",
+          "outlet": "Cato Institute",
+          "date": "2025-08",
+          "url": "https://www.cato.org/policy-analysis/immigrants-cut-victimization-rates-boost-crime-reporting",
+          "note": "Verbatim title from content/sources.json (en-cato-pa1003). NCVS 2017 to 2023: immigrants 44 percent less likely to be violently victimized. Publication day not recorded at snapshot."
+        },
+        {
+          "id": "migrant-crime-m2",
+          "lang": "en",
+          "headline": "Comparing crime rates between undocumented immigrants, legal immigrants, and native-born US citizens in Texas (DOI 10.1073/pnas.2014704117)",
+          "outlet": "PNAS",
+          "date": "2020-12",
+          "url": "https://www.pnas.org/doi/10.1073/pnas.2014704117",
+          "note": "Verbatim title from content/sources.json (en-pnas-light-2020). Texas arrest data 2012 to 2018, a different population and a different instrument from the Cato study, which is exactly why the two are shown side by side rather than averaged."
+        },
+        {
+          "id": "migrant-crime-m3",
+          "lang": "en",
+          "headline": "FBI Releases 2024 Reported Crimes in the Nation Statistics",
+          "outlet": "FBI",
+          "date": "2025",
+          "url": "https://www.fbi.gov/news/press-releases/fbi-releases-2024-reported-crimes-in-the-nation-statistics",
+          "note": "Verbatim title from content/sources.json (en-fbi-2024-crime). Violent crime down an estimated 4.5 percent and murder down 14.9 percent in 2024 against 2023. Release day not recorded at snapshot, so the date carries the year only."
+        }
+      ]
+    },
+    {
+      "id": "usaid-deaths",
+      "pack": "en",
+      "lean": "opp",
+      "skeleton": "a modelled projection with a wide uncertainty interval carried as a settled count, which is the same certainty inflation from the other direction",
+      "original": {
+        "text": "Ending USAID means 14 million more deaths by 2030",
+        "lang": "en",
+        "reconstructed": true,
+        "note": "No verbatim wording of the circulating claim was recorded at snapshot. This is a description of the claim in the words of this build, and A9 may not present it as a quotation."
+      },
+      "headline": {
+        "en": "Ending USAID Means 14 Million More Deaths by 2030",
+        "id": "Penghentian USAID Berarti 14 Juta Kematian Tambahan sampai 2030"
+      },
+      "outlet": "The Lancet",
+      "published_date": "2025-06-30",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01186-9/fulltext",
+      "tags": [
+        "single-source",
+        "no-counterfactual"
+      ],
+      "scaffold_default": "S1",
+      "panels": [
+        "claim_map",
+        "scale_check",
+        "incidence"
+      ],
+      "og": {
+        "image_path": null,
+        "fetched_at": null,
+        "attribution": "No link preview image: thelancet.com returns 403 to automated clients and exposes no fetchable og image, so the styled placeholder ships and the gap is listed in the Report.",
+        "fallback": true
+      },
+      "members": [
+        {
+          "id": "usaid-deaths-m1",
+          "lang": "en",
+          "headline": "Evaluating the impact of two decades of USAID interventions and projecting the effects of defunding on mortality up to 2030 (DOI 10.1016/S0140-6736(25)01186-9)",
+          "outlet": "The Lancet",
+          "date": "2025-06-30",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01186-9/fulltext",
+          "note": "Verbatim title from content/sources.json (en-lancet-usaid). 14.05M additional deaths by 2030 with an uncertainty interval of 8.48M to 19.66M, and about 91.8M deaths prevented 2001 to 2021. The figure always carries its June 2025 date. GATE C TODO from the snapshot: a Feb 2026 follow-up reportedly revises the projection to 9.4M, and the run must find a citable source for it or leave it out."
+        }
+      ]
+    }
+  ]
+}

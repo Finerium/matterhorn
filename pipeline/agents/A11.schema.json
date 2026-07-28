@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "A11.schema.json",
+  "title": "A11 Fidelity Guard verdict",
+  "description": "pass or block on the fidelity gate, sentence level, with reasons. A block names the sentence it broke, by id or by quoting it, and the fault: a binding that resolves to no declared element, a claim that traces to no graph element, a lexicon or future-tense-harm violation. The `token` field is minted by the runner over the candidate bytes on a pass, never by the slot.",
+  "type": "object",
+  "required": ["verdict", "reasons"],
+  "properties": {
+    "verdict": { "enum": ["pass", "block"] },
+    "reasons": {
+      "type": "array",
+      "description": "On a block, one entry per faulty sentence: locale, sentence id, and what does not trace.",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "token": {
+      "type": "string",
+      "description": "Written by the runner, never by the slot.",
+      "minLength": 1
+    },
+    "model": {
+      "type": "string",
+      "description": "The identity the agent reports from its own system context.",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": { "type": "object", "required": ["verdict"], "properties": { "verdict": { "const": "block" } } },
+      "then": { "properties": { "reasons": { "type": "array", "minItems": 1 } } }
+    }
+  ]
+}
