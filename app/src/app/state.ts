@@ -30,7 +30,24 @@ export type Screen =
 export type Tab = 'radar' | 'dissect' | 'archive' | 'settings';
 
 /** Overlay names. The value is the `data-sheet` attribute. */
-export type SheetName = 'ios-notif' | 'honest-auth';
+export type SheetName =
+  | 'ios-notif'
+  | 'honest-auth'
+  | 'region'
+  | 'original'
+  | 'provenance'
+  | 'explore'
+  | 'evidence'
+  | 'flag-form'
+  | 'flag-received'
+  | 'nuance-story'
+  | 'nuance-chat';
+
+/** The Settings demo override, blueprint 3.2 item 9. `auto` uses each narrative's own default. */
+export type Scaffold = 'auto' | 'S3' | 'S2' | 'S1' | 'S0';
+
+/** Where the reader is in the sparring gate for the narrative on screen. */
+export type SparPhase = 'gate' | 'answered' | 'skipped';
 
 export interface AppState {
   screen: Screen;
@@ -42,6 +59,41 @@ export interface AppState {
   /** Region ids the reader picked in onboarding. Zip vocabulary: id, intl, us, more. */
   regions: string[];
   toast: string | null;
+
+  // --- the autopsy ---
+  /** The narrative the autopsy is on. */
+  narrative: string;
+  scaffold: Scaffold;
+  spar: SparPhase;
+  /** Which S3 question is on screen, and the option index picked per question. */
+  sparIdx: number;
+  sparPicked: number[];
+  /** S0 only: the reader asked for the gate through the spar-on-demand chip. */
+  sparDemand: boolean;
+  predPick: number | null;
+  moneyStopped: boolean;
+  /** The narration sentence selected, or the count-chip status selected. One at a time. */
+  sent: string | null;
+  hlStatus: string | null;
+  flagReason: number | null;
+  /** Narrative ids this device has flagged. Drives the local under-review chip (ADR-12). */
+  flags: string[];
+  /** True when this session was entered through /n/{id} rather than through the shell. */
+  permalink: boolean;
+  /**
+   * A selector inside the autopsy body to bring into view. The state matrix drives it, so a
+   * panel state screenshots the panel it names rather than the top of the same screen; a deep
+   * link to a panel is the same field.
+   */
+  focus: string | null;
+
+  // --- radar demo state ---
+  /** The crisis-hold notice, which is chrome behind the zip's own demo toggle. */
+  crisis: boolean;
+  /** The open-corrections strip under the feed header. */
+  corrections: boolean;
+  /** The via-Dissect feed items, which only the fresh-dissect flow lets in. */
+  viaDissect: boolean;
 }
 
 /** The `data-screen` value for a state. The only place the main/tab collapse happens. */
@@ -58,6 +110,10 @@ export const LS = {
   theme: 'mth:theme',
   onboarded: 'mth:onboarded',
   notif: 'mth:notif',
+  scaffold: 'mth:scaffold',
+  flags: 'mth:flags',
+  /** How many S2 gates this device has answered. The rotation counter, and nothing else. */
+  s2: 'mth:s2',
 } as const;
 
 /**
@@ -83,15 +139,18 @@ export function writeStore(key: string, value: string): void {
 const one = <T extends string>(raw: string | null, allowed: readonly T[], fallback: T): T =>
   allowed.includes(raw as T) ? (raw as T) : fallback;
 
+/** A stored JSON array of strings, or the fallback. Shared by `regions` and `flags`. */
+function readList(key: string, fallback: string[]): string[] {
+  try {
+    const stored: unknown = JSON.parse(readStore(key) ?? 'null');
+    return Array.isArray(stored) ? stored.filter((item): item is string => typeof item === 'string') : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
 export function initialState(): AppState {
   const onboarded = readStore(LS.onboarded) === '1';
-  let regions = ['id', 'intl'];
-  try {
-    const stored: unknown = JSON.parse(readStore(LS.regions) ?? 'null');
-    if (Array.isArray(stored)) regions = stored.filter((r): r is string => typeof r === 'string');
-  } catch {
-    /* a corrupt preference falls back to the default selection */
-  }
   return {
     screen: onboarded ? 'main' : 'onb-hello',
     tab: 'radar',
@@ -99,8 +158,27 @@ export function initialState(): AppState {
     lang: one(readStore(LS.lang), ['en', 'id'] as const, 'en'),
     pack: one(readStore(LS.pack), ['id', 'en'] as const, 'id'),
     theme: one(readStore(LS.theme), ['light', 'dark'] as const, 'light'),
-    regions,
+    regions: readList(LS.regions, ['id', 'intl']),
     toast: null,
+
+    narrative: 'mbg-stop',
+    scaffold: one(readStore(LS.scaffold), ['auto', 'S3', 'S2', 'S1', 'S0'] as const, 'auto'),
+    spar: 'gate',
+    sparIdx: 0,
+    sparPicked: [],
+    sparDemand: false,
+    predPick: null,
+    moneyStopped: false,
+    sent: null,
+    hlStatus: null,
+    flagReason: null,
+    flags: readList(LS.flags, []),
+    permalink: false,
+    focus: null,
+
+    crisis: false,
+    corrections: false,
+    viaDissect: false,
   };
 }
 
@@ -111,14 +189,48 @@ export function initialState(): AppState {
  * returns true; an unlisted name returns false, so a matrix entry for a state the shell cannot
  * reach yet fails loudly instead of screenshotting the wrong screen.
  *
- * The table covers what Wave 0b actually builds. Each surface implementer adds its own rows in
- * the same shape as it lands (`radar.crisis-hold`, `settings.scaffold.s2`, `autopsy.panel.*`,
- * and so on). Names that are URLs rather than app state (`system.offline`, `system.notfound`,
+ * The table covers what is built: the shell, the radar and the autopsy. Each remaining surface
+ * implementer adds its own rows in the same shape as it lands (`dissect.*`, `archive.*`,
+ * `settings.scaffold.*`). Names that are URLs rather than app state (`system.offline`, `system.notfound`,
  * `system.permalink`, `system.share.*`, `land.*`, `research.*`, `desktop.*`) are deliberately
  * absent: the driver navigates to those.
  *
  * `dark.` is a prefix rather than a row: `dark.radar` is `radar.default` with the dark theme.
  */
+/** The radar tab, plus whatever demo chrome the state is about. */
+const radar = (extra: Partial<AppState> = {}): Partial<AppState> => ({
+  screen: 'main',
+  tab: 'radar',
+  sheet: null,
+  crisis: false,
+  corrections: false,
+  ...extra,
+});
+
+/**
+ * One narrative's autopsy. `spar` defaults to `skipped`, which is the assembled state every
+ * `autopsy.panel.*` row is a variant of; the gate rows pass `spar: 'gate'` back in.
+ */
+const autopsy = (narrative: string, extra: Partial<AppState> = {}): Partial<AppState> => ({
+  screen: 'autopsy',
+  sheet: null,
+  narrative,
+  spar: 'skipped',
+  scaffold: 'auto',
+  sparIdx: 0,
+  sparPicked: [],
+  sparDemand: false,
+  predPick: null,
+  moneyStopped: false,
+  sent: null,
+  hlStatus: null,
+  focus: null,
+  ...extra,
+});
+
+/** The sparring card, wherever the gate is in it. */
+const GATE = '.m-spar';
+
 const GOTO: Record<string, Partial<AppState>> = {
   'onb.hello': { screen: 'onb-hello', sheet: null },
   'onb.lang': { screen: 'onb-lang', sheet: null },
@@ -127,13 +239,52 @@ const GOTO: Record<string, Partial<AppState>> = {
   'onb.notif.ios-dialog': { screen: 'onb-notif', sheet: 'ios-notif' },
   'onb.auth': { screen: 'onb-auth', sheet: null },
   'onb.auth.honest-sheet': { screen: 'onb-auth', sheet: 'honest-auth' },
-  'radar.default': { screen: 'main', tab: 'radar', sheet: null },
+  'radar.default': radar(),
+  'radar.hero': radar(),
+  'radar.crisis-hold': radar({ crisis: true }),
+  'radar.under-review': radar({ corrections: true }),
+  'radar.region-sheet': radar({ sheet: 'region' }),
+  'radar.via-dissect': radar({ viaDissect: true }),
+  'radar.pack-en': radar({ pack: 'en' }),
+
   'dissect.default': { screen: 'main', tab: 'dissect', sheet: null },
   'dissect.progress': { screen: 'progress', sheet: null },
   'dissect.queue': { screen: 'queue', sheet: null },
   'archive.default': { screen: 'main', tab: 'archive', sheet: null },
   'settings.default': { screen: 'main', tab: 'settings', sheet: null },
-  'autopsy.default': { screen: 'autopsy', sheet: null },
+
+  // mbg-stop is scaffold_default S3, mbg-poisoning S1, ppn-panic S0. The sparring rows carry
+  // the picks that reach them, so the state is the one the walk would have produced.
+  'autopsy.default': autopsy('mbg-stop'),
+  'autopsy.s3.q1': autopsy('mbg-stop', { spar: 'gate', focus: GATE }),
+  'autopsy.s3.q2': autopsy('mbg-stop', { spar: 'gate', sparIdx: 1, sparPicked: [2], focus: GATE }),
+  'autopsy.s3.q3': autopsy('mbg-stop', { spar: 'gate', sparIdx: 2, sparPicked: [2, 0], focus: GATE }),
+  'autopsy.s3.wrong-path': autopsy('mbg-stop', { spar: 'gate', sparPicked: [0], focus: GATE }),
+  'autopsy.s3.skip': autopsy('mbg-stop', { spar: 'gate', sparIdx: 1, sparPicked: [2], focus: GATE }),
+  'autopsy.s3.diff-card': autopsy('mbg-stop', { spar: 'answered', sparIdx: 2, sparPicked: [2, 0, 1] }),
+  'autopsy.s2': autopsy('mbg-stop', { spar: 'gate', scaffold: 'S2', focus: GATE }),
+  'autopsy.s1.prediction': autopsy('mbg-poisoning', { spar: 'gate', focus: GATE }),
+  'autopsy.s0.spar-chip': autopsy('ppn-panic', { spar: 'gate' }),
+  'autopsy.panel.claim-map': autopsy('mbg-stop', { focus: '[data-el="p-claim"]' }),
+  'autopsy.panel.scale': autopsy('mbg-stop', { focus: '[data-el="p-scale"]' }),
+  'autopsy.panel.money.off': autopsy('mbg-stop', { focus: '[data-el="p-flow"]' }),
+  'autopsy.panel.money.on': autopsy('mbg-stop', { moneyStopped: true, focus: '[data-el="p-flow"]' }),
+  'autopsy.panel.incidence': autopsy('mbg-stop', { focus: '[data-el="p-inc"]' }),
+  'autopsy.panel.dueling': autopsy('mbg-poisoning', { focus: '[data-el="p-duel"]' }),
+  'autopsy.panel.echo': autopsy('ppn-panic', { focus: '[data-echo="cited"]' }),
+  'autopsy.panel.echo-silence': autopsy('mbg-stop', { focus: '[data-echo="silence"]' }),
+  'autopsy.panel.options': autopsy('mbg-stop', { focus: '[data-el="p-options"]' }),
+  'autopsy.panel.family': autopsy('mbg-stop', { focus: '[data-el="p-family"]' }),
+  'autopsy.evidence-sheet': autopsy('mbg-stop', { sheet: 'evidence' }),
+  'autopsy.narration-highlight': autopsy('mbg-stop', { sent: 'v-1', focus: '[data-el="p-claim"]' }),
+  'autopsy.explore-drawer': autopsy('mbg-stop', { sheet: 'explore' }),
+  'autopsy.flag.form': autopsy('mbg-stop', { sheet: 'flag-form' }),
+  'autopsy.flag.received': autopsy('mbg-stop', { sheet: 'flag-received', flagReason: 0 }),
+  'autopsy.original-sheet': autopsy('mbg-stop', { sheet: 'original' }),
+  'autopsy.provenance-sheet': autopsy('mbg-stop', { sheet: 'provenance' }),
+  'autopsy.nuance.story': autopsy('mbg-stop', { sheet: 'nuance-story' }),
+  'autopsy.nuance.chat': autopsy('mbg-stop', { sheet: 'nuance-chat' }),
+
   'system.methodology': { screen: 'methodology', sheet: null },
   'system.notif-settings': { screen: 'notif-settings', sheet: null },
   'system.notif.lock-preview': { screen: 'lock-preview', sheet: null },

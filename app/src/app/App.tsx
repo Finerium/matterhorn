@@ -14,6 +14,7 @@
 import { useCallback, useEffect, useState, type ReactNode } from 'react';
 import { LangContext, useT, type Key } from '../i18n';
 import { prefetchRadar } from '../content';
+import Autopsy from './Autopsy';
 import { AuthScreen, Hello, LangScreen, NotifScreen, RegionsScreen, type Nav } from './Onboarding';
 import Radar from './Radar';
 import {
@@ -23,6 +24,7 @@ import {
   screenName,
   writeStore,
   type AppState,
+  type Scaffold,
   type Screen,
   type SheetName,
   type Tab,
@@ -81,7 +83,6 @@ const PANE: Record<'dissect' | 'archive' | 'settings', { title: Key; body: Key }
 
 /** Screens beyond the tabs. Named and reachable now; each body is its surface's work. */
 const STANDALONE: Partial<Record<Screen, Key>> = {
-  autopsy: 'screen.autopsy',
   methodology: 'screen.methodology',
   'notif-settings': 'screen.notif-settings',
   'lock-preview': 'screen.lock-preview',
@@ -89,8 +90,13 @@ const STANDALONE: Partial<Record<Screen, Key>> = {
   progress: 'screen.progress',
 };
 
-export default function App() {
-  const [state, setState] = useState<AppState>(initialState);
+/**
+ * `start` is the state a route hands the shell before first paint. `/n/{id}` uses it to open on
+ * the autopsy for that narrative, which is how AC-APP-18 hydrates a permalink into the real
+ * screen rather than into a second, thinner copy of it.
+ */
+export default function App({ start }: { start?: Partial<AppState> }) {
+  const [state, setState] = useState<AppState>(() => ({ ...initialState(), ...start }));
 
   const patch = useCallback((next: Partial<AppState>) => {
     setState((current) => ({ ...current, ...next }));
@@ -102,19 +108,24 @@ export default function App() {
     writeStore(LS.pack, state.pack);
     writeStore(LS.theme, state.theme);
     writeStore(LS.regions, JSON.stringify(state.regions));
+    writeStore(LS.scaffold, state.scaffold);
+    writeStore(LS.flags, JSON.stringify(state.flags));
     document.body.dataset.mth = state.theme;
-  }, [state.lang, state.pack, state.theme, state.regions]);
+  }, [state.lang, state.pack, state.theme, state.regions, state.scaffold, state.flags]);
 
   useEffect(() => {
     if (state.screen === 'main') writeStore(LS.onboarded, '1');
   }, [state.screen]);
 
-  // The feed is fetched while onboarding is on screen, so the radar paints from cache.
+  // Both feeds are fetched while onboarding is on screen, so the radar paints from cache and a
+  // pack switch, from the pill or from the region sheet, is a synchronous cache read (AC-APP-14).
   useEffect(() => {
-    void prefetchRadar(state.pack).catch(() => {
-      /* the radar reports its own failure; a warm-up that misses is not an error */
-    });
-  }, [state.pack]);
+    for (const pack of ['id', 'en'] as const) {
+      void prefetchRadar(pack).catch(() => {
+        /* the radar reports its own failure; a warm-up that misses is not an error */
+      });
+    }
+  }, []);
 
   useEffect(() => {
     if (state.toast === null) return;
@@ -174,6 +185,39 @@ export default function App() {
   );
 }
 
+/**
+ * The sparring override, blueprint 3.2 item 9. It lives here rather than in the Settings screen
+ * because AC-APP-8 reaches it from `settings.default` and the autopsy reads the same state; the
+ * rest of the Settings screen, and the rows around this one, land with that surface.
+ */
+const SCAFFOLDS: Scaffold[] = ['auto', 'S3', 'S2', 'S1', 'S0'];
+
+function ScaffoldRow({ state, nav }: { state: AppState; nav: Nav }) {
+  const t = useT();
+  return (
+    <div className="m-scaffold">
+      <div className="m-scaffold-label">{t('settings.scaffold')}</div>
+      <div className="m-scaffold-opts">
+        {SCAFFOLDS.map((level) => (
+          <button
+            key={level}
+            type="button"
+            className="m-scaffold-opt"
+            data-scaffold-option={level}
+            aria-pressed={state.scaffold === level}
+            onClick={() => {
+              nav.patch({ scaffold: level });
+            }}
+          >
+            {level === 'auto' ? t('settings.scaffold.auto') : level}
+          </button>
+        ))}
+      </div>
+      <div className="m-scaffold-sub">{t('settings.scaffold.body')}</div>
+    </div>
+  );
+}
+
 function Body({ state, nav, setSheet }: { state: AppState; nav: Nav; setSheet: (sheet: SheetName | null) => void }) {
   const t = useT();
 
@@ -190,22 +234,12 @@ function Body({ state, nav, setSheet }: { state: AppState; nav: Nav; setSheet: (
       {state.screen === 'main' ? (
         <div className="m-screen m-main" data-screen={screenName(state)} data-anim="fade">
           {state.tab === 'radar' ? (
-            <Radar
-              key={state.pack}
-              pack={state.pack}
-              lang={state.lang}
-              theme={state.theme}
-              onPack={() => {
-                nav.patch({ pack: state.pack === 'id' ? 'en' : 'id' });
-              }}
-              onMethodology={() => {
-                nav.go('methodology');
-              }}
-            />
+            <Radar key={state.pack} state={state} nav={nav} />
           ) : (
             <div className="m-tabpane" data-stagger="1">
               <div className="m-pane-title">{t(PANE[state.tab].title)}</div>
               <div className="m-pane-body">{t(PANE[state.tab].body)}</div>
+              {state.tab === 'settings' ? <ScaffoldRow state={state} nav={nav} /> : null}
               <div className="m-pane-note">{t('common.soon')}</div>
             </div>
           )}
@@ -231,6 +265,8 @@ function Body({ state, nav, setSheet }: { state: AppState; nav: Nav; setSheet: (
           </nav>
         </div>
       ) : null}
+
+      {state.screen === 'autopsy' ? <Autopsy state={state} nav={nav} /> : null}
 
       {state.screen === 'queue' ? (
         <div className="m-screen m-onb" data-screen="queue">

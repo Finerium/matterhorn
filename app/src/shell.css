@@ -83,8 +83,10 @@
   font: inherit;
 }
 .m-row-main { flex: 1; }
-.m-row-label { font-size: 17px; font-weight: 500; }
-.m-row-sub { font-size: 13px; color: var(--sub); margin-top: 2px; }
+/* display:block because the row's parts are spans inside a button: inline, they ran together
+   on one line ("IndonesiaDeep pack") wherever a row carried a sub. */
+.m-row-label { display: block; font-size: 17px; font-weight: 500; }
+.m-row-sub { display: block; font-size: 13px; color: var(--sub); margin-top: 2px; }
 .m-radio {
   width: 22px;
   height: 22px;
@@ -391,3 +393,381 @@
 .m-page-body { font-size: 15px; line-height: 1.6; color: var(--body); text-wrap: pretty; }
 .m-page-meta { font-size: 12px; color: var(--sub); line-height: 1.7; word-break: break-all; }
 .m-page-link { font-size: 15px; font-weight: 600; color: var(--ink); border-bottom: 1px solid var(--hair2); align-self: flex-start; }
+
+/* --- radar: the pack pill's two controls, the notices, the crisis hold ------------------ */
+
+/* The pill is the zip's shape; inside it the label switches the pack and the caret opens the
+   region sheet, because the two behaviours are separately addressable in the specs. */
+.m-pack-label,
+.m-pack-caret {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.m-pack-label { font-size: 13px; font-weight: 600; }
+.m-pack-caret { font-size: 8px; color: var(--sub); }
+
+.m-notice {
+  border: 1px solid var(--hair2);
+  border-radius: 16px;
+  padding: 13px 15px;
+  margin: 4px 0 12px;
+  background: var(--surface);
+}
+.m-notice-kicker { font-size: 12px; font-weight: 600; color: var(--amber); }
+.m-notice-row { font-size: 12.5px; line-height: 1.55; color: var(--body); margin-top: 7px; text-wrap: pretty; }
+.m-notice-date { font-weight: 600; color: var(--sub); }
+.m-notice-foot { font-size: 11px; color: var(--sub); line-height: 1.6; margin-top: 9px; text-wrap: pretty; }
+
+.m-card-via {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--sup);
+  background: var(--tint);
+  border-radius: 999px;
+  padding: 2.5px 8px;
+}
+
+.m-crisis {
+  border: 1.5px dashed var(--hair2);
+  border-radius: 16px;
+  padding: 14px 16px;
+  margin: 4px 0 12px;
+}
+.m-crisis-kicker { font-size: 12px; font-weight: 600; color: var(--amber); }
+.m-crisis-title { font-size: 14.5px; font-weight: 650; margin: 7px 0 5px; text-wrap: pretty; }
+.m-crisis-body { font-size: 12px; line-height: 1.55; color: var(--sub); text-wrap: pretty; }
+.m-crisis-foot { display: flex; align-items: center; gap: 10px; margin-top: 9px; }
+.m-crisis-link {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--hair2);
+  padding: 0;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+}
+.m-crisis-policy { margin-left: auto; font-size: 11px; color: var(--sub); }
+
+/* --- the autopsy ----------------------------------------------------------------------- */
+
+.m-abar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 56px 16px 10px;
+  background: var(--frost);
+  backdrop-filter: blur(24px) saturate(1.8);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+}
+.m-abar-title { flex: 1; text-align: center; font-size: 13px; font-weight: 600; color: var(--ink); }
+.m-round {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: var(--fill);
+  color: var(--body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.m-round-fill { width: 48px; height: 48px; font-size: 17px; }
+.m-ascroll { flex: 1; overflow: auto; padding: 104px 16px 130px; }
+
+.m-provline { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; padding: 2px 2px 12px; }
+.m-provlink {
+  background: none;
+  border: none;
+  border-bottom: 1px dotted var(--hair2);
+  padding: 0;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--sub);
+  cursor: pointer;
+  text-align: left;
+}
+.m-provcached { font-size: 11px; color: var(--sub); }
+.m-sparchip {
+  margin-left: auto;
+  background: var(--fill);
+  border: none;
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.m-spar {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 17px;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow);
+}
+.m-spar-head { display: flex; align-items: center; }
+.m-spar-kicker { font-size: 12px; font-weight: 600; color: var(--sub); }
+.m-spar-skip {
+  margin-left: auto;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--sub);
+  cursor: pointer;
+}
+.m-spar-dots { display: flex; gap: 5px; margin-top: 12px; }
+.m-spar-dot { display: block; width: 24px; height: 3px; border-radius: 2px; background: currentColor; }
+.m-spar-q { font-size: 16.5px; font-weight: 650; line-height: 1.4; margin-top: 10px; text-wrap: pretty; }
+.m-spar-opt {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: var(--fill);
+  border: 1.5px solid transparent;
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-top: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--ink);
+  cursor: pointer;
+  text-wrap: pretty;
+}
+.m-spar-opt[data-answer='right'] { border-color: var(--sup); background: var(--tint); font-weight: 600; }
+.m-spar-opt[data-answer='wrong'] { border-color: var(--mis); background: var(--misbg); }
+.m-spar-opt[data-answer='picked'] { border-color: var(--sup); background: var(--tint); font-weight: 600; }
+.m-spar-opt[data-answer='dim'] { opacity: 0.55; color: var(--sub); }
+.m-spar-note {
+  font-size: 12px;
+  color: var(--body);
+  line-height: 1.55;
+  margin-top: 11px;
+  border-top: 1px solid var(--hair);
+  padding-top: 10px;
+  text-wrap: pretty;
+}
+.m-spar .m-cta { height: 44px; margin-top: 12px; font-size: 14px; }
+.m-spar-foot { font-size: 10.5px; color: var(--sub); margin-top: 13px; line-height: 1.6; text-wrap: pretty; }
+
+.m-diff {
+  background: var(--tint);
+  border: 1px solid var(--sup);
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin-bottom: 13px;
+}
+.m-diff-title { font-size: 14px; font-weight: 700; text-wrap: pretty; }
+.m-diff-row { display: flex; gap: 8px; margin-top: 6px; align-items: baseline; }
+.m-diff-text { font-size: 12.5px; color: var(--body); line-height: 1.45; flex: 1; }
+
+.m-explore {
+  width: 100%;
+  border: 1.5px dashed var(--hair2);
+  border-radius: 14px;
+  padding: 13px;
+  background: none;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sub);
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.m-explore-card { background: var(--fill); border-radius: 14px; padding: 13px 14px; margin-top: 10px; }
+.m-explore-title { font-size: 13.5px; font-weight: 700; }
+.m-explore-body { font-size: 11.5px; color: var(--sub); line-height: 1.5; margin-top: 3px; text-wrap: pretty; }
+.m-explore-chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 9px; }
+.m-explore-chips .m-tag { border: none; font-family: inherit; cursor: pointer; }
+
+.m-actionbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 26px 16px 28px;
+  background: linear-gradient(to top, var(--paper) 62%, transparent);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.m-actionbar .m-cta { height: 48px; flex: 1; width: auto; }
+
+.m-sheet-kicker { font-size: 12px; font-weight: 600; color: var(--sub); }
+.m-orig-text { font-size: 18px; font-weight: 700; line-height: 1.4; margin-top: 9px; text-wrap: pretty; }
+.m-sheet-meta { font-size: 11px; color: var(--sub); margin-top: 8px; word-break: break-word; }
+
+.m-chain { margin-top: 10px; }
+.m-chain-row { display: flex; gap: 11px; padding: 11px 2px; border-bottom: 1px solid var(--hair); }
+.m-chain-i { font-size: 11px; color: var(--sub); padding-top: 2px; }
+.m-chain-main { flex: 1; }
+.m-chain-step { display: block; font-size: 13.5px; font-weight: 650; }
+.m-chain-who { display: block; font-size: 11px; color: var(--sub); margin-top: 3px; word-break: break-word; }
+
+.m-flag-done { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 8px 6px 0; }
+.m-flag-check {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--acc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- settings: the sparring override, which both waves read -------------------------- */
+
+.m-scaffold { margin-top: 20px; }
+.m-scaffold-label { font-size: 12px; font-weight: 600; color: var(--sub); }
+.m-scaffold-opts { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.m-scaffold-opt {
+  background: var(--fill);
+  border: 1.5px solid transparent;
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--body);
+  cursor: pointer;
+}
+.m-scaffold-opt[aria-pressed='true'] { background: var(--acc); color: var(--accInk); }
+.m-scaffold-sub { font-size: 11.5px; color: var(--sub); line-height: 1.5; margin-top: 8px; text-wrap: pretty; }
+
+/* --- the Nuance Card overlay ---------------------------------------------------------- */
+
+.m-nf-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(18, 17, 14, 0.62);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.m-nf-inner { width: 100%; max-width: 300px; }
+.m-nf-switch { display: flex; gap: 6px; justify-content: center; margin-bottom: 12px; }
+.m-nf-pick {
+  background: none;
+  border: 1px solid rgba(243, 241, 234, 0.4);
+  border-radius: 999px;
+  padding: 6px 13px;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #f3f1ea;
+  cursor: pointer;
+}
+.m-nf-pick[aria-pressed='true'] { background: #f3f1ea; color: #17160f; font-weight: 600; }
+.m-nf-frame { overflow: hidden; border-radius: 20px; box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5); }
+.m-nf-zoom { transform-origin: top left; }
+
+/* The asset itself, laid out at export size. Colours are literal: the card looks the same
+   whichever theme the reader exports it from, because the file leaves the app. */
+.m-nf-card {
+  box-sizing: border-box;
+  background: #141412;
+  border: 4px solid #2e2d28;
+  border-radius: 72px;
+  padding: 72px 64px;
+  color: #f3f1ea;
+  display: flex;
+  flex-direction: column;
+}
+.m-nf-card-chat { border-radius: 56px; padding: 56px 60px; }
+.m-nf-mark { font-size: 32px; font-weight: 600; letter-spacing: 0.38em; color: #f3f1ea; }
+.m-nf-head { font-size: 60px; font-weight: 700; line-height: 1.32; margin-top: 50px; text-wrap: pretty; }
+.m-nf-head-chat { font-size: 52px; margin-top: 34px; }
+.m-nf-attr { font-size: 30px; color: #98948a; margin-top: 22px; }
+.m-nf-chips { display: flex; gap: 34px; flex-wrap: wrap; margin-top: 46px; }
+.m-nf-chip { display: flex; align-items: center; gap: 12px; font-size: 30px; font-weight: 600; }
+.m-nf-dot { width: 18px; height: 18px; border-radius: 50%; background: currentColor; }
+.m-nf-hidden {
+  border: 3px dashed rgba(192, 140, 180, 0.45);
+  border-radius: 26px;
+  padding: 18px 26px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #c08cb4;
+  margin-top: 34px;
+  align-self: flex-start;
+}
+.m-nf-tags { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 34px; }
+.m-nf-tag {
+  border: 2px solid #4a4840;
+  border-radius: 24px;
+  padding: 12px 22px;
+  font-size: 26px;
+  font-weight: 600;
+  background: #1c1b18;
+}
+.m-nf-foot {
+  margin-top: auto;
+  padding-top: 30px;
+  border-top: 2px solid #2e2d28;
+  font-size: 26px;
+  color: #98948a;
+  line-height: 1.7;
+  word-break: break-word;
+}
+.m-nf-card [data-st='supported'] { color: #7fa8dc; }
+.m-nf-card [data-st='disputed'] { color: #dfa05c; }
+.m-nf-card [data-st='missing'] { color: #e07a70; }
+.m-nf-card [data-st='unsourced'],
+.m-nf-card [data-st='hidden'] { color: #c08cb4; }
+.m-nf-actions { display: flex; gap: 9px; margin-top: 14px; }
+.m-nf-save,
+.m-nf-share {
+  flex: 1;
+  height: 44px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.m-nf-save { background: #f3f1ea; color: #17160f; border: none; }
+.m-nf-share { background: none; border: 1.5px solid rgba(243, 241, 234, 0.5); color: #f3f1ea; font-weight: 600; }
+.m-nf-note {
+  font-size: 10px;
+  color: rgba(243, 241, 234, 0.6);
+  text-align: center;
+  margin-top: 11px;
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+.m-nf-spine { display: flex; flex-direction: column; margin-top: 40px; }
+.m-nf-node {
+  border: 2px solid #4a4840;
+  border-radius: 20px;
+  padding: 16px 22px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.3;
+  background: #1c1b18;
+}
+.m-nf-edge { padding: 10px 0 10px 28px; font-size: 24px; font-weight: 600; }

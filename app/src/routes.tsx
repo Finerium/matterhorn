@@ -5,19 +5,17 @@
  *
  *   /            plain placeholder that links `/app`. The landing is Gate 4.
  *   /app         the shell. All internal navigation is client state, per 6.7.
- *   /n/:id       permalink: the narrative through the card contract, nothing else yet.
+ *   /n/:id       permalink: the shell, mounted straight onto the autopsy for that narrative.
  *   /methodology the published policy 6.5 text, read from methodology.json.
  *   /share       the GET share target: parses title/text/url and states the decision it takes.
  *   /offline     the SW fallback for an uncached navigation.
  *   *            404.
  */
-import { useMemo, type ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import { Link, Route, Routes, useParams, useSearchParams } from 'react-router';
-import type { Lang, Narrative, Source, UrlIndex } from '../../contracts/types';
+import type { Lang, UrlIndex } from '../../contracts/types';
 import { LangContext, useT } from './i18n';
-import { PATHS, useJson, useMethodology, useUrlIndex } from './content';
-import { makeCtx } from './renderers/ctx';
-import Card from './renderers/Card';
+import { useMethodology, useUrlIndex } from './content';
 import { LS, readStore } from './app/state';
 import App from './app/App';
 
@@ -54,22 +52,14 @@ function Home() {
   );
 }
 
+/**
+ * AC-APP-18: the permalink hydrates to the full autopsy, so it mounts the shell on the autopsy
+ * screen rather than drawing a second, thinner copy of the card. `permalink` is what tells the
+ * autopsy header it is the addressable card on this URL.
+ */
 function Permalink() {
   const { id = '' } = useParams();
-  const narrative = useJson<Narrative>(PATHS.narrative(id));
-  const sources = useJson<Source[]>(PATHS.sources);
-  const ctx = useMemo(() => makeCtx(sources.data ?? [], storedLang(), 'light'), [sources.data]);
-  const ready = narrative.data !== null && sources.data !== null;
-  return (
-    <Page>
-      <Status loading={!ready} error={narrative.error ?? sources.error} />
-      {narrative.data !== null && sources.data !== null ? (
-        <div className="mth" data-testid="permalink-card">
-          <Card narrative={narrative.data} variant="hero" ctx={ctx} />
-        </div>
-      ) : null}
-    </Page>
-  );
+  return <App start={{ screen: 'autopsy', narrative: id, spar: 'gate', permalink: true }} />;
 }
 
 function MethodologyPage() {

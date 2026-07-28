@@ -7,6 +7,11 @@
  *
  * This is the only module in the app that reads a narrative headline. That is asserted by a
  * filesystem grep in the unit suite, because a second headline path would be a second contract.
+ * A surface that has to quote one (the Nuance Card) calls `headlineOf` rather than the field.
+ *
+ * Gate 3 adds two optional props and nothing else: `onTap`, which makes the card's own
+ * affordances live where a surface owns a behaviour for them, and `meta`, the slot the radar
+ * puts its corrections and via-Dissect chips in. Both absent, the markup is Gate 2's exactly.
  *
  * Provenance is transcribed, never authored: the names shown are the names in the artifact.
  * The manifest's per-step models are deliberately not drawn here; the card states who analyzed
@@ -15,15 +20,34 @@
  * Ported from the zip's hero and compact card blocks. Compact gains a tag row the zip did not
  * carry, because the card contract asserts every tag renders in both slots.
  */
+import type { HTMLAttributes, KeyboardEvent, MouseEvent, ReactNode } from 'react';
 import type { DerivedCounts, DuelingPanel, Narrative } from '../../../contracts/types';
 import { CardContractError, resolveAll, t, type RenderCtx } from './ctx';
 import { COUNT_CHIPS, UI } from './copy';
+
+/** What a surface can wire the card's own affordances to. */
+export type CardTap = 'open' | 'tag' | 'chip' | 'original' | 'dissect' | 'outbound';
 
 interface CardProps {
   narrative: Narrative;
   variant: 'hero' | 'compact';
   ctx: RenderCtx;
+  /**
+   * Makes the card's affordances live. `key` is the tag, the chip status, or '' where the kind
+   * carries no key. Omitted, every affordance stays presentational, which is what the feed's own
+   * whole-card tap and the Gate 2 harness both want.
+   */
+  onTap?: (kind: CardTap, key: string) => void;
+  /** Meta-row chrome the surface owns: the corrections chip, the via-Dissect chip. */
+  meta?: ReactNode;
 }
+
+/**
+ * The one headline read in the app, exported so a surface that quotes a headline (the Nuance
+ * Card) goes through this module rather than opening a second path to the field. AC-INV-2 is
+ * asserted as a filesystem grep, and this keeps the grep honest rather than merely satisfied.
+ */
+export const headlineOf = (narrative: Narrative, ctx: RenderCtx): string => t(ctx, narrative.headline);
 
 /**
  * The five counts Section 6.5 derives for every narrative. `conflicts` is the CF-1 optional
@@ -31,15 +55,19 @@ interface CardProps {
  */
 const COUNT_KEYS = ['missing', 'unsourced', 'disputed', 'supported', 'hidden'] as const;
 
-/** The chips a `counts` block earns, in the blueprint's order. `supported` never earns one. */
-function chipsFor(counts: DerivedCounts, ctx: RenderCtx): Array<{ st: string; label: string }> {
+/**
+ * The chips a `counts` block earns, in the blueprint's order. `supported` never earns one.
+ * Exported because 6.5 binds the Nuance Card to the same derivation, and one derivation with two
+ * call sites is not the same thing as two derivations.
+ */
+export function chipsFor(counts: DerivedCounts, ctx: RenderCtx): Array<{ st: string; label: string }> {
   return COUNT_CHIPS.flatMap(({ key, st, label }) => {
     const n = counts[key];
     return typeof n === 'number' && n > 0 ? [{ st, label: t(ctx, label(n)) }] : [];
   });
 }
 
-export default function Card({ narrative, variant, ctx }: CardProps) {
+export default function Card({ narrative, variant, ctx, onTap, meta }: CardProps) {
   // Narrative-scoped orphan refusal: the card draws no Value of its own, and a narrative
   // carrying a reference that does not resolve is not a renderable narrative.
   resolveAll(narrative, ctx);
@@ -59,8 +87,31 @@ export default function Card({ narrative, variant, ctx }: CardProps) {
   }
 
   const chips = chipsFor(counts, ctx);
-  const headline = t(ctx, narrative.headline);
-  const meta = `${narrative.outlet} · ${narrative.published_date}`;
+  const headline = headlineOf(narrative, ctx);
+
+  /**
+   * The affordance spread. A card whose surface passed no `onTap` stays exactly the markup Gate 2
+   * shipped: no role, no tab stop, no handler, so nothing announces an affordance that is not one.
+   */
+  const tap = (kind: CardTap, key: string): Pick<HTMLAttributes<HTMLElement>, 'role' | 'tabIndex' | 'onClick' | 'onKeyDown'> => {
+    if (onTap === undefined) return {};
+    const fire = (event: MouseEvent | KeyboardEvent) => {
+      // The feed wraps the whole card in its own tap; an affordance inside it is not that tap.
+      event.stopPropagation();
+      onTap(kind, key);
+    };
+    return {
+      role: 'button',
+      tabIndex: 0,
+      onClick: fire,
+      onKeyDown: (event: KeyboardEvent) => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        fire(event);
+      },
+    };
+  };
+  const metaText = `${narrative.outlet} · ${narrative.published_date}`;
   const translated = narrative.original.lang !== ctx.lang;
   const review = narrative.status === 'under_review';
   // The zip's imgLabel: the placeholder names the outlet whose og:image belongs in the slot.
@@ -75,7 +126,7 @@ export default function Card({ narrative, variant, ctx }: CardProps) {
   const chipRow = (
     <div className={variant === 'hero' ? 'm-card-chips' : 'm-card-chips m-card-chips-c'}>
       {chips.map((chip) => (
-        <span key={chip.label} className="m-card-chip" data-st={chip.st}>
+        <span key={chip.label} className="m-card-chip" data-st={chip.st} {...tap('chip', chip.st)}>
           <span className="m-dot" />
           {chip.label}
         </span>
@@ -85,7 +136,7 @@ export default function Card({ narrative, variant, ctx }: CardProps) {
   const tagRow = (
     <div className={variant === 'hero' ? 'm-card-tags' : 'm-card-tags m-card-tags-c'}>
       {tags.map((tag) => (
-        <span key={tag} className="m-tag">
+        <span key={tag} className="m-tag" data-tag={tag} {...tap('tag', tag)}>
           {tag}
         </span>
       ))}
@@ -101,9 +152,14 @@ export default function Card({ narrative, variant, ctx }: CardProps) {
   );
   const metaRow = (
     <div className="m-card-meta">
-      <span className="m-card-metatext">{meta}</span>
-      {translated ? <span className="m-card-trans">{ctx.lang.toUpperCase()} ← {narrative.original.lang.toUpperCase()}</span> : null}
+      <span className="m-card-metatext">{metaText}</span>
+      {translated ? (
+        <span className="m-card-trans" {...tap('original', '')}>
+          {ctx.lang.toUpperCase()} ← {narrative.original.lang.toUpperCase()}
+        </span>
+      ) : null}
       {review ? <span className="m-card-review">{t(ctx, UI.underReview)}</span> : null}
+      {meta}
     </div>
   );
 
@@ -112,7 +168,9 @@ export default function Card({ narrative, variant, ctx }: CardProps) {
       <article className="m-card-c" data-press="1">
         <div className="m-card-c-body">
           {metaRow}
-          <div className="m-card-c-head">{headline}</div>
+          <div className="m-card-c-head" {...tap('open', '')}>
+            {headline}
+          </div>
           {tagRow}
           {chipRow}
           {dueling === undefined ? null : <div className="m-card-teaser">{t(ctx, dueling.rule_line)}</div>}
@@ -128,14 +186,20 @@ export default function Card({ narrative, variant, ctx }: CardProps) {
       <div className="m-card-og">{og}</div>
       <div className="m-card-body">
         {metaRow}
-        <div className="m-card-head">{headline}</div>
+        <div className="m-card-head" {...tap('open', '')}>
+          {headline}
+        </div>
         {tagRow}
         {chipRow}
         <div className="m-card-fam">{famLine}</div>
         {provenance}
         <div className="m-card-actions">
-          <span className="m-btn m-btn-acc">{t(ctx, UI.dissect)}</span>
-          <span className="m-btn m-btn-fill">{t(ctx, UI.original)}</span>
+          <span className="m-btn m-btn-acc" {...tap('dissect', '')}>
+            {t(ctx, UI.dissect)}
+          </span>
+          <span className="m-btn m-btn-fill" {...tap('outbound', '')}>
+            {t(ctx, UI.original)}
+          </span>
         </div>
       </div>
     </article>
