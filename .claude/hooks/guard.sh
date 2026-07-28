@@ -37,8 +37,10 @@ case "$TOOL" in
       deny "Destructive .git manipulation is forbidden. Use git porcelain commands."
     fi
     # ponytail: token heuristic, not a shell parser; false positives read the reason and rephrase
+    # fd-dup and null redirections are reads, not writes: scrub before testing for >
+    SCRUBBED=$(sed -E 's/2>&1//g; s/>&2//g; s/[0-9]*>[[:space:]]*\/dev\/null//g' <<<"$CMD")
     if [[ ! -f "$UNLOCK" ]] && grep -qE "$PROT" <<<"$CMD" \
-       && grep -qE '(^|[;&| ])(rm|mv|cp|tee|touch|mkdir|truncate|ln|sed -i[^|]*|install)([ ;&|]|$)|>' <<<"$CMD"; then
+       && grep -qE '(^|[;&| ])(rm|mv|cp|tee|touch|mkdir|truncate|ln|sed -i[^|]*|install)([ ;&|]|$)|>' <<<"$SCRUBBED"; then
       deny "Bash mutation touching a protected path (tests/ evidence/ .crown/ pipeline/runs/ content/) requires orchestrator unlock."
     fi
     ;;

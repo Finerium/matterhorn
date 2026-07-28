@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "case_library.schema.json",
+  "title": "CaseLibrary",
+  "description": "Blueprint 6.6. content/case_library.json. documented_outcome is past tense, lint-enforced by check 5.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["cases"],
+  "properties": {
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "period", "motif", "documented_outcome", "citations"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^B-[0-9]{2}$" },
+          "title": { "$ref": "#/$defs/L10n" },
+          "period": { "type": "string", "minLength": 1 },
+          "motif": { "$ref": "#/$defs/L10n" },
+          "documented_outcome": { "$ref": "#/$defs/L10n" },
+          "citations": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "$ref": "source.schema.json#/$defs/SourceId" }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "L10n": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "id"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "id": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

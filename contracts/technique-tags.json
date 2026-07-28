@@ -1,0 +1,17 @@
+{
+  "note": "Blueprint Appendix B, locked. The pipeline may assign only these keys; the validator enforces membership (check 1); renderers display the localized label. Keys are stable identifiers and appear in published permalinks and the constellation: additions require a Deviations entry, renames are forbidden.",
+  "tags": [
+    { "key": "missing-link", "en": "missing link", "id": "mata rantai hilang" },
+    { "key": "hidden-stakeholder", "en": "hidden stakeholders", "id": "pemangku tersembunyi" },
+    { "key": "no-denominator", "en": "no denominator", "id": "tanpa denominator" },
+    { "key": "no-counterfactual", "en": "no counterfactual", "id": "tanpa kontrafaktual" },
+    { "key": "incidence-blind", "en": "incidence blind", "id": "buta insidensi" },
+    { "key": "cherry-window", "en": "cherry-picked window", "id": "jendela waktu pilihan" },
+    { "key": "single-source", "en": "single-sourced", "id": "sumber tunggal" },
+    { "key": "false-binary", "en": "false binary", "id": "biner semu" },
+    { "key": "emotional-trigger", "en": "emotional trigger", "id": "pemicu emosi" },
+    { "key": "competing-counts", "en": "competing counts", "id": "angka bersaing" },
+    { "key": "unsourced-figure", "en": "unsourced figure", "id": "angka tanpa sumber" },
+    { "key": "scope-inflation", "en": "scope inflation", "id": "inflasi cakupan" }
+  ]
+}

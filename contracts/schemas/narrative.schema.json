@@ -1,0 +1,525 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "narrative.schema.json",
+  "title": "Narrative",
+  "description": "Blueprint 6.3 to 6.6. One narrative artifact content/narratives/{id}.json. The eight panel shapes of 6.4 are exact (closed); the artifact root stays open so an additive optional field is a Deviations decision rather than a parse error, and stray flags are caught by check 7 (seed).",
+  "type": "object",
+  "required": [
+    "id",
+    "pack",
+    "lean",
+    "status",
+    "headline",
+    "original",
+    "outlet",
+    "published_date",
+    "url",
+    "og",
+    "tags",
+    "counts",
+    "provenance",
+    "family",
+    "scaffold_default",
+    "sparring",
+    "prediction_tap",
+    "panels",
+    "echo",
+    "narration",
+    "manifest"
+  ],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "pack": { "enum": ["id", "en"] },
+    "lean": { "enum": ["gov", "opp", "neutral"] },
+    "status": { "enum": ["published", "under_review"] },
+    "headline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en"],
+      "properties": { "en": { "type": "string", "minLength": 1 }, "id": { "type": "string", "minLength": 1 } }
+    },
+    "original": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "lang"],
+      "properties": { "text": { "type": "string", "minLength": 1 }, "lang": { "enum": ["en", "id"] } }
+    },
+    "outlet": { "type": "string", "minLength": 1 },
+    "published_date": { "type": "string", "minLength": 1 },
+    "url": { "type": "string", "minLength": 1 },
+    "og": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["image_path", "fetched_at", "attribution", "fallback"],
+      "properties": {
+        "image_path": { "type": ["string", "null"] },
+        "fetched_at": { "type": ["string", "null"] },
+        "attribution": { "type": "string" },
+        "fallback": { "type": "boolean" }
+      }
+    },
+    "tags": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+    "counts": { "$ref": "#/$defs/DerivedCounts" },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["analyzed_by", "narrated_by", "source_count", "computed_at", "run_id"],
+      "properties": {
+        "analyzed_by": { "type": "string", "minLength": 1 },
+        "narrated_by": { "type": "string", "minLength": 1 },
+        "source_count": { "type": "integer", "minimum": 0 },
+        "computed_at": { "type": "string", "minLength": 1 },
+        "run_id": { "type": "string", "minLength": 1 }
+      }
+    },
+    "family": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["skeleton", "members"],
+      "properties": {
+        "skeleton": { "type": "string", "minLength": 1 },
+        "members": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["outlet", "headline", "url", "date"],
+            "properties": {
+              "outlet": { "type": "string", "minLength": 1 },
+              "headline": { "type": "string", "minLength": 1 },
+              "url": { "type": "string", "minLength": 1 },
+              "date": { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+      }
+    },
+    "scaffold_default": { "enum": ["S3", "S2", "S1", "S0"] },
+    "sparring": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["questions"],
+      "properties": {
+        "questions": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": { "$ref": "#/$defs/SparringQuestion" }
+        }
+      }
+    },
+    "prediction_tap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prompt", "options"],
+      "properties": {
+        "prompt": { "$ref": "#/$defs/L10n" },
+        "options": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/L10n" } }
+      }
+    },
+    "panels": {
+      "description": "Ordered; claim_map always first. The ordering rule is asserted by check 1 in code, because a 1-tuple prefixItems next to items is a strict-mode error in ajv.",
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/Panel" }
+    },
+    "echo": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/EchoPanel" }] },
+    "narration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "id"],
+      "properties": { "en": { "$ref": "#/$defs/Bundle" }, "id": { "$ref": "#/$defs/Bundle" } }
+    },
+    "manifest": { "$ref": "#/$defs/GenerationManifest" }
+  },
+  "$defs": {
+    "L10n": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "id"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "id": { "type": "string", "minLength": 1 }
+      }
+    },
+    "DerivedCounts": {
+      "description": "Blueprint 6.5 plus the CF-1 additive optional `conflicts`. Never authored; check 3 recomputes it.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["missing", "unsourced", "disputed", "supported", "hidden"],
+      "properties": {
+        "missing": { "type": "integer", "minimum": 0 },
+        "unsourced": { "type": "integer", "minimum": 0 },
+        "disputed": { "type": "integer", "minimum": 0 },
+        "supported": { "type": "integer", "minimum": 0 },
+        "hidden": { "type": "integer", "minimum": 0 },
+        "conflicts": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "SparringQuestion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["move", "q", "options", "correct", "note"],
+      "properties": {
+        "move": { "enum": ["mechanism", "denominator", "incidence"] },
+        "q": { "$ref": "#/$defs/L10n" },
+        "options": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "$ref": "#/$defs/L10n" } },
+        "correct": { "enum": [0, 1, 2] },
+        "note": { "$ref": "#/$defs/L10n" }
+      }
+    },
+    "Bundle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sentences"],
+      "properties": {
+        "sentences": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "text", "els"],
+            "properties": {
+              "id": { "type": "string", "minLength": 1 },
+              "text": { "type": "string", "minLength": 1 },
+              "els": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }
+            }
+          }
+        }
+      }
+    },
+    "GenerationManifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["run_id", "generated_at", "steps", "gates"],
+      "properties": {
+        "run_id": { "type": "string", "minLength": 1 },
+        "generated_at": { "type": "string", "minLength": 1 },
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["role", "model", "started_at", "finished_at", "input_hash"],
+            "properties": {
+              "role": { "enum": ["A5", "A6", "A7", "A8", "A9", "A10", "A11"] },
+              "model": { "type": "string", "minLength": 1 },
+              "started_at": { "type": "string", "minLength": 1 },
+              "finished_at": { "type": "string", "minLength": 1 },
+              "input_hash": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "gates": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["symmetry", "fidelity"],
+          "properties": {
+            "symmetry": { "$ref": "#/$defs/Gate" },
+            "fidelity": { "$ref": "#/$defs/Gate" }
+          }
+        }
+      }
+    },
+    "Gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["verdict", "token"],
+      "properties": { "verdict": { "const": "pass" }, "token": { "type": "string", "minLength": 1 } }
+    },
+    "Evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["quote", "source_id"],
+      "properties": {
+        "quote": { "type": "string", "minLength": 1 },
+        "source_id": { "$ref": "source.schema.json#/$defs/SourceId" }
+      }
+    },
+    "Panel": {
+      "oneOf": [
+        { "$ref": "#/$defs/ClaimMapPanel" },
+        { "$ref": "#/$defs/ScaleCheckPanel" },
+        { "$ref": "#/$defs/MoneyFlowPanel" },
+        { "$ref": "#/$defs/IncidencePanel" },
+        { "$ref": "#/$defs/DuelingPanel" },
+        { "$ref": "#/$defs/EchoPanel" },
+        { "$ref": "#/$defs/OptionsPanel" },
+        { "$ref": "#/$defs/FamilyPanel" }
+      ]
+    },
+    "ClaimMapPanel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "el_id", "spine", "edges", "hidden"],
+      "properties": {
+        "type": { "const": "claim_map" },
+        "el_id": { "type": "string", "minLength": 1 },
+        "spine": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["el_id", "label"],
+            "properties": {
+              "el_id": { "type": "string", "minLength": 1 },
+              "label": { "$ref": "#/$defs/L10n" },
+              "value": { "$ref": "value.schema.json" }
+            }
+          }
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["el_id", "from", "to", "status", "ev"],
+            "properties": {
+              "el_id": { "type": "string", "minLength": 1 },
+              "from": { "type": "string", "minLength": 1 },
+              "to": { "type": "string", "minLength": 1 },
+              "status": { "enum": ["supported", "disputed", "missing", "unsourced"] },
+              "ev": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["quote", "why"],
+                "properties": {
+                  "quote": { "type": "string", "minLength": 1 },
+                  "source_id": { "$ref": "source.schema.json#/$defs/SourceId" },
+                  "why": { "$ref": "#/$defs/L10n" }
+                }
+              }
+            }
+          }
+        },
+        "hidden": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["el_id", "label", "why_hidden"],
+            "properties": {
+              "el_id": { "type": "string", "minLength": 1 },
+              "label": { "$ref": "#/$defs/L10n" },
+              "value": { "$ref": "value.schema.json" },
+              "why_hidden": { "$ref": "#/$defs/L10n" },
+              "ev": { "$ref": "#/$defs/Evidence" }
+            }
+          }
+        }
+      }
+    },
+    "ScaleCheckPanel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "el_id", "denominator", "segments", "takeaway", "context_chips"],
+      "properties": {
+        "type": { "const": "scale_check" },
+        "el_id": { "type": "string", "minLength": 1 },
+        "denominator": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["label", "value"],
+          "properties": { "label": { "$ref": "#/$defs/L10n" }, "value": { "$ref": "value.schema.json" } }
+        },
+        "segments": { "type": "array", "items": { "$ref": "#/$defs/LabelledValue" } },
+        "takeaway": { "$ref": "#/$defs/L10n" },
+        "context_chips": { "type": "array", "items": { "$ref": "#/$defs/LabelledValue" } }
+      }
+    },
+    "LabelledValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["el_id", "label", "value"],
+      "properties": {
+        "el_id": { "type": "string", "minLength": 1 },
+        "label": { "$ref": "#/$defs/L10n" },
+        "value": { "$ref": "value.schema.json" }
+      }
+    },
+    "MoneyFlowPanel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "el_id", "root", "rows"],
+      "properties": {
+        "type": { "const": "money_flow" },
+        "el_id": { "type": "string", "minLength": 1 },
+        "root": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["label", "value"],
+          "properties": { "label": { "$ref": "#/$defs/L10n" }, "value": { "$ref": "value.schema.json" } }
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["el_id", "label", "value", "severed_if_stopped"],
+            "properties": {
+              "el_id": { "type": "string", "minLength": 1 },
+              "label": { "$ref": "#/$defs/L10n" },
+              "value": { "$ref": "value.schema.json" },
+              "severed_if_stopped": { "type": "boolean" },
+              "note": { "$ref": "#/$defs/L10n" }
+            }
+          }
+        }
+      }
+    },
+    "IncidencePanel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "el_id", "horizons", "lanes"],
+      "properties": {
+        "type": { "const": "incidence" },
+        "el_id": { "type": "string", "minLength": 1 },
+        "horizons": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["key", "label"],
+            "properties": {
+              "key": { "enum": ["weeks", "months", "beyond"] },
+              "label": { "$ref": "#/$defs/L10n" }
+            }
+          }
+        },
+        "lanes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["el_id", "who", "cells"],
+            "properties": {
+              "el_id": { "type": "string", "minLength": 1 },
+              "who": { "$ref": "#/$defs/L10n" },
+              "cells": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["horizon", "text"],
+                  "properties": {
+                    "horizon": { "enum": ["weeks", "months", "beyond"] },
+                    "text": { "$ref": "#/$defs/L10n" },
+                    "value": { "$ref": "value.schema.json" },
+                    "ev": { "$ref": "#/$defs/Evidence" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "DuelingPanel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "el_id", "counts", "rule_line"],
+      "properties": {
+        "type": { "const": "dueling" },
+        "el_id": { "type": "string", "minLength": 1 },
+        "counts": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["el_id", "who", "method", "period", "value"],
+            "properties": {
+              "el_id": { "type": "string", "minLength": 1 },
+              "who": { "type": "string", "minLength": 1 },
+              "method": { "$ref": "#/$defs/L10n" },
+              "period": { "type": "string", "minLength": 1 },
+              "value": { "$ref": "value.schema.json" }
+            }
+          }
+        },
+        "rule_line": { "$ref": "#/$defs/L10n" }
+      }
+    },
+    "EchoPanel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "el_id", "current_motif", "historical", "disclaimer_key"],
+      "properties": {
+        "type": { "const": "echo" },
+        "el_id": { "type": "string", "minLength": 1 },
+        "current_motif": { "$ref": "#/$defs/L10n" },
+        "historical": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["case_id", "motif", "outcome", "citations"],
+          "properties": {
+            "case_id": { "type": "string", "minLength": 1 },
+            "motif": { "$ref": "#/$defs/L10n" },
+            "outcome": { "$ref": "#/$defs/L10n" },
+            "citations": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "$ref": "source.schema.json#/$defs/SourceId" }
+            }
+          }
+        },
+        "disclaimer_key": { "const": "echo_disclaimer" }
+      }
+    },
+    "OptionsPanel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "el_id", "options", "playbook"],
+      "properties": {
+        "type": { "const": "options" },
+        "el_id": { "type": "string", "minLength": 1 },
+        "options": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["el_id", "label", "proponent", "tradeoff"],
+            "properties": {
+              "el_id": { "type": "string", "minLength": 1 },
+              "label": { "$ref": "#/$defs/L10n" },
+              "proponent": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["name", "source_id"],
+                "properties": {
+                  "name": { "type": "string", "minLength": 1 },
+                  "source_id": { "$ref": "source.schema.json#/$defs/SourceId" }
+                }
+              },
+              "tradeoff": { "$ref": "#/$defs/L10n" }
+            }
+          }
+        },
+        "playbook": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["el_id", "action", "channel"],
+            "properties": {
+              "el_id": { "type": "string", "minLength": 1 },
+              "action": { "$ref": "#/$defs/L10n" },
+              "channel": { "$ref": "#/$defs/L10n" }
+            }
+          }
+        }
+      }
+    },
+    "FamilyPanel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "el_id"],
+      "properties": { "type": { "const": "family" }, "el_id": { "type": "string", "minLength": 1 } }
+    }
+  }
+}

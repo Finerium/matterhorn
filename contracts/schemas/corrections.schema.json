@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "corrections.schema.json",
+  "title": "Corrections",
+  "description": "Blueprint 6.6. content/corrections.json, the public corrections log.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["entries"],
+  "properties": {
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "narrative_id", "summary", "status"],
+        "properties": {
+          "date": { "type": "string", "minLength": 1 },
+          "narrative_id": { "type": "string", "minLength": 1 },
+          "summary": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["en", "id"],
+            "properties": {
+              "en": { "type": "string", "minLength": 1 },
+              "id": { "type": "string", "minLength": 1 }
+            }
+          },
+          "status": { "enum": ["under_review", "corrected", "dismissed"] }
+        }
+      }
+    }
+  }
+}

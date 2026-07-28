@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "methodology.schema.json",
+  "title": "Methodology",
+  "description": "Blueprint 6.6. content/methodology.json. symmetry is DERIVED from the narratives; policy_65 carries the 6.9 scoped lexicon exemption.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["symmetry", "metrics", "policy_65", "disclosure"],
+  "properties": {
+    "symmetry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["gov", "neutral", "opp", "computed_at"],
+      "properties": {
+        "gov": { "type": "integer", "minimum": 0 },
+        "neutral": { "type": "integer", "minimum": 0 },
+        "opp": { "type": "integer", "minimum": 0 },
+        "computed_at": { "type": "string", "minLength": 1 }
+      }
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["key", "label", "kind", "value"],
+        "properties": {
+          "key": { "type": "string", "minLength": 1 },
+          "label": { "$ref": "#/$defs/L10n" },
+          "kind": { "enum": ["measured", "design_target"] },
+          "value": { "type": "string", "minLength": 1 },
+          "run_id": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "policy_65": { "$ref": "#/$defs/L10n" },
+    "disclosure": { "$ref": "#/$defs/L10n" }
+  },
+  "$defs": {
+    "L10n": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "id"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "id": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

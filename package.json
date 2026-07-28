@@ -14,7 +14,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "pnpm run test:unit",
-    "test:unit": "vitest run --passWithNoTests",
+    "test:unit": "vitest run",
     "validate:content": "tsx scripts/validate-content.ts"
   },
   "dependencies": {

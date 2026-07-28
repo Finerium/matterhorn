@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "constellation.schema.json",
+  "title": "Constellation",
+  "description": "Blueprint 6.6. content/constellation.json, the global cross-narrative graph.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["nodes", "links"],
+  "properties": {
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "narrative_id", "label", "pack"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "narrative_id": { "type": "string", "minLength": 1 },
+          "label": { "$ref": "#/$defs/L10n" },
+          "pack": { "enum": ["id", "en"] }
+        }
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["a", "b", "via"],
+        "properties": {
+          "a": { "type": "string", "minLength": 1 },
+          "b": { "type": "string", "minLength": 1 },
+          "via": { "$ref": "#/$defs/L10n" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "L10n": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "id"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "id": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

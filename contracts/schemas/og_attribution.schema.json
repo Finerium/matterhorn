@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "og_attribution.schema.json",
+  "title": "OgAttribution",
+  "description": "Blueprint 6.10. content/og_attribution.json as shipped: a render `policy` statement plus one entry per narrative recorded by scripts/fetch-og. status fallback means the styled placeholder ships, and then the original url and fetch date may be null.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["policy", "entries"],
+  "properties": {
+    "policy": { "type": "string", "minLength": 1 },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["narrative_id", "image_url_original", "outlet", "fetched_at", "status"],
+        "properties": {
+          "narrative_id": { "type": "string", "minLength": 1 },
+          "image_url_original": { "type": ["string", "null"] },
+          "outlet": { "type": "string", "minLength": 1 },
+          "fetched_at": { "type": ["string", "null"] },
+          "status": { "enum": ["fetched", "fallback"] },
+          "note": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

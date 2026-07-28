@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "feed.schema.json",
+  "title": "Feed",
+  "description": "Blueprint 6.6. content/packs/{pack}/feed.json. Exactly one hero per pack and the ppn-panic via_dissect flag are check 10, not schema.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["pack", "updated_at", "items"],
+  "properties": {
+    "pack": { "enum": ["id", "en"] },
+    "updated_at": { "type": "string", "minLength": 1 },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["narrative_id", "slot"],
+        "properties": {
+          "narrative_id": { "type": "string", "minLength": 1 },
+          "slot": { "enum": ["hero", "compact"] },
+          "via_dissect": { "type": "boolean" },
+          "crisis_hold": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

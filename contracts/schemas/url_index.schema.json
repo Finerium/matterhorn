@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "url_index.schema.json",
+  "title": "UrlIndex",
+  "description": "Blueprint 6.6. content/url_index.json. Referential integrity and the exactly-one fresh_demo rule are check 8.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["entries"],
+  "properties": {
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["match", "pattern", "narrative_id", "role"],
+        "properties": {
+          "match": { "enum": ["exact", "prefix", "regex"] },
+          "pattern": { "type": "string", "minLength": 1 },
+          "narrative_id": { "type": "string", "minLength": 1 },
+          "role": { "enum": ["canonical", "legacy", "family_member", "fresh_demo"] }
+        }
+      }
+    }
+  }
+}
