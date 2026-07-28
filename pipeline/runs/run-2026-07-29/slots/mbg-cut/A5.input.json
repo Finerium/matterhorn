@@ -1,0 +1,45 @@
+{
+  "narrative_id": "mbg-cut",
+  "cluster": {
+    "narrative_id": "mbg-cut",
+    "family_skeleton": "the same budget lever reported as an arithmetic fact, which is what makes the family visible: one skeleton, two temperatures, two outlets",
+    "members": [
+      {
+        "id": "mbg-cut-m1",
+        "lang": "id",
+        "headline": "Anggaran MBG Terserap Rp 88,15 Triliun hingga Mei 2026",
+        "outlet": "Kompas.com",
+        "date": "2026-06-06",
+        "url": "https://money.kompas.com/read/2026/06/06/213559526/anggaran-mbg-terserap-rp-8815-triliun-hingga-mei-2026",
+        "note": "Verbatim title from content/sources.json (id-kompas-mbg-sppg-mei2026)."
+      },
+      {
+        "id": "mbg-cut-m2",
+        "lang": "id",
+        "headline": "Realisasi Belanja MBG Tembus Rp88 Triliun sampai Mei 2026",
+        "outlet": "Databoks (Katadata)",
+        "date": "2026-05",
+        "url": "https://databoks.katadata.co.id/ekonomi-makro/statistik/6a2653afd21cc/realisasi-belanja-mbg-tembus-rp88-triliun-sampai-mei-2026",
+        "note": "Verbatim title from content/sources.json (id-databoks-mbg-chart). Publication day not recorded at snapshot; the month is."
+      },
+      {
+        "id": "mbg-cut-m3",
+        "lang": "id",
+        "headline": "Purbaya sebut realisasi anggaran MBG capai Rp88,15 triliun",
+        "outlet": "Antara News",
+        "date": "2026-06-05",
+        "url": "https://www.antaranews.com/berita/5595513/purbaya-sebut-realisasi-anggaran-mbg-capai-rp8815-triliun",
+        "note": "Verbatim title from content/sources.json. Shared with the mbg-stop family on purpose: the same article carries the cut and the realisation, which is the point the family panel makes."
+      }
+    ]
+  },
+  "panel_plan": [
+    "claim_map",
+    "scale_check",
+    "family"
+  ],
+  "original": {
+    "text": "Pagu MBG 2026 dipangkas dari Rp335 triliun menjadi Rp268 triliun",
+    "lang": "id"
+  }
+}

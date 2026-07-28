@@ -1,0 +1,46 @@
+{
+  "narrative_id": "migrant-crime",
+  "cluster": {
+    "narrative_id": "migrant-crime",
+    "family_skeleton": "one class of person named as the driver of a crime trend, with the three measurements of that trend never put on the same page",
+    "members": [
+      {
+        "id": "migrant-crime-m1",
+        "lang": "en",
+        "headline": "Immigrants Cut Victimization Rates, Boost Crime Reporting (Policy Analysis No. 1003)",
+        "outlet": "Cato Institute",
+        "date": "2025-08",
+        "url": "https://www.cato.org/policy-analysis/immigrants-cut-victimization-rates-boost-crime-reporting",
+        "note": "Verbatim title from content/sources.json (en-cato-pa1003). NCVS 2017 to 2023: immigrants 44 percent less likely to be violently victimized. Publication day not recorded at snapshot."
+      },
+      {
+        "id": "migrant-crime-m2",
+        "lang": "en",
+        "headline": "Comparing crime rates between undocumented immigrants, legal immigrants, and native-born US citizens in Texas (DOI 10.1073/pnas.2014704117)",
+        "outlet": "PNAS",
+        "date": "2020-12",
+        "url": "https://www.pnas.org/doi/10.1073/pnas.2014704117",
+        "note": "Verbatim title from content/sources.json (en-pnas-light-2020). Texas arrest data 2012 to 2018, a different population and a different instrument from the Cato study, which is exactly why the two are shown side by side rather than averaged."
+      },
+      {
+        "id": "migrant-crime-m3",
+        "lang": "en",
+        "headline": "FBI Releases 2024 Reported Crimes in the Nation Statistics",
+        "outlet": "FBI",
+        "date": "2025",
+        "url": "https://www.fbi.gov/news/press-releases/fbi-releases-2024-reported-crimes-in-the-nation-statistics",
+        "note": "Verbatim title from content/sources.json (en-fbi-2024-crime). Violent crime down an estimated 4.5 percent and murder down 14.9 percent in 2024 against 2023. Release day not recorded at snapshot, so the date carries the year only."
+      }
+    ]
+  },
+  "panel_plan": [
+    "claim_map",
+    "dueling"
+  ],
+  "original": {
+    "text": "Immigrants are driving the crime wave",
+    "lang": "en",
+    "reconstructed": true,
+    "note": "No verbatim wording of the circulating claim was recorded at snapshot. This is a description of the claim in the words of this build, and A9 may not present it as a quotation."
+  }
+}

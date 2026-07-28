@@ -1,0 +1,77 @@
+{
+  "hidden": [
+    {
+      "el_id": "mbgstop-h1",
+      "label": {
+        "en": "Recipient households: schoolchildren and pregnant or breastfeeding mothers whose daily meals stop",
+        "id": "Rumah tangga penerima manfaat: anak sekolah serta ibu hamil dan menyusui yang porsi makan hariannya berhenti"
+      },
+      "why_hidden": {
+        "en": "The permanent-stop step lands on recipients the day kitchens close: the meal and its cost move back onto family food budgets, and the withdrawal lands within weeks of a stop while the outcomes the programme is designed to shift are measured over years. The members follow the money to the APBN and stop before naming the households that meet the withdrawal first.",
+        "id": "Langkah penghentian permanen jatuh lebih dulu ke penerima manfaat begitu dapur berhenti beroperasi: porsi makan beserta biayanya kembali ke anggaran belanja pangan keluarga, dan penarikan itu terasa dalam hitungan minggu sementara hasil yang dirancang untuk digeser program ini diukur dalam hitungan tahun. Artikel-artikel mengikuti uangnya sampai ke APBN dan berhenti sebelum menyebut rumah tangga yang pertama menanggung penarikan itu."
+      },
+      "where_to_look": "BGN beneficiary counts and the programme's founding regulations (Perpres and BGN rules) stating who is fed and how often; household food expenditure statistics (Susenas) for the cost that shifts back to families."
+    },
+    {
+      "el_id": "mbgstop-h2",
+      "label": {
+        "en": "SPPG service kitchens and their paid crews: cooks, drivers, and local kitchen staff",
+        "id": "Dapur layanan SPPG beserta pekerjanya yang diupah: juru masak, pengemudi, dan staf dapur setempat"
+      },
+      "why_hidden": {
+        "en": "The step from stopping the programme to booking the allocation as savings is, on the other side of the ledger, the end of these kitchens' operating income and wages. A cut is a transfer, and the members read only the state's side of it.",
+        "id": "Langkah dari penghentian program menuju pencatatan alokasi sebagai penghematan, di sisi lain buku kas, berarti berakhirnya pendapatan operasional dapur beserta upah pekerjanya. Pemangkasan adalah perpindahan beban, dan artikel-artikel ini hanya membaca sisi negara."
+      },
+      "where_to_look": "BGN records of operating SPPG units and staffing per kitchen; partnership contracts between BGN and kitchen operators."
+    },
+    {
+      "el_id": "mbgstop-h3",
+      "label": {
+        "en": "Upstream local suppliers: smallholder farmers, fishermen, and egg and vegetable producers whose offtake demand comes from the kitchens",
+        "id": "Pemasok lokal di hulu: petani kecil, nelayan, serta produsen telur dan sayur yang serapannya berasal dari kebutuhan dapur"
+      },
+      "why_hidden": {
+        "en": "The allocation the story converts into savings is spent through kitchens into ingredient purchases, so a permanent stop ends that offtake one step upstream. No member follows the mechanism past the kitchen door.",
+        "id": "Alokasi yang dalam narasi ini diubah menjadi penghematan sesungguhnya dibelanjakan melalui dapur untuk pembelian bahan pangan, sehingga penghentian permanen memutus serapan itu satu langkah ke hulu. Tidak ada artikel dalam keluarga ini yang mengikuti mekanisme tersebut melewati pintu dapur."
+      },
+      "where_to_look": "BGN procurement rules on local sourcing; agriculture ministry or BGN statements on supplier counts and offtake volumes."
+    },
+    {
+      "el_id": "mbgstop-h4",
+      "label": {
+        "en": "The missing denominator: total APBN spending and the deficit the word rescued is measured against",
+        "id": "Penyebut yang tidak disebut: total belanja APBN dan defisit yang menjadi ukuran kata terselamatkan"
+      },
+      "why_hidden": {
+        "en": "The claim that stopping one programme rescues the APBN needs the size of the APBN and of its deficit to mean anything. The members carry the allocation figure and its cut, then stop before stating the total those figures are a share of.",
+        "id": "Klaim bahwa menghentikan satu program menyelamatkan APBN memerlukan ukuran APBN itu sendiri beserta defisitnya agar bermakna. Artikel-artikel memuat angka alokasi beserta pemangkasannya, lalu berhenti sebelum menyebut total belanja yang menjadi pembandingnya."
+      },
+      "where_to_look": "The APBN law and the finance ministry's realization reports (APBN KiTa) for total spending and the deficit in the same year the allocation figures refer to."
+    },
+    {
+      "el_id": "mbgstop-h5",
+      "label": {
+        "en": "Spending already disbursed and wind-down obligations: the part of the allocation that cannot become savings",
+        "id": "Anggaran yang sudah terealisasi dan kewajiban penutupan: bagian alokasi yang tidak dapat berubah menjadi penghematan"
+      },
+      "why_hidden": {
+        "en": "The step from a permanent stop to the full allocation becoming savings, a step the graph itself records as stated by no member, requires every rupiah to be recoverable. Funds already realized, contracts in force, kitchens already built, and termination costs sit outside that arithmetic, and no member follows them, even though the family carries a realization figure on the other side of the argument.",
+        "id": "Langkah dari penghentian permanen menuju seluruh alokasi menjadi penghematan, langkah yang dalam graf pun tercatat tidak dinyatakan oleh artikel mana pun, mensyaratkan setiap rupiah dapat ditarik kembali. Dana yang sudah terealisasi, kontrak yang tengah berjalan, dapur yang telanjur dibangun, dan biaya penutupan berada di luar hitungan itu, dan tidak ada artikel yang mengikutinya, meskipun keluarga artikel ini memuat angka realisasi dari sisi lain perdebatan."
+      },
+      "where_to_look": "Finance ministry budget realization reports for the programme line; BGN statements on kitchens built and contracts in force."
+    },
+    {
+      "el_id": "mbgstop-h6",
+      "label": {
+        "en": "The uncovering itself: which audit or enforcement body gains access, over money already out the door",
+        "id": "Proses pengungkapan itu sendiri: lembaga audit atau penegak hukum mana yang memperoleh akses, atas dana yang sudah keluar"
+      },
+      "why_hidden": {
+        "en": "The step from stopping the programme to easier uncovering of corruption runs through somebody's audit of funds already disbursed. The headline asserts the ease and stops before naming the body that would investigate or the disbursed corpus the investigation would cover.",
+        "id": "Langkah dari penghentian program menuju pengungkapan korupsi yang lebih mudah berjalan melalui audit pihak tertentu atas dana yang sudah dicairkan. Judul artikel menyatakan kemudahan itu lalu berhenti sebelum menyebut lembaga yang akan memeriksa maupun cakupan dana tersalur yang akan diperiksa."
+      },
+      "where_to_look": "BPK examination reports (LHP) covering the programme; KPK or Attorney General public statements on MBG oversight."
+    }
+  ],
+  "model": "claude-fable-5"
+}

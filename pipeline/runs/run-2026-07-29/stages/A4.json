@@ -1,0 +1,295 @@
+{
+  "ranked": [
+    {
+      "cluster": "c-mbg-stop-m1",
+      "score": 3.25,
+      "rank": 1,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 1,
+      "members": [
+        "mbg-stop-m1"
+      ]
+    },
+    {
+      "cluster": "c-mbg-stop-m2",
+      "score": 3.25,
+      "rank": 2,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 1,
+      "members": [
+        "mbg-stop-m2"
+      ]
+    },
+    {
+      "cluster": "c-tariffs-pay-m1",
+      "score": 3.25,
+      "rank": 3,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 1,
+      "members": [
+        "tariffs-pay-m1"
+      ]
+    },
+    {
+      "cluster": "c-usaid-deaths-m1",
+      "score": 3.25,
+      "rank": 4,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 1,
+      "members": [
+        "usaid-deaths-m1"
+      ]
+    },
+    {
+      "cluster": "c-judol-turnover-m1",
+      "score": 2.5,
+      "rank": 5,
+      "size": 2,
+      "outlets": 2,
+      "span_days": 1,
+      "velocity": 2,
+      "causal_density": 0,
+      "members": [
+        "judol-turnover-m1",
+        "judol-turnover-m2"
+      ]
+    },
+    {
+      "cluster": "c-judol-turnover-m3",
+      "score": 1.25,
+      "rank": 6,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 0,
+      "members": [
+        "judol-turnover-m3"
+      ]
+    },
+    {
+      "cluster": "c-mbg-jobs-m1",
+      "score": 1.25,
+      "rank": 7,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 0,
+      "members": [
+        "mbg-jobs-m1"
+      ]
+    },
+    {
+      "cluster": "c-mbg-jobs-m2",
+      "score": 1.25,
+      "rank": 8,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 0,
+      "members": [
+        "mbg-jobs-m2"
+      ]
+    },
+    {
+      "cluster": "c-mbg-poisoning-m1",
+      "score": 1.25,
+      "rank": 9,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 0,
+      "members": [
+        "mbg-poisoning-m1"
+      ]
+    },
+    {
+      "cluster": "c-mbg-poisoning-m2",
+      "score": 1.25,
+      "rank": 10,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 0,
+      "members": [
+        "mbg-poisoning-m2"
+      ]
+    },
+    {
+      "cluster": "c-mbg-poisoning-m3",
+      "score": 1.25,
+      "rank": 11,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 0,
+      "members": [
+        "mbg-poisoning-m3"
+      ]
+    },
+    {
+      "cluster": "c-migrant-crime-m1",
+      "score": 1.25,
+      "rank": 12,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 0,
+      "members": [
+        "migrant-crime-m1"
+      ]
+    },
+    {
+      "cluster": "c-migrant-crime-m2",
+      "score": 1.25,
+      "rank": 13,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 0,
+      "members": [
+        "migrant-crime-m2"
+      ]
+    },
+    {
+      "cluster": "c-migrant-crime-m3",
+      "score": 1.25,
+      "rank": 14,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 0,
+      "members": [
+        "migrant-crime-m3"
+      ]
+    },
+    {
+      "cluster": "c-ppn-panic-m1",
+      "score": 1.25,
+      "rank": 15,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 0,
+      "members": [
+        "ppn-panic-m1"
+      ]
+    },
+    {
+      "cluster": "c-ppn-panic-m2",
+      "score": 1.25,
+      "rank": 16,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 0,
+      "members": [
+        "ppn-panic-m2"
+      ]
+    },
+    {
+      "cluster": "c-ppn-panic-m3",
+      "score": 1.25,
+      "rank": 17,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 0,
+      "members": [
+        "ppn-panic-m3"
+      ]
+    },
+    {
+      "cluster": "c-tariffs-pay-m2",
+      "score": 1.25,
+      "rank": 18,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 0,
+      "members": [
+        "tariffs-pay-m2"
+      ]
+    },
+    {
+      "cluster": "c-tariffs-pay-m3",
+      "score": 1.25,
+      "rank": 19,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 0,
+      "members": [
+        "tariffs-pay-m3"
+      ]
+    },
+    {
+      "cluster": "c-usaid-deficit-m1",
+      "score": 1.25,
+      "rank": 20,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 0,
+      "members": [
+        "usaid-deficit-m1"
+      ]
+    },
+    {
+      "cluster": "c-usaid-deficit-m2",
+      "score": 1.25,
+      "rank": 21,
+      "size": 1,
+      "outlets": 1,
+      "span_days": 1,
+      "velocity": 1,
+      "causal_density": 0,
+      "members": [
+        "usaid-deficit-m2"
+      ]
+    },
+    {
+      "cluster": "c-mbg-cut-m1",
+      "score": 0.885135,
+      "rank": 22,
+      "size": 5,
+      "outlets": 3,
+      "span_days": 37,
+      "velocity": 0.135135,
+      "causal_density": 0,
+      "members": [
+        "mbg-cut-m1",
+        "mbg-cut-m2",
+        "mbg-cut-m3",
+        "mbg-jobs-m3",
+        "mbg-stop-m3"
+      ]
+    }
+  ]
+}

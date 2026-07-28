@@ -236,3 +236,18 @@ Decisions and findings (full agent output: session task wcv2o11q6):
   ingests via runner (schema validation = the gate; invalid slot -> scoped re-dispatch),
   candidates assembled, gate workflow (A10/A11 on assembled candidates), runner mints
   tokens, A12 publishes. Flagship mbg-stop runs first as the full-path shakedown.
+
+## Gate C flagship shakedown: first A11 block (2026-07-29)
+
+- A10 (fable max): PASS with a six-point symmetry audit on the assembled mbg-stop candidate.
+- A11 (opus max): BLOCK, correct. Narration v-2 (both locales) bound `mbgstop-p-family`, undeclared in the candidate. Root cause chain: the frozen 6.3 family block carries no el_id by contract; the orchestrator's flagship A7 prompt asked for a family element with el_id anyway; the workflow narrate() stage then passed that element to both A9 narrators, which bound it; the reconciler verified bindings against slot files instead of the candidate shape. Exit per the gate rule: scoped A9 re-dispatch (rebind only), re-assemble, re-run BOTH gates on the new bytes.
+- Runner bug found by the same shakedown: ajv registered slot schemas by $id on compile, and a later stage re-ingesting an earlier slot compiled the same schema twice ("already exists" throw). Fixed with getSchema-before-compile; commit c301c09.
+- Provenance decision (contract is silent, D-2 governs): `analyzed_by` = A5's REPORTED model from the steps manifest (the causal analysis; fable this run), `narrated_by` = A9's reported model. Assembler previously wired requestedModel('A7'); fixed in run.ts. Caught by A10's out-of-scope observations.
+- Fleet prompts patched (scratchpad draft): A7 never emits a family element; narrators and reconciler get the explicit binding universe (panel el_ids + echo only).
+- A9 executes as two per-locale calls plus one bilingual reconciler per narrative; the reconciler's base-choice and coverage decisions land in editorial_notes for content-review.md.
+
+## Gate C flagship rounds 2-3 (2026-07-29)
+
+- Round 2: A10 pass (fable), A11 pass (opus) but A11 reported two things beyond the verdict: (1) the staged A10/A11 input files were the round-1 snapshot, so steps.json would have recorded gate clearance over bytes the judges never read; (2) the round-2 rebind's stated rationale was factually wrong: contract 6.4 DOES define FamilyPanel {type, el_id} as a marker panel rendering from the root family block (seed convention: marker last in panels[]). The orchestrator's fix brief caused that error; A7 had emitted the marker correctly all along and the assembler dropped it.
+- Round 3 fix set: assembler and A9 input staging now share withFamilyMarker() (run.ts), so the narrator binding universe equals the shipping panel set; A9.json restored to the first reconciliation (family binding legitimate) with an orchestrator record note; both gates re-dispatched fresh over the six-panel candidate, input hash pinned in the prompts (df7b90d4...).
+- New trap found: candidate bytes embed manifest.steps timestamps, so ANY stage re-run between gate-input staging and token minting drifts the bytes (df7b -> ff9b was solely A9 ingest restamps). Restored the judged bytes from the staged gate input (byte-exact, hash-verified). FLEET PROTOCOL RULE: per narrative, ingest A5..A9 exactly once, stage gate inputs, dispatch judges, ingest verdicts, publish; any re-ingest voids the staged gate inputs and both judges re-run.

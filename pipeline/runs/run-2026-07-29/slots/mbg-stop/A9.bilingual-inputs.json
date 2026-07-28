@@ -1,0 +1,337 @@
+{
+  "en": {
+    "narration": {
+      "en": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "The headline takes one lever and prices it as a whole answer: stop the MBG programme permanently, and the state budget is rescued while corruption in the programme gets easier to uncover.",
+            "els": [
+              "mbgstop-p-claim_map",
+              "mbgstop-n1",
+              "mbgstop-n3",
+              "mbgstop-n4"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "Four steps hold that argument up, and the graph marks each one: two rest on no entry in the source registry, and two, including the step where the full allocation becomes savings, are stated by no article in this family.",
+            "els": [
+              "mbgstop-p-family",
+              "mbgstop-e1",
+              "mbgstop-e2",
+              "mbgstop-e3",
+              "mbgstop-e4",
+              "mbgstop-n2"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "Follow the money instead: the Rp88.15T realized through May 2026 moves out through 29,679 operating SPPG kitchens, and the part already out of the treasury is the part no future stop can turn into savings.",
+            "els": [
+              "mbgstop-p-money_flow",
+              "mbgstop-row-sppg",
+              "mbgstop-row-disbursed",
+              "mbgstop-h5"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "Outside that frame stand the parties the flow ends at: 63.13M recipients whose daily meal stops the day the kitchens close, plus 1.28M workers and 142,387 suppliers that the body running the programme counts as absorbed by it, all meeting the withdrawal in weeks or months while the nutrition outcomes sit on a clock of years.",
+            "els": [
+              "mbgstop-p-incidence",
+              "mbgstop-lane-recipients",
+              "mbgstop-lane-kitchens",
+              "mbgstop-lane-suppliers",
+              "mbgstop-h1",
+              "mbgstop-h2",
+              "mbgstop-h3",
+              "mbgstop-row-beneficiaries",
+              "mbgstop-row-workers",
+              "mbgstop-row-suppliers"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "Set against the budget it is offered as rescuing, that Rp88.15T sits inside Rp3,842.7T of enacted state spending, beside Rp599.44T in debt interest and Rp210.06T in energy subsidy, with an enacted deficit of Rp689.1T.",
+            "els": [
+              "mbgstop-p-scale_check",
+              "mbgstop-seg-mbg",
+              "mbgstop-seg-interest",
+              "mbgstop-seg-subsidy",
+              "mbgstop-chip-deficit",
+              "mbgstop-h4"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "Three named proponents put three different levers on the table, and the playbook is where a reader starts: the finance ministry's own realization line, the audit mandate over money already disbursed, and the budget law that holds the total.",
+            "els": [
+              "mbgstop-p-options",
+              "mbgstop-opt-restructure",
+              "mbgstop-opt-qc-first",
+              "mbgstop-opt-independent-count",
+              "mbgstop-play-realization",
+              "mbgstop-play-audit",
+              "mbgstop-play-denominator"
+            ]
+          }
+        ]
+      }
+    },
+    "sparring": {
+      "questions": [
+        {
+          "move": "mechanism",
+          "q": {
+            "en": "A permanent stop is supposed to turn the allocation into savings. Which part of the spending cannot make that trip?"
+          },
+          "options": [
+            {
+              "en": "The part still to be spent under contracts not yet signed."
+            },
+            {
+              "en": "The Rp88.15T already realized and out of the treasury by May 2026."
+            },
+            {
+              "en": "The part that went to ingredients rather than to wages."
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "en": "The money flow panel keeps the spending already out of the treasury separate from what a stop can still reach: Rp88.15T had been realized through May 2026, which sits on the far side of any stop. The graph also records the step from a permanent stop to the full allocation becoming savings as stated by no article in this family."
+          }
+        },
+        {
+          "move": "denominator",
+          "q": {
+            "en": "The story says stopping this programme rescues the state budget. What is the total that word would be measured against?"
+          },
+          "options": [
+            {
+              "en": "Rp88.15T, the programme's own realized spending."
+            },
+            {
+              "en": "Rp689.1T, the enacted budget deficit."
+            },
+            {
+              "en": "Rp3,842.7T, total enacted state spending, APBN 2026."
+            }
+          ],
+          "correct": 2,
+          "note": {
+            "en": "The scale check uses total enacted state spending of Rp3,842.7T as the denominator and reads the programme's Rp88.15T against it, alongside Rp599.44T in debt interest and Rp210.06T in energy subsidy. The Rp689.1T deficit rides beside that as context, not as the total the share is taken of."
+          }
+        },
+        {
+          "move": "incidence",
+          "q": {
+            "en": "On the day the kitchens close, who meets the change first?"
+          },
+          "options": [
+            {
+              "en": "The treasury, which books the saving in the same week."
+            },
+            {
+              "en": "63.13M recipients, whose daily meal stops and whose food cost returns to the family budget."
+            },
+            {
+              "en": "The examination body, which gets access to the disbursed funds first."
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "en": "The incidence panel puts recipients in the first column, within weeks. The treasury lane in the same panel shows the other pace: spending already disbursed stays disbursed, and contracts in force and wind-down obligations are settled before any figure can be booked as saved."
+          }
+        }
+      ]
+    },
+    "prediction_tap": {
+      "prompt": {
+        "en": "Before you scroll: in a story about stopping one programme to rescue the budget, which side of the ledger goes missing?"
+      },
+      "options": [
+        {
+          "en": "The households whose daily meal the programme was paying for."
+        },
+        {
+          "en": "The kitchens, crews, and suppliers the spending passed through on its way out."
+        },
+        {
+          "en": "The size of the budget the saving would have to be measured against."
+        },
+        {
+          "en": "The money already spent, which no stop can call back."
+        }
+      ]
+    }
+  },
+  "id": {
+    "narration": {
+      "id": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "Alurnya terdengar rapi: pemerintah menghentikan program MBG secara permanen, seluruh alokasinya berubah menjadi penghematan bagi kas negara, APBN terselamatkan, dan pengungkapan korupsi dalam program menjadi lebih mudah.",
+            "els": [
+              "mbgstop-p-claim_map",
+              "mbgstop-n1",
+              "mbgstop-n2",
+              "mbgstop-n3",
+              "mbgstop-n4"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "Yang menahan alur itu justru empat langkah penghubungnya: dua hanya dinyatakan oleh judul, dua lagi tidak dinyatakan oleh artikel mana pun dalam keluarga ini, dan langkah menuju pengungkapan korupsi berhenti sebelum menyebut lembaga yang akan memeriksa dana yang sudah cair.",
+            "els": [
+              "mbgstop-e1",
+              "mbgstop-e2",
+              "mbgstop-e3",
+              "mbgstop-e4",
+              "mbgstop-p-family",
+              "mbgstop-h6"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "Ukurannya begini: realisasi belanja program Rp88,15 T hingga Mei 2026 dibaca terhadap total belanja negara Rp3.842,7 T pada APBN 2026 yang ditetapkan, berdampingan dengan bunga utang Rp599,44 T dan subsidi energi Rp210,06 T yang tidak ikut berhenti ketika program ini berhenti.",
+            "els": [
+              "mbgstop-p-scale_check",
+              "mbgstop-seg-mbg",
+              "mbgstop-seg-interest",
+              "mbgstop-seg-subsidy",
+              "mbgstop-h4"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "Belanja itu mengalir lewat 29.679 dapur SPPG ke 63,13 juta penerima manfaat, lalu ke 1,28 juta pekerja dan 142.387 pemasok yang keduanya dilaporkan oleh badan pelaksana program, sedangkan bagian yang sudah keluar dari kas negara berada di luar hitungan penghematan di masa depan.",
+            "els": [
+              "mbgstop-p-money_flow",
+              "mbgstop-row-sppg",
+              "mbgstop-row-beneficiaries",
+              "mbgstop-row-workers",
+              "mbgstop-row-suppliers",
+              "mbgstop-row-disbursed",
+              "mbgstop-h5"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "Yang lebih dulu menanggung penghentian bukan kas negara: dalam hitungan minggu porsi makan harian rumah tangga penerima berhenti, dapur berhenti mengupah kru, dan pesanan tetap ke petani, nelayan, serta produsen telur dan sayur ikut berakhir.",
+            "els": [
+              "mbgstop-p-incidence",
+              "mbgstop-lane-recipients",
+              "mbgstop-lane-kitchens",
+              "mbgstop-lane-suppliers",
+              "mbgstop-lane-treasury",
+              "mbgstop-h1",
+              "mbgstop-h2",
+              "mbgstop-h3"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "Di luar pilihan berhenti total, tiga usul sudah berdiri: penataan ulang bertahap dari Menteri Keuangan Purbaya Yudhi Sadewa, pembenahan kendali mutu lebih dulu dari Kepala Badan Gizi Nasional Dadan Hindayana, dan penghitungan insiden yang dijalankan dari luar badan pelaksana oleh Kepala BPOM Taruna Ikrar, sementara tiga hal bisa Anda periksa sendiri, yaitu pos realisasi belanja di pelaporan kementerian keuangan, mandat audit atas dana yang sudah cair, dan penyebut yang dipakai untuk mengukur angkanya.",
+            "els": [
+              "mbgstop-p-options",
+              "mbgstop-opt-restructure",
+              "mbgstop-opt-qc-first",
+              "mbgstop-opt-independent-count",
+              "mbgstop-play-realization",
+              "mbgstop-play-audit",
+              "mbgstop-play-denominator"
+            ]
+          }
+        ]
+      }
+    },
+    "sparring": {
+      "questions": [
+        {
+          "move": "mechanism",
+          "q": {
+            "id": "Supaya seluruh alokasi MBG berubah menjadi penghematan bagi kas negara, apa yang sebenarnya harus terpenuhi lebih dulu?"
+          },
+          "options": [
+            {
+              "id": "Setiap rupiah alokasi masih dapat ditarik kembali, termasuk dana yang telanjur cair, kontrak yang tengah berjalan, dan biaya penutupan."
+            },
+            {
+              "id": "Cukup ada keputusan resmi yang menghentikan program itu secara permanen."
+            },
+            {
+              "id": "Cukup lebih banyak media yang memberitakan langkah penghentiannya."
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "id": "Yang menutup pertanyaan ini ada di panel aliran uang: bagian belanja yang sudah keluar dari kas negara tercatat berada di luar hitungan penghematan di masa depan, sementara graf mencatat langkah dari penghentian permanen menuju seluruh alokasi menjadi penghematan tidak dinyatakan oleh artikel mana pun dalam keluarga ini."
+          }
+        },
+        {
+          "move": "denominator",
+          "q": {
+            "id": "Realisasi belanja program Rp88,15 T itu berdiri di dalam angka apa, kalau kata terselamatkan hendak diukur?"
+          },
+          "options": [
+            {
+              "id": "Rp689,1 T, defisit anggaran dalam APBN 2026 yang ditetapkan."
+            },
+            {
+              "id": "Rp3.842,7 T, total belanja negara dalam APBN 2026 yang ditetapkan."
+            },
+            {
+              "id": "Rp9.920,42 T, posisi utang pemerintah pada akhir Maret 2026."
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "id": "Panel skala memakai total belanja negara Rp3.842,7 T pada APBN 2026 yang ditetapkan sebagai penyebut, dan menaruh defisit Rp689,1 T serta posisi utang Rp9.920,42 T akhir Maret 2026 sebagai konteks di sebelahnya, bukan sebagai penyebutnya."
+          }
+        },
+        {
+          "move": "incidence",
+          "q": {
+            "id": "Pada minggu-minggu pertama setelah dapur tutup, siapa yang lebih dulu menanggung penghentiannya?"
+          },
+          "options": [
+            {
+              "id": "Kas negara, yang seketika mencatat alokasi program sebagai penghematan."
+            },
+            {
+              "id": "Rumah tangga penerima manfaat, dapur beserta pekerjanya, dan pemasok di hulu."
+            },
+            {
+              "id": "Lembaga pemeriksa, yang seketika memperoleh akses ke dana yang sudah cair."
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "id": "Panel sebaran dampak menaruh ketiga jalur itu di kolom hitungan minggu: porsi makan harian 63,13 juta penerima berhenti pada hari dapur tutup, 29.679 dapur berhenti membayar upah, dan pesanan tetap ke pemasok berakhir pada saat yang sama. Kas negara baru sampai pada angka sisanya setelah kontrak berjalan dan kewajiban penutupan diselesaikan."
+          }
+        }
+      ]
+    },
+    "prediction_tap": {
+      "prompt": {
+        "id": "Sebelum panelnya terbuka, tebak dulu: sisi mana dari klaim ini yang paling mungkin tidak disebut?"
+      },
+      "options": [
+        {
+          "id": "Siapa yang lebih dulu menanggung penghentiannya di lapangan."
+        },
+        {
+          "id": "Total belanja negara yang menjadi ukuran kata terselamatkan."
+        },
+        {
+          "id": "Bagian anggaran yang telanjur cair dan tidak bisa ditarik kembali."
+        },
+        {
+          "id": "Lembaga mana yang sesungguhnya memeriksa dana yang sudah keluar."
+        }
+      ]
+    }
+  }
+}

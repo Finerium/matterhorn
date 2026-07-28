@@ -1,0 +1,44 @@
+{
+  "narrative_id": "mbg-jobs",
+  "cluster": {
+    "narrative_id": "mbg-jobs",
+    "family_skeleton": "a programme's own headcount, self reported and derived rather than counted, carried as an independent measure of the programme's worth",
+    "members": [
+      {
+        "id": "mbg-jobs-m1",
+        "lang": "id",
+        "headline": "Program MBG Serap 1,28 Juta Tenaga Kerja, UMKM-Peternak Kecipratan",
+        "outlet": "CNBC Indonesia",
+        "date": "2026-05-23",
+        "url": "https://www.cnbcindonesia.com/news/20260523162405-4-737426/program-mbg-serap-128-juta-tenaga-kerja-umkm-peternak-kecipratan",
+        "note": "Verbatim title from content/sources.json (id-cnbc-mbg-workers-suppliers). BGN self reported; the slug reads 128-juta and the body reads 1,28 juta."
+      },
+      {
+        "id": "mbg-jobs-m2",
+        "lang": "id",
+        "headline": "MBG Disebut Serap 987.000 Tenaga Kerja, 40.000 UMKM Ikut Bergerak",
+        "outlet": "Kompas.com",
+        "date": "2026-02-15",
+        "url": "https://money.kompas.com/read/2026/02/15/181700126/mbg-disebut-serap-987.000-tenaga-kerja-40.000-umkm-ikut-bergerak",
+        "note": "Verbatim title from content/sources.json (id-kompas-mbg-workers-feb2026). The February baseline is live, which reverses the blueprint D-6 default, but it is a derived estimate (about 47 kitchen workers times about 21,000 SPPG), so it ships flagged estimate and self_reported with the arithmetic exposed."
+      },
+      {
+        "id": "mbg-jobs-m3",
+        "lang": "id",
+        "headline": "Anggaran MBG Terserap Rp 88,15 Triliun hingga Mei 2026",
+        "outlet": "Kompas.com",
+        "date": "2026-06-06",
+        "url": "https://money.kompas.com/read/2026/06/06/213559526/anggaran-mbg-terserap-rp-8815-triliun-hingga-mei-2026",
+        "note": "Verbatim title from content/sources.json. Pins the 29,679 SPPG kitchen count that the per-kitchen derivation rests on."
+      }
+    ]
+  },
+  "panel_plan": [
+    "claim_map",
+    "scale_check"
+  ],
+  "original": {
+    "text": "Program MBG Serap 1,28 Juta Tenaga Kerja, UMKM-Peternak Kecipratan",
+    "lang": "id"
+  }
+}

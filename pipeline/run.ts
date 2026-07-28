@@ -596,7 +596,7 @@ function slotInput(args: Args, role: SlotRole, narrative: string): unknown {
         narrative_id: narrative,
         headline: entry?.headline ?? null,
         original: entry?.original ?? null,
-        panels: at(requireSlot(run, narrative, 'A7'), 'panels'),
+        panels: withFamilyMarker(requireSlot(run, narrative, 'A7')),
         echo: at(ingestSlot(run, narrative, 'A8') ?? {}, 'echo') ?? null,
         lexicon: readJson(join(CONTRACTS, 'lexicon.json')),
       };
@@ -613,6 +613,22 @@ function slotInput(args: Args, role: SlotRole, narrative: string): unknown {
         lexicon: readJson(join(CONTRACTS, 'lexicon.json')),
       };
   }
+}
+
+/**
+ * A7's grounded panels plus its family marker, joined last (seed convention). The family strip
+ * is a marker panel (6.4): A7 emits {type:'family', el_id} beside its panels, and the data the
+ * marker renders is assembled from the cluster into the root family block. Both the A9 input
+ * and the candidate must show the same shipping panel set, or narration binds against a
+ * universe the fidelity gate will not recognise.
+ */
+function withFamilyMarker(grounded: Dict): unknown[] {
+  const panels = [...asArr(at(grounded, 'panels'))];
+  const marker = at(grounded, 'family');
+  if (asStr(at(marker, 'type')) === 'family' && asStr(at(marker, 'el_id')) !== '') {
+    panels.push({ type: 'family', el_id: asStr(at(marker, 'el_id')) });
+  }
+  return panels;
 }
 
 function readCandidate(run: string, narrative: string): Dict {
@@ -655,8 +671,15 @@ function assembleCandidate(args: Args, narrative: string): void {
   const cluster = readCluster(args.run, narrative);
   const grounded = requireSlot(args.run, narrative, 'A7');
   const narrated = requireSlot(args.run, narrative, 'A9');
+  // D-2: provenance chips name the model that actually executed, as the step log reports it,
+  // not the one the config requested. analyzed_by is the causal analysis (A5), narrated_by A9.
+  const steps = readSteps(args.run, narrative);
+  const reportedModel = (role: SlotRole): string => {
+    const step = steps.find((s) => s.role === role);
+    return step === undefined || step.model === '' ? requestedModel(role) : step.model;
+  };
   const echo = at(ingestSlot(args.run, narrative, 'A8') ?? {}, 'echo') ?? null;
-  const panels = asArr(at(grounded, 'panels'));
+  const panels = withFamilyMarker(grounded);
 
   const candidate: Dict = {
     id: entry.id,
@@ -674,8 +697,8 @@ function assembleCandidate(args: Args, narrative: string): void {
     tags: entry.tags,
     counts: deriveCounts(panels),
     provenance: {
-      analyzed_by: requestedModel('A7'),
-      narrated_by: requestedModel('A9'),
+      analyzed_by: reportedModel('A5'),
+      narrated_by: reportedModel('A9'),
       source_count: 0,
       computed_at: manifest.generated_at.slice(0, 10),
       run_id: manifest.run_id,

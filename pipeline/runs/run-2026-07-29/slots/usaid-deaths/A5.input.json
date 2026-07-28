@@ -1,0 +1,29 @@
+{
+  "narrative_id": "usaid-deaths",
+  "cluster": {
+    "narrative_id": "usaid-deaths",
+    "family_skeleton": "a modelled projection with a wide uncertainty interval carried as a settled count, which is the same certainty inflation from the other direction",
+    "members": [
+      {
+        "id": "usaid-deaths-m1",
+        "lang": "en",
+        "headline": "Evaluating the impact of two decades of USAID interventions and projecting the effects of defunding on mortality up to 2030 (DOI 10.1016/S0140-6736(25)01186-9)",
+        "outlet": "The Lancet",
+        "date": "2025-06-30",
+        "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01186-9/fulltext",
+        "note": "Verbatim title from content/sources.json (en-lancet-usaid). 14.05M additional deaths by 2030 with an uncertainty interval of 8.48M to 19.66M, and about 91.8M deaths prevented 2001 to 2021. The figure always carries its June 2025 date. GATE C TODO from the snapshot: a Feb 2026 follow-up reportedly revises the projection to 9.4M, and the run must find a citable source for it or leave it out."
+      }
+    ]
+  },
+  "panel_plan": [
+    "claim_map",
+    "scale_check",
+    "incidence"
+  ],
+  "original": {
+    "text": "Ending USAID means 14 million more deaths by 2030",
+    "lang": "en",
+    "reconstructed": true,
+    "note": "No verbatim wording of the circulating claim was recorded at snapshot. This is a description of the claim in the words of this build, and A9 may not present it as a quotation."
+  }
+}

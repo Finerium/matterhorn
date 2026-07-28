@@ -1,0 +1,286 @@
+{
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "The headline takes one lever and prices it as a whole answer: stop the MBG programme permanently, and the state budget is rescued while corruption in the programme gets easier to uncover.",
+          "els": [
+            "mbgstop-p-claim_map",
+            "mbgstop-n1",
+            "mbgstop-n3",
+            "mbgstop-n4"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Four steps hold that argument up, and the graph marks each one: two rest on no entry in the source registry, two, including the step where the full allocation becomes savings, are stated by no article in this family, and the step to easier uncovering stops before naming the body that would examine money already out the door.",
+          "els": [
+            "mbgstop-p-family",
+            "mbgstop-e1",
+            "mbgstop-e2",
+            "mbgstop-e3",
+            "mbgstop-e4",
+            "mbgstop-n2",
+            "mbgstop-h6"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Follow the money instead: the Rp88.15T realized through May 2026 moves out through 29,679 operating SPPG kitchens, the 987,000 programme staffing figure on the February reading is a derived estimate rather than a headcount, and the part already out of the treasury is the part no future stop can turn into savings.",
+          "els": [
+            "mbgstop-p-money_flow",
+            "mbgstop-row-sppg",
+            "mbgstop-row-workers-feb",
+            "mbgstop-row-disbursed",
+            "mbgstop-h5"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Outside that frame stand the parties the flow ends at: 63.13M recipients whose daily meal stops the day the kitchens close, plus 1.28M workers and 142,387 suppliers that the body running the programme counts as absorbed by it, all meeting the withdrawal in weeks or months while the nutrition outcomes sit on a clock of years and the treasury lane reaches only what has not yet been paid out.",
+          "els": [
+            "mbgstop-p-incidence",
+            "mbgstop-lane-recipients",
+            "mbgstop-lane-kitchens",
+            "mbgstop-lane-suppliers",
+            "mbgstop-lane-treasury",
+            "mbgstop-h1",
+            "mbgstop-h2",
+            "mbgstop-h3",
+            "mbgstop-row-beneficiaries",
+            "mbgstop-row-workers",
+            "mbgstop-row-suppliers"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Set against the budget it is offered as rescuing, that Rp88.15T sits inside Rp3,842.7T of enacted state spending, beside Rp599.44T in debt interest and Rp210.06T in energy subsidy, with an enacted deficit of Rp689.1T and a debt position of Rp9,920.42T at the end of March 2026.",
+          "els": [
+            "mbgstop-p-scale_check",
+            "mbgstop-seg-mbg",
+            "mbgstop-seg-interest",
+            "mbgstop-seg-subsidy",
+            "mbgstop-chip-deficit",
+            "mbgstop-chip-debt",
+            "mbgstop-h4"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Three named proponents put three different levers on the table, and the playbook is where a reader starts: the finance ministry's own realization line, the audit mandate over money already disbursed, and the budget law that holds the total.",
+          "els": [
+            "mbgstop-p-options",
+            "mbgstop-opt-restructure",
+            "mbgstop-opt-qc-first",
+            "mbgstop-opt-independent-count",
+            "mbgstop-play-realization",
+            "mbgstop-play-audit",
+            "mbgstop-play-denominator"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Alurnya terdengar rapi: pemerintah menghentikan program MBG secara permanen, seluruh alokasinya berubah menjadi penghematan bagi kas negara, APBN terselamatkan, dan pengungkapan korupsi dalam program menjadi lebih mudah.",
+          "els": [
+            "mbgstop-p-claim_map",
+            "mbgstop-n1",
+            "mbgstop-n2",
+            "mbgstop-n3",
+            "mbgstop-n4"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Yang menahan alur itu justru empat langkah penghubungnya: dua hanya dinyatakan oleh judul, dua lagi tidak dinyatakan oleh artikel mana pun dalam keluarga ini, dan langkah menuju pengungkapan korupsi berhenti sebelum menyebut lembaga yang akan memeriksa dana yang sudah cair.",
+          "els": [
+            "mbgstop-e1",
+            "mbgstop-e2",
+            "mbgstop-e3",
+            "mbgstop-e4",
+            "mbgstop-p-family",
+            "mbgstop-h6"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Ukurannya begini: realisasi belanja program Rp88,15 T hingga Mei 2026 dibaca terhadap total belanja negara Rp3.842,7 T pada APBN 2026 yang ditetapkan, berdampingan dengan bunga utang Rp599,44 T dan subsidi energi Rp210,06 T yang tidak ikut berhenti ketika program ini berhenti, sementara defisit Rp689,1 T dan posisi utang Rp9.920,42 T pada akhir Maret 2026 berdiri sebagai konteks di sebelahnya.",
+          "els": [
+            "mbgstop-p-scale_check",
+            "mbgstop-seg-mbg",
+            "mbgstop-seg-interest",
+            "mbgstop-seg-subsidy",
+            "mbgstop-chip-deficit",
+            "mbgstop-chip-debt",
+            "mbgstop-h4"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Belanja itu mengalir lewat 29.679 dapur SPPG ke 63,13 juta penerima manfaat, lalu ke 1,28 juta pekerja dan 142.387 pemasok yang keduanya dilaporkan oleh badan pelaksana program, dengan angka pekerja pada pembacaan Februari sebesar 987.000 yang berupa estimasi turunan alih-alih pendataan kepala per kepala, sedangkan bagian yang sudah keluar dari kas negara berada di luar hitungan penghematan di masa depan.",
+          "els": [
+            "mbgstop-p-money_flow",
+            "mbgstop-row-sppg",
+            "mbgstop-row-beneficiaries",
+            "mbgstop-row-workers",
+            "mbgstop-row-workers-feb",
+            "mbgstop-row-suppliers",
+            "mbgstop-row-disbursed",
+            "mbgstop-h5"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Yang lebih dulu menanggung penghentian bukan kas negara: dalam hitungan minggu porsi makan harian rumah tangga penerima berhenti, dapur berhenti mengupah kru, dan pesanan tetap ke petani, nelayan, serta produsen telur dan sayur ikut berakhir.",
+          "els": [
+            "mbgstop-p-incidence",
+            "mbgstop-lane-recipients",
+            "mbgstop-lane-kitchens",
+            "mbgstop-lane-suppliers",
+            "mbgstop-lane-treasury",
+            "mbgstop-h1",
+            "mbgstop-h2",
+            "mbgstop-h3"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Di luar pilihan berhenti total, tiga usul sudah berdiri: penataan ulang bertahap dari Menteri Keuangan Purbaya Yudhi Sadewa, pembenahan kendali mutu lebih dulu dari Kepala Badan Gizi Nasional Dadan Hindayana, dan penghitungan insiden yang dijalankan dari luar badan pelaksana oleh Kepala BPOM Taruna Ikrar, sementara tiga hal bisa Anda periksa sendiri, yaitu pos realisasi belanja di pelaporan kementerian keuangan, mandat audit atas dana yang sudah cair, dan penyebut yang dipakai untuk mengukur angkanya.",
+          "els": [
+            "mbgstop-p-options",
+            "mbgstop-opt-restructure",
+            "mbgstop-opt-qc-first",
+            "mbgstop-opt-independent-count",
+            "mbgstop-play-realization",
+            "mbgstop-play-audit",
+            "mbgstop-play-denominator"
+          ]
+        }
+      ]
+    }
+  },
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "A permanent stop is supposed to turn the allocation into savings. Which part of the spending cannot make that trip?",
+          "id": "Penghentian permanen semestinya mengubah alokasi program menjadi penghematan. Bagian belanja yang mana yang tidak bisa ikut perjalanan itu?"
+        },
+        "options": [
+          {
+            "en": "The part still to be spent under contracts not yet signed.",
+            "id": "Bagian yang belum dibelanjakan lewat kontrak yang belum diteken."
+          },
+          {
+            "en": "The Rp88.15T already realized and out of the treasury by May 2026.",
+            "id": "Rp88,15 T yang sudah terealisasi dan keluar dari kas negara hingga Mei 2026."
+          },
+          {
+            "en": "The part that went to ingredients rather than to wages.",
+            "id": "Bagian yang mengalir ke pembelian bahan pangan, bukan ke upah pekerja."
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The money flow panel keeps the spending already out of the treasury separate from what a stop can still reach: Rp88.15T had been realized through May 2026, which sits on the far side of any stop. The graph also records the step from a permanent stop to the full allocation becoming savings as stated by no article in this family.",
+          "id": "Panel aliran uang memisahkan belanja yang sudah keluar dari kas negara dari apa yang masih dapat dijangkau penghentian: Rp88,15 T sudah terealisasi hingga Mei 2026, dan angka itu berada di seberang penghentian mana pun. Graf juga mencatat langkah dari penghentian permanen menuju seluruh alokasi menjadi penghematan sebagai langkah yang tidak dinyatakan oleh artikel mana pun dalam keluarga ini."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "If the word rescued is going to be measured, which figure does the programme's realized Rp88.15T sit inside?",
+          "id": "Realisasi belanja program Rp88,15 T itu berdiri di dalam angka apa, kalau kata terselamatkan hendak diukur?"
+        },
+        "options": [
+          {
+            "en": "Rp689.1T, the budget deficit in the enacted APBN 2026.",
+            "id": "Rp689,1 T, defisit anggaran dalam APBN 2026 yang ditetapkan."
+          },
+          {
+            "en": "Rp3,842.7T, total state spending in the enacted APBN 2026.",
+            "id": "Rp3.842,7 T, total belanja negara dalam APBN 2026 yang ditetapkan."
+          },
+          {
+            "en": "Rp9,920.42T, the government debt position at the end of March 2026.",
+            "id": "Rp9.920,42 T, posisi utang pemerintah pada akhir Maret 2026."
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The scale check panel uses total state spending of Rp3,842.7T in the enacted APBN 2026 as its denominator, and puts the Rp689.1T deficit and the Rp9,920.42T debt position at the end of March 2026 beside it as context rather than as the total the share is taken of.",
+          "id": "Panel skala memakai total belanja negara Rp3.842,7 T pada APBN 2026 yang ditetapkan sebagai penyebut, dan menaruh defisit Rp689,1 T serta posisi utang Rp9.920,42 T akhir Maret 2026 sebagai konteks di sebelahnya, bukan sebagai penyebutnya."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "In the first weeks after the kitchens close, who carries the stop first?",
+          "id": "Pada minggu-minggu pertama setelah dapur tutup, siapa yang lebih dulu menanggung penghentiannya?"
+        },
+        "options": [
+          {
+            "en": "The state treasury, which books the programme's allocation as a saving straight away.",
+            "id": "Kas negara, yang seketika mencatat alokasi program sebagai penghematan."
+          },
+          {
+            "en": "Recipient households, the kitchens and their paid crews, and the suppliers upstream.",
+            "id": "Rumah tangga penerima manfaat, dapur beserta pekerjanya, dan pemasok di hulu."
+          },
+          {
+            "en": "The examination body, which gains access to the disbursed funds straight away.",
+            "id": "Lembaga pemeriksa, yang seketika memperoleh akses ke dana yang sudah cair."
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The incidence panel puts all three of those lanes in the within-weeks column: the daily meal for 63.13M recipients stops on the day the kitchens close, 29,679 kitchens stop paying wages, and standing orders to suppliers end at the same moment. The treasury reaches whatever figure remains only after contracts in force and wind-down obligations are settled.",
+          "id": "Panel sebaran dampak menaruh ketiga jalur itu di kolom hitungan minggu: porsi makan harian 63,13 juta penerima berhenti pada hari dapur tutup, 29.679 dapur berhenti membayar upah, dan pesanan tetap ke pemasok berakhir pada saat yang sama. Kas negara baru sampai pada angka sisanya setelah kontrak berjalan dan kewajiban penutupan diselesaikan."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before the panels open, take a guess: which side of this claim is the one most likely to go unmentioned?",
+      "id": "Sebelum panelnya terbuka, tebak dulu: sisi mana dari klaim ini yang paling mungkin tidak disebut?"
+    },
+    "options": [
+      {
+        "en": "Who carries the stop first, on the ground.",
+        "id": "Siapa yang lebih dulu menanggung penghentiannya di lapangan."
+      },
+      {
+        "en": "The total state spending the word rescued is measured against.",
+        "id": "Total belanja negara yang menjadi ukuran kata terselamatkan."
+      },
+      {
+        "en": "The part of the budget already disbursed, which cannot be called back.",
+        "id": "Bagian anggaran yang telanjur cair dan tidak bisa ditarik kembali."
+      },
+      {
+        "en": "Which body actually examines the money already out the door.",
+        "id": "Lembaga mana yang sesungguhnya memeriksa dana yang sudah keluar."
+      }
+    ]
+  },
+  "editorial_notes": [
+    "Binding audit: both authorings bind mbgstop-p-family, which is NOT among the panels in A9.input.json. Checked against A5.json panel_skeleton and A7.json, where a family panel with el_id mbgstop-p-family is declared and ships. The binding resolves, so both were left standing. No dangling el_id remains in either locale. Note the inverse case: A5's option_slots declare mbgstop-opt-stop, which A7 dropped; neither authoring bound it and neither locale binds it now.",
+    "No fact disagreement between the two authorings was found, so the panels were not needed as arbiter and no sentence was rewritten for accuracy. The locales reach the same points by different routes: EN v-2 describes edges e1 and e2 as resting on no registry entry, ID v-2 describes them as stated only by the headline. Both are what the graph records (status unsourced, quote from the headline).",
+    "No lexicon violation was found in either authoring, so no sentence was rewritten for the lint. I ran the actual contracts/lexicon.json regexes (whole word, case insensitive, plus the em dash, emoji, and future-harm patterns) over the complete merged output: it passes clean. Two Indonesian words that look risky are safe under whole-word matching and were verified rather than assumed: 'terselamatkan' does not contain the whole word 'terbukti' or 'selamat' as a banned entry, and 'sebenarnya' does not match \\bbenar\\b. No occurrence of 'salah satu' exists anywhere in the output.",
+    "Narration coverage, EN, four extensions. The EN authoring left four artifact el_ids uncovered that the ID authoring covered or that neither covered: h6, lane-treasury, chip-debt, row-workers-feb. EN v-2 extended with the clause about the body that would examine money already out the door (h6, tracing to the h6 label and the e2 why). EN v-4 extended with the treasury lane reaching only what has not yet been paid out (lane-treasury, weeks cell). EN v-5 extended with the Rp9,920.42T debt position at end of March 2026 (chip-debt). EN v-3 extended with the 987,000 February staffing figure as a derived estimate rather than a headcount (row-workers-feb, its own note). All four are clause extensions, not new sentences: both locales stay at six sentences, the ceiling A9.md sets.",
+    "Narration coverage, ID, two extensions. The ID authoring left chip-deficit, chip-debt, and row-workers-feb uncovered. ID v-3 extended with 'sementara defisit Rp689,1 T dan posisi utang Rp9.920,42 T pada akhir Maret 2026 berdiri sebagai konteks di sebelahnya' (chip-deficit, chip-debt). ID v-4 extended with 'dengan angka pekerja pada pembacaan Februari sebesar 987.000 yang berupa estimasi turunan alih-alih pendataan kepala per kepala' (row-workers-feb). Written in Indonesian, not translated from the EN extensions: 'alih-alih pendataan kepala per kepala' is the phrasing the row's own note uses. Coverage is now complete: all 41 declared el_ids are bound by at least one sentence in BOTH locales.",
+    "SPARRING mechanism, base = the EN authoring. Its reveal teaches more because it lands on a figure the reader can locate: the Rp88.15T sitting in the money flow panel as spending already out of the treasury, marked severed_if_stopped false, next to five rows marked true. The ID authoring's version asked what must be true first and its correct option was the longest and most detailed of the three, which is a test-taking tell rather than a reveal; its third option ('more outlets reporting the stop') is the archetype A9.md blesses, but here it is discardable on sight, which collapses a three-option question into two. Correct is index 1: money that left the treasury before any stop could take effect cannot be booked as future saving, which is exactly what row-disbursed records and what hidden element h5 names. Option 0 is wrong for a reason the panel makes visible afterwards, because spending not yet committed is precisely the part a stop DOES reach; option 2 is wrong because the ingredients and wages split is downstream of the kitchen door either way and has no bearing on whether a rupiah is recoverable. The Indonesian half was authored natively against those same panel rows.",
+    "SPARRING denominator, base = the ID authoring. Its two wrong options are the scale check panel's own two context chips, Rp689.1T deficit and Rp9,920.42T debt position, so after the reveal the reader sees exactly why they are wrong: the panel puts both beside the denominator as context, not as the total. The EN authoring offered the programme's own Rp88.15T as a distractor, which is a weaker wrong answer, and left the debt chip out of the artifact's reading surface entirely. Correct is index 1: the panel's declared denominator is total enacted state spending, Rp3,842.7T, and it is what the programme figure, the debt interest line, and the energy subsidy line are all read against. The English half was authored natively; the ID note is the authored one, kept verbatim.",
+    "SPARRING incidence, base = the ID authoring. The incidence panel's within-weeks column holds three lanes, not one, and the ID correct option names all three (recipients, kitchens and crews, suppliers) where the EN authoring named only the 63.13M recipients. Basing on ID means the reveal teaches the whole first column instead of one third of it. Correct is index 1. The two wrong options are wrong for a reason the panel shows: the treasury lane's own months cell says contracts in force and wind-down obligations are settled before any figure can be booked as saved, so 'straight away' is what the panel contradicts; and no element in the artifact names an examination body at all, which is precisely what hidden element h6 records as missing. The English half was authored natively; the ID note is the authored one, kept verbatim.",
+    "PREDICTION TAP, base = the ID authoring. Its four options are four distinct sides of the claim (who carries it first, the denominator, the sunk spending, the examining body), each mapping to a hidden element the artifact actually holds (h1 and the lanes, h4, h5, h6). The EN authoring's four options split the downstream into households and kitchens-plus-suppliers, which reads as the same guess offered twice and leaves the examining body out. The English half, prompt and all four options, was authored natively to state the same four things. None of the four is a giveaway: each is a plausible answer before the panels open, and three of them are in fact missing from the family.",
+    "Deliberately not said. No sentence and no option in either locale states that the claim is wrong, that the step does not hold, or that the saving is unreal. The output says which step has evidence, which is recorded as stated by no member, and who is standing outside the frame. The note fields describe what the panel holds and never address the reader's guess as an error. The word 'rescued' and 'terselamatkan' appear only as the claim's own framing being measured, never as Matterhorn's assessment.",
+    "ORCHESTRATOR RECORD, round 3: this file is the first reconciliation restored. The intermediate re-dispatch removed the mbgstop-p-family binding on the orchestrator's incorrect brief that the contract defines no family el_id; the contract's FamilyPanel (6.4) is a marker {type: family, el_id} rendering from the root family block, the seed convention places it last in panels[], and the runner's assembler was the component that dropped it. The assembler now appends A7's family marker to panels[], so the original binding and the panel coverage it provides are correct as first authored. The re-dispatch record survives in the run log."
+  ],
+  "model": "claude-opus-5[1m]"
+}

@@ -1,0 +1,95 @@
+{
+  "narrative_id": "mbg-stop",
+  "cluster": {
+    "narrative_id": "mbg-stop",
+    "family_skeleton": "one budget lever framed as sufficient to rescue the state budget, carried without the size of the budget it is measured against",
+    "members": [
+      {
+        "id": "mbg-stop-m1",
+        "lang": "id",
+        "headline": "Menantang Pemerintah Setop MBG Permanen: demi Selamatkan APBN dan Permudah Ungkap Korupsi",
+        "outlet": "Tribunnews",
+        "date": "2026-06-20",
+        "url": "https://www.tribunnews.com/nasional/7844542/menantang-pemerintah-setop-mbg-permanen-demi-selamatkan-apbn-dan-permudah-ungkap-korupsi",
+        "note": "Full-slug canonical, real headline and date verified live at Phase 0 snapshot (2026-07-28); bare-id form 404s."
+      },
+      {
+        "id": "mbg-stop-m2",
+        "lang": "id",
+        "headline": "Anggota DPR desak pangkas anggaran MBG, selamatkan ekonomi",
+        "outlet": "Kompas video",
+        "date": "2026-06",
+        "url": "https://video.kompas.com/watch/1936616",
+        "reconstructed": true,
+        "note": "Carried into the build from the design fixture data, not from the Phase 0 snapshot: neither the exact title nor the exact date was re-verified, and this entry is not in content/sources.json. Treat the wording as a description of the segment."
+      },
+      {
+        "id": "mbg-stop-m3",
+        "lang": "id",
+        "headline": "Purbaya sebut realisasi anggaran MBG capai Rp88,15 triliun",
+        "outlet": "Antara News",
+        "date": "2026-06-05",
+        "url": "https://www.antaranews.com/berita/5595513/purbaya-sebut-realisasi-anggaran-mbg-capai-rp8815-triliun",
+        "note": "Verbatim title from content/sources.json (id-antara-mbg-realisasi-mei2026). The live replacement for the dead gorontalo.antaranews.com/berita/405133 the fixture carried. It documents the same allocation cut, Rp335T to Rp268T, from the other side of the argument."
+      }
+    ]
+  },
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "mbgstop-n1",
+        "label": {
+          "en": "The government stops the MBG programme permanently",
+          "id": "Pemerintah menghentikan program MBG secara permanen"
+        }
+      },
+      {
+        "el_id": "mbgstop-n2",
+        "label": {
+          "en": "The full MBG allocation turns into savings for the state",
+          "id": "Seluruh alokasi MBG berubah menjadi penghematan bagi kas negara"
+        }
+      },
+      {
+        "el_id": "mbgstop-n3",
+        "label": {
+          "en": "The state budget is rescued",
+          "id": "APBN terselamatkan"
+        }
+      },
+      {
+        "el_id": "mbgstop-n4",
+        "label": {
+          "en": "Uncovering corruption in the programme becomes easier",
+          "id": "Pengungkapan korupsi dalam program menjadi lebih mudah"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "mbgstop-e1",
+        "from": "mbgstop-n1",
+        "to": "mbgstop-n3",
+        "quote": "Setop MBG Permanen: demi Selamatkan APBN"
+      },
+      {
+        "el_id": "mbgstop-e2",
+        "from": "mbgstop-n1",
+        "to": "mbgstop-n4",
+        "quote": "Setop MBG Permanen: demi Selamatkan APBN dan Permudah Ungkap Korupsi"
+      },
+      {
+        "el_id": "mbgstop-e3",
+        "from": "mbgstop-n1",
+        "to": "mbgstop-n2",
+        "quote": "no article in this family states the step from 'the government stops the MBG programme permanently' to 'the full MBG allocation turns into savings for the state'"
+      },
+      {
+        "el_id": "mbgstop-e4",
+        "from": "mbgstop-n2",
+        "to": "mbgstop-n3",
+        "quote": "no article in this family states the step from 'the full MBG allocation turns into savings for the state' to 'the state budget is rescued'"
+      }
+    ]
+  }
+}

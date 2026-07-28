@@ -1,0 +1,53 @@
+{
+  "steps": [
+    {
+      "role": "A5",
+      "model": "claude-fable-5",
+      "started_at": "2026-07-28T21:52:10Z",
+      "finished_at": "2026-07-28T22:56:01Z",
+      "input_hash": "0ea3ca534218b6603aea38f781b859e376c37c30fb61ed2d0c62bbe78eae9667"
+    },
+    {
+      "role": "A6",
+      "model": "claude-fable-5",
+      "started_at": "2026-07-28T22:56:01Z",
+      "finished_at": "2026-07-28T22:56:01Z",
+      "input_hash": "a027e52a1110823727342ebb42d09cf9a4eae6bbcc8918122cdc9c4dd48f0095"
+    },
+    {
+      "role": "A7",
+      "model": "claude-opus-5[1m]",
+      "started_at": "2026-07-28T22:56:26Z",
+      "finished_at": "2026-07-28T22:56:26Z",
+      "input_hash": "0939bd898e660736fd6b75ec05f0e53ad0a28d082ab52847fd370b1802aeccb4"
+    },
+    {
+      "role": "A8",
+      "model": "claude-opus-5[1m]",
+      "started_at": "2026-07-28T22:56:02Z",
+      "finished_at": "2026-07-28T22:56:02Z",
+      "input_hash": "5b0561e48ec765e2931d5b56d589d32c9fd94524caaa2ba716706dc95154b83b"
+    },
+    {
+      "role": "A9",
+      "model": "claude-opus-5[1m]",
+      "started_at": "2026-07-28T23:28:07Z",
+      "finished_at": "2026-07-28T23:28:07Z",
+      "input_hash": "ac5c94c6531d5c1e74d4f7f3214d58fb52a76b29eef9d19864768c054ecf6984"
+    },
+    {
+      "role": "A10",
+      "model": "claude-fable-5",
+      "started_at": "2026-07-28T23:26:35Z",
+      "finished_at": "2026-07-28T23:34:32Z",
+      "input_hash": "738247965305fed4393072230dd2e86193f7fb24a332878d258a9ec93dc6e031"
+    },
+    {
+      "role": "A11",
+      "model": "claude-opus-5[1m]",
+      "started_at": "2026-07-28T23:26:35Z",
+      "finished_at": "2026-07-28T23:34:32Z",
+      "input_hash": "4e544b30b9592f0d7be3ccd8d257f4f5f22323d8c568535795f10972600aac80"
+    }
+  ]
+}

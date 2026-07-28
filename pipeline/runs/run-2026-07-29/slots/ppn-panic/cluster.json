@@ -1,0 +1,33 @@
+{
+  "narrative_id": "ppn-panic",
+  "family_skeleton": "a rule restricted to one class of goods narrated as if it applied to the whole basket",
+  "members": [
+    {
+      "id": "ppn-panic-m1",
+      "lang": "id",
+      "headline": "PPN 12% Barang Mewah Berlaku Penuh mulai Februari 2025, Begini Penjelasannya",
+      "outlet": "Bisnis.com",
+      "date": "2025-01-02",
+      "url": "https://ekonomi.bisnis.com/read/20250102/259/1828262/ppn-12-barang-mewah-berlaku-penuh-mulai-februari-2025-begini-penjelasannya",
+      "note": "Verbatim title from content/sources.json (id-bisnis-ppn-luxury). Restored at its full slug; the bare-id form 403s and was never dead."
+    },
+    {
+      "id": "ppn-panic-m2",
+      "lang": "id",
+      "headline": "Kemenkeu rilis aturan PPN 12 persen hanya untuk barang mewah",
+      "outlet": "Antara News",
+      "date": "2025-01-01",
+      "url": "https://www.antaranews.com/berita/4559522/kemenkeu-rilis-aturan-ppn-12-persen-hanya-untuk-barang-mewah",
+      "note": "Verbatim title from content/sources.json (id-antara-ppn-luxury). THE designated fresh-dissect article (blueprint 7.2.9, D-9): the only URL that runs the staged progress demo."
+    },
+    {
+      "id": "ppn-panic-m3",
+      "lang": "id",
+      "headline": "PMK 131/2024: Tarif PPN Sebelas-Dua Belas",
+      "outlet": "Direktorat Jenderal Pajak",
+      "date": "2024-12-31",
+      "url": "https://www.pajak.go.id/en/node/113453",
+      "note": "Verbatim title from content/sources.json (id-pajak-pmk131). The primary rule: 12 percent applies to luxury goods under PPnBM, and non-luxury keeps an effective 11 percent through the 11/12 nilai lain base. Grounding for the CF-5 scale panel, which ships only if A7 can put a sourced denominator against a sourced numerator."
+    }
+  ]
+}

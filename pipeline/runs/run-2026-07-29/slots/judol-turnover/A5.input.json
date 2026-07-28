@@ -1,0 +1,45 @@
+{
+  "narrative_id": "judol-turnover",
+  "cluster": {
+    "narrative_id": "judol-turnover",
+    "family_skeleton": "a fall in one measure of a market read as the size of the fall in the market, with the measure that moved differently left out",
+    "members": [
+      {
+        "id": "judol-turnover-m1",
+        "lang": "id",
+        "headline": "PPATK: Perputaran dana judi online Rp40,3 triliun pada triwulan I-2026",
+        "outlet": "Antara News",
+        "date": "2026-07-23",
+        "url": "https://www.antaranews.com/berita/5663168",
+        "note": "Verbatim title from content/sources.json (id-antara-judol-q1-2026). Quoted to PPATK head Ivan Yustiavandana, with total deposits Rp10.59T in the same quarter."
+      },
+      {
+        "id": "judol-turnover-m2",
+        "lang": "id",
+        "headline": "PPATK: Perputaran Dana Judi Online Turun 20%, Tersisa Rp286,84 T",
+        "outlet": "CNBC Indonesia",
+        "date": "2026-07-23",
+        "url": "https://www.cnbcindonesia.com/news/20260723082823-4-753122/ppatk-perputaran-dana-judi-online-turun-20-tersisa-rp28684-t",
+        "note": "Verbatim title from content/sources.json (id-cnbc-judol-2025). The turnover series: Rp359.81T in 2024 to Rp286.84T in 2025."
+      },
+      {
+        "id": "judol-turnover-m3",
+        "lang": "id",
+        "headline": "PPATK Catat Ada Penurunan Perputaran Uang Judol di Era Prabowo",
+        "outlet": "Kompas.com",
+        "date": "2026-07-23",
+        "url": "https://nasional.kompas.com/read/2026/07/23/22413221/ppatk-catat-ada-penurunan-perputaran-uang-judol-di-era-prabowo",
+        "note": "Verbatim title from content/sources.json (id-kompas-judol-deposits). Carries the net deposit series, Rp51.3T to Rp36.01T, which is the denominator the turnover headline is missing."
+      }
+    ]
+  },
+  "panel_plan": [
+    "claim_map",
+    "scale_check",
+    "dueling"
+  ],
+  "original": {
+    "text": "PPATK: Perputaran dana judi online Rp40,3 triliun pada triwulan I-2026",
+    "lang": "id"
+  }
+}

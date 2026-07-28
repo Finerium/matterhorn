@@ -1,0 +1,110 @@
+{
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "mbgstop-n1",
+        "label": {
+          "en": "The government stops the MBG programme permanently",
+          "id": "Pemerintah menghentikan program MBG secara permanen"
+        }
+      },
+      {
+        "el_id": "mbgstop-n2",
+        "label": {
+          "en": "The full MBG allocation turns into savings for the state",
+          "id": "Seluruh alokasi MBG berubah menjadi penghematan bagi kas negara"
+        }
+      },
+      {
+        "el_id": "mbgstop-n3",
+        "label": {
+          "en": "The state budget is rescued",
+          "id": "APBN terselamatkan"
+        }
+      },
+      {
+        "el_id": "mbgstop-n4",
+        "label": {
+          "en": "Uncovering corruption in the programme becomes easier",
+          "id": "Pengungkapan korupsi dalam program menjadi lebih mudah"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "mbgstop-e1",
+        "from": "mbgstop-n1",
+        "to": "mbgstop-n3",
+        "quote": "Setop MBG Permanen: demi Selamatkan APBN"
+      },
+      {
+        "el_id": "mbgstop-e2",
+        "from": "mbgstop-n1",
+        "to": "mbgstop-n4",
+        "quote": "Setop MBG Permanen: demi Selamatkan APBN dan Permudah Ungkap Korupsi"
+      },
+      {
+        "el_id": "mbgstop-e3",
+        "from": "mbgstop-n1",
+        "to": "mbgstop-n2",
+        "quote": "no article in this family states the step from 'the government stops the MBG programme permanently' to 'the full MBG allocation turns into savings for the state'"
+      },
+      {
+        "el_id": "mbgstop-e4",
+        "from": "mbgstop-n2",
+        "to": "mbgstop-n3",
+        "quote": "no article in this family states the step from 'the full MBG allocation turns into savings for the state' to 'the state budget is rescued'"
+      }
+    ]
+  },
+  "model": "claude-fable-5",
+  "panel_skeleton": [
+    {
+      "type": "claim_map",
+      "el_id": "mbgstop-p-claim_map"
+    },
+    {
+      "type": "scale_check",
+      "el_id": "mbgstop-p-scale_check"
+    },
+    {
+      "type": "money_flow",
+      "el_id": "mbgstop-p-money_flow"
+    },
+    {
+      "type": "incidence",
+      "el_id": "mbgstop-p-incidence"
+    },
+    {
+      "type": "options",
+      "el_id": "mbgstop-p-options",
+      "option_slots": [
+        {
+          "el_id": "mbgstop-opt-stop",
+          "label": {
+            "en": "Permanent stop of the programme",
+            "id": "Penghentian permanen program"
+          }
+        },
+        {
+          "el_id": "mbgstop-opt-restructure",
+          "label": {
+            "en": "Phased restructuring of the budget and rollout",
+            "id": "Penataan ulang bertahap anggaran dan pelaksanaan"
+          }
+        },
+        {
+          "el_id": "mbgstop-opt-qc-first",
+          "label": {
+            "en": "Continuation with quality control fixed first",
+            "id": "Melanjutkan program dengan pembenahan kendali mutu lebih dulu"
+          }
+        }
+      ]
+    },
+    {
+      "type": "family",
+      "el_id": "mbgstop-p-family"
+    }
+  ]
+}
