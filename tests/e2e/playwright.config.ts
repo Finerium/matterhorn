@@ -29,6 +29,8 @@
  * chromium only for now. The plan configures webkit and firefox at Gate 3/6, where the state
  * matrix and the dark and ID variants arrive with them.
  */
+import { fileURLToPath } from 'node:url';
+
 import { defineConfig } from '@playwright/test';
 
 const PORT = 5199;
@@ -62,7 +64,7 @@ export default defineConfig({
     // The phone frame the whole product is designed at, per the Gate 2 plan.
     viewport: { width: 402, height: 874 },
     deviceScaleFactor: 2,
-    reducedMotion: 'reduce',
+    contextOptions: { reducedMotion: 'reduce' },
     colorScheme: 'light',
     locale: 'en-US',
     timezoneId: 'UTC',
@@ -75,6 +77,9 @@ export default defineConfig({
   projects: [{ name: 'chromium', use: { browserName: 'chromium' } }],
 
   webServer: {
+    // pnpm resolves bins from the package root only; playwright spawns with the
+    // config's directory as cwd, so pin it to the repo root explicitly.
+    cwd: fileURLToPath(new URL('../..', import.meta.url)),
     command: `pnpm exec vite app --mode harness --port ${PORT}`,
     url: `${BASE_URL}/harness.html`,
     reuseExistingServer: process.env.CI === undefined,

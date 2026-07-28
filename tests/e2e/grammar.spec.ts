@@ -204,7 +204,7 @@ test('AC-GRAM-8 family renders the skeleton and every member outlet', async ({ p
 // --- entrance motion, deliberately unfrozen ----------------------------------------------
 
 test.describe('entrance motion', () => {
-  test.use({ reducedMotion: 'no-preference' });
+  test.use({ contextOptions: { reducedMotion: 'no-preference' } });
 
   test('AC-GRAM-1 claim_map settles after its entrance animation', async ({ page }) => {
     await open(page, 'claim_map', 'mbg-stop');
