@@ -38,3 +38,21 @@
   CF-7 pack 'intl' -> contract 'en', adapter maps.
   CF-8 hardcoded provenance models + matterhorn.app links -> manifest models, SITE_URL.
 - Gate 0 reviewer dispatch: requested Claude Fable 5, effort max, fresh context, dispatched $(date '+%Y-%m-%dT%H:%M:%S%z').
+
+## Gate 0 comprehension review: PASSED (2026-07-28, ~19:20 WIB)
+- Reviewer: requested Claude Fable 5 effort max; reported identity "claude-fable-5 (Fable 5)". Duration 397s, 257k tokens, read-only.
+- sign_off=true, zero discrepancies. Five probe answers all correct.
+- Four observations, resolved deliberately:
+  1. Stage-count tension (blueprint 3.4.2 names 3 stages; AC-APP-6 says "4-stage progress"):
+     RESOLVED: staged progress ships 4 stages: extracting, grounding, auditing, publishing to
+     the shared cache. The 4th stage is truthful (the fleet's real publish step), satisfies
+     AC-APP-6 literally, keeps 3.4.2's three named stages and the honest line verbatim.
+  2. Contract 6.3 requires sparring (exactly 3) AND prediction_tap on EVERY narrative;
+     zip only has them on mbg-stop/mbg-poisoning. RESOLVED: Gate C work order authors
+     3 sparring questions + 1 prediction tap for all ten narratives in both languages;
+     all correct answers land in content-review.md.
+  3. Zip's USD context chip (Rp88.15T = about $5.4B) is sourceless. RESOLVED: keep only if
+     sources.json gains a dated exchange-rate source at Gate C; otherwise drop the chip.
+  4. CF-2 emoji strict reading confirmed defensible; no action.
+- Phase 0 step 6 (snapshot & assets) begins now. Snapshot research fleet dispatched
+  (8 read-only agents, requested Opus 5 effort max).
