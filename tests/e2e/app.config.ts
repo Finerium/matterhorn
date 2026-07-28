@@ -30,6 +30,7 @@ const BASE_URL = `http://127.0.0.1:${PORT}`;
 
 export default defineConfig({
   testDir: '.',
+  testMatch: ['matrix.spec.ts', 'flows.spec.ts'],
   // Separate from the Gate 2 root so a state screenshot and a panel screenshot never collide.
   snapshotDir: './__screenshots__/app',
   snapshotPathTemplate: '{snapshotDir}/{projectName}/{arg}-{platform}{ext}',
