@@ -76,6 +76,19 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+/**
+ * Rule 1, the read half: anything the install precached is answered from the cache, and anything
+ * else falls through to the network unchanged.
+ *
+ * Without this the precache is write-only. An offline reload is served the shell document and
+ * then dies on its own `<script src="/assets/index-*.js">`, which is a blank page dressed up as
+ * a working fallback. Found exactly that way, on a preview build with the network cut.
+ */
+async function cacheFirst(request: Request): Promise<Response> {
+  const cache = await caches.open(SHELL);
+  return (await cache.match(request)) ?? (await fetch(request));
+}
+
 /** Rule 2: answer from cache, refresh behind it. */
 async function staleWhileRevalidate(request: Request): Promise<Response> {
   const cache = await caches.open(CONTENT);
@@ -92,11 +105,32 @@ async function staleWhileRevalidate(request: Request): Promise<Response> {
   return new Response('{}', { status: 504, headers: { 'content-type': 'application/json' } });
 }
 
+/**
+ * Can the app actually draw this route from what is already in the caches?
+ *
+ * This is the question the shell cannot answer for itself. Serving the precached shell for
+ * `/n/{id}` boots the router at that URL, and the router renders the permalink screen whether or
+ * not the narrative behind it was ever fetched: offline, an unvisited id paints a load failure
+ * instead of the offline page. So the worker asks the content cache first, and the only route
+ * whose answer is not "yes" is the one that reads a per-id artifact.
+ */
+async function servable(url: URL): Promise<boolean> {
+  const permalink = /^\/n\/([^/]+)\/?$/.exec(url.pathname);
+  if (permalink === null) return true;
+  const cache = await caches.open(CONTENT);
+  return (await cache.match(`/content/narratives/${permalink[1] ?? ''}.json`)) !== undefined;
+}
+
 /** Rule 3: a navigation the network cannot serve falls back to the cached shell, then /offline. */
 async function navigate(request: Request): Promise<Response> {
   try {
     return await fetch(request);
   } catch {
+    const url = new URL(request.url);
+    // A redirect rather than the /offline document: the SPA renders from location, so handing
+    // the shell back under the requested URL would render that route, not this one. The redirect
+    // moves the URL, and the next navigation is served the shell and renders /offline properly.
+    if (url.pathname !== OFFLINE_URL && !(await servable(url))) return Response.redirect(OFFLINE_URL, 302);
     const cache = await caches.open(SHELL);
     // The precached shell first: it boots the router, which renders the requested route with
     // whatever is already in the content cache. /offline is the floor under that.
@@ -120,5 +154,7 @@ self.addEventListener('fetch', (event) => {
   }
   if (url.pathname.startsWith('/content/') && url.pathname.endsWith('.json')) {
     event.respondWith(staleWhileRevalidate(request));
+    return;
   }
+  event.respondWith(cacheFirst(request));
 });

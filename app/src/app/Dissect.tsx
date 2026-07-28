@@ -20,6 +20,7 @@ import { useEffect, useMemo } from 'react';
 import type { Narrative, Source, UrlIndex } from '../../../contracts/types';
 import { useT, type Key } from '../i18n';
 import { loadJson, PATHS, peek, useJson, useUrlIndex } from '../content';
+import { trapRef } from '../trap';
 import { makeCtx } from '../renderers/ctx';
 import { CountChips, headlineOf } from '../renderers/Card';
 import { resolveUrl, roleUrl } from './resolve';
@@ -429,7 +430,14 @@ export function ShareSim({ nav }: { nav: Nav }) {
   return (
     <>
       <div className="m-scrim" onClick={close} />
-      <div className="m-sheet" data-sheet="share-sim" role="dialog" aria-label={t('share.sim.foot')}>
+      <div
+        className="m-sheet"
+        data-sheet="share-sim"
+        role="dialog"
+        aria-modal="true"
+        aria-label={t('share.sim.foot')}
+        ref={trapRef}
+      >
         <div className="m-grab" />
         <div className="m-ss-link">
           <span className="m-ss-og" aria-hidden="true">
@@ -498,7 +506,14 @@ export function RateSheet({ nav }: { nav: Nav }) {
   return (
     <>
       <div className="m-scrim" onClick={close} />
-      <div className="m-sheet" data-sheet="rate-limit" role="dialog" aria-label={t('rate.title')}>
+      <div
+        className="m-sheet"
+        data-sheet="rate-limit"
+        role="dialog"
+        aria-modal="true"
+        aria-label={t('rate.title')}
+        ref={trapRef}
+      >
         <div className="m-grab" />
         <div className="m-sheet-h">{t('rate.title')}</div>
         <div className="m-sheet-p">{t('rate.body')}</div>

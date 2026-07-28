@@ -18,6 +18,7 @@
 import { useRef, type ReactNode } from 'react';
 import type { ClaimMapPanel, Narrative } from '../../../contracts/types';
 import { useT } from '../i18n';
+import { trapRef } from '../trap';
 import { chipsFor, headlineOf } from '../renderers/Card';
 import { t as copy, type RenderCtx } from '../renderers/ctx';
 import { statusLabel } from '../renderers/EvidenceSheet';
@@ -159,7 +160,9 @@ export default function Nuance({
       className="m-nf-wrap"
       data-sheet={`nuance-${template}`}
       role="dialog"
+      aria-modal="true"
       aria-label={t('action.nuance')}
+      ref={trapRef}
       onClick={() => {
         nav.patch({ sheet: null });
       }}

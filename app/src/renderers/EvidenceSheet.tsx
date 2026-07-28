@@ -11,6 +11,9 @@
  */
 import { useCallback, useEffect, useState, type KeyboardEvent, type MouseEvent, type ReactNode } from 'react';
 import type { Source, Value } from '../../../contracts/types';
+// The trap is a leaf DOM utility with no app imports of its own, so the renderer layer can take
+// it without taking the shell: the sheet is the one renderer that owns an overlay.
+import { trapRef } from '../trap';
 import { t, type ElStatus, type RenderCtx } from './ctx';
 import { STATUS_LABEL, UI } from './copy';
 import ValueText from './ValueText';
@@ -110,16 +113,15 @@ export function EvidenceSheet({
   return (
     <>
       <div className="m-scrim" onClick={onClose} />
-      {/* ponytail: no focus trap yet, and therefore no aria-modal="true" either. The attribute
-          tells assistive technology that everything outside this element is inert, which is a
-          promise only a trap can keep; asserting it while Tab still walks out into the page is
-          worse than staying quiet. The sheet closes on scrim tap and on Escape, which is the
-          floor. Gate 3's shell owns the trap and focus restore, and puts aria-modal="true" back
-          in the same change: trap and attribute land together or neither lands. */}
+      {/* The Gate 2 ruling, settled at Gate 3: `aria-modal="true"` promises everything outside
+          is inert, and app/src/trap.ts is the trap that keeps the promise. Trap and attribute
+          landed together, as the ruling required. */}
       <div
         className="m-sheet"
         data-testid="evidence-sheet"
         role="dialog"
+        aria-modal="true"
+        ref={trapRef}
         aria-label={title ?? label}
         onClick={(event) => {
           event.stopPropagation();

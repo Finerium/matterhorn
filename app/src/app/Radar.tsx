@@ -19,6 +19,7 @@ import { useEffect, useMemo } from 'react';
 import type { Corrections, Lang } from '../../../contracts/types';
 import { useT } from '../i18n';
 import { useCorrections, useMethodology, useRadar, type Pack } from '../content';
+import { trapRef } from '../trap';
 import { makeCtx } from '../renderers/ctx';
 import Card from '../renderers/Card';
 import { LS, writeStore, type AppState } from './state';
@@ -137,9 +138,9 @@ export default function Radar({ state, nav }: { state: AppState; nav: Nav }) {
           is an advert. */}
       {!state.installHint ? null : (
         <div className="m-install" data-sr="1" data-testid="install-hint">
+          {/* Appendix C freezes this hint as one line in both locales, so it renders as one. */}
           <div className="m-install-main">
             <div className="m-install-title">{t('install.title')}</div>
-            <div className="m-install-body">{t('install.body')}</div>
           </div>
           <button
             type="button"
@@ -236,7 +237,14 @@ export default function Radar({ state, nav }: { state: AppState; nav: Nav }) {
               nav.patch({ sheet: null });
             }}
           />
-          <div className="m-sheet" data-sheet="region" role="dialog" aria-label={t('radar.region')}>
+          <div
+            className="m-sheet"
+            data-sheet="region"
+            role="dialog"
+            aria-modal="true"
+            aria-label={t('radar.region')}
+            ref={trapRef}
+          >
             <div className="m-grab" />
             <div className="m-sheet-h">{t('radar.region')}</div>
             <div className="m-sheet-p">{t('radar.region.body')}</div>

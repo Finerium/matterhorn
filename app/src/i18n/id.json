@@ -5,6 +5,8 @@
   "common.loading": "Memuat",
   "common.failed": "Tidak termuat: {detail}",
   "common.soon": "Belum ada pada versi ini.",
+  "boundary.title": "Bagian ini tidak dapat digambar.",
+  "boundary.body": "Bagian lain halaman ini tidak terpengaruh. Muat ulang untuk mencobanya lagi.",
 
   "hello.greet.0": "Hello",
   "hello.greet.1": "Halo",
@@ -111,9 +113,9 @@
   "dissect.recent.meta": "Tersimpan · dihitung {at} · {sources} sumber",
   "dissect.foot": "Cache lebih dulu. Pertanyaan satu pembaca menjadi jawaban semua orang.",
 
-  "rate.title": "Dua diseksi baru sehari",
-  "rate.body": "Diseksi baru menjalankan seluruh armada agen atas sebuah tautan, dan armadanya kecil. Diseksi tersimpan tetap tanpa batas, dan tautan yang belum bisa dijalankan hari ini masuk antrean siklus berikutnya.",
-  "rate.reset": "Hitungannya disetel ulang tengah malam · teks jujur, bukan kegagalan diam-diam",
+  "rate.title": "Batas diseksi baru harian tercapai",
+  "rate.body": "Diseksi baru (belum tersimpan) dibatasi 2 per hari pada skala demo: analisis model frontier adalah satu-satunya langkah yang mahal. Diseksi tersimpan tetap tanpa batas, dan pertanyaan satu pengguna menjadi jawaban semua orang.",
+  "rate.reset": "Disetel ulang 00:00 WIB",
   "rate.cta": "Mengerti",
 
   "prog.honest": "Diseksi baru biasanya memakan waktu sampai 3 menit. Demo ini memampatkan penantiannya.",
@@ -194,8 +196,7 @@
   "settings.about.why": "Dua mode pada satu tulang punggung: Radar mencegat narasi yang sedang naik, Diseksi menjawab pembagian dua ketukan. Hanya hitungan deskriptif, dan tidak ada vonis di mana pun.",
   "settings.replay": "Ulangi orientasi",
 
-  "install.title": "Tambahkan Matterhorn ke layar utama Anda",
-  "install.body": "Setelah dipasang, ia terbuka langsung dari lembar berbagi aplikasi mana pun, dan semua yang sudah dibaca tetap bisa dibaca luring.",
+  "install.title": "Pasang Matterhorn ke layar utama dan ia langsung muncul di share sheet.",
   "install.dismiss": "Tutup petunjuk pemasangan",
 
   "notif.settings.digest": "Ringkasan harian",

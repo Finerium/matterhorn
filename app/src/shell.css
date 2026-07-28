@@ -305,16 +305,8 @@
 .m-tab[data-on='1'] { color: var(--acc); }
 .m-tab-label { font-size: 10.5px; font-weight: 600; }
 
-/* The zip's scroll-driven reveal, restored now that a scroll container exists (Gate 2 note).
-   Guarded by @supports, so browsers without view() timelines keep the stagger fallback. */
-@supports (animation-timeline: view()) {
-  .mth .m-tabpane [data-sr='1'] {
-    animation: mrise auto cubic-bezier(0.22, 1, 0.36, 1) both;
-    animation-delay: 0s;
-    animation-timeline: view();
-    animation-range: entry 0% entry 78%;
-  }
-}
+/* The scroll-driven reveal lives in renderers.css beside the stagger it falls back to, ported
+   from the zip's own block rather than approximated with mrise. */
 
 /* --- overlays: the simulated iOS dialog, the honest-auth sheet, the toast --------------- */
 
@@ -327,6 +319,12 @@
   z-index: 70;
   padding: 0 40px;
 }
+/* Same rule as .m-sheet in renderers.css: the trap focuses the dialog container, and the
+   container is a destination rather than a control. */
+.m-ios:focus,
+.m-ios:focus-visible,
+.m-nf-wrap:focus,
+.m-nf-wrap:focus-visible { outline: none; }
 .m-ios {
   width: 272px;
   border-radius: 16px;
@@ -1215,8 +1213,7 @@
   background: var(--surface);
 }
 .m-install-main { flex: 1; }
-.m-install-title { font-size: 13px; font-weight: 650; }
-.m-install-body { font-size: 11.5px; color: var(--sub); line-height: 1.55; margin-top: 4px; text-wrap: pretty; }
+.m-install-title { font-size: 13px; font-weight: 650; line-height: 1.5; text-wrap: pretty; }
 .m-install-x {
   background: none;
   border: none;
@@ -1269,3 +1266,7 @@
   cursor: pointer;
   margin-top: 12px;
 }
+
+/* AC-APP-23: the boundary fallback, on a page and inside the autopsy panel stack alike. The
+   frame is the renderer panel's; this is only the gutter a page-level fallback needs. */
+.m-boundary { padding: 16px; }

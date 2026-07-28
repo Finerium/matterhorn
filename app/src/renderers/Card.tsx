@@ -23,7 +23,7 @@
 import type { HTMLAttributes, KeyboardEvent, MouseEvent, ReactNode } from 'react';
 import type { DerivedCounts, DuelingPanel, Narrative } from '../../../contracts/types';
 import { CardContractError, resolveAll, t, type RenderCtx } from './ctx';
-import { COUNT_CHIPS, UI } from './copy';
+import { COUNT_CHIPS, dateLabel, UI } from './copy';
 
 /** What a surface can wire the card's own affordances to. */
 export type CardTap = 'open' | 'tag' | 'chip' | 'original' | 'dissect' | 'outbound';
@@ -130,11 +130,12 @@ export default function Card({ narrative, variant, ctx, onTap, meta }: CardProps
       },
     };
   };
-  const metaText = `${narrative.outlet} · ${narrative.published_date}`;
+  const metaText = `${narrative.outlet} · ${dateLabel(narrative.published_date, ctx.lang)}`;
   const translated = narrative.original.lang !== ctx.lang;
   const review = narrative.status === 'under_review';
-  // The zip's imgLabel: the placeholder names the outlet whose og:image belongs in the slot.
-  const og = `${t(ctx, UI.ogPlaceholder)} · ${narrative.outlet}`;
+  // The zip's imgLabel, hero only: the placeholder names the outlet whose og:image belongs in
+  // the slot. The compact card's 72px square carries the bare label, the way the zip draws it.
+  const og = variant === 'hero' ? `${t(ctx, UI.ogPlaceholder)} · ${narrative.outlet}` : t(ctx, UI.ogPlaceholder);
   // The zip's famLine. Section 6.4 calls the zip's family `note` the `skeleton`; same string.
   const famLine = `${narrative.family.skeleton}: ${narrative.family.members.map((m) => m.outlet).join(' · ')}`;
   // CF-1, as resolved in docs/understanding.md: the zip's compact teaser was fed by an authored

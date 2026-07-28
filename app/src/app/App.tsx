@@ -14,6 +14,7 @@
 import { useCallback, useEffect, useState, type ReactNode } from 'react';
 import { LangContext, useT, type Key } from '../i18n';
 import { PACKS, prefetchRadar } from '../content';
+import { trapRef } from '../trap';
 import Archive from './Archive';
 import Autopsy from './Autopsy';
 import Dissect, { ChatSim, Progress, RateSheet, ShareSim } from './Dissect';
@@ -274,7 +275,7 @@ function Body({ state, nav, setSheet }: { state: AppState; nav: Nav; setSheet: (
 
       {state.sheet === 'ios-notif' ? (
         <div className="m-ios-wrap" data-sheet="ios-notif">
-          <div className="m-ios" role="dialog" aria-label={t('sheet.ios.title')}>
+          <div className="m-ios" role="dialog" aria-modal="true" aria-label={t('sheet.ios.title')} ref={trapRef}>
             <div className="m-ios-body">
               <div className="m-ios-title">{t('sheet.ios.title')}</div>
               <div className="m-ios-sub">{t('sheet.ios.body')}</div>
@@ -314,10 +315,15 @@ function Body({ state, nav, setSheet }: { state: AppState; nav: Nav; setSheet: (
               setSheet(null);
             }}
           />
-          {/* ponytail: role="dialog" without aria-modal, per the Gate 2 ruling. The attribute
-              promises everything outside is inert, and only a focus trap can keep that promise;
-              the trap and the attribute land together in the Wave 2 glue pass. */}
-          <div className="m-sheet" data-sheet="honest-auth" role="dialog" aria-label={t('sheet.auth.title')}>
+          {/* The Gate 2 ruling, settled: the trap (app/src/trap.ts) and aria-modal land together. */}
+          <div
+            className="m-sheet"
+            data-sheet="honest-auth"
+            role="dialog"
+            aria-modal="true"
+            aria-label={t('sheet.auth.title')}
+            ref={trapRef}
+          >
             <div className="m-grab" />
             <div className="m-sheet-h">{t('sheet.auth.title')}</div>
             <div className="m-sheet-p">{t('sheet.auth.body')}</div>

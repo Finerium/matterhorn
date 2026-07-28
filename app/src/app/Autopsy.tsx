@@ -33,7 +33,9 @@ import type {
 import TECHNIQUE_TAGS from '../../../contracts/technique-tags.json';
 import { useT, type Key } from '../i18n';
 import { PATHS, useJson } from '../content';
+import { trapRef } from '../trap';
 import { makeCtx, t as copy, type RenderCtx } from '../renderers/ctx';
+import { dateLabel } from '../renderers/copy';
 import Card from '../renderers/Card';
 import ClaimMap from '../renderers/ClaimMap';
 import Dueling from '../renderers/Dueling';
@@ -45,6 +47,7 @@ import MoneyFlow from '../renderers/MoneyFlow';
 import Narration from '../renderers/Narration';
 import Options from '../renderers/Options';
 import ScaleCheck from '../renderers/ScaleCheck';
+import Boundary from './Boundary';
 import Nuance from './Nuance';
 import { LS, readStore, writeStore, type AppState } from './state';
 import type { Nav } from './Onboarding';
@@ -60,7 +63,13 @@ const MOVE_LABEL: Record<SparringQuestion['move'], Key> = {
   incidence: 'spar.move.incidence',
 };
 
-/** One panel, by type. Family reads the whole narrative; the other seven read their panel. */
+/**
+ * One panel, by type. Family reads the whole narrative; the other seven read their panel.
+ *
+ * AC-APP-23: every panel is wrapped here rather than at the call site, because the refusals are
+ * a property of the renderers (an unresolvable source_id, a card contract miss), and a panel
+ * that refuses must cost its own frame and nothing else. One wrap, eight types.
+ */
 function PanelView({
   panel,
   narrative,
@@ -74,6 +83,16 @@ function PanelView({
   stopped: boolean;
   onToggle: () => void;
 }): ReactNode {
+  return <Boundary>{panelBody(panel, narrative, ctx, stopped, onToggle)}</Boundary>;
+}
+
+function panelBody(
+  panel: Panel,
+  narrative: Narrative,
+  ctx: RenderCtx,
+  stopped: boolean,
+  onToggle: () => void,
+): ReactNode {
   switch (panel.type) {
     case 'claim_map':
       return <ClaimMap panel={panel} ctx={ctx} />;
@@ -111,7 +130,7 @@ function Sheet({
   return (
     <>
       <div className="m-scrim" onClick={onClose} />
-      <div className="m-sheet" data-sheet={name} role="dialog" aria-label={label}>
+      <div className="m-sheet" data-sheet={name} role="dialog" aria-modal="true" aria-label={label} ref={trapRef}>
         <div className="m-grab" />
         {children}
       </div>
@@ -484,7 +503,11 @@ export default function Autopsy({ state, nav }: { state: AppState; nav: Nav }) {
                 }}
               />
             ))}
-            {n.panels.some((panel) => panel.type === 'echo') ? null : <Echo panel={n.echo} ctx={ctx} />}
+            {n.panels.some((panel) => panel.type === 'echo') ? null : (
+              <Boundary>
+                <Echo panel={n.echo} ctx={ctx} />
+              </Boundary>
+            )}
 
             <button
               type="button"
@@ -545,7 +568,7 @@ export default function Autopsy({ state, nav }: { state: AppState; nav: Nav }) {
           </div>
           <div className="m-orig-text">{n.original.text}</div>
           <div className="m-sheet-meta">
-            {n.outlet} · {n.published_date} · {n.url}
+            {n.outlet} · {dateLabel(n.published_date, ctx.lang)} · {n.url}
           </div>
           <div className="m-sheet-foot">{t('orig.foot')}</div>
         </Sheet>

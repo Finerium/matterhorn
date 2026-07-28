@@ -5,6 +5,8 @@
   "common.loading": "Loading",
   "common.failed": "Not loaded: {detail}",
   "common.soon": "Not in this build yet.",
+  "boundary.title": "This part could not be drawn.",
+  "boundary.body": "Nothing else on the page is affected. Reload to try it again.",
 
   "hello.greet.0": "Hello",
   "hello.greet.1": "Halo",
@@ -111,9 +113,9 @@
   "dissect.recent.meta": "Cached · computed {at} · {sources} sources",
   "dissect.foot": "Cache-first. One reader's question becomes everyone's answer.",
 
-  "rate.title": "Two fresh dissections a day",
-  "rate.body": "A fresh dissection runs the whole agent fleet across a link, and the fleet is small. Cached dissections stay unlimited, and a link that cannot run today joins the queue for the next cycle.",
-  "rate.reset": "The count resets at midnight · honest copy, never a silent failure",
+  "rate.title": "Daily fresh-dissection limit reached",
+  "rate.body": "Fresh (uncached) dissections are limited to 2 per day at demo scale: frontier-model analysis is the only expensive step. Cached dissections stay unlimited, and one user's question becomes everyone's answer.",
+  "rate.reset": "Resets 00:00 WIB",
   "rate.cta": "Understood",
 
   "prog.honest": "Fresh dissections usually take up to 3 minutes. This demo compresses the wait.",
@@ -194,8 +196,7 @@
   "settings.about.why": "Two modes on one spine: Radar intercepts a rising narrative, Dissect answers a two-tap share. Descriptive counts only, and no verdicts anywhere.",
   "settings.replay": "Replay onboarding",
 
-  "install.title": "Add Matterhorn to your home screen",
-  "install.body": "Installed, it opens straight from the share sheet of any app, and everything already read stays readable offline.",
+  "install.title": "Install Matterhorn to your home screen and it appears straight in your share sheet.",
   "install.dismiss": "Dismiss the install hint",
 
   "notif.settings.digest": "Daily digest",

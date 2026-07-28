@@ -18,6 +18,7 @@ import { useT, type Key } from '../i18n';
 import { useArchive, useCaseLibrary, useConstellation, useJson, PATHS } from '../content';
 import { makeCtx } from '../renderers/ctx';
 import { CountChips, headlineOf } from '../renderers/Card';
+import { dateLabel } from '../renderers/copy';
 import type { AppState, ArchiveFilter } from './state';
 import type { Nav } from './Onboarding';
 
@@ -237,7 +238,7 @@ export default function Archive({ state, nav }: { state: AppState; nav: Nav }) {
             <CountChips counts={row.narrative.counts} ctx={ctx} />
             <span className="m-arow-meta">
               <span className="m-arow-sub">
-                {row.narrative.outlet} · {row.narrative.published_date} ·{' '}
+                {row.narrative.outlet} · {dateLabel(row.narrative.published_date, state.lang)} ·{' '}
                 {t(row.narrative.pack === 'id' ? 'pack.id' : 'pack.en')} · /n/{row.narrative.id}
               </span>
               <span className="m-arow-lean">{t(LEAN_LABEL[row.narrative.lean])}</span>

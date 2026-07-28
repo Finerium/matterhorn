@@ -22,6 +22,7 @@ import { LangContext, useT } from './i18n';
 import { useUrlIndex } from './content';
 import { LS, readStore, type AppState } from './app/state';
 import App from './app/App';
+import Boundary from './app/Boundary';
 import MethodologyBody from './app/Methodology';
 import { resolveUrl, shareCandidate } from './app/resolve';
 
@@ -161,11 +162,17 @@ function Receipt({ decision, title, text, url }: { decision: string; title: stri
   );
 }
 
+/**
+ * AC-APP-17. The SW answers an uncached navigation by redirecting here, so this is the page a
+ * reader lands on offline; the testid is what the driver reads to prove it landed.
+ */
 function Offline() {
   const t = useT();
   return (
     <Page title={t('route.offline.title')}>
-      <div className="m-page-body">{t('route.offline.body')}</div>
+      <div className="m-page-body" data-testid="route-offline">
+        {t('route.offline.body')}
+      </div>
     </Page>
   );
 }
@@ -187,15 +194,18 @@ function NotFound() {
 export default function AppRoutes() {
   return (
     <LangContext.Provider value={storedLang()}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/app" element={<App />} />
-        <Route path="/n/:id" element={<Permalink />} />
-        <Route path="/methodology" element={<MethodologyPage />} />
-        <Route path="/share" element={<Share />} />
-        <Route path="/offline" element={<Offline />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      {/* AC-APP-23. Outside the provider there would be no bundle to speak the fallback in. */}
+      <Boundary>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/app" element={<App />} />
+          <Route path="/n/:id" element={<Permalink />} />
+          <Route path="/methodology" element={<MethodologyPage />} />
+          <Route path="/share" element={<Share />} />
+          <Route path="/offline" element={<Offline />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Boundary>
     </LangContext.Provider>
   );
 }

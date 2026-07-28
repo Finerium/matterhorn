@@ -1,8 +1,11 @@
+import { existsSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { defineConfig } from 'vite';
+import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
+import type { Narrative } from '../contracts/types';
+import { permalinkShell } from '../scripts/build-permalinks';
 
 // Root is this directory; `pnpm dev` / `pnpm build` pass it in.
 //
@@ -42,12 +45,49 @@ const MANIFEST = {
   },
 };
 
+/**
+ * `/n/{id}` in dev, answered with the same document the build emits (AC-APP-18).
+ *
+ * The build writes `app/dist/n/{id}/index.html` with `scripts/build-permalinks.ts`; serving has
+ * no build to write into, so the shell is composed per request from the same function, over the
+ * ACTIVE dev content root, which is SEED_ROOT. Without this the dev server answers `/n/mbg-stop`
+ * with the bare SPA fallback and the og tags exist only in a build nobody serves during the
+ * suite. Emitting on boot instead would put generated files in the source tree; composing per
+ * request keeps the tree clean and picks up a fixture edit without a restart.
+ */
+function permalinkShells(contentRoot: string, appRoot: string): Plugin {
+  return {
+    name: 'mth-permalink-shells',
+    apply: 'serve',
+    configureServer(server) {
+      server.middlewares.use((request, response, next) => {
+        const path = (request.url ?? '').split('?')[0] ?? '';
+        const id = /^\/n\/([A-Za-z0-9-]+)\/?$/.exec(path)?.[1];
+        const artifact = id === undefined ? '' : join(contentRoot, 'narratives', `${id}.json`);
+        if (artifact === '' || !existsSync(artifact)) {
+          next();
+          return;
+        }
+        const narrative = JSON.parse(readFileSync(artifact, 'utf8')) as Narrative;
+        server
+          .transformIndexHtml(request.url ?? path, readFileSync(join(appRoot, 'index.html'), 'utf8'))
+          .then((html) => {
+            response.setHeader('content-type', 'text/html');
+            response.end(permalinkShell(html, narrative));
+          })
+          .catch(next);
+      });
+    },
+  };
+}
+
 export default defineConfig(({ command, mode }) => {
   const serving = command === 'serve';
   const harness = mode === 'harness';
   return {
     plugins: [
       react(),
+      ...(serving ? [permalinkShells(SEED_ROOT, APP_ROOT)] : []),
       // Never in dev and never in the harness: the e2e suite must not have a worker between it
       // and the server. The plugin is simply not present when serving.
       ...(serving

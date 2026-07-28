@@ -10,7 +10,29 @@
  * Blueprint 6.9 applies to this file as much as to content: no verdict words, no em dash, no
  * emoji, no future-tense harm.
  */
+import type { Lang } from '../../../contracts/types';
 import type { Copy } from './ctx';
+
+/** The one part of a date that is language. Index 0 is January. */
+const MONTHS: Record<Lang, readonly string[]> = {
+  en: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  id: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'],
+};
+
+/**
+ * An artifact's `published_date` as the zip writes it: `2026-06-14` becomes `14 Jun 2026`.
+ *
+ * ponytail: a lookup table rather than `Intl.DateTimeFormat`. Intl agrees on this format today,
+ * but its output is an ICU version's opinion (abbreviation length, the odd trailing period, the
+ * occasional narrow no-break space), and this string is inside a committed screenshot baseline.
+ * Anything that is not an ISO date passes through unchanged: a date that cannot be parsed is
+ * still shown, never dropped.
+ */
+export function dateLabel(iso: string, lang: Lang): string {
+  const parts = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  const month = parts === null ? undefined : MONTHS[lang][Number(parts[2]) - 1];
+  return parts === null || month === undefined ? iso : `${String(Number(parts[3]))} ${month} ${parts[1] ?? ''}`;
+}
 
 export const UI = {
   source: { en: 'Source: ', id: 'Sumber: ' },
