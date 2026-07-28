@@ -6,18 +6,24 @@
  *   /            plain placeholder that links `/app`. The landing is Gate 4.
  *   /app         the shell. All internal navigation is client state, per 6.7.
  *   /n/:id       permalink: the shell, mounted straight onto the autopsy for that narrative.
- *   /methodology the published policy 6.5 text, read from methodology.json.
- *   /share       the GET share target: parses title/text/url and states the decision it takes.
+ *   /methodology the published methodology, the same body the in-app screen draws.
+ *   /share       the GET share target: resolves the link and opens the shell on the screen that
+ *                resolution produced, with the decision pinned over it.
  *   /offline     the SW fallback for an uncached navigation.
  *   *            404.
+ *
+ * Three of these mount `App`, which is the point: `/n/:id` and `/share` are entry points into
+ * the product, not thinner copies of it, and `/methodology` shares its body with the screen.
  */
-import { type ReactNode } from 'react';
+import { useState, type ReactNode } from 'react';
 import { Link, Route, Routes, useParams, useSearchParams } from 'react-router';
-import type { Lang, UrlIndex } from '../../contracts/types';
+import type { Lang } from '../../contracts/types';
 import { LangContext, useT } from './i18n';
-import { useMethodology, useUrlIndex } from './content';
-import { LS, readStore } from './app/state';
+import { useUrlIndex } from './content';
+import { LS, readStore, type AppState } from './app/state';
 import App from './app/App';
+import MethodologyBody from './app/Methodology';
+import { resolveUrl, shareCandidate } from './app/resolve';
 
 /** Routes outside `/app` have no app state, so the language is read straight from storage. */
 const storedLang = (): Lang => (readStore(LS.lang) === 'id' ? 'id' : 'en');
@@ -64,76 +70,94 @@ function Permalink() {
 
 function MethodologyPage() {
   const t = useT();
-  const { data, error } = useMethodology();
   return (
     <Page title={t('screen.methodology')}>
-      <Status loading={data === null} error={error} />
-      {data === null ? null : (
-        <div className="m-page-body" data-testid="policy-65">
-          {data.policy_65[storedLang()]}
-        </div>
-      )}
+      <MethodologyBody lang={storedLang()} />
     </Page>
   );
 }
 
 /**
- * The resolution the share target takes, in the order 6.11 check 8 fixes: exact, then prefix,
- * then regex. A pattern that does not compile is skipped rather than thrown: the validator
- * refuses to publish one, and a share arriving at a broken index still has to answer.
+ * The share target, blueprint 6.7. It resolves the link with `resolve.ts`, the same module the
+ * Dissect paste box uses, and then it opens the app on the screen that resolution produces:
+ * the cached autopsy, the staged progress for the one link with no artifact yet, or the queue
+ * state. Printing a decision and stopping there would be a fifth surface nobody asked for.
+ *
+ * The receipt stays pinned over whichever screen it produced, because a share is the one entry
+ * point where the reader did not choose the destination and is owed the reason for it. The
+ * params render as text, which is the whole of the XSS story: React escapes them, and the test
+ * that asserts `querySelectorAll('script, img').length === 0` is asserting exactly that.
  */
-function resolve(index: UrlIndex, url: string): { id: string; match: string } | null {
-  for (const kind of ['exact', 'prefix', 'regex'] as const) {
-    for (const entry of index.entries) {
-      if (entry.match !== kind) continue;
-      let hit = false;
-      if (kind === 'exact') hit = entry.pattern === url;
-      else if (kind === 'prefix') hit = url.startsWith(entry.pattern);
-      else {
-        try {
-          hit = new RegExp(entry.pattern).test(url);
-        } catch {
-          hit = false;
-        }
-      }
-      if (hit) return { id: entry.narrative_id, match: kind };
-    }
-  }
-  return null;
-}
-
 function Share() {
   const t = useT();
   const [params] = useSearchParams();
   const { data, error } = useUrlIndex();
-  // Android share sheets put the link in `text` as often as in `url`; both are read.
   const title = params.get('title') ?? '';
   const text = params.get('text') ?? '';
   const url = params.get('url') ?? '';
-  const candidate = url === '' ? text.trim() : url;
-  const hit = data === null || candidate === '' ? null : resolve(data, candidate);
+  const candidate = shareCandidate(url, text);
+  const hit = data === null || candidate === '' ? null : resolveUrl(data, candidate);
+
+  if (data === null) {
+    return (
+      <Page title={t('route.share.title')}>
+        <Status loading={error === null} error={error} />
+      </Page>
+    );
+  }
+
+  const start: Partial<AppState> =
+    hit === null
+      ? { screen: 'queue' }
+      : hit.role === 'fresh_demo'
+        ? { screen: 'progress', progUrl: candidate, progTo: hit.narrative_id, progStage: 0 }
+        : { screen: 'autopsy', narrative: hit.narrative_id, spar: 'gate' };
 
   return (
-    <Page title={t('route.share.title')}>
-      <div className="m-page-meta" data-testid="share-params">
-        title: {title}
-        <br />
-        text: {text}
-        <br />
-        url: {url}
-      </div>
-      <Status loading={data === null} error={error} />
-      {data === null ? null : (
-        <div className="m-page-body" data-testid="share-decision">
-          {hit === null ? t('share.miss') : t('share.resolved', { id: hit.id, match: hit.match })}
+    <App
+      start={start}
+      banner={
+        <Receipt
+          decision={hit === null ? t('share.miss') : t('share.resolved', { id: hit.narrative_id, match: hit.matched })}
+          title={title}
+          text={text}
+          url={url}
+        />
+      }
+    />
+  );
+}
+
+/** The receipt, which closes: it explains a destination the reader did not pick, then gets out. */
+function Receipt({ decision, title, text, url }: { decision: string; title: string; text: string; url: string }) {
+  const t = useT();
+  const [open, setOpen] = useState(true);
+  if (!open) return null;
+  return (
+    <div className="m-receipt">
+      <div className="m-receipt-main">
+        <div className="m-receipt-decision" data-testid="share-decision">
+          {decision}
         </div>
-      )}
-      {hit === null ? null : (
-        <Link className="m-page-link" to={`/n/${hit.id}`}>
-          {hit.id}
-        </Link>
-      )}
-    </Page>
+        <div className="m-receipt-params" data-testid="share-params">
+          title: {title}
+          <br />
+          text: {text}
+          <br />
+          url: {url}
+        </div>
+      </div>
+      <button
+        type="button"
+        className="m-install-x"
+        aria-label={t('share.close')}
+        onClick={() => {
+          setOpen(false);
+        }}
+      >
+        ×
+      </button>
+    </div>
   );
 }
 
@@ -150,7 +174,9 @@ function NotFound() {
   const t = useT();
   return (
     <Page title={t('route.notfound.title')}>
-      <div className="m-page-body">{t('route.notfound.body')}</div>
+      <div className="m-page-body" data-testid="route-notfound">
+        {t('route.notfound.body')}
+      </div>
       <Link className="m-page-link" to="/app">
         {t('route.home.link')}
       </Link>

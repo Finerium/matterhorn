@@ -67,6 +67,25 @@ export function chipsFor(counts: DerivedCounts, ctx: RenderCtx): Array<{ st: str
   });
 }
 
+/**
+ * The counts row on its own, for a surface that lists headlines in a shape that is not a card
+ * (the Archive list, the Dissect recents). C2 binds the headline to its counts wherever the
+ * headline appears, so those surfaces take the row from here rather than pairing a `headlineOf`
+ * call with markup of their own and calling that the contract.
+ */
+export function CountChips({ counts, ctx }: { counts: DerivedCounts; ctx: RenderCtx }) {
+  return (
+    <span className="m-card-chips m-card-chips-c">
+      {chipsFor(counts, ctx).map((chip) => (
+        <span key={chip.label} className="m-card-chip" data-st={chip.st}>
+          <span className="m-dot" />
+          {chip.label}
+        </span>
+      ))}
+    </span>
+  );
+}
+
 export default function Card({ narrative, variant, ctx, onTap, meta }: CardProps) {
   // Narrative-scoped orphan refusal: the card draws no Value of its own, and a narrative
   // carrying a reference that does not resolve is not a renderable narrative.

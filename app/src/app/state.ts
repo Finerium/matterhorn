@@ -41,7 +41,12 @@ export type SheetName =
   | 'flag-form'
   | 'flag-received'
   | 'nuance-story'
-  | 'nuance-chat';
+  | 'nuance-chat'
+  | 'rate-limit'
+  | 'share-sim';
+
+/** The Archive filter chips. `id` and `en` are packs; `gov` and `opp` are lean. */
+export type ArchiveFilter = 'all' | 'id' | 'en' | 'gov' | 'opp';
 
 /** The Settings demo override, blueprint 3.2 item 9. `auto` uses each narrative's own default. */
 export type Scaffold = 'auto' | 'S3' | 'S2' | 'S1' | 'S0';
@@ -94,6 +99,28 @@ export interface AppState {
   corrections: boolean;
   /** The via-Dissect feed items, which only the fresh-dissect flow lets in. */
   viaDissect: boolean;
+  /** The install-education hint over the feed. Android only, dismissible, remembered. */
+  installHint: boolean;
+
+  // --- dissect ---
+  /** What is in the paste box. */
+  paste: string;
+  /** Narrative ids resolved on this device, most recent first. */
+  recents: string[];
+  /** The link the progress screen is working on. */
+  progUrl: string;
+  /**
+   * Where the progress screen lands when its stages finish. `null` is a progress screen with
+   * nowhere to go, which does not advance: the cancelled state, and what the matrix screenshots.
+   */
+  progTo: string | null;
+  progStage: number;
+
+  // --- archive ---
+  query: string;
+  filter: ArchiveFilter;
+  /** The selected constellation node id, or null. */
+  node: string | null;
 }
 
 /** The `data-screen` value for a state. The only place the main/tab collapse happens. */
@@ -114,6 +141,16 @@ export const LS = {
   flags: 'mth:flags',
   /** How many S2 gates this device has answered. The rotation counter, and nothing else. */
   s2: 'mth:s2',
+  /** Fresh dissections used, as `YYYY-MM-DD:n`. A different day reads as zero. */
+  fresh: 'mth:fresh',
+  /** The notification cap and quiet hours, as JSON. Never leaves the device. */
+  notifcfg: 'mth:notifcfg',
+  /** `1` once the fresh-dissect demo has published its narrative into the shared cache. */
+  via: 'mth:via',
+  /** Narrative ids this device has resolved, most recent first. */
+  recents: 'mth:recents',
+  /** `1` once the install hint has been dismissed. */
+  installed: 'mth:install',
 } as const;
 
 /**
@@ -149,6 +186,62 @@ function readList(key: string, fallback: string[]): string[] {
   }
 }
 
+/**
+ * The demo's fresh-dissection budget, blueprint 3.4.2. Two a day, counted on this device only:
+ * there is no account to count against and no server being protected, so the honest place for
+ * the counter is the same phone the rate-limit sheet is shown on.
+ */
+export const FRESH_CAP = 2;
+
+const today = (): string => new Date().toISOString().slice(0, 10);
+
+/** Fresh dissections run today. A stored count from any other day is not today's. */
+export function freshUsed(): number {
+  const [day, count] = (readStore(LS.fresh) ?? '').split(':');
+  return day === today() ? Math.max(0, Number(count) || 0) : 0;
+}
+
+export function markFresh(): void {
+  writeStore(LS.fresh, `${today()}:${String(freshUsed() + 1)}`);
+}
+
+/** The notification cap and quiet hours. Read on mount, written on every change. */
+export interface NotifConfig {
+  digest: boolean;
+  /** Alerts a day. The blueprint's ceiling is one; the row offers less, never more. */
+  cap: string;
+  quietStart: string;
+  quietEnd: string;
+}
+
+export const NOTIF_DEFAULT: NotifConfig = { digest: true, cap: '1', quietStart: '22:00', quietEnd: '07:00' };
+
+export function readNotifConfig(): NotifConfig {
+  try {
+    const stored: unknown = JSON.parse(readStore(LS.notifcfg) ?? 'null');
+    if (typeof stored !== 'object' || stored === null) return NOTIF_DEFAULT;
+    const partial = stored as Partial<NotifConfig>;
+    return {
+      digest: typeof partial.digest === 'boolean' ? partial.digest : NOTIF_DEFAULT.digest,
+      cap: typeof partial.cap === 'string' ? partial.cap : NOTIF_DEFAULT.cap,
+      quietStart: typeof partial.quietStart === 'string' ? partial.quietStart : NOTIF_DEFAULT.quietStart,
+      quietEnd: typeof partial.quietEnd === 'string' ? partial.quietEnd : NOTIF_DEFAULT.quietEnd,
+    };
+  } catch {
+    return NOTIF_DEFAULT;
+  }
+}
+
+/**
+ * Blueprint 3.2 item 17: the install hint is Android-only. A UA test rather than
+ * `beforeinstallprompt`, because the hint is education about the share target and is worth
+ * showing on an Android browser that has already declined to fire the prompt event.
+ */
+const androidHint = (): boolean => {
+  if (readStore(LS.installed) === '1') return false;
+  return /android/i.test(typeof navigator === 'undefined' ? '' : navigator.userAgent);
+};
+
 export function initialState(): AppState {
   const onboarded = readStore(LS.onboarded) === '1';
   return {
@@ -178,7 +271,18 @@ export function initialState(): AppState {
 
     crisis: false,
     corrections: false,
-    viaDissect: false,
+    viaDissect: readStore(LS.via) === '1',
+    installHint: androidHint(),
+
+    paste: '',
+    recents: readList(LS.recents, []),
+    progUrl: '',
+    progTo: null,
+    progStage: 0,
+
+    query: '',
+    filter: 'all',
+    node: null,
   };
 }
 
@@ -189,11 +293,10 @@ export function initialState(): AppState {
  * returns true; an unlisted name returns false, so a matrix entry for a state the shell cannot
  * reach yet fails loudly instead of screenshotting the wrong screen.
  *
- * The table covers what is built: the shell, the radar and the autopsy. Each remaining surface
- * implementer adds its own rows in the same shape as it lands (`dissect.*`, `archive.*`,
- * `settings.scaffold.*`). Names that are URLs rather than app state (`system.offline`, `system.notfound`,
- * `system.permalink`, `system.share.*`, `land.*`, `research.*`, `desktop.*`) are deliberately
- * absent: the driver navigates to those.
+ * The table covers what is built: the shell, the radar, the autopsy, and the Dissect, Archive,
+ * Settings and system surfaces. Names that are URLs rather than app state (`system.offline`,
+ * `system.notfound`, `system.permalink`, `system.share.*`, `land.*`, `research.*`, `desktop.*`)
+ * are deliberately absent: the driver navigates to those.
  *
  * `dark.` is a prefix rather than a row: `dark.radar` is `radar.default` with the dark theme.
  */
@@ -231,6 +334,35 @@ const autopsy = (narrative: string, extra: Partial<AppState> = {}): Partial<AppS
 /** The sparring card, wherever the gate is in it. */
 const GATE = '.m-spar';
 
+/** The Dissect tab, with the paste box and the recents list in a stated condition. */
+const dissect = (extra: Partial<AppState> = {}): Partial<AppState> => ({
+  screen: 'main',
+  tab: 'dissect',
+  sheet: null,
+  paste: '',
+  recents: [],
+  ...extra,
+});
+
+/** The Archive tab. Query, filter and node selection are stated so a row shoots what it names. */
+const archive = (extra: Partial<AppState> = {}): Partial<AppState> => ({
+  screen: 'main',
+  tab: 'archive',
+  sheet: null,
+  query: '',
+  filter: 'all',
+  node: null,
+  focus: null,
+  ...extra,
+});
+
+const settings = (extra: Partial<AppState> = {}): Partial<AppState> => ({
+  screen: 'main',
+  tab: 'settings',
+  sheet: null,
+  ...extra,
+});
+
 const GOTO: Record<string, Partial<AppState>> = {
   'onb.hello': { screen: 'onb-hello', sheet: null },
   'onb.lang': { screen: 'onb-lang', sheet: null },
@@ -247,11 +379,31 @@ const GOTO: Record<string, Partial<AppState>> = {
   'radar.via-dissect': radar({ viaDissect: true }),
   'radar.pack-en': radar({ pack: 'en' }),
 
-  'dissect.default': { screen: 'main', tab: 'dissect', sheet: null },
-  'dissect.progress': { screen: 'progress', sheet: null },
+  'dissect.default': dissect(),
+  // A progress screen with no destination does not advance, which is what makes this row a
+  // still image rather than a race against its own timers.
+  'dissect.progress': { screen: 'progress', sheet: null, progUrl: '', progTo: null, progStage: 2 },
   'dissect.queue': { screen: 'queue', sheet: null },
-  'archive.default': { screen: 'main', tab: 'archive', sheet: null },
-  'settings.default': { screen: 'main', tab: 'settings', sheet: null },
+  'dissect.rate-sheet': dissect({ sheet: 'rate-limit' }),
+  'dissect.recents': dissect({ recents: ['mbg-stop', 'ppn-panic'] }),
+  'dissect.from-another-app': dissect(),
+
+  'archive.default': archive(),
+  'archive.search': archive({ query: 'MBG' }),
+  'archive.filtered': archive({ filter: 'opp' }),
+  'archive.constellation-teaser': archive({
+    node: 'node-mbg-stop',
+    focus: '[data-testid="constellation-teaser"]',
+  }),
+  'archive.case-library': archive({ focus: '[data-testid="case-library"]' }),
+
+  'settings.default': settings(),
+  'settings.scaffold.auto': settings({ scaffold: 'auto' }),
+  'settings.scaffold.s3': settings({ scaffold: 'S3' }),
+  'settings.scaffold.s2': settings({ scaffold: 'S2' }),
+  'settings.scaffold.s1': settings({ scaffold: 'S1' }),
+  'settings.scaffold.s0': settings({ scaffold: 'S0' }),
+  'settings.dark-toggle': settings({ theme: 'dark' }),
 
   // mbg-stop is scaffold_default S3, mbg-poisoning S1, ppn-panic S0. The sparring rows carry
   // the picks that reach them, so the state is the one the walk would have produced.
@@ -289,6 +441,10 @@ const GOTO: Record<string, Partial<AppState>> = {
   'system.notif-settings': { screen: 'notif-settings', sheet: null },
   'system.notif.lock-preview': { screen: 'lock-preview', sheet: null },
   'system.chat-sim': { screen: 'chat-sim', sheet: null },
+  // Appendix A puts the install hint on the feed, and the share-sheet simulation over the chat
+  // it is reached from. Both are chrome the demo forces on; neither has a screen of its own.
+  'system.install-hint': radar({ installHint: true }),
+  'system.share-sheet-sim': { screen: 'chat-sim', sheet: 'share-sim' },
 };
 
 /** Appendix A writes the dark row as `dark.radar`, not `dark.radar.default`. Same states. */

@@ -18,6 +18,8 @@
  */
 import { useEffect, useState } from 'react';
 import type {
+  CaseLibrary,
+  Constellation,
   Corrections,
   Feed,
   Methodology,
@@ -40,7 +42,12 @@ export const PATHS = {
   urlIndex: 'url_index.json',
   methodology: 'methodology.json',
   corrections: 'corrections.json',
+  caseLibrary: 'case_library.json',
+  constellation: 'constellation.json',
 } as const;
+
+/** Every pack this build carries a feed for. The Archive reads all of them at once. */
+export const PACKS = ['id', 'en'] as const;
 
 const resolved = new Map<string, unknown>();
 const inflight = new Map<string, Promise<unknown>>();
@@ -165,7 +172,22 @@ export function useRadar(pack: Pack): { data: RadarData | null; error: string | 
   return { data, error };
 }
 
+/**
+ * Every narrative in every pack, for the Archive. It rides `useRadar` once per pack rather than
+ * inventing a second loader: the assembly, the cache and the prefetch are already there, and the
+ * Archive wants exactly what the two feeds already carry.
+ */
+export function useArchive(): { data: RadarData[] | null; error: string | null } {
+  const id = useRadar('id');
+  const en = useRadar('en');
+  const error = id.error ?? en.error;
+  if (id.data === null || en.data === null) return { data: null, error };
+  return { data: [id.data, en.data], error };
+}
+
 /** Named readers for the artifacts the route stubs want. Thin on purpose: they are paths. */
 export const useMethodology = () => useJson<Methodology>(PATHS.methodology);
 export const useUrlIndex = () => useJson<UrlIndex>(PATHS.urlIndex);
 export const useCorrections = () => useJson<Corrections>(PATHS.corrections);
+export const useCaseLibrary = () => useJson<CaseLibrary>(PATHS.caseLibrary);
+export const useConstellation = () => useJson<Constellation>(PATHS.constellation);

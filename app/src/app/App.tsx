@@ -13,10 +13,13 @@
  */
 import { useCallback, useEffect, useState, type ReactNode } from 'react';
 import { LangContext, useT, type Key } from '../i18n';
-import { prefetchRadar } from '../content';
+import { PACKS, prefetchRadar } from '../content';
+import Archive from './Archive';
 import Autopsy from './Autopsy';
+import Dissect, { ChatSim, Progress, RateSheet, ShareSim } from './Dissect';
 import { AuthScreen, Hello, LangScreen, NotifScreen, RegionsScreen, type Nav } from './Onboarding';
 import Radar from './Radar';
+import Settings, { MethodologyScreen, NotifSettings } from './Settings';
 import {
   gotoPatch,
   initialState,
@@ -24,7 +27,6 @@ import {
   screenName,
   writeStore,
   type AppState,
-  type Scaffold,
   type Screen,
   type SheetName,
   type Tab,
@@ -74,28 +76,20 @@ const TAB_LABEL: Record<Tab, Key> = {
   settings: 'tab.settings',
 };
 
-/** The three placeholder tab panes: the zip's title and standfirst, plus an honest note. */
-const PANE: Record<'dissect' | 'archive' | 'settings', { title: Key; body: Key }> = {
-  dissect: { title: 'dissect.title', body: 'dissect.body' },
-  archive: { title: 'archive.title', body: 'archive.body' },
-  settings: { title: 'settings.title', body: 'settings.body' },
-};
-
-/** Screens beyond the tabs. Named and reachable now; each body is its surface's work. */
+/** Screens with no surface of their own yet. Named and reachable; the body is a stated gap. */
 const STANDALONE: Partial<Record<Screen, Key>> = {
-  methodology: 'screen.methodology',
-  'notif-settings': 'screen.notif-settings',
   'lock-preview': 'screen.lock-preview',
-  'chat-sim': 'screen.chat-sim',
-  progress: 'screen.progress',
 };
 
 /**
  * `start` is the state a route hands the shell before first paint. `/n/{id}` uses it to open on
  * the autopsy for that narrative, which is how AC-APP-18 hydrates a permalink into the real
  * screen rather than into a second, thinner copy of it.
+ *
+ * `banner` is chrome a route pins over the shell. `/share` uses it to state the resolution it
+ * took on the way in, so the decision is visible on top of the screen that decision produced.
  */
-export default function App({ start }: { start?: Partial<AppState> }) {
+export default function App({ start, banner }: { start?: Partial<AppState>; banner?: ReactNode }) {
   const [state, setState] = useState<AppState>(() => ({ ...initialState(), ...start }));
 
   const patch = useCallback((next: Partial<AppState>) => {
@@ -110,8 +104,9 @@ export default function App({ start }: { start?: Partial<AppState> }) {
     writeStore(LS.regions, JSON.stringify(state.regions));
     writeStore(LS.scaffold, state.scaffold);
     writeStore(LS.flags, JSON.stringify(state.flags));
+    writeStore(LS.recents, JSON.stringify(state.recents));
     document.body.dataset.mth = state.theme;
-  }, [state.lang, state.pack, state.theme, state.regions, state.scaffold, state.flags]);
+  }, [state.lang, state.pack, state.theme, state.regions, state.scaffold, state.flags, state.recents]);
 
   useEffect(() => {
     if (state.screen === 'main') writeStore(LS.onboarded, '1');
@@ -120,7 +115,7 @@ export default function App({ start }: { start?: Partial<AppState> }) {
   // Both feeds are fetched while onboarding is on screen, so the radar paints from cache and a
   // pack switch, from the pill or from the region sheet, is a synchronous cache read (AC-APP-14).
   useEffect(() => {
-    for (const pack of ['id', 'en'] as const) {
+    for (const pack of PACKS) {
       void prefetchRadar(pack).catch(() => {
         /* the radar reports its own failure; a warm-up that misses is not an error */
       });
@@ -180,41 +175,9 @@ export default function App({ start }: { start?: Partial<AppState> }) {
     <LangContext.Provider value={state.lang}>
       <div className="m-app">
         <Body state={state} nav={nav} setSheet={(sheet: SheetName | null) => { patch({ sheet }); }} />
+        {banner}
       </div>
     </LangContext.Provider>
-  );
-}
-
-/**
- * The sparring override, blueprint 3.2 item 9. It lives here rather than in the Settings screen
- * because AC-APP-8 reaches it from `settings.default` and the autopsy reads the same state; the
- * rest of the Settings screen, and the rows around this one, land with that surface.
- */
-const SCAFFOLDS: Scaffold[] = ['auto', 'S3', 'S2', 'S1', 'S0'];
-
-function ScaffoldRow({ state, nav }: { state: AppState; nav: Nav }) {
-  const t = useT();
-  return (
-    <div className="m-scaffold">
-      <div className="m-scaffold-label">{t('settings.scaffold')}</div>
-      <div className="m-scaffold-opts">
-        {SCAFFOLDS.map((level) => (
-          <button
-            key={level}
-            type="button"
-            className="m-scaffold-opt"
-            data-scaffold-option={level}
-            aria-pressed={state.scaffold === level}
-            onClick={() => {
-              nav.patch({ scaffold: level });
-            }}
-          >
-            {level === 'auto' ? t('settings.scaffold.auto') : level}
-          </button>
-        ))}
-      </div>
-      <div className="m-scaffold-sub">{t('settings.scaffold.body')}</div>
-    </div>
   );
 }
 
@@ -233,16 +196,10 @@ function Body({ state, nav, setSheet }: { state: AppState; nav: Nav; setSheet: (
 
       {state.screen === 'main' ? (
         <div className="m-screen m-main" data-screen={screenName(state)} data-anim="fade">
-          {state.tab === 'radar' ? (
-            <Radar key={state.pack} state={state} nav={nav} />
-          ) : (
-            <div className="m-tabpane" data-stagger="1">
-              <div className="m-pane-title">{t(PANE[state.tab].title)}</div>
-              <div className="m-pane-body">{t(PANE[state.tab].body)}</div>
-              {state.tab === 'settings' ? <ScaffoldRow state={state} nav={nav} /> : null}
-              <div className="m-pane-note">{t('common.soon')}</div>
-            </div>
-          )}
+          {state.tab === 'radar' ? <Radar key={state.pack} state={state} nav={nav} /> : null}
+          {state.tab === 'dissect' ? <Dissect state={state} nav={nav} /> : null}
+          {state.tab === 'archive' ? <Archive state={state} nav={nav} /> : null}
+          {state.tab === 'settings' ? <Settings state={state} nav={nav} /> : null}
           <nav className="m-tabbar">
             {(['radar', 'dissect', 'archive', 'settings'] as const).map((tab) => (
               <button
@@ -267,6 +224,10 @@ function Body({ state, nav, setSheet }: { state: AppState; nav: Nav; setSheet: (
       ) : null}
 
       {state.screen === 'autopsy' ? <Autopsy state={state} nav={nav} /> : null}
+      {state.screen === 'progress' ? <Progress state={state} nav={nav} /> : null}
+      {state.screen === 'chat-sim' ? <ChatSim nav={nav} /> : null}
+      {state.screen === 'notif-settings' ? <NotifSettings state={state} nav={nav} /> : null}
+      {state.screen === 'methodology' ? <MethodologyScreen state={state} nav={nav} /> : null}
 
       {state.screen === 'queue' ? (
         <div className="m-screen m-onb" data-screen="queue">
@@ -307,6 +268,9 @@ function Body({ state, nav, setSheet }: { state: AppState; nav: Nav; setSheet: (
           </div>
         </div>
       )}
+
+      {state.sheet === 'rate-limit' ? <RateSheet nav={nav} /> : null}
+      {state.sheet === 'share-sim' ? <ShareSim nav={nav} /> : null}
 
       {state.sheet === 'ios-notif' ? (
         <div className="m-ios-wrap" data-sheet="ios-notif">

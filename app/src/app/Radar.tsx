@@ -21,7 +21,7 @@ import { useT } from '../i18n';
 import { useCorrections, useMethodology, useRadar, type Pack } from '../content';
 import { makeCtx } from '../renderers/ctx';
 import Card from '../renderers/Card';
-import type { AppState } from './state';
+import { LS, writeStore, type AppState } from './state';
 import type { Nav } from './Onboarding';
 
 const dateLabel = (iso: string, lang: Lang): string => {
@@ -132,6 +132,29 @@ export default function Radar({ state, nav }: { state: AppState; nav: Nav }) {
       {/* The zip draws the hold notice under the cards. It leads here instead: it is a statement
           about the whole feed, and a reader who has to scroll past three dissections to find out
           why the fourth is missing has not been told. */}
+      {/* Blueprint 3.2 item 17. Android only, because it is education about a share target that
+          only Android registers; small and dismissible, because a hint that cannot be dismissed
+          is an advert. */}
+      {!state.installHint ? null : (
+        <div className="m-install" data-sr="1" data-testid="install-hint">
+          <div className="m-install-main">
+            <div className="m-install-title">{t('install.title')}</div>
+            <div className="m-install-body">{t('install.body')}</div>
+          </div>
+          <button
+            type="button"
+            className="m-install-x"
+            aria-label={t('install.dismiss')}
+            onClick={() => {
+              writeStore(LS.installed, '1');
+              nav.patch({ installHint: false });
+            }}
+          >
+            ×
+          </button>
+        </div>
+      )}
+
       {!state.crisis ? null : (
         <div className="m-crisis" data-sr="1" data-feed-item="crisis-hold" data-crisis="1">
           <div className="m-crisis-kicker">{t('radar.crisis.kicker')}</div>
