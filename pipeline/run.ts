@@ -225,7 +225,10 @@ function formatErrors(validate: ValidateFunction): string {
 
 /** Undefined when the data conforms, else the formatted reason. */
 function schemaFault(schema: AnySchema, data: unknown): string | undefined {
-  const validate = ajv().compile(schema);
+  // Compiling registers by $id, and one process may validate the same slot schema twice
+  // (a later stage re-ingests an earlier slot to build its input), so look up first.
+  const id = typeof schema === 'object' ? (schema as { $id?: string }).$id : undefined;
+  const validate = (id === undefined ? undefined : ajv().getSchema(id)) ?? ajv().compile(schema);
   return validate(data) ? undefined : formatErrors(validate);
 }
 
