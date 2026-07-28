@@ -18,6 +18,15 @@
         "id": "Angka setoran neto dalam diseksi judol diperbarui ke seri PPATK kuartal I 2026, dan koreksinya diterbitkan dengan keutamaan yang setara."
       },
       "status": "corrected"
+    },
+    {
+      "date": "2026-07-28",
+      "narrative_id": "mbg-poisoning",
+      "summary": {
+        "en": "Flagged by a counting institution over the dueling-counts presentation. Under review; the chip is visible within 24 hours.",
+        "id": "Ditandai oleh sebuah lembaga penghitung terkait penyajian angka bersaing. Dalam peninjauan; penanda tampil dalam 24 jam."
+      },
+      "status": "under_review"
     }
   ]
 }

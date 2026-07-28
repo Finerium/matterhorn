@@ -181,3 +181,18 @@ Decisions and findings (full agent output: session task wcv2o11q6):
 - REPORT LEDGER ITEMS: STATUS_LABEL unification (deliberate); spine-node subtitles and
   family member framing quotes dropped for want of contract fields (deliberate, C2-safe);
   panel titles fixed-generic except scale_check.
+
+## Gate 3 matrix installed (2026-07-29 ~00:15 WIB)
+- 80-entry state matrix (74 live, 6 gate5-flagged), 54 flow tests, boundary spec, console
+  guard on all app-config e2e. Observed red maps 1:1 to unbuilt surfaces; shell already
+  green on 19 matrix rows + 11 flow tests, console-clean.
+- RULINGS: crisis-hold notice = chrome toggled by the demo mechanism the zip itself uses
+  (contract crisis_hold feed flag stays available for Gate C editorial use); under-review
+  binding via an authored seed corrections entry for mbg-poisoning; money-severance
+  exactness is fixture-limited (all zip mbg-stop rows break; unit-level selectivity was
+  proven at Gate 2); AC-APP-22 guard covers the app-config specs, grammar spec wires it
+  when next unfrozen.
+- GATE C PROMPT NOTE (observed live): the whole-word ID verdict lint catches "salah satu"
+  constructions; Narrator (A9) and Guard (A11) prompts must carry the lexicon and the
+  writers must phrase around it (sebuah/dari antara), never weaken the lint.
+- vitest now permanently excludes staging/**.

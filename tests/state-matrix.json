@@ -1,0 +1,591 @@
+{
+  "_readme": [
+    "AC-APP-1. Every named state the product can be in, and how a test reaches it.",
+    "Post-install home: tests/state-matrix.json. Driven by tests/e2e/matrix.spec.ts.",
+    "",
+    "Entry shape:",
+    "  name     the Appendix A state name, verbatim. The screenshot is state-<name>.png.",
+    "  goto     the window.__mthGoto row name, or null when the state is a URL rather than",
+    "           app state. A goto that returns false fails the entry by name: an unreachable",
+    "           state is a missing surface, never a silently wrong screenshot.",
+    "  url      navigated instead of /app, for the states that are routes.",
+    "  screen   expected data-screen, visible.",
+    "  sheet    expected data-sheet, visible.",
+    "  visible  a CSS selector that must be visible, for states that share a data-screen with",
+    "           their siblings (every autopsy panel is data-screen=autopsy).",
+    "  gate5    the driver skips it. research.* and desktop.* land with the Gate 5 surface.",
+    "  note     what the state is, and what has to exist for it to be reachable.",
+    "",
+    "Deliberately absent: the Appendix A dark.* rows (Gate 6, AC-APP-15, a theme modifier on",
+    "rows already here) and land.* rows (Gate 4, the landing page, AC-LAND).",
+    "",
+    "Selectors reuse what already ships wherever possible: .m-card and .m-card-c are the two",
+    "Card slots, [data-el] is the Gate 2 element id, [data-testid=evidence-sheet] is the Gate 2",
+    "sheet. New [data-testid] names below are the contract each surface implementer builds to."
+  ],
+  "entries": [
+    {
+      "name": "onb.hello",
+      "goto": "onb.hello",
+      "screen": "onb-hello",
+      "visible": "[data-testid=\"greeting\"]",
+      "note": "The rotating greeting and the blueprint tagline. Ships."
+    },
+    {
+      "name": "onb.lang",
+      "goto": "onb.lang",
+      "screen": "onb-lang",
+      "note": "CF-3: five rows, en and id selectable, the other three dimmed. Ships."
+    },
+    {
+      "name": "onb.regions",
+      "goto": "onb.regions",
+      "screen": "onb-regions",
+      "note": "Four region rows, id and intl selectable. Ships."
+    },
+    {
+      "name": "onb.notif",
+      "goto": "onb.notif",
+      "screen": "onb-notif",
+      "note": "The primer plus the CF-4 Appendix C preview card. Ships."
+    },
+    {
+      "name": "onb.notif.ios-dialog",
+      "goto": "onb.notif.ios-dialog",
+      "screen": "onb-notif",
+      "sheet": "ios-notif",
+      "note": "The simulated iOS permission dialog over the primer. Ships."
+    },
+    {
+      "name": "onb.auth",
+      "goto": "onb.auth",
+      "screen": "onb-auth",
+      "note": "D-7: Apple, Google, and skip. No signed-in state exists to reach. Ships."
+    },
+    {
+      "name": "onb.auth.honest-sheet",
+      "goto": "onb.auth.honest-sheet",
+      "screen": "onb-auth",
+      "sheet": "honest-auth",
+      "note": "Appendix C honest-auth copy, opened by either provider button. Ships."
+    },
+
+    {
+      "name": "radar.default",
+      "goto": "radar.default",
+      "screen": "main-radar",
+      "visible": "[data-feed-item=\"mbg-stop\"]",
+      "note": "The id pack feed from packs/id/feed.json. Ships."
+    },
+    {
+      "name": "radar.hero",
+      "goto": "radar.hero",
+      "screen": "main-radar",
+      "visible": "[data-feed-item=\"mbg-stop\"] .m-card",
+      "note": "The hero slot. Same feed as radar.default, scrolled to and framed on the hero card."
+    },
+    {
+      "name": "radar.crisis-hold",
+      "goto": "radar.crisis-hold",
+      "screen": "main-radar",
+      "visible": "[data-crisis=\"1\"]",
+      "note": "Feed item carrying crisis_hold true. No seed feed item sets it yet, so the state needs either a fixture row or a goto patch that sets the flag."
+    },
+    {
+      "name": "radar.under-review",
+      "goto": "radar.under-review",
+      "screen": "main-radar",
+      "visible": "[data-testid=\"under-review-chip\"]",
+      "note": "The corrections chip on a card whose narrative is under review. corrections.json carries mbg-jobs under_review, which no seed feed carries; the surface binds one or the fixture adds it."
+    },
+    {
+      "name": "radar.region-sheet",
+      "goto": "radar.region-sheet",
+      "screen": "main-radar",
+      "sheet": "region",
+      "note": "The region switcher over the feed, opened by [data-testid=region-switch]."
+    },
+    {
+      "name": "radar.via-dissect",
+      "goto": "radar.via-dissect",
+      "screen": "main-radar",
+      "visible": "[data-feed-item=\"ppn-panic\"] [data-testid=\"via-dissect-chip\"]",
+      "note": "AC-APP-5. ppn-panic in the feed with its via-Dissect chip, the state only the fresh-demo flow produces."
+    },
+    {
+      "name": "radar.pack-en",
+      "goto": "radar.pack-en",
+      "screen": "main-radar",
+      "visible": "[data-feed-item=\"tariffs-pay\"]",
+      "note": "Contract-implied by the shipped [data-testid=pack-switch] and packs/en/feed.json. The EN-Global pack, hero tariffs-pay. Backs AC-APP-14."
+    },
+
+    {
+      "name": "dissect.default",
+      "goto": "dissect.default",
+      "screen": "main-dissect",
+      "visible": "[data-testid=\"paste-box\"]",
+      "note": "The paste box with the cached and fresh demo chips."
+    },
+    {
+      "name": "dissect.progress",
+      "goto": "dissect.progress",
+      "screen": "progress",
+      "visible": "[data-stage]",
+      "note": "AC-APP-6. The four staged steps and the honest line. Screen ships as a named root; the stages do not."
+    },
+    {
+      "name": "dissect.queue",
+      "goto": "dissect.queue",
+      "screen": "queue",
+      "note": "Appendix C queue state for an unknown URL. No progress animation. Ships."
+    },
+    {
+      "name": "dissect.rate-sheet",
+      "goto": "dissect.rate-sheet",
+      "screen": "main-dissect",
+      "sheet": "rate-limit",
+      "note": "The zip's rate-limit sheet, two fresh dissections a day."
+    },
+    {
+      "name": "dissect.recents",
+      "goto": "dissect.recents",
+      "screen": "main-dissect",
+      "visible": "[data-testid=\"recents\"]",
+      "note": "The recents list under the paste box, populated by prior resolutions."
+    },
+    {
+      "name": "dissect.from-another-app",
+      "goto": "dissect.from-another-app",
+      "screen": "main-dissect",
+      "visible": "[data-testid=\"from-another-app\"]",
+      "note": "Blueprint 3.2 item 7 names the from-another-app card; Appendix A folds it into dissect. Listed so the share-sheet entry point has a screenshot."
+    },
+
+    {
+      "name": "archive.default",
+      "goto": "archive.default",
+      "screen": "main-archive",
+      "visible": "[data-testid=\"archive-list\"]",
+      "note": "The dissection list."
+    },
+    {
+      "name": "archive.search",
+      "goto": "archive.search",
+      "screen": "main-archive",
+      "visible": "[data-testid=\"archive-search\"]",
+      "note": "The search field focused with a query in it."
+    },
+    {
+      "name": "archive.filtered",
+      "goto": "archive.filtered",
+      "screen": "main-archive",
+      "visible": "[data-testid=\"archive-filter\"][aria-pressed=\"true\"]",
+      "note": "At least one filter chip active and the list narrowed to it."
+    },
+    {
+      "name": "archive.constellation-teaser",
+      "goto": "archive.constellation-teaser",
+      "screen": "main-archive",
+      "visible": "[data-testid=\"constellation-teaser\"]",
+      "note": "The teaser drawn from constellation.json: four nodes, two links in seed."
+    },
+    {
+      "name": "archive.case-library",
+      "goto": "archive.case-library",
+      "screen": "main-archive",
+      "visible": "[data-testid=\"case-library\"]",
+      "note": "case_library.json rendered: B-01 onward, each with its documented outcome and citations."
+    },
+
+    {
+      "name": "settings.default",
+      "goto": "settings.default",
+      "screen": "main-settings",
+      "visible": "[data-testid=\"account-row\"]",
+      "note": "AC-APP-3. The account row reads not-signed-in in every state the build can reach."
+    },
+    {
+      "name": "settings.scaffold.auto",
+      "goto": "settings.scaffold.auto",
+      "screen": "main-settings",
+      "visible": "[data-scaffold-option=\"auto\"][aria-pressed=\"true\"]",
+      "note": "The demo override on Auto: each narrative uses its own scaffold_default."
+    },
+    {
+      "name": "settings.scaffold.s3",
+      "goto": "settings.scaffold.s3",
+      "screen": "main-settings",
+      "visible": "[data-scaffold-option=\"S3\"][aria-pressed=\"true\"]",
+      "note": "Override forcing S3 sparring on every autopsy."
+    },
+    {
+      "name": "settings.scaffold.s2",
+      "goto": "settings.scaffold.s2",
+      "screen": "main-settings",
+      "visible": "[data-scaffold-option=\"S2\"][aria-pressed=\"true\"]",
+      "note": "S2 is new in the option list, per blueprint 3.2 item 9."
+    },
+    {
+      "name": "settings.scaffold.s1",
+      "goto": "settings.scaffold.s1",
+      "screen": "main-settings",
+      "visible": "[data-scaffold-option=\"S1\"][aria-pressed=\"true\"]",
+      "note": "Override forcing the prediction tap."
+    },
+    {
+      "name": "settings.scaffold.s0",
+      "goto": "settings.scaffold.s0",
+      "screen": "main-settings",
+      "visible": "[data-scaffold-option=\"S0\"][aria-pressed=\"true\"]",
+      "note": "Override forcing the autopsy straight through, with the spar-on-demand chip."
+    },
+    {
+      "name": "settings.dark-toggle",
+      "goto": "settings.dark-toggle",
+      "screen": "main-settings",
+      "visible": "[data-testid=\"appearance-dark\"][aria-pressed=\"true\"]",
+      "note": "The appearance row with dark selected. body[data-mth=dark] follows from it; the dark.* screenshots themselves are Gate 6."
+    },
+
+    {
+      "name": "autopsy.default",
+      "goto": "autopsy.default",
+      "screen": "autopsy",
+      "note": "Contract-implied: the shipped GOTO row and the base every autopsy.* state is a variant of. OG card, provenance line, panel stack, action bar."
+    },
+    {
+      "name": "autopsy.s3.q1",
+      "goto": "autopsy.s3.q1",
+      "screen": "autopsy",
+      "visible": "[data-testid=\"spar-q\"]",
+      "note": "AC-APP-7. mbg-stop is scaffold_default S3. Question 1 of 3, three dots, Skip visible."
+    },
+    {
+      "name": "autopsy.s3.q2",
+      "goto": "autopsy.s3.q2",
+      "screen": "autopsy",
+      "visible": "[data-spar-dot=\"1\"][data-on=\"1\"]",
+      "note": "Contract-implied by the three-question requirement: the second question, second dot lit."
+    },
+    {
+      "name": "autopsy.s3.q3",
+      "goto": "autopsy.s3.q3",
+      "screen": "autopsy",
+      "visible": "[data-spar-dot=\"2\"][data-on=\"1\"]",
+      "note": "Contract-implied: the third question, third dot lit."
+    },
+    {
+      "name": "autopsy.s3.wrong-path",
+      "goto": "autopsy.s3.wrong-path",
+      "screen": "autopsy",
+      "visible": "[data-spar-option][data-answer=\"wrong\"]",
+      "note": "A wrong answer marked as such, with the per-question note shown rather than a verdict."
+    },
+    {
+      "name": "autopsy.s3.skip",
+      "goto": "autopsy.s3.skip",
+      "screen": "autopsy",
+      "visible": "[data-testid=\"spar-skip\"]",
+      "note": "Contract-implied by AC-APP-7 'Skip visible and functional at every step'. Skip in view mid-sparring."
+    },
+    {
+      "name": "autopsy.s3.diff-card",
+      "goto": "autopsy.s3.diff-card",
+      "screen": "autopsy",
+      "visible": "[data-testid=\"diff-card\"]",
+      "note": "The post-sparring diff card: what the reader predicted against what the artifact says."
+    },
+    {
+      "name": "autopsy.s2",
+      "goto": "autopsy.s2",
+      "screen": "autopsy",
+      "visible": "[data-spar-dot]",
+      "note": "S2 is one rotating question in the S3 UI with a single dot. The single-dot count is asserted in flows.spec.ts AC-APP-8; here the state only has to be reachable."
+    },
+    {
+      "name": "autopsy.s1.prediction",
+      "goto": "autopsy.s1.prediction",
+      "screen": "autopsy",
+      "visible": "[data-testid=\"prediction-tap\"]",
+      "note": "mbg-poisoning is scaffold_default S1. The prediction tap before the reveal."
+    },
+    {
+      "name": "autopsy.s0.spar-chip",
+      "goto": "autopsy.s0.spar-chip",
+      "screen": "autopsy",
+      "visible": "[data-testid=\"spar-chip\"]",
+      "note": "ppn-panic and tariffs-pay are scaffold_default S0: the autopsy directly, with spar-on-demand."
+    },
+    {
+      "name": "autopsy.panel.claim-map",
+      "goto": "autopsy.panel.claim-map",
+      "screen": "autopsy",
+      "visible": "[data-el=\"p-claim\"]",
+      "note": "Gate 2 ClaimMap mounted in the stack. mbg-stop: n1..n4, e0..e2, h0..h3."
+    },
+    {
+      "name": "autopsy.panel.scale",
+      "goto": "autopsy.panel.scale",
+      "screen": "autopsy",
+      "visible": "[data-el=\"p-scale\"]",
+      "note": "Gate 2 ScaleCheck. mbg-stop segments sg0 onward."
+    },
+    {
+      "name": "autopsy.panel.money.off",
+      "goto": "autopsy.panel.money.off",
+      "screen": "autopsy",
+      "visible": "[data-el=\"p-flow\"] [role=\"switch\"][aria-checked=\"false\"]",
+      "note": "AC-APP-9. Stop toggle off: no row struck."
+    },
+    {
+      "name": "autopsy.panel.money.on",
+      "goto": "autopsy.panel.money.on",
+      "screen": "autopsy",
+      "visible": "[data-el=\"p-flow\"] [data-strike=\"1\"]",
+      "note": "AC-APP-9. Stop toggle on: exactly the severed_if_stopped rows struck. All four of mbg-stop's rows are severed."
+    },
+    {
+      "name": "autopsy.panel.incidence",
+      "goto": "autopsy.panel.incidence",
+      "screen": "autopsy",
+      "visible": "[data-el=\"p-inc\"]",
+      "note": "Gate 2 Incidence. mbg-stop cells i0..i2."
+    },
+    {
+      "name": "autopsy.panel.dueling",
+      "goto": "autopsy.panel.dueling",
+      "screen": "autopsy",
+      "visible": "[data-el=\"p-duel\"]",
+      "note": "mbg-poisoning: BGN 6,517, BPOM 9,089, JPPI 8,649, each with method and period."
+    },
+    {
+      "name": "autopsy.panel.echo",
+      "goto": "autopsy.panel.echo",
+      "screen": "autopsy",
+      "visible": "[data-echo=\"cited\"]",
+      "note": "Echo renders only where the artifact carries one. ppn-panic is the only seed narrative that does."
+    },
+    {
+      "name": "autopsy.panel.echo-silence",
+      "goto": "autopsy.panel.echo-silence",
+      "screen": "autopsy",
+      "visible": "[data-echo=\"silence\"]",
+      "note": "The silence state on a narrative with no echo, mbg-stop."
+    },
+    {
+      "name": "autopsy.panel.options",
+      "goto": "autopsy.panel.options",
+      "screen": "autopsy",
+      "visible": "[data-el=\"p-options\"]",
+      "note": "Options plus the playbook. No ranking, no recommendation."
+    },
+    {
+      "name": "autopsy.panel.family",
+      "goto": "autopsy.panel.family",
+      "screen": "autopsy",
+      "visible": "[data-el=\"p-family\"]",
+      "note": "The skeleton line and every member outlet."
+    },
+    {
+      "name": "autopsy.evidence-sheet",
+      "goto": "autopsy.evidence-sheet",
+      "screen": "autopsy",
+      "visible": "[data-testid=\"evidence-sheet\"]",
+      "note": "AC-APP-11. The Gate 2 sheet, opened from an element inside the autopsy stack. testid rather than data-sheet because the renderer already ships that hook."
+    },
+    {
+      "name": "autopsy.narration-highlight",
+      "goto": "autopsy.narration-highlight",
+      "screen": "autopsy",
+      "visible": "[data-hl]",
+      "note": "AC-APP-10. A narration sentence selected, its els carrying data-hl."
+    },
+    {
+      "name": "autopsy.explore-drawer",
+      "goto": "autopsy.explore-drawer",
+      "screen": "autopsy",
+      "sheet": "explore",
+      "note": "The Explore drawer over the autopsy."
+    },
+    {
+      "name": "autopsy.flag.form",
+      "goto": "autopsy.flag.form",
+      "screen": "autopsy",
+      "sheet": "flag-form",
+      "note": "The flag flow, form step."
+    },
+    {
+      "name": "autopsy.flag.received",
+      "goto": "autopsy.flag.received",
+      "screen": "autopsy",
+      "sheet": "flag-received",
+      "note": "The flag flow, acknowledgement step."
+    },
+    {
+      "name": "autopsy.original-sheet",
+      "goto": "autopsy.original-sheet",
+      "screen": "autopsy",
+      "sheet": "original",
+      "note": "The original-headline sheet: narrative.original text, outlet, url."
+    },
+    {
+      "name": "autopsy.provenance-sheet",
+      "goto": "autopsy.provenance-sheet",
+      "screen": "autopsy",
+      "sheet": "provenance",
+      "note": "The full chain from manifest.steps: A5, A7, A10, A11 in seed, each with its model. Gate 2 obligation."
+    },
+    {
+      "name": "autopsy.nuance.story",
+      "goto": "autopsy.nuance.story",
+      "screen": "autopsy",
+      "sheet": "nuance-story",
+      "note": "AC-APP-12. The 1080x1350 Story template, counts row included."
+    },
+    {
+      "name": "autopsy.nuance.chat",
+      "goto": "autopsy.nuance.chat",
+      "screen": "autopsy",
+      "sheet": "nuance-chat",
+      "note": "AC-APP-12. The 1200x628 Chat template, counts row included."
+    },
+
+    {
+      "name": "system.chat-sim",
+      "goto": "system.chat-sim",
+      "screen": "chat-sim",
+      "note": "The share-from-messenger walkthrough. Screen ships as a named root."
+    },
+    {
+      "name": "system.methodology",
+      "goto": "system.methodology",
+      "screen": "methodology",
+      "note": "The in-app methodology screen. The /methodology route is asserted separately in AC-APP-19."
+    },
+    {
+      "name": "system.notif-settings",
+      "goto": "system.notif-settings",
+      "screen": "notif-settings",
+      "visible": "[data-testid=\"notif-cap\"]",
+      "note": "AC-APP-20. Cap and quiet hours, stored locally."
+    },
+    {
+      "name": "system.notif.lock-preview",
+      "goto": "system.notif.lock-preview",
+      "screen": "lock-preview",
+      "note": "The lock-screen preview screen. Ships as a named root."
+    },
+    {
+      "name": "system.install-hint",
+      "goto": "system.install-hint",
+      "screen": "main-radar",
+      "visible": "[data-testid=\"install-hint\"]",
+      "note": "Blueprint 3.2 item 17, Appendix C copy. Small, dismissible, Android only. Not in Appendix A; listed because the copy is frozen and needs a screenshot."
+    },
+    {
+      "name": "system.offline",
+      "goto": null,
+      "url": "/offline",
+      "visible": "[data-testid=\"route-offline\"]",
+      "note": "AC-APP-17. The route renders today; the testid is what the driver needs to prove it landed on the right page, and is the one thing the route must add."
+    },
+    {
+      "name": "system.notfound",
+      "goto": null,
+      "url": "/no-such-page",
+      "visible": "[data-testid=\"route-notfound\"]",
+      "note": "AC-APP-19. Same: the 404 renders, the testid is the addressable hook."
+    },
+    {
+      "name": "system.permalink",
+      "goto": null,
+      "url": "/n/mbg-stop",
+      "visible": "[data-testid=\"permalink-card\"]",
+      "note": "AC-APP-18. The permalink hydrating to the full autopsy. Ships as the card only."
+    },
+    {
+      "name": "system.share.cache-hit",
+      "goto": null,
+      "url": "/share?url=https%3A%2F%2Fwww.tribunnews.com%2Fnasional%2F7844542",
+      "visible": "[data-testid=\"share-decision\"]",
+      "note": "AC-APP-13. The mbg-stop canonical URL, exact match, opening the cached autopsy."
+    },
+    {
+      "name": "system.share.queue",
+      "goto": null,
+      "url": "/share?url=https%3A%2F%2Fexample.com%2Fnot-in-the-index",
+      "visible": "[data-testid=\"share-decision\"]",
+      "note": "AC-APP-13. A URL in no url_index entry routes to the queue state."
+    },
+    {
+      "name": "system.share.fresh",
+      "goto": null,
+      "url": "/share?url=https%3A%2F%2Fwww.antaranews.com%2Fberita%2F4559522%2Fkemenkeu-rilis-aturan-ppn-12-persen-hanya-untuk-barang-mewah",
+      "visible": "[data-testid=\"share-decision\"]",
+      "note": "AC-APP-13. The url_index fresh_demo role, the only URL that starts the staged progress."
+    },
+    {
+      "name": "system.share.script-payload",
+      "goto": null,
+      "url": "/share?title=%3Cscript%3Ealert(1)%3C%2Fscript%3E&text=%3Cimg%20src%3Dx%20onerror%3Dalert(1)%3E",
+      "visible": "[data-testid=\"share-params\"]",
+      "note": "AC-APP-13. Contract-implied by the escaped-payload clause. Params render as text, never as markup."
+    },
+    {
+      "name": "system.share-sheet-sim",
+      "goto": "system.share-sheet-sim",
+      "sheet": "share-sim",
+      "note": "Blueprint 3.2 lists the share-sheet simulation among the overlays. Not in Appendix A; listed because it is a named overlay with its own screenshot."
+    },
+
+    {
+      "name": "research.default",
+      "goto": null,
+      "url": "/research",
+      "gate5": true,
+      "visible": "[data-testid=\"research-table\"]",
+      "note": "Gate 5. The desktop research surface, default table."
+    },
+    {
+      "name": "research.filtered",
+      "goto": null,
+      "url": "/research?tag=missing-link",
+      "gate5": true,
+      "visible": "[data-testid=\"research-table\"]",
+      "note": "Gate 5. Filtered by technique tag."
+    },
+    {
+      "name": "research.detail-rail",
+      "goto": null,
+      "url": "/research?id=mbg-stop",
+      "gate5": true,
+      "visible": "[data-testid=\"research-rail\"]",
+      "note": "Gate 5. The detail rail open on one narrative."
+    },
+    {
+      "name": "research.export",
+      "goto": null,
+      "url": "/research?export=1",
+      "gate5": true,
+      "visible": "[data-testid=\"research-export\"]",
+      "note": "Gate 5. The export affordance and what it states about the data it emits."
+    },
+    {
+      "name": "desktop.app-framed",
+      "goto": null,
+      "url": "/app",
+      "gate5": true,
+      "screen": "main-radar",
+      "note": "Gate 5. The phone-width app framed on a desktop viewport, 1280x800."
+    },
+    {
+      "name": "desktop.autopsy-wide",
+      "goto": null,
+      "url": "/n/mbg-stop",
+      "gate5": true,
+      "visible": "[data-testid=\"permalink-card\"]",
+      "note": "Gate 5. The autopsy at desktop width, 1280x800."
+    }
+  ]
+}
