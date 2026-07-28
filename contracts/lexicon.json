@@ -2,7 +2,7 @@
   "note": "Blueprint 6.9, as data. scripts/validate-content.ts check 5 is the only reader. Matching is case-insensitive and whole-word for every verdict entry, including the ID class-ID words (benar, salah, terbukti), which 6.9 scopes to verdict use and which are matched as whole words like the rest.",
 
   "verdict": {
-    "note": "6.9 also names two phrasings rather than bare words: disinformation verdict phrasing ('this is disinformation') and fact-checked as a verdict ('fact-check: false'). Both are caught by their constituent words below (disinformation, false), so no phrase rule is carried here.",
+    "note": "6.9 also names two phrasings rather than bare words: disinformation verdict phrasing ('this is disinformation'), caught by its constituent word below, and fact-checked as a verdict ('fact-check: false'), whose colon construction is carried in `phrases` because the verdict word after the colon may be one 6.9 does not list. `phrases` entries are regex sources matched case-insensitively against the same copy strings and reported and exempted exactly like a verdict word.",
     "en": [
       "hoax",
       "false",
@@ -25,12 +25,19 @@
       "menyesatkan",
       "terbukti",
       "dusta"
+    ],
+    "phrases": [
+      {
+        "label": "fact-check as a verdict",
+        "pattern": "fact[\\s-]?check(?:ed)?\\s*:",
+        "why": "6.9 names 'fact-check: false' as verdict phrasing. Narrow by construction: only the colon form delivers a verdict. Prose about fact-checking as a genre ('we are not a fact-checking service', 'fact-checkers publish after the fact') carries no colon and stays legal."
+      }
     ]
   },
 
   "future_harm": {
-    "note": "6.9: lint fails on 'will cause', 'will lead to', 'akan menyebabkan', 'akan memicu', and 'bakal' plus a harm noun. Scoped to the retrospective surfaces, which are the ones 6.9 names: Echo outcome text and case-library documented_outcome.",
-    "scope": ["echo.historical.outcome", "cases.documented_outcome"],
+    "note": "6.9: lint fails on 'will cause', 'will lead to', 'akan menyebabkan', 'akan memicu', and 'bakal' plus a harm noun. Scoped to the retrospective surfaces, which are the ones 6.9 names: Echo outcome text and case-library documented_outcome. A scope entry names a run of consecutive keys and matches wherever that run sits in the path, not only at its head: 6.3 puts EchoPanel in the Panel union, so the same Echo outcome text is reached at echo.historical.outcome under the artifact root and at panels.historical.outcome inside panels[], and both are the same surface. Entries stay this specific on purpose: panels.takeaway and family.members.headline are ordinary forward-looking copy and stay out of scope.",
+    "scope": ["historical.outcome", "cases.documented_outcome"],
     "patterns": ["will cause", "will lead to", "akan menyebabkan", "akan memicu"],
     "hedge": "bakal",
     "harm_nouns": [

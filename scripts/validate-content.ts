@@ -1,7 +1,12 @@
 /**
  * Content validator CLI. Blueprint 6.11, all ten checks.
  *
- *   pnpm validate:content [--dir <path>]
+ *   pnpm validate:content [--dir <path>] [--scan-app <dir>]
+ *
+ * `--scan-app <dir>` widens check 7 from "no artifact carries seed: true" to "and no shipped
+ * module imports a fixture": the directory is walked for .ts/.tsx/.js/.jsx/.mjs and every
+ * module specifier that reaches tests/fixtures or a fixtures/seed path segment is a failure.
+ * Without the flag nothing is scanned. Unknown arguments are a usage error, exit 2.
  *
  * Exit 0 only when every check passes. Exit 1 otherwise, with a FAIL line per offending
  * artifact on stderr naming the check slug and the file on one line, and the per-check table
@@ -185,7 +190,8 @@ function readArtifacts(dir: string): Artifact[] {
 // --- lexicon (6.9, as data) -------------------------------------------------------------
 
 interface Lexicon {
-  verdict: { en: string[]; id: string[] };
+  /** `phrases` are regex sources: constructions a word list cannot express, like `fact-check:`. */
+  verdict: { en: string[]; id: string[]; phrases: Array<{ label: string; pattern: string }> };
   future_harm: { scope: string[]; patterns: string[]; hedge: string; harm_nouns: string[] };
   style: { banned_chars: Array<{ char: string; name: string }>; emoji_pattern: string };
   not_copy_keys: { keys: string[] };
@@ -219,6 +225,8 @@ const row = (slug: string, detail: string, failures: Failure[]): Row => ({
 
 interface Ctx {
   dir: string;
+  /** --scan-app, resolved. Undefined means check 7 asks the content root only. */
+  scanApp: string | undefined;
   label: string;
   artifacts: Artifact[];
   narratives: Artifact[];
@@ -360,7 +368,10 @@ function checkLexicon(ctx: Ctx): Row {
   const lex = ctx.lexicon;
   const failures: Failure[] = [];
   const notCopy = new Set(lex.not_copy_keys.keys);
-  const verdicts = [...lex.verdict.en, ...lex.verdict.id].map((w) => ({ word: w, re: wholeWord(w) }));
+  const verdicts = [
+    ...[...lex.verdict.en, ...lex.verdict.id].map((w) => ({ word: w, re: wholeWord(w) })),
+    ...lex.verdict.phrases.map((p) => ({ word: p.label, re: new RegExp(p.pattern, 'i') })),
+  ];
   const emoji = new RegExp(lex.style.emoji_pattern, 'u');
   const harmNouns = lex.future_harm.harm_nouns.map(escapeRe).join('|');
   const futurePatterns = lex.future_harm.patterns.map((p) => ({ label: p, re: wholeWord(p) }));
@@ -391,13 +402,13 @@ function checkLexicon(ctx: Ctx): Row {
         if (!re.test(text)) continue;
         const exemption = exemptionFor(a, path, 'verdict');
         if (exemption === undefined) {
-          failures.push({ file: a.rel, message: `verdict word "${word}" at ${path}: ${clip(text)}` });
+          failures.push({ file: a.rel, message: `verdict "${word}" at ${path}: ${clip(text)}` });
           continue;
         }
         if (exemption.condition === 'quoted_with_citation' && !quotedWithCitation(a.data, text)) {
           failures.push({
             file: a.rel,
-            message: `verdict word "${word}" at ${path} is only exempt when quoted with a citation: ${clip(text)}`,
+            message: `verdict "${word}" at ${path} is only exempt when quoted with a citation: ${clip(text)}`,
           });
           continue;
         }
@@ -409,7 +420,11 @@ function checkLexicon(ctx: Ctx): Row {
       }
       if (emoji.test(text)) failures.push({ file: a.rel, message: `emoji at ${path}: ${clip(text)}` });
 
-      if (!lex.future_harm.scope.some((s) => path === s || path.startsWith(`${s}.`))) return;
+      // A scope entry is a run of consecutive keys, matched wherever it sits in the path, so
+      // the same Echo outcome text is in scope at echo.historical.outcome and, when 6.3 puts
+      // the panel in panels[], at panels.historical.outcome. Boundaries are dotted on both
+      // sides: "historical.outcome" never matches a key merely ending in "outcome".
+      if (!lex.future_harm.scope.some((s) => `.${path}.`.includes(`.${s}.`))) return;
       for (const { label, re } of [...futurePatterns, hedge]) {
         if (re.test(text)) {
           failures.push({ file: a.rel, message: `future-tense harm "${label}" at ${path}, which must read as past tense: ${clip(text)}` });
@@ -471,12 +486,50 @@ function checkManifest(ctx: Ctx): Row {
   return row('manifest', vacuous(ctx, `${ctx.narratives.length} manifest(s) complete, both gate tokens verify`), failures);
 }
 
-// 7. zero fixtures: no artifact carries "seed": true, scoped strictly to this content root
+/** Module specifiers: `import x from "S"`, bare `import "S"`, `export ... from "S"`, `import("S")`, `require("S")`. */
+const SPECIFIER = /(?:\bfrom|\bimport|\brequire)\s*\(?\s*['"]([^'"]+)['"]/g;
+const SCANNED_SOURCE = /\.(?:ts|tsx|js|jsx|mjs)$/;
+/** A specifier that reaches test fixtures or seed data. Shipped code imports neither. */
+const reachesFixtures = (spec: string): boolean =>
+  spec.includes('tests/fixtures') || /(?:^|\/)(?:fixtures|seed)(?:\/|$)/.test(spec);
+
+/**
+ * Check 7's second conjunct: no shipped module imports a fixture. Static text scan, because
+ * the question is what the bundler would pull in, which the specifier string already answers.
+ * ponytail: no node_modules or dist filter, --scan-app is pointed at an app source tree by
+ * hand. Ceiling: aim it at a repo root and it reads every dependency on disk.
+ */
+function scanAppImports(dir: string): { scanned: number; failures: Failure[] } {
+  if (!existsSync(dir) || !statSync(dir).isDirectory()) {
+    return { scanned: 0, failures: [{ file: dir, message: '--scan-app directory does not exist' }] };
+  }
+  const failures: Failure[] = [];
+  const files = readdirSync(dir, { recursive: true })
+    .map(String)
+    .filter((rel) => SCANNED_SOURCE.test(rel) && statSync(join(dir, rel)).isFile())
+    .sort((a, b) => a.localeCompare(b));
+  for (const rel of files) {
+    for (const match of readFileSync(join(dir, rel), 'utf8').matchAll(SPECIFIER)) {
+      const spec = match[1] ?? '';
+      if (reachesFixtures(spec)) {
+        failures.push({ file: rel, message: `imports "${spec}", and shipped modules never import test fixtures or seed data` });
+      }
+    }
+  }
+  return { scanned: files.length, failures };
+}
+
+// 7. zero fixtures: no artifact carries "seed": true, and with --scan-app, no module imports one
 function checkSeed(ctx: Ctx): Row {
   const failures = ctx.artifacts
     .filter((a) => carriesSeedFlag(a.data))
     .map((a) => ({ file: a.rel, message: 'artifact carries "seed": true, which never ships in content' }));
-  return row('seed', `${ctx.artifacts.length} artifact(s) carry no seed flag`, failures);
+  const scan = ctx.scanApp === undefined ? undefined : scanAppImports(ctx.scanApp);
+  const scanned = scan === undefined ? '' : `; ${scan.scanned} module(s) under ${ctx.scanApp} import no fixture or seed data`;
+  return row('seed', `${ctx.artifacts.length} artifact(s) carry no seed flag${scanned}`, [
+    ...failures,
+    ...(scan?.failures ?? []),
+  ]);
 }
 
 // 8. url_index referential integrity and exactly one fresh_demo entry
@@ -492,8 +545,22 @@ function checkUrlIndex(ctx: Ctx): Row {
   const entries = asArr(at(index.data, 'entries'));
   for (const entry of entries) {
     const id = asStr(at(entry, 'narrative_id'));
+    const pattern = asStr(at(entry, 'pattern'));
     if (!ctx.narrativeIds.has(id)) {
-      failures.push({ file: index.rel, message: `pattern "${asStr(at(entry, 'pattern'))}" points at narrative "${id}", which does not exist` });
+      failures.push({ file: index.rel, message: `pattern "${pattern}" points at narrative "${id}", which does not exist` });
+    }
+    // An entry the router will feed to the regex engine is compiled here, where a bad pattern
+    // is a Gate 1 failure, rather than at request time where it is a 500. Called, not `new`ed:
+    // RegExp() compiles and throws identically and leaves no unused binding behind.
+    if (at(entry, 'match') === 'regex') {
+      try {
+        RegExp(pattern);
+      } catch (err) {
+        failures.push({
+          file: index.rel,
+          message: `match "regex" pattern "${pattern}" for narrative "${id}" does not compile: ${err instanceof Error ? err.message : String(err)}`,
+        });
+      }
     }
   }
   const fresh = entries.filter((e) => at(e, 'role') === 'fresh_demo').length;
@@ -517,6 +584,11 @@ function checkLiveness(ctx: Ctx): Row {
         failures.push({ file, message: `source "${id}" is dead_replaced with no note recording the replacement` });
       }
       continue;
+    }
+    // "unverified" is the one liveness state that means nobody could confirm this, so it is
+    // the one that may not ship unexplained. The status scan below still applies to it.
+    if (liveness === 'unverified' && notes.trim() === '') {
+      failures.push({ file, message: `source "${id}" is unverified with no note recording what could not be confirmed` });
     }
     const errors = [...notes.matchAll(recordedStatus)].map((m) => Number(m[1])).filter((code) => code >= 400);
     if (errors.length > 0 && !corroborated.test(notes)) {
@@ -583,19 +655,33 @@ function printTable(rows: Row[]): void {
   for (const c of cells) console.log(`${c.slug.padEnd(wSlug)}  ${c.status.padEnd(wStatus)}  ${c.detail}`);
 }
 
-function parseArgs(argv: string[]): { dir: string } {
-  const i = argv.indexOf('--dir');
-  if (i === -1) return { dir: join(REPO_ROOT, 'content') };
-  const value = argv[i + 1];
-  if (value === undefined || value.startsWith('--')) {
-    console.error('validate:content: --dir needs a path');
-    process.exit(2);
+function usageError(message: string): never {
+  console.error(`validate:content: ${message}`);
+  console.error('usage: validate:content [--dir <path>] [--scan-app <dir>]');
+  process.exit(2);
+}
+
+function parseArgs(argv: string[]): { dir: string; scanApp: string | undefined } {
+  // Unknown arguments are rejected rather than ignored: a silently dropped flag is how the
+  // unimplemented app scan went unnoticed. Every flag takes exactly one path, so step by two.
+  const flags = new Map<string, string>();
+  for (let i = 0; i < argv.length; i += 2) {
+    const flag = argv[i] ?? '';
+    const value = argv[i + 1];
+    if (flag !== '--dir' && flag !== '--scan-app') usageError(`unknown argument "${flag}"`);
+    if (value === undefined || value.startsWith('--')) usageError(`${flag} needs a path`);
+    flags.set(flag, value);
   }
-  return { dir: resolve(value) };
+  const dir = flags.get('--dir');
+  const scanApp = flags.get('--scan-app');
+  return {
+    dir: dir === undefined ? join(REPO_ROOT, 'content') : resolve(dir),
+    scanApp: scanApp === undefined ? undefined : resolve(scanApp),
+  };
 }
 
 function main(): void {
-  const { dir } = parseArgs(process.argv.slice(2));
+  const { dir, scanApp } = parseArgs(process.argv.slice(2));
   const inRepo = relative(REPO_ROOT, dir);
   const label = inRepo !== '' && !inRepo.startsWith('..') ? inRepo : dir;
 
@@ -613,6 +699,7 @@ function main(): void {
   const sources = artifacts.find((a) => a.kind === 'sources' && a.parseError === undefined);
   const ctx: Ctx = {
     dir,
+    scanApp,
     label,
     artifacts,
     narratives,

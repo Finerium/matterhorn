@@ -2,8 +2,9 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "narrative.schema.json",
   "title": "Narrative",
-  "description": "Blueprint 6.3 to 6.6. One narrative artifact content/narratives/{id}.json. The eight panel shapes of 6.4 are exact (closed); the artifact root stays open so an additive optional field is a Deviations decision rather than a parse error, and stray flags are caught by check 7 (seed).",
+  "description": "Blueprint 6.3 to 6.6. One narrative artifact content/narratives/{id}.json. The eight panel shapes of 6.4 are exact (closed), and so is the artifact root: check 7 (seed) only catches the literal key `seed` set to true, so an open root let every other unknown key (a typo'd field, a leaked scratch object, an operator note) ship as data nothing reads. An additive optional field is now an explicit edit to this schema plus a Deviations entry, which is the disclosure the open root was pretending to give.",
   "type": "object",
+  "additionalProperties": false,
   "required": [
     "id",
     "pack",
