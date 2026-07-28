@@ -1,0 +1,49 @@
+{
+  "nodes": [
+    {
+      "id": "node-mbg-poisoning",
+      "narrative_id": "mbg-poisoning",
+      "label": {
+        "en": "Three tallies, one season",
+        "id": "Tiga rekapitulasi, satu musim"
+      },
+      "pack": "id"
+    },
+    {
+      "id": "node-ppn-panic",
+      "narrative_id": "ppn-panic",
+      "label": {
+        "en": "One line, whole table",
+        "id": "Satu pos, seluruh tabel"
+      },
+      "pack": "id"
+    },
+    {
+      "id": "node-tariffs-pay",
+      "narrative_id": "tariffs-pay",
+      "label": {
+        "en": "Projection against receipt",
+        "id": "Proyeksi berhadapan dengan penerimaan"
+      },
+      "pack": "en"
+    }
+  ],
+  "links": [
+    {
+      "a": "node-mbg-poisoning",
+      "b": "node-ppn-panic",
+      "via": {
+        "en": "competing counts",
+        "id": "angka bersaing"
+      }
+    },
+    {
+      "a": "node-ppn-panic",
+      "b": "node-tariffs-pay",
+      "via": {
+        "en": "no denominator",
+        "id": "tanpa denominator"
+      }
+    }
+  ]
+}

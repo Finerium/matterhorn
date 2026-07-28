@@ -1,0 +1,37 @@
+{
+  "symmetry": {
+    "gov": 1,
+    "neutral": 1,
+    "opp": 1,
+    "computed_at": "2026-07-22T10:00:00Z"
+  },
+  "metrics": [
+    {
+      "key": "narratives_published",
+      "label": {
+        "en": "Narratives published",
+        "id": "Narasi yang diterbitkan"
+      },
+      "kind": "measured",
+      "value": "3",
+      "run_id": "run-fixture-003"
+    },
+    {
+      "key": "source_resolution",
+      "label": {
+        "en": "Source resolution",
+        "id": "Resolusi sumber"
+      },
+      "kind": "design_target",
+      "value": "every figure resolves to a registered source"
+    }
+  ],
+  "policy_65": {
+    "en": "Matterhorn never calls a narrative false, fake, a hoax, or misleading, and it never declares one true. It shows structure and citations and stops there.",
+    "id": "Matterhorn tidak pernah menyebut sebuah narasi palsu, hoaks, salah, atau menyesatkan, dan tidak pernah menyatakannya benar. Ia menampilkan struktur dan sitasi, lalu berhenti di situ."
+  },
+  "disclosure": {
+    "en": "Every dissection on this page was produced by an automated agent fleet and is labelled as such.",
+    "id": "Setiap diseksi di halaman ini diproduksi oleh armada agen otomatis dan diberi label demikian."
+  }
+}

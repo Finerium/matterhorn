@@ -1,0 +1,40 @@
+{
+  "entries": [
+    {
+      "match": "exact",
+      "pattern": "https://example.org/example-daily/three-tallies",
+      "narrative_id": "mbg-poisoning",
+      "role": "canonical"
+    },
+    {
+      "match": "prefix",
+      "pattern": "https://example.org/example-wire/",
+      "narrative_id": "ppn-panic",
+      "role": "canonical"
+    },
+    {
+      "match": "regex",
+      "pattern": "^https://example\\.org/example-review/.*$",
+      "narrative_id": "tariffs-pay",
+      "role": "canonical"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://example.org/example-daily/old-slug",
+      "narrative_id": "mbg-poisoning",
+      "role": "legacy"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://example.org/example-wire/three-registers",
+      "narrative_id": "mbg-poisoning",
+      "role": "family_member"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://example.org/example-wire/one-line",
+      "narrative_id": "ppn-panic",
+      "role": "fresh_demo"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "cases": [
+    {
+      "id": "B-01",
+      "title": {
+        "en": "One line stood in for a whole table",
+        "id": "Satu pos berdiri mewakili seluruh tabel"
+      },
+      "period": "May 2019",
+      "motif": {
+        "en": "A single budget line was quoted as the total.",
+        "id": "Satu pos anggaran dikutip sebagai total."
+      },
+      "documented_outcome": {
+        "en": "The commission recorded the disputed items and the office published a revised table.",
+        "id": "Komisi mencatat butir yang diperselisihkan dan kantor menerbitkan tabel revisi."
+      },
+      "citations": [
+        "id-nonexistent-citation"
+      ]
+    },
+    {
+      "id": "B-02",
+      "title": {
+        "en": "Two registers, one season",
+        "id": "Dua register, satu musim"
+      },
+      "period": "Dec 2025",
+      "motif": {
+        "en": "Two registers reported the same season under different rules.",
+        "id": "Dua register melaporkan musim yang sama dengan aturan berbeda."
+      },
+      "documented_outcome": {
+        "en": "The notice was withdrawn and the archived copy remained the only public record.",
+        "id": "Pengumuman itu ditarik dan salinan arsip menjadi satu satunya catatan publik."
+      },
+      "citations": [
+        "id-archive-mirror-2025"
+      ]
+    }
+  ]
+}

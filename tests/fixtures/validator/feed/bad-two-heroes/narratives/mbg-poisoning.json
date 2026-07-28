@@ -1,0 +1,530 @@
+{
+  "id": "mbg-poisoning",
+  "pack": "id",
+  "lean": "opp",
+  "status": "published",
+  "headline": {
+    "en": "Three tallies, one season, no shared rule",
+    "id": "Tiga rekapitulasi, satu musim, tanpa aturan bersama"
+  },
+  "original": {
+    "text": "Tiga lembaga mencatat angka berbeda untuk musim yang sama",
+    "lang": "id"
+  },
+  "outlet": "Example Daily",
+  "published_date": "2026-06-11",
+  "url": "https://example.org/example-daily/three-tallies",
+  "og": {
+    "image_path": "/assets/og/mbg-poisoning.jpg",
+    "fetched_at": "2026-07-20",
+    "attribution": "Image courtesy of Example Daily",
+    "fallback": false
+  },
+  "tags": [
+    "competing-counts",
+    "missing-link",
+    "hidden-stakeholder"
+  ],
+  "provenance": {
+    "analyzed_by": "model-analyst",
+    "narrated_by": "model-narrator",
+    "source_count": 3,
+    "computed_at": "2026-07-20T09:00:00Z",
+    "run_id": "run-fixture-001"
+  },
+  "family": {
+    "skeleton": "three institutions publish different tallies for one season",
+    "members": [
+      {
+        "outlet": "Example Daily",
+        "headline": "Tiga lembaga mencatat angka berbeda untuk musim yang sama",
+        "url": "https://example.org/example-daily/three-tallies",
+        "date": "2026-06-11"
+      },
+      {
+        "outlet": "Example Wire",
+        "headline": "Angka musim ini berbeda di tiga register",
+        "url": "https://example.org/example-wire/three-registers",
+        "date": "2026-06-12"
+      }
+    ]
+  },
+  "scaffold_default": "S3",
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "What would connect the named cause to the proposed step?",
+          "id": "Apa yang menghubungkan sebab yang disebut dengan langkah yang diusulkan?"
+        },
+        "options": [
+          {
+            "en": "A document that traces one to the other",
+            "id": "Dokumen yang menelusuri satu ke lainnya"
+          },
+          {
+            "en": "A louder headline",
+            "id": "Judul yang lebih keras"
+          },
+          {
+            "en": "More quotes from the same desk",
+            "id": "Lebih banyak kutipan dari meja yang sama"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The step is asserted without a linking document, which is why the edge reads as missing.",
+          "id": "Langkah itu dinyatakan tanpa dokumen penghubung, sebab itu tepi tersebut tercatat hilang."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "Against what base should the tallies be read?",
+          "id": "Terhadap basis apa rekapitulasi itu dibaca?"
+        },
+        "options": [
+          {
+            "en": "The number of headlines",
+            "id": "Jumlah judul berita"
+          },
+          {
+            "en": "The population each register covers",
+            "id": "Populasi yang dicakup tiap register"
+          },
+          {
+            "en": "The length of the article",
+            "id": "Panjang artikel"
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "Each register covers a different intake population, so the totals are not interchangeable.",
+          "id": "Tiap register mencakup populasi penerimaan berbeda, sehingga totalnya tidak dapat dipertukarkan."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "Who meets the change first?",
+          "id": "Siapa yang menghadapi perubahan lebih dulu?"
+        },
+        "options": [
+          {
+            "en": "Households in the pilot districts",
+            "id": "Rumah tangga di distrik percontohan"
+          },
+          {
+            "en": "The national desk",
+            "id": "Meja nasional"
+          },
+          {
+            "en": "Nobody in particular",
+            "id": "Tidak ada pihak tertentu"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The incidence lanes place the pilot districts in the weeks column.",
+          "id": "Jalur insidensi menempatkan distrik percontohan pada kolom pekan."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Which tally do you expect the article to quote?",
+      "id": "Rekapitulasi mana yang Anda perkirakan dikutip artikel?"
+    },
+    "options": [
+      {
+        "en": "The highest one",
+        "id": "Yang tertinggi"
+      },
+      {
+        "en": "The lowest one",
+        "id": "Yang terendah"
+      },
+      {
+        "en": "All three together",
+        "id": "Ketiganya sekaligus"
+      }
+    ]
+  },
+  "panels": [
+    {
+      "type": "claim_map",
+      "el_id": "p-claim",
+      "spine": [
+        {
+          "el_id": "s-1",
+          "label": {
+            "en": "Programme scale as reported",
+            "id": "Skala program seperti dilaporkan"
+          },
+          "value": {
+            "amount": 63130000,
+            "unit": "people",
+            "display": {
+              "en": "63.13M recipients",
+              "id": "63,13 juta penerima"
+            },
+            "source_id": "id-agency-program-2026",
+            "as_of": "2026-05-31",
+            "flags": [
+              "self_reported"
+            ]
+          }
+        },
+        {
+          "el_id": "s-2",
+          "label": {
+            "en": "Recorded intake reports",
+            "id": "Laporan penerimaan tercatat"
+          }
+        },
+        {
+          "el_id": "s-3",
+          "label": {
+            "en": "Cause named in the article",
+            "id": "Sebab yang disebut artikel"
+          }
+        },
+        {
+          "el_id": "s-4",
+          "label": {
+            "en": "Call to halt the programme",
+            "id": "Seruan menghentikan program"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "el_id": "e-1",
+          "from": "s-1",
+          "to": "s-2",
+          "status": "supported",
+          "ev": {
+            "quote": "The register lists intake by district for the period.",
+            "source_id": "id-agency-health-2026",
+            "why": {
+              "en": "The register covers the same districts and period as the claim.",
+              "id": "Register mencakup distrik dan periode yang sama dengan klaim."
+            }
+          }
+        },
+        {
+          "el_id": "e-2",
+          "from": "s-2",
+          "to": "s-3",
+          "status": "disputed",
+          "ev": {
+            "quote": "Two tallies cover the same period under different intake rules.",
+            "source_id": "id-monitor-network-2026",
+            "why": {
+              "en": "Two tallies read the same period under different intake rules.",
+              "id": "Dua rekapitulasi membaca periode yang sama dengan aturan penerimaan berbeda."
+            }
+          }
+        },
+        {
+          "el_id": "e-3",
+          "from": "s-3",
+          "to": "s-4",
+          "status": "missing",
+          "ev": {
+            "quote": "The article moves from cause to remedy in one sentence.",
+            "why": {
+              "en": "No cited document connects the named cause to the proposed step.",
+              "id": "Tidak ada dokumen terkutip yang menghubungkan sebab dengan langkah yang diusulkan."
+            }
+          }
+        },
+        {
+          "el_id": "e-4",
+          "from": "s-1",
+          "to": "s-3",
+          "status": "unsourced",
+          "ev": {
+            "quote": "The article asserts the link without attribution.",
+            "why": {
+              "en": "The assertion carries no attribution of any kind.",
+              "id": "Pernyataan itu tidak disertai atribusi apa pun."
+            }
+          }
+        }
+      ],
+      "hidden": [
+        {
+          "el_id": "h-1",
+          "label": {
+            "en": "District kitchens under contract",
+            "id": "Dapur distrik yang terikat kontrak"
+          },
+          "value": {
+            "amount": 1240,
+            "unit": "count",
+            "display": {
+              "en": "1,240 kitchens",
+              "id": "1.240 dapur"
+            },
+            "source_id": "id-agency-program-2026"
+          },
+          "why_hidden": {
+            "en": "The article omits the operators who hold the contracts.",
+            "id": "Artikel menghilangkan operator pemegang kontrak."
+          },
+          "ev": {
+            "quote": "The contract register lists the operating kitchens for the period.",
+            "source_id": "id-agency-program-2026"
+          }
+        },
+        {
+          "el_id": "h-2",
+          "label": {
+            "en": "Regional inspection offices",
+            "id": "Kantor inspeksi wilayah"
+          },
+          "why_hidden": {
+            "en": "The article names no office that inspects the sites.",
+            "id": "Artikel tidak menyebut kantor yang memeriksa lokasi."
+          }
+        }
+      ]
+    },
+    {
+      "type": "dueling",
+      "el_id": "p-duel",
+      "counts": [
+        {
+          "el_id": "c-1",
+          "who": "Agency B",
+          "method": {
+            "en": "Reports confirmed through laboratory intake.",
+            "id": "Laporan yang dikonfirmasi lewat penerimaan laboratorium."
+          },
+          "period": "Jan to Oct 2025",
+          "value": {
+            "amount": 6517,
+            "unit": "count",
+            "display": {
+              "en": "6,517 reports",
+              "id": "6.517 laporan"
+            },
+            "source_id": "id-agency-health-2026"
+          }
+        },
+        {
+          "el_id": "c-2",
+          "who": "Agency A",
+          "method": {
+            "en": "Reports logged by the programme desk.",
+            "id": "Laporan yang dicatat meja program."
+          },
+          "period": "Jan to Oct 2025",
+          "value": {
+            "amount": 9089,
+            "unit": "count",
+            "display": {
+              "en": "9,089 reports",
+              "id": "9.089 laporan"
+            },
+            "source_id": "id-agency-program-2026"
+          }
+        },
+        {
+          "el_id": "c-3",
+          "who": "Monitor Network",
+          "method": {
+            "en": "Reports collected from district volunteers.",
+            "id": "Laporan yang dikumpulkan relawan distrik."
+          },
+          "period": "Jan to Oct 2025",
+          "value": {
+            "amount": 8649,
+            "unit": "count",
+            "display": {
+              "en": "8,649 reports",
+              "id": "8.649 laporan"
+            },
+            "source_id": "id-monitor-network-2026"
+          }
+        }
+      ],
+      "rule_line": {
+        "en": "Different methods, different windows. Every tally stands on its own rules.",
+        "id": "Metode berbeda, jendela waktu berbeda. Setiap rekapitulasi berdiri di atas aturannya sendiri."
+      }
+    },
+    {
+      "type": "incidence",
+      "el_id": "p-inc",
+      "horizons": [
+        {
+          "key": "weeks",
+          "label": {
+            "en": "Weeks",
+            "id": "Pekan"
+          }
+        },
+        {
+          "key": "months",
+          "label": {
+            "en": "Months",
+            "id": "Bulan"
+          }
+        },
+        {
+          "key": "beyond",
+          "label": {
+            "en": "Beyond",
+            "id": "Setelahnya"
+          }
+        }
+      ],
+      "lanes": [
+        {
+          "el_id": "l-1",
+          "who": {
+            "en": "Households in the pilot districts",
+            "id": "Rumah tangga di distrik percontohan"
+          },
+          "cells": [
+            {
+              "horizon": "weeks",
+              "text": {
+                "en": "Delivery pauses at the listed sites.",
+                "id": "Pengiriman berhenti sementara di lokasi terdaftar."
+              },
+              "value": {
+                "amount": 1240,
+                "unit": "count",
+                "display": {
+                  "en": "1,240 sites",
+                  "id": "1.240 lokasi"
+                },
+                "source_id": "id-agency-program-2026"
+              },
+              "ev": {
+                "quote": "The site register lists the operating locations for the period.",
+                "source_id": "id-agency-program-2026"
+              }
+            },
+            {
+              "horizon": "months",
+              "text": {
+                "en": "Districts reassign the supply contracts.",
+                "id": "Distrik mengalihkan kontrak pasokan."
+              }
+            },
+            {
+              "horizon": "beyond",
+              "text": {
+                "en": "Budget lines return to the annual cycle.",
+                "id": "Pos anggaran kembali ke siklus tahunan."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "echo": null,
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "n-1",
+          "text": "The claim map records one step that no cited document connects.",
+          "els": [
+            "p-claim",
+            "e-3"
+          ]
+        },
+        {
+          "id": "n-2",
+          "text": "Three registers report the same season under different intake rules.",
+          "els": [
+            "p-duel",
+            "c-1"
+          ]
+        },
+        {
+          "id": "n-3",
+          "text": "Households in the pilot districts meet the change first.",
+          "els": [
+            "p-inc",
+            "l-1"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "n-1",
+          "text": "Peta klaim mencatat satu langkah yang tidak dihubungkan dokumen terkutip.",
+          "els": [
+            "p-claim",
+            "e-3"
+          ]
+        },
+        {
+          "id": "n-2",
+          "text": "Tiga register melaporkan musim yang sama dengan aturan penerimaan berbeda.",
+          "els": [
+            "p-duel",
+            "c-1"
+          ]
+        },
+        {
+          "id": "n-3",
+          "text": "Rumah tangga di distrik percontohan menghadapi perubahan lebih dulu.",
+          "els": [
+            "p-inc",
+            "l-1"
+          ]
+        }
+      ]
+    }
+  },
+  "manifest": {
+    "run_id": "run-fixture-001",
+    "generated_at": "2026-07-20T09:00:00Z",
+    "steps": [
+      {
+        "role": "A7",
+        "model": "model-narrator",
+        "started_at": "2026-07-20T08:40:00Z",
+        "finished_at": "2026-07-20T08:52:00Z",
+        "input_hash": "hash-run-fixture-001-a7"
+      },
+      {
+        "role": "A11",
+        "model": "model-guard",
+        "started_at": "2026-07-20T08:53:00Z",
+        "finished_at": "2026-07-20T08:58:00Z",
+        "input_hash": "hash-run-fixture-001-a11"
+      }
+    ],
+    "gates": {
+      "symmetry": {
+        "verdict": "pass",
+        "token": "af1e1b12f2ca19789e7572493b799b52a01d846f3a85fa4b07d58add0efebdb0"
+      },
+      "fidelity": {
+        "verdict": "pass",
+        "token": "af1e1b12f2ca19789e7572493b799b52a01d846f3a85fa4b07d58add0efebdb0"
+      }
+    }
+  },
+  "counts": {
+    "missing": 1,
+    "unsourced": 2,
+    "disputed": 1,
+    "supported": 1,
+    "hidden": 2,
+    "conflicts": 3
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "pack": "id",
+  "updated_at": "2026-07-22T10:00:00Z",
+  "items": [
+    {
+      "narrative_id": "mbg-poisoning",
+      "slot": "hero"
+    },
+    {
+      "narrative_id": "ppn-panic",
+      "slot": "compact"
+    }
+  ]
+}

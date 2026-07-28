@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "date": "2026-07-21",
+      "narrative_id": "mbg-poisoning",
+      "summary": {
+        "en": "A reader flagged the intake window on one register. The entry is open while the register is re read.",
+        "id": "Pembaca menandai jendela penerimaan pada satu register. Entri ini terbuka selama register itu dibaca ulang."
+      },
+      "status": "under_review"
+    }
+  ]
+}

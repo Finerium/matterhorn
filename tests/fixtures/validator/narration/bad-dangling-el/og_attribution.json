@@ -1,0 +1,26 @@
+{
+  "policy": "Cached og images render only as attributed link previews with the outlet name and an outbound link. Status fallback means the styled placeholder ships.",
+  "entries": [
+    {
+      "narrative_id": "mbg-poisoning",
+      "image_url_original": "https://example.org/example-daily/three-tallies.jpg",
+      "outlet": "Example Daily",
+      "fetched_at": "2026-07-20",
+      "status": "fetched"
+    },
+    {
+      "narrative_id": "ppn-panic",
+      "image_url_original": "https://example.org/example-wire/one-line.jpg",
+      "outlet": "Example Wire",
+      "fetched_at": "2026-07-20",
+      "status": "fetched"
+    },
+    {
+      "narrative_id": "tariffs-pay",
+      "image_url_original": null,
+      "outlet": "Example Review",
+      "fetched_at": null,
+      "status": "fallback"
+    }
+  ]
+}

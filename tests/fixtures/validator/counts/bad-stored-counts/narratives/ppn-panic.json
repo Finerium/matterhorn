@@ -1,0 +1,540 @@
+{
+  "id": "ppn-panic",
+  "pack": "id",
+  "lean": "gov",
+  "status": "published",
+  "headline": {
+    "en": "One line, read as the whole table",
+    "id": "Satu pos, dibaca sebagai seluruh tabel"
+  },
+  "original": {
+    "text": "Satu pos anggaran dibaca sebagai keseluruhan tabel",
+    "lang": "id"
+  },
+  "outlet": "Example Wire",
+  "published_date": "2026-06-18",
+  "url": "https://example.org/example-wire/one-line",
+  "og": {
+    "image_path": "/assets/og/ppn-panic.jpg",
+    "fetched_at": "2026-07-20",
+    "attribution": "Image courtesy of Example Wire",
+    "fallback": false
+  },
+  "tags": [
+    "scope-inflation",
+    "no-denominator",
+    "emotional-trigger"
+  ],
+  "provenance": {
+    "analyzed_by": "model-analyst",
+    "narrated_by": "model-narrator",
+    "source_count": 4,
+    "computed_at": "2026-07-21T09:00:00Z",
+    "run_id": "run-fixture-002"
+  },
+  "family": {
+    "skeleton": "one budget line stands in for the whole table",
+    "members": [
+      {
+        "outlet": "Example Wire",
+        "headline": "Satu pos anggaran dibaca sebagai keseluruhan tabel",
+        "url": "https://example.org/example-wire/one-line",
+        "date": "2026-06-18"
+      }
+    ]
+  },
+  "scaffold_default": "S2",
+  "sparring": {
+    "questions": [
+      {
+        "move": "denominator",
+        "q": {
+          "en": "What total does the named line sit inside?",
+          "id": "Pos yang disebut itu berada di dalam total berapa?"
+        },
+        "options": [
+          {
+            "en": "The total for the year",
+            "id": "Total untuk tahun berjalan"
+          },
+          {
+            "en": "The article word count",
+            "id": "Jumlah kata artikel"
+          },
+          {
+            "en": "Nothing, it stands alone",
+            "id": "Tidak ada, pos itu berdiri sendiri"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The scale panel places the line inside the yearly total taken from the budget table.",
+          "id": "Panel skala menempatkan pos itu di dalam total tahunan yang diambil dari tabel anggaran."
+        }
+      },
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "What sets the scope the reaction responds to?",
+          "id": "Apa yang menetapkan cakupan yang direspons reaksi itu?"
+        },
+        "options": [
+          {
+            "en": "A published scope document",
+            "id": "Dokumen cakupan yang diterbitkan"
+          },
+          {
+            "en": "The tone of the headline",
+            "id": "Nada judul"
+          },
+          {
+            "en": "The order of paragraphs",
+            "id": "Urutan paragraf"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "No scope document is cited, which is why that edge reads as missing.",
+          "id": "Tidak ada dokumen cakupan yang dikutip, sebab itu tepi tersebut tercatat hilang."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "Which rows end if the allocation ends?",
+          "id": "Baris mana yang berakhir jika alokasi berakhir?"
+        },
+        "options": [
+          {
+            "en": "The contracted operations row",
+            "id": "Baris operasi yang dikontrakkan"
+          },
+          {
+            "en": "Every row at once",
+            "id": "Semua baris sekaligus"
+          },
+          {
+            "en": "No row at all",
+            "id": "Tidak ada baris sama sekali"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The money flow panel marks the contracted row as severed and leaves the other standing.",
+          "id": "Panel aliran dana menandai baris yang dikontrakkan sebagai terputus dan membiarkan yang lain berdiri."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Which figure do you expect the article to lead with?",
+      "id": "Angka mana yang Anda perkirakan dipakai artikel sebagai pembuka?"
+    },
+    "options": [
+      {
+        "en": "The single line",
+        "id": "Pos tunggal"
+      },
+      {
+        "en": "The yearly total",
+        "id": "Total tahunan"
+      },
+      {
+        "en": "Both side by side",
+        "id": "Keduanya berdampingan"
+      }
+    ]
+  },
+  "panels": [
+    {
+      "type": "claim_map",
+      "el_id": "p-claim",
+      "spine": [
+        {
+          "el_id": "s-1",
+          "label": {
+            "en": "Line named in the article",
+            "id": "Pos yang disebut artikel"
+          },
+          "value": {
+            "amount": 88.15,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp88.15T",
+              "id": "Rp88,15 T"
+            },
+            "source_id": "id-agency-program-2026"
+          }
+        },
+        {
+          "el_id": "s-2",
+          "label": {
+            "en": "Scope the article implies",
+            "id": "Cakupan yang disiratkan artikel"
+          }
+        },
+        {
+          "el_id": "s-3",
+          "label": {
+            "en": "Reaction the article reports",
+            "id": "Reaksi yang dilaporkan artikel"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "el_id": "e-1",
+          "from": "s-1",
+          "to": "s-2",
+          "status": "supported",
+          "ev": {
+            "quote": "The budget table lists the line and the total it sits inside.",
+            "source_id": "id-agency-budget-2026",
+            "why": {
+              "en": "The table names both the line and the total.",
+              "id": "Tabel menyebut pos sekaligus totalnya."
+            }
+          }
+        },
+        {
+          "el_id": "e-2",
+          "from": "s-2",
+          "to": "s-3",
+          "status": "missing",
+          "ev": {
+            "quote": "The article reports the reaction without a scope document.",
+            "why": {
+              "en": "No document sets the scope the reaction responds to.",
+              "id": "Tidak ada dokumen yang menetapkan cakupan yang direspons reaksi itu."
+            }
+          }
+        },
+        {
+          "el_id": "e-3",
+          "from": "s-1",
+          "to": "s-3",
+          "status": "unsourced",
+          "ev": {
+            "quote": "The article ties the line to the reaction without attribution.",
+            "why": {
+              "en": "The link is asserted with no attribution.",
+              "id": "Kaitan itu dinyatakan tanpa atribusi."
+            }
+          }
+        }
+      ],
+      "hidden": [
+        {
+          "el_id": "h-1",
+          "label": {
+            "en": "Offices that administer the line",
+            "id": "Kantor yang mengelola pos itu"
+          },
+          "value": {
+            "amount": 599.44,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp599.44T",
+              "id": "Rp599,44 T"
+            },
+            "source_id": "id-agency-budget-2026"
+          },
+          "why_hidden": {
+            "en": "The article names no office that administers the line.",
+            "id": "Artikel tidak menyebut kantor yang mengelola pos itu."
+          },
+          "ev": {
+            "quote": "The budget table assigns the line to a named office.",
+            "source_id": "id-agency-budget-2026"
+          }
+        }
+      ]
+    },
+    {
+      "type": "scale_check",
+      "el_id": "p-scale",
+      "denominator": {
+        "label": {
+          "en": "Total spending for the year",
+          "id": "Total belanja tahun berjalan"
+        },
+        "value": {
+          "amount": 3842.7,
+          "unit": "IDR_T",
+          "display": {
+            "en": "Rp3,842.7T",
+            "id": "Rp3.842,7 T"
+          },
+          "source_id": "id-agency-budget-2026"
+        }
+      },
+      "segments": [
+        {
+          "el_id": "seg-1",
+          "label": {
+            "en": "The line under discussion",
+            "id": "Pos yang sedang dibahas"
+          },
+          "value": {
+            "amount": 88.15,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp88.15T",
+              "id": "Rp88,15 T"
+            },
+            "source_id": "id-agency-program-2026"
+          }
+        },
+        {
+          "el_id": "seg-2",
+          "label": {
+            "en": "Every other spending line",
+            "id": "Seluruh pos belanja lainnya"
+          },
+          "value": {
+            "amount": 3754.55,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp3,754.55T",
+              "id": "Rp3.754,55 T"
+            },
+            "source_id": "id-agency-budget-2026"
+          }
+        }
+      ],
+      "takeaway": {
+        "en": "The article names the smaller line without naming the total it sits inside.",
+        "id": "Artikel menyebut pos yang lebih kecil tanpa menyebut total yang memuatnya."
+      },
+      "context_chips": [
+        {
+          "el_id": "chip-1",
+          "label": {
+            "en": "Annual interest line, for comparison",
+            "id": "Pos bunga tahunan, sebagai pembanding"
+          },
+          "value": {
+            "amount": 599.44,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp599.44T",
+              "id": "Rp599,44 T"
+            },
+            "source_id": "id-agency-budget-2026"
+          }
+        }
+      ]
+    },
+    {
+      "type": "money_flow",
+      "el_id": "p-flow",
+      "root": {
+        "label": {
+          "en": "Programme allocation",
+          "id": "Alokasi program"
+        },
+        "value": {
+          "amount": 88.15,
+          "unit": "IDR_T",
+          "display": {
+            "en": "Rp88.15T",
+            "id": "Rp88,15 T"
+          },
+          "source_id": "id-agency-program-2026"
+        }
+      },
+      "rows": [
+        {
+          "el_id": "row-1",
+          "label": {
+            "en": "District kitchen operations",
+            "id": "Operasi dapur distrik"
+          },
+          "value": {
+            "amount": 52.9,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp52.9T",
+              "id": "Rp52,9 T"
+            },
+            "source_id": "id-agency-program-2026"
+          },
+          "severed_if_stopped": true,
+          "note": {
+            "en": "The contracts end with the allocation.",
+            "id": "Kontrak berakhir bersama alokasi."
+          }
+        },
+        {
+          "el_id": "row-2",
+          "label": {
+            "en": "Regional logistics",
+            "id": "Logistik wilayah"
+          },
+          "value": {
+            "amount": 35.25,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp35.25T",
+              "id": "Rp35,25 T"
+            },
+            "source_id": "id-agency-budget-2026"
+          },
+          "severed_if_stopped": false
+        }
+      ]
+    },
+    {
+      "type": "family",
+      "el_id": "p-family"
+    }
+  ],
+  "echo": {
+    "type": "echo",
+    "el_id": "p-echo",
+    "current_motif": {
+      "en": "A single line is read as the whole table.",
+      "id": "Satu pos dibaca sebagai keseluruhan tabel."
+    },
+    "historical": {
+      "case_id": "B-01",
+      "motif": {
+        "en": "A single line stood in for the whole table.",
+        "id": "Satu pos berdiri mewakili keseluruhan tabel."
+      },
+      "outcome": {
+        "en": "The commission recorded the disputed items and the office published a revised table.",
+        "id": "Komisi mencatat butir yang diperselisihkan dan kantor menerbitkan tabel revisi."
+      },
+      "citations": [
+        "id-rights-commission-2019",
+        "id-archive-mirror-2025"
+      ]
+    },
+    "disclaimer_key": "echo_disclaimer"
+  },
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "n-1",
+          "text": "The claim map records one step with no scope document behind it.",
+          "els": [
+            "p-claim",
+            "e-2"
+          ]
+        },
+        {
+          "id": "n-2",
+          "text": "The scale panel places the named line inside the yearly total.",
+          "els": [
+            "p-scale",
+            "seg-1"
+          ]
+        },
+        {
+          "id": "n-3",
+          "text": "The money flow panel marks which row ends with the allocation.",
+          "els": [
+            "p-flow",
+            "row-1"
+          ]
+        },
+        {
+          "id": "n-4",
+          "text": "The family panel lists the outlets that carried the same skeleton.",
+          "els": [
+            "p-family"
+          ]
+        },
+        {
+          "id": "n-5",
+          "text": "The echo panel shows what a structurally similar framing produced in the past.",
+          "els": [
+            "p-echo"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "n-1",
+          "text": "Peta klaim mencatat satu langkah tanpa dokumen cakupan di belakangnya.",
+          "els": [
+            "p-claim",
+            "e-2"
+          ]
+        },
+        {
+          "id": "n-2",
+          "text": "Panel skala menempatkan pos yang disebut di dalam total tahunan.",
+          "els": [
+            "p-scale",
+            "seg-1"
+          ]
+        },
+        {
+          "id": "n-3",
+          "text": "Panel aliran dana menandai baris mana yang berakhir bersama alokasi.",
+          "els": [
+            "p-flow",
+            "row-1"
+          ]
+        },
+        {
+          "id": "n-4",
+          "text": "Panel keluarga mendaftar media yang membawa kerangka yang sama.",
+          "els": [
+            "p-family"
+          ]
+        },
+        {
+          "id": "n-5",
+          "text": "Panel gema menampilkan apa yang dihasilkan kerangka serupa pada masa lalu.",
+          "els": [
+            "p-echo"
+          ]
+        }
+      ]
+    }
+  },
+  "manifest": {
+    "run_id": "run-fixture-002",
+    "generated_at": "2026-07-21T09:00:00Z",
+    "steps": [
+      {
+        "role": "A7",
+        "model": "model-narrator",
+        "started_at": "2026-07-21T08:40:00Z",
+        "finished_at": "2026-07-21T08:52:00Z",
+        "input_hash": "hash-run-fixture-002-a7"
+      },
+      {
+        "role": "A11",
+        "model": "model-guard",
+        "started_at": "2026-07-21T08:53:00Z",
+        "finished_at": "2026-07-21T08:58:00Z",
+        "input_hash": "hash-run-fixture-002-a11"
+      }
+    ],
+    "gates": {
+      "symmetry": {
+        "verdict": "pass",
+        "token": "ba6dfec64fdb218192728f565869124ce8249705d0f79b23a93c1816567d7b8f"
+      },
+      "fidelity": {
+        "verdict": "pass",
+        "token": "ba6dfec64fdb218192728f565869124ce8249705d0f79b23a93c1816567d7b8f"
+      }
+    }
+  },
+  "counts": {
+    "missing": 1,
+    "unsourced": 1,
+    "disputed": 0,
+    "supported": 1,
+    "hidden": 1
+  }
+}

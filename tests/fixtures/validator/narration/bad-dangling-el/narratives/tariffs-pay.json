@@ -1,0 +1,426 @@
+{
+  "id": "tariffs-pay",
+  "pack": "en",
+  "lean": "neutral",
+  "status": "published",
+  "headline": {
+    "en": "A projection and a receipt are not the same figure",
+    "id": "Proyeksi dan penerimaan bukan angka yang sama"
+  },
+  "original": {
+    "text": "A projection and a receipt are not the same figure",
+    "lang": "en"
+  },
+  "outlet": "Example Review",
+  "published_date": "2026-06-24",
+  "url": "https://example.org/example-review/projection-and-receipt",
+  "og": {
+    "image_path": null,
+    "fetched_at": null,
+    "attribution": "Placeholder render, Example Review",
+    "fallback": true
+  },
+  "tags": [
+    "no-counterfactual",
+    "incidence-blind",
+    "single-source"
+  ],
+  "provenance": {
+    "analyzed_by": "model-analyst",
+    "narrated_by": "model-narrator",
+    "source_count": 3,
+    "computed_at": "2026-07-22T09:00:00Z",
+    "run_id": "run-fixture-003"
+  },
+  "family": {
+    "skeleton": "a ten year projection is quoted as a present receipt",
+    "members": [
+      {
+        "outlet": "Example Review",
+        "headline": "A projection and a receipt are not the same figure",
+        "url": "https://example.org/example-review/projection-and-receipt",
+        "date": "2026-06-24"
+      }
+    ]
+  },
+  "scaffold_default": "S1",
+  "sparring": {
+    "questions": [
+      {
+        "move": "denominator",
+        "q": {
+          "en": "Over what window is the projection stated?",
+          "id": "Dalam jendela waktu apa proyeksi itu dinyatakan?"
+        },
+        "options": [
+          {
+            "en": "One quarter",
+            "id": "Satu kuartal"
+          },
+          {
+            "en": "Ten years",
+            "id": "Sepuluh tahun"
+          },
+          {
+            "en": "The article does not say",
+            "id": "Artikel tidak menyebutkan"
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The projection tables state a ten year window that the article does not repeat.",
+          "id": "Tabel proyeksi menyatakan jendela sepuluh tahun yang tidak diulang artikel."
+        }
+      },
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "What carries a projection to a burden claim?",
+          "id": "Apa yang membawa proyeksi menjadi klaim beban?"
+        },
+        "options": [
+          {
+            "en": "A cited pass through study",
+            "id": "Kajian pelimpahan biaya yang dikutip"
+          },
+          {
+            "en": "A stronger adjective",
+            "id": "Kata sifat yang lebih kuat"
+          },
+          {
+            "en": "A second headline",
+            "id": "Judul kedua"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "That step is asserted with no cited document, which is why the edge reads as missing.",
+          "id": "Langkah itu dinyatakan tanpa dokumen terkutip, sebab itu tepi tersebut tercatat hilang."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "Which party is absent from the article?",
+          "id": "Pihak mana yang absen dari artikel?"
+        },
+        "options": [
+          {
+            "en": "The importers of record",
+            "id": "Importir tercatat"
+          },
+          {
+            "en": "The revenue service",
+            "id": "Dinas penerimaan"
+          },
+          {
+            "en": "The budget office",
+            "id": "Kantor anggaran"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The hidden list names the party that files the entries and never appears in the copy.",
+          "id": "Daftar tersembunyi menyebut pihak yang mengajukan dokumen masuk dan tidak pernah muncul di teks."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Which figure do you expect the headline to use?",
+      "id": "Angka mana yang Anda perkirakan dipakai judul?"
+    },
+    "options": [
+      {
+        "en": "The ten year projection",
+        "id": "Proyeksi sepuluh tahun"
+      },
+      {
+        "en": "The receipts to date",
+        "id": "Penerimaan sampai saat ini"
+      },
+      {
+        "en": "Neither figure",
+        "id": "Tidak keduanya"
+      }
+    ]
+  },
+  "panels": [
+    {
+      "type": "claim_map",
+      "el_id": "p-claim",
+      "spine": [
+        {
+          "el_id": "s-1",
+          "label": {
+            "en": "Projected revenue over ten years",
+            "id": "Proyeksi penerimaan selama sepuluh tahun"
+          },
+          "value": {
+            "amount": 2500,
+            "unit": "USD_B",
+            "display": {
+              "en": "USD 2,500B",
+              "id": "USD 2.500 M"
+            },
+            "source_id": "en-budget-office-2026"
+          }
+        },
+        {
+          "el_id": "s-2",
+          "label": {
+            "en": "Receipts recorded so far",
+            "id": "Penerimaan yang tercatat sejauh ini"
+          },
+          "value": {
+            "amount": 118,
+            "unit": "USD_B",
+            "display": {
+              "en": "USD 118B",
+              "id": "USD 118 M"
+            },
+            "source_id": "en-revenue-service-2026",
+            "as_of": "2026-06-30"
+          }
+        },
+        {
+          "el_id": "s-3",
+          "label": {
+            "en": "Who carries the cost",
+            "id": "Siapa yang menanggung biaya"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "el_id": "e-1",
+          "from": "s-1",
+          "to": "s-2",
+          "status": "supported",
+          "ev": {
+            "quote": "The receipts summary reports the same schedule as the projection tables.",
+            "source_id": "en-revenue-service-2026",
+            "why": {
+              "en": "Both documents describe the same schedule.",
+              "id": "Kedua dokumen menggambarkan jadwal yang sama."
+            }
+          }
+        },
+        {
+          "el_id": "e-2",
+          "from": "s-2",
+          "to": "s-3",
+          "status": "disputed",
+          "ev": {
+            "quote": "The distributional note reaches a different split than the article states.",
+            "source_id": "en-policy-institute-2026",
+            "why": {
+              "en": "Two documents split the cost differently.",
+              "id": "Dua dokumen membagi biaya secara berbeda."
+            }
+          }
+        },
+        {
+          "el_id": "e-3",
+          "from": "s-1",
+          "to": "s-3",
+          "status": "missing",
+          "ev": {
+            "quote": "The article moves from projection to burden without a step in between.",
+            "why": {
+              "en": "No cited document carries the projection to the burden claim.",
+              "id": "Tidak ada dokumen terkutip yang membawa proyeksi ke klaim beban."
+            }
+          }
+        }
+      ],
+      "hidden": [
+        {
+          "el_id": "h-1",
+          "label": {
+            "en": "Importers of record",
+            "id": "Importir tercatat"
+          },
+          "why_hidden": {
+            "en": "The article names no party that files the entries.",
+            "id": "Artikel tidak menyebut pihak yang mengajukan dokumen masuk."
+          }
+        }
+      ]
+    },
+    {
+      "type": "options",
+      "el_id": "p-options",
+      "options": [
+        {
+          "el_id": "o-1",
+          "label": {
+            "en": "Keep the current schedule",
+            "id": "Pertahankan jadwal saat ini"
+          },
+          "proponent": {
+            "name": "Budget Office",
+            "source_id": "en-budget-office-2026"
+          },
+          "tradeoff": {
+            "en": "Receipts hold and the price path stays where it is.",
+            "id": "Penerimaan bertahan dan jalur harga tetap seperti sekarang."
+          }
+        },
+        {
+          "el_id": "o-2",
+          "label": {
+            "en": "Phase the schedule over a longer window",
+            "id": "Sebarkan jadwal ke jendela lebih panjang"
+          },
+          "proponent": {
+            "name": "Revenue Service",
+            "source_id": "en-revenue-service-2026"
+          },
+          "tradeoff": {
+            "en": "Receipts arrive later and the price path moves more slowly.",
+            "id": "Penerimaan datang lebih lambat dan jalur harga bergerak lebih pelan."
+          }
+        },
+        {
+          "el_id": "o-3",
+          "label": {
+            "en": "Offset the schedule with a rebate",
+            "id": "Imbangi jadwal dengan potongan"
+          },
+          "proponent": {
+            "name": "Policy Institute",
+            "source_id": "en-policy-institute-2026"
+          },
+          "tradeoff": {
+            "en": "The split changes and the administration cost rises.",
+            "id": "Pembagian berubah dan biaya administrasi naik."
+          }
+        }
+      ],
+      "playbook": [
+        {
+          "el_id": "pb-1",
+          "action": {
+            "en": "Ask which base the share is taken from.",
+            "id": "Tanyakan basis mana yang dipakai menghitung porsi."
+          },
+          "channel": {
+            "en": "Written question to the committee",
+            "id": "Pertanyaan tertulis ke komite"
+          }
+        },
+        {
+          "el_id": "pb-2",
+          "action": {
+            "en": "Ask for the period the table covers.",
+            "id": "Tanyakan periode yang dicakup tabel."
+          },
+          "channel": {
+            "en": "Public records request",
+            "id": "Permintaan arsip publik"
+          }
+        }
+      ]
+    },
+    {
+      "type": "family",
+      "el_id": "p-family"
+    }
+  ],
+  "echo": null,
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "n-1",
+          "text": "The claim map lists a party that files the entries and never appears in the copy.",
+          "els": [
+            "p-claim",
+            "h-1"
+          ]
+        },
+        {
+          "id": "n-2",
+          "text": "The options panel sets out three published positions without ranking them.",
+          "els": [
+            "p-options",
+            "o-nonexistent"
+          ]
+        },
+        {
+          "id": "n-3",
+          "text": "The family panel lists the outlets that carried the same skeleton.",
+          "els": [
+            "p-family"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "n-1",
+          "text": "Peta klaim mendaftar pihak yang mengajukan dokumen masuk dan tidak pernah muncul di teks.",
+          "els": [
+            "p-claim",
+            "h-1"
+          ]
+        },
+        {
+          "id": "n-2",
+          "text": "Panel opsi memaparkan tiga posisi yang diterbitkan tanpa memeringkatnya.",
+          "els": [
+            "p-options",
+            "o-1"
+          ]
+        },
+        {
+          "id": "n-3",
+          "text": "Panel keluarga mendaftar media yang membawa kerangka yang sama.",
+          "els": [
+            "p-family"
+          ]
+        }
+      ]
+    }
+  },
+  "manifest": {
+    "run_id": "run-fixture-003",
+    "generated_at": "2026-07-22T09:00:00Z",
+    "steps": [
+      {
+        "role": "A7",
+        "model": "model-narrator",
+        "started_at": "2026-07-22T08:40:00Z",
+        "finished_at": "2026-07-22T08:52:00Z",
+        "input_hash": "hash-run-fixture-003-a7"
+      },
+      {
+        "role": "A11",
+        "model": "model-guard",
+        "started_at": "2026-07-22T08:53:00Z",
+        "finished_at": "2026-07-22T08:58:00Z",
+        "input_hash": "hash-run-fixture-003-a11"
+      }
+    ],
+    "gates": {
+      "symmetry": {
+        "verdict": "pass",
+        "token": "4c3983bb48fb974d163a41d73e4e662ec4e9e7047b7be0b630c98b374e9b0def"
+      },
+      "fidelity": {
+        "verdict": "pass",
+        "token": "4c3983bb48fb974d163a41d73e4e662ec4e9e7047b7be0b630c98b374e9b0def"
+      }
+    }
+  },
+  "counts": {
+    "missing": 1,
+    "unsourced": 1,
+    "disputed": 1,
+    "supported": 1,
+    "hidden": 1
+  }
+}
