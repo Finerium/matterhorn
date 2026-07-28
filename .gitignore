@@ -1,0 +1,12 @@
+node_modules/
+.vercel/
+dist/
+.next/
+.DS_Store
+*.pdf
+*.zip
+*.gguf
+*.safetensors
+*.onnx
+.env
+.env.*
