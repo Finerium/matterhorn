@@ -1,15 +1,22 @@
 {
-  "gate": "2",
+  "gate": "3",
   "status": "in_progress",
   "completed_ac": [
     "gate0-green",
     "gate1-green",
+    "gate2-green",
+    "AC-INV-1",
+    "AC-INV-2",
     "AC-INV-3",
     "AC-INV-4",
-    "AC-INV-5"
+    "AC-INV-5",
+    "AC-INV-7",
+    "AC-INV-10",
+    "AC-GRAM-1..8",
+    "AC-GRAM-9-partial"
   ],
   "pending_stop_and_asks": [],
-  "updated": "2026-07-28T20:40:00+07:00",
+  "updated": "2026-07-28T23:00:00+07:00",
   "snapshot": {
     "sources": 44,
     "og_fetched": 8,

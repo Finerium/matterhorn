@@ -155,3 +155,29 @@ Decisions and findings (full agent output: session task wcv2o11q6):
   scan alone. Zip gaps W1 must fill for schema-valid seeds: sparring/prediction_tap filler
   where the zip lacks them, ID-locale renditions of EN-only zip copy, CF-5 synthetic
   percent-Values for ppn scale (all quarantined, deleted at Gate C).
+
+## GATE 2: GREEN (2026-07-28, ~22:55 WIB)
+- Reviewer claude-opus-5[1m]: cold re-runs all green; 42/42 sheet coverage independently
+  re-derived and probed (click + Enter); AC-INV specs audited + adversarially extended;
+  TRUE render-vs-render parity (zip DC runtime served over localhost, nine side-by-side
+  pairs + stopped state, committed under tests/e2e/__screenshots__/parity/): "fidelity
+  with defensible deviations, no unexplained visual drift". All 8 disclosed deviations
+  ruled defensible.
+- Fix round closed same-day: counts guard symmetric ({}/[] throw, proven), CF-1 teaser
+  implemented (register and code agree), aria-modal removed until the trap lands, money
+  honesty footer shipped as chrome, minors (padding, og attribution, family line, grep
+  width, echo fixture trim + assertion). Verified by orchestrator fresh runs: 100/100
+  unit, 30/30 e2e cold-spawn. PROCESS NOTE (disclosed deviation from the strict fix-loop):
+  no dedicated scoped re-review dispatch for this round; reviewer verdict was GREEN with
+  findings as follow-ups, all changes are one-liners re-verified fresh, and the Gate 3
+  entry review MUST re-probe: counts {} throw, compact teaser render, aria-modal absent,
+  money footer presence.
+- GATE 3 OBLIGATIONS (from rulings): provenance-chain sheet renders the full
+  manifest.steps chain; focus trap + aria-modal land together; restore the @supports
+  animation-timeline view() branch when a scroll container exists; date locale formatting;
+  compact og placeholder becomes bare "og:image" per zip parity (one-liner + baseline);
+  optional scale title derivation "How big is {display}?". GATE C OBLIGATION: A7 authors
+  the subject segment first (ScaleCheck emphasizes index 0).
+- REPORT LEDGER ITEMS: STATUS_LABEL unification (deliberate); spine-node subtitles and
+  family member framing quotes dropped for want of contract fields (deliberate, C2-safe);
+  panel titles fixed-generic except scale_check.
