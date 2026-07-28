@@ -27,6 +27,15 @@
         "id": "Kecemasan PPN 12%"
       },
       "pack": "id"
+    },
+    {
+      "id": "node-tariffs-pay",
+      "narrative_id": "tariffs-pay",
+      "label": {
+        "en": "Tariffs as the whole funding source",
+        "id": "Tarif impor sebagai seluruh sumber pembiayaan"
+      },
+      "pack": "en"
     }
   ],
   "links": [

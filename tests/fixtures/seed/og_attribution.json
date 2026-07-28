@@ -25,6 +25,14 @@
       "fetched_at": null,
       "status": "fallback",
       "note": "Seed placeholder. No image was fetched for the seed root, so the styled placeholder renders."
+    },
+    {
+      "narrative_id": "tariffs-pay",
+      "image_url_original": null,
+      "outlet": "FactCheck.org",
+      "fetched_at": null,
+      "status": "fallback",
+      "note": "Seed placeholder. No image was fetched for the seed root, so the styled placeholder renders."
     }
   ]
 }

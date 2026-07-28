@@ -1,0 +1,715 @@
+{
+  "seed": true,
+  "id": "tariffs-pay",
+  "pack": "en",
+  "lean": "gov",
+  "status": "published",
+  "headline": {
+    "en": "Tariffs Will Pay for All of It",
+    "id": "Tarif Impor Akan Membiayai Semuanya"
+  },
+  "original": {
+    "text": "Tariffs will pay for all of it",
+    "lang": "en"
+  },
+  "outlet": "FactCheck.org",
+  "published_date": "2026-01-20",
+  "url": "https://www.factcheck.org/2026/01/trumps-tariffs-dont-come-close-to-funding-everything-hes-proposed/",
+  "og": {
+    "image_path": null,
+    "fetched_at": null,
+    "attribution": "Seed placeholder, no image fetched. Card art belongs to FactCheck.org.",
+    "fallback": true
+  },
+  "tags": [
+    "missing-link",
+    "no-denominator",
+    "competing-counts"
+  ],
+  "counts": {
+    "missing": 1,
+    "unsourced": 0,
+    "disputed": 0,
+    "supported": 1,
+    "hidden": 3,
+    "conflicts": 3
+  },
+  "provenance": {
+    "analyzed_by": "seed-fixture",
+    "narrated_by": "seed-fixture",
+    "source_count": 6,
+    "computed_at": "2026-07-28",
+    "run_id": "seed-0"
+  },
+  "family": {
+    "skeleton": "one revenue lever framed as funding an entire agenda, carried without the cost side it is being measured against",
+    "members": [
+      {
+        "outlet": "FactCheck.org",
+        "headline": "Trump's Tariffs Don't Come Close to Funding Everything He's Proposed",
+        "url": "https://www.factcheck.org/2026/01/trumps-tariffs-dont-come-close-to-funding-everything-hes-proposed/",
+        "date": "2026-01-20"
+      },
+      {
+        "outlet": "Committee for a Responsible Federal Budget",
+        "headline": "CBO's New Projections Show $1 Trillion Less in Tariff Savings",
+        "url": "https://www.crfb.org/blogs/cbos-new-projections-show-1-trillion-less-tariff-savings",
+        "date": "2025-11-25"
+      },
+      {
+        "outlet": "Committee for a Responsible Federal Budget",
+        "headline": "Top 13 Fiscal Charts of 2025",
+        "url": "https://www.crfb.org/blogs/top-13-fiscal-charts-2025",
+        "date": "2025-12-31"
+      }
+    ]
+  },
+  "scaffold_default": "S0",
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "The claim is that tariffs pay for the whole agenda. What step does it need between the revenue and the agenda?",
+          "id": "Klaimnya: tarif impor membiayai seluruh agenda. Langkah apa yang dibutuhkan klaim itu antara penerimaan dan agendanya?"
+        },
+        "options": [
+          {
+            "en": "A cost side small enough for that revenue to cover",
+            "id": "Sisi biaya yang cukup kecil untuk ditutup penerimaan itu"
+          },
+          {
+            "en": "A higher tariff rate",
+            "id": "Tarif impor yang lebih tinggi"
+          },
+          {
+            "en": "More outlets repeating it",
+            "id": "Lebih banyak media yang mengulangnya"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "CBO scores the revenue, so the first link holds. The claim map marks the next one as missing: CRFB prices one law alone at $3.4T of primary deficits through 2034.",
+          "id": "CBO menilai penerimaannya, sehingga mata rantai pertamanya berpijak pada dokumen. Peta klaim menandai mata rantai berikutnya sebagai hilang: CRFB menghargai satu undang-undang saja pada US$3,4 T defisit primer sampai 2034."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "The tariff line sounds decisive on its own. Against what should it be read?",
+          "id": "Baris tarif itu terdengar menentukan bila berdiri sendiri. Terhadap apa baris itu sebaiknya dibaca?"
+        },
+        "options": [
+          {
+            "en": "The number of institutions scoring it",
+            "id": "Jumlah lembaga yang menilainya"
+          },
+          {
+            "en": "Total federal receipts in the same statement",
+            "id": "Total penerimaan federal dalam laporan yang sama"
+          },
+          {
+            "en": "The tariff line of the year before",
+            "id": "Baris tarif tahun sebelumnya"
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The scale panel places net customs duties against total net receipts, both taken from the same Final Monthly Treasury Statement for FY2025, and the share of one in the other derives at render.",
+          "id": "Panel skala menempatkan bea masuk neto terhadap total penerimaan neto, keduanya diambil dari Final Monthly Treasury Statement yang sama untuk TA2025, dan porsi yang satu di dalam yang lain diturunkan saat render."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "Who meets a tariff first?",
+          "id": "Siapa yang lebih dulu menanggung tarif impor?"
+        },
+        "options": [
+          {
+            "en": "The importer of record, at entry",
+            "id": "Importir tercatat, saat barang masuk"
+          },
+          {
+            "en": "The foreign exporter, at its own customs desk",
+            "id": "Eksportir asing, di meja kepabeanannya sendiri"
+          },
+          {
+            "en": "The federal budget, at the close of the fiscal year",
+            "id": "Anggaran federal, di penutupan tahun fiskal"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "Duties fall due from the importer of record when goods enter, and the household meets the cost later in prices: The Budget Lab at Yale puts it at $780 before substitution and $648 after, in the expiration scenario, 2025 dollars.",
+          "id": "Bea terutang oleh importir tercatat saat barang masuk, dan rumah tangga menanggung biayanya belakangan lewat harga: The Budget Lab at Yale menempatkannya pada US$780 sebelum substitusi dan US$648 sesudahnya, dalam skenario kedaluwarsa, dalam dolar 2025."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before the reveal: which side of this claim goes missing?",
+      "id": "Sebelum jawabannya dibuka: sisi mana dari klaim ini yang hilang?"
+    },
+    "options": [
+      {
+        "en": "The revenue",
+        "id": "Penerimaannya"
+      },
+      {
+        "en": "The cost it is measured against",
+        "id": "Biaya yang menjadi pembandingnya"
+      },
+      {
+        "en": "The name of the office scoring it",
+        "id": "Nama lembaga yang menilainya"
+      }
+    ]
+  },
+  "panels": [
+    {
+      "type": "claim_map",
+      "el_id": "p-claim",
+      "spine": [
+        {
+          "el_id": "n1",
+          "label": {
+            "en": "Impose broad tariffs",
+            "id": "Kenakan tarif impor secara luas"
+          }
+        },
+        {
+          "el_id": "n2",
+          "label": {
+            "en": "$2.5T of primary deficit reduction over eleven years",
+            "id": "Pengurangan defisit primer US$2,5 T selama sebelas tahun"
+          },
+          "value": {
+            "amount": 2500,
+            "unit": "USD_B",
+            "display": {
+              "en": "$2.5T",
+              "id": "US$2,5 T"
+            },
+            "source_id": "en-cbo-61877",
+            "as_of": "2025-11-15"
+          }
+        },
+        {
+          "el_id": "n3",
+          "label": {
+            "en": "The whole agenda is paid for",
+            "id": "Seluruh agenda terbiayai"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "el_id": "e0",
+          "from": "n1",
+          "to": "n2",
+          "status": "supported",
+          "ev": {
+            "quote": "CBO scores tariffs enacted through 15 Nov 2025 as reducing primary deficits by $2.5T over eleven years.",
+            "source_id": "en-cbo-61877",
+            "why": {
+              "en": "The revenue exists and is officially scored, so the edge from the policy to the saving rests on a primary document.",
+              "id": "Penerimaannya ada dan dinilai secara resmi, sehingga tepi dari kebijakan ke penghematan itu bertumpu pada dokumen primer."
+            }
+          }
+        },
+        {
+          "el_id": "e1",
+          "from": "n2",
+          "to": "n3",
+          "status": "missing",
+          "ev": {
+            "quote": "The grounding piece carries the title “Trump's Tariffs Don't Come Close to Funding Everything He's Proposed”.",
+            "source_id": "en-factcheck-tariffs",
+            "why": {
+              "en": "A funding claim needs the cost side stated beside the revenue side. It is never stated, and one law alone is scored above the eleven-year tariff total.",
+              "id": "Klaim pembiayaan membutuhkan sisi biaya yang dinyatakan berdampingan dengan sisi penerimaan. Sisi itu tidak pernah dinyatakan, dan satu undang-undang saja dinilai di atas total tarif sebelas tahun."
+            }
+          }
+        }
+      ],
+      "hidden": [
+        {
+          "el_id": "h0",
+          "label": {
+            "en": "The importer of record pays at entry",
+            "id": "Importir tercatat membayar saat barang masuk"
+          },
+          "why_hidden": {
+            "en": "The first payment in the chain is domestic, and the claim narrates the lever as though it were collected abroad.",
+            "id": "Pembayaran pertama dalam rantai itu terjadi di dalam negeri, dan klaim itu menceritakan tuasnya seolah dipungut di luar negeri."
+          },
+          "ev": {
+            "quote": "Tariffs are collected from the importer of record at entry, which is where the incidence chain starts.",
+            "source_id": "en-factcheck-tariffs"
+          }
+        },
+        {
+          "el_id": "h1",
+          "label": {
+            "en": "Household cost before substitution, expiration scenario",
+            "id": "Biaya rumah tangga sebelum substitusi, skenario kedaluwarsa"
+          },
+          "value": {
+            "amount": 780,
+            "unit": "USD",
+            "display": {
+              "en": "$780",
+              "id": "US$780"
+            },
+            "source_id": "en-yale-budgetlab-apr2026",
+            "as_of": "2026-04-02"
+          },
+          "why_hidden": {
+            "en": "The distributional counterparty of the revenue, in 2025 dollars, left out of the claim. The pre and post substitution figures belong to one scenario and are never mixed across scenarios.",
+            "id": "Mitra distribusi dari penerimaan itu, dalam dolar 2025, yang ditinggalkan klaim tersebut. Angka sebelum dan sesudah substitusi berasal dari satu skenario dan tidak pernah dicampur antar skenario."
+          },
+          "ev": {
+            "quote": "The Budget Lab at Yale, 2 Apr 2026: $780 per household before substitution and $648 after, in the Section 122 expiration scenario, 2025 dollars.",
+            "source_id": "en-yale-budgetlab-apr2026"
+          }
+        },
+        {
+          "el_id": "h2",
+          "label": {
+            "en": "One law adds $3.4T to primary deficits through 2034",
+            "id": "Satu undang-undang menambah US$3,4 T pada defisit primer sampai 2034"
+          },
+          "value": {
+            "amount": 3400,
+            "unit": "USD_B",
+            "display": {
+              "en": "$3.4T",
+              "id": "US$3,4 T"
+            },
+            "source_id": "en-crfb-top13-2025"
+          },
+          "why_hidden": {
+            "en": "The cost side the single lever is being measured against, and the claim never puts the two on the same page.",
+            "id": "Sisi biaya yang menjadi pembanding tuas tunggal itu, dan klaim tersebut tidak pernah menaruh keduanya pada halaman yang sama."
+          },
+          "ev": {
+            "quote": "CRFB: OBBBA adds $3.4T to primary deficits through 2034 under conventional scoring.",
+            "source_id": "en-crfb-top13-2025"
+          }
+        }
+      ]
+    },
+    {
+      "type": "dueling",
+      "el_id": "p-duel",
+      "counts": [
+        {
+          "el_id": "d0",
+          "who": "CBO",
+          "method": {
+            "en": "Primary deficit reduction from the tariffs enacted through 15 Nov 2025.",
+            "id": "Pengurangan defisit primer dari tarif yang berlaku sampai 15 Nov 2025."
+          },
+          "period": "eleven years, 2025 to 2035, published 15 Nov 2025",
+          "value": {
+            "amount": 2500,
+            "unit": "USD_B",
+            "display": {
+              "en": "$2.5T",
+              "id": "US$2,5 T"
+            },
+            "source_id": "en-cbo-61877",
+            "as_of": "2025-11-15"
+          }
+        },
+        {
+          "el_id": "d1",
+          "who": "CRFB",
+          "method": {
+            "en": "The same scoring with lower interest outlays included, revised down from the August estimate.",
+            "id": "Penilaian yang sama dengan belanja bunga yang lebih rendah disertakan, direvisi turun dari perkiraan Agustus."
+          },
+          "period": "through FY2035, published 25 Nov 2025",
+          "value": {
+            "amount": 3000,
+            "unit": "USD_B",
+            "display": {
+              "en": "$3.0T",
+              "id": "US$3,0 T"
+            },
+            "source_id": "en-crfb-tariff-projections"
+          }
+        },
+        {
+          "el_id": "d2",
+          "who": "The Budget Lab at Yale",
+          "method": {
+            "en": "Annual cost carried by one household after substitution, expiration scenario, 2025 dollars.",
+            "id": "Biaya tahunan yang ditanggung satu rumah tangga setelah substitusi, skenario kedaluwarsa, dalam dolar 2025."
+          },
+          "period": "as of 2 Apr 2026",
+          "value": {
+            "amount": 648,
+            "unit": "USD",
+            "display": {
+              "en": "$648",
+              "id": "US$648"
+            },
+            "source_id": "en-yale-budgetlab-apr2026",
+            "as_of": "2026-04-02"
+          }
+        }
+      ],
+      "rule_line": {
+        "en": "Three institutions answering three different questions: the primary deficit, the deficit once interest moves with it, and the annual cost carried by one household. No winner is chosen here, and both revenue figures carry the same open litigation contingency on the emergency-powers tariffs.",
+        "id": "Tiga lembaga menjawab tiga pertanyaan berbeda: defisit primer, defisit setelah bunga ikut bergerak, dan biaya tahunan yang ditanggung satu rumah tangga. Tidak ada pemenang yang dipilih di sini, dan kedua angka penerimaan membawa kontinjensi litigasi terbuka yang sama atas tarif berdasarkan kewenangan darurat."
+      }
+    },
+    {
+      "type": "scale_check",
+      "el_id": "p-scale",
+      "denominator": {
+        "label": {
+          "en": "Total federal net receipts, FY2025",
+          "id": "Total penerimaan neto federal, TA2025"
+        },
+        "value": {
+          "amount": 5234.6,
+          "unit": "USD_B",
+          "display": {
+            "en": "$5,234.6B",
+            "id": "US$5.234,6 miliar"
+          },
+          "source_id": "en-treasury-mts-fy2025",
+          "as_of": "2025-09-30"
+        }
+      },
+      "segments": [
+        {
+          "el_id": "sg0",
+          "label": {
+            "en": "Customs duties, net, FY2025",
+            "id": "Bea masuk neto, TA2025"
+          },
+          "value": {
+            "amount": 194.9,
+            "unit": "USD_B",
+            "display": {
+              "en": "$194.9B",
+              "id": "US$194,9 miliar"
+            },
+            "source_id": "en-treasury-mts-fy2025",
+            "as_of": "2025-09-30"
+          }
+        }
+      ],
+      "takeaway": {
+        "en": "Both figures are net, from the same Final Monthly Treasury Statement and the same fiscal year, so the share one is of the other derives at render from the two Values and is never authored here. That share is the denominator the claim leaves out.",
+        "id": "Kedua angka bersifat neto, dari Final Monthly Treasury Statement yang sama dan tahun fiskal yang sama, sehingga porsi yang satu terhadap yang lain diturunkan saat render dari kedua Value dan tidak pernah dituliskan di sini. Porsi itulah denominator yang ditinggalkan klaim tersebut."
+      },
+      "context_chips": [
+        {
+          "el_id": "cx0",
+          "label": {
+            "en": "Tariff revenue scored by CBO, eleven years",
+            "id": "Penerimaan tarif yang dinilai CBO, sebelas tahun"
+          },
+          "value": {
+            "amount": 2500,
+            "unit": "USD_B",
+            "display": {
+              "en": "$2.5T",
+              "id": "US$2,5 T"
+            },
+            "source_id": "en-cbo-61877",
+            "as_of": "2025-11-15"
+          }
+        },
+        {
+          "el_id": "cx1",
+          "label": {
+            "en": "One law's cost through 2034",
+            "id": "Biaya satu undang-undang sampai 2034"
+          },
+          "value": {
+            "amount": 3400,
+            "unit": "USD_B",
+            "display": {
+              "en": "$3.4T",
+              "id": "US$3,4 T"
+            },
+            "source_id": "en-crfb-top13-2025"
+          }
+        }
+      ]
+    },
+    {
+      "type": "incidence",
+      "el_id": "p-inc",
+      "horizons": [
+        {
+          "key": "weeks",
+          "label": {
+            "en": "First weeks",
+            "id": "Pekan pertama"
+          }
+        },
+        {
+          "key": "months",
+          "label": {
+            "en": "Months 1 to 3",
+            "id": "Bulan 1 sampai 3"
+          }
+        },
+        {
+          "key": "beyond",
+          "label": {
+            "en": "6 months and beyond",
+            "id": "6 bulan ke atas"
+          }
+        }
+      ],
+      "lanes": [
+        {
+          "el_id": "i0",
+          "who": {
+            "en": "Importers of record",
+            "id": "Importir tercatat"
+          },
+          "cells": [
+            {
+              "horizon": "weeks",
+              "text": {
+                "en": "Duties fall due at entry, so the first payment in the chain is domestic.",
+                "id": "Bea terutang saat barang masuk, sehingga pembayaran pertama dalam rantai itu terjadi di dalam negeri."
+              },
+              "ev": {
+                "quote": "Tariffs are collected from the importer of record at entry.",
+                "source_id": "en-factcheck-tariffs"
+              }
+            }
+          ]
+        },
+        {
+          "el_id": "i1",
+          "who": {
+            "en": "Households",
+            "id": "Rumah tangga"
+          },
+          "cells": [
+            {
+              "horizon": "months",
+              "text": {
+                "en": "Price effects follow, at $648 per household after substitution in the expiration scenario, 2025 dollars.",
+                "id": "Efek harga menyusul, sebesar US$648 per rumah tangga setelah substitusi dalam skenario kedaluwarsa, dalam dolar 2025."
+              },
+              "value": {
+                "amount": 648,
+                "unit": "USD",
+                "display": {
+                  "en": "$648",
+                  "id": "US$648"
+                },
+                "source_id": "en-yale-budgetlab-apr2026",
+                "as_of": "2026-04-02"
+              },
+              "ev": {
+                "quote": "The Budget Lab at Yale: $648 per household after substitution, expiration scenario, 2025 dollars.",
+                "source_id": "en-yale-budgetlab-apr2026"
+              }
+            }
+          ]
+        },
+        {
+          "el_id": "i2",
+          "who": {
+            "en": "The federal budget",
+            "id": "Anggaran federal"
+          },
+          "cells": [
+            {
+              "horizon": "beyond",
+              "text": {
+                "en": "Revenue accrues slowly and diffusely against a cost side scored by other institutions, and the scored figures rest on tariffs whose legal basis is still before the courts.",
+                "id": "Penerimaan terkumpul lambat dan menyebar terhadap sisi biaya yang dinilai lembaga lain, dan angka-angka penilaian itu bertumpu pada tarif yang dasar hukumnya masih berada di pengadilan."
+              },
+              "ev": {
+                "quote": "CRFB records the contingency on its own projection: voiding the emergency-powers tariffs would cut the scored impact sharply.",
+                "source_id": "en-crfb-tariff-projections"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "echo": null,
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "The revenue side is real and officially scored.",
+          "els": [
+            "p-claim",
+            "n1",
+            "n2",
+            "e0"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "The step the headline needs, from that revenue to an entire agenda, is the one never stated, while one law alone is scored above the whole eleven-year tariff total.",
+          "els": [
+            "e1",
+            "n3",
+            "h2"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Two documented counterparties sit outside the frame: the importer who pays at entry, and the household that meets it in prices.",
+          "els": [
+            "h0",
+            "h1"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Three institutions score three different questions, so the figures differ because the questions differ.",
+          "els": [
+            "p-duel",
+            "d0",
+            "d1",
+            "d2"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Placed against the receipts table it belongs to, the customs line is one line among many, and the share derives at render.",
+          "els": [
+            "p-scale",
+            "sg0",
+            "cx0"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "The order of payment runs from the importer at entry to households in prices, with the fiscal effect the slowest and most diffuse line.",
+          "els": [
+            "p-inc",
+            "i0",
+            "i1",
+            "i2"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Sisi penerimaannya nyata dan dinilai secara resmi.",
+          "els": [
+            "p-claim",
+            "n1",
+            "n2",
+            "e0"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Langkah yang dibutuhkan judul itu, dari penerimaan tersebut ke seluruh agenda, adalah langkah yang tidak pernah dinyatakan, sementara satu undang-undang saja dinilai di atas seluruh total tarif sebelas tahun.",
+          "els": [
+            "e1",
+            "n3",
+            "h2"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Dua pihak terdokumentasi berada di luar bingkai: importir yang membayar saat barang masuk, dan rumah tangga yang menanggungnya lewat harga.",
+          "els": [
+            "h0",
+            "h1"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Tiga lembaga menilai tiga pertanyaan berbeda, sehingga angkanya berbeda karena pertanyaannya berbeda.",
+          "els": [
+            "p-duel",
+            "d0",
+            "d1",
+            "d2"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Ditempatkan terhadap tabel penerimaan tempatnya berada, baris bea masuk adalah satu baris di antara banyak baris, dan porsinya diturunkan saat render.",
+          "els": [
+            "p-scale",
+            "sg0",
+            "cx0"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Urutan pembayarannya berjalan dari importir saat barang masuk ke rumah tangga lewat harga, dengan efek fiskal sebagai baris paling lambat dan paling menyebar.",
+          "els": [
+            "p-inc",
+            "i0",
+            "i1",
+            "i2"
+          ]
+        }
+      ]
+    }
+  },
+  "manifest": {
+    "run_id": "seed-0",
+    "generated_at": "2026-07-28T00:00:00Z",
+    "steps": [
+      {
+        "role": "A5",
+        "model": "seed-fixture",
+        "started_at": "2026-07-28T00:00:00Z",
+        "finished_at": "2026-07-28T00:00:01Z",
+        "input_hash": "seed-fixture"
+      },
+      {
+        "role": "A7",
+        "model": "seed-fixture",
+        "started_at": "2026-07-28T00:00:01Z",
+        "finished_at": "2026-07-28T00:00:02Z",
+        "input_hash": "seed-fixture"
+      },
+      {
+        "role": "A10",
+        "model": "seed-fixture",
+        "started_at": "2026-07-28T00:00:02Z",
+        "finished_at": "2026-07-28T00:00:03Z",
+        "input_hash": "seed-fixture"
+      },
+      {
+        "role": "A11",
+        "model": "seed-fixture",
+        "started_at": "2026-07-28T00:00:03Z",
+        "finished_at": "2026-07-28T00:00:04Z",
+        "input_hash": "seed-fixture"
+      }
+    ],
+    "gates": {
+      "symmetry": {
+        "verdict": "pass",
+        "token": "62bc0190b3a25d6c267771012f8b7c8a22d237ed9fa3462371904a48fe8b0980"
+      },
+      "fidelity": {
+        "verdict": "pass",
+        "token": "62bc0190b3a25d6c267771012f8b7c8a22d237ed9fa3462371904a48fe8b0980"
+      }
+    }
+  }
+}

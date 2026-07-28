@@ -24,6 +24,12 @@
       "pattern": "https://www.antaranews.com/berita/4559522/kemenkeu-rilis-aturan-ppn-12-persen-hanya-untuk-barang-mewah",
       "narrative_id": "ppn-panic",
       "role": "fresh_demo"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.factcheck.org/2026/01/trumps-tariffs-dont-come-close-to-funding-everything-hes-proposed/",
+      "narrative_id": "tariffs-pay",
+      "role": "canonical"
     }
   ]
 }

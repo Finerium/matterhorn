@@ -286,5 +286,77 @@
     "self_reported": false,
     "liveness": "unverified",
     "notes": "Seed placeholder, not a real document. This is CF-5 in docs/understanding.md: the zip prices the ppn-panic scale panel against a 'full basket' with an authored percentage and an illustrative denominator nobody can look up. The two Values citing this entry are synthetic (denominator 100 percent, segment 4 percent) and carry the estimate flag so the renderer draws a shape without claiming a measurement. Gate C is the honest regrounding: A7 grounds the panel on the Rp38.6T stimulus base or on the 11 versus 12 percent rate structure of PMK 131/2024, or the panel set falls back to claim_map plus echo. Deleted with the seed root."
+  },
+  {
+    "id": "en-cbo-61877",
+    "title": "CBO's Updated Projections of the Budgetary Effects of Tariffs as of November 15, 2025 (publication 61877)",
+    "publisher": "Congressional Budget Office",
+    "url": "https://www.cbo.gov/publication/61877",
+    "retrieved_at": "2026-07-28",
+    "period": "tariffs enacted 6 Jan to 15 Nov 2025, effects 2025-2035",
+    "kind": "official",
+    "self_reported": false,
+    "liveness": "live",
+    "notes": "Primary deficits reduced $2.5T over 11 years, plus $0.5T lower interest outlays. cbo.gov 403s all automated clients domain-wide; verified live via search corroboration 2026-07-28 (snapshot HTTP 403). Supersedes the Aug 2025 publication 61697, which is not cited to avoid a title collision and stale figures."
+  },
+  {
+    "id": "en-crfb-tariff-projections",
+    "title": "CBO's New Projections Show $1 Trillion Less in Tariff Savings",
+    "publisher": "Committee for a Responsible Federal Budget",
+    "url": "https://www.crfb.org/blogs/cbos-new-projections-show-1-trillion-less-tariff-savings",
+    "retrieved_at": "2026-07-28",
+    "period": "through FY2035, published 25 Nov 2025",
+    "kind": "ngo",
+    "self_reported": false,
+    "liveness": "live",
+    "notes": "$3.0T debt reduction including interest, revised down from $4.0T in August. Carries the IEEPA contingency: if SCOTUS voids IEEPA tariffs, primary impact drops to about $0.7T ($0.9T with interest): a live caveat on every tariff-revenue figure. og:image is CRFB's generic site-wide card."
+  },
+  {
+    "id": "en-yale-budgetlab-apr2026",
+    "title": "State of U.S. Tariffs: April 2, 2026",
+    "publisher": "The Budget Lab at Yale",
+    "url": "https://budgetlab.yale.edu/research/state-us-tariffs-april-2-2026",
+    "retrieved_at": "2026-07-28",
+    "period": "as of 2 Apr 2026, figures in 2025 dollars",
+    "kind": "academic",
+    "self_reported": false,
+    "liveness": "live",
+    "notes": "Per-household cost pairs, 2025 dollars, scenario-consistent: Section 122 EXPIRATION $780 pre-substitution to $648 post; EXTENSION $1,338 pre to $1,130 post. The PRD's $1,700 does not appear in this report and is banned. Never mix figures across the two scenarios. Effective tariff rate 11.0 percent (highest since 1943)."
+  },
+  {
+    "id": "en-factcheck-tariffs",
+    "title": "Trump's Tariffs Don't Come Close to Funding Everything He's Proposed",
+    "publisher": "FactCheck.org",
+    "url": "https://www.factcheck.org/2026/01/trumps-tariffs-dont-come-close-to-funding-everything-hes-proposed/",
+    "retrieved_at": "2026-07-28",
+    "period": "published 20 Jan 2026",
+    "kind": "ngo",
+    "self_reported": false,
+    "liveness": "live",
+    "notes": "Grounding piece for tariffs-pay. Notes IEEPA tariffs are 67 percent of tariff revenue collected (CBP data) with the SCOTUS case pending. Scrape trap: page HTML contains a second title tag from an embedded widget; take the first."
+  },
+  {
+    "id": "en-crfb-top13-2025",
+    "title": "Top 13 Fiscal Charts of 2025",
+    "publisher": "Committee for a Responsible Federal Budget",
+    "url": "https://www.crfb.org/blogs/top-13-fiscal-charts-2025",
+    "retrieved_at": "2026-07-28",
+    "period": "through 2034, published 31 Dec 2025",
+    "kind": "ngo",
+    "self_reported": false,
+    "liveness": "live",
+    "notes": "OBBBA adds $3.4T to primary deficits, $718B interest, $4.1T total through 2034 (conventional scoring)."
+  },
+  {
+    "id": "en-treasury-mts-fy2025",
+    "title": "Final Monthly Treasury Statement, Fiscal Year 2025 (September 2025 issue)",
+    "publisher": "U.S. Department of the Treasury",
+    "url": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_202509.pdf",
+    "retrieved_at": "2026-07-28",
+    "period": "FY2025 (Oct 2024 to Sep 2025)",
+    "kind": "official",
+    "self_reported": false,
+    "liveness": "live",
+    "notes": "The tariff-ratio source (blueprint 7.2.11): customs duties net $194,866M ($194.9B; gross $202,357M less $7,492M refunds, Table 4) and total federal net receipts $5,234,616M ($5.23T). Derived ratio 3.7 percent: the PRD's under-2-percent phrasing is contradicted by the primary document and never ships. Use net figures for both sides. Directly fetchable PDF (curl 200, 4.0 MB)."
   }
 ]
