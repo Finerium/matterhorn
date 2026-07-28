@@ -1,0 +1,22 @@
+/* Harness chrome only: the phone-width paper the component is photographed on. Nothing here
+   belongs to a renderer, and nothing here ships. */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+}
+.m-harness {
+  min-height: 100vh;
+  padding: 16px;
+  background: var(--paper);
+}
+.m-harness-fail {
+  padding: 16px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--mis);
+}

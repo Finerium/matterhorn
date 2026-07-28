@@ -12,3 +12,5 @@ dist/
 .env.*
 .unlock
 staging/
+test-results/
+playwright-report/

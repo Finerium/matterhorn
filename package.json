@@ -15,7 +15,7 @@
     "lint": "eslint .",
     "test": "pnpm run test:unit",
     "test:unit": "vitest run",
-    "validate:content": "tsx scripts/validate-content.ts"
+    "validate:content": "tsx scripts/validate-content.ts --scan-app app/src"
   },
   "dependencies": {
     "react": "19.2.8",

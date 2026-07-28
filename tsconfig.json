@@ -20,5 +20,5 @@
       "@pipeline/*": ["./pipeline/*"]
     }
   },
-  "include": ["app/src", "app/vite.config.ts", "contracts", "pipeline", "scripts", "tests"]
+  "include": ["app/src", "app/vite.config.ts", "vitest.config.ts", "contracts", "pipeline", "scripts", "tests"]
 }
