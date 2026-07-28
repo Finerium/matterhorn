@@ -223,3 +223,16 @@ Decisions and findings (full agent output: session task wcv2o11q6):
      know is missing is correct; the worker never lies about content it does not have.
 - AC-APP-2..14, 16-20, 22-23 green; 15/21 land at Gate 6 with dark parity +
   cross-browser + the generated-content matrix re-pin.
+
+## Gate C pre-flight: PASSED with real models (2026-07-29 ~04:30 WIB)
+- 11 slots, 617s, 362k tokens. A10 (fable): leak -> block with named asymmetries, control
+  -> pass. A11 (opus): clean -> pass, both mutants -> block naming sentences. A6 (fable):
+  recall threshold met on all three planted-omission clusters (fresh contexts, expected
+  answers unreadable to judged agents). test:pipeline 27/27. Identities logged in
+  pipeline/runs/preflight-a6/run-log.json: every mandatory-Fable slot reported
+  claude-fable-5; A11 claude-opus-5[1m]. AC-PIPE-4/5/6 proven on real judgment.
+- RUN MECHANICS LOCKED: per-batch: orchestrator stages inputs (runner), workflow chains
+  slot agents (A6 input constructed in-script to the proven-identical shape), orchestrator
+  ingests via runner (schema validation = the gate; invalid slot -> scoped re-dispatch),
+  candidates assembled, gate workflow (A10/A11 on assembled candidates), runner mints
+  tokens, A12 publishes. Flagship mbg-stop runs first as the full-path shakedown.

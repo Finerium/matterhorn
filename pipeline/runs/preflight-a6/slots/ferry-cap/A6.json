@@ -1,0 +1,65 @@
+{
+  "hidden": [
+    {
+      "el_id": "h-evening-crew",
+      "label": {
+        "en": "Ferry crews paid the roster allowance on sailings after eight in the evening",
+        "id": "Awak kapal penerima tunjangan giliran pada pelayaran setelah pukul delapan malam"
+      },
+      "why_hidden": {
+        "en": "The filing names the roster allowance as one of three pots that fund the fare difference. An allowance is crew income: drawing the difference from it lands first on the pay of the people working the late sailings, before anything is passed on. Both articles name the pot and stop there; neither names the crews as a party the arrangement reaches.",
+        "id": "Laporan operator menyebut tunjangan giliran sebagai satu dari tiga pos penutup selisih tarif. Tunjangan adalah penghasilan awak: menutup selisih dari pos itu jatuh lebih dulu pada upah orang yang bekerja di pelayaran larut malam, sebelum beban berpindah ke mana pun. Kedua artikel berhenti pada nama pos dan tidak menyebut awak kapal sebagai pihak yang tersentuh skema ini."
+      },
+      "where_to_look": "Operator payroll or the crew rostering agreement; any crew association or union response to the operator's filing."
+    },
+    {
+      "el_id": "h-clinic-supply",
+      "label": {
+        "en": "The Pulau Randu clinic's medical-box deliveries and the counterparty paying the hold charge under the old side agreement",
+        "id": "Pengiriman kotak obat klinik Pulau Randu dan pihak pembayar biaya palka dalam perjanjian sampingan lama"
+      },
+      "why_hidden": {
+        "en": "The second pot is the hold charge on the two morning runs that carry medical boxes to the clinic. Funding the fare difference from that charge reaches the side agreement it sits in: either the party paying the charge carries more, or the terms that keep the boxes moving change. Both articles use the medical runs only to locate the pot and never name the clinic, its patients, or the paying counterparty as affected.",
+        "id": "Pos kedua adalah biaya palka pada dua pelayaran pagi pengangkut kotak obat ke klinik. Menutup selisih tarif dari pos itu menyentuh perjanjian sampingan tempat biaya itu berada: pihak pembayar biaya menanggung lebih besar, atau ketentuan yang menjaga kotak obat tetap terkirim berubah. Kedua artikel memakai pelayaran obat hanya sebagai penanda letak pos, tanpa menyebut klinik, pasiennya, atau pihak pembayar sebagai pihak yang terdampak."
+      },
+      "where_to_look": "The old side agreement itself; clinic or health office shipping records for the two morning runs."
+    },
+    {
+      "el_id": "h-fuel-wholesaler",
+      "label": {
+        "en": "The fuel wholesaler's cash position, which finances the operator's fuel purchases for sixty additional days",
+        "id": "Posisi kas pemasok bahan bakar, yang membiayai pembelian bahan bakar operator enam puluh hari lebih lama"
+      },
+      "why_hidden": {
+        "en": "The third pot works by moving the payment date: extending settlement from thirty to ninety days leaves the wholesaler carrying every fuel invoice for sixty extra days. Both articles state the extension and file it under what the operator absorbs; neither names the wholesaler as a party bearing a financing cost, nor says whether the wholesaler agreed to the new window.",
+        "id": "Pos ketiga bekerja dengan menggeser waktu bayar: perpanjangan pelunasan dari tiga puluh menjadi sembilan puluh hari membuat pemasok menanggung setiap tagihan bahan bakar enam puluh hari lebih lama. Kedua artikel mencatat perpanjangan itu di bawah beban yang diserap operator; tidak ada yang menyebut pemasok sebagai penanggung biaya pendanaan, atau menyatakan pemasok menyetujui jendela baru itu."
+      },
+      "where_to_look": "The fuel supply contract or its amended payment terms; any written consent from the wholesaler to the extended window."
+    },
+    {
+      "el_id": "h-fare-gap-denominator",
+      "label": {
+        "en": "The size of the fare difference: the pre-cap fare and the ridership across the eleven daily sailings",
+        "id": "Besarnya selisih tarif: tarif sebelum pembatasan dan jumlah penumpang pada sebelas pelayaran harian"
+      },
+      "why_hidden": {
+        "en": "Every edge in the graph moves 'the difference', yet neither article states the fare charged before the cap or the passenger volume it applies to. Without that baseline and denominator, the gap cannot be weighed against the three pots said to cover it; the step from absorption to a held timetable rests on a quantity the story never sizes.",
+        "id": "Setiap langkah dalam graf menggerakkan 'selisih', namun kedua artikel tidak menyebut tarif yang berlaku sebelum pembatasan maupun jumlah penumpang yang menanggungnya. Tanpa angka dasar dan pembagi itu, besar selisih tidak dapat ditimbang terhadap tiga pos yang disebut menutupnya; langkah dari penyerapan ke jadwal yang tetap utuh bertumpu pada besaran yang tidak pernah disebut."
+      },
+      "where_to_look": "The operator's filing cited by both articles; the tariff notice fixing the previous fare; ridership returns to the transport office."
+    },
+    {
+      "el_id": "h-trial-exit",
+      "label": {
+        "en": "What the twelve-month trial leaves at the April 2032 review: the deferred settlement balance and who pays if the pots fall short",
+        "id": "Sisa beban pada tinjauan April 2032 di ujung uji coba dua belas bulan: saldo pelunasan yang ditunda dan penanggungnya bila tiga pos tidak mencukupi"
+      },
+      "why_hidden": {
+        "en": "Two of the three pots defer or redirect costs rather than extinguish them, and the arrangement is stated to run only to a review in April 2032. The step 'no charge against the city budget' is asserted inside the trial window while the mechanism pushes obligations toward its end. Neither article follows the arrangement past the review date or states what happens if absorption falls short before it.",
+        "id": "Dua dari tiga pos menunda atau memindahkan beban, bukan menghapusnya, dan skema dinyatakan berlaku hanya sampai tinjauan April 2032. Langkah 'tidak membebani anggaran kota' diklaim di dalam masa uji coba, sementara mekanismenya mendorong kewajiban ke ujung masa itu. Kedua artikel tidak mengikuti skema melewati tanggal tinjauan dan tidak menyebut apa yang terjadi bila daya serap tidak mencukupi sebelum itu."
+      },
+      "where_to_look": "The transport office notice setting the trial and review terms; any clause on fare restoration or compensation at the review."
+    }
+  ],
+  "model": "claude-fable-5"
+}

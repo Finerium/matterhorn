@@ -1,0 +1,65 @@
+{
+  "hidden": [
+    {
+      "el_id": "h-permit-holders",
+      "label": {
+        "en": "Haulage permit holders billed for the levy at the canal road weighbridge",
+        "id": "Pemegang izin angkut yang menerima tagihan retribusi di jembatan timbang jalan kanal"
+      },
+      "why_hidden": {
+        "en": "The billing step is stated: the charge is set per tonne at the weighbridge and, in the Kanal Timur Harian account, the bills are sent to haulage permit holders. Both articles stop there. Neither follows the charge into the permit holders' operating costs or their haulage rates, while the promised outcome prices that bill at no cost to anyone in the city.",
+        "id": "Langkah penagihannya dinyatakan: tarif dihitung per ton di jembatan timbang dan, dalam pemberitaan Kanal Timur Harian, tagihannya dikirim ke pemegang izin angkut. Kedua artikel berhenti di situ. Tidak ada yang mengikuti beban itu ke biaya operasi atau tarif angkut pemegang izin, sementara hasil yang dijanjikan menyebut tanpa biaya bagi siapa pun di kota."
+      },
+      "where_to_look": "Levy invoices or billing records addressed to haulage permit holders at the canal road weighbridge, and permit holders' haulage tariff schedules before and after the levy took effect."
+    },
+    {
+      "el_id": "h-works-material-cost",
+      "label": {
+        "en": "The flood program's own material bill, where the per tonne charge on works bound gravel and sand lands",
+        "id": "Tagihan material program banjir itu sendiri, muara beban per ton atas pasir dan kerikil yang masuk ke lokasi pekerjaan"
+      },
+      "why_hidden": {
+        "en": "The stated levy base is material moved toward the works, which is the program's own construction input. A per tonne charge on that input reaches the delivered price of gravel and sand at the four work packages and, through it, the program's own cost side. Neither article names the works contractors or the program budget as payers of the charge booked as receipts, and the self financing description rests on that unfollowed step.",
+        "id": "Dasar pungutan yang dinyatakan ialah material yang masuk ke lokasi pekerjaan, yakni bahan baku program itu sendiri. Beban per ton atas bahan itu sampai ke harga pasir dan kerikil yang diterima keempat paket pekerjaan, lalu ke sisi biaya program. Tidak ada artikel yang menyebut kontraktor paket atau anggaran program sebagai penanggung beban yang dibukukan sebagai penerimaan itu, padahal pada langkah itulah uraian membiayai diri sendiri bertumpu."
+      },
+      "where_to_look": "Work package contracts and unit price analyses for gravel and sand delivered to the flood works, showing whether the per tonne levy sits inside the delivered material rates the program pays."
+    },
+    {
+      "el_id": "h-kali-sepuh-flats",
+      "label": {
+        "en": "Kali Sepuh village and the users of the flats above it, where the dredging spoil is settled",
+        "id": "Desa Kali Sepuh dan para pengguna dataran di atasnya, tempat lumpur pengerukan diendapkan"
+      },
+      "why_hidden": {
+        "en": "The spoil step is stated: the dredging campaign's spoil is trucked to the flats above Kali Sepuh village for settling. Both articles stop at the trucking. Neither names the village below the settling ground, nor whoever farms or holds the flats, as reached by the deposited spoil, its runoff, or the loss of use of that land while it settles.",
+        "id": "Langkah pembuangannya dinyatakan: lumpur pengerukan diangkut ke dataran di atas Desa Kali Sepuh untuk diendapkan. Kedua artikel berhenti pada pengangkutan. Tidak ada yang menyebut desa di bawah lahan pengendapan, atau para penggarap dan pemegang hak atas dataran itu, sebagai pihak yang dijangkau endapan, larian airnya, dan hilangnya pemanfaatan lahan selama pengendapan berlangsung."
+      },
+      "where_to_look": "Spoil disposal permits or land use agreements for the flats above Kali Sepuh, and village level records on drainage, planting, or compensation for the settling ground."
+    },
+    {
+      "el_id": "h-night-market-traders",
+      "label": {
+        "en": "Night market traders on the canal road, whose three closure evenings a week the works traffic now shares",
+        "id": "Pedagang pasar malam jalan kanal, yang tiga malam penutupan ruasnya tiap pekan kini turut dilalui angkutan pekerjaan"
+      },
+      "why_hidden": {
+        "en": "The road step is stated: the canal road stays open through the works, including on the three evenings a week when it is closed to through traffic for the night market. Keeping the road open on evenings otherwise given to the market reaches the traders who trade in those closures, and neither article names them, their takings, or their trading space during the works as reached.",
+        "id": "Langkah jalannya dinyatakan: jalan kanal tetap dibuka selama pekerjaan berlangsung, termasuk pada tiga malam sepekan ketika ruas itu ditutup bagi lalu lintas menerus untuk pasar malam. Membuka jalan pada malam yang biasanya menjadi ruang pasar menjangkau para pedagang yang mengisi penutupan itu, dan tidak ada artikel yang menyebut mereka, omzetnya, atau ruang berjualannya selama pekerjaan."
+      },
+      "where_to_look": "Night market permits or road closure orders for the canal road, and any traffic management plan for the works covering the three market evenings."
+    },
+    {
+      "el_id": "h-program-cost-line",
+      "label": {
+        "en": "The program's total cost across the four work packages, the denominator the whole program statement needs",
+        "id": "Total biaya program pada keempat paket pekerjaan, pembanding yang diperlukan pernyataan menutup seluruh program"
+      },
+      "why_hidden": {
+        "en": "Rp42 billion of receipts is presented as covering the whole program, and both articles record that no cost line was published beside the receipt line. Whether the receipts cover the four work packages, and whether any remainder falls back on the general revenue officials say was not drawn down, turns on a figure the story never carries.",
+        "id": "Penerimaan Rp42 miliar disajikan sebagai dasar yang menutup seluruh program, dan kedua artikel mencatat rincian biaya tidak disampaikan berdampingan dengan angka penerimaannya. Cukup tidaknya penerimaan itu bagi keempat paket pekerjaan, dan kembali tidaknya kekurangan ke kas umum yang menurut pejabat tidak tersentuh, bergantung pada angka yang tidak pernah dimuat."
+      },
+      "where_to_look": "City budget documents or award values for the flood program's four work packages in fiscal 2031, read beside the levy receipt line."
+    }
+  ],
+  "model": "claude-fable-5"
+}

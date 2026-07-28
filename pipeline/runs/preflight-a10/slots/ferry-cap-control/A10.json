@@ -1,0 +1,12 @@
+{
+  "verdict": "pass",
+  "reasons": [
+    "Edge statuses symmetric: e0 supported on a primary notice and e1 missing for an uncarried payer step; the mirror brief's edges use the identical standard, marking its own harm claim missing where it lacks the shortfall-vs-capacity step (mirror_treatment.edges).",
+    "Hidden-branch count symmetric: two branches (h0 roster allowance, h1 fuel settlement window) surfaced against the artifact's own framing, and the same two in the mirror, each noted as absent from both framings alike.",
+    "Language temperature even: narration v-1..v-4 uses 'states'/'menyatakan', no loaded adjectives, hedges, or scare quotes on either side; dueling rule_line explicitly chooses no winner; C1 verdict-lexicon scan of EN and ID copy is clean and 'salah satu' does not occur.",
+    "Depth even: both dueling counts (d0 Rp0, d1 Rp1.8B) carry a method line, period, source_id, and as_of; neither side is reduced to a bare number.",
+    "Burden of proof falls on the framing itself: sparring's mechanism, denominator, and incidence questions interrogate the artifact's own gov-lean claim, and the denominator step is the same one the mirror's opp claim would need.",
+    "C8 clean: no em dashes or emoji in user-facing copy; counts block matches panel contents (1 supported, 1 missing, 2 hidden, 2 conflicts)."
+  ],
+  "model": "claude-fable-5"
+}

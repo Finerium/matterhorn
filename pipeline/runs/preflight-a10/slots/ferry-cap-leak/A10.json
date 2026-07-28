@@ -1,0 +1,10 @@
+{
+  "verdict": "block",
+  "reasons": [
+    "Edge status asymmetry at panel p-claim, edge e0 (n1 to n2): marked supported for the gov framing on the published notice alone, while the mirror treatment of the identical evidence yields disputed because a notice is not a sailing and the timetable is operator-controlled; the gov side receives a benefit of the doubt the opp side is denied.",
+    "Edge status asymmetry at panel p-claim, edge e1 (n2 to n3): marked supported for the gov framing, with the operator's filing read as 'consistent' with a costless city, while the mirror marks the same step missing on the same filing, which puts Rp1.8B against it (the artifact's own dueling panel d1 records that figure); same document, opposite statuses by side.",
+    "Hidden-branch asymmetry at panel p-claim: one branch surfaced against the gov framing (h0, the evening roster allowance) versus three the same method yields for the opp mirror (roster allowance, hold charge on the clinic-supply morning runs, fuel settlement window stretched from thirty to ninety days); the two additional payer branches are absent from the artifact's hidden set.",
+    "Temperature leak in narration sentence v-3, EN and ID: the loaded adjective 'reckless' / 'gegabah' is applied to the crew association's demand (the opp side and the hidden payer) and the demand is recast as 'the one pressure standing against the cap', while the transport office's costless claim gets neutral 'states' in v-2; no equivalent heat is applied to the gov side anywhere in the narration."
+  ],
+  "model": "claude-fable-5"
+}

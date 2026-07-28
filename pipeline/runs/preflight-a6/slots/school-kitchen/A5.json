@@ -1,0 +1,86 @@
+{
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "audit-reopen",
+        "label": {
+          "en": "The Rambai Audit Institute reopens the city school meal contract",
+          "id": "Lembaga Audit Rambai membuka kembali kontrak makan sekolah kota"
+        }
+      },
+      {
+        "el_id": "delivery-cut",
+        "label": {
+          "en": "Refrigerated delivery moves from nightly runs to a reduced weekly schedule",
+          "id": "Pengiriman berpendingin beralih dari jadwal tiap malam ke jadwal mingguan yang lebih jarang"
+        }
+      },
+      {
+        "el_id": "supplier-central",
+        "label": {
+          "en": "Produce ordering moves to a central supplier, replacing the district lots",
+          "id": "Pembelian sayur beralih ke pemasok pusat menggantikan lot kecamatan"
+        }
+      },
+      {
+        "el_id": "prep-earlier",
+        "label": {
+          "en": "Preparation shifts earlier so kitchens open before the first delivery window",
+          "id": "Persiapan dimajukan sehingga dapur dibuka sebelum jendela pengiriman pertama"
+        }
+      },
+      {
+        "el_id": "cost-down",
+        "label": {
+          "en": "The annual cost of the meal contract falls against the 2030 baseline",
+          "id": "Biaya tahunan kontrak makan turun terhadap dasar 2030"
+        }
+      },
+      {
+        "el_id": "meals-held",
+        "label": {
+          "en": "Meal counts and portion sizes are held at their 2030 levels",
+          "id": "Jumlah porsi dan takaran dipertahankan pada tingkat 2030"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "from": "audit-reopen",
+        "to": "delivery-cut",
+        "quote": "The Rambai Audit Institute reopened the city school meal contract this month and reported a Rp6.4 billion reduction in the annual cost against the 2030 baseline. The saving comes from three changes: refrigerated delivery moves from nightly runs to twice weekly"
+      },
+      {
+        "from": "audit-reopen",
+        "to": "supplier-central",
+        "quote": "The Rambai Audit Institute reopened the city school meal contract this month and reported a Rp6.4 billion reduction in the annual cost against the 2030 baseline. The saving comes from three changes: refrigerated delivery moves from nightly runs to twice weekly, produce is ordered through a single central supplier instead of the twelve district lots used until December"
+      },
+      {
+        "from": "audit-reopen",
+        "to": "prep-earlier",
+        "quote": "The Rambai Audit Institute reopened the city school meal contract this month and reported a Rp6.4 billion reduction in the annual cost against the 2030 baseline. The saving comes from three changes: refrigerated delivery moves from nightly runs to twice weekly, produce is ordered through a single central supplier instead of the twelve district lots used until December, and preparation shifts one hour earlier so kitchens open before the first delivery window."
+      },
+      {
+        "from": "delivery-cut",
+        "to": "cost-down",
+        "quote": "The saving comes from three changes: refrigerated delivery moves from nightly runs to twice weekly"
+      },
+      {
+        "from": "supplier-central",
+        "to": "cost-down",
+        "quote": "The saving comes from three changes: refrigerated delivery moves from nightly runs to twice weekly, produce is ordered through a single central supplier instead of the twelve district lots used until December"
+      },
+      {
+        "from": "prep-earlier",
+        "to": "cost-down",
+        "quote": "The saving comes from three changes: refrigerated delivery moves from nightly runs to twice weekly, produce is ordered through a single central supplier instead of the twelve district lots used until December, and preparation shifts one hour earlier so kitchens open before the first delivery window."
+      },
+      {
+        "from": "cost-down",
+        "to": "meals-held",
+        "quote": "The institute said meal counts and portion sizes were held at their 2030 levels throughout."
+      }
+    ]
+  },
+  "model": "claude-fable-5"
+}

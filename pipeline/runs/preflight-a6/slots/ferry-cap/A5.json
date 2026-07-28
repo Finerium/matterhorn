@@ -1,0 +1,61 @@
+{
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "n-cap",
+        "label": {
+          "en": "The Rambai Transport Office caps the island ferry fare at a fixed fare for a trial period",
+          "id": "Dinas Perhubungan Kota Rambai menetapkan batas tarif feri pulau pada tarif tetap selama masa uji coba"
+        }
+      },
+      {
+        "el_id": "n-timetable",
+        "label": {
+          "en": "The operator, Feri Rambai Lintas, keeps the route on its full current daily timetable of sailings",
+          "id": "Operator Feri Rambai Lintas tetap menjalankan seluruh jadwal pelayaran harian yang berlaku"
+        }
+      },
+      {
+        "el_id": "n-absorb",
+        "label": {
+          "en": "The operator absorbs the fare difference from items named in its own filing: the roster allowance on late-evening sailings, the hold charge on the morning runs that carry medical boxes to the Pulau Randu clinic, and an extended settlement window with its fuel wholesaler",
+          "id": "Operator menutup selisih tarif dari pos-pos yang disebut dalam laporannya sendiri: tunjangan giliran untuk pelayaran larut malam, biaya palka pada pelayaran pagi pengangkut kotak obat ke klinik Pulau Randu, dan jendela pelunasan kepada pemasok bahan bakar yang diperpanjang"
+        }
+      },
+      {
+        "el_id": "n-no-city-charge",
+        "label": {
+          "en": "The measure carries no charge against the city budget",
+          "id": "Kebijakan itu tidak membebani anggaran kota"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "e-cap-timetable",
+        "from": "n-cap",
+        "to": "n-timetable",
+        "quote": "The operator, Feri Rambai Lintas, keeps the route on its current timetable of eleven sailings a day."
+      },
+      {
+        "el_id": "e-cap-absorb",
+        "from": "n-cap",
+        "to": "n-absorb",
+        "quote": "Under the notice, the operator absorbs the difference from three places named in its own filing: the roster allowance paid on sailings after eight in the evening, the hold charge on the two morning runs that carry medical boxes out to the Pulau Randu clinic under an old side agreement, and the settlement window with its fuel wholesaler, which the filing extends from thirty days to ninety."
+      },
+      {
+        "el_id": "e-cap-no-city-charge",
+        "from": "n-cap",
+        "to": "n-no-city-charge",
+        "quote": "The Rambai Transport Office capped the island ferry fare at Rp12,000 from 1 April and said the measure carries no charge against the city budget."
+      },
+      {
+        "el_id": "e-absorb-no-city-charge",
+        "from": "n-absorb",
+        "to": "n-no-city-charge",
+        "quote": "no article in this family states the step from the operator absorbing the fare difference to the measure carrying no charge against the city budget"
+      }
+    ]
+  },
+  "model": "claude-fable-5"
+}

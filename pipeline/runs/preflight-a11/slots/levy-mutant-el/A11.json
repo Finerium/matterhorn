@@ -1,0 +1,7 @@
+{
+  "verdict": "block",
+  "reasons": [
+    "Locale en, sentence v-3: \"A documented counterparty sits outside the frame: the haulers cooperative that pays at the weighbridge.\" binds els [\"h7\"] and h7 is a binding that does not resolve. No element with el_id h7 is declared anywhere in the artifact; the declared set is p-claim, n1, n2, n3, e0, e1, h0, h1, p-duel, d0, d1. The claim itself is carried by hidden entry h0 (label \"The haulers cooperative pays at the weighbridge\", evidence \"Levy notices are issued to the Rambai Haulers Cooperative at the weighbridge on entry to the canal road.\", source_id en-canal-research-2031), and the id locale's mirror of this same sentence binds h0 correctly, so the fix is to change the en binding from h7 to h0."
+  ],
+  "model": "claude-opus-5[1m]"
+}

@@ -1,0 +1,65 @@
+{
+  "hidden": [
+    {
+      "el_id": "delivery-crews",
+      "label": {
+        "en": "Cold-chain delivery crews who ran the nightly runs",
+        "id": "Awak pengiriman rantai dingin yang menjalankan rute tiap malam"
+      },
+      "why_hidden": {
+        "en": "The stated saving begins at delivery-cut: nightly refrigerated runs become twice weekly, which removes most of the paid runs those crews worked. Both articles follow the change only as far as the contract holder, Dapur Sehat Rambai, which declined to comment, and stop before naming the drivers and loaders whose shifts the reduced schedule removes.",
+        "id": "Penghematan yang disebut berawal dari pemangkasan pengiriman: rute berpendingin tiap malam menjadi dua kali sepekan, sehingga sebagian besar rute berbayar yang dikerjakan awak itu hilang. Kedua artikel hanya mengikuti perubahan ini sampai pemegang kontrak, Dapur Sehat Rambai, yang menolak berkomentar, lalu berhenti sebelum menyebut sopir dan pemuat yang giliran kerjanya terpangkas oleh jadwal baru."
+      },
+      "where_to_look": "Subcontract or logistics rosters and payroll under the meal contract showing who staffed the nightly refrigerated runs."
+    },
+    {
+      "el_id": "district-lot-vendors",
+      "label": {
+        "en": "Vendors and growers behind the twelve district produce lots",
+        "id": "Pedagang dan petani di balik dua belas lot sayur kecamatan"
+      },
+      "why_hidden": {
+        "en": "supplier-central is stated as a transfer of the entire produce order from twelve district lots to one central supplier, and a cut on the contract ledger is income leaving somebody's ledger. Both articles name the lots only as the arrangement that ended in December; neither follows the order back to the sellers who lived on it, nor names who stands behind the central supplier that now receives the whole line.",
+        "id": "Peralihan ke pemasok pusat dinyatakan sebagai perpindahan seluruh pembelian sayur dari dua belas lot kecamatan ke satu pemasok pusat, dan potongan pada buku kontrak berarti pendapatan yang hilang dari buku pihak lain. Kedua artikel menyebut lot itu hanya sebagai pola yang berakhir Desember lalu; tidak ada yang menelusuri pesanan itu kembali ke para penjual yang selama ini menerimanya, dan tidak ada yang menyebut siapa di balik pemasok pusat yang kini menerima seluruh nilai pembelian itu."
+      },
+      "where_to_look": "Procurement records naming the twelve district lot holders and the award or terms given to the central supplier."
+    },
+    {
+      "el_id": "school-cold-storage",
+      "label": {
+        "en": "School-side cold storage and its running cost",
+        "id": "Penyimpanan dingin di sekolah dan biaya operasinya"
+      },
+      "why_hidden": {
+        "en": "With delivery-cut in place, kitchens must hold several days of perishables between drops, so the holding burden moves from the contractor's nightly cold chain onto school premises. The Rp6.4 billion reduction is read off the contract ledger, and neither article asks what refrigeration capacity, electricity, or equipment the schools now carry to make the sparser schedule work.",
+        "id": "Dengan pengiriman yang dijarangkan, dapur harus menyimpan bahan segar untuk beberapa hari di antara dua pengiriman, sehingga beban penyimpanan berpindah dari rantai dingin malam milik kontraktor ke lingkungan sekolah. Penurunan Rp6,4 miliar dibaca dari buku kontrak, dan tidak ada artikel yang menanyakan kapasitas pendingin, listrik, atau peralatan yang kini ditanggung sekolah agar jadwal yang lebih jarang itu berjalan."
+      },
+      "where_to_look": "School utility bills and kitchen equipment inventories for the months after the schedule change."
+    },
+    {
+      "el_id": "produce-age-at-serving",
+      "label": {
+        "en": "Age and condition of produce on the day it is served",
+        "id": "Umur dan kondisi sayur pada hari disajikan"
+      },
+      "why_hidden": {
+        "en": "meals-held is stated in the two measures the institute reports, meal counts and portion sizes. delivery-cut reaches a quantity neither measure records: with nightly runs gone, produce waits days rather than overnight between delivery and plate. Freshness, discard rates, and the students eating at the end of the chain are followed by neither article.",
+        "id": "Klaim porsi dipertahankan dinyatakan dalam dua ukuran yang dilaporkan lembaga itu, yakni jumlah porsi dan takaran. Pemangkasan pengiriman menyentuh besaran yang tidak terekam di kedua ukuran tadi: tanpa rute tiap malam, sayur menunggu berhari-hari, bukan semalam, antara pengiriman dan piring. Kesegaran, bahan yang terbuang, dan murid yang makan di ujung rantai tidak diikuti oleh kedua artikel."
+      },
+      "where_to_look": "Kitchen waste logs and food safety inspection records for the schools after the delivery change."
+    },
+    {
+      "el_id": "baseline-total",
+      "label": {
+        "en": "The 2030 baseline total the Rp6.4 billion is a share of",
+        "id": "Nilai total dasar 2030 yang menjadi pembanding Rp6,4 miliar"
+      },
+      "why_hidden": {
+        "en": "cost-down is stated only as an absolute reduction against the 2030 baseline. Neither article gives the baseline itself: the annual value of the meal contract, the number of meals it buys, or what the unchanged arrangement would cost in 2031. Without the total, the reduction has no scale.",
+        "id": "Penurunan biaya hanya dinyatakan sebagai angka mutlak terhadap dasar 2030. Tidak satu pun artikel mencantumkan dasarnya sendiri: nilai tahunan kontrak makan, jumlah porsi yang dibelinya, atau berapa biaya susunan lama itu pada 2031. Tanpa angka total, penurunan itu tidak punya skala."
+      },
+      "where_to_look": "The 2030 contract award or the city budget line for the school meal program."
+    }
+  ],
+  "model": "claude-fable-5"
+}

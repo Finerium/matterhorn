@@ -1,0 +1,19 @@
+{
+  "verdict": "pass",
+  "reasons": [
+    "Pass one, id collection: 11 el_ids declared across both panels (p-claim, n1, n2, n3, e0, e1, h0, h1, p-duel, d0, d1). Echo is null so there is no echo panel id to collect; no scale, money flow, incidence lane or playbook elements are present in this artifact.",
+    "Pass one, binding resolution: all 8 sentences (en v-1..v-4, id v-1..v-4) bind only to declared ids. Zero unresolved bindings in either locale.",
+    "Pass one, coverage: p-claim is bound by v-1 and p-duel by v-4, in BOTH en and id. No uncovered panel. Every non-panel element is also bound by at least one sentence.",
+    "Pass one, orphan numbers: all four Value objects carry a source_id (n2=42 IDR_B/en-rambai-budget-2031, h1=310 IDR_B/en-rambai-audit-2031, d0=42 IDR_B/en-rambai-budget-2031, d1=36 IDR_B/en-canal-research-2031). No orphan Value.",
+    "Pass one, lexicon: zero whole-word hits for the banned English or Indonesian terms across all user-facing string values in both locales, and no fact-check construction. id v-3 opens with 'Sebuah pihak terdokumentasi', correctly avoiding the 'salah satu' whole-word trap rather than weakening the lint.",
+    "Pass one, style and future-tense harm: no em dashes, no en dashes, no non-ASCII characters and therefore no emoji anywhere in the file. No future-tense harm construction; echo is null and no case documented_outcome text exists.",
+    "Pass two, en/id v-1 'The levy receipts are real and the budget board records them.' traces: n2 carries the receipts, e0 is status supported with quote from en-rambai-budget-2031, and 'are real' is carried by e0.ev.why ('The receipts exist and are recorded by the body that collects them'). The named party 'budget board' is declared by count d0.who, Rambai City Budget Board.",
+    "Pass two, en/id v-2 'the one never stated ... prices that program far above the levy line' traces: the causal step corresponds to edge e1 (n2 to n3), and the narration does NOT upgrade its status. 'Never stated' is a faithful rendering of status missing, matching e1.ev.why ('The article never states it'). The comparative 'far above the levy line' is carried verbatim by e1.ev.why in both locales, and the audit institute is declared by hidden entry h1 with value Rp310B and its quoted evidence.",
+    "Pass two, en/id v-3 'A documented counterparty sits outside the frame' traces to hidden entry h0: the haulers cooperative is a named party declared by that entry, 'documented' is carried by h0.ev quote and source en-canal-research-2031, and 'outside the frame' is carried by h0.why_hidden.",
+    "Pass two, en/id v-4 'Two bodies count the same levy on two definitions' traces to counts d0 and d1: two distinct who values, two distinct methods (gross as booked versus net of collection cost and rebate), and the causal 'because the definitions differ' is carried by p-duel.rule_line. No winner is chosen and no scalar quality score is assigned to any narrative or outlet.",
+    "Pass two, prose figures: no narration sentence in either locale contains a numeral, so there is no figure in prose that could resolve to nothing. Every quantitative assertion is made comparatively and is backed by an element value or quoted evidence.",
+    "Adjudicated, not missed: the sole occurrence of the token 'true' in the file is og.fallback: true at line 21, a JSON boolean flag on the image fallback field. It is not a user-facing string and not a verdict on a narrative or an outlet, so it is not a lexicon violation.",
+    "Verdict pass: every narration sentence in both locales binds only to declared elements, every panel is covered in both locales, every number resolves to a sourced element, and no sentence asserts a claim its bound elements do not carry."
+  ],
+  "model": "claude-opus-5[1m]"
+}

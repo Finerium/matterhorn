@@ -1,0 +1,81 @@
+{
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "n-levy",
+        "label": {
+          "en": "A canal levy charged per tonne at the canal road weighbridge on material moved toward the works",
+          "id": "Retribusi kanal yang dipungut per ton di jembatan timbang jalan kanal atas material yang masuk ke lokasi pekerjaan"
+        }
+      },
+      {
+        "el_id": "n-receipts",
+        "label": {
+          "en": "Canal levy receipts booked by the Rambai City Budget Board",
+          "id": "Penerimaan retribusi kanal yang dibukukan Badan Anggaran Kota Rambai"
+        }
+      },
+      {
+        "el_id": "n-basis",
+        "label": {
+          "en": "The receipt line presented as the funding basis for the city flood program",
+          "id": "Angka penerimaan disajikan sebagai dasar pembiayaan program banjir kota"
+        }
+      },
+      {
+        "el_id": "n-whole",
+        "label": {
+          "en": "The levy pays for the whole flood program",
+          "id": "Retribusi menutup seluruh program banjir"
+        }
+      },
+      {
+        "el_id": "n-nogen",
+        "label": {
+          "en": "The arrangement described as self financing, with no general revenue drawn down",
+          "id": "Skema disebut membiayai dirinya sendiri, kas umum kota tidak tersentuh"
+        }
+      },
+      {
+        "el_id": "n-nocost",
+        "label": {
+          "en": "The promised outcome: no cost to anyone in the city",
+          "id": "Hasil yang dijanjikan: tanpa biaya bagi siapa pun di kota"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "e-levy-receipts",
+        "from": "n-levy",
+        "to": "n-receipts",
+        "quote": "The Rambai City Budget Board booked Rp42 billion of canal levy receipts in fiscal 2031"
+      },
+      {
+        "el_id": "e-receipts-basis",
+        "from": "n-receipts",
+        "to": "n-basis",
+        "quote": "The Rambai City Budget Board booked Rp42 billion of canal levy receipts in fiscal 2031 and presented the line as the funding basis for the city flood program."
+      },
+      {
+        "el_id": "e-basis-whole",
+        "from": "n-basis",
+        "to": "n-whole",
+        "quote": "The Canal Levy Pays for the Whole Flood Program"
+      },
+      {
+        "el_id": "e-whole-nogen",
+        "from": "n-whole",
+        "to": "n-nogen",
+        "quote": "Board officials described the arrangement as self financing and said no general revenue was drawn down."
+      },
+      {
+        "el_id": "e-nogen-nocost",
+        "from": "n-nogen",
+        "to": "n-nocost",
+        "quote": "no article in this family states the step from no general revenue drawn down to no cost to anyone in the city"
+      }
+    ]
+  },
+  "model": "claude-fable-5"
+}
