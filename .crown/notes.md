@@ -137,3 +137,21 @@ Decisions and findings (full agent output: session task wcv2o11q6):
   proven from history; contract fidelity field-for-field faithful.
 - Fix loop round 1: test-author-2 authors new red cases -> orchestrator installs, verifies
   RED -> fix-implementer -> scoped re-review.
+
+## GATE 1: GREEN (2026-07-28, ~20:35 WIB)
+- Fix loop round 1 closed: scoped re-review (claude-opus-5[1m]) verdicts ALL six findings
+  ADDRESSED with its own probes (12 probe roots, restamped tokens, 19-path predicate sweep).
+- Suite 47/47; ten checks green on real content/; worker separation provable from history
+  (75574e4 tests -> a62864b impl -> a4cb3e4 red cases -> 8c66541 fix).
+- Deferred minors (fail-closed, documented ceilings): scanAppImports dies loudly on dangling
+  symlinks (exit 1 either way); SPECIFIER text scan can false-positive on prose mentioning
+  fixture paths in comments/strings. Revisit only if they bite.
+- GATE 2 PREREQS carried forward: wire --scan-app app/src into CI validate:content step the
+  moment app/src grows real modules (this gate's re-review flagged it; Gate 2 plan has it).
+  Lexicon phrase regexes compile bare (config, not content): acceptable, noted.
+- Gate 2 begins per docs/plans/2026-07-28-gate2-renderers.md. Seed-flag mechanics decision:
+  object-rooted artifact schemas declare optional "seed": const true (additive field whose
+  validator coverage IS check 7); array-rooted files are quarantined by directory + import
+  scan alone. Zip gaps W1 must fill for schema-valid seeds: sparring/prediction_tap filler
+  where the zip lacks them, ID-locale renditions of EN-only zip copy, CF-5 synthetic
+  percent-Values for ppn scale (all quarantined, deleted at Gate C).
