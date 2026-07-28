@@ -187,7 +187,7 @@ test('AC-GRAM-6 echo renders the motif, the documented outcome, and its resolved
   await open(page, 'echo', 'ppn-panic');
   const echo = page.locator('[data-el="p-echo"]');
   await expect(echo).toContainText('A restricted measure narrated as universal');
-  await expect(echo).toContainText('weeks of mispriced fear followed');
+  await expect(echo).toContainText('Weeks of mispriced fear followed');
   // citations resolve through the registry, so either identity of a cited source may show.
   await expect(echo).toHaveText(/Direktorat Jenderal Pajak|PMK 131\/2024|Bisnis\.com|Barang Mewah/);
 });

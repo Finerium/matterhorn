@@ -84,7 +84,7 @@ const APP_SRC = join(process.cwd(), 'app', 'src');
 function appModules(): string[] {
   return readdirSync(APP_SRC, { recursive: true })
     .map(String)
-    .filter((rel) => /\.(?:ts|tsx|js|jsx|mjs)$/.test(rel) && statSync(join(APP_SRC, rel)).isFile())
+    .filter((rel) => /\.(?:ts|tsx|js|jsx|mjs|css|html)$/.test(rel) && statSync(join(APP_SRC, rel)).isFile())
     .sort((a, b) => a.localeCompare(b));
 }
 

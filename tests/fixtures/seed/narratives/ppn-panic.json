@@ -350,8 +350,8 @@
         "id": "Inflasi cakupan pada aturan pajak, dibawa oleh pesan berantai."
       },
       "outcome": {
-        "en": "Documented outcome: weeks of mispriced fear followed, after PMK 131/2024 had already restricted the rise to luxury goods, and the clarification took a multi channel effort to travel.",
-        "id": "Hasil terdokumentasi: berpekan-pekan kepanikan harga yang keliru menyusul, setelah PMK 131/2024 sudah membatasi kenaikan itu pada barang mewah, dan penjelasannya perlu upaya lintas kanal untuk menyebar."
+        "en": "Weeks of mispriced fear followed, after PMK 131/2024 had already restricted the rise to luxury goods, and the clarification took a multi channel effort to travel.",
+        "id": "Berpekan-pekan kepanikan harga yang keliru menyusul, setelah PMK 131/2024 sudah membatasi kenaikan itu pada barang mewah, dan penjelasannya perlu upaya lintas kanal untuk menyebar."
       },
       "citations": [
         "id-bisnis-ppn-luxury",
@@ -474,11 +474,11 @@
     "gates": {
       "symmetry": {
         "verdict": "pass",
-        "token": "625c381ba568811cd5b1a47761491ead57a6cc89f4d915505570ae2662477b36"
+        "token": "3c26cab14426449787cf5ead431b18df6fd86467191267b003e1f320513c0672"
       },
       "fidelity": {
         "verdict": "pass",
-        "token": "625c381ba568811cd5b1a47761491ead57a6cc89f4d915505570ae2662477b36"
+        "token": "3c26cab14426449787cf5ead431b18df6fd86467191267b003e1f320513c0672"
       }
     }
   }
