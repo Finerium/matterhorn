@@ -1,0 +1,115 @@
+[
+  {
+    "id": "id-agency-budget-2026",
+    "title": "Annual budget table for the 2026 cycle",
+    "publisher": "Agency A",
+    "url": "https://example.org/agency-a/budget-2026",
+    "retrieved_at": "2026-07-20",
+    "period": "Budget 2026, enacted",
+    "kind": "official",
+    "self_reported": false,
+    "liveness": "live"
+  },
+  {
+    "id": "id-agency-program-2026",
+    "title": "Programme progress report for the 2026 cycle",
+    "publisher": "Agency A",
+    "url": "https://example.org/agency-a/programme-2026",
+    "retrieved_at": "2026-07-20",
+    "period": "Jan to May 2026",
+    "kind": "official",
+    "self_reported": true,
+    "liveness": "live",
+    "notes": "Institution reporting on its own programme. Figures carry the self reported flag."
+  },
+  {
+    "id": "id-agency-health-2026",
+    "title": "District intake register for the 2025 season",
+    "publisher": "Agency B",
+    "url": "https://example.org/agency-b/intake-2025",
+    "retrieved_at": "2026-07-20",
+    "period": "Jan to Oct 2025",
+    "kind": "official",
+    "self_reported": false,
+    "liveness": "live"
+  },
+  {
+    "id": "id-monitor-network-2026",
+    "title": "Independent monitoring tally for the 2025 season",
+    "publisher": "Monitor Network",
+    "url": "https://example.org/monitor-network/tally-2025",
+    "retrieved_at": "2026-07-20",
+    "period": "Jan to Oct 2025",
+    "kind": "ngo",
+    "self_reported": false,
+    "liveness": "live"
+  },
+  {
+    "id": "id-rights-commission-2019",
+    "title": "Review record for the 2019 episode",
+    "publisher": "Rights Commission",
+    "url": "https://example.org/rights-commission/review-2019",
+    "retrieved_at": "2026-07-20",
+    "period": "May 2019",
+    "kind": "ngo",
+    "self_reported": false,
+    "liveness": "live"
+  },
+  {
+    "id": "id-archive-mirror-2025",
+    "title": "Archived copy of the withdrawn 2025 notice",
+    "publisher": "Archive Mirror",
+    "url": "https://example.org/archive-mirror/notice-2025",
+    "retrieved_at": "2026-07-20",
+    "period": "Dec 2025",
+    "kind": "outlet",
+    "self_reported": false,
+    "liveness": "dead_replaced",
+    "notes": "Original page returned status 410 at snapshot. Replaced by the archived copy recorded here, same text, same date."
+  },
+  {
+    "id": "en-budget-office-2026",
+    "title": "Ten year revenue projection tables",
+    "publisher": "Budget Office",
+    "url": "https://example.org/budget-office/projection-2026",
+    "retrieved_at": "2026-07-20",
+    "period": "Fiscal 2026 to 2035",
+    "kind": "official",
+    "self_reported": false,
+    "liveness": "live"
+  },
+  {
+    "id": "en-revenue-service-2026",
+    "title": "Monthly receipts summary",
+    "publisher": "Revenue Service",
+    "url": "https://example.org/revenue-service/receipts-2026",
+    "retrieved_at": "2026-07-20",
+    "period": "Fiscal 2026, through June",
+    "kind": "official",
+    "self_reported": false,
+    "liveness": "live"
+  },
+  {
+    "id": "en-policy-institute-2026",
+    "title": "Distributional note on the schedule change",
+    "publisher": "Policy Institute",
+    "url": "https://example.org/policy-institute/note-2026",
+    "retrieved_at": "2026-07-20",
+    "period": "Fiscal 2026",
+    "kind": "ngo",
+    "self_reported": false,
+    "liveness": "live",
+    "notes": "Snapshot returned status 403 to automated clients. The anti bot challenge was corroborated by a manual browser check on the retrieval date, which loaded the same document."
+  },
+  {
+    "id": "en-journal-review-2026",
+    "title": "Peer reviewed estimate with a stated interval",
+    "publisher": "Journal Review",
+    "url": "https://example.org/journal-review/estimate-2026",
+    "retrieved_at": "2026-07-20",
+    "period": "2001 to 2021",
+    "kind": "academic",
+    "self_reported": false,
+    "liveness": "live"
+  }
+]
