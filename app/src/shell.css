@@ -1,0 +1,393 @@
+/* Matterhorn shell styles: the app chrome, ported from the design zip (Matterhorn.dc.html
+   lines 56-350) the same way renderers.css was ported. Every radius, padding, hairline, type
+   size, frost blur, and animation curve is the zip's; the declarations moved off the elements
+   and onto classes. Colour comes from tokens.css. No hue is introduced here.
+
+   Class prefix `m-` matches renderers.css; no name in this file collides with one in that. */
+
+/* --- the zip's shell keyframes, the ones renderers.css did not need -------------------- */
+
+@keyframes mgreet {
+  from { opacity: 0; filter: blur(10px); transform: scale(0.97); }
+  to { opacity: 1; filter: blur(0); transform: scale(1); }
+}
+@keyframes mpush {
+  from { opacity: 0; transform: translateX(34px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes mtoast {
+  from { opacity: 0; transform: translate(-50%, 8px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mth .m-screen,
+  .mth .m-greet,
+  .mth .m-toast,
+  .mth .m-ios { animation: none; }
+}
+
+/* --- the app viewport ------------------------------------------------------------------ */
+
+.m-app {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+}
+
+/* Every screen root. `data-screen` is on this element, and it is what the state matrix reads. */
+.m-screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  animation: mpush 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.m-screen[data-anim='fade'] { animation: mfade 0.5s ease both; }
+.m-brand { font-size: 11px; font-weight: 600; letter-spacing: 0.42em; color: var(--ink); }
+.m-spacer { flex: 1; }
+
+/* --- onboarding ------------------------------------------------------------------------ */
+
+.m-onb { padding: 76px 24px 0; }
+.m-onb-step { font-size: 13px; font-weight: 600; color: var(--acc); }
+.m-onb-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 10px 0 6px;
+  text-wrap: pretty;
+}
+.m-onb-body { font-size: 15px; line-height: 1.5; color: var(--sub); text-wrap: pretty; }
+.m-onb-list { flex: 1; overflow: auto; margin-top: 8px; }
+.m-onb-foot { padding: 12px 0 30px; }
+
+.m-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 2px;
+  border-bottom: 1px solid var(--hair);
+  cursor: pointer;
+  width: 100%;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  text-align: left;
+  color: inherit;
+  font: inherit;
+}
+.m-row-main { flex: 1; }
+.m-row-label { font-size: 17px; font-weight: 500; }
+.m-row-sub { font-size: 13px; color: var(--sub); margin-top: 2px; }
+.m-radio {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid var(--hair2);
+  flex-shrink: 0;
+}
+.m-radio-on {
+  border: none;
+  background: var(--acc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.m-cta {
+  height: 52px;
+  width: 100%;
+  background: var(--acc);
+  color: var(--accInk);
+  border: none;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+.m-ghost {
+  height: 48px;
+  width: 100%;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--sub);
+  cursor: pointer;
+}
+
+/* hello */
+.m-hello { align-items: center; padding: 88px 28px 42px; }
+.m-hello-mid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+.m-hello-slot { height: 64px; display: flex; align-items: center; justify-content: center; }
+.m-greet {
+  font-size: 46px;
+  font-weight: 300;
+  letter-spacing: -0.015em;
+  animation: mgreet 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.m-hello-tag { font-size: 13px; font-weight: 500; color: var(--sub); }
+.m-hello-foot { width: 100%; display: flex; flex-direction: column; gap: 18px; align-items: center; }
+.m-hello-sub {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--sub);
+  text-align: center;
+  max-width: 270px;
+  text-wrap: pretty;
+}
+
+/* notification primer */
+.m-notif { padding: 76px 24px 30px; }
+.m-notif-card {
+  margin: 22px 0;
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 14px 15px;
+  box-shadow: var(--shadow);
+}
+.m-notif-head { display: flex; align-items: center; gap: 8px; }
+.m-notif-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background: var(--ink);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+.m-notif-app { font-size: 12px; font-weight: 600; color: var(--sub); }
+.m-notif-now { margin-left: auto; font-size: 11px; color: var(--sub); }
+.m-notif-title { font-size: 13.5px; font-weight: 650; margin: 8px 0 3px; text-wrap: pretty; }
+.m-notif-body { font-size: 12px; line-height: 1.5; color: var(--body); text-wrap: pretty; }
+
+/* auth */
+.m-auth { padding: 88px 24px 34px; }
+.m-auth-title { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin: 26px 0 8px; text-wrap: pretty; }
+.m-auth-body { font-size: 15px; line-height: 1.55; color: var(--sub); text-wrap: pretty; }
+.m-auth-btns { display: flex; flex-direction: column; gap: 10px; }
+.m-btn-apple {
+  height: 52px;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+.m-btn-plain {
+  height: 52px;
+  background: var(--fill);
+  color: var(--ink);
+  border: none;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+.m-auth-foot { font-size: 12px; color: var(--sub); text-align: center; margin-top: 14px; line-height: 1.6; }
+
+/* --- main: the four tabs and the frosted bars ------------------------------------------ */
+
+.m-main { animation: mfade 0.4s ease both; }
+.m-tabpane { flex: 1; overflow: auto; padding: 60px 16px 118px; }
+.m-tabpane-radar { padding: 0 16px 118px; }
+
+.m-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  margin: 0 -16px;
+  padding: 56px 16px 8px;
+  background: var(--frost);
+  backdrop-filter: blur(24px) saturate(1.8);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+}
+.m-topbar-row { display: flex; align-items: center; justify-content: space-between; padding: 0 2px; }
+.m-pack {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--surface);
+  border: none;
+  border-radius: 999px;
+  padding: 8px 14px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--ink);
+}
+.m-pack-caret { font-size: 8px; color: var(--sub); }
+.m-feedline { display: flex; align-items: center; gap: 8px; padding: 8px 2px 4px; }
+.m-feedmeta { font-size: 12px; font-weight: 500; color: var(--sub); }
+.m-symlink {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--sub);
+  border: none;
+  border-bottom: 1px dotted var(--hair2);
+  background: none;
+  padding: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+.m-feedfoot { text-align: center; font-size: 12px; color: var(--sub); padding: 10px 0 16px; text-wrap: pretty; }
+
+.m-pane-title { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; padding-top: 6px; }
+.m-pane-body { font-size: 13px; color: var(--sub); line-height: 1.55; margin-top: 4px; text-wrap: pretty; }
+.m-pane-note { font-size: 13px; color: var(--sub); line-height: 1.55; margin-top: 18px; }
+
+.m-tabbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  padding: 10px 6px 24px;
+  background: var(--frost);
+  backdrop-filter: blur(24px) saturate(1.8);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  border-top: 0.5px solid var(--hairA);
+  z-index: 40;
+}
+.m-tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  color: var(--sub);
+}
+.m-tab[data-on='1'] { color: var(--acc); }
+.m-tab-label { font-size: 10.5px; font-weight: 600; }
+
+/* The zip's scroll-driven reveal, restored now that a scroll container exists (Gate 2 note).
+   Guarded by @supports, so browsers without view() timelines keep the stagger fallback. */
+@supports (animation-timeline: view()) {
+  .mth .m-tabpane [data-sr='1'] {
+    animation: mrise auto cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: 0s;
+    animation-timeline: view();
+    animation-range: entry 0% entry 78%;
+  }
+}
+
+/* --- overlays: the simulated iOS dialog, the honest-auth sheet, the toast --------------- */
+
+.m-ios-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 70;
+  padding: 0 40px;
+}
+.m-ios {
+  width: 272px;
+  border-radius: 16px;
+  background: rgba(248, 248, 248, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  color: #111111;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: mfade 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+.m-ios-body { padding: 18px 18px 14px; text-align: center; }
+.m-ios-title { font-size: 16px; font-weight: 650; line-height: 1.35; }
+.m-ios-sub { font-size: 12.5px; color: rgba(0, 0, 0, 0.6); line-height: 1.45; margin-top: 6px; }
+.m-ios-actions { display: flex; border-top: 0.5px solid rgba(0, 0, 0, 0.18); }
+.m-ios-btn {
+  flex: 1;
+  padding: 12px;
+  text-align: center;
+  font-size: 15.5px;
+  color: #0a7aff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+.m-ios-btn-deny { border-right: 0.5px solid rgba(0, 0, 0, 0.18); }
+.m-ios-btn-allow { font-weight: 650; }
+
+.m-sheet-h { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; margin-top: 4px; }
+.m-sheet-p { font-size: 13.5px; line-height: 1.6; color: var(--body); margin-top: 8px; text-wrap: pretty; }
+.m-sheet-cta { margin-top: 16px; }
+
+.m-toast {
+  position: absolute;
+  bottom: 96px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  animation: mtoast 0.3s ease;
+  z-index: 90;
+  max-width: 88%;
+  text-wrap: pretty;
+}
+
+/* --- the plain routes: home placeholder, permalink, methodology, share, offline, 404 ---- */
+
+.m-page {
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  padding: 56px 20px 64px;
+}
+.m-page-in { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+.m-page-title { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; text-wrap: pretty; }
+.m-page-body { font-size: 15px; line-height: 1.6; color: var(--body); text-wrap: pretty; }
+.m-page-meta { font-size: 12px; color: var(--sub); line-height: 1.7; word-break: break-all; }
+.m-page-link { font-size: 15px; font-weight: 600; color: var(--ink); border-bottom: 1px solid var(--hair2); align-self: flex-start; }
