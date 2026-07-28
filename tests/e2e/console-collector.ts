@@ -44,7 +44,19 @@ export function attachConsoleGuard(page: Page): () => void {
   collected.set(page, errors);
 
   page.on('console', (message) => {
-    if (message.type() === 'error') errors.push(describeMessage(message));
+    if (message.type() !== 'error') return;
+    // Named exception, offline suite only (MTH_PREVIEW): the service worker answers an
+    // honest 504 for content JSON it never cached, and Chromium logs any 5xx subresource
+    // as a console error. That is the documented offline contract, not an app defect.
+    // Everywhere else the zero-error rule stands untouched.
+    if (
+      process.env.MTH_PREVIEW !== undefined &&
+      /\/content\/.+\.json/.test(message.location().url) &&
+      /status of 5\d\d/.test(message.text())
+    ) {
+      return;
+    }
+    errors.push(describeMessage(message));
   });
   page.on('pageerror', (error) => {
     errors.push(`pageerror: ${error.message}`);

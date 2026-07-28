@@ -834,8 +834,8 @@ test.describe('AC-APP-14 region and language switching', () => {
 
 test.describe('AC-APP-17 offline', () => {
   test.fixme(
-    true,
-    'SKIP-IF-SW-DISABLED-IN-DEV: app/vite.config.ts leaves VitePWA out while serving, so no service worker exists under app.config.ts. These run against a built preview (pnpm build && pnpm exec vite preview app), which is where the Gate 3 offline evidence comes from. Remove the fixme once the suite points at the preview server.',
+    process.env.MTH_PREVIEW === undefined,
+    'offline needs the real service worker: runs under tests/e2e/preview.config.ts, which builds and previews with the SW registered.',
   );
 
   test('a cached /app reloads offline', async ({ page, context }) => {

@@ -53,6 +53,20 @@ const CONTENT = 'mth-content-v1';
 const OFFLINE_URL = '/offline';
 const KEEP = new Set([SHELL, CONTENT]);
 
+/**
+ * Every read in this file, without exception.
+ *
+ * A preview server answers with `Vary: Origin`, so a cached response only matches a request
+ * carrying the same `Origin` header the cache entry was stored under. The install writes the
+ * precache through `cache.addAll`, whose requests are same-origin and send no `Origin`; the
+ * page then asks for those same assets through `<script crossorigin>`, which does send one.
+ * Vary-sensitive matching calls that a different request and misses every precached asset:
+ * the shell comes back offline and dies on its own bundle, which is a blank page wearing a
+ * working fallback's clothes. Ignoring Vary is correct here because the worker keys its caches
+ * by URL and stores exactly one response per URL, which is the assumption `ignoreVary` states.
+ */
+const MATCH = { ignoreVary: true } as const;
+
 self.addEventListener('install', (event) => {
   event.waitUntil(
     (async () => {
@@ -86,13 +100,13 @@ self.addEventListener('activate', (event) => {
  */
 async function cacheFirst(request: Request): Promise<Response> {
   const cache = await caches.open(SHELL);
-  return (await cache.match(request)) ?? (await fetch(request));
+  return (await cache.match(request, MATCH)) ?? (await fetch(request));
 }
 
 /** Rule 2: answer from cache, refresh behind it. */
 async function staleWhileRevalidate(request: Request): Promise<Response> {
   const cache = await caches.open(CONTENT);
-  const cached = await cache.match(request);
+  const cached = await cache.match(request, MATCH);
   const network = fetch(request)
     .then(async (response) => {
       if (response.ok) await cache.put(request, response.clone());
@@ -118,7 +132,7 @@ async function servable(url: URL): Promise<boolean> {
   const permalink = /^\/n\/([^/]+)\/?$/.exec(url.pathname);
   if (permalink === null) return true;
   const cache = await caches.open(CONTENT);
-  return (await cache.match(`/content/narratives/${permalink[1] ?? ''}.json`)) !== undefined;
+  return (await cache.match(`/content/narratives/${permalink[1] ?? ''}.json`, MATCH)) !== undefined;
 }
 
 /** Rule 3: a navigation the network cannot serve falls back to the cached shell, then /offline. */
@@ -135,7 +149,7 @@ async function navigate(request: Request): Promise<Response> {
     // The precached shell first: it boots the router, which renders the requested route with
     // whatever is already in the content cache. /offline is the floor under that.
     for (const key of [request as Request | string, '/index.html', OFFLINE_URL]) {
-      const cached = await cache.match(key);
+      const cached = await cache.match(key, MATCH);
       if (cached !== undefined) return cached;
     }
     return new Response('', { status: 504 });

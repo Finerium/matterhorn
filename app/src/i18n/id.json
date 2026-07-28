@@ -5,6 +5,7 @@
   "common.loading": "Memuat",
   "common.failed": "Tidak termuat: {detail}",
   "common.soon": "Belum ada pada versi ini.",
+  "sheet.close": "Tutup",
   "boundary.title": "Bagian ini tidak dapat digambar.",
   "boundary.body": "Bagian lain halaman ini tidak terpengaruh. Muat ulang untuk mencobanya lagi.",
 

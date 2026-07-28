@@ -196,3 +196,30 @@ Decisions and findings (full agent output: session task wcv2o11q6):
   constructions; Narrator (A9) and Guard (A11) prompts must carry the lexicon and the
   writers must phrase around it (sebuah/dari antara), never weaken the lint.
 - vitest now permanently excludes staging/**.
+
+## GATE 3: GREEN (2026-07-29, after one fix round)
+- Reviewer claude-opus-5[1m]: 24/25 checks passed first pass; RED on one real defect:
+  Vary-sensitive SW cache matching blanked ALL offline behavior on a built preview.
+  Fix round: ignoreVary on all four match sites, PROVEN by a control experiment (fix
+  reverted -> identical failure); offline trio now 3/3 automated under
+  tests/e2e/preview.config.ts (real build + real SW); close controls added to the three
+  text-only sheets; U+2019 alignment. Review also completed AC-GRAM-9's app half
+  (six side-by-side pairs vs the living zip runtime: fidelity with defensible
+  deviations), verified D-10 tagline verbatim + old tagline absent repo-wide, all
+  Gate 2 residuals re-probed clean, and all 13 wave deviations adjudicated (11
+  defensible, 2 -> disclosure lines below).
+- DEVIATIONS DISCLOSED (review minors, now formal):
+  1. Settings rolling-accuracy readout ("9 of 12 - promotes at 75%") dropped: the demo
+     tracks no cross-session accuracy and rendering an underivable number violates C3's
+     spirit. Revisit if on-device accuracy history lands.
+  2. Hero velocity sparkline deferred to the /research detail rail (F11): no contract
+     field carries velocity on Narrative. Re-evaluate at Gate 5.
+  3. Appendix C placeholder tokens localized to bundle naming ({date}->{at},
+     {pack_label}->{pack}, {headline_short}->{headline}, {top_tag}->{tag}); rendered
+     strings byte-verbatim (verified live).
+  4. AC-APP-22 carries ONE named scoped exception (offline suite only): the SW's honest
+     504 for never-cached content JSON, which Chromium logs as a console error. The
+     zero-error rule stands everywhere else. Ruling: the app fetching content it cannot
+     know is missing is correct; the worker never lies about content it does not have.
+- AC-APP-2..14, 16-20, 22-23 green; 15/21 land at Gate 6 with dark parity +
+  cross-browser + the generated-content matrix re-pin.

@@ -5,6 +5,7 @@
   "common.loading": "Loading",
   "common.failed": "Not loaded: {detail}",
   "common.soon": "Not in this build yet.",
+  "sheet.close": "Close",
   "boundary.title": "This part could not be drawn.",
   "boundary.body": "Nothing else on the page is affected. Reload to try it again.",
 
@@ -111,10 +112,10 @@
   "dissect.recent": "Recent on this device",
   "dissect.recent.none": "Nothing has been resolved on this device yet.",
   "dissect.recent.meta": "Cached · computed {at} · {sources} sources",
-  "dissect.foot": "Cache-first. One reader's question becomes everyone's answer.",
+  "dissect.foot": "Cache-first. One reader’s question becomes everyone’s answer.",
 
   "rate.title": "Daily fresh-dissection limit reached",
-  "rate.body": "Fresh (uncached) dissections are limited to 2 per day at demo scale: frontier-model analysis is the only expensive step. Cached dissections stay unlimited, and one user's question becomes everyone's answer.",
+  "rate.body": "Fresh (uncached) dissections are limited to 2 per day at demo scale: frontier-model analysis is the only expensive step. Cached dissections stay unlimited, and one user’s question becomes everyone’s answer.",
   "rate.reset": "Resets 00:00 WIB",
   "rate.cta": "Understood",
 

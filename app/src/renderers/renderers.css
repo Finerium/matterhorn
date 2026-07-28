@@ -568,3 +568,21 @@
   padding-top: 10px;
   line-height: 1.7;
 }
+/* The dismissal a text-only sheet would otherwise not have. Escape and the scrim are both real
+   and both stay, but neither is discoverable without a pointer or prior knowledge, and a sheet
+   made of paragraphs holds no other tab stop. Shaped like shell.css's .m-cta-soft, declared
+   here because the renderer layer ships without shell.css (the Gate 2 harness loads this file
+   and tokens.css only). */
+.m-sheet-close {
+  height: 46px;
+  width: 100%;
+  margin-top: 16px;
+  background: var(--fill);
+  border: none;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+}

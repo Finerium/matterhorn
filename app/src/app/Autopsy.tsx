@@ -571,6 +571,11 @@ export default function Autopsy({ state, nav }: { state: AppState; nav: Nav }) {
             {n.outlet} · {dateLabel(n.published_date, ctx.lang)} · {n.url}
           </div>
           <div className="m-sheet-foot">{t('orig.foot')}</div>
+          {/* Text-only sheets carry no other tab stop, so without this a keyboard reader is held
+              by the trap with no named way out. Escape and the scrim are unchanged. */}
+          <button type="button" className="m-sheet-close" onClick={closeSheet}>
+            {t('sheet.close')}
+          </button>
         </Sheet>
       )}
 
@@ -595,6 +600,9 @@ export default function Autopsy({ state, nav }: { state: AppState; nav: Nav }) {
           </div>
           <div className="m-sheet-meta">{t('autopsy.chain.run', { run: n.manifest.run_id, at: n.manifest.generated_at })}</div>
           <div className="m-sheet-foot">{t('autopsy.chain.foot')}</div>
+          <button type="button" className="m-sheet-close" onClick={closeSheet}>
+            {t('sheet.close')}
+          </button>
         </Sheet>
       )}
 

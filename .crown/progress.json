@@ -1,5 +1,5 @@
 {
-  "gate": "3",
+  "gate": "C",
   "status": "in_progress",
   "completed_ac": [
     "gate0-green",
@@ -13,10 +13,16 @@
     "AC-INV-7",
     "AC-INV-10",
     "AC-GRAM-1..8",
-    "AC-GRAM-9-partial"
+    "AC-GRAM-9-partial",
+    "gate3-green",
+    "AC-APP-2..14",
+    "AC-APP-16..20",
+    "AC-APP-22",
+    "AC-APP-23",
+    "AC-GRAM-9"
   ],
   "pending_stop_and_asks": [],
-  "updated": "2026-07-28T23:00:00+07:00",
+  "updated": "2026-07-29T02:30:00+07:00",
   "snapshot": {
     "sources": 44,
     "og_fetched": 8,

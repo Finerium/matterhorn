@@ -181,6 +181,12 @@ export function EvidenceSheet({
           <br />
           {t(ctx, UI.sheetFooterB)}
         </div>
+        {/* This sheet is otherwise all paragraphs: no tab stop, so a keyboard reader is handed a
+            trap whose only exit is a key nothing on screen names. The trap and Escape are
+            unchanged; this is the exit made visible. */}
+        <button type="button" className="m-sheet-close" onClick={onClose}>
+          {t(ctx, UI.close)}
+        </button>
       </div>
     </>
   );
