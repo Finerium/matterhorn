@@ -10,3 +10,5 @@ dist/
 *.onnx
 .env
 .env.*
+.unlock
+staging/
