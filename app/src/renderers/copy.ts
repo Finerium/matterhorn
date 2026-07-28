@@ -3,7 +3,7 @@
  *
  * Content copy lives in the artifact and is never written here. What is here is chrome: panel
  * titles, section labels, the legend, the fixed retrospective disclaimer named by
- * `EchoPanel.disclaimer_key`, and the sheet footer. Wording is the zip's wherever the zip has a
+ * `EchoPanel.disclaimer_key`, the money panel's honesty note, and the sheet footer. Wording is the zip's wherever the zip has a
  * generic equivalent (the zip authored a per-panel title; the contract has no title field, so
  * the type-level title is what ships).
  *
@@ -27,6 +27,12 @@ export const UI = {
   struckBreak: { en: 'Struck rows break', id: 'Baris yang dicoret putus' },
   breaks: { en: 'Breaks', id: 'Putus' },
   stopToggle: { en: 'Stop the flow', id: 'Hentikan aliran' },
+  // The zip's per-panel money note, EN verbatim. It is the honesty statement the panel is built
+  // on, so it is fixed chrome here rather than a per-artifact field an author could drop.
+  moneyNote: {
+    en: 'Struck = documented existing flows that break under an abrupt stop. Qualitative and cited; no projected macro curves are drawn anywhere.',
+    id: 'Dicoret = aliran yang sudah berjalan dan terdokumentasi, yang putus jika dihentikan mendadak. Kualitatif dan terkutip; tidak ada kurva makro proyeksi yang digambar di mana pun.',
+  },
   now: { en: 'Now', id: 'Sekarang' },
   onFile: { en: 'On file · case ', id: 'Terarsip · kasus ' },
   documentedOutcome: { en: 'Documented outcome', id: 'Hasil terdokumentasi' },

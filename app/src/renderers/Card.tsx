@@ -15,7 +15,7 @@
  * Ported from the zip's hero and compact card blocks. Compact gains a tag row the zip did not
  * carry, because the card contract asserts every tag renders in both slots.
  */
-import type { DerivedCounts, Narrative } from '../../../contracts/types';
+import type { DerivedCounts, DuelingPanel, Narrative } from '../../../contracts/types';
 import { CardContractError, resolveAll, t, type RenderCtx } from './ctx';
 import { COUNT_CHIPS, UI } from './copy';
 
@@ -24,6 +24,12 @@ interface CardProps {
   variant: 'hero' | 'compact';
   ctx: RenderCtx;
 }
+
+/**
+ * The five counts Section 6.5 derives for every narrative. `conflicts` is the CF-1 optional
+ * sixth and is not demanded: a narrative with no dueling panel has none.
+ */
+const COUNT_KEYS = ['missing', 'unsourced', 'disputed', 'supported', 'hidden'] as const;
 
 /** The chips a `counts` block earns, in the blueprint's order. `supported` never earns one. */
 function chipsFor(counts: DerivedCounts, ctx: RenderCtx): Array<{ st: string; label: string }> {
@@ -38,9 +44,14 @@ export default function Card({ narrative, variant, ctx }: CardProps) {
   // carrying a reference that does not resolve is not a renderable narrative.
   resolveAll(narrative, ctx);
 
+  // Symmetric with the tags guard below: shape, not merely presence. `{}` and `[]` are objects
+  // that never went through derivation, and a card drawn from either would show zero chips and
+  // look complete. All-zero counts, which are five real numbers, still render with no chips.
   const counts = narrative.counts as DerivedCounts | undefined;
-  if (counts === null || typeof counts !== 'object') {
-    throw new CardContractError(`narrative "${narrative.id}" carries no derived counts`);
+  if (counts === null || typeof counts !== 'object' || COUNT_KEYS.some((key) => typeof counts[key] !== 'number')) {
+    throw new CardContractError(
+      `narrative "${narrative.id}" carries no derived counts: ${COUNT_KEYS.join(', ')} must all be numbers`,
+    );
   }
   const tags = narrative.tags as string[] | undefined;
   if (!Array.isArray(tags) || tags.length === 0) {
@@ -52,6 +63,14 @@ export default function Card({ narrative, variant, ctx }: CardProps) {
   const meta = `${narrative.outlet} · ${narrative.published_date}`;
   const translated = narrative.original.lang !== ctx.lang;
   const review = narrative.status === 'under_review';
+  // The zip's imgLabel: the placeholder names the outlet whose og:image belongs in the slot.
+  const og = `${t(ctx, UI.ogPlaceholder)} · ${narrative.outlet}`;
+  // The zip's famLine. Section 6.4 calls the zip's family `note` the `skeleton`; same string.
+  const famLine = `${narrative.family.skeleton}: ${narrative.family.members.map((m) => m.outlet).join(' · ')}`;
+  // CF-1, as resolved in docs/understanding.md: the zip's compact teaser was fed by an authored
+  // `teaser` field Section 6.4 does not carry, so the teaser is the dueling panel's rule_line,
+  // which is already in the artifact and already cited. No dueling panel, no teaser.
+  const dueling = narrative.panels.find((p): p is DuelingPanel => p.type === 'dueling');
 
   const chipRow = (
     <div className={variant === 'hero' ? 'm-card-chips' : 'm-card-chips m-card-chips-c'}>
@@ -96,25 +115,23 @@ export default function Card({ narrative, variant, ctx }: CardProps) {
           <div className="m-card-c-head">{headline}</div>
           {tagRow}
           {chipRow}
+          {dueling === undefined ? null : <div className="m-card-teaser">{t(ctx, dueling.rule_line)}</div>}
           {provenance}
         </div>
-        <div className="m-card-c-og">{t(ctx, UI.ogPlaceholder)}</div>
+        <div className="m-card-c-og">{og}</div>
       </article>
     );
   }
 
   return (
     <article className="m-card" data-press="1">
-      <div className="m-card-og">{t(ctx, UI.ogPlaceholder)}</div>
+      <div className="m-card-og">{og}</div>
       <div className="m-card-body">
         {metaRow}
         <div className="m-card-head">{headline}</div>
         {tagRow}
         {chipRow}
-        <div className="m-card-fam">
-          {narrative.family.members.length}
-          {t(ctx, UI.familyMembers)}
-        </div>
+        <div className="m-card-fam">{famLine}</div>
         {provenance}
         <div className="m-card-actions">
           <span className="m-btn m-btn-acc">{t(ctx, UI.dissect)}</span>

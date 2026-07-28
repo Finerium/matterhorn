@@ -58,7 +58,8 @@ export default function Options({ panel, ctx }: { panel: OptionsPanel; ctx: Rend
             body: [t(ctx, step.channel)],
           }))}
         >
-          <span className="m-pb-i">{index + 1}</span>
+          {/* The zip's zero-padded step index: 01, 02, 03, so the column does not ragged out. */}
+          <span className="m-pb-i">{String(index + 1).padStart(2, '0')}</span>
           <div>
             <div className="m-pb-action">{t(ctx, step.action)}</div>
             <div className="m-pb-channel">{t(ctx, step.channel)}</div>

@@ -198,6 +198,8 @@
 .m-flow-label { font-size: 13.5px; font-weight: 650; }
 .m-flow-sub { font-size: 11px; color: var(--sub); margin-top: 2px; }
 .m-flow-note { font-size: 11px; color: var(--sub); margin-top: 4px; line-height: 1.45; text-wrap: pretty; }
+/* The zip's mnote: the panel's own honesty line, under the rows. */
+.m-flow-foot { font-size: 11.5px; color: var(--sub); line-height: 1.55; margin-top: 10px; text-wrap: pretty; }
 .m-flow-stem { display: flex; justify-content: center; }
 .m-stem-line { stroke: var(--hair2); }
 .m-flow-rows { display: flex; flex-direction: column; gap: 8px; }
@@ -437,6 +439,16 @@
 .m-card-chips-c { display: flex; gap: 10px; flex-wrap: wrap; border-top: none; padding-top: 0; margin-bottom: 8px; }
 .m-card-chips-c .m-card-chip { font-size: 11.5px; }
 .m-card-chips-c .m-dot { width: 6px; height: 6px; }
+/* The zip's compact teaser block. Its margin-top:8px is the chip row's margin-bottom here. */
+.m-card-teaser {
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: var(--dis);
+  border-top: 1px dotted var(--hair2);
+  padding-top: 7px;
+  margin-bottom: 8px;
+  text-wrap: pretty;
+}
 .m-card-c .m-prov { margin-bottom: 0; }
 .m-card-c-og {
   width: 72px;

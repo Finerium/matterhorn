@@ -6,7 +6,9 @@
  * meals on record, so the panel says what an abrupt stop severs without projecting anything.
  *
  * Ported from the zip's `p.isMoney` block: the toggle row, the fill-backed root, the 2x14
- * connector, and the two row states.
+ * connector, the two row states, and the note under them, which says what the strike means and
+ * what the panel refuses to draw. That note is chrome, not content: it states the rule the
+ * panel is built on, so it lives in copy.ts and no artifact can ship without it.
  */
 import type { MoneyFlowPanel } from '../../../contracts/types';
 import { resolveAll, t, type RenderCtx } from './ctx';
@@ -101,6 +103,7 @@ export default function MoneyFlow({ panel, ctx, stopped, onToggle }: MoneyFlowPr
           })}
         </div>
       </div>
+      <div className="m-flow-foot">{t(ctx, UI.moneyNote)}</div>
       {sheet}
     </section>
   );

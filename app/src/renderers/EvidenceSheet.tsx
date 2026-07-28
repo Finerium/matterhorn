@@ -110,13 +110,16 @@ export function EvidenceSheet({
   return (
     <>
       <div className="m-scrim" onClick={onClose} />
-      {/* ponytail: no focus trap yet. The sheet closes on scrim tap and on Escape, which is the
-          floor; the trap arrives with the Gate 3 shell that owns focus restore as well. */}
+      {/* ponytail: no focus trap yet, and therefore no aria-modal="true" either. The attribute
+          tells assistive technology that everything outside this element is inert, which is a
+          promise only a trap can keep; asserting it while Tab still walks out into the page is
+          worse than staying quiet. The sheet closes on scrim tap and on Escape, which is the
+          floor. Gate 3's shell owns the trap and focus restore, and puts aria-modal="true" back
+          in the same change: trap and attribute land together or neither lands. */}
       <div
         className="m-sheet"
         data-testid="evidence-sheet"
         role="dialog"
-        aria-modal="true"
         aria-label={title ?? label}
         onClick={(event) => {
           event.stopPropagation();
