@@ -25,3 +25,16 @@
 ## Conventions
 - Protected-path writes by orchestrator: `touch .unlock` before, `rm .unlock` after.
 - Workers deliver files via staging/ (gitignored) or report text; orchestrator moves them in.
+
+## Phase 0 comprehension (2026-07-28)
+- All four inputs read completely: blueprint 1001 lines, PRD 36pp, zip (dc.html 1521 / data.js 735 / ios-frame.jsx 352; support.js discarded), research 199 lines.
+- docs/understanding.md written. Uncatalogued conflicts CF-1..CF-8 recorded there in full; summary:
+  CF-1 counts.conflicts chip + dueling teaser -> additive optional DerivedCounts.conflicts with validator coverage; teaser = rule_line.
+  CF-2 emoji in chat-sim fixture -> C8 wins, emoji removed.
+  CF-3 zip's 5 selectable languages vs 2 locales -> es/fr/ja become "rolls out gradually" rows (regions pattern).
+  CF-4 notification primer + lock mocks lack tags -> render Appendix C template shape (top_tag added).
+  CF-5 ppn-panic scale_check illustrative denominator -> A7 must ground it or panel falls back to claim_map+echo; Gate C work order carries it.
+  CF-6 fixture figures superseded by 7.2 corrections at generation (4,711/9,083/987k/$1,700/$43.8B/draft APBN/authored pcts).
+  CF-7 pack 'intl' -> contract 'en', adapter maps.
+  CF-8 hardcoded provenance models + matterhorn.app links -> manifest models, SITE_URL.
+- Gate 0 reviewer dispatch: requested Claude Fable 5, effort max, fresh context, dispatched $(date '+%Y-%m-%dT%H:%M:%S%z').
