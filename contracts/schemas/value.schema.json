@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "value.schema.json",
+  "title": "Value",
+  "description": "Blueprint 6.2. The only shape a number may travel in. source_id MUST resolve in sources.json (resolution is a separate validator check, landing with the artifacts that carry Values).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["amount", "unit", "display", "source_id"],
+  "properties": {
+    "amount": { "type": "number" },
+    "unit": {
+      "enum": [
+        "IDR_T",
+        "IDR_B",
+        "USD_B",
+        "USD",
+        "count",
+        "percent",
+        "meals_per_day",
+        "people"
+      ]
+    },
+    "display": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "id"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "id": { "type": "string", "minLength": 1 }
+      }
+    },
+    "source_id": { "$ref": "source.schema.json#/$defs/SourceId" },
+    "as_of": { "type": "string", "minLength": 1 },
+    "flags": {
+      "type": "array",
+      "items": {
+        "enum": ["self_reported", "draft_figure", "estimate", "modeled", "design_target"]
+      }
+    }
+  }
+}

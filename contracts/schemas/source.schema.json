@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "source.schema.json",
+  "title": "Source",
+  "description": "Blueprint 6.1. One entry of the source registry content/sources.json.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "publisher",
+    "url",
+    "retrieved_at",
+    "period",
+    "kind",
+    "self_reported",
+    "liveness"
+  ],
+  "properties": {
+    "id": { "$ref": "#/$defs/SourceId" },
+    "title": { "type": "string", "minLength": 1 },
+    "publisher": { "type": "string", "minLength": 1 },
+    "url": { "type": "string", "minLength": 1 },
+    "retrieved_at": { "type": "string", "minLength": 1 },
+    "period": { "type": "string", "minLength": 1 },
+    "kind": { "enum": ["official", "outlet", "ngo", "academic"] },
+    "self_reported": { "type": "boolean" },
+    "liveness": { "enum": ["live", "dead_replaced", "unverified"] },
+    "notes": { "type": "string" }
+  },
+  "$defs": {
+    "SourceId": { "type": "string", "pattern": "^[a-z]{2}-[a-z0-9-]+$" }
+  }
+}

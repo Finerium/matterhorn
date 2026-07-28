@@ -1,0 +1,23 @@
+[
+  {
+    "id": "id-kemenkeu-apbn2026-enacted",
+    "title": "A valid entry so the failure below is provably selective",
+    "publisher": "Kemenkeu",
+    "url": "https://example.org/valid",
+    "retrieved_at": "2026-07-28",
+    "period": "APBN 2026, enacted",
+    "kind": "official",
+    "self_reported": false,
+    "liveness": "live"
+  },
+  {
+    "id": "BROKEN_ID_PATTERN",
+    "title": "Deliberately broken: bad id pattern, missing publisher, bad kind, non-boolean self_reported",
+    "url": "https://example.org/broken",
+    "retrieved_at": "2026-07-28",
+    "period": "n/a",
+    "kind": "blog",
+    "self_reported": "yes",
+    "liveness": "live"
+  }
+]

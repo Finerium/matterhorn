@@ -1,0 +1,14 @@
+[
+  {
+    "id": "id-kemenkeu-apbn2026-enacted",
+    "title": "APBN 2026 enacted revision figures",
+    "publisher": "Kemenkeu",
+    "url": "https://example.org/valid",
+    "retrieved_at": "2026-07-28",
+    "period": "APBN 2026, enacted",
+    "kind": "official",
+    "self_reported": false,
+    "liveness": "live",
+    "notes": "Fixture entry for the validator smoke test only; never shipped."
+  }
+]
