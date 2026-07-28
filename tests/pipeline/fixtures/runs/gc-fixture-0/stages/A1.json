@@ -1,0 +1,53 @@
+{
+  "note": "A1 Scout output as the fixture stages it: the frozen snapshot registry records for this run, verbatim and deliberately untidy. Fictional outlets on example.invalid. A2 is the stage that tidies them, so the raw whitespace, the two date spellings and the tracking query are the input A2 has to normalize deterministically.",
+  "records": [
+    {
+      "id": "r1",
+      "lang": "en",
+      "headline": "The Canal Levy Pays for the Whole Flood Program",
+      "outlet": "Rambai Civic Ledger",
+      "date": "2031-03-04",
+      "url": "https://rambai-civic-ledger.example.invalid/2031/03/canal-levy-flood-program"
+    },
+    {
+      "id": "r2",
+      "lang": "id",
+      "headline": "Retribusi Kanal  Disebut Menutup Seluruh Program Banjir ",
+      "outlet": "Kanal Timur Harian",
+      "date": "5 Mar 2031",
+      "url": "https://kanaltimur-harian.example.invalid/2031/03/retribusi-kanal-program-banjir?utm_source=fixture"
+    },
+    {
+      "id": "r3",
+      "lang": "en",
+      "headline": " Audit Institute Puts the Flood Program at Rp310 Billion",
+      "outlet": "Rambai Audit Weekly",
+      "date": "2031-03-06",
+      "url": "https://rambai-audit-weekly.example.invalid/2031/03/flood-program-costing"
+    },
+    {
+      "id": "r4",
+      "lang": "id",
+      "headline": "Koperasi Angkut Menagih Potongan Retribusi Kanal",
+      "outlet": "Warta Jembatan Timbang",
+      "date": "7 Mar 2031",
+      "url": "https://warta-jembatan.example.invalid/2031/03/potongan-retribusi-kanal"
+    },
+    {
+      "id": "r5",
+      "lang": "en",
+      "headline": "School Kitchen Audit Reopens the Rambai Meal Contract",
+      "outlet": "Rambai Civic Ledger",
+      "date": "2031-02-19",
+      "url": "https://rambai-civic-ledger.example.invalid/2031/02/school-kitchen-audit"
+    },
+    {
+      "id": "r6",
+      "lang": "id",
+      "headline": "Kontrak Dapur Sekolah Rambai Ditinjau Ulang Auditor Kota",
+      "outlet": "Kanal Timur Harian",
+      "date": "20 Feb 2031",
+      "url": "https://kanaltimur-harian.example.invalid/2031/02/kontrak-dapur-sekolah"
+    }
+  ]
+}

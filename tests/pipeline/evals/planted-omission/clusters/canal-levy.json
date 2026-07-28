@@ -1,0 +1,28 @@
+{
+  "cluster_id": "canal-levy",
+  "note": "Synthetic. Every institution, outlet, person and figure here is invented, and every URL sits on example.invalid. The three planted stakeholders are reachable from the text (the mechanism that touches each one is stated) and named as affected by neither article, which is the whole design.",
+  "claim": {
+    "en": "The canal levy pays for the whole flood program at no cost to anyone in the city.",
+    "id": "Retribusi kanal membiayai seluruh program banjir tanpa biaya bagi siapa pun di kota."
+  },
+  "articles": [
+    {
+      "id": "po-canal-en",
+      "lang": "en",
+      "outlet": "Rambai Civic Ledger",
+      "headline": "The Canal Levy Pays for the Whole Flood Program",
+      "date": "2031-03-04",
+      "url": "https://rambai-civic-ledger.example.invalid/2031/03/canal-levy-flood-program",
+      "body": "The Rambai City Budget Board booked Rp42 billion of canal levy receipts in fiscal 2031 and presented the line as the funding basis for the city flood program. Levy notices are issued at the canal road weighbridge, where loads are weighed on entry and the charge is set per tonne of gravel and sand moved toward the works. Board officials described the arrangement as self financing and said no general revenue was drawn down. The program's four work packages include a widening of the lower channel and a dredging campaign whose spoil is trucked to the flats above Kali Sepuh village for settling. The canal road itself stays open through the works, including on the three evenings a week when it is closed to through traffic for the night market. The board did not publish a cost line beside the receipt line."
+    },
+    {
+      "id": "po-canal-id",
+      "lang": "id",
+      "outlet": "Kanal Timur Harian",
+      "headline": "Retribusi Kanal Disebut Menutup Seluruh Program Banjir",
+      "date": "2031-03-05",
+      "url": "https://kanaltimur-harian.example.invalid/2031/03/retribusi-kanal-program-banjir",
+      "body": "Badan Anggaran Kota Rambai menyebut penerimaan retribusi kanal sebesar Rp42 miliar pada tahun anggaran 2031 sebagai dasar pembiayaan program banjir kota. Pungutan ditetapkan di jembatan timbang jalan kanal, dihitung per ton material yang masuk ke lokasi pekerjaan, dan tagihannya dikirim ke pemegang izin angkut. Pejabat badan itu menyatakan skema ini membiayai dirinya sendiri sehingga kas umum kota tidak tersentuh. Program tersebut mencakup pelebaran alur bawah serta pengerukan yang lumpurnya diangkut ke dataran di atas Desa Kali Sepuh untuk diendapkan. Jalan kanal tetap dibuka selama pekerjaan berlangsung, termasuk pada tiga malam dalam sepekan ketika ruas itu ditutup bagi lalu lintas menerus untuk pasar malam. Rincian biaya program tidak disampaikan berdampingan dengan angka penerimaannya."
+    }
+  ]
+}

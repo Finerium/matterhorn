@@ -1,0 +1,417 @@
+{
+  "id": "ferry-cap-control",
+  "pack": "en",
+  "lean": "gov",
+  "status": "published",
+  "headline": {
+    "en": "The Ferry Fare Cap Costs the City Nothing",
+    "id": "Batas Tarif Feri Tidak Membebani Kota"
+  },
+  "original": {
+    "text": "The ferry fare cap costs the city nothing",
+    "lang": "en"
+  },
+  "outlet": "Rambai Civic Ledger",
+  "published_date": "2031-03-12",
+  "url": "https://rambai-civic-ledger.example.invalid/2031/03/island-ferry-fare-cap",
+  "og": {
+    "image_path": null,
+    "fetched_at": null,
+    "attribution": "Fixture placeholder, no image fetched. Rambai Civic Ledger is an invented outlet.",
+    "fallback": true
+  },
+  "tags": [
+    "missing-link",
+    "hidden-stakeholder",
+    "competing-counts"
+  ],
+  "counts": {
+    "missing": 1,
+    "unsourced": 0,
+    "disputed": 0,
+    "supported": 1,
+    "hidden": 2,
+    "conflicts": 2
+  },
+  "provenance": {
+    "analyzed_by": "gc-fixture",
+    "narrated_by": "gc-fixture",
+    "source_count": 2,
+    "computed_at": "2031-03-13",
+    "run_id": "preflight-a10"
+  },
+  "family": {
+    "skeleton": "a price cap presented as costless, with the party absorbing it left off the page",
+    "members": [
+      {
+        "outlet": "Rambai Civic Ledger",
+        "headline": "Rambai Caps the Island Ferry Fare From April",
+        "url": "https://rambai-civic-ledger.example.invalid/2031/03/island-ferry-fare-cap",
+        "date": "2031-03-12"
+      },
+      {
+        "outlet": "Warta Dermaga",
+        "headline": "Tarif Feri Pulau Rambai Dibatasi Mulai April",
+        "url": "https://wartadermaga.example.invalid/2031/03/tarif-feri-dibatasi",
+        "date": "2031-03-11"
+      }
+    ]
+  },
+  "scaffold_default": "S0",
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "The claim is that the cap costs the city nothing. What has to be shown for that to hold?",
+          "id": "Klaimnya: batas tarif itu tidak membebani kota. Apa yang perlu ditunjukkan agar klaim itu berpijak?"
+        },
+        "options": [
+          {
+            "en": "Where the difference between the old fare and the capped fare goes",
+            "id": "Ke mana perginya selisih antara tarif lama dan tarif yang dibatasi"
+          },
+          {
+            "en": "That the operator agreed to the notice",
+            "id": "Bahwa operator menyetujui pemberitahuan itu"
+          },
+          {
+            "en": "That commuter numbers are rising",
+            "id": "Bahwa jumlah penglaju sedang naik"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The transport office notice records no charge against the city budget, and the operator's own filing puts the absorbed difference at Rp1.8 billion for the trial year.",
+          "id": "Pemberitahuan dinas perhubungan mencatat tidak ada beban terhadap anggaran kota, dan laporan operatornya sendiri menempatkan selisih yang ditanggung pada Rp1,8 miliar untuk tahun uji coba."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "Rp1.8 billion of absorbed cost. Against what should that be read?",
+          "id": "Biaya tertanggung Rp1,8 miliar. Terhadap apa angka itu sebaiknya dibaca?"
+        },
+        "options": [
+          {
+            "en": "The number of sailings a day",
+            "id": "Jumlah pelayaran per hari"
+          },
+          {
+            "en": "The operator's margin on the route over the same trial year",
+            "id": "Marjin operator pada rute itu selama tahun uji coba yang sama"
+          },
+          {
+            "en": "The fare of the year before",
+            "id": "Tarif tahun sebelumnya"
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "A cost absorbed by a private operator is only weightless if the operator can carry it, and the filing gives the route margin for the same period.",
+          "id": "Biaya yang ditanggung operator swasta hanya ringan bila operatornya sanggup memikulnya, dan laporan itu memuat marjin rute untuk periode yang sama."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "Who meets the capped difference first?",
+          "id": "Siapa yang lebih dulu menanggung selisih dari batas tarif itu?"
+        },
+        "options": [
+          {
+            "en": "The crew, through the evening roster allowance",
+            "id": "Awak kapal, lewat tunjangan giliran malam"
+          },
+          {
+            "en": "The city treasury, at the close of the trial year",
+            "id": "Kas kota, di penutupan tahun uji coba"
+          },
+          {
+            "en": "Commuters, through a later fare rise",
+            "id": "Penglaju, lewat kenaikan tarif di kemudian hari"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The operator's filing names the evening roster allowance as the first line it draws down under the cap.",
+          "id": "Laporan operator menyebut tunjangan giliran malam sebagai pos pertama yang ditariknya di bawah batas tarif."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before the reveal: who pays for a cap that costs the city nothing?",
+      "id": "Sebelum jawabannya dibuka: siapa yang membayar batas tarif yang tidak membebani kota?"
+    },
+    "options": [
+      {
+        "en": "Nobody, the route absorbs it",
+        "id": "Tidak ada, rutenya menyerap sendiri"
+      },
+      {
+        "en": "The crew, through the roster allowance",
+        "id": "Awak kapal, lewat tunjangan giliran"
+      },
+      {
+        "en": "The city, through a later transfer",
+        "id": "Kota, lewat transfer di kemudian hari"
+      }
+    ]
+  },
+  "panels": [
+    {
+      "type": "claim_map",
+      "el_id": "p-claim",
+      "spine": [
+        {
+          "el_id": "n1",
+          "label": {
+            "en": "Cap the island ferry fare from 1 April",
+            "id": "Batasi tarif feri pulau mulai 1 April"
+          }
+        },
+        {
+          "el_id": "n2",
+          "label": {
+            "en": "Commuters pay the capped fare on every crossing",
+            "id": "Penglaju membayar tarif yang dibatasi pada setiap penyeberangan"
+          }
+        },
+        {
+          "el_id": "n3",
+          "label": {
+            "en": "The city pays nothing for it",
+            "id": "Kota tidak membayar apa pun untuknya"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "el_id": "e0",
+          "from": "n1",
+          "to": "n2",
+          "status": "supported",
+          "ev": {
+            "quote": "The Rambai Transport Office notice sets the island ferry fare at Rp12,000 from 1 April 2031.",
+            "source_id": "en-rambai-transport-2031",
+            "why": {
+              "en": "The cap is set by a published notice, so the edge from the measure to the fare rests on a primary document.",
+              "id": "Batas tarif ditetapkan oleh pemberitahuan yang diterbitkan, sehingga tepi dari kebijakan ke tarifnya bertumpu pada dokumen primer."
+            }
+          }
+        },
+        {
+          "el_id": "e1",
+          "from": "n2",
+          "to": "n3",
+          "status": "missing",
+          "ev": {
+            "quote": "The notice states that the measure carries no charge against the city budget.",
+            "source_id": "en-rambai-transport-2031",
+            "why": {
+              "en": "A funding claim needs the payer named beside the measure. The notice names none, and the operator files a figure of its own against the same year.",
+              "id": "Klaim pembiayaan membutuhkan pihak pembayar yang disebut berdampingan dengan kebijakannya. Pemberitahuan itu tidak menyebut satu pun, dan operator melaporkan angkanya sendiri untuk tahun yang sama."
+            }
+          }
+        }
+      ],
+      "hidden": [
+        {
+          "el_id": "h0",
+          "label": {
+            "en": "The evening roster allowance the operator draws down",
+            "id": "Tunjangan giliran malam yang ditarik operator"
+          },
+          "why_hidden": {
+            "en": "The operator's filing names this line first, and the notice does not mention it.",
+            "id": "Laporan operator menyebut pos ini lebih dulu, dan pemberitahuan itu tidak menyinggungnya."
+          },
+          "ev": {
+            "quote": "Feri Rambai Lintas filing: the evening roster allowance is the first line drawn down under the capped fare.",
+            "source_id": "en-ferry-lintas-filing-2031"
+          }
+        },
+        {
+          "el_id": "h1",
+          "label": {
+            "en": "The fuel settlement window stretched from thirty days to ninety",
+            "id": "Jendela pelunasan bahan bakar yang diperpanjang dari tiga puluh hari menjadi sembilan puluh hari"
+          },
+          "why_hidden": {
+            "en": "Stretched payment terms finance the cap out of a supplier working capital, and no city ledger carries the line.",
+            "id": "Tempo pembayaran yang diperpanjang membiayai batas tarif dari modal kerja pemasok, dan tidak ada buku kota yang memuat pos itu."
+          },
+          "ev": {
+            "quote": "Feri Rambai Lintas filing: the fuel settlement window is extended from thirty days to ninety for the trial year.",
+            "source_id": "en-ferry-lintas-filing-2031"
+          }
+        }
+      ]
+    },
+    {
+      "type": "dueling",
+      "el_id": "p-duel",
+      "counts": [
+        {
+          "el_id": "d0",
+          "who": "Rambai Transport Office",
+          "method": {
+            "en": "Charge against the city budget arising from the cap, trial year.",
+            "id": "Beban terhadap anggaran kota yang timbul dari batas tarif, tahun uji coba."
+          },
+          "period": "trial year 2031 to 2032, published 10 Mar 2031",
+          "value": {
+            "amount": 0,
+            "unit": "IDR_B",
+            "display": {
+              "en": "Rp0",
+              "id": "Rp0"
+            },
+            "source_id": "en-rambai-transport-2031",
+            "as_of": "2031-03-10"
+          }
+        },
+        {
+          "el_id": "d1",
+          "who": "Feri Rambai Lintas",
+          "method": {
+            "en": "Difference absorbed by the operator across the same trial year, from its own filing.",
+            "id": "Selisih yang ditanggung operator sepanjang tahun uji coba yang sama, dari laporannya sendiri."
+          },
+          "period": "trial year 2031 to 2032, filed 14 Mar 2031",
+          "value": {
+            "amount": 1.8,
+            "unit": "IDR_B",
+            "display": {
+              "en": "Rp1.8B",
+              "id": "Rp1,8 miliar"
+            },
+            "source_id": "en-ferry-lintas-filing-2031",
+            "as_of": "2031-03-14"
+          }
+        }
+      ],
+      "rule_line": {
+        "en": "Two ledgers answering two questions: what the city is charged, and what the operator absorbs. No winner is chosen here.",
+        "id": "Dua buku menjawab dua pertanyaan: apa yang dibebankan kepada kota, dan apa yang ditanggung operator. Tidak ada pemenang yang dipilih di sini."
+      }
+    }
+  ],
+  "echo": null,
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "The cap is set by a published notice and the fare falls from April.",
+          "els": [
+            "p-claim",
+            "n1",
+            "n2",
+            "e0"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "The office states that the city carries no charge, and the step from a capped fare to a costless city is the one never carried.",
+          "els": [
+            "e1",
+            "n3"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Two documented counterparties sit outside the frame: the evening roster allowance, and the fuel settlement window stretched to ninety days.",
+          "els": [
+            "h0",
+            "h1"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Two ledgers count the same cap, one at nothing to the city and one at Rp1.8 billion to the operator.",
+          "els": [
+            "p-duel",
+            "d0",
+            "d1"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Batas tarif ditetapkan lewat pemberitahuan yang diterbitkan dan tarifnya turun mulai April.",
+          "els": [
+            "p-claim",
+            "n1",
+            "n2",
+            "e0"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Dinas menyatakan kota tidak menanggung beban, dan langkah dari tarif yang dibatasi ke kota tanpa biaya adalah langkah yang tidak pernah dibawa.",
+          "els": [
+            "e1",
+            "n3"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Dua pihak terdokumentasi berada di luar bingkai: tunjangan giliran malam, dan jendela pelunasan bahan bakar yang diperpanjang menjadi sembilan puluh hari.",
+          "els": [
+            "h0",
+            "h1"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Dua buku menghitung batas tarif yang sama, satu pada nol bagi kota dan satu pada Rp1,8 miliar bagi operator.",
+          "els": [
+            "p-duel",
+            "d0",
+            "d1"
+          ]
+        }
+      ]
+    }
+  },
+  "manifest": {
+    "run_id": "preflight-a10",
+    "generated_at": "2031-03-15T00:00:00Z",
+    "steps": [
+      {
+        "role": "A5",
+        "model": "claude-fable-5 effort=max",
+        "started_at": "2031-03-15T00:00:00Z",
+        "finished_at": "2031-03-15T00:00:10Z",
+        "input_hash": "fixture-a5"
+      },
+      {
+        "role": "A6",
+        "model": "claude-fable-5 effort=max",
+        "started_at": "2031-03-15T00:00:10Z",
+        "finished_at": "2031-03-15T00:00:20Z",
+        "input_hash": "fixture-a6"
+      },
+      {
+        "role": "A7",
+        "model": "claude-opus-5 effort=max",
+        "started_at": "2031-03-15T00:00:20Z",
+        "finished_at": "2031-03-15T00:00:30Z",
+        "input_hash": "fixture-a7"
+      },
+      {
+        "role": "A9",
+        "model": "claude-opus-5 effort=max",
+        "started_at": "2031-03-15T00:00:30Z",
+        "finished_at": "2031-03-15T00:00:40Z",
+        "input_hash": "fixture-a9"
+      }
+    ]
+  }
+}

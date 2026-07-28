@@ -1,0 +1,62 @@
+[
+  {
+    "id": "en-rambai-budget-2031",
+    "title": "Levy and Flood Program Statement, fiscal 2031",
+    "publisher": "Rambai City Budget Board",
+    "url": "https://bakr.example.invalid/statements/levy-flood-2031",
+    "retrieved_at": "2031-03-10",
+    "period": "fiscal 2031, enacted",
+    "kind": "official",
+    "self_reported": true,
+    "liveness": "live",
+    "notes": "Invented institution. This registry exists so the fixture content root can be run through the real validator; nothing in it refers to any actual body or document."
+  },
+  {
+    "id": "en-rambai-audit-2031",
+    "title": "Flood Program Cost Review 2031",
+    "publisher": "Rambai Audit Institute",
+    "url": "https://audit.example.invalid/reviews/flood-program-2031",
+    "retrieved_at": "2031-03-10",
+    "period": "2031 to 2034 work plan",
+    "kind": "official",
+    "self_reported": false,
+    "liveness": "live",
+    "notes": "Invented institution."
+  },
+  {
+    "id": "en-canal-research-2031",
+    "title": "Levy Incidence Note, canal road weighbridge",
+    "publisher": "East Canal Research Council",
+    "url": "https://ecrc.example.invalid/notes/levy-incidence-2031",
+    "retrieved_at": "2031-03-10",
+    "period": "fiscal 2031",
+    "kind": "academic",
+    "self_reported": false,
+    "liveness": "live",
+    "notes": "Invented institution."
+  },
+  {
+    "id": "en-rambai-transport-2031",
+    "title": "Island Ferry Fare Cap Notice, 1 April 2031",
+    "publisher": "Rambai Transport Office",
+    "url": "https://transport.example.invalid/notices/ferry-fare-cap-2031",
+    "retrieved_at": "2031-03-15",
+    "period": "trial year 2031 to 2032",
+    "kind": "official",
+    "self_reported": true,
+    "liveness": "live",
+    "notes": "Invented institution. Referenced by the stance-leak fixtures, which are dissected by A10 at pre-flight and are never published to a content root."
+  },
+  {
+    "id": "en-ferry-lintas-filing-2031",
+    "title": "Operator Filing on the Capped Fare, trial year",
+    "publisher": "Feri Rambai Lintas",
+    "url": "https://ferilintas.example.invalid/filings/capped-fare-2031",
+    "retrieved_at": "2031-03-15",
+    "period": "trial year 2031 to 2032",
+    "kind": "outlet",
+    "self_reported": true,
+    "liveness": "live",
+    "notes": "Invented operator, reporting on its own costs."
+  }
+]

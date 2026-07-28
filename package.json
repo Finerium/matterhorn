@@ -19,7 +19,8 @@
     "test:e2e": "playwright test --config tests/e2e/playwright.config.ts",
     "i18n:scan": "tsx scripts/i18n-scan.ts",
     "icons": "node scripts/gen-icons.mjs",
-    "validate:content": "tsx scripts/validate-content.ts --scan-app app/src"
+    "validate:content": "tsx scripts/validate-content.ts --scan-app app/src",
+    "test:pipeline": "vitest run --config tests/pipeline/vitest.config.ts"
   },
   "dependencies": {
     "html-to-image": "1.11.13",

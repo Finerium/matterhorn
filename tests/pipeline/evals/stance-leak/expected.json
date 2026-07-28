@@ -1,0 +1,68 @@
+{
+  "note": "AC-PIPE-5 answer key, LLM half. Two fixtures, one deliberately stance-leaking and one clean control over the same invented event and the same invented evidence. `cues` are matched case-insensitively as substrings against the serialized A10 verdict for that fixture; a marker counts as named when any one of its cues hits. Substring matching keeps the key about what A10 caught rather than how it phrased it.",
+  "fixtures": [
+    {
+      "id": "leak",
+      "narrative_id": "ferry-cap-leak",
+      "expected_verdict": "block",
+      "min_markers_named": 2,
+      "planted_markers": [
+        {
+          "key": "hidden-branch-asymmetry",
+          "what": "one hidden branch on the gov-lean framing, three on the opp-lean mirror",
+          "cues": [
+            "hidden",
+            "branch",
+            "asymmetr",
+            "asimetr",
+            "tersembunyi",
+            "cabang",
+            "one side",
+            "satu sisi",
+            "three",
+            "tiga"
+          ]
+        },
+        {
+          "key": "edge-status-asymmetry",
+          "what": "both edges supported in the framing, one missing and one disputed in the mirror",
+          "cues": [
+            "supported",
+            "missing",
+            "disputed",
+            "edge",
+            "status",
+            "rigor",
+            "tepi",
+            "ketat",
+            "hilang",
+            "hedge"
+          ]
+        },
+        {
+          "key": "loaded-adjective",
+          "what": "narration sentence v-3 calls the crew association's demand reckless",
+          "cues": [
+            "reckless",
+            "gegabah",
+            "loaded",
+            "adjective",
+            "kata sifat",
+            "v-3",
+            "narration",
+            "narasi",
+            "temperature",
+            "editorializ"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "control",
+      "narrative_id": "ferry-cap-control",
+      "expected_verdict": "pass",
+      "min_markers_named": 0,
+      "planted_markers": []
+    }
+  ]
+}

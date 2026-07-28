@@ -1,0 +1,11 @@
+{
+  "run_id": "gc-fixture-0",
+  "generated_at": "2031-03-11T00:00:00Z",
+  "narratives": [
+    "rambai-levy"
+  ],
+  "fresh_demo": {
+    "narrative_id": "rambai-levy",
+    "url": "https://rambai-civic-ledger.example.invalid/2031/03/canal-levy-flood-program-update"
+  }
+}

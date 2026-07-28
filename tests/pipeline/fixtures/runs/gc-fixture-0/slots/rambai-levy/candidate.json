@@ -1,0 +1,450 @@
+{
+  "id": "rambai-levy",
+  "pack": "en",
+  "lean": "gov",
+  "status": "published",
+  "headline": {
+    "en": "The Canal Levy Pays for the Whole Flood Program",
+    "id": "Retribusi Kanal Membiayai Seluruh Program Banjir"
+  },
+  "original": {
+    "text": "The canal levy pays for the whole flood program",
+    "lang": "en"
+  },
+  "outlet": "Rambai Civic Ledger",
+  "published_date": "2031-03-04",
+  "url": "https://rambai-civic-ledger.example.invalid/2031/03/canal-levy-flood-program",
+  "og": {
+    "image_path": null,
+    "fetched_at": null,
+    "attribution": "Fixture placeholder, no image fetched. Rambai Civic Ledger is an invented outlet.",
+    "fallback": true
+  },
+  "tags": [
+    "missing-link",
+    "hidden-stakeholder",
+    "competing-counts"
+  ],
+  "counts": {
+    "missing": 1,
+    "unsourced": 0,
+    "disputed": 0,
+    "supported": 1,
+    "hidden": 2,
+    "conflicts": 2
+  },
+  "provenance": {
+    "analyzed_by": "gc-fixture",
+    "narrated_by": "gc-fixture",
+    "source_count": 3,
+    "computed_at": "2031-03-11",
+    "run_id": "gc-fixture-0"
+  },
+  "family": {
+    "skeleton": "one levy line framed as funding an entire program, carried without the cost side it is being measured against",
+    "members": [
+      {
+        "outlet": "Rambai Civic Ledger",
+        "headline": "The Canal Levy Pays for the Whole Flood Program",
+        "url": "https://rambai-civic-ledger.example.invalid/2031/03/canal-levy-flood-program",
+        "date": "2031-03-04"
+      },
+      {
+        "outlet": "Kanal Timur Harian",
+        "headline": "Retribusi Kanal Disebut Menutup Seluruh Program Banjir",
+        "url": "https://kanaltimur-harian.example.invalid/2031/03/retribusi-kanal-program-banjir",
+        "date": "2031-03-05"
+      }
+    ]
+  },
+  "scaffold_default": "S0",
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "The claim is that the levy pays for the whole program. What step does it need between the levy and the program?",
+          "id": "Klaimnya: retribusi membiayai seluruh program. Langkah apa yang dibutuhkan klaim itu antara retribusi dan programnya?"
+        },
+        "options": [
+          {
+            "en": "A program cost small enough for that levy to cover",
+            "id": "Biaya program yang cukup kecil untuk ditutup retribusi itu"
+          },
+          {
+            "en": "A higher levy rate",
+            "id": "Tarif retribusi yang lebih tinggi"
+          },
+          {
+            "en": "More outlets repeating it",
+            "id": "Lebih banyak media yang mengulangnya"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The Rambai City Budget Board records the levy receipts, so the first link rests on a document. The claim map marks the next link as missing: the Rambai Audit Institute prices the program far above the levy line.",
+          "id": "Badan Anggaran Kota Rambai mencatat penerimaan retribusinya, sehingga mata rantai pertama bertumpu pada dokumen. Peta klaim menandai mata rantai berikutnya sebagai hilang: Lembaga Audit Rambai menghargai programnya jauh di atas baris retribusi."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "The levy line sounds decisive on its own. Against what should it be read?",
+          "id": "Baris retribusi itu terdengar menentukan bila berdiri sendiri. Terhadap apa baris itu sebaiknya dibaca?"
+        },
+        "options": [
+          {
+            "en": "The number of bodies counting it",
+            "id": "Jumlah lembaga yang menghitungnya"
+          },
+          {
+            "en": "The recorded cost of the program it is said to fund",
+            "id": "Biaya tercatat dari program yang dikatakan dibiayainya"
+          },
+          {
+            "en": "The levy line of the year before",
+            "id": "Baris retribusi tahun sebelumnya"
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The claim map carries the audit institute's program cost as a hidden entry, and the article never puts the two figures on the same page.",
+          "id": "Peta klaim membawa biaya program dari lembaga audit sebagai entri tersembunyi, dan artikel itu tidak pernah menaruh kedua angka pada halaman yang sama."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "Who meets the canal levy first?",
+          "id": "Siapa yang lebih dulu menanggung retribusi kanal?"
+        },
+        "options": [
+          {
+            "en": "The haulers cooperative, at the weighbridge",
+            "id": "Koperasi Angkut Rambai, di jembatan timbang"
+          },
+          {
+            "en": "The city treasury, at the close of the fiscal year",
+            "id": "Kas kota, di penutupan tahun anggaran"
+          },
+          {
+            "en": "The barge operators outside the city, at their own berths",
+            "id": "Operator tongkang di luar kota, di dermaga mereka sendiri"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The levy falls due from the haulers cooperative at the weighbridge, which is where the incidence chain starts, and the article narrates the lever as though it were collected from the canal itself.",
+          "id": "Retribusinya terutang dari Koperasi Angkut Rambai di jembatan timbang, dan di situlah rantai penanggungannya bermula, sementara artikel itu menceritakan tuasnya seolah dipungut dari kanalnya sendiri."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before the reveal: which side of this claim goes missing?",
+      "id": "Sebelum jawabannya dibuka: sisi mana dari klaim ini yang hilang?"
+    },
+    "options": [
+      {
+        "en": "The levy receipts",
+        "id": "Penerimaan retribusinya"
+      },
+      {
+        "en": "The program cost it is measured against",
+        "id": "Biaya program yang menjadi pembandingnya"
+      },
+      {
+        "en": "The name of the body counting it",
+        "id": "Nama lembaga yang menghitungnya"
+      }
+    ]
+  },
+  "panels": [
+    {
+      "type": "claim_map",
+      "el_id": "p-claim",
+      "spine": [
+        {
+          "el_id": "n1",
+          "label": {
+            "en": "Impose the canal levy",
+            "id": "Kenakan retribusi kanal"
+          }
+        },
+        {
+          "el_id": "n2",
+          "label": {
+            "en": "Rp42 billion of levy receipts in fiscal 2031",
+            "id": "Penerimaan retribusi Rp42 miliar pada tahun anggaran 2031"
+          },
+          "value": {
+            "amount": 42,
+            "unit": "IDR_B",
+            "display": {
+              "en": "Rp42B",
+              "id": "Rp42 miliar"
+            },
+            "source_id": "en-rambai-budget-2031",
+            "as_of": "2031-01-31"
+          }
+        },
+        {
+          "el_id": "n3",
+          "label": {
+            "en": "The whole flood program is paid for",
+            "id": "Seluruh program banjir terbiayai"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "el_id": "e0",
+          "from": "n1",
+          "to": "n2",
+          "status": "supported",
+          "ev": {
+            "quote": "The Rambai City Budget Board records Rp42 billion of canal levy receipts for fiscal 2031.",
+            "source_id": "en-rambai-budget-2031",
+            "why": {
+              "en": "The receipts exist and are recorded by the body that collects them, so the edge from the levy to the money rests on a primary document.",
+              "id": "Penerimaannya ada dan dicatat oleh lembaga yang memungutnya, sehingga tepi dari retribusi ke uangnya bertumpu pada dokumen primer."
+            }
+          }
+        },
+        {
+          "el_id": "e1",
+          "from": "n2",
+          "to": "n3",
+          "status": "missing",
+          "ev": {
+            "quote": "The Rambai Audit Institute prices the 2031 flood program at Rp310 billion across its four work packages.",
+            "source_id": "en-rambai-audit-2031",
+            "why": {
+              "en": "A funding claim needs the cost side stated beside the receipt side. The article never states it, and the audited program cost stands far above the levy line.",
+              "id": "Klaim pembiayaan membutuhkan sisi biaya yang dinyatakan berdampingan dengan sisi penerimaan. Artikel itu tidak pernah menyatakannya, dan biaya program hasil audit berdiri jauh di atas baris retribusi."
+            }
+          }
+        }
+      ],
+      "hidden": [
+        {
+          "el_id": "h0",
+          "label": {
+            "en": "The haulers cooperative pays at the weighbridge",
+            "id": "Koperasi Angkut Rambai membayar di jembatan timbang"
+          },
+          "why_hidden": {
+            "en": "The first payment in the chain is made by a named local body, and the claim narrates the lever as though it were collected from the canal itself.",
+            "id": "Pembayaran pertama dalam rantai itu dilakukan oleh sebuah lembaga lokal bernama, dan klaim itu menceritakan tuasnya seolah dipungut dari kanalnya sendiri."
+          },
+          "ev": {
+            "quote": "Levy notices are issued to the Rambai Haulers Cooperative at the weighbridge on entry to the canal road.",
+            "source_id": "en-canal-research-2031"
+          }
+        },
+        {
+          "el_id": "h1",
+          "label": {
+            "en": "Audited program cost through 2034",
+            "id": "Biaya program hasil audit sampai 2034"
+          },
+          "value": {
+            "amount": 310,
+            "unit": "IDR_B",
+            "display": {
+              "en": "Rp310B",
+              "id": "Rp310 miliar"
+            },
+            "source_id": "en-rambai-audit-2031"
+          },
+          "why_hidden": {
+            "en": "The cost side the single lever is being measured against, and the article never puts the two on the same page.",
+            "id": "Sisi biaya yang menjadi pembanding tuas tunggal itu, dan artikel tersebut tidak pernah menaruh keduanya pada halaman yang sama."
+          },
+          "ev": {
+            "quote": "Rambai Audit Institute: the flood program is costed at Rp310 billion through 2034 under the enacted work plan.",
+            "source_id": "en-rambai-audit-2031"
+          }
+        }
+      ]
+    },
+    {
+      "type": "dueling",
+      "el_id": "p-duel",
+      "counts": [
+        {
+          "el_id": "d0",
+          "who": "Rambai City Budget Board",
+          "method": {
+            "en": "Gross canal levy receipts as booked at the weighbridge, fiscal 2031.",
+            "id": "Penerimaan bruto retribusi kanal seperti dibukukan di jembatan timbang, tahun anggaran 2031."
+          },
+          "period": "fiscal 2031, published 31 Jan 2031",
+          "value": {
+            "amount": 42,
+            "unit": "IDR_B",
+            "display": {
+              "en": "Rp42B",
+              "id": "Rp42 miliar"
+            },
+            "source_id": "en-rambai-budget-2031",
+            "as_of": "2031-01-31"
+          }
+        },
+        {
+          "el_id": "d1",
+          "who": "East Canal Research Council",
+          "method": {
+            "en": "The same receipts net of collection cost and of the rebate the cooperative claims back.",
+            "id": "Penerimaan yang sama setelah dikurangi biaya pemungutan dan potongan yang ditagih kembali oleh koperasi."
+          },
+          "period": "fiscal 2031, published 18 Feb 2031",
+          "value": {
+            "amount": 36,
+            "unit": "IDR_B",
+            "display": {
+              "en": "Rp36B",
+              "id": "Rp36 miliar"
+            },
+            "source_id": "en-canal-research-2031",
+            "as_of": "2031-02-18"
+          }
+        }
+      ],
+      "rule_line": {
+        "en": "Two bodies answering two questions: what the weighbridge booked, and what the city kept once collection cost and the rebate came out. No winner is chosen here.",
+        "id": "Dua lembaga menjawab dua pertanyaan: apa yang dibukukan jembatan timbang, dan apa yang tersisa bagi kota setelah biaya pemungutan dan potongan dikeluarkan. Tidak ada pemenang yang dipilih di sini."
+      }
+    }
+  ],
+  "echo": null,
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "The levy receipts are real and the budget board records them.",
+          "els": [
+            "p-claim",
+            "n1",
+            "n2",
+            "e0"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "The step the headline needs, from those receipts to a whole program, is the one never stated, and the audit institute prices that program far above the levy line.",
+          "els": [
+            "e1",
+            "n3",
+            "h1"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "A documented counterparty sits outside the frame: the haulers cooperative that pays at the weighbridge.",
+          "els": [
+            "h0"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Two bodies count the same levy on two definitions, so the figures differ because the definitions differ.",
+          "els": [
+            "p-duel",
+            "d0",
+            "d1"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Penerimaan retribusinya nyata dan badan anggaran mencatatnya.",
+          "els": [
+            "p-claim",
+            "n1",
+            "n2",
+            "e0"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Langkah yang dibutuhkan judul itu, dari penerimaan tersebut ke seluruh program, adalah langkah yang tidak pernah dinyatakan, dan lembaga audit menghargai program itu jauh di atas baris retribusi.",
+          "els": [
+            "e1",
+            "n3",
+            "h1"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Sebuah pihak terdokumentasi berada di luar bingkai: koperasi angkut yang membayar di jembatan timbang.",
+          "els": [
+            "h0"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Dua lembaga menghitung retribusi yang sama dengan dua definisi, sehingga angkanya berbeda karena definisinya berbeda.",
+          "els": [
+            "p-duel",
+            "d0",
+            "d1"
+          ]
+        }
+      ]
+    }
+  },
+  "manifest": {
+    "run_id": "gc-fixture-0",
+    "generated_at": "2031-03-11T00:00:00Z",
+    "steps": [
+      {
+        "role": "A5",
+        "model": "claude-fable-5 effort=max",
+        "started_at": "2031-03-11T00:00:00Z",
+        "finished_at": "2031-03-11T00:00:10Z",
+        "input_hash": "fixture-a5"
+      },
+      {
+        "role": "A6",
+        "model": "claude-fable-5 effort=max",
+        "started_at": "2031-03-11T00:00:10Z",
+        "finished_at": "2031-03-11T00:00:20Z",
+        "input_hash": "fixture-a6"
+      },
+      {
+        "role": "A7",
+        "model": "claude-opus-5 effort=max",
+        "started_at": "2031-03-11T00:00:20Z",
+        "finished_at": "2031-03-11T00:00:30Z",
+        "input_hash": "fixture-a7"
+      },
+      {
+        "role": "A9",
+        "model": "claude-opus-5 effort=max",
+        "started_at": "2031-03-11T00:00:30Z",
+        "finished_at": "2031-03-11T00:00:40Z",
+        "input_hash": "fixture-a9"
+      },
+      {
+        "role": "A10",
+        "model": "claude-fable-5 effort=max",
+        "started_at": "2031-03-11T00:00:40Z",
+        "finished_at": "2031-03-11T00:00:50Z",
+        "input_hash": "fixture-a10"
+      },
+      {
+        "role": "A11",
+        "model": "claude-opus-5 effort=max",
+        "started_at": "2031-03-11T00:00:50Z",
+        "finished_at": "2031-03-11T00:01:00Z",
+        "input_hash": "fixture-a11"
+      }
+    ]
+  }
+}

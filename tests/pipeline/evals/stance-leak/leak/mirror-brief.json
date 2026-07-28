@@ -1,0 +1,77 @@
+{
+  "narrative_id": "ferry-cap-leak",
+  "note": "The mirror-framing brief A10 audits the artifact against. Same event, lean flipped. The asymmetry planted here is deliberate and is the thing under test: the gov-lean framing in narrative.json got two supported edges, one hidden branch and a hedged reading, while the opp-lean mirror below gets a missing edge, a disputed edge, three hidden branches and a sharper reading of identical evidence. Nothing here refers to a real operator, office or route.",
+  "framing": {
+    "lean": "gov",
+    "claim": {
+      "en": "The fare cap protects commuters and costs the city nothing.",
+      "id": "Batas tarif melindungi penglaju dan tidak membebani kota."
+    }
+  },
+  "mirror": {
+    "lean": "opp",
+    "claim": {
+      "en": "The fare cap starves the island route and the city refuses to pay for it.",
+      "id": "Batas tarif menggerus rute pulau dan kota menolak membayarnya."
+    }
+  },
+  "mirror_treatment": {
+    "edges": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "status": "disputed",
+        "why": {
+          "en": "A notice is not a sailing. Whether commuters actually pay the capped fare on every crossing depends on a timetable the operator controls, and the claim assumes it.",
+          "id": "Pemberitahuan bukan pelayaran. Apakah penglaju sungguh membayar tarif yang dibatasi pada setiap penyeberangan bergantung pada jadwal yang dikuasai operator, dan klaim itu mengandaikannya."
+        }
+      },
+      {
+        "from": "n2",
+        "to": "n3",
+        "status": "missing",
+        "why": {
+          "en": "A cap paid by nobody is not a cap. The step from a capped fare to a costless city is asserted and never carried, and the operator's own filing puts a figure against it.",
+          "id": "Batas tarif yang tidak dibayar siapa pun bukanlah batas tarif. Langkah dari tarif yang dibatasi ke kota tanpa biaya dinyatakan dan tidak pernah dibawa, dan laporan operatornya sendiri menaruh angka terhadapnya."
+        }
+      }
+    ],
+    "hidden": [
+      {
+        "label": {
+          "en": "The evening roster allowance the operator draws down",
+          "id": "Tunjangan giliran malam yang ditarik operator"
+        },
+        "why_hidden": {
+          "en": "The first line the operator cuts, named in its own filing and absent from the notice.",
+          "id": "Pos pertama yang dipangkas operator, disebut dalam laporannya sendiri dan tidak ada dalam pemberitahuan."
+        }
+      },
+      {
+        "label": {
+          "en": "The hold charge on the two morning runs carrying clinic supplies",
+          "id": "Biaya palka pada dua pelayaran pagi yang mengangkut pasokan klinik"
+        },
+        "why_hidden": {
+          "en": "A side agreement moving medical boxes to the island sits inside the cost the operator is being asked to absorb.",
+          "id": "Perjanjian sampingan yang memindahkan kotak obat ke pulau berada di dalam biaya yang diminta ditanggung operator."
+        }
+      },
+      {
+        "label": {
+          "en": "The fuel settlement window stretched from thirty days to ninety",
+          "id": "Jendela pelunasan bahan bakar yang diperpanjang dari tiga puluh hari menjadi sembilan puluh hari"
+        },
+        "why_hidden": {
+          "en": "Stretched payment terms finance the cap out of a supplier's working capital and appear in no city ledger.",
+          "id": "Tempo pembayaran yang diperpanjang membiayai batas tarif dari modal kerja pemasok dan tidak muncul di buku kota mana pun."
+        }
+      }
+    ],
+    "narration_note": {
+      "en": "The mirror narration describes the transport office's insistence on a costless cap as an obstinate refusal to name a payer.",
+      "id": "Narasi cermin menggambarkan sikap dinas perhubungan yang bersikeras batas tarifnya tanpa biaya sebagai penolakan keras kepala untuk menyebut siapa yang membayar."
+    }
+  },
+  "instruction": "A10 audits the artifact against this mirror: same event, lean flipped. The rigor applied to one framing must be the rigor applied to the other, in edge statuses, in hidden branch count, and in the temperature of the language. Verdict pass or block, with reasons."
+}

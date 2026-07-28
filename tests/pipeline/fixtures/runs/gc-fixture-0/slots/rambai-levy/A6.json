@@ -1,0 +1,27 @@
+{
+  "note": "Staged A6 Hidden-Node Hunter output. A6 proposes; A7 grounds or drops. Two proposals survive into the candidate as h0 and h1.",
+  "hidden": [
+    {
+      "el_id": "h0",
+      "label": {
+        "en": "The haulers cooperative pays at the weighbridge",
+        "id": "Koperasi Angkut Rambai membayar di jembatan timbang"
+      },
+      "why_hidden": {
+        "en": "The first payment in the chain is made by a named local body, and the claim narrates the lever as though it were collected from the canal itself.",
+        "id": "Pembayaran pertama dalam rantai itu dilakukan oleh sebuah lembaga lokal bernama, dan klaim itu menceritakan tuasnya seolah dipungut dari kanalnya sendiri."
+      }
+    },
+    {
+      "el_id": "h1",
+      "label": {
+        "en": "Audited program cost through 2034",
+        "id": "Biaya program hasil audit sampai 2034"
+      },
+      "why_hidden": {
+        "en": "The cost side the single lever is being measured against, and the article never puts the two on the same page.",
+        "id": "Sisi biaya yang menjadi pembanding tuas tunggal itu, dan artikel tersebut tidak pernah menaruh keduanya pada halaman yang sama."
+      }
+    }
+  ]
+}

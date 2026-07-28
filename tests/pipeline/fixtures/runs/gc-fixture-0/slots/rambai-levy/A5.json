@@ -1,0 +1,54 @@
+{
+  "note": "Staged A5 Causal Extractor output. `asserted_graph` is the ONLY field the DAG hands to A6 (PRD D5). `drafting_notes` carries a nonce on purpose: gates.spec asserts that nonce reaches no A6 input file, which is what disjoint context means in construction rather than in prose.",
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "n1",
+        "label": {
+          "en": "Impose the canal levy",
+          "id": "Kenakan retribusi kanal"
+        }
+      },
+      {
+        "el_id": "n2",
+        "label": {
+          "en": "Rp42 billion of levy receipts in fiscal 2031",
+          "id": "Penerimaan retribusi Rp42 miliar pada tahun anggaran 2031"
+        }
+      },
+      {
+        "el_id": "n3",
+        "label": {
+          "en": "The whole flood program is paid for",
+          "id": "Seluruh program banjir terbiayai"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "e0",
+        "from": "n1",
+        "to": "n2",
+        "quote": "The Rambai City Budget Board records Rp42 billion of canal levy receipts for fiscal 2031."
+      },
+      {
+        "el_id": "e1",
+        "from": "n2",
+        "to": "n3",
+        "quote": "The article states the program is paid for and gives no cost line."
+      }
+    ]
+  },
+  "panel_skeleton": [
+    {
+      "type": "claim_map",
+      "el_id": "p-claim"
+    },
+    {
+      "type": "dueling",
+      "el_id": "p-duel",
+      "slots": 2
+    }
+  ],
+  "drafting_notes": "A5-SCRATCH-NONCE-7f3c1a: the drafting pass weighed a fourth spine node for the collection rebate and dropped it as an evidence question for A7."
+}

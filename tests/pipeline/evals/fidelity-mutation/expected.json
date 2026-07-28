@@ -1,0 +1,64 @@
+{
+  "note": "AC-PIPE-6 answer key. One clean autopsy and two single-sentence mutations of it, so a diff between clean.json and either mutant is one line. Both mutants must return block from the real A11 and must name the sentence they broke; the clean artifact must pass. `fragments` let A11 name the sentence by quoting it instead of by id, which is a phrasing choice and not a fault. All institutions, figures and URLs are invented.",
+  "fixtures": [
+    {
+      "id": "levy-clean",
+      "file": "clean.json",
+      "expected_verdict": "pass",
+      "mutation": "none: this is the artifact both mutants are derived from"
+    },
+    {
+      "id": "levy-mutant-el",
+      "file": "mutant-el.json",
+      "expected_verdict": "block",
+      "mutation": "narration.en sentence v-3 binds to el_id \"h7\", which the artifact does not declare. The deterministic pre-pass of A11 should catch this before the traceability judgment runs; either way the verdict is block.",
+      "sentence": {
+        "id": "v-3",
+        "lang": "en",
+        "fragments": [
+          "haulers cooperative",
+          "weighbridge",
+          "outside the frame"
+        ]
+      },
+      "fault_cues": [
+        "h7",
+        "el_id",
+        "does not exist",
+        "not declared",
+        "undeclared",
+        "unknown element",
+        "dangling",
+        "binding"
+      ],
+      "min_fault_cues": 1
+    },
+    {
+      "id": "levy-mutant-trace",
+      "file": "mutant-trace.json",
+      "expected_verdict": "block",
+      "mutation": "narration.en sentence v-3 keeps a valid binding to h0 and adds an invented statistic in prose: Rp18 billion a year in rebates, attributed to the East Canal Research Council. That source id resolves in the fixture registry and the artifact already cites it elsewhere, and the sentence introduces no Value object, so the no-orphan-numbers check has nothing to catch here. Only traceability fails: no graph element carries that figure or that claim.",
+      "sentence": {
+        "id": "v-3",
+        "lang": "en",
+        "fragments": [
+          "Rp18 billion",
+          "rebates",
+          "haulers cooperative"
+        ]
+      },
+      "fault_cues": [
+        "rp18",
+        "18 billion",
+        "rebate",
+        "traceab",
+        "no element",
+        "not traceable",
+        "unsupported",
+        "invented",
+        "tidak tertelusur"
+      ],
+      "min_fault_cues": 1
+    }
+  ]
+}

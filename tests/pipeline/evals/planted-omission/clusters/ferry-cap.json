@@ -1,0 +1,28 @@
+{
+  "cluster_id": "ferry-cap",
+  "note": "Synthetic. Invented operator, invented ministry-equivalent, invented figures, example.invalid URLs. Each planted stakeholder is reachable from a mechanism the text states and is named as affected by neither article.",
+  "claim": {
+    "en": "The island ferry fare cap protects commuters and costs the city nothing.",
+    "id": "Batas tarif feri pulau melindungi penglaju dan tidak membebani kota."
+  },
+  "articles": [
+    {
+      "id": "po-ferry-en",
+      "lang": "en",
+      "outlet": "Rambai Civic Ledger",
+      "headline": "Rambai Caps the Island Ferry Fare From April",
+      "date": "2031-03-12",
+      "url": "https://rambai-civic-ledger.example.invalid/2031/03/island-ferry-fare-cap",
+      "body": "The Rambai Transport Office capped the island ferry fare at Rp12,000 from 1 April and said the measure carries no charge against the city budget. The operator, Feri Rambai Lintas, keeps the route on its current timetable of eleven sailings a day. Under the notice, the operator absorbs the difference from three places named in its own filing: the roster allowance paid on sailings after eight in the evening, the hold charge on the two morning runs that carry medical boxes out to the Pulau Randu clinic under an old side agreement, and the settlement window with its fuel wholesaler, which the filing extends from thirty days to ninety. The transport office said the arrangement holds for a twelve month trial and will be reviewed in April 2032."
+    },
+    {
+      "id": "po-ferry-id",
+      "lang": "id",
+      "outlet": "Warta Dermaga",
+      "headline": "Tarif Feri Pulau Rambai Dibatasi Mulai April",
+      "date": "2031-03-11",
+      "url": "https://wartadermaga.example.invalid/2031/03/tarif-feri-dibatasi",
+      "body": "Dinas Perhubungan Kota Rambai menetapkan batas tarif feri pulau sebesar Rp12.000 mulai 1 April dan menyatakan kebijakan itu tidak membebani anggaran kota. Operator Feri Rambai Lintas tetap menjalankan sebelas pelayaran per hari sesuai jadwal berjalan. Dalam laporan operator, selisihnya ditutup dari tiga pos: tunjangan giliran untuk pelayaran di atas pukul delapan malam, biaya palka pada dua pelayaran pagi yang mengangkut kotak obat ke klinik Pulau Randu berdasarkan perjanjian sampingan lama, dan jendela pelunasan kepada pemasok bahan bakar yang diperpanjang dari tiga puluh hari menjadi sembilan puluh hari. Dinas menyebut skema ini berlaku sebagai uji coba dua belas bulan dan akan ditinjau pada April 2032."
+    }
+  ]
+}

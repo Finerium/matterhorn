@@ -1,0 +1,221 @@
+{
+  "note": "AC-PIPE-4 answer key. Three planted stakeholders per cluster, each one a party the mechanism in the article touches and the article never names as touched. `cues` are matched case-insensitively as substrings against the serialized A6 output for that cluster: any one cue hitting counts the stakeholder recovered. Matching stays substring-level on purpose, because A6 writes its own labels and an exact-string answer key would be scoring phrasing rather than recall.",
+  "recall_threshold": 2,
+  "clusters": [
+    {
+      "cluster_id": "canal-levy",
+      "hidden": [
+        {
+          "key": "haulers-at-the-weighbridge",
+          "label": {
+            "en": "The permit holders whose loads are charged at the canal road weighbridge",
+            "id": "Pemegang izin angkut yang muatannya dipungut di jembatan timbang jalan kanal"
+          },
+          "why_hidden": {
+            "en": "The first payment in the chain is made by a local party, and the claim narrates the levy as though it fell on nobody.",
+            "id": "Pembayaran pertama dalam rantai itu dilakukan oleh pihak lokal, dan klaim itu menceritakan retribusinya seolah tidak ditanggung siapa pun."
+          },
+          "cues": [
+            "weighbridge",
+            "jembatan timbang",
+            "hauler",
+            "haulage",
+            "koperasi angkut",
+            "permit holder",
+            "pemegang izin",
+            "per tonne",
+            "per ton"
+          ]
+        },
+        {
+          "key": "night-market-on-the-canal-road",
+          "label": {
+            "en": "The night market traders on the closed section of the canal road",
+            "id": "Pedagang pasar malam di ruas jalan kanal yang ditutup"
+          },
+          "why_hidden": {
+            "en": "A per tonne charge on the road they trade beside reaches them through stall rent and through the closure schedule, and neither article follows it there.",
+            "id": "Pungutan per ton di jalan tempat mereka berdagang sampai kepada mereka lewat sewa lapak dan jadwal penutupan, dan tidak satu pun artikel mengikutinya sampai ke sana."
+          },
+          "cues": [
+            "night market",
+            "pasar malam",
+            "stall",
+            "lapak",
+            "trader",
+            "pedagang",
+            "closure",
+            "penutupan"
+          ]
+        },
+        {
+          "key": "kali-sepuh-spoil-ground",
+          "label": {
+            "en": "Kali Sepuh village, which receives the dredging spoil on its flats",
+            "id": "Desa Kali Sepuh, yang menerima lumpur pengerukan di dataran mereka"
+          },
+          "why_hidden": {
+            "en": "The program's waste stream lands on a named third party outside the city budget frame entirely.",
+            "id": "Aliran limbah program itu mendarat pada pihak ketiga bernama yang berada di luar bingkai anggaran kota."
+          },
+          "cues": [
+            "kali sepuh",
+            "spoil",
+            "lumpur",
+            "dredg",
+            "pengerukan",
+            "downstream",
+            "hilir",
+            "settling",
+            "endap"
+          ]
+        }
+      ]
+    },
+    {
+      "cluster_id": "school-kitchen",
+      "hidden": [
+        {
+          "key": "cold-chain-contractor",
+          "label": {
+            "en": "The refrigerated delivery contractor whose runs drop from nightly to twice weekly",
+            "id": "Kontraktor pengiriman berpendingin yang ritasenya turun dari tiap malam menjadi dua kali sepekan"
+          },
+          "why_hidden": {
+            "en": "The saving is largely a transfer of volume away from one supplier, reported only as a cost line.",
+            "id": "Penghematannya sebagian besar adalah pengalihan volume dari satu pemasok, yang dilaporkan hanya sebagai baris biaya."
+          },
+          "cues": [
+            "cold chain",
+            "rantai dingin",
+            "refrigerat",
+            "berpendingin",
+            "delivery contractor",
+            "kontraktor pengiriman",
+            "nightly",
+            "tiap malam"
+          ]
+        },
+        {
+          "key": "unpaid-pre-shift-prep",
+          "label": {
+            "en": "The kitchen hands and parent volunteers working the hour before paid time starts",
+            "id": "Petugas dapur dan relawan orang tua yang bekerja satu jam sebelum jam berbayar dimulai"
+          },
+          "why_hidden": {
+            "en": "An hour moved earlier than the paid rota is labour taken out of the cost line rather than removed from the work.",
+            "id": "Satu jam yang dimajukan dari giliran berbayar adalah kerja yang dikeluarkan dari baris biaya, bukan kerja yang hilang."
+          },
+          "cues": [
+            "volunteer",
+            "relawan",
+            "unpaid",
+            "tanpa upah",
+            "before paid",
+            "sebelum jam",
+            "rota",
+            "giliran kerja",
+            "kitchen hand",
+            "petugas dapur"
+          ]
+        },
+        {
+          "key": "district-produce-lots",
+          "label": {
+            "en": "The twelve district produce lots replaced by one central supplier",
+            "id": "Dua belas lot sayur kecamatan yang digantikan satu pemasok pusat"
+          },
+          "why_hidden": {
+            "en": "Consolidation moves a recurring payment away from many small growers, and the audit reports only the net figure.",
+            "id": "Konsolidasi memindahkan pembayaran berulang dari banyak petani kecil, dan auditnya hanya melaporkan angka bersihnya."
+          },
+          "cues": [
+            "smallholder",
+            "petani",
+            "grower",
+            "district lot",
+            "lot kecamatan",
+            "central supplier",
+            "pemasok pusat",
+            "pemasok kecil",
+            "consolidat",
+            "konsolidasi"
+          ]
+        }
+      ]
+    },
+    {
+      "cluster_id": "ferry-cap",
+      "hidden": [
+        {
+          "key": "crew-night-roster-allowance",
+          "label": {
+            "en": "The crew whose evening roster allowance absorbs part of the capped fare",
+            "id": "Awak kapal yang tunjangan giliran malamnya menyerap sebagian dari tarif yang dibatasi"
+          },
+          "why_hidden": {
+            "en": "A cap that costs the city nothing is being paid somewhere, and the operator's own filing says where.",
+            "id": "Batas tarif yang tidak membebani kota tetap dibayar di suatu tempat, dan laporan operatornya sendiri menyebutkan di mana."
+          },
+          "cues": [
+            "crew",
+            "awak",
+            "roster allowance",
+            "tunjangan giliran",
+            "overtime",
+            "lembur",
+            "evening sailing",
+            "pelayaran malam"
+          ]
+        },
+        {
+          "key": "island-clinic-supply-run",
+          "label": {
+            "en": "The Pulau Randu clinic, whose medical boxes ride on the hold charge being cut",
+            "id": "Klinik Pulau Randu, yang kotak obatnya menumpang pada biaya palka yang dipangkas"
+          },
+          "why_hidden": {
+            "en": "A side agreement carrying medical supplies is inside the cost the operator is being asked to absorb.",
+            "id": "Perjanjian sampingan yang mengangkut pasokan medis berada di dalam biaya yang diminta ditanggung operator."
+          },
+          "cues": [
+            "clinic",
+            "klinik",
+            "medical box",
+            "kotak obat",
+            "hold charge",
+            "biaya palka",
+            "supply run",
+            "pasokan medis",
+            "pulau randu"
+          ]
+        },
+        {
+          "key": "fuel-wholesaler-receivable",
+          "label": {
+            "en": "The fuel wholesaler carrying a settlement window stretched from thirty days to ninety",
+            "id": "Pemasok bahan bakar yang menanggung jendela pelunasan dari tiga puluh hari menjadi sembilan puluh hari"
+          },
+          "why_hidden": {
+            "en": "Stretching payment terms finances the cap out of a supplier's working capital, which appears in no city ledger.",
+            "id": "Memperpanjang tempo pembayaran membiayai batas tarif dari modal kerja pemasok, yang tidak muncul di buku kota mana pun."
+          },
+          "cues": [
+            "fuel",
+            "bahan bakar",
+            "wholesaler",
+            "pemasok bahan bakar",
+            "settlement window",
+            "jendela pelunasan",
+            "payment term",
+            "tempo pembayaran",
+            "receivable",
+            "piutang",
+            "ninety",
+            "sembilan puluh"
+          ]
+        }
+      ]
+    }
+  ]
+}

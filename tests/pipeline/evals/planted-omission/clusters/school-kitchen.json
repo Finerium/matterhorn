@@ -1,0 +1,28 @@
+{
+  "cluster_id": "school-kitchen",
+  "note": "Synthetic. Invented institutions, invented figures, example.invalid URLs. Same design as canal-levy: each planted stakeholder is reachable from a mechanism the text states and is named as affected by neither article.",
+  "claim": {
+    "en": "The kitchen audit cut the meal contract cost without touching the meals themselves.",
+    "id": "Audit dapur memangkas biaya kontrak makan tanpa menyentuh porsi makannya."
+  },
+  "articles": [
+    {
+      "id": "po-kitchen-en",
+      "lang": "en",
+      "outlet": "Rambai Civic Ledger",
+      "headline": "School Kitchen Audit Reopens the Rambai Meal Contract",
+      "date": "2031-02-19",
+      "url": "https://rambai-civic-ledger.example.invalid/2031/02/school-kitchen-audit",
+      "body": "The Rambai Audit Institute reopened the city school meal contract this month and reported a Rp6.4 billion reduction in the annual cost against the 2030 baseline. The saving comes from three changes: refrigerated delivery moves from nightly runs to twice weekly, produce is ordered through a single central supplier instead of the twelve district lots used until December, and preparation shifts one hour earlier so kitchens open before the first delivery window. The institute said meal counts and portion sizes were held at their 2030 levels throughout. Kitchen managers at four schools confirmed the earlier start and said the rota now begins before paid staff hours do. The contract holder, Dapur Sehat Rambai, declined to comment on the delivery change."
+    },
+    {
+      "id": "po-kitchen-id",
+      "lang": "id",
+      "outlet": "Kanal Timur Harian",
+      "headline": "Kontrak Dapur Sekolah Rambai Ditinjau Ulang Auditor Kota",
+      "date": "2031-02-20",
+      "url": "https://kanaltimur-harian.example.invalid/2031/02/kontrak-dapur-sekolah",
+      "body": "Lembaga Audit Rambai membuka kembali kontrak makan sekolah kota dan mencatat penurunan biaya tahunan Rp6,4 miliar dibandingkan dasar 2030. Penurunan itu berasal dari tiga perubahan: pengiriman berpendingin yang semula tiap malam menjadi dua kali sepekan, pembelian sayur yang dialihkan ke satu pemasok pusat menggantikan dua belas lot kecamatan sampai Desember lalu, dan jam persiapan yang dimajukan satu jam sehingga dapur dibuka sebelum jendela pengiriman pertama. Lembaga itu menyatakan jumlah porsi dan takaran dipertahankan pada tingkat 2030. Pengelola dapur di empat sekolah mengonfirmasi jam mulai yang lebih awal dan menyebut giliran kerja kini dimulai sebelum jam kerja berbayar. Pemegang kontrak, Dapur Sehat Rambai, tidak memberikan tanggapan atas perubahan pengiriman itu."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "narrative_id": "ferry-cap-control",
+  "note": "The clean control. Same event and the same evidence as the leak fixture, treated the same way on both sides: one supported edge and one missing edge in each framing, two hidden branches in each, and narration that describes positions without grading them. A10 passing this and blocking the leak fixture is what separates a symmetry auditor from a machine that blocks everything.",
+  "framing": {
+    "lean": "gov",
+    "claim": {
+      "en": "The fare cap protects commuters and costs the city nothing.",
+      "id": "Batas tarif melindungi penglaju dan tidak membebani kota."
+    }
+  },
+  "mirror": {
+    "lean": "opp",
+    "claim": {
+      "en": "The fare cap starves the island route and the city refuses to pay for it.",
+      "id": "Batas tarif menggerus rute pulau dan kota menolak membayarnya."
+    }
+  },
+  "mirror_treatment": {
+    "edges": [
+      {
+        "from": "n1",
+        "to": "n2",
+        "status": "supported",
+        "why": {
+          "en": "The cap is set by a published notice and the timetable is unchanged, so the step from the measure to the fare rests on a primary document, exactly as it does in the framing being mirrored.",
+          "id": "Batas tarif ditetapkan lewat pemberitahuan yang diterbitkan dan jadwalnya tidak berubah, sehingga langkah dari kebijakan ke tarif bertumpu pada dokumen primer, persis seperti pada bingkai yang dicerminkan."
+        }
+      },
+      {
+        "from": "n2",
+        "to": "n3",
+        "status": "missing",
+        "why": {
+          "en": "A route starved of revenue needs the shortfall shown against the operator's capacity to carry it. The mirror claim asserts the harm and does not carry that step, in the same place the framing being mirrored does not carry its own.",
+          "id": "Rute yang kehilangan penerimaan membutuhkan kekurangannya ditunjukkan terhadap kesanggupan operator memikulnya. Klaim cermin menyatakan kerugiannya dan tidak membawa langkah itu, di tempat yang sama ketika bingkai yang dicerminkan juga tidak membawa langkahnya sendiri."
+        }
+      }
+    ],
+    "hidden": [
+      {
+        "label": {
+          "en": "The evening roster allowance the operator draws down",
+          "id": "Tunjangan giliran malam yang ditarik operator"
+        },
+        "why_hidden": {
+          "en": "The first line the operator names in its own filing, absent from the notice and absent from the mirror claim alike.",
+          "id": "Pos pertama yang disebut operator dalam laporannya sendiri, tidak ada dalam pemberitahuan dan tidak ada pula dalam klaim cermin."
+        }
+      },
+      {
+        "label": {
+          "en": "The fuel settlement window stretched from thirty days to ninety",
+          "id": "Jendela pelunasan bahan bakar yang diperpanjang dari tiga puluh hari menjadi sembilan puluh hari"
+        },
+        "why_hidden": {
+          "en": "Stretched payment terms sit outside both framings: the office does not count them and the mirror claim does not either.",
+          "id": "Tempo pembayaran yang diperpanjang berada di luar kedua bingkai: dinas tidak menghitungnya dan klaim cermin juga tidak."
+        }
+      }
+    ],
+    "narration_note": {
+      "en": "The mirror narration reports the transport office position and the crew association position in the same register, attributing each to the party holding it.",
+      "id": "Narasi cermin melaporkan posisi dinas perhubungan dan posisi perkumpulan awak dalam nada yang sama, dan menisbahkan masing-masing kepada pihak yang memegangnya."
+    }
+  },
+  "instruction": "A10 audits the artifact against this mirror: same event, lean flipped. The rigor applied to one framing must be the rigor applied to the other, in edge statuses, in hidden branch count, and in the temperature of the language. Verdict pass or block, with reasons."
+}

@@ -1,0 +1,117 @@
+{
+  "note": "AC-PIPE-3 golden mini-set: 12 labeled headlines, Indonesian and English mixed, 4 expected clusters of 3. All outlets, bodies and URLs are invented and live on example.invalid, so nothing here asserts anything about the world. `expected_cluster` is the label; cluster.spec.ts strips it before staging the records for A3, so the clusterer never sees it.",
+  "split_pair": {
+    "clusters": ["canal-levy", "market-levy"],
+    "why": "Near-variant surface form on purpose: the same sentence frame ('the X levy pays for the whole Y program') over two different levies and two different programs. A clusterer that groups on wording rather than referent merges these six records into one cluster, which drops purity to 0.75 and fails the gate."
+  },
+  "records": [
+    {
+      "id": "g01",
+      "lang": "en",
+      "headline": "The Canal Levy Pays for the Whole Flood Program",
+      "outlet": "Rambai Civic Ledger",
+      "date": "2031-03-04",
+      "url": "https://rambai-civic-ledger.example.invalid/2031/03/canal-levy-flood-program",
+      "expected_cluster": "canal-levy"
+    },
+    {
+      "id": "g02",
+      "lang": "id",
+      "headline": "Retribusi Kanal Disebut Menutup Seluruh Program Banjir",
+      "outlet": "Kanal Timur Harian",
+      "date": "2031-03-05",
+      "url": "https://kanaltimur-harian.example.invalid/2031/03/retribusi-kanal-program-banjir",
+      "expected_cluster": "canal-levy"
+    },
+    {
+      "id": "g03",
+      "lang": "en",
+      "headline": "Audit Institute Puts the Rambai Flood Program at Rp310 Billion",
+      "outlet": "Rambai Audit Weekly",
+      "date": "2031-03-06",
+      "url": "https://rambai-audit-weekly.example.invalid/2031/03/flood-program-costing",
+      "expected_cluster": "canal-levy"
+    },
+    {
+      "id": "g04",
+      "lang": "id",
+      "headline": "Retribusi Pasar Disebut Menutup Seluruh Program Kebersihan",
+      "outlet": "Warta Pasar Rambai",
+      "date": "2031-03-02",
+      "url": "https://wartapasar.example.invalid/2031/03/retribusi-pasar-program-kebersihan",
+      "expected_cluster": "market-levy"
+    },
+    {
+      "id": "g05",
+      "lang": "en",
+      "headline": "The Market Levy Pays for the Whole Sanitation Program",
+      "outlet": "Rambai Civic Ledger",
+      "date": "2031-03-03",
+      "url": "https://rambai-civic-ledger.example.invalid/2031/03/market-levy-sanitation-program",
+      "expected_cluster": "market-levy"
+    },
+    {
+      "id": "g06",
+      "lang": "id",
+      "headline": "Pedagang Pasar Rambai Menagih Rincian Retribusi Kebersihan",
+      "outlet": "Kanal Timur Harian",
+      "date": "2031-03-08",
+      "url": "https://kanaltimur-harian.example.invalid/2031/03/pedagang-menagih-rincian-retribusi",
+      "expected_cluster": "market-levy"
+    },
+    {
+      "id": "g07",
+      "lang": "en",
+      "headline": "School Kitchen Audit Reopens the Rambai Meal Contract",
+      "outlet": "Rambai Civic Ledger",
+      "date": "2031-02-19",
+      "url": "https://rambai-civic-ledger.example.invalid/2031/02/school-kitchen-audit",
+      "expected_cluster": "school-kitchen"
+    },
+    {
+      "id": "g08",
+      "lang": "id",
+      "headline": "Kontrak Dapur Sekolah Rambai Ditinjau Ulang Auditor Kota",
+      "outlet": "Kanal Timur Harian",
+      "date": "2031-02-20",
+      "url": "https://kanaltimur-harian.example.invalid/2031/02/kontrak-dapur-sekolah",
+      "expected_cluster": "school-kitchen"
+    },
+    {
+      "id": "g09",
+      "lang": "en",
+      "headline": "Rambai Meal Contract Held Back Pending a Cold Chain Review",
+      "outlet": "Rambai Audit Weekly",
+      "date": "2031-02-24",
+      "url": "https://rambai-audit-weekly.example.invalid/2031/02/meal-contract-cold-chain",
+      "expected_cluster": "school-kitchen"
+    },
+    {
+      "id": "g10",
+      "lang": "id",
+      "headline": "Tarif Feri Pulau Rambai Dibatasi Mulai April",
+      "outlet": "Warta Dermaga",
+      "date": "2031-03-11",
+      "url": "https://wartadermaga.example.invalid/2031/03/tarif-feri-dibatasi",
+      "expected_cluster": "ferry-cap"
+    },
+    {
+      "id": "g11",
+      "lang": "en",
+      "headline": "Rambai Caps the Island Ferry Fare From April",
+      "outlet": "Rambai Civic Ledger",
+      "date": "2031-03-12",
+      "url": "https://rambai-civic-ledger.example.invalid/2031/03/island-ferry-fare-cap",
+      "expected_cluster": "ferry-cap"
+    },
+    {
+      "id": "g12",
+      "lang": "id",
+      "headline": "Awak Feri Rambai Menuntut Perhitungan Lembur Setelah Batas Tarif",
+      "outlet": "Kanal Timur Harian",
+      "date": "2031-03-14",
+      "url": "https://kanaltimur-harian.example.invalid/2031/03/awak-feri-menuntut-lembur",
+      "expected_cluster": "ferry-cap"
+    }
+  ]
+}
