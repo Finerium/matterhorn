@@ -7,6 +7,11 @@
   "additionalProperties": false,
   "required": ["pack", "updated_at", "items"],
   "properties": {
+    "seed": {
+      "const": true,
+      "description": "Quarantine flag on transcribed seed fixtures (Gate 2). Optional, true only, and absent from every artifact in content/: check 7 (slug seed) is this field's validator coverage and fails any content root that carries it. The root stays closed otherwise.",
+      "type": "boolean"
+    },
     "pack": { "enum": ["id", "en"] },
     "updated_at": { "type": "string", "minLength": 1 },
     "items": {

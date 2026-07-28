@@ -21,11 +21,12 @@
  *
  * The validator never touches the network. Check 9 reads recorded liveness fields only.
  */
-import { createHash } from 'node:crypto';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { basename, join, relative, resolve, sep } from 'node:path';
 import type { AnySchema, ValidateFunction } from 'ajv';
 import Ajv2020 from 'ajv/dist/2020.js'; // the schemas declare draft 2020-12
+// The 6.11 check-6 token recipe lives in one place, shared with the seed stamper and A12.
+import { gateToken } from '../pipeline/lib/canonical';
 
 const REPO_ROOT = resolve(import.meta.dirname, '..');
 const CONTRACTS = join(REPO_ROOT, 'contracts');
@@ -73,17 +74,12 @@ const at = (v: unknown, ...path: string[]): unknown => {
   return cur;
 };
 
-/** Recursively key-sorted copy. Arrays keep their order. Mirrors the manifest token recipe. */
-function canonical(v: unknown): unknown {
-  if (Array.isArray(v)) return v.map(canonical);
-  if (isObj(v)) {
-    return Object.fromEntries(
-      Object.keys(v)
-        .sort()
-        .map((k) => [k, canonical(v[k])]),
-    );
-  }
-  return v;
+/** DerivedCounts is a flat record of numbers, so key order and extra keys are the whole question. */
+function sameCounts(stored: unknown, expected: Record<string, number>): boolean {
+  if (!isObj(stored)) return false;
+  return [...new Set([...Object.keys(stored), ...Object.keys(expected)])].every(
+    (k) => stored[k] === expected[k],
+  );
 }
 
 /**
@@ -321,7 +317,7 @@ function checkCounts(ctx: Ctx): Row {
   for (const a of ctx.narratives) {
     const stored = at(a.data, 'counts');
     const expected = deriveCounts(asArr(at(a.data, 'panels')));
-    if (JSON.stringify(canonical(stored)) !== JSON.stringify(canonical(expected))) {
+    if (!sameCounts(stored, expected)) {
       failures.push({
         file: a.rel,
         message: `stored counts ${JSON.stringify(stored)} do not match the recomputation ${JSON.stringify(expected)}`,
@@ -468,9 +464,7 @@ function checkManifest(ctx: Ctx): Row {
       failures.push({ file: a.rel, message: `incomplete generation manifest, missing ${[...new Set(missing)].join(', ')}` });
     }
 
-    const expected = createHash('sha256')
-      .update(JSON.stringify(canonical({ ...(a.data as Dict), manifest: { ...manifest, gates: null } })))
-      .digest('hex');
+    const expected = gateToken(a.data);
     for (const gate of ['symmetry', 'fidelity'] as const) {
       const token = at(manifest, 'gates', gate, 'token');
       if (typeof token !== 'string' || token === '') {
