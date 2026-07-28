@@ -1,9 +1,11 @@
 {
-  "gate": "0",
-  "status": "gate0_evaluation_pending",
-  "completed_ac": [],
+  "gate": "1",
+  "status": "in_progress",
+  "completed_ac": [
+    "gate0-green"
+  ],
   "pending_stop_and_asks": [],
-  "updated": "2026-07-28T18:55:00+07:00",
+  "updated": "2026-07-28T19:50:00+07:00",
   "snapshot": {
     "sources": 44,
     "og_fetched": 8,

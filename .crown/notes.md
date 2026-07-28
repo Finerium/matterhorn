@@ -104,3 +104,14 @@ Decisions and findings (full agent output: session task wcv2o11q6):
   documented ceiling. Unlock discipline in effect for orchestrator protected-path writes.
 - CBO 61697 (Aug 2025) deliberately NOT in sources.json: superseded by 61877 and its exact
   title is duplicated by another CBO publication.
+
+## GATE 0: GREEN (2026-07-28, ~19:50 WIB)
+- Evaluator: requested Fable 5 effort max; reported "claude-fable-5". 428s, 95k tokens.
+- 9/9 checks pass, zero blocking findings. Six live spot-checks all 200 with figures
+  verified verbatim in five bodies (Antara Rp88,15T; PPATK series; KFF 26/11/1; Treasury
+  PDF 194,866 + 5,234,616 via pdftotext; Bloomberg Technoz 9.089).
+- Two minor findings, both folded into Gate 1 scope: drop --passWithNoTests once tests are
+  load-bearing; empty/absent content root becomes a hard failure.
+- Gate 1 begins: test author first (RED from blueprint 6.11 spec), then implementer, then
+  fresh reviewer. Check slugs shared by both workers: schema, orphans, counts, narration,
+  lexicon, manifest, seed, url-index, liveness, feed.
