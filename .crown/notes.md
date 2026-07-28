@@ -115,3 +115,25 @@ Decisions and findings (full agent output: session task wcv2o11q6):
 - Gate 1 begins: test author first (RED from blueprint 6.11 spec), then implementer, then
   fresh reviewer. Check slugs shared by both workers: schema, orphans, counts, narration,
   lexicon, manifest, seed, url-index, liveness, feed.
+
+## Gate 1 review round 1: RED (2026-07-28, reviewer claude-opus-5[1m], 26 adversarial probes)
+- BLOCKING: future-harm lint scope misses Echo panels carried in panels[] (walkStrings drops
+  array indices; path becomes panels.historical.outcome). Contract-legal placement (6.3 union,
+  7.1 lists echo among ppn-panic panels). Fix: add panels.historical.outcome to
+  future_harm.scope (+ prefer suffix matching); new fixture mirroring bad-future-harm.
+- IMPORTANT: (1) narrative schema root open -> stray root keys ship; close with
+  additionalProperties:false. (2) url-index regex patterns never compiled -> invalid regex
+  certified clean, crashes at Gate 3 /share; compile in try/catch. (3) check 7 second
+  conjunct (tests/fixtures never imported by app/) unimplemented; static import scan +
+  test, must close before Gate 2 renderers.
+- MINOR: fact-check-colon verdict phrase rule (add narrow /fact[- ]check(ed)?\s*[:]/ rule);
+  og_attribution shape (policy field, nullable pair, note) needs a Deviations line ->
+  RECORDED HERE: og_attribution.json adds top-level policy string + optional per-entry
+  note + nullable image_url_original/fetched_at for fallback rows; additive, validator-
+  covered, disclosed. Source.notes exemption carries a Gate 2/3 condition: if any surface
+  renders Source.notes, drop the exemption or lint rendered notes (re-check at Gate 6).
+  liveness 'unverified' must require a note.
+- All 4 lexicon exemptions ruled DEFENSIBLE with two-sided probe proof; worker separation
+  proven from history; contract fidelity field-for-field faithful.
+- Fix loop round 1: test-author-2 authors new red cases -> orchestrator installs, verifies
+  RED -> fix-implementer -> scoped re-review.
