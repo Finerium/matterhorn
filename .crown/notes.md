@@ -56,3 +56,51 @@
   4. CF-2 emoji strict reading confirmed defensible; no action.
 - Phase 0 step 6 (snapshot & assets) begins now. Snapshot research fleet dispatched
   (8 read-only agents, requested Opus 5 effort max).
+
+## Phase 0 snapshot complete (2026-07-28, fleet: 8x claude-opus-5, 407k tokens, 12 min)
+Decisions and findings (full agent output: session task wcv2o11q6):
+- FLAGSHIP ALIVE: tribunnews 7844542 lives at its full-slug canonical (published 20 Jun 2026,
+  og:image live). OQ-2 STOP-AND-ASK CLEARED, no replacement needed. Real headline is the longer
+  "Menantang Pemerintah Setop MBG Permanen: demi Selamatkan APBN dan Permudah Ungkap Korupsi";
+  Gate C uses the verbatim original text and the real date (fixture said 14 Jun; real is 20 Jun).
+- THE SLUG LESSON: every "dead" Indonesian URL was a truncated bare-ID form. Store full-slug
+  canonicals everywhere; the liveness checker must resolve canonicals before declaring death,
+  and must catch soft failures: cato.org returns 200 with an anti-bot challenge body; the old
+  cekfakta.tempo.co/fakta/295 returns 200 by redirecting to the homepage.
+- FRESH-DEMO URL: antaranews.com/berita/4559522 (national wire, stable, clean 1200x800 og).
+  Bisnis full-slug article restored as a legacy alias of ppn-panic in url_index. The chat-sim
+  forwarded-link preview will show the real ANTARA title and host; Uncle Har's panic caption
+  stays (people forward clarifying articles under panic captions; honest and realistic).
+- OQ-7 RESOLVED: enacted energy subsidy Rp210.06T (Perpres 118/2025; Kompas 14 Apr 2026 with
+  components summing exactly; CNBC corroboration). Ships instead of draft Rp210.1T.
+- D-6 REVERSED WITH EVIDENCE: 987k Feb worker baseline is live (Kompas 15 Feb 2026) but is a
+  DERIVED estimate (47 x 21,000); ships only flagged self_reported + estimate with the
+  derivation exposed. Series 987k->1.28M is methodologically consistent (~43-47/kitchen).
+- KFF page does NOT carry $43.8B; the dollar figure is omitted (blueprint default).
+- TARIFF RATIO: Treasury MTS FY2025 net figures: customs $194.866B / receipts $5,234.6B
+  = 3.7 percent. The PRD "under 2 percent" phrasing is contradicted by the primary document
+  and never ships; Scale Check derives the honest ratio from two sourced Values.
+- YALE: 2025 dollars; scenario-consistent pairs only ($780/$648 expiration, $1,338/$1,130
+  extension); $1,700 banned as before.
+- LANCET: canonical journals/lancet PII URL stored; Feb 2026 follow-up reportedly revises the
+  projection to 9.4M. GATE C TODO: verify a citable revision source; the 14.05M figure always
+  carries its June 2025 date.
+- CASE LIBRARY: Tempo Cek Fakta debunk LIVE (7.2.10 gate satisfied: the "60" figure may be
+  named with that exact URL). Kominfo 12-hoax count citable via suara.com full-slug; the
+  kompas.com article is 8 hoaxes not 12 (PRD Appendix F mislabel; cite accurately).
+  kominfo.go.id domain no longer resolves; never cite it. BPOM 9,089 via Bloomberg Technoz
+  (direct Taruna Ikrar quote) + bangka.tribunnews infographic; minority-outlet 9,083 noted.
+- og IMAGES: 8 fetched (converted jpg, <=1200w). 2 fallbacks: migrant-crime (Cato soft-block),
+  usaid-deaths (Lancet 403) -> styled placeholders, Report-listed.
+- LAND ASSETS: 11 files, every one <=300KB (AC-PERF-7 pre-satisfied). BY-SA files standalone
+  use only (share-alike scoped); CC BY hero safe for composites. sharp added as devDep
+  (blueprint 7.5 allows; sips quality flag proved unreliable).
+- VALIDATOR CHECK 9 INTERPRETATION (implement at Gate 1): anti-bot sources (cbo/fbi/pnas/
+  lancet 403; cato soft-200) carry liveness "live" with corroboration notes; check accepts
+  <400 at snapshot OR dead_replaced+note OR live+note documenting corroboration method.
+- GUARD HOOK WENT LIVE MID-SESSION: settings watcher picked the hooks up after a delay; writes
+  to tests/ are now denied without the unlock sentinel. One false positive observed and
+  handled (commit message containing "tests/" + "touch" in a chain), per the guard's
+  documented ceiling. Unlock discipline in effect for orchestrator protected-path writes.
+- CBO 61697 (Aug 2025) deliberately NOT in sources.json: superseded by 61877 and its exact
+  title is duplicated by another CBO publication.

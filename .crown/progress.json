@@ -1,7 +1,16 @@
 {
   "gate": "0",
-  "status": "comprehension_review_pending",
+  "status": "gate0_evaluation_pending",
   "completed_ac": [],
   "pending_stop_and_asks": [],
-  "updated": "2026-07-28T19:05:00+07:00"
+  "updated": "2026-07-28T18:55:00+07:00",
+  "snapshot": {
+    "sources": 44,
+    "og_fetched": 8,
+    "og_fallback": [
+      "migrant-crime",
+      "usaid-deaths"
+    ],
+    "land_assets": 11
+  }
 }
