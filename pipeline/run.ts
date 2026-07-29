@@ -438,9 +438,13 @@ function stageA4(args: Args): void {
 
   // The work order fixes the families: 7.1 names ten narratives and the registry names each
   // one's member articles. So the family A5 and A6 are handed is the registry's, not A3's, and
-  // A3 is the evidence that embeddings recover the same grouping rather than the router that
-  // decides it. A run directory with no registry narrative in it (the fixtures) is handed
-  // nothing and keeps whatever cluster.json it was staged with.
+  // A3 groups; it does not route. The families that ship are AUTHORED in the snapshot registry,
+  // and A12 publishes those. This once claimed A3 was the evidence that embeddings recover the
+  // same grouping: the Gate C eval measured it and they do not (pairwise recall 0.083 on the
+  // golden set, 0.160 on the work order, against purity 1.000 that was paid for splitting). The
+  // claim is removed rather than left standing; tests/pipeline/evals/cluster.spec.ts carries the
+  // figures and the reason a headline alone cannot carry the referent. A run directory with no
+  // registry narrative in it (the fixtures) is handed nothing and keeps its staged cluster.json.
   let handed = 0;
   if (existsSync(REGISTRY)) {
     for (const narrative of readRegistry().narratives) {

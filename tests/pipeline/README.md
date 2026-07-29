@@ -74,7 +74,7 @@ published artifact has to come from the run inputs.
 | --- | --- | --- | --- |
 | AC-PIPE-1 | full run, all 10 narratives, run log committed | not a unit test: run log plus `pnpm validate:content` | the run |
 | AC-PIPE-2 | deterministic stages are deterministic | `unit/pipeline/publisher.spec.ts` (A12, two runs by hash), `unit/pipeline/stages.spec.ts` (A2) | `fixtures/runs/gc-fixture-0` |
-| AC-PIPE-3 | cluster purity at least 0.9 | `evals/cluster.spec.ts` | `evals/cluster-golden.json` |
+| AC-PIPE-3 | cluster purity at least 0.9, plus pairwise recall, because purity alone is maximized by never merging | `evals/cluster.spec.ts` | `evals/cluster-golden.json` |
 | AC-PIPE-4 | A5 and A6 disjoint, A6 recalls 2 of 3 planted | `unit/pipeline/gates.spec.ts` (construction proof), `evals/planted-omission/planted-omission.spec.ts` (recall) | `fixtures/runs/gc-fixture-0/slots/rambai-levy/A5.json`, `evals/planted-omission/clusters/*.json` + `expected.json` |
 | AC-PIPE-5 | symmetry gate blocks, A12 consequently refuses | `unit/pipeline/gates.spec.ts` (scripted block), `evals/stance-leak/stance-leak.spec.ts` (real A10) | `evals/stance-leak/leak/`, `evals/stance-leak/control/` |
 | AC-PIPE-6 | fidelity gate blocks a mutated narration | `unit/pipeline/gates.spec.ts` (scripted block), `evals/fidelity-mutation/fidelity.spec.ts` (real A11) | `evals/fidelity-mutation/clean.json`, `mutant-el.json`, `mutant-trace.json` |
@@ -89,9 +89,19 @@ reimplemented.
 
 ## Red status
 
-Every spec here is red today. Two different reds, and they clear at different times.
+Every red in the table below has since cleared: W2 shipped the runner, the pre-flight passes
+ran, the tree is installed, and the suite went 27 of 27 green.
 
-| Spec | Red now, because | Clears when |
+**One red is back, and it is a new one, not a leftover.** `evals/cluster.spec.ts` measures
+pairwise recall alongside purity, because purity alone is maximized by a clusterer that never
+merges anything and was passing at 1.000 while A3 grouped 12 records into 11 clusters. A3 scores
+recall 0.083 against a floor of 0.9 and the spec is red on that. It clears when A3 recovers the
+golden families, or when the AC moves by an explicit recorded decision. Do not clear it by
+lowering the floor; the spec header carries the full argument and the threshold sweep.
+
+The original table, for the record:
+
+| Spec | Red then, because | Cleared when |
 | --- | --- | --- |
 | `unit/pipeline/publisher.spec.ts` | `pipeline/run.ts` does not exist; `runStage` throws naming it | W2 ships the runner |
 | `unit/pipeline/gates.spec.ts` | same, for every case except the fixture-token guard | W2 ships the runner |
