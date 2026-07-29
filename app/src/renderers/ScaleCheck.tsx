@@ -4,19 +4,30 @@
  *
  * The percentage is derived here and nowhere else: `value.amount / denominator.value.amount`.
  * Section 6.4 carries no `pct` field, and one decimal place is the floor, because a whole-number
- * rounding of 1 in 3 is a third of a percentage point away from the truth.
+ * rounding of 1 in 3 is a third of a percentage point away from the truth. That division says
+ * something only across one unit, so a segment whose unit differs from the denominator's throws
+ * `UnitMismatchError` before the panel draws.
  *
  * Ported from the zip's `p.isScale` block: the denominator line, the label / display / percent
  * row, the 9px rounded track with its `data-srb` bar, the takeaway rule, and the chip row.
  */
 import type { ScaleCheckPanel } from '../../../contracts/types';
-import { resolveAll, t, type RenderCtx } from './ctx';
+import { resolveAll, t, UnitMismatchError, type RenderCtx } from './ctx';
 import { PANEL_TITLE, UI } from './copy';
 import ValueText from './ValueText';
 import { elProps, panelSheet, useEvidenceSheet } from './EvidenceSheet';
 
 export default function ScaleCheck({ panel, ctx }: { panel: ScaleCheckPanel; ctx: RenderCtx }) {
   const sources = resolveAll(panel, ctx);
+  // Blueprint 6.4, checked here rather than inside `pct` so it covers every segment in the panel
+  // and fires before any numeral draws. Each pct below divides by the denominator amount, so a
+  // segment carrying a different unit is not a share of it: percent segments under a USD_B
+  // denominator render 26 percent as 0.5%, and draw the bar that wide.
+  for (const segment of panel.segments) {
+    if (segment.value.unit !== panel.denominator.value.unit) {
+      throw new UnitMismatchError(panel.el_id, segment.el_id, segment.value.unit, panel.denominator.value.unit);
+    }
+  }
   const { open, sheet } = useEvidenceSheet(ctx);
   const title = t(ctx, PANEL_TITLE.scale_check);
   const denominator = panel.denominator.value.amount;

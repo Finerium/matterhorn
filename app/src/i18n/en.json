@@ -8,7 +8,6 @@
   "sheet.close": "Close",
   "boundary.title": "This part could not be drawn.",
   "boundary.body": "Nothing else on the page is affected. Reload to try it again.",
-
   "hello.greet.0": "Hello",
   "hello.greet.1": "Halo",
   "hello.greet.2": "Bonjour",
@@ -17,7 +16,6 @@
   "hello.greet.5": "Hallo",
   "hello.tagline": "A causal literacy engine",
   "hello.sub": "Most people see the peak. The Matterhorn shows the journey and its impact.",
-
   "lang.step": "Step 1 of 2 · App language",
   "lang.title": "Choose your app language",
   "lang.body": "UI and narration language only. Your news regions come next.",
@@ -29,7 +27,6 @@
   "lang.ja": "日本語",
   "lang.soon": "Rolls out gradually",
   "toast.lang.soon": "Languages roll out gradually",
-
   "regions.step": "Step 2 of 2 · News regions",
   "regions.title": "Which news do you care about?",
   "regions.body": "Pick any. Regions set which Country Packs feed your Radar: they never tune the analysis to you.",
@@ -42,7 +39,6 @@
   "regions.more": "More regions",
   "regions.more.sub": "Packs roll out gradually",
   "toast.region.soon": "Packs roll out gradually",
-
   "notif.kicker": "Radar notifications",
   "notif.title": "One alert a day, at most.",
   "notif.body": "Push exists to beat a rising narrative to you, never to be its courier. Copy leads with what the story omits. A raw hot headline is never forwarded to your lock screen.",
@@ -57,7 +53,6 @@
   "sheet.ios.deny": "Don’t Allow",
   "sheet.ios.allow": "Allow",
   "toast.notif.on": "Radar will beat the narrative to you: once a day, at most",
-
   "auth.title": "Keep your progress.",
   "auth.body": "An account only syncs your scaffolding level across devices. The analysis pipeline never sees who you are: stance-blindness is architecture, not a promise.",
   "auth.apple": "Continue with Apple",
@@ -69,15 +64,12 @@
   "sheet.auth.title": "About accounts",
   "sheet.auth.body": "Account sync ships with the store build; the demo runs fully on-device. Nothing you do here is transmitted anywhere.",
   "sheet.auth.primary": "Continue without an account",
-
   "tab.radar": "Radar",
   "tab.dissect": "Dissect",
   "tab.archive": "Archive",
   "tab.settings": "Settings",
-
   "pack.id": "Indonesia",
   "pack.en": "EN-Global",
-
   "radar.live": "{date} · {live} live",
   "radar.symmetry": "Symmetry {sym} →",
   "radar.footer": "Served from cache. No model on the read path.",
@@ -97,7 +89,6 @@
   "toast.crisis.link": "Opens the official channel",
   "toast.outbound": "Opens {url}: traffic out, never a rating",
   "toast.highlight": "Highlighted on the graph: {n}",
-
   "dissect.title": "Dissect",
   "dissect.body": "Any link or text, from anywhere. Two taps from the scene of exposure.",
   "dissect.paste.hint": "Paste a link, or the text of a claim",
@@ -113,12 +104,10 @@
   "dissect.recent.none": "Nothing has been resolved on this device yet.",
   "dissect.recent.meta": "Cached · computed {at} · {sources} sources",
   "dissect.foot": "Cache-first. One reader’s question becomes everyone’s answer.",
-
   "rate.title": "Daily fresh-dissection limit reached",
   "rate.body": "Fresh (uncached) dissections are limited to 2 per day at demo scale: frontier-model analysis is the only expensive step. Cached dissections stay unlimited, and one user’s question becomes everyone’s answer.",
   "rate.reset": "Resets 00:00 WIB",
   "rate.cta": "Understood",
-
   "prog.honest": "Fresh dissections usually take up to 3 minutes. This demo compresses the wait.",
   "prog.s0": "Extracting the claim",
   "prog.s0.sub": "The article, and the family of articles carrying the same skeleton.",
@@ -131,7 +120,6 @@
   "prog.cancel": "Cancel",
   "toast.dissect.cached": "Served from the shared cache · computed {at}",
   "toast.dissect.joined": "Cached for everyone: it joined the {pack} feed",
-
   "chat.sub": "6 people · a messenger, any messenger",
   "chat.who.0": "Uncle Har",
   "chat.who.1": "Sinta",
@@ -149,7 +137,6 @@
   "share.sim.cancel": "Cancel",
   "share.close": "Close the share receipt",
   "toast.share.sim": "The simulation carries one destination: the claim map",
-
   "archive.title": "Archive",
   "archive.body": "A citable public record of how a country argued with itself.",
   "archive.search": "Search narratives, outlets, nodes",
@@ -166,7 +153,6 @@
   "archive.cases": "Case library · documented outcomes",
   "archive.case.src": "Source: {src}",
   "archive.foot": "A stable permalink per dissection. Export ships with the research build.",
-
   "settings.title": "Settings",
   "settings.body": "Verdict-free by design. The reader stays the judge.",
   "settings.account": "Account",
@@ -196,10 +182,8 @@
   "settings.about.value": "demo 0.1",
   "settings.about.why": "Two modes on one spine: Radar intercepts a rising narrative, Dissect answers a two-tap share. Descriptive counts only, and no verdicts anywhere.",
   "settings.replay": "Replay onboarding",
-
   "install.title": "Install Matterhorn to your home screen and it appears straight in your share sheet.",
   "install.dismiss": "Dismiss the install hint",
-
   "notif.settings.digest": "Daily digest",
   "notif.settings.cap": "Frequency cap",
   "notif.settings.cap.n": "{n} a day",
@@ -213,7 +197,6 @@
   "notif.tpl.body": "{headline} · {tag} · {missing} missing links · {hidden} hidden stakeholders",
   "notif.tpl.empty": "No dissection is on file for this pack yet.",
   "toast.notif.blocked": "Notifications are switched off for this site, so nothing was sent.",
-
   "meth.symmetry": "Symmetry receipt",
   "meth.symmetry.body": "Every published dissection carries a lean, assigned before a sentence is written. The receipt is the spread across the whole archive.",
   "meth.symmetry.at": "Recomputed at publish · {at}",
@@ -226,7 +209,6 @@
   "meth.status.under_review": "under review",
   "meth.status.corrected": "corrected",
   "meth.status.dismissed": "not carried forward",
-
   "autopsy.title": "Autopsy · {pack}",
   "autopsy.prov": "Grounded in {sources} sources · the full chain ⌄",
   "autopsy.cached": "Computed {at}, served from cache",
@@ -234,14 +216,13 @@
   "autopsy.explore": "Explore: constellation and denominators →",
   "autopsy.tag.pill": "Technique tag",
   "autopsy.tag.why": "Technique tags come from a locked vocabulary, reviewed per pack. A tag names the move in the story, never the person who made it.",
-  "autopsy.chain.title": "The full chain",
-  "autopsy.chain.body": "Every published artifact carries its evidence chain.",
+  "autopsy.chain.title": "The authoring chain",
+  "autopsy.chain.body": "The slots that produced this artifact, then the two gates that judged it before it could publish.",
   "autopsy.chain.run": "Run {run}, generated {at}",
   "autopsy.chain.foot": "Input contract: narrative cluster and pack id. No user id, no history, no locale of person. Anti-sycophancy is a property of the data flow, not a prompt.",
   "action.nuance": "Share the Nuance Card",
   "action.original": "Open the original",
   "action.flag": "Flag this dissection",
-
   "spar.kicker": "Sparring · before the reveal",
   "spar.skip": "Skip →",
   "spar.next": "Continue: next question",
@@ -256,10 +237,8 @@
   "spar.diff.miss": "the map disagrees",
   "spar.diff.pred.title": "Your prediction, before the reveal.",
   "spar.diff.pred": "You tapped: {label}",
-
   "orig.kicker": "Original headline · {lang}",
   "orig.foot": "Narration is generated directly in the target language from the evidence graph, never translated after the fact. The headline above is quoted for identification and links out to the outlet.",
-
   "explore.title": "Explore",
   "explore.body": "Panels beyond the visible five live here: the cap keeps the story readable.",
   "explore.constellation": "Constellation teaser",
@@ -267,7 +246,6 @@
   "explore.archive": "Open in Archive →",
   "explore.denoms": "Denominator switcher",
   "toast.denominator": "Denominator switching ships with the research build",
-
   "flag.title": "Flag this dissection",
   "flag.body": "Open to any outlet or named actor, and to you.",
   "flag.r0": "Factual error in a sourced number",
@@ -278,7 +256,6 @@
   "flag.done.title": "Received.",
   "flag.done.body": "An “under review” chip appears within 24 hours. Corrections publish with the same prominence as the original, with a public changelog.",
   "flag.done.cta": "Done",
-
   "nuance.story": "Story 4:5",
   "nuance.chat": "Chat",
   "nuance.save": "Save image",
@@ -293,17 +270,14 @@
   "toast.nuance.saved": "Saved: the deep link opens this exact dissection",
   "toast.nuance.share": "Sharing the structure, not the rage",
   "toast.nuance.failed": "The card did not render, and nothing was saved.",
-
   "screen.methodology": "Methodology and symmetry",
   "screen.notif-settings": "Notifications",
   "screen.lock-preview": "Lock screen preview",
   "screen.chat-sim": "Family",
   "screen.progress": "Dissecting",
-
   "queue.title": "Queued to the private agent fleet",
   "queue.body": "This link is new to the archive. Fresh dissections are produced by the editorial fleet and land in the next cycle. Nothing is invented in the meantime.",
   "queue.back": "Back to the feed",
-
   "route.home.link": "Open the app",
   "route.notfound.title": "No such page",
   "route.notfound.body": "That address is not part of Matterhorn.",
@@ -311,5 +285,8 @@
   "route.offline.body": "You are offline and this page is not in the cache yet. Everything already opened stays readable.",
   "route.share.title": "Shared link",
   "share.resolved": "This link resolves to {id} by {match} match. The dissection opens.",
-  "share.miss": "This link is not in the archive. The queue state opens."
+  "share.miss": "This link is not in the archive. The queue state opens.",
+  "autopsy.chain.gate.symmetry": "A10 Symmetry Auditor",
+  "autopsy.chain.gate.fidelity": "A11 Fidelity Guard",
+  "autopsy.chain.gates.note": "A gate token signs the rows above, and the gates run after they are stamped, so the models that judged are recorded in the committed run log rather than in this artifact."
 }

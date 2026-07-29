@@ -443,6 +443,68 @@
       ]
     },
     {
+      "type": "scale_check",
+      "el_id": "tariffs-pay-scale-share",
+      "denominator": {
+        "label": {
+          "en": "Total federal receipts, net, fiscal year 2025",
+          "id": "Total penerimaan federal neto, tahun anggaran 2025"
+        },
+        "value": {
+          "amount": 5234.616,
+          "unit": "USD_B",
+          "display": {
+            "en": "$5.23T",
+            "id": "US$5,23 triliun"
+          },
+          "source_id": "en-treasury-mts-fy2025",
+          "as_of": "FY2025"
+        }
+      },
+      "segments": [
+        {
+          "el_id": "tariffs-pay-ss-customs",
+          "label": {
+            "en": "Customs duties, net of refunds, the tariff line inside those receipts",
+            "id": "Bea masuk neto setelah pengembalian, pos tarif di dalam penerimaan itu"
+          },
+          "value": {
+            "amount": 194.866,
+            "unit": "USD_B",
+            "display": {
+              "en": "$194.9B",
+              "id": "US$194,9 miliar"
+            },
+            "source_id": "en-treasury-mts-fy2025",
+            "as_of": "FY2025"
+          }
+        }
+      ],
+      "takeaway": {
+        "en": "The share is what these two lines give when one is read against the other: one closed fiscal year, one statement, the same net basis on both sides. It is not the decade of projections the other scale panel carries, and receipts arrive as a single pool, so the share states the size of the tariff line and not what any of it paid for.",
+        "id": "Porsi ini muncul dari membaca satu pos terhadap pos lainnya: satu tahun anggaran yang sudah ditutup, satu laporan, dasar neto yang sama di kedua sisi. Angka ini bukan proyeksi satu dekade yang dibawa panel skala yang satu lagi, dan penerimaan tiba sebagai satu kolam bersama, sehingga porsi itu hanya menyebut ukuran pos tarif, bukan apa yang dibiayai dengannya."
+      },
+      "context_chips": [
+        {
+          "el_id": "tariffs-pay-ss-chip-gross",
+          "label": {
+            "en": "Customs duties before refunds, the gross line in the same statement",
+            "id": "Bea masuk sebelum pengembalian, pos bruto dalam laporan yang sama"
+          },
+          "value": {
+            "amount": 202.357,
+            "unit": "USD_B",
+            "display": {
+              "en": "$202.4B",
+              "id": "US$202,4 miliar"
+            },
+            "source_id": "en-treasury-mts-fy2025",
+            "as_of": "FY2025"
+          }
+        }
+      ]
+    },
+    {
       "type": "incidence",
       "el_id": "tariffs-pay-incidence",
       "horizons": [

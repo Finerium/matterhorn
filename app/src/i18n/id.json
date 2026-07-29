@@ -8,7 +8,6 @@
   "sheet.close": "Tutup",
   "boundary.title": "Bagian ini tidak dapat digambar.",
   "boundary.body": "Bagian lain halaman ini tidak terpengaruh. Muat ulang untuk mencobanya lagi.",
-
   "hello.greet.0": "Hello",
   "hello.greet.1": "Halo",
   "hello.greet.2": "Bonjour",
@@ -17,7 +16,6 @@
   "hello.greet.5": "Hallo",
   "hello.tagline": "Mesin literasi kausal",
   "hello.sub": "Kebanyakan orang melihat puncaknya. Matterhorn menunjukkan perjalanan dan dampaknya.",
-
   "lang.step": "Langkah 1 dari 2 · Bahasa aplikasi",
   "lang.title": "Pilih bahasa aplikasi Anda",
   "lang.body": "Hanya bahasa antarmuka dan narasi. Wilayah berita Anda menyusul.",
@@ -29,7 +27,6 @@
   "lang.ja": "日本語",
   "lang.soon": "Hadir bertahap",
   "toast.lang.soon": "Bahasa hadir bertahap",
-
   "regions.step": "Langkah 2 dari 2 · Wilayah berita",
   "regions.title": "Berita mana yang Anda pedulikan?",
   "regions.body": "Pilih yang mana saja. Wilayah menentukan Country Pack mana yang mengisi Radar Anda: wilayah tidak pernah menyetel analisis untuk Anda.",
@@ -42,7 +39,6 @@
   "regions.more": "Wilayah lain",
   "regions.more.sub": "Paket hadir bertahap",
   "toast.region.soon": "Paket hadir bertahap",
-
   "notif.kicker": "Notifikasi Radar",
   "notif.title": "Paling banyak satu peringatan sehari.",
   "notif.body": "Push ada untuk mendahului narasi yang sedang naik, bukan untuk menjadi kurirnya. Teksnya dibuka dengan apa yang ditinggalkan cerita itu. Judul panas mentah tidak pernah diteruskan ke layar kunci Anda.",
@@ -57,7 +53,6 @@
   "sheet.ios.deny": "Jangan Izinkan",
   "sheet.ios.allow": "Izinkan",
   "toast.notif.on": "Radar akan mendahului narasi itu untuk Anda: sehari sekali, paling banyak",
-
   "auth.title": "Simpan kemajuan Anda.",
   "auth.body": "Akun hanya menyinkronkan tingkat scaffolding Anda antar perangkat. Pipeline analisis tidak pernah tahu siapa Anda: kebutaan sikap adalah arsitektur, bukan janji.",
   "auth.apple": "Lanjut dengan Apple",
@@ -69,15 +64,12 @@
   "sheet.auth.title": "Tentang akun",
   "sheet.auth.body": "Sinkronisasi akun hadir bersama versi toko aplikasi; demo ini berjalan sepenuhnya di perangkat. Tidak ada aktivitas yang dikirim ke mana pun.",
   "sheet.auth.primary": "Lanjut tanpa akun",
-
   "tab.radar": "Radar",
   "tab.dissect": "Diseksi",
   "tab.archive": "Arsip",
   "tab.settings": "Pengaturan",
-
   "pack.id": "Indonesia",
   "pack.en": "EN-Global",
-
   "radar.live": "{date} · {live} tayang",
   "radar.symmetry": "Simetri {sym} →",
   "radar.footer": "Disajikan dari cache. Tidak ada model di jalur baca.",
@@ -97,7 +89,6 @@
   "toast.crisis.link": "Membuka kanal resmi",
   "toast.outbound": "Membuka {url}: trafik keluar, tidak pernah penilaian",
   "toast.highlight": "Disorot pada grafik: {n}",
-
   "dissect.title": "Diseksi",
   "dissect.body": "Tautan atau teks apa pun, dari mana pun. Dua ketukan dari tempat Anda terpapar.",
   "dissect.paste.hint": "Tempel tautan, atau teks sebuah klaim",
@@ -113,12 +104,10 @@
   "dissect.recent.none": "Belum ada yang diuraikan di perangkat ini.",
   "dissect.recent.meta": "Tersimpan · dihitung {at} · {sources} sumber",
   "dissect.foot": "Cache lebih dulu. Pertanyaan satu pembaca menjadi jawaban semua orang.",
-
   "rate.title": "Batas diseksi baru harian tercapai",
   "rate.body": "Diseksi baru (belum tersimpan) dibatasi 2 per hari pada skala demo: analisis model frontier adalah satu-satunya langkah yang mahal. Diseksi tersimpan tetap tanpa batas, dan pertanyaan satu pengguna menjadi jawaban semua orang.",
   "rate.reset": "Disetel ulang 00:00 WIB",
   "rate.cta": "Mengerti",
-
   "prog.honest": "Diseksi baru biasanya memakan waktu sampai 3 menit. Demo ini memampatkan penantiannya.",
   "prog.s0": "Mengekstrak klaimnya",
   "prog.s0.sub": "Artikelnya, dan keluarga artikel yang membawa kerangka yang sama.",
@@ -131,7 +120,6 @@
   "prog.cancel": "Batal",
   "toast.dissect.cached": "Disajikan dari cache bersama · dihitung {at}",
   "toast.dissect.joined": "Tersimpan untuk semua: ia bergabung ke feed {pack}",
-
   "chat.sub": "6 orang · sebuah messenger, messenger apa pun",
   "chat.who.0": "Om Har",
   "chat.who.1": "Sinta",
@@ -149,7 +137,6 @@
   "share.sim.cancel": "Batal",
   "share.close": "Tutup tanda terima berbagi",
   "toast.share.sim": "Simulasi ini membawa satu tujuan: peta klaimnya",
-
   "archive.title": "Arsip",
   "archive.body": "Catatan publik yang bisa dikutip tentang bagaimana sebuah negara berdebat dengan dirinya sendiri.",
   "archive.search": "Cari narasi, media, simpul",
@@ -166,7 +153,6 @@
   "archive.cases": "Pustaka kasus · hasil terdokumentasi",
   "archive.case.src": "Sumber: {src}",
   "archive.foot": "Satu permalink stabil per diseksi. Ekspor hadir bersama build riset.",
-
   "settings.title": "Pengaturan",
   "settings.body": "Bebas vonis secara rancangan. Pembaca tetap menjadi hakimnya.",
   "settings.account": "Akun",
@@ -196,10 +182,8 @@
   "settings.about.value": "demo 0.1",
   "settings.about.why": "Dua mode pada satu tulang punggung: Radar mencegat narasi yang sedang naik, Diseksi menjawab pembagian dua ketukan. Hanya hitungan deskriptif, dan tidak ada vonis di mana pun.",
   "settings.replay": "Ulangi orientasi",
-
   "install.title": "Pasang Matterhorn ke layar utama dan ia langsung muncul di share sheet.",
   "install.dismiss": "Tutup petunjuk pemasangan",
-
   "notif.settings.digest": "Ringkasan harian",
   "notif.settings.cap": "Batas frekuensi",
   "notif.settings.cap.n": "{n} per hari",
@@ -213,7 +197,6 @@
   "notif.tpl.body": "{headline} · {tag} · {missing} mata rantai hilang · {hidden} pemangku tersembunyi",
   "notif.tpl.empty": "Belum ada diseksi yang terarsip untuk paket ini.",
   "toast.notif.blocked": "Notifikasi dimatikan untuk situs ini, jadi tidak ada yang terkirim.",
-
   "meth.symmetry": "Tanda terima simetri",
   "meth.symmetry.body": "Setiap diseksi yang terbit membawa kecondongan, ditetapkan sebelum satu kalimat pun ditulis. Tanda terimanya adalah sebarannya di seluruh arsip.",
   "meth.symmetry.at": "Dihitung ulang saat terbit · {at}",
@@ -226,7 +209,6 @@
   "meth.status.under_review": "sedang ditinjau",
   "meth.status.corrected": "sudah dikoreksi",
   "meth.status.dismissed": "tidak dilanjutkan",
-
   "autopsy.title": "Autopsi · {pack}",
   "autopsy.prov": "Berpijak pada {sources} sumber · rantai lengkapnya ⌄",
   "autopsy.cached": "Dihitung {at}, disajikan dari cache",
@@ -234,14 +216,13 @@
   "autopsy.explore": "Jelajahi: konstelasi dan denominator →",
   "autopsy.tag.pill": "Tag teknik",
   "autopsy.tag.why": "Tag teknik berasal dari kosakata terkunci yang ditinjau per pack. Sebuah tag menamai gerak di dalam cerita, tidak pernah orang yang melakukannya.",
-  "autopsy.chain.title": "Rantai lengkap",
-  "autopsy.chain.body": "Setiap artefak yang diterbitkan membawa rantai buktinya.",
+  "autopsy.chain.title": "Rantai penulisan",
+  "autopsy.chain.body": "Slot yang menghasilkan artefak ini, lalu dua gerbang yang menilainya sebelum ia boleh terbit.",
   "autopsy.chain.run": "Run {run}, dihasilkan {at}",
   "autopsy.chain.foot": "Kontrak masukan: klaster narasi dan id pack. Tanpa id pengguna, tanpa riwayat, tanpa lokal orang. Anti-sikofansi adalah sifat alur data, bukan prompt.",
   "action.nuance": "Bagikan Kartu Nuansa",
   "action.original": "Buka artikel aslinya",
   "action.flag": "Tandai diseksi ini",
-
   "spar.kicker": "Sparring · sebelum jawabannya dibuka",
   "spar.skip": "Lewati →",
   "spar.next": "Lanjutkan: pertanyaan berikutnya",
@@ -256,10 +237,8 @@
   "spar.diff.miss": "peta berkata lain",
   "spar.diff.pred.title": "Tebakan Anda, sebelum jawabannya dibuka.",
   "spar.diff.pred": "Anda mengetuk: {label}",
-
   "orig.kicker": "Judul asli · {lang}",
   "orig.foot": "Narasi dihasilkan langsung dalam bahasa sasaran dari graf bukti, tidak pernah diterjemahkan setelahnya. Judul di atas dikutip untuk identifikasi dan menautkan keluar ke medianya.",
-
   "explore.title": "Jelajahi",
   "explore.body": "Panel di luar lima yang tampak ada di sini: batas itu menjaga cerita tetap terbaca.",
   "explore.constellation": "Cuplikan konstelasi",
@@ -267,7 +246,6 @@
   "explore.archive": "Buka di Arsip →",
   "explore.denoms": "Pengganti denominator",
   "toast.denominator": "Penggantian denominator hadir bersama build riset",
-
   "flag.title": "Tandai diseksi ini",
   "flag.body": "Terbuka untuk media atau aktor yang disebut mana pun, dan untuk Anda.",
   "flag.r0": "Kekeliruan faktual pada angka bersumber",
@@ -278,7 +256,6 @@
   "flag.done.title": "Diterima.",
   "flag.done.body": "Penanda “sedang ditinjau” muncul dalam 24 jam. Koreksi terbit dengan keutamaan yang setara dengan aslinya, disertai catatan perubahan publik.",
   "flag.done.cta": "Selesai",
-
   "nuance.story": "Story 4:5",
   "nuance.chat": "Chat",
   "nuance.save": "Simpan gambar",
@@ -293,17 +270,14 @@
   "toast.nuance.saved": "Tersimpan: tautan dalamnya membuka diseksi yang persis ini",
   "toast.nuance.share": "Membagikan strukturnya, bukan kemarahannya",
   "toast.nuance.failed": "Kartunya tidak tergambar, dan tidak ada yang tersimpan.",
-
   "screen.methodology": "Metodologi dan simetri",
   "screen.notif-settings": "Notifikasi",
   "screen.lock-preview": "Pratinjau layar kunci",
   "screen.chat-sim": "Keluarga",
   "screen.progress": "Sedang mendiseksi",
-
   "queue.title": "Masuk antrean armada agen privat",
   "queue.body": "Tautan ini baru bagi arsip. Diseksi baru diproduksi oleh armada editorial dan terbit pada siklus berikutnya. Tidak ada yang dikarang sementara menunggu.",
   "queue.back": "Kembali ke feed",
-
   "route.home.link": "Buka aplikasi",
   "route.notfound.title": "Halaman tidak ada",
   "route.notfound.body": "Alamat itu bukan bagian dari Matterhorn.",
@@ -311,5 +285,8 @@
   "route.offline.body": "Anda sedang luring dan halaman ini belum ada di cache. Semua yang sudah dibuka tetap bisa dibaca.",
   "route.share.title": "Tautan yang dibagikan",
   "share.resolved": "Tautan ini mengarah ke {id} lewat pencocokan {match}. Diseksinya terbuka.",
-  "share.miss": "Tautan ini tidak ada di arsip. Keadaan antrean yang terbuka."
+  "share.miss": "Tautan ini tidak ada di arsip. Keadaan antrean yang terbuka.",
+  "autopsy.chain.gate.symmetry": "A10 Auditor Simetri",
+  "autopsy.chain.gate.fidelity": "A11 Penjaga Fidelitas",
+  "autopsy.chain.gates.note": "Token gerbang menandatangani baris di atas, dan gerbang berjalan setelah baris itu dicap, sehingga model yang menilai tercatat di log proses yang ikut disimpan, bukan di dalam artefak ini."
 }

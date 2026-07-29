@@ -39,7 +39,7 @@
         },
         {
           "id": "v-5",
-          "text": "The poll asked what share of the federal budget goes to foreign aid. Respondents averaged 26 percent; the poll states about 1 percent as the actual share. Both sit here against total federal net receipts of $5,234.6 billion for fiscal year 2025.",
+          "text": "The poll asked what share of the federal budget goes to foreign aid. Respondents averaged 26 percent; the poll states about 1 percent as the actual share. The panel reads the second against the first, since both are shares of the same budget, and about 1 percent is a small part of the size the claim asserts. No dollar amount sits on either bar, because no source in the registry states the budget total those shares are shares of.",
           "els": [
             "usaid-deficit-panel-scale-check",
             "usaid-deficit-seg-guessed-share",
@@ -96,7 +96,7 @@
         },
         {
           "id": "v-5",
-          "text": "Panel skala menempatkan tebakan rata-rata responden, 26 persen, dan porsi aktual menurut jajak pendapat itu, sekitar 1 persen, terhadap total penerimaan bersih federal tahun fiskal 2025 sebesar US$5.234,6 miliar.",
+          "text": "Jajak pendapat itu menanyakan berapa porsi anggaran federal yang mengalir ke bantuan luar negeri. Tebakan rata-rata responden 26 persen, sedangkan porsi aktual menurut jajak pendapat itu sekitar 1 persen. Panel skala membaca angka kedua terhadap angka pertama, karena keduanya porsi dari anggaran federal yang sama, dan sekitar 1 persen itu hanya sebagian kecil dari ukuran yang dinyatakan klaim tersebut. Tidak ada jumlah dolar pada kedua batangnya, sebab tidak ada sumber dalam registri yang menyebut total anggaran yang menjadi induk porsi-porsi itu.",
           "els": [
             "usaid-deficit-panel-scale-check",
             "usaid-deficit-seg-guessed-share",
@@ -146,27 +146,27 @@
       {
         "move": "denominator",
         "q": {
-          "en": "The scale check sets the poll's two share figures against one government-wide total. Which total is it?",
-          "id": "Panel skala menempatkan dua angka porsi dari jajak pendapat itu terhadap satu total pemerintah menyeluruh. Total mana yang dipakai?"
+          "en": "The scale check measures the share the poll states as the actual one against a base. Which base does the panel use?",
+          "id": "Panel skala membaca porsi yang disebut jajak pendapat itu sebagai porsi aktual terhadap satu pembanding. Angka mana yang dipakai sebagai pembanding itu?"
         },
         "options": [
           {
-            "en": "The size of the federal deficit for that year",
-            "id": "Besarnya defisit federal pada tahun itu."
+            "en": "Federal receipts for fiscal year 2025, the dollar total in the Treasury statement",
+            "id": "Penerimaan federal tahun fiskal 2025, total dolar dalam laporan Treasury."
           },
           {
-            "en": "Total spending on global health programs and USAID",
-            "id": "Total belanja program kesehatan global dan USAID."
+            "en": "The size the claim asserts: the 26 percent of the federal budget respondents averaged",
+            "id": "Ukuran yang dinyatakan klaim itu sendiri, yaitu tebakan rata-rata responden sebesar 26 persen dari anggaran federal."
           },
           {
-            "en": "Total federal net receipts for fiscal year 2025, $5,234.6 billion",
-            "id": "Total penerimaan bersih federal tahun fiskal 2025, US$5.234,6 miliar."
+            "en": "The federal budget total, in dollars, that both of the poll's shares are shares of",
+            "id": "Total anggaran federal dalam dolar yang menjadi induk kedua porsi dari jajak pendapat itu."
           }
         ],
-        "correct": 2,
+        "correct": 1,
         "note": {
-          "en": "The scale check reads both figures, the 26 percent respondents averaged and the share the poll states as the actual one, about 1 percent, against total federal net receipts of $5,234.6 billion for fiscal year 2025, from the Treasury statement. The deficit figure is the one the claim map lists as unstated, and it is the base that would decide whether any freed spending registers as substantial.",
-          "id": "Panel skala menyebut pembandingnya secara langsung, yaitu total penerimaan bersih federal tahun fiskal 2025 sebesar US$5.234,6 miliar, dan menempatkan 26 persen serta sekitar 1 persen terhadap total itu. Angka defisit justru tercatat sebagai dasar yang tidak disebut anggota mana pun, sehingga tidak tersedia untuk peran itu di sini."
+          "en": "The scale check settles it: the base is the size the claim asserts, the 26 percent of the federal budget respondents averaged. The share the poll gives as the actual one, about 1 percent, is read against that and comes out a small part of it, and the two can be read against each other because both are shares of the same budget. Neither bar carries a dollar amount. The panel says why: no source in the registry states the budget total those shares are shares of, and federal receipts for the year, which the Treasury statement does carry, are a different total from the budget a budget share is a share of.",
+          "id": "Panel skala menyelesaikannya: pembandingnya adalah ukuran yang dinyatakan klaim itu sendiri, yaitu 26 persen anggaran federal, tebakan rata-rata yang dicatat jajak pendapat tersebut. Porsi yang disebut jajak pendapat itu sebagai porsi aktual, sekitar 1 persen, dibaca terhadap angka itu dan tampak hanya sebagian kecil darinya, dan keduanya bisa saling dibaca karena sama-sama porsi dari anggaran federal yang sama. Tidak ada jumlah dolar pada kedua batangnya, dan panel itu menyebutkan alasannya: tidak ada sumber dalam registri yang menyebut total anggaran yang menjadi induk porsi-porsi itu, sedangkan penerimaan federal setahun yang dimuat laporan Treasury adalah total yang berbeda dari anggaran belanja yang menjadi induk sebuah porsi anggaran."
         }
       },
       {
@@ -235,7 +235,8 @@
     "Prediction tap: EN prompt is the base for its pre-reveal framing. Options 0 through 2 matched across authorings. Option 3 diverged, EN offering the timing and ID offering the budget share respondents guessed. Timing was kept in both, because it is a live candidate the mechanism question later settles, whereas the guessed-share option pointed at a figure the poll does state and would have read as the one option to eliminate.",
     "Lexicon: the merged Indonesian copy was checked whole-word and carries no collision. 'salah satu' is absent throughout. 'benar-benar' was deliberately avoided in the new ID sparring copy, because the hyphen leaves 'benar' standing as a whole word to a boundary-based lint; intensifiers were dropped rather than rephrased. Verdict vocabulary is absent from both locales, and no scores appear anywhere.",
     "Future tense: the ID prediction option 1 reads 'hendak disusutkan' rather than 'akan menyusut', keeping the tap clear of forward-looking construction while still naming the deficit the final step aims at.",
-    "ID sentence v-6 'menebak jatuh tepat pada porsi aktual itu' reads slightly stiff. It is not a fact disagreement, a dangling binding, a coverage gap or a lexicon violation, so it ships verbatim under the merge rule. Noted here in case a human editor wants the smoother 'jatuh tepat pada porsi aktual itu'."
+    "ID sentence v-6 'menebak jatuh tepat pada porsi aktual itu' reads slightly stiff. It is not a fact disagreement, a dangling binding, a coverage gap or a lexicon violation, so it ships verbatim under the merge rule. Noted here in case a human editor wants the smoother 'jatuh tepat pada porsi aktual itu'.",
+    "RE-DISPATCH after both gates blocked, and it supersedes the notes above where they conflict. A Gate C review found the scale check dividing percent-unit segments by a dollar denominator, rendering the two bars as 0.5 percent and 0.0 percent on screen. A7 rebuilt the panel: the denominator is now the claim's own asserted size, the 26 percent average guess, both segments stay in percent, the bars now render 100.0 and 3.8, and the Treasury receipts figure is gone from the panel entirely. The el_id set was preserved, so every binding still resolved, which is why the gates blocked on tracing rather than on bindings: four spans still described the panel as it used to be. Narration v-5 in both locales closed on total federal net receipts for fiscal year 2025, a figure no element carries any more and one the panel's own takeaway now contradicts, since the takeaway states it cannot put a dollar amount on either bar. The denominator sparring item marked that same figure as the answer, so the item was awarding an answer the panel on the same screen refutes. Those four spans, and only those, were rewritten against the panel as it now stands: v-5 in both locales, and the stem, all three options, the correct index and both notes of sparring.questions[1]. The correct index for that item is now 1. What decided the rewrite is the symmetry point: this artifact holds BOTH its claim-map edges missing on the rule that a share may not be read against a total that is not its parent, and the narration was reading the poll's budget shares against a receipts total anyway. The copy does not get to suspend, for itself, the standard the artifact enforces against the claim. The two remaining options on the denominator item are now refutable from the rebuilt panel by a reader: option 0 asks for the Treasury receipts total in dollars and option 2 asks for the federal budget total in dollars, and the panel's takeaway settles both by stating that no dollar amount can sit on either bar because no source in the registry states the budget total the poll's shares are shares of. Two constraints held while rewriting. First, no numeral appears in the new copy that an element does not hold: the ratio the panel renders, 3.8, is described in words as a small part of the size the claim asserts rather than restated as a computed figure, because that number is a render of the two Values and not a Value the graph carries. Second, for the gate owners: the dollar figure sat in prose as a bare numeral with no Value wrapper, so no renderer invariant could have caught it, and prose is exactly where this class of fault hides. A prose-numeral check against the element set would have caught it at authoring time. The stale figure remains inside the first editorial note above, which is a record of the pre-rebuild merge and is left verbatim as the audit trail rather than edited to match the present panel; a reviewer reading that note should read it as history. The 'Panels arbitration was unavailable' note is likewise superseded: the rebuilt panels were read directly this time, from slots/usaid-deficit/candidate.json, which carries two panels, claim_map and scale_check, whose el_ids are exactly the 17 the narration binds, and echo is null."
   ],
   "model": "claude-opus-5[1m]"
 }

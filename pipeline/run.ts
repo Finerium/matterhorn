@@ -805,12 +805,33 @@ function stageA12(args: Args): void {
   if (!existsSync(candidatePath)) refuse(`A12 ${narrative}: no candidate at ${candidatePath}`);
   const candidate = readJson(candidatePath);
 
+  // A block blocks the BYTES it judged. `blocked/` is the run's permanent ledger, so a
+  // narrative that was sent back, fixed, and re-judged still carries its earlier block records
+  // forever; treating every record as live would mean no narrative could ever recover from a
+  // block, which is not what "a block is not appealable" means. It means you may not publish the
+  // same bytes a gate refused. So a record is live when its `candidate_sha256` matches the
+  // candidate now on the table, and superseded when it does not.
+  //
+  // A record with no hash cannot be matched either way. Those are the reconstructions
+  // transcribed into this run's ledger after the fact, and they are treated as superseded and
+  // named in the log rather than silently skipped. Nothing is weakened by that: the guard below
+  // still requires both gate verdicts to read `pass` AND both tokens to verify against these
+  // exact bytes, so bytes a gate refused cannot publish whatever the ledger says.
   const blockedDir = join(args.run, 'blocked');
-  const blocks = existsSync(blockedDir)
-    ? readdirSync(blockedDir).filter((f) => f.startsWith(`${narrative}-`))
-    : [];
-  if (blocks.length > 0) {
-    refuse(`A12 ${narrative}: a gate blocked this narrative (${blocks.join(', ')}) and a block is not appealable by publishing`);
+  const records = (existsSync(blockedDir) ? readdirSync(blockedDir) : [])
+    .filter((f) => f.startsWith(`${narrative}-`))
+    .map((f) => ({ file: f, sha: asStr(at(readJson(join(blockedDir, f)), 'candidate_sha256')) }));
+  const candidateSha = sha256(readFileSync(candidatePath, 'utf8'));
+  const live = records.filter((r) => r.sha === candidateSha);
+  if (live.length > 0) {
+    refuse(
+      `A12 ${narrative}: a gate blocked these exact bytes (${live.map((r) => r.file).join(', ')}) and a block is not appealable by publishing`,
+    );
+  }
+  if (records.length > 0) {
+    console.log(
+      `A12 ${narrative}: ${String(records.length)} superseded block record(s) on earlier bytes (${records.map((r) => r.file).join(', ')})`,
+    );
   }
 
   const gates: Dict = {};
@@ -882,8 +903,8 @@ function readPublished(out: string): Published[] {
 }
 
 /** Wall time of one narrative: first slot start to last slot finish, in seconds. */
-function wallSeconds(artifact: Published): number | undefined {
-  const stamps = (artifact.manifest?.steps ?? []).flatMap((s) => [Date.parse(s.started_at), Date.parse(s.finished_at)]).filter((n) => !Number.isNaN(n));
+function wallSeconds(steps: Array<{ started_at: string; finished_at: string }>): number | undefined {
+  const stamps = steps.flatMap((s) => [Date.parse(s.started_at), Date.parse(s.finished_at)]).filter((n) => !Number.isNaN(n));
   if (stamps.length === 0) return undefined;
   return Math.round((Math.max(...stamps) - Math.min(...stamps)) / 1000);
 }
@@ -995,7 +1016,15 @@ function stageA13(args: Args): void {
     total: blockFiles.length,
     narratives: new Set(blockFiles.map((f) => asStr(at(readJson(join(blockDir, f)), 'narrative_id')))).size,
   };
-  const walls = published.map(wallSeconds).filter((s): s is number => s !== undefined).sort((a, b) => a - b);
+  // Timed from the RUN LOG, not from the published manifest. The manifest is stamped at A9 and
+  // signed by the gate tokens, so it structurally cannot contain A10 and A11; timing off it
+  // would silently drop the judging, and drop it hardest on exactly the narratives a gate sent
+  // back, which is the flattering direction. The label says the span includes re-judging, so the
+  // number has to.
+  const walls = published
+    .map((artifact) => wallSeconds(readSteps(args.run, artifact.id)))
+    .filter((s): s is number => s !== undefined)
+    .sort((a, b) => a - b);
   const median =
     walls.length === 0
       ? undefined

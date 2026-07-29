@@ -598,7 +598,29 @@ export default function Autopsy({ state, nav }: { state: AppState; nav: Nav }) {
               </div>
             ))}
           </div>
+          {/*
+            The two gates judged this artifact but cannot appear above: the token signs
+            `manifest.steps`, and A10 and A11 run after it is stamped, so a gate row inside it
+            would break the verification it exists to enable. What the artifact does carry is
+            each gate's verdict and token, so those render here, and the footer says where the
+            judging models are recorded. Calling the list above "the full chain" while the
+            judging was missing from it was the overclaim this replaces.
+          */}
+          <div className="m-chain">
+            {(['symmetry', 'fidelity'] as const).map((gate) => (
+              <div key={gate} className="m-chain-row">
+                <span className="m-chain-i">{gate === 'symmetry' ? 'A10' : 'A11'}</span>
+                <span className="m-chain-main">
+                  <span className="m-chain-step">{t(`autopsy.chain.gate.${gate}`)}</span>
+                  <span className="m-chain-who">
+                    {n.manifest.gates[gate].verdict} · {n.manifest.gates[gate].token.slice(0, 12)}
+                  </span>
+                </span>
+              </div>
+            ))}
+          </div>
           <div className="m-sheet-meta">{t('autopsy.chain.run', { run: n.manifest.run_id, at: n.manifest.generated_at })}</div>
+          <div className="m-sheet-meta">{t('autopsy.chain.gates.note')}</div>
           <div className="m-sheet-foot">{t('autopsy.chain.foot')}</div>
           <button type="button" className="m-sheet-close" onClick={closeSheet}>
             {t('sheet.close')}

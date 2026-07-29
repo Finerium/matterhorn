@@ -73,8 +73,8 @@
             "id": "Belanja tahunan aktual pos bantuan luar negeri dalam dolar, jumlah yang bisa dibebaskan oleh pemangkasan"
           },
           "why_hidden": {
-            "en": "The step from the cut to spending freed on the same scale needs the line's annual outlay in dollars as its numerator. The poll member carries the share as a slice of the budget and the treasury member carries the total that slice is read against, but no member states the dollar outlay itself, so the freed spending in the second step has no stated magnitude.",
-            "id": "Langkah dari pemangkasan menuju belanja yang dibebaskan pada skala yang sama membutuhkan belanja tahunan pos itu dalam dolar sebagai pembilangnya. Jajak pendapat dalam keluarga ini memuat porsinya sebagai irisan anggaran dan laporan Treasury memuat total pembanding irisan itu, tetapi tidak ada anggota yang menyebut besaran belanja dolarnya sendiri, sehingga belanja yang dibebaskan pada langkah kedua tidak punya besaran yang dinyatakan."
+            "en": "The step from the cut to spending freed on the same scale needs the line's annual outlay in dollars as its numerator. The poll member carries the share as a slice of the federal budget and the treasury member carries federal receipts for the year, a different total from the budget that slice is a share of, and no member states the dollar outlay itself, so the freed spending in the second step has no stated magnitude.",
+            "id": "Langkah dari pemangkasan menuju belanja yang dibebaskan pada skala yang sama membutuhkan belanja tahunan pos itu dalam dolar sebagai pembilangnya. Jajak pendapat dalam keluarga ini memuat porsinya sebagai irisan anggaran belanja federal dan laporan Treasury memuat penerimaan federal setahun, total yang berbeda dari anggaran belanja yang menjadi induk irisan itu, dan tidak ada anggota yang menyebut besaran belanja dolarnya sendiri, sehingga belanja yang dibebaskan pada langkah kedua tidak punya besaran yang dinyatakan."
           }
         },
         {
@@ -84,8 +84,8 @@
             "id": "Besarnya defisit federal yang menjadi pembanding penyusutan itu"
           },
           "why_hidden": {
-            "en": "The final step has the deficit narrowing substantially, and substantially is a ratio: spending freed set against the size of the deficit itself. The family reads the share claim against total receipts through the treasury member, but no member states the deficit figure, the base that decides whether any freed spending registers as substantial.",
-            "id": "Langkah terakhir menyatakan defisit menyusut secara berarti, dan berarti atau tidaknya adalah soal rasio: belanja yang dibebaskan dibanding besar defisit itu sendiri. Keluarga ini membaca klaim porsi terhadap total penerimaan lewat laporan Treasury, tetapi tidak ada anggota yang menyebut angka defisitnya, dasar yang menentukan apakah belanja yang dibebaskan itu tergolong berarti."
+            "en": "The final step has the deficit narrowing substantially, and substantially is a ratio: spending freed set against the size of the deficit itself. The treasury member in this family states federal receipts for the year rather than the deficit, and no member states the deficit figure, the base that decides whether any freed spending registers as substantial.",
+            "id": "Langkah terakhir menyatakan defisit menyusut secara berarti, dan berarti atau tidaknya adalah soal rasio: belanja yang dibebaskan dibanding besar defisit itu sendiri. Laporan Treasury dalam keluarga ini menyebut penerimaan federal setahun, bukan defisitnya, dan tidak ada anggota yang menyebut angka defisit itu, dasar yang menentukan apakah belanja yang dibebaskan itu tergolong berarti."
           }
         },
         {
@@ -132,26 +132,26 @@
       "el_id": "usaid-deficit-panel-scale-check",
       "denominator": {
         "label": {
-          "en": "Total federal net receipts, fiscal year 2025, the government-wide total this family reads the share against",
-          "id": "Total penerimaan bersih federal, tahun fiskal 2025, total pemerintah menyeluruh yang menjadi pembanding porsi itu dalam keluarga ini"
+          "en": "The size the claim asserts, the average guess the poll records for the share of the federal budget going to foreign aid",
+          "id": "Ukuran yang dinyatakan klaim itu, tebakan rata-rata yang dicatat jajak pendapat itu untuk porsi anggaran federal yang mengalir ke bantuan luar negeri"
         },
         "value": {
-          "amount": 5234.6,
-          "unit": "USD_B",
+          "amount": 26,
+          "unit": "percent",
           "display": {
-            "en": "$5,234.6 billion",
-            "id": "US$5.234,6 miliar"
+            "en": "26 percent",
+            "id": "26 persen"
           },
-          "source_id": "en-treasury-mts-fy2025",
-          "as_of": "FY2025 (Oct 2024 to Sep 2025)"
+          "source_id": "en-kff-tracking-feb2025",
+          "as_of": "fielded Feb 2025, published 4 Mar 2025"
         }
       },
       "segments": [
         {
           "el_id": "usaid-deficit-seg-guessed-share",
           "label": {
-            "en": "The share of the federal budget respondents gave on average for foreign aid, the size the claim asserts",
-            "id": "Porsi anggaran federal untuk bantuan luar negeri menurut tebakan rata-rata responden jajak pendapat itu, ukuran yang dinyatakan klaim itu"
+            "en": "The average guess itself, the share of the federal budget respondents gave for foreign aid",
+            "id": "Tebakan rata-rata itu sendiri, porsi anggaran federal untuk bantuan luar negeri menurut responden"
           },
           "value": {
             "amount": 26,
@@ -183,8 +183,8 @@
         }
       ],
       "takeaway": {
-        "en": "The poll asked what share of the federal budget goes to foreign aid. The average answer respondents gave and the share the poll states as the actual one are set here against the government-wide total this family reads both against.",
-        "id": "Jajak pendapat itu menanyakan berapa porsi anggaran federal yang mengalir ke bantuan luar negeri. Tebakan rata-rata responden dan porsi aktual menurut jajak pendapat itu ditempatkan di sini terhadap total pemerintah menyeluruh yang menjadi pembanding keduanya dalam keluarga ini."
+        "en": "Both figures are shares of the same federal budget, so this panel reads one against the other: measured against the size the claim asserts, the share the poll states as the actual one is a small part of it. What the panel cannot put on either bar is a dollar amount, because no source in the registry states the line's annual outlay or the budget total the poll's shares are shares of.",
+        "id": "Kedua angka adalah porsi dari anggaran federal yang sama, sehingga panel ini membaca yang satu terhadap yang lain: diukur terhadap ukuran yang dinyatakan klaim itu, porsi yang disebut jajak pendapat itu sebagai porsi aktual hanya sebagian kecil darinya. Yang tidak bisa dipasang panel ini pada kedua batang itu adalah jumlah dolar, karena tidak ada sumber dalam registri yang menyebut belanja tahunan pos itu maupun total anggaran yang menjadi induk porsi-porsi dalam jajak pendapat tersebut."
       },
       "context_chips": [
         {

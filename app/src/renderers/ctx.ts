@@ -1,10 +1,13 @@
 /**
- * The render context every grammar component takes, and the two refusals the layer is built on.
+ * The render context every grammar component takes, and the three refusals the layer is built on.
  *
  * Blueprint 6.2: renderers accept numbers only inside a `Value`, and a `Value` whose `source_id`
  * fails resolution throws `OrphanNumberError` at render, before any numeral draws. Blueprint 6.5:
  * card chips render exclusively from derived `counts`, so a narrative missing `counts` or `tags`
- * is not a renderable artifact and the card throws `CardContractError`.
+ * is not a renderable artifact and the card throws `CardContractError`. Blueprint 6.4: the one
+ * percentage this layer derives is a division of one `Value` by another, so a segment whose unit
+ * differs from its denominator's is not a share of it and throws `UnitMismatchError` rather than
+ * render a figure that is arithmetically fine and means nothing.
  *
  * Two scopes of refusal, both real:
  *   panel-scoped    a grammar component resolves every reference inside its own panel props
@@ -13,7 +16,7 @@
  *                   a renderable narrative.
  * Both are one call to `resolveAll` at the top of the component body.
  */
-import type { Lang, Source, SourceId } from '../../../contracts/types';
+import type { Lang, Source, SourceId, Value } from '../../../contracts/types';
 
 export type Theme = 'light' | 'dark';
 
@@ -42,6 +45,25 @@ export class CardContractError extends Error {
   constructor(detail: string) {
     super(`CardContractError: ${detail}. Card chips render from derived counts only.`);
     this.name = 'CardContractError';
+  }
+}
+
+/**
+ * Blueprint 6.4. Two Values divide into a share only when they measure the same thing.
+ *
+ * The parts are constructor arguments rather than a formatted detail string because an invariant
+ * that fires without naming the element that broke it is a bug report nobody can action.
+ */
+export class UnitMismatchError extends Error {
+  readonly elId: string;
+
+  constructor(panelElId: string, elId: string, unit: Value['unit'], denominatorUnit: Value['unit']) {
+    super(
+      `UnitMismatchError: panel "${panelElId}" element "${elId}" is in ${unit}, ` +
+        `its denominator in ${denominatorUnit}. A share is only a share across one unit.`,
+    );
+    this.name = 'UnitMismatchError';
+    this.elId = elId;
   }
 }
 

@@ -141,14 +141,6 @@
       }
     },
     {
-      "a": "node-tariffs-pay",
-      "b": "node-usaid-deficit",
-      "via": {
-        "en": "shared source: U.S. Department of the Treasury",
-        "id": "sumber bersama: U.S. Department of the Treasury"
-      }
-    },
-    {
       "a": "node-usaid-deficit",
       "b": "node-usaid-deaths",
       "via": {

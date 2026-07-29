@@ -115,8 +115,8 @@
           ],
           "correct": 0,
           "note": {
-            "en": "The scale panel runs against a $4.1T score of the enacted package that ends in 2034, a figure that never appears on the original page, while the tariff projections run out to 2035, so the score and the projections do not end in the same year. The $2.5T is the stream being measured rather than the thing it is measured against, and the $5.23T is the receipts pool the tariff line sits inside.",
-            "id": "Panel skala membawa pembaginya ke halaman, US$4,1 triliun sampai 2034, angka yang tidak pernah tampil di halaman aslinya, sementara proyeksi arus tarifnya berjalan sampai 2035, jadi keduanya tidak berakhir pada tahun yang sama. US$2,5 triliun adalah arus yang sedang diukur, bukan pembanding tempat arus itu diukur, dan US$5,23 triliun adalah kolam penerimaan tempat pos tarifnya berada."
+            "en": "The scale panel that runs on a decade of projections carries the cost side: a $4.1T score of the enacted package that ends in 2034, a figure that never appears on the original page, while the tariff projections run out to 2035, so the score and the projections do not end in the same year. The $2.5T is the stream being measured rather than the thing it is measured against, and the $5.23T is the denominator of the other scale panel, the receipts pool the tariff line sits inside for one closed year, not a price for anything proposed.",
+            "id": "Panel skala yang berjalan pada proyeksi satu dekade membawa sisi biayanya ke halaman, US$4,1 triliun sampai 2034, angka yang tidak pernah tampil di halaman aslinya, sementara proyeksi arus tarifnya berjalan sampai 2035, jadi keduanya tidak berakhir pada tahun yang sama. US$2,5 triliun adalah arus yang sedang diukur, bukan pembanding tempat arus itu diukur, dan US$5,23 triliun adalah pembagi panel skala yang satu lagi, kolam penerimaan tempat pos tarifnya berada selama satu tahun anggaran yang sudah ditutup, bukan harga dari apa pun yang diusulkan."
           }
         },
         {
@@ -606,6 +606,68 @@
         ]
       },
       {
+        "type": "scale_check",
+        "el_id": "tariffs-pay-scale-share",
+        "denominator": {
+          "label": {
+            "en": "Total federal receipts, net, fiscal year 2025",
+            "id": "Total penerimaan federal neto, tahun anggaran 2025"
+          },
+          "value": {
+            "amount": 5234.616,
+            "unit": "USD_B",
+            "display": {
+              "en": "$5.23T",
+              "id": "US$5,23 triliun"
+            },
+            "source_id": "en-treasury-mts-fy2025",
+            "as_of": "FY2025"
+          }
+        },
+        "segments": [
+          {
+            "el_id": "tariffs-pay-ss-customs",
+            "label": {
+              "en": "Customs duties, net of refunds, the tariff line inside those receipts",
+              "id": "Bea masuk neto setelah pengembalian, pos tarif di dalam penerimaan itu"
+            },
+            "value": {
+              "amount": 194.866,
+              "unit": "USD_B",
+              "display": {
+                "en": "$194.9B",
+                "id": "US$194,9 miliar"
+              },
+              "source_id": "en-treasury-mts-fy2025",
+              "as_of": "FY2025"
+            }
+          }
+        ],
+        "takeaway": {
+          "en": "The share is what these two lines give when one is read against the other: one closed fiscal year, one statement, the same net basis on both sides. It is not the decade of projections the other scale panel carries, and receipts arrive as a single pool, so the share states the size of the tariff line and not what any of it paid for.",
+          "id": "Porsi ini muncul dari membaca satu pos terhadap pos lainnya: satu tahun anggaran yang sudah ditutup, satu laporan, dasar neto yang sama di kedua sisi. Angka ini bukan proyeksi satu dekade yang dibawa panel skala yang satu lagi, dan penerimaan tiba sebagai satu kolam bersama, sehingga porsi itu hanya menyebut ukuran pos tarif, bukan apa yang dibiayai dengannya."
+        },
+        "context_chips": [
+          {
+            "el_id": "tariffs-pay-ss-chip-gross",
+            "label": {
+              "en": "Customs duties before refunds, the gross line in the same statement",
+              "id": "Bea masuk sebelum pengembalian, pos bruto dalam laporan yang sama"
+            },
+            "value": {
+              "amount": 202.357,
+              "unit": "USD_B",
+              "display": {
+                "en": "$202.4B",
+                "id": "US$202,4 miliar"
+              },
+              "source_id": "en-treasury-mts-fy2025",
+              "as_of": "FY2025"
+            }
+          }
+        ]
+      },
+      {
         "type": "incidence",
         "el_id": "tariffs-pay-incidence",
         "horizons": [
@@ -912,10 +974,12 @@
           },
           {
             "id": "v-4",
-            "text": "The same closing statement puts that tariff line inside $5.23T of total federal receipts on the same net basis, and it never records what any line pays for, because receipts arrive as one pool.",
+            "text": "The same closing statement puts that tariff line inside $5.23T of total federal receipts on the same net basis, and it never records what any line pays for, because receipts arrive as one pool. A scale panel sets that line against that total and reports the share, a single closed fiscal year on both sides rather than the decade of projections.",
             "els": [
               "tariffs-pay-money-flow",
-              "tariffs-pay-mf-customs"
+              "tariffs-pay-mf-customs",
+              "tariffs-pay-scale-share",
+              "tariffs-pay-ss-customs"
             ]
           },
           {
@@ -932,7 +996,7 @@
           },
           {
             "id": "v-6",
-            "text": "The scale panel counts that one stream twice, $2.5T against primary deficits for 2025 to 2035 and $3.0T as debt reduction including interest through FY2035, and sets both beside a $4.1T score of the enacted package that ends in 2034; the two counts are not added to each other.",
+            "text": "The other scale panel runs on a decade of projections instead: it counts that one stream twice, $2.5T against primary deficits for 2025 to 2035 and $3.0T as debt reduction including interest through FY2035, and sets both beside a $4.1T score of the enacted package that ends in 2034; the two counts are not added to each other.",
             "els": [
               "tariffs-pay-scale-check",
               "tariffs-pay-sc-cbo-primary",
@@ -966,10 +1030,12 @@
           },
           {
             "id": "v-3",
-            "text": "Panel aliran uang menaruh pos itu pada tempatnya, US$194,9 miliar bea masuk neto di dalam total penerimaan federal neto US$5,23 triliun, dan laporan yang sama tidak menyebut pos itu membiayai apa: penerimaan tiba sebagai satu kolam bersama.",
+            "text": "Panel aliran uang menaruh pos itu pada tempatnya, US$194,9 miliar bea masuk neto di dalam total penerimaan federal neto US$5,23 triliun, dan laporan yang sama tidak menyebut pos itu membiayai apa: penerimaan tiba sebagai satu kolam bersama. Sebuah panel skala membaca pos itu terhadap total yang sama dan menampilkan porsinya: satu tahun anggaran yang sudah ditutup, dasar neto yang sama di kedua sisi, bukan proyeksi satu dekade.",
             "els": [
               "tariffs-pay-money-flow",
-              "tariffs-pay-mf-customs"
+              "tariffs-pay-mf-customs",
+              "tariffs-pay-scale-share",
+              "tariffs-pay-ss-customs"
             ]
           },
           {
@@ -995,7 +1061,7 @@
           },
           {
             "id": "v-6",
-            "text": "Panel skala menghitung satu arus dua kali, US$2,5 triliun sebagai pengurang defisit primer untuk 2025 sampai 2035 dan US$3,0 triliun termasuk bunga sampai tahun anggaran 2035, terhadap skor konvensional US$4,1 triliun sampai 2034 yang tidak pernah tampil di halaman aslinya. Kedua hitungan itu tidak dijumlahkan, jendelanya tidak berakhir pada tahun yang sama, dan US$718 miliar bunga berjalan pada tahun-tahun menunggu di antaranya.",
+            "text": "Panel skala yang satu lagi berjalan pada proyeksi satu dekade: panel itu menghitung satu arus dua kali, US$2,5 triliun sebagai pengurang defisit primer untuk 2025 sampai 2035 dan US$3,0 triliun termasuk bunga sampai tahun anggaran 2035, terhadap skor konvensional US$4,1 triliun sampai 2034 yang tidak pernah tampil di halaman aslinya. Kedua hitungan itu tidak dijumlahkan, jendelanya tidak berakhir pada tahun yang sama, dan US$718 miliar bunga berjalan pada tahun-tahun menunggu di antaranya.",
             "els": [
               "tariffs-pay-scale-check",
               "tariffs-pay-sc-cbo-primary",
@@ -1029,7 +1095,7 @@
           "role": "A7",
           "model": "claude-opus-5[1m]",
           "started_at": "2026-07-29T00:22:13Z",
-          "finished_at": "2026-07-29T00:22:13Z",
+          "finished_at": "2026-07-29T05:25:42Z",
           "input_hash": "9c1cb8d1fb14acbbd2dc233dc60a5308008d9eeae920d9eafdf236e313835c9b"
         },
         {
@@ -1042,9 +1108,23 @@
         {
           "role": "A9",
           "model": "claude-opus-5[1m]",
-          "started_at": "2026-07-29T00:22:13Z",
-          "finished_at": "2026-07-29T00:41:56Z",
-          "input_hash": "a8720fbfcef3a188dbbc76146e85b96cd0088db78e5959cf8eda492441893a7b"
+          "started_at": "2026-07-29T05:25:43Z",
+          "finished_at": "2026-07-29T05:31:58Z",
+          "input_hash": "475665f05bf2470d661fa43ab3c05a9ddfcebfa23e2823a4234e1b87de0df500"
+        },
+        {
+          "role": "A10",
+          "model": "claude-fable-5",
+          "started_at": "2026-07-29T00:41:58Z",
+          "finished_at": "2026-07-29T04:01:52Z",
+          "input_hash": "7d9f75856e061ec48c0d0ce1ea51dd1ed7a1ba2d23cd639f862b66398426a92a"
+        },
+        {
+          "role": "A11",
+          "model": "claude-opus-5[1m]",
+          "started_at": "2026-07-29T00:41:58Z",
+          "finished_at": "2026-07-29T04:01:52Z",
+          "input_hash": "b545f2b55bd38b521419d1b00545781b85bac2ea9417802987f1205038a0fac6"
         }
       ]
     }
