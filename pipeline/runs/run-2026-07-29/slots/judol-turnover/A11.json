@@ -1,0 +1,17 @@
+{
+  "verdict": "pass",
+  "reasons": [
+    "Integrity verified: the candidate embedded in A11.input.json is canonically identical to candidate.json, sha256 2ac901a50131227639f92d9f26e7836655b6918239d313888f3649c123a2470e.",
+    "Pass one, bindings: 26 declared el_ids, all unique; every els entry in all 12 sentences across both locales resolves to a declared element; zero unresolved bindings.",
+    "Pass one, coverage: all three panel ids (jt-panel-claim-map, jt-panel-scale-check, jt-panel-dueling) are bound in BOTH locales; echo is null so there is no echo panel id to cover; in fact all 26 declared elements are bound in both locales.",
+    "Pass one, orphan numbers: all 12 Value objects carry a source_id (jt-s2, jt-h6, scale denominator, one segment, four chips, four dueling counts).",
+    "Pass one, lexicon: 364 strings scanned unconditionally in both locales (my first scan wrongly skipped narration.id via the id-key rule; rescanned). Zero hits on any EN or ID verdict word, zero on the fact-check colon construction, zero on the salah satu whole-word trap, zero em dashes, zero pictographs. No scalar quality score anywhere.",
+    "Pass one, future-tense harm: the scoped surfaces (historical.outcome, cases.documented_outcome) do not exist in this artifact since echo is null, and none of the patterns or bakal-plus-harm-noun constructions appear in any string.",
+    "Pass two, figures: every prose numeral in all 12 sentences resolves to a bound element's display value with a matching period. EN v-3 (Rp286.84T/Rp359.81T), EN v-4 (Rp40.3T, Rp10.59T, 422.1m, 12.3m), EN v-5 (359.81 to 286.84, 51.3 to 36.01), ID v-1 (Rp286,84 triliun to jt-s2), ID v-5 and ID v-6 all check out. The only prose numerals absent from element displays are bare years, each matching its element's as_of.",
+    "Pass two, edge status never upgraded: EN v-2 narrates the two unsourced edges as stated by no source and the missing edge as having no article behind it at all; ID v-2 rests them on date order (jt-e1 why, verbatim) and on the headline word tersisa (jt-e2 why, and tersisa is in that edge's quoted evidence); ID v-3 says the last step is held by no article in the family, matching jt-e3's missing quote.",
+    "Pass two, parties and characterisations: PPATK traces to jt-s2's label and the dueling who fields, Prabowo to jt-s1; 'no article joins the two series' traces to jt-h1's why verbatim, and 'no one measures the market in depositors rather than rupiah' to jt-h6's why plus the bound depositors chip. The depositors/players distinction is preserved: ID v-6 says penyetor and never calls them players, which is the count jt-h6 keeps hidden.",
+    "Weighed and not blocked: EN v-6's 'the channels absorbing what the blocked rails lose' drops the modal from jt-h3's 'the channels that would carry the flow the blocked rails lose', but it sits under the explicit 'Standing outside the frame:' umbrella beside six sibling designators each drawn from its own element's label, so it names the unexamined variable rather than asserting displacement, consistent with the round-1 hedge now in why_hidden.",
+    "Weighed and not blocked: counts.unsourced 7 against only 2 unsourced edges is correct under contracts/types.ts:235, which derives unsourced as unsourced edges plus hidden entries without ev (2 + 5); missing 1, hidden 7, conflicts 4, supported 0, disputed 0 all recompute correctly."
+  ],
+  "model": "claude-opus-5[1m]"
+}

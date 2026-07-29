@@ -886,7 +886,14 @@ function humanDuration(seconds: number): string {
 function stageA13(args: Args): void {
   const out = args.out as string;
   const manifest = readRunManifest(args.run);
-  const published = readPublished(out);
+  // Registry order, not directory order: the work order names each pack's hero (mbg-stop,
+  // tariffs-pay) by listing it first, and the pack-feed hero pick below is order-derived.
+  const registryIndex = new Map(
+    readJson<Registry>(REGISTRY).narratives.map((n, i) => [n.id, i] as const),
+  );
+  const published = readPublished(out).sort(
+    (a, b) => (registryIndex.get(a.id) ?? 99) - (registryIndex.get(b.id) ?? 99),
+  );
   if (published.length === 0) refuse('A13: the content root holds no published narrative, so there is nothing to aggregate');
   const ids = new Set(published.map((n) => n.id));
 

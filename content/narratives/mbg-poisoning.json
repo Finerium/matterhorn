@@ -1,0 +1,761 @@
+{
+  "id": "mbg-poisoning",
+  "pack": "id",
+  "lean": "opp",
+  "status": "published",
+  "headline": {
+    "en": "BGN Chief: MBG Poisoning Victims Reach 6,517",
+    "id": "Kepala BGN: Korban Keracunan MBG Capai 6.517 Orang"
+  },
+  "original": {
+    "text": "Kepala BGN: korban keracunan MBG capai 6.517 orang",
+    "lang": "id"
+  },
+  "outlet": "CNN Indonesia",
+  "published_date": "2025-10-01",
+  "url": "https://www.cnnindonesia.com/nasional/20251001125738-20-1279693/kepala-bgn-korban-keracunan-mbg-capai-6517-orang-sejak-januari-2025",
+  "og": {
+    "image_path": "/assets/og/mbg-poisoning.jpg",
+    "fetched_at": "2026-07-28",
+    "attribution": "Link preview image from CNN Indonesia, shown with the outlet name and an outbound link.",
+    "fallback": false
+  },
+  "tags": [
+    "competing-counts",
+    "no-denominator",
+    "hidden-stakeholder"
+  ],
+  "counts": {
+    "missing": 1,
+    "unsourced": 4,
+    "disputed": 1,
+    "supported": 1,
+    "hidden": 6,
+    "conflicts": 3
+  },
+  "provenance": {
+    "analyzed_by": "claude-fable-5",
+    "narrated_by": "claude-opus-5[1m]",
+    "source_count": 6,
+    "computed_at": "2026-07-28",
+    "run_id": "run-2026-07-29"
+  },
+  "family": {
+    "skeleton": "one institution's running count published as the count, without the two other counts that disagree with it and without the method that separates them",
+    "members": [
+      {
+        "outlet": "CNN Indonesia",
+        "headline": "Kepala BGN: Korban Keracunan MBG Capai 6.517 Orang Sejak Januari 2025",
+        "url": "https://www.cnnindonesia.com/nasional/20251001125738-20-1279693/kepala-bgn-korban-keracunan-mbg-capai-6517-orang-sejak-januari-2025",
+        "date": "2025-10-01"
+      },
+      {
+        "outlet": "Bloomberg Technoz",
+        "headline": "Beda Data KLB Keracunan MBG: BPOM vs BGN",
+        "url": "https://www.bloombergtechnoz.com/detail-news/85713/beda-data-klb-keracunan-mbg-bpom-vs-bgn",
+        "date": "2025-10-01"
+      },
+      {
+        "outlet": "CNN Indonesia",
+        "headline": "Data JPPI: Per September, 8.649 Anak Keracunan MBG",
+        "url": "https://www.cnnindonesia.com/nasional/20250929085833-20-1278711/data-jppi-per-september-8649-anak-keracunan-mbg",
+        "date": "2025-09-29"
+      }
+    ]
+  },
+  "scaffold_default": "S1",
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "Three institutions publish three different totals for the same program. What is doing most of the work in that gap?",
+          "id": "Tiga lembaga menerbitkan tiga total berbeda untuk program yang sama. Apa yang paling menentukan jarak di antaranya?"
+        },
+        "options": [
+          {
+            "en": "Each total is built from a different counting rule, over a different window, with a different unit.",
+            "id": "Tiap total dibangun dari aturan hitung yang berbeda, pada jendela waktu yang berbeda, dengan satuan yang berbeda."
+          },
+          {
+            "en": "More outlets repeated the larger figures, so those totals grew.",
+            "id": "Lebih banyak media mengulang angka yang besar, sehingga total itu ikut membesar."
+          },
+          {
+            "en": "The largest figure is simply the most recent one, and the others lag behind it.",
+            "id": "Angka terbesar sekadar angka paling baru, sedangkan sisanya tertinggal di belakangnya."
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The three counts panel puts the methods side by side: BGN keeps a running count of people inside its own program, BPOM sums victims from verified KLB events across regions, JPPI tallies children reported affected through 27 September 2025. BGN and BPOM even stand on the same date, 1 October 2025, at 6,517 people and 9,089 people. Elapsed time alone therefore does not hold the gap, and the panel's rule line keeps the three counts standing separately rather than merged.",
+          "id": "Panel tiga hitungan menaruh metodenya berdampingan: BGN memegang hitungan berjalan atas orang di dalam programnya sendiri, BPOM menjumlahkan korban dari kejadian luar biasa yang diverifikasi lintas daerah, JPPI menabulasi anak yang dilaporkan terdampak hingga 27 September 2025. BGN dan BPOM bahkan berdiri pada tanggal yang sama, 1 Oktober 2025, pada 6.517 orang dan 9.089 orang. Jadi selisih waktu saja tidak menampung jarak itu, dan baris aturan panel menahan ketiga hitungan tetap berdiri terpisah alih-alih dilebur."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "The counts are published as cumulative totals. What are they placed over?",
+          "id": "Hitungan itu diumumkan sebagai total kumulatif. Di atas basis apa angka itu diletakkan?"
+        },
+        "options": [
+          {
+            "en": "Over the recipients and portions the program served across the same months.",
+            "id": "Di atas penerima dan porsi yang tersalurkan pada rentang bulan yang sama."
+          },
+          {
+            "en": "Over the number of SPPG kitchens that cooked the program's meals.",
+            "id": "Di atas jumlah dapur SPPG yang memasak menu program."
+          },
+          {
+            "en": "Over nothing. No served base for the same window is published beside any of the three totals.",
+            "id": "Tidak di atas basis apa pun. Tidak ada basis penyaluran untuk rentang yang sama yang diumumkan berdampingan dengan satu pun dari tiga total itu."
+          }
+        ],
+        "correct": 2,
+        "note": {
+          "en": "The registry does carry served figures, 63.13 million recipients and 29,679 SPPG kitchens operating, but both stand at May 2026 while the counts stop at 27 September and 1 October 2025. Nothing lines the two up, so no rate comes out of them, and the served base is logged as one of the parts the story never opens. The kitchen count is a count of places, not of portions eaten, so it cannot carry a case rate either.",
+          "id": "Registri memang memuat angka penyaluran, 63,13 juta penerima dan 29.679 dapur SPPG beroperasi, tetapi keduanya berdiri pada Mei 2026 sementara hitungan korban berhenti pada 27 September dan 1 Oktober 2025. Tidak ada yang menyejajarkan keduanya, jadi tidak ada laju kejadian yang bisa dibaca dari sana, dan basis penyaluran itu tercatat sebagai bagian yang belum dibuka. Angka dapur adalah hitungan tempat, bukan hitungan porsi yang dimakan, jadi angka itu juga tidak bisa menopang laju kasus."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "One child is counted in an incident. Who meets the cost of that single case first, before it reaches any national total?",
+          "id": "Seorang anak terhitung dalam sebuah insiden. Siapa yang lebih dulu menanggung biaya kasus itu, sebelum kasusnya sampai ke total nasional mana pun?"
+        },
+        "options": [
+          {
+            "en": "The agency running the program, which logs the case into its national total.",
+            "id": "Badan pelaksana program, yang mencatatkan kasus itu ke dalam total nasionalnya."
+          },
+          {
+            "en": "The child's household, then the puskesmas, district hospital and district health office that treat the case and open the investigation.",
+            "id": "Rumah tangga anak itu, lalu puskesmas, rumah sakit daerah, dan dinas kesehatan yang merawatnya dan membuka penyelidikan."
+          },
+          {
+            "en": "The food and drug regulator, which verifies the KLB event before the case is recorded anywhere.",
+            "id": "Regulator obat dan makanan, yang memverifikasi kejadian luar biasa itu sebelum kasusnya tercatat di mana pun."
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The downstream panel starts at home and at the clinic: symptoms, a visit, school days lost the same day, and the district health office opening the investigation that turns an incident into a KLB record. The label the national dispute is fought over is produced there, in the district, and the routine surveillance ledger those facilities feed is cited by none of the three counts. The same panel follows the meal back to the kitchen unit, whose crew and local suppliers stop earning on the days it stops cooking, and none of the three totals moves to show it.",
+          "id": "Panel efek lanjutan bermula di rumah dan di fasilitas kesehatan: gejala, satu kunjungan, hari sekolah yang hilang pada hari yang sama, lalu dinas kesehatan membuka penyelidikan yang mengubah insiden menjadi catatan KLB. Label yang diperselisihkan di tingkat nasional justru diproduksi di daerah, dan pembukuan surveilans rutin yang diisi fasilitas-fasilitas itu tidak dikutip satu pun dari tiga hitungan. Panel yang sama menelusuri porsi itu kembali ke unit dapur, tempat kru dan pemasok lokal berhenti memperoleh penghasilan pada hari unit itu berhenti memasak, dan tidak ada satu pun dari tiga total yang bergerak menunjukkannya."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before you scroll: in a story about a program that feeds tens of millions and a running count of who got sick from it, which side of the claim goes missing first?",
+      "id": "Sebelum menggulir: dalam cerita tentang program yang memberi makan puluhan juta orang dan hitungan berjalan siapa yang jatuh sakit karenanya, sisi mana dari klaim ini yang lebih dulu menghilang?"
+    },
+    "options": [
+      {
+        "en": "The served base: how many recipients and portions the program delivered over the same months.",
+        "id": "Basis penyalurannya: berapa penerima dan porsi yang tersalurkan pada rentang bulan yang sama."
+      },
+      {
+        "en": "The counting rule behind each figure: which symptoms qualify, and who verifies a report.",
+        "id": "Aturan hitung di balik tiap angka: gejala apa yang memenuhi syarat, dan siapa yang memverifikasi laporan."
+      },
+      {
+        "en": "The baseline: how often school food poisoning was recorded before the program existed.",
+        "id": "Garis dasarnya: seberapa sering keracunan pangan di lingkungan sekolah tercatat sebelum program ini ada."
+      },
+      {
+        "en": "The first payers: the households and the clinics that meet each case the same day.",
+        "id": "Pihak yang lebih dulu menanggung: rumah tangga dan puskesmas yang menemui tiap kasus pada hari yang sama."
+      },
+      {
+        "en": "The kitchen side: the unit that cooked the meals, its crew, and the local suppliers that stop when it stops.",
+        "id": "Sisi dapurnya: unit yang memasak porsinya, kru dapur, dan pemasok lokal yang ikut berhenti ketika unit itu berhenti."
+      }
+    ]
+  },
+  "panels": [
+    {
+      "type": "claim_map",
+      "el_id": "panel-claim-map",
+      "spine": [
+        {
+          "el_id": "s-program",
+          "label": {
+            "en": "The MBG free meal program operates at national scale",
+            "id": "Program Makan Bergizi Gratis (MBG) beroperasi dalam skala nasional"
+          },
+          "value": {
+            "amount": 63130000,
+            "unit": "people",
+            "display": {
+              "en": "63.13 million recipients",
+              "id": "63,13 juta penerima"
+            },
+            "source_id": "id-antara-mbg-realisasi-mei2026",
+            "as_of": "May 2026"
+          }
+        },
+        {
+          "el_id": "s-poisoning",
+          "label": {
+            "en": "Recipients, most of them schoolchildren, suffer food poisoning after the meals",
+            "id": "Penerima program, sebagian besar anak sekolah, mengalami keracunan makanan setelah menyantap menu MBG"
+          }
+        },
+        {
+          "el_id": "s-count",
+          "label": {
+            "en": "BGN, the agency running the program, announces its own running count of the victims",
+            "id": "BGN, badan yang menjalankan program itu, mengumumkan hitungan berjalan versinya sendiri atas jumlah korban"
+          }
+        },
+        {
+          "el_id": "s-scale",
+          "label": {
+            "en": "The agency's announced figure stands as the full national scale of the harm",
+            "id": "Angka yang diumumkan badan itu menjadi ukuran utuh skala keracunan secara nasional"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "el_id": "e-serve-poison",
+          "from": "s-program",
+          "to": "s-poisoning",
+          "status": "supported",
+          "ev": {
+            "quote": "Data JPPI: Per September, 8.649 Anak Keracunan MBG",
+            "source_id": "id-cnn-jppi-8649",
+            "why": {
+              "en": "Registry sources from a national outlet, a regulator briefing and a civil-society network each record recipients falling ill after the program's meals, so this step is carried by evidence beyond the article itself. What those sources record differently is the size of the count, which the next step opens.",
+              "id": "Sumber dalam registri, dari media nasional, keterangan regulator, dan jaringan masyarakat sipil, sama-sama mencatat penerima yang jatuh sakit setelah menyantap menu program, sehingga langkah ini ditopang bukti di luar artikelnya sendiri. Yang dicatat berbeda oleh sumber-sumber itu adalah besaran hitungannya, dan langkah berikutnya membuka hal itu."
+            }
+          }
+        },
+        {
+          "el_id": "e-poison-count",
+          "from": "s-poisoning",
+          "to": "s-count",
+          "status": "disputed",
+          "ev": {
+            "quote": "Kepala BGN: Korban Keracunan MBG Capai 6.517 Orang Sejak Januari 2025",
+            "source_id": "id-cnn-bgn-poisoning-6517",
+            "why": {
+              "en": "The registry carries three totals for the same program over overlapping periods, published by the implementing agency, by the food and drug regulator and by a civil-society monitoring network. Each total comes out of a different counting rule, so the step from cases to one announced count is the point where the sources part.",
+              "id": "Registri memuat tiga total untuk program yang sama pada rentang waktu yang bertumpang tindih, diterbitkan oleh badan pelaksana, oleh regulator obat dan makanan, dan oleh jaringan pemantau masyarakat sipil. Tiap total lahir dari aturan hitung yang berbeda, sehingga langkah dari kasus menuju satu hitungan yang diumumkan adalah titik tempat sumber-sumber itu berpisah."
+            }
+          }
+        },
+        {
+          "el_id": "e-count-scale",
+          "from": "s-count",
+          "to": "s-scale",
+          "status": "missing",
+          "ev": {
+            "quote": "no article in this family states the step from the agency's own announced count to that count standing as the full national scale of the harm",
+            "why": {
+              "en": "No source in the registry, and no article in this family, states that an agency's own running count is the full national extent of the harm. The step is a reading the story invites without documenting, and the two other counts published beside it stand at different totals.",
+              "id": "Tidak ada sumber dalam registri, dan tidak ada artikel dalam keluarga ini, yang menyatakan bahwa hitungan berjalan versi sebuah badan adalah ukuran utuh dampak secara nasional. Langkah ini adalah pembacaan yang diundang cerita tanpa pernah didokumentasikan, sementara dua hitungan lain yang terbit di sampingnya berdiri pada total yang berbeda."
+            }
+          }
+        }
+      ],
+      "hidden": [
+        {
+          "el_id": "h-count-method",
+          "label": {
+            "en": "The case definition and counting method behind each published figure",
+            "id": "Definisi kasus dan metode penghitungan di balik tiap angka yang diumumkan"
+          },
+          "why_hidden": {
+            "en": "The count step (s-count) publishes a running total, and the cluster carries two other totals from BPOM and from the civil-society network JPPI, yet no article states how a case enters any of the three ledgers: which symptoms qualify, who verifies a report, whether the unit is an incident or a person, and whether the counted population is schoolchildren only or every class of recipient. The story stops at the totals themselves, and the gap between them is exactly the quantity it never follows.",
+            "id": "Langkah penghitungan (s-count) mengumumkan total berjalan, dan klaster ini memuat dua total lain dari BPOM dan dari jaringan masyarakat sipil JPPI, tetapi tidak ada artikel yang menjelaskan bagaimana sebuah kasus masuk ke tiap pembukuan: gejala apa yang memenuhi syarat, siapa yang memverifikasi laporan, apakah satuannya insiden atau orang, dan apakah populasi yang dihitung hanya anak sekolah atau seluruh golongan penerima. Cerita berhenti pada totalnya sendiri, padahal selisih di antara ketiganya justru besaran yang tidak pernah diikuti."
+          }
+        },
+        {
+          "el_id": "h-denominator-served",
+          "label": {
+            "en": "The served base: recipients and portions delivered over the same counting window",
+            "id": "Basis penyaluran: penerima dan porsi yang tersalurkan sepanjang jendela penghitungan yang sama"
+          },
+          "why_hidden": {
+            "en": "The scale step (s-scale) lets the agency's cumulative victim count stand as the national measure of the harm, and the program step (s-program) states the program runs at national scale, but no article places the count over the base it accumulated on: how many recipients and portions the program served across the same months. A running count with no served base carries no rate, and the story stops before asking for one.",
+            "id": "Langkah skala (s-scale) menjadikan hitungan kumulatif korban versi badan itu sebagai ukuran nasional dampaknya, dan langkah program (s-program) menyebut program berjalan dalam skala nasional, tetapi tidak ada artikel yang meletakkan hitungan itu di atas basis penyalurannya: berapa penerima dan porsi yang tersalurkan pada rentang bulan yang sama. Hitungan berjalan tanpa basis penyaluran tidak membawa laju kejadian, dan cerita berhenti sebelum menanyakannya."
+          }
+        },
+        {
+          "el_id": "h-baseline-klb",
+          "label": {
+            "en": "The pre-program baseline of school food-poisoning outbreaks",
+            "id": "Garis dasar keracunan pangan di lingkungan sekolah sebelum program berjalan"
+          },
+          "why_hidden": {
+            "en": "Reading the agency's figure as the full national scale of the harm (s-scale) treats every counted case as new harm against an unstated baseline of zero. Food-poisoning outbreaks in schools were a routinely tracked category before the program existed, and no article in the family places the program-era counts next to that prior ledger. The comparison the scale claim depends on is never opened.",
+            "id": "Membaca angka badan itu sebagai ukuran utuh skala keracunan nasional (s-scale) memperlakukan setiap kasus yang terhitung sebagai dampak baru terhadap garis dasar nol yang tidak pernah disebut. Keracunan pangan di lingkungan sekolah sudah menjadi kategori yang rutin dicatat jauh sebelum program ini ada, dan tidak ada artikel dalam keluarga ini yang menyandingkan hitungan era program dengan pembukuan sebelumnya itu. Perbandingan yang menjadi sandaran klaim skala tidak pernah dibuka."
+          }
+        },
+        {
+          "el_id": "h-first-payers",
+          "label": {
+            "en": "The households and frontline health facilities that absorb each case first",
+            "id": "Rumah tangga dan fasilitas kesehatan lini depan yang menanggung tiap kasus lebih dulu"
+          },
+          "why_hidden": {
+            "en": "The poisoning step (s-poisoning) lands on schoolchildren, which means it lands the same hour on their families and on the puskesmas, local hospitals and district health offices that treat the cases and work each outbreak. The articles follow the cases upward into national totals and never downward into who met the cost of a single one: treatment bills, transport, parents' lost workdays, children's lost school days, and whether the bill stopped with the household, the public health insurer or a local budget.",
+            "id": "Langkah keracunan (s-poisoning) jatuh pada anak sekolah, artinya pada jam yang sama jatuh pula pada keluarga mereka dan pada puskesmas, rumah sakit daerah, serta dinas kesehatan yang merawat kasus dan menangani tiap kejadian luar biasa. Artikel mengikuti kasus ke atas menjadi total nasional dan tidak pernah ke bawah menuju siapa yang menanggung biaya satu kasus pun: tagihan perawatan, ongkos perjalanan, hari kerja orang tua yang hilang, hari sekolah anak yang hilang, dan apakah tagihan itu berhenti di rumah tangga, penanggung jaminan kesehatan publik, atau anggaran daerah."
+          }
+        },
+        {
+          "el_id": "h-kitchens",
+          "label": {
+            "en": "The kitchen units that cooked the meals in the counted cases, their workers and local suppliers",
+            "id": "Unit dapur yang memasak menu dalam kasus-kasus yang terhitung, para pekerjanya, dan pemasok lokalnya"
+          },
+          "value": {
+            "amount": 1280000,
+            "unit": "people",
+            "display": {
+              "en": "1.28 million program workers",
+              "id": "1,28 juta pekerja program"
+            },
+            "source_id": "id-cnbc-mbg-workers-suppliers",
+            "as_of": "May 2026",
+            "flags": [
+              "self_reported"
+            ]
+          },
+          "why_hidden": {
+            "en": "The serving edge (e-serve-poison) runs from program to poisoning through a physical kitchen every time: some unit cooked each counted meal. The articles total the victims and never name the producing side of the same cases: which service units the cases trace to, what happens to a unit's operations once cases are logged against it, and who carries that stoppage, from kitchen crews to the smallholders and vendors whose produce the unit buys daily.",
+            "id": "Sisi penyajian (e-serve-poison) bergerak dari program ke keracunan lewat dapur fisik setiap kalinya: ada unit yang memasak tiap porsi yang masuk hitungan. Artikel menjumlahkan korban dan tidak pernah menyebut sisi produksi dari kasus yang sama: unit layanan mana yang tersangkut kasus, apa yang terjadi pada operasional sebuah unit begitu kasus tercatat atasnya, dan siapa yang memikul penghentian itu, dari kru dapur sampai petani kecil dan pedagang yang produknya dibeli unit itu setiap hari."
+          },
+          "ev": {
+            "quote": "Program MBG Serap 1,28 Juta Tenaga Kerja, UMKM-Peternak Kecipratan",
+            "source_id": "id-cnbc-mbg-workers-suppliers"
+          }
+        },
+        {
+          "el_id": "h-surveillance-ledger",
+          "label": {
+            "en": "The statutory outbreak-surveillance chain the KLB label points to",
+            "id": "Rantai surveilans kejadian luar biasa yang menjadi rujukan label KLB"
+          },
+          "why_hidden": {
+            "en": "One member of the family frames the dispute as regulator versus implementing agency over KLB data, and KLB is a term with an owner: outbreaks are reported by health facilities, investigated by district health offices, and recapped by the health ministry through routine surveillance. The count step (s-count) arrives as one agency's announcement and the competing counts as other announcements, while the routine surveillance ledger the KLB label itself points to, the one channel with a statutory mandate to arbitrate between them, is never cited by any of the three.",
+            "id": "Satu anggota keluarga ini membingkai perselisihan sebagai data KLB regulator melawan badan pelaksana, dan KLB adalah istilah yang ada pemiliknya: kejadian luar biasa dilaporkan fasilitas kesehatan, diselidiki dinas kesehatan, dan direkap kementerian kesehatan lewat surveilans rutin. Langkah penghitungan (s-count) hadir sebagai pengumuman satu badan dan hitungan tandingan hadir sebagai pengumuman badan lain, sementara pembukuan surveilans rutin yang justru dirujuk label KLB itu, satu-satunya jalur dengan mandat resmi untuk menengahi ketiganya, tidak pernah dikutip siapa pun."
+          },
+          "ev": {
+            "quote": "Beda Data KLB Keracunan MBG: BPOM vs BGN",
+            "source_id": "id-bloombergtechnoz-bpom-9089"
+          }
+        }
+      ]
+    },
+    {
+      "type": "dueling",
+      "el_id": "panel-dueling",
+      "counts": [
+        {
+          "el_id": "d-bgn",
+          "who": "BGN",
+          "method": {
+            "en": "A running count kept by the agency that runs the program, cumulative since January 2025 and announced by the BGN head at a Komisi IX DPR hearing on 1 October 2025. The unit is a person recorded in an incident inside its own program, which makes the counter and the counted party the same institution.",
+            "id": "Hitungan berjalan yang dipegang badan pelaksana program, kumulatif sejak Januari 2025 dan diumumkan Kepala BGN dalam rapat Komisi IX DPR pada 1 Oktober 2025. Satuannya orang yang tercatat dalam insiden di dalam programnya sendiri, sehingga pihak yang menghitung dan pihak yang dihitung adalah lembaga yang sama."
+          },
+          "period": "running count since January 2025, stated 1 October 2025",
+          "value": {
+            "amount": 6517,
+            "unit": "people",
+            "display": {
+              "en": "6,517 people",
+              "id": "6.517 orang"
+            },
+            "source_id": "id-cnn-bgn-poisoning-6517",
+            "as_of": "1 October 2025",
+            "flags": [
+              "self_reported"
+            ]
+          }
+        },
+        {
+          "el_id": "d-bpom",
+          "who": "BPOM",
+          "method": {
+            "en": "A regulator's outbreak ledger. Victims are summed from extraordinary-occurrence (KLB) events verified by the food and drug authority and aggregated across kabupaten, kota and provinces, stated by the BPOM head. The counting unit is the outbreak event first and the person second.",
+            "id": "Pembukuan kejadian luar biasa versi regulator. Korban dijumlahkan dari kejadian luar biasa (KLB) yang diverifikasi otoritas pengawas obat dan makanan lalu diagregasi lintas kabupaten, kota, dan provinsi, disampaikan Kepala BPOM. Satuan hitungnya adalah kejadian lebih dulu, orang kemudian."
+          },
+          "period": "as of 1 October 2025",
+          "value": {
+            "amount": 9089,
+            "unit": "people",
+            "display": {
+              "en": "9,089 people",
+              "id": "9.089 orang"
+            },
+            "source_id": "id-bloombergtechnoz-bpom-9089",
+            "as_of": "1 October 2025"
+          }
+        },
+        {
+          "el_id": "d-jppi",
+          "who": "JPPI",
+          "method": {
+            "en": "A civil-society monitoring network's own tally. The unit is a child reported affected, compiled from the network's monitoring through 27 September 2025, with the sharpest movement logged in the final two weeks of that month. The counted population is narrower than the program's full recipient base.",
+            "id": "Tabulasi milik jaringan pemantau masyarakat sipil. Satuannya anak yang dilaporkan terdampak, dihimpun dari pemantauan jaringan itu hingga 27 September 2025, dengan pergerakan paling tajam tercatat pada dua pekan terakhir bulan itu. Populasi yang dihitung lebih sempit daripada seluruh basis penerima program."
+          },
+          "period": "as of 27 September 2025",
+          "value": {
+            "amount": 8649,
+            "unit": "people",
+            "display": {
+              "en": "8,649 children",
+              "id": "8.649 anak"
+            },
+            "source_id": "id-cnn-jppi-8649",
+            "as_of": "27 September 2025"
+          }
+        }
+      ],
+      "rule_line": {
+        "en": "Three ledgers, three counting rules, one program. The figures sit side by side and stay that way: each was built to answer a different question, over a different window, with a different unit, so adding them, averaging them or picking among them would report a quantity that none of the three ever measured.",
+        "id": "Tiga pembukuan, tiga aturan hitung, satu program. Angka-angka ini disandingkan dan dibiarkan tetap terpisah: masing-masing dibangun untuk menjawab pertanyaan berbeda, pada jendela waktu berbeda, dengan satuan berbeda, sehingga menjumlahkan, merata-ratakan, atau memilih di antaranya akan melaporkan besaran yang tidak pernah diukur oleh ketiganya."
+      }
+    },
+    {
+      "type": "incidence",
+      "el_id": "panel-incidence",
+      "horizons": [
+        {
+          "key": "weeks",
+          "label": {
+            "en": "Within weeks",
+            "id": "Dalam hitungan pekan"
+          }
+        },
+        {
+          "key": "months",
+          "label": {
+            "en": "Within months",
+            "id": "Dalam hitungan bulan"
+          }
+        },
+        {
+          "key": "beyond",
+          "label": {
+            "en": "Beyond that",
+            "id": "Lebih jauh dari itu"
+          }
+        }
+      ],
+      "lanes": [
+        {
+          "el_id": "i-households",
+          "who": {
+            "en": "Children counted in the incidents, and the households around them",
+            "id": "Anak yang terhitung dalam insiden, dan rumah tangga di sekitarnya"
+          },
+          "cells": [
+            {
+              "horizon": "weeks",
+              "text": {
+                "en": "Symptoms, a clinic or hospital visit, school days lost. Every case in every ledger is first a child at home and a family arranging care the same day.",
+                "id": "Gejala, kunjungan ke klinik atau rumah sakit, hari sekolah yang hilang. Tiap kasus di setiap pembukuan lebih dulu berupa anak di rumah dan keluarga yang mengurus perawatan pada hari yang sama."
+              }
+            },
+            {
+              "horizon": "months",
+              "text": {
+                "en": "Whether the treatment bill stopped at the household, at the public health insurer or at a local budget is carried by no figure in this registry, and by no article in the family.",
+                "id": "Apakah tagihan perawatan berhenti di rumah tangga, di penanggung jaminan kesehatan publik, atau di anggaran daerah tidak dibawa oleh angka mana pun dalam registri ini, dan tidak dibawa artikel mana pun dalam keluarga ini."
+              }
+            },
+            {
+              "horizon": "beyond",
+              "text": {
+                "en": "Whether a household lets a child eat the program meal again is the downstream effect closest to the family, and no published count measures it.",
+                "id": "Apakah sebuah rumah tangga membiarkan anaknya kembali menyantap menu program adalah efek lanjutan yang paling dekat dengan keluarga, dan tidak ada hitungan terumumkan yang mengukurnya."
+              }
+            }
+          ]
+        },
+        {
+          "el_id": "i-frontline",
+          "who": {
+            "en": "Puskesmas, district hospitals and district health offices",
+            "id": "Puskesmas, rumah sakit daerah, dan dinas kesehatan kabupaten dan kota"
+          },
+          "cells": [
+            {
+              "horizon": "weeks",
+              "text": {
+                "en": "These facilities receive the cases, and the district health office opens the investigation that turns an incident into a KLB record. The label the national dispute is fought over is produced here.",
+                "id": "Fasilitas inilah yang menerima kasusnya, dan dinas kesehatan membuka penyelidikan yang mengubah sebuah insiden menjadi catatan KLB. Label yang diperselisihkan di tingkat nasional diproduksi di sini."
+              },
+              "ev": {
+                "quote": "Beda Data KLB Keracunan MBG: BPOM vs BGN",
+                "source_id": "id-bloombergtechnoz-bpom-9089"
+              }
+            },
+            {
+              "horizon": "months",
+              "text": {
+                "en": "Every figure in the panel above arrives from an institution seated over this level, and the routine surveillance ledger these facilities feed is cited by none of the three.",
+                "id": "Setiap angka pada panel di atas datang dari lembaga yang duduk di atas tingkat ini, sementara pembukuan surveilans rutin yang diisi fasilitas-fasilitas itu tidak dikutip satu pun dari ketiganya."
+              }
+            },
+            {
+              "horizon": "beyond",
+              "text": {
+                "en": "Staff hours spent on investigation and reporting are absorbed inside health budgets that already existed, and no figure in this registry separates that cost out.",
+                "id": "Jam kerja petugas untuk penyelidikan dan pelaporan terserap di dalam anggaran kesehatan yang sudah ada, dan tidak ada angka dalam registri ini yang memisahkan biaya itu."
+              }
+            }
+          ]
+        },
+        {
+          "el_id": "i-kitchens",
+          "who": {
+            "en": "SPPG service units, their kitchen crews and their local suppliers",
+            "id": "Unit layanan SPPG, kru dapurnya, dan pemasok lokalnya"
+          },
+          "cells": [
+            {
+              "horizon": "weeks",
+              "text": {
+                "en": "A service unit cooked every counted meal. Once cases are logged against a unit, its kitchen crew stops earning on the days the unit stops cooking.",
+                "id": "Ada unit layanan yang memasak tiap porsi yang terhitung. Begitu kasus tercatat atas sebuah unit, kru dapurnya berhenti berpenghasilan pada hari-hari unit itu berhenti memasak."
+              },
+              "value": {
+                "amount": 29679,
+                "unit": "count",
+                "display": {
+                  "en": "29,679 SPPG kitchens operating",
+                  "id": "29.679 dapur SPPG beroperasi"
+                },
+                "source_id": "id-kompas-mbg-sppg-mei2026",
+                "as_of": "May 2026"
+              },
+              "ev": {
+                "quote": "Anggaran MBG Terserap Rp 88,15 Triliun hingga Mei 2026",
+                "source_id": "id-kompas-mbg-sppg-mei2026"
+              }
+            },
+            {
+              "horizon": "months",
+              "text": {
+                "en": "Daily purchases from smallholders, koperasi and neighbourhood vendors move with a unit's operations, and the supplier base is documented as a program-wide total only, never per unit and never per case.",
+                "id": "Pembelian harian dari petani kecil, koperasi, dan pedagang di sekitar bergerak mengikuti operasional sebuah unit, sedangkan basis pemasok hanya terdokumentasi sebagai total tingkat program, tidak pernah per unit dan tidak pernah per kasus."
+              },
+              "value": {
+                "amount": 142387,
+                "unit": "count",
+                "display": {
+                  "en": "142,387 suppliers",
+                  "id": "142.387 pemasok"
+                },
+                "source_id": "id-cnbc-mbg-workers-suppliers",
+                "as_of": "May 2026",
+                "flags": [
+                  "self_reported"
+                ]
+              },
+              "ev": {
+                "quote": "Program MBG Serap 1,28 Juta Tenaga Kerja, UMKM-Peternak Kecipratan",
+                "source_id": "id-cnbc-mbg-workers-suppliers"
+              }
+            },
+            {
+              "horizon": "beyond",
+              "text": {
+                "en": "Which units the counted cases trace back to, and what happened to those units afterwards, is published beside none of the three totals.",
+                "id": "Unit mana yang menjadi asal kasus-kasus yang terhitung, dan apa yang terjadi pada unit-unit itu setelahnya, tidak diumumkan berdampingan dengan satu pun dari tiga total itu."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "echo": null,
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Two steps here are carried by sources outside the story: a program serving 63.13 million recipients as of May 2026, and recipients, most of them schoolchildren, falling ill after eating its meals.",
+          "els": [
+            "panel-claim-map",
+            "s-program",
+            "s-poisoning",
+            "e-serve-poison"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "The step no source takes is the last one, from one agency's own running count to that count standing as the full national scale of the harm.",
+          "els": [
+            "s-count",
+            "s-scale",
+            "e-count-scale"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "By 1 October 2025 three ledgers stood at three different places: BGN, the agency running the program, at 6,517 people; BPOM, the food and drug regulator, at 9,089 people; and JPPI, a civil-society network, at 8,649 children through 27 September.",
+          "els": [
+            "panel-dueling",
+            "d-bgn",
+            "d-bpom",
+            "d-jppi",
+            "e-poison-count"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "None of the three publishes the rule that decides what enters it, the served base it accumulated on, or the school outbreak ledger that was already being kept before the program existed.",
+          "els": [
+            "h-count-method",
+            "h-denominator-served",
+            "h-baseline-klb"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Outside the totals stand the people who meet each case first: households arranging care the same day, and the puskesmas and district health offices whose investigations turn an incident into the KLB record the national argument is fought over.",
+          "els": [
+            "panel-incidence",
+            "i-households",
+            "i-frontline",
+            "h-first-payers",
+            "h-surveillance-ledger"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "29,679 SPPG kitchens were operating as of May 2026, inside a program that counts 1.28 million program workers at the same date, and a service unit cooked every counted meal, though which service units the counted cases trace back to is published beside none of the three totals.",
+          "els": [
+            "i-kitchens",
+            "h-kitchens"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Program Makan Bergizi Gratis berjalan dalam skala nasional, dengan 63,13 juta penerima per Mei 2026, dan langkah dari program itu ke penerima yang jatuh sakit ditopang sumber di luar artikelnya sendiri.",
+          "els": [
+            "panel-claim-map",
+            "s-program",
+            "s-poisoning",
+            "e-serve-poison"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Rantainya berhenti di langkah terakhir: tidak ada sumber dalam registri yang menyatakan hitungan berjalan sebuah badan adalah ukuran utuh skala keracunan secara nasional.",
+          "els": [
+            "panel-claim-map",
+            "s-count",
+            "s-scale",
+            "e-count-scale"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Titik tempat sumber-sumber itu berpisah adalah hitungannya: BGN mencatat 6.517 orang sejak Januari 2025, BPOM 9.089 orang per 1 Oktober 2025, dan JPPI 8.649 anak per 27 September 2025.",
+          "els": [
+            "panel-dueling",
+            "e-poison-count",
+            "d-bgn",
+            "d-bpom",
+            "d-jppi"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Ketiganya dibiarkan berdampingan tanpa dilebur, sebab tiap total lahir dari aturan hitung, jendela waktu, dan satuan yang berbeda, sementara definisi kasus di balik masing-masing angka tidak pernah diumumkan.",
+          "els": [
+            "panel-dueling",
+            "s-count",
+            "h-count-method"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Penyebutnya juga belum dibuka: berapa penerima dan porsi yang tersalurkan pada rentang bulan yang sama, dan seberapa sering keracunan pangan di lingkungan sekolah tercatat sebelum program ini ada.",
+          "els": [
+            "h-denominator-served",
+            "h-baseline-klb",
+            "s-scale"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Di luar bingkai berdiri keluarga yang mengurus perawatan pada hari yang sama, puskesmas dan dinas kesehatan yang membuka catatan KLB, dan 29.679 dapur SPPG yang beroperasi per Mei 2026 bersama kru serta pemasok lokal yang ikut berhenti ketika sebuah unit berhenti memasak.",
+          "els": [
+            "panel-incidence",
+            "i-households",
+            "i-frontline",
+            "i-kitchens",
+            "h-first-payers",
+            "h-surveillance-ledger",
+            "h-kitchens"
+          ]
+        }
+      ]
+    }
+  },
+  "manifest": {
+    "run_id": "run-2026-07-29",
+    "generated_at": "2026-07-28T21:52:08Z",
+    "steps": [
+      {
+        "role": "A5",
+        "model": "claude-fable-5",
+        "started_at": "2026-07-28T22:58:10Z",
+        "finished_at": "2026-07-29T00:22:06Z",
+        "input_hash": "5064d1ddf31f761b6ee21c5a458f982c8494236c9c8135319c6873f7bf61e708"
+      },
+      {
+        "role": "A6",
+        "model": "claude-fable-5",
+        "started_at": "2026-07-29T00:22:06Z",
+        "finished_at": "2026-07-29T00:22:06Z",
+        "input_hash": "11fc38c8686aa72c08e536612122e147f8284aef758a47452d5ff9cd8ea409de"
+      },
+      {
+        "role": "A7",
+        "model": "claude-opus-5[1m]",
+        "started_at": "2026-07-29T00:22:06Z",
+        "finished_at": "2026-07-29T00:22:06Z",
+        "input_hash": "dd7f44469d1b58db785e185d44d3991e0216ebafdcab0253a71790e7a6f2cd37"
+      },
+      {
+        "role": "A8",
+        "model": "claude-opus-5[1m]",
+        "started_at": "2026-07-29T00:22:06Z",
+        "finished_at": "2026-07-29T00:22:06Z",
+        "input_hash": "7f466f3fa00c0bc312b06d255fc5f5ceb292b6fe7b3a50258467aba1ebd49621"
+      },
+      {
+        "role": "A9",
+        "model": "claude-opus-5[1m]",
+        "started_at": "2026-07-29T00:22:07Z",
+        "finished_at": "2026-07-29T00:41:56Z",
+        "input_hash": "11315aa1b3112089ae4834f4db0ba53a19cccd25c6e6a01dcdc3cff536fc6f9f"
+      }
+    ],
+    "gates": {
+      "symmetry": {
+        "verdict": "pass",
+        "token": "8a5d85f60982d66ca8c951963bc206539e8f88c61cf64d3002afc32a621fec67"
+      },
+      "fidelity": {
+        "verdict": "pass",
+        "token": "8a5d85f60982d66ca8c951963bc206539e8f88c61cf64d3002afc32a621fec67"
+      }
+    }
+  }
+}

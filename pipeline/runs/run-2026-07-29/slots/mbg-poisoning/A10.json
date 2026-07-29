@@ -1,0 +1,14 @@
+{
+  "verdict": "pass",
+  "reasons": [
+    "Integrity verified: embedded candidate in A10.input.json serializes to sha256 dd38e9c29d71964091a4c17b47f6235821d96bab7750deda4a431854607c725b and is byte-identical to the staged candidate.json.",
+    "Mirror constructed (lean opp flipped to gov: same event, same six registry sources, framing '6,517 against 63.13M served shows contained harm'). Edge statuses hold both ways: e-serve-poison supported on the same evidence; e-poison-count disputed identically (three co-equal ledgers, rule line forbids picking among them); the mirror's terminal safety-rate edge would be missing on the same rule as e-count-scale, and the candidate pre-blocks that gov-favorable rate itself (h-denominator-served; sparring denominator note: May 2026 base vs Sep/Oct 2025 counts, kitchens are places not portions).",
+    "Hidden-branch rigor is two-sided with no sharp count gap: h-denominator-served, h-baseline-klb, h-count-method and h-surveillance-ledger cut against the artifact's own opp framing; the gov mirror's branches are equally present via d-bgn's counter-equals-counted method line plus self_reported flag on 6,517, the two higher counts standing co-equal in panel-dueling, and h-first-payers/i-households/i-frontline carrying the downstream harm.",
+    "Temperature symmetric and C1 clean: lexicon scan of all EN and ID copy found no verdict words (no true/false/hoax/hoaks/bohong/palsu/salah-as-verdict etc.), no claims-vs-says split (uniform announces/stated/compiled; mengumumkan/disampaikan/dihimpun), and each of the three counts carries exactly one limitation of comparable weight (BGN self-counting; BPOM event-first unit; JPPI own tally, narrower population).",
+    "Depth and burden symmetric: panel-dueling gives BGN, BPOM and JPPI identical structure (method, period, value, as_of, source_id); sparring Q1/Q2 place the missing-method and missing-denominator burden on all three publishers; prediction tap options span anti-opp probes (served base, baseline), anti-gov probes (first payers, kitchen stoppage) and neutral (counting rule).",
+    "C8 style clean: no em dashes and no emoji anywhere in user-facing copy.",
+    "Round-1 adjacency holds under symmetry: EN v-6 and ID v-6 carry as_of May 2026 on the kitchen and worker figures and state the service-unit fact generically, so no rate or causal join is minted from dated figures in either lean's favor."
+  ],
+  "model": "claude-fable-5",
+  "token": "8a5d85f60982d66ca8c951963bc206539e8f88c61cf64d3002afc32a621fec67"
+}
