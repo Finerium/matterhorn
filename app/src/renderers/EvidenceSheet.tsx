@@ -48,13 +48,20 @@ export const panelSheet = (ctx: RenderCtx, title: string, body: string[], source
  * `data-el`, focus, and the tap that opens the sheet, in one spread. `role` drops to "group" for
  * panel frames: a frame contains its own tappable rows, and interactive content nested inside
  * role="button" is unreachable in some assistive technology.
+ *
+ * `open` is null in a still context (`RenderCtx.still`), and then the element keeps its identity
+ * and loses its affordance: `data-el` still names it for a highlight or a test, and there is no
+ * tab stop, no announced role and no handler. One guard here rather than a decision per renderer,
+ * because every addressable element in the layer arrives through this function.
  */
 export function elProps(
   elId: string,
-  open: (payload: SheetPayload) => void,
+  open: ((payload: SheetPayload) => void) | null,
   payload: () => SheetPayload,
   role: 'button' | 'group' = 'button',
 ) {
+  if (open === null) return { 'data-el': elId };
+
   const fire = (event: MouseEvent | KeyboardEvent) => {
     event.stopPropagation();
     open(payload());
@@ -72,9 +79,13 @@ export function elProps(
   };
 }
 
-/** One sheet per component instance. Returns the opener and the element to render. */
+/**
+ * One sheet per component instance. Returns the opener and the element to render, and returns no
+ * opener at all in a still context, which is what makes `elProps` draw an element rather than a
+ * control. The hooks above it run either way: still is a property of one render, not a build flag.
+ */
 export function useEvidenceSheet(ctx: RenderCtx): {
-  open: (payload: SheetPayload) => void;
+  open: ((payload: SheetPayload) => void) | null;
   sheet: ReactNode;
 } {
   const [payload, setPayload] = useState<SheetPayload | null>(null);
@@ -85,7 +96,7 @@ export function useEvidenceSheet(ctx: RenderCtx): {
     setPayload(null);
   }, []);
   return {
-    open,
+    open: ctx.still === true ? null : open,
     sheet: payload === null ? null : <EvidenceSheet payload={payload} ctx={ctx} onClose={close} />,
   };
 }

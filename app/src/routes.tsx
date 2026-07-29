@@ -3,7 +3,7 @@
  * the "returns nothing" sense: each one does the smallest true version of its job, so the shape
  * of the surface that replaces it is already fixed.
  *
- *   /            plain placeholder that links `/app`. The landing is Gate 4.
+ *   /            the landing, blueprint 4.4.
  *   /app         the shell. All internal navigation is client state, per 6.7.
  *   /n/:id       permalink: the shell, mounted straight onto the autopsy for that narrative.
  *   /methodology the published methodology, the same body the in-app screen draws.
@@ -14,17 +14,29 @@
  *
  * Three of these mount `App`, which is the point: `/n/:id` and `/share` are entry points into
  * the product, not thinner copies of it, and `/methodology` shares its body with the screen.
+ *
+ * The two big surfaces are the two lazy imports, and they are lazy in both directions: AC-PERF-1
+ * budgets each route's initial JS on its own, so `/app` must not carry the landing's renderer
+ * mounts and set pieces, and `/` must not carry seven app screens to show a page nobody has
+ * navigated into yet. Everything else here is small and stays in the entry.
  */
-import { useState, type ReactNode } from 'react';
+import { Suspense, lazy, useState, type ReactNode } from 'react';
 import { Link, Route, Routes, useParams, useSearchParams } from 'react-router';
 import type { Lang } from '../../contracts/types';
 import { LangContext, useT } from './i18n';
 import { useUrlIndex } from './content';
 import { LS, readStore, type AppState } from './app/state';
-import App from './app/App';
 import Boundary from './app/Boundary';
 import MethodologyBody from './app/Methodology';
 import { resolveUrl, shareCandidate } from './app/resolve';
+
+const App = lazy(() => import('./app/App'));
+const Landing = lazy(() => import('./landing/Landing'));
+const Research = lazy(() => import('./research/Research'));
+// 4.3: at 768px and up `/app` renders inside the ported iPhone frame. Only `/app`: a permalink
+// and a share both mount `App` bare, because item 19 gives those the wide autopsy layout rather
+// than the phone, and framing a shared link would put chrome around someone else's question.
+const FramedApp = lazy(() => import('./app/Frame'));
 
 /** Routes outside `/app` have no app state, so the language is read straight from storage. */
 const storedLang = (): Lang => (readStore(LS.lang) === 'id' ? 'id' : 'en');
@@ -45,18 +57,6 @@ function Status({ loading, error }: { loading: boolean; error: string | null }) 
   const t = useT();
   if (error !== null) return <div className="m-page-body">{t('common.failed', { detail: error })}</div>;
   return loading ? <div className="m-page-body">{t('common.loading')}</div> : null;
-}
-
-function Home() {
-  const t = useT();
-  return (
-    <Page title="Matterhorn">
-      <div className="m-page-body">{t('hello.sub')}</div>
-      <Link className="m-page-link" to="/app">
-        {t('route.home.link')}
-      </Link>
-    </Page>
-  );
 }
 
 /**
@@ -196,15 +196,20 @@ export default function AppRoutes() {
     <LangContext.Provider value={storedLang()}>
       {/* AC-APP-23. Outside the provider there would be no bundle to speak the fallback in. */}
       <Boundary>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/app" element={<App />} />
-          <Route path="/n/:id" element={<Permalink />} />
-          <Route path="/methodology" element={<MethodologyPage />} />
-          <Route path="/share" element={<Share />} />
-          <Route path="/offline" element={<Offline />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        {/* Nothing, rather than a spinner: the two lazy routes are a same-origin chunk away and a
+            flash of chrome that exists to be replaced is worse than one that never appeared. */}
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/app" element={<FramedApp />} />
+            <Route path="/n/:id" element={<Permalink />} />
+            <Route path="/research" element={<Research />} />
+            <Route path="/methodology" element={<MethodologyPage />} />
+            <Route path="/share" element={<Share />} />
+            <Route path="/offline" element={<Offline />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </Boundary>
     </LangContext.Provider>
   );

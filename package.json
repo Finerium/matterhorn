@@ -22,7 +22,9 @@
     "icons": "node scripts/gen-icons.mjs",
     "validate:content": "tsx scripts/validate-content.ts --scan-app app/src",
     "test:pipeline": "vitest run --config tests/pipeline/vitest.config.ts",
-    "build:content-review": "tsx scripts/build-content-review.ts"
+    "build:content-review": "tsx scripts/build-content-review.ts",
+    "build:seo": "tsx scripts/build-seo.ts",
+    "check:landing-copy": "tsx scripts/check-landing-copy.ts"
   },
   "dependencies": {
     "html-to-image": "1.11.13",

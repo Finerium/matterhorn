@@ -479,45 +479,59 @@ export default function Autopsy({ state, nav }: { state: AppState; nav: Nav }) {
               </div>
             )}
 
-            <div className="m-panel">
-              <div className="m-panel-title">{t('autopsy.voice')}</div>
-              <Narration
-                narrative={n}
-                ctx={ctx}
-                activeId={state.sent}
-                onSelect={(id) => {
-                  nav.patch({ sent: state.sent === id ? null : id, hlStatus: null });
-                }}
-              />
+            {/*
+              Blueprint 4.3 and surface 19: one body, two layouts. Narrow, all three wrappers are
+              `display: contents` and this is the stack the zip has always drawn; at 1024px of app
+              width the narration rail sits beside the panels instead of above them
+              (app/src/app/wide.css). Same component, same DOM order, same bindings, so a sentence
+              tapped in the rail paints `data-hl` on the panels beside it exactly as it does on the
+              panels below it, and a permalink at desktop width gets the wide layout for free.
+            */}
+            <div className="m-abody">
+              <div className="m-arail">
+                <div className="m-panel">
+                  <div className="m-panel-title">{t('autopsy.voice')}</div>
+                  <Narration
+                    narrative={n}
+                    ctx={ctx}
+                    activeId={state.sent}
+                    onSelect={(id) => {
+                      nav.patch({ sent: state.sent === id ? null : id, hlStatus: null });
+                    }}
+                  />
+                </div>
+              </div>
+
+              <div className="m-apanels">
+                {n.panels.map((panel) => (
+                  <PanelView
+                    key={panel.el_id}
+                    panel={panel}
+                    narrative={n}
+                    ctx={ctx}
+                    stopped={state.moneyStopped}
+                    onToggle={() => {
+                      nav.patch({ moneyStopped: !state.moneyStopped });
+                    }}
+                  />
+                ))}
+                {n.panels.some((panel) => panel.type === 'echo') ? null : (
+                  <Boundary>
+                    <Echo panel={n.echo} ctx={ctx} />
+                  </Boundary>
+                )}
+
+                <button
+                  type="button"
+                  className="m-explore"
+                  onClick={() => {
+                    nav.openSheet('explore');
+                  }}
+                >
+                  {t('autopsy.explore')}
+                </button>
+              </div>
             </div>
-
-            {n.panels.map((panel) => (
-              <PanelView
-                key={panel.el_id}
-                panel={panel}
-                narrative={n}
-                ctx={ctx}
-                stopped={state.moneyStopped}
-                onToggle={() => {
-                  nav.patch({ moneyStopped: !state.moneyStopped });
-                }}
-              />
-            ))}
-            {n.panels.some((panel) => panel.type === 'echo') ? null : (
-              <Boundary>
-                <Echo panel={n.echo} ctx={ctx} />
-              </Boundary>
-            )}
-
-            <button
-              type="button"
-              className="m-explore"
-              onClick={() => {
-                nav.openSheet('explore');
-              }}
-            >
-              {t('autopsy.explore')}
-            </button>
           </>
         )}
       </div>
@@ -607,11 +621,17 @@ export default function Autopsy({ state, nav }: { state: AppState; nav: Nav }) {
             judging was missing from it was the overclaim this replaces.
           */}
           <div className="m-chain">
-            {(['symmetry', 'fidelity'] as const).map((gate) => (
+            {/* Keys written out, never interpolated: `pnpm i18n:scan` reads the source
+                statically, and a key it cannot see is a key it reports as unused and cannot
+                prove is translated. */}
+            {([
+              { gate: 'symmetry', role: 'A10', label: 'autopsy.chain.gate.symmetry' },
+              { gate: 'fidelity', role: 'A11', label: 'autopsy.chain.gate.fidelity' },
+            ] as const).map(({ gate, role, label }) => (
               <div key={gate} className="m-chain-row">
-                <span className="m-chain-i">{gate === 'symmetry' ? 'A10' : 'A11'}</span>
+                <span className="m-chain-i">{role}</span>
                 <span className="m-chain-main">
-                  <span className="m-chain-step">{t(`autopsy.chain.gate.${gate}`)}</span>
+                  <span className="m-chain-step">{t(label)}</span>
                   <span className="m-chain-who">
                     {n.manifest.gates[gate].verdict} · {n.manifest.gates[gate].token.slice(0, 12)}
                   </span>

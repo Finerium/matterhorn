@@ -1,0 +1,174 @@
+/* The wide viewport, blueprint 4.3: the two things `/app` and the autopsy owe a desktop.
+
+   Surface 20, the frame. At 768px and above `/app` renders inside the iPhone frame ported from
+   the zip's ios-frame.jsx (402 x 874 logical, r48, the island, the home indicator, the same
+   shadow pair), centred on the paper with a caption row beneath it. Below 768px Frame.tsx does
+   not render any of it, so the box tree is the one the installable PWA has always had and there
+   is nothing there to regress.
+
+   Surface 19, the autopsy. At 1024px of app width the narration sits beside the panel stack
+   rather than above it. The switch is a container query rather than a media query because at a
+   1280px viewport `/app` puts the autopsy inside a 402px frame: what decides the layout is the
+   width of the app, which is the frame's width when there is a frame and the viewport's when
+   there is not. One rule, both cases, no JS measuring anything.
+
+   No hue is introduced. The frame's black island, its shadows and its home indicator are
+   ios-frame.jsx's own values: device detailing rather than product colour, which is why they sit
+   here and not in tokens.css. */
+
+/* --- the app is the container ----------------------------------------------------------- */
+
+/* Two jobs, two declarations that have to travel together.
+
+   `container-type` makes the app the container the autopsy measures itself against, below.
+
+   `contain: layout` makes the app the containing block for its own `position: fixed`
+   descendants, which is what keeps the scrim and every sheet inside the frame instead of over
+   the desktop behind it. It is stated separately because `container-type: inline-size` alone
+   does not capture them: Chromium reports `contain: none` for a container and lets a fixed
+   descendant escape to the viewport, which is a sheet covering the whole window.
+
+   Full bleed, `.m-app` is the viewport, so neither declaration shows. */
+.m-app {
+  container-type: inline-size;
+  contain: layout;
+}
+
+/* --- surface 20: the frame -------------------------------------------------------------- */
+
+/* Below 768px Frame.tsx renders none of these, so this is the belt for the one case CSS sees
+   them narrow anyway: the frames between a resize crossing the breakpoint and React re-rendering.
+   No box, no chrome, no extra tab stop, `.m-app` keeps `position: fixed`, full bleed. */
+.m-stage,
+.m-stage-in,
+.m-frame { display: contents; }
+.m-caption { display: none; }
+
+@media (min-width: 768px) {
+  /* The stage scrolls, not the document. The frame is 874px tall and a laptop viewport is often
+     shorter, and `margin: auto` on a flex child centres what fits while leaving what does not
+     reachable in both directions, which `align-items: center` does not. */
+  .m-stage {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    overflow: auto;
+    padding: 28px 16px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  }
+  .m-stage-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: auto;
+  }
+
+  .m-frame {
+    display: block;
+    position: relative;
+    flex: none;
+    width: 402px;
+    height: 874px;
+    border-radius: 48px;
+    overflow: hidden;
+    background: var(--paper);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.12);
+  }
+  /* The one thing the frame changes about the app: it stops being the viewport. */
+  .m-frame .m-app { position: absolute; }
+
+  /* The island and the home indicator are pseudo-elements on purpose. Chrome that cannot be
+     focused, cannot be read out and cannot be hit is chrome a keyboard or screen-reader reader
+     ignores by construction, rather than by an `aria-hidden` a later edit can drop. The zip
+     sets `pointerEvents: none` on the indicator for the same reason: it lies over the tab bar. */
+  .m-frame::before {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 126px;
+    height: 37px;
+    border-radius: 24px;
+    background: #000;
+    z-index: 50;
+    pointer-events: none;
+  }
+  .m-frame::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 139px;
+    height: 5px;
+    border-radius: 100px;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 60;
+    pointer-events: none;
+  }
+  [data-mth='dark'] .m-frame::after { background: rgba(255, 255, 255, 0.7); }
+
+  .m-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    max-width: 402px;
+    text-align: center;
+  }
+  .m-caption-text { font-size: 12.5px; line-height: 1.55; color: var(--sub); text-wrap: pretty; }
+  .m-caption-link {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--ink);
+    border-bottom: 1px solid var(--hair2);
+  }
+  .m-caption-note { font-size: 12.5px; }
+  .m-caption-sum { font-weight: 600; color: var(--ink); cursor: pointer; }
+  .m-caption-note .m-caption-text { display: block; margin-top: 6px; }
+}
+
+/* --- surface 19: the autopsy beside its narration ---------------------------------------- */
+
+/* Narrow, the three wrappers are not there: the voice panel, the panel stack and the explore
+   button are the direct children of the scroller they have always been, in the zip's order. */
+.m-abody,
+.m-arail,
+.m-apanels { display: contents; }
+
+@container (min-width: 1024px) {
+  /* The scroller keeps the full width so its scrollbar stays at the edge of the window; what
+     gets centred and capped is the content inside it. */
+  .m-ascroll { padding-inline: max(16px, calc((100% - 1120px) / 2)); }
+
+  .m-abody {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+  }
+  /* The rail is first in the DOM and first on screen, so the order a keyboard and a screen
+     reader take is the order the eye takes. It follows the panels while they scroll, because a
+     sentence selected in it highlights elements further down the stack than the sentence, and
+     `top` clears the frosted bar the scroller runs under.
+     ponytail: the max-height is in vh, which is exact because the wide layout only ever runs
+     when `.m-app` is the viewport (inside the frame the container is 402px and this block never
+     matches). Swap in cqh if `.m-app` ever gets `container-type: size`. */
+  .m-arail {
+    display: block;
+    flex: 0 0 clamp(280px, 30%, 360px);
+    position: sticky;
+    top: 104px;
+    max-height: calc(100vh - 244px);
+    overflow: auto;
+  }
+  .m-apanels {
+    display: block;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}

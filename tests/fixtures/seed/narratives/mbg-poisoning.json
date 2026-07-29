@@ -378,7 +378,7 @@
           },
           "value": {
             "amount": 9089,
-            "unit": "count",
+            "unit": "people",
             "display": {
               "en": "9,089 cases",
               "id": "9.089 kasus"
@@ -568,11 +568,11 @@
     "gates": {
       "symmetry": {
         "verdict": "pass",
-        "token": "e84ba4eb0589879af28695499b55a46964ded888cbeabcc41e3e7fba1599d9aa"
+        "token": "7611eab1165ae1a0ba2dfdf1972be99638eba1591afa8a84a358ee3ff802b24e"
       },
       "fidelity": {
         "verdict": "pass",
-        "token": "e84ba4eb0589879af28695499b55a46964ded888cbeabcc41e3e7fba1599d9aa"
+        "token": "7611eab1165ae1a0ba2dfdf1972be99638eba1591afa8a84a358ee3ff802b24e"
       }
     }
   }

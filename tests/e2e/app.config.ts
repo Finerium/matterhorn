@@ -30,7 +30,8 @@ const BASE_URL = `http://127.0.0.1:${PORT}`;
 
 export default defineConfig({
   testDir: '.',
-  testMatch: ['matrix.spec.ts', 'flows.spec.ts'],
+  // wide.spec.ts is the same app at desktop width; it sets its own viewport per block.
+  testMatch: ['matrix.spec.ts', 'flows.spec.ts', 'wide.spec.ts'],
   // Separate from the Gate 2 root so a state screenshot and a panel screenshot never collide.
   snapshotDir: './__screenshots__/app',
   snapshotPathTemplate: '{snapshotDir}/{projectName}/{arg}-{platform}{ext}',

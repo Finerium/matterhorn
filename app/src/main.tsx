@@ -6,6 +6,7 @@ import { LS, readStore } from './app/state';
 import './tokens.css';
 import './renderers/renderers.css';
 import './shell.css';
+import './app/wide.css';
 
 /**
  * The entry. Three jobs: mount the router, apply the remembered theme before first paint, and

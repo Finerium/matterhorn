@@ -1,0 +1,425 @@
+/* Matterhorn research mode: the desktop surface at /research.
+
+   The zip has no desktop screens, so nothing here is a port. What is carried over instead is its
+   vocabulary: the same tokens, the same radii and hairlines, the same chip and bar components
+   (.m-fchip, .m-symbar, .m-card-chip all come from shell.css and renderers.css and are reused
+   unchanged), the same type ramp. No hue is introduced, and the status hues keep their meanings:
+   nothing on this page borrows orange or red to mean "note".
+
+   Blueprint 4.3 fixes the two breakpoints, and both are CSS only, so the surface never measures
+   its own width in JavaScript:
+     1024 and up   the table in one column, the constellation and the rail beside it in the other
+     768 to 1024   one column in source order, constellation above the table
+     under 768     the redirect card, until the reader presses continue anyway */
+
+/* --- the surface frame ------------------------------------------------------------------ */
+
+.m-rs {
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  padding: 34px 22px 72px;
+}
+.m-rs-main {
+  max-width: 1560px;
+  margin: 0 auto;
+}
+.m-rs-head {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  align-items: flex-start;
+}
+.m-rs-title {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  text-wrap: pretty;
+}
+.m-rs-body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--body);
+  max-width: 74ch;
+  text-wrap: pretty;
+}
+.m-rs-note {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--sub);
+  margin-top: 14px;
+  text-wrap: pretty;
+}
+.m-rs :focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* --- under 768: the redirect card ------------------------------------------------------- */
+
+/* It is a real page, not a shrug: it says what this surface is, why a narrow screen is the wrong
+   room for it, what the reader should open instead, and that continuing is allowed. */
+.m-rs-narrow {
+  display: none;
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 40px 0 0;
+}
+.m-rs-narrow-title {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-wrap: pretty;
+}
+.m-rs-narrow-body {
+  font-size: 15px;
+  line-height: 1.62;
+  color: var(--body);
+  margin-top: 12px;
+  text-wrap: pretty;
+}
+.m-rs-narrow-cta {
+  margin-top: 24px;
+  text-decoration: none;
+}
+.m-rs-anyway {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 14px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--hair2);
+  padding: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+.m-rs-narrow-foot {
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--sub);
+  margin-top: 18px;
+  text-wrap: pretty;
+}
+
+@media (max-width: 767.98px) {
+  .m-rs[data-anyway='0'] .m-rs-narrow { display: block; }
+  .m-rs[data-anyway='0'] .m-rs-main { display: none; }
+}
+
+/* --- the three regions ------------------------------------------------------------------ */
+
+.m-rs-grid {
+  display: grid;
+  gap: 22px;
+  margin-top: 26px;
+}
+
+@media (min-width: 1024px) {
+  .m-rs-grid {
+    grid-template-columns: minmax(0, 1.6fr) minmax(320px, 1fr);
+    grid-template-areas:
+      'filters filters'
+      'table graph'
+      'table rail';
+    grid-template-rows: auto auto 1fr;
+    align-items: start;
+    column-gap: 26px;
+  }
+  .m-rs-filters { grid-area: filters; }
+  .m-rs-graph { grid-area: graph; }
+  .m-rs-rail { grid-area: rail; }
+  .m-rs-table { grid-area: table; }
+}
+
+/* --- filters ---------------------------------------------------------------------------- */
+
+.m-rf {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px 14px;
+}
+.m-rf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.m-rf-wide { flex: 1 1 260px; }
+.m-rf-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--sub);
+}
+.m-rf-in {
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--hair2);
+  border-radius: 10px;
+  padding: 9px 11px;
+  min-height: 40px;
+}
+.m-rf-clear {
+  min-height: 40px;
+  padding: 0 15px;
+}
+.m-rf-clear:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.m-rf-tag {
+  margin-top: 11px;
+  background: var(--acc);
+  color: var(--accInk);
+  min-height: 30px;
+}
+.m-rf-count {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--sub);
+  margin-top: 13px;
+}
+/* The honesty line under the filters. Grey, not amber and not orange: a field a filter could not
+   read is a note about the filter, not a status on the narrative. */
+.m-rf-note {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--body);
+  margin-top: 6px;
+  max-width: 82ch;
+  text-wrap: pretty;
+}
+
+/* --- the constellation ------------------------------------------------------------------ */
+
+.m-rc {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+/* aspect-ratio matches the viewBox exactly, which is what lets the pointer maths be one scalar
+   (user units per CSS pixel) instead of a letterboxing calculation. */
+.m-rc-box {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: var(--surface);
+  border: 1px solid var(--hair);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+.m-rc-box:active { cursor: grabbing; }
+.m-rc-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.m-rc-links line {
+  stroke: var(--hair2);
+  stroke-width: 1;
+}
+.m-rc-links line[data-on='0'] { stroke: var(--hair); }
+.m-rc-nodes circle {
+  fill: var(--ink);
+  cursor: pointer;
+}
+.m-rc-nodes circle[data-on='0'] { fill: var(--hair2); }
+.m-rc-labels text {
+  font-size: 2.9px;
+  font-weight: 600;
+  fill: var(--sub);
+  pointer-events: none;
+}
+.m-rc-labels text[data-on='0'] { fill: var(--hair2); }
+.m-rc-sel-links line {
+  stroke: var(--uns);
+  stroke-width: 1.6;
+}
+.m-rc-ring {
+  fill: none;
+  stroke: var(--uns);
+  stroke-width: 1.6;
+}
+.m-rc-tools {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.m-rc-tool {
+  width: 34px;
+  height: 34px;
+  background: var(--fill);
+  border: none;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--body);
+  cursor: pointer;
+}
+.m-rc-tool-w {
+  width: auto;
+  padding: 0 15px;
+  font-size: 12px;
+}
+.m-rs-cap {
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: var(--sub);
+  text-wrap: pretty;
+}
+.m-rs-gap { color: var(--body); }
+
+/* --- the detail rail -------------------------------------------------------------------- */
+
+.m-rs-rail {
+  align-self: start;
+  background: var(--surface);
+  border: 1px solid var(--hair);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+.m-rr-kicker {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sub);
+}
+.m-rr-head {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 7px;
+  text-wrap: pretty;
+}
+.m-rr-meta {
+  font-size: 12px;
+  color: var(--sub);
+  margin: 7px 0 11px;
+}
+.m-rr-block {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--hair);
+}
+.m-rr-h {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--sub);
+}
+.m-rr-figure {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 7px;
+}
+.m-rr-line {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--body);
+  margin-top: 5px;
+  text-wrap: pretty;
+}
+.m-rr-perma {
+  display: inline-block;
+  margin-top: 7px;
+  font-size: 12.5px;
+  color: var(--ink);
+  border-bottom: 1px solid var(--hair2);
+  word-break: break-all;
+}
+.m-rr-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 9px;
+}
+/* The panel the Echo renderer draws sits inside the rail's own card, so it drops its shadow. */
+.m-rs-rail .m-panel {
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+/* --- the archive table ------------------------------------------------------------------ */
+
+.m-rt-scroll {
+  overflow-x: auto;
+  background: var(--surface);
+  border: 1px solid var(--hair);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+/* Fixed layout, so a long headline wraps instead of pushing the table wider than its column and
+   under the constellation beside it. The percentages are the column widths. */
+.m-rt {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+.m-rt thead th:nth-child(1) { width: 30%; }
+.m-rt thead th:nth-child(2) { width: 14%; }
+.m-rt thead th:nth-child(3) { width: 12%; }
+.m-rt thead th:nth-child(4) { width: 11%; }
+.m-rt thead th:nth-child(5) { width: 13%; }
+.m-rt thead th:nth-child(6) { width: 20%; }
+.m-rt th,
+.m-rt td {
+  text-align: left;
+  vertical-align: top;
+  padding: 11px 12px;
+  border-bottom: 1px solid var(--hair);
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+.m-rt tbody tr {
+  cursor: pointer;
+}
+.m-rt tbody tr:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: -2px;
+}
+.m-rt thead th {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sub);
+  white-space: nowrap;
+}
+.m-rt tbody tr[data-sel='1'] { background: var(--fill); }
+.m-rt tbody tr:last-child th,
+.m-rt tbody tr:last-child td { border-bottom: none; }
+.m-rt td { color: var(--body); }
+.m-rt-open {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+.m-rt-flag {
+  display: block;
+  margin-top: 5px;
+  font-size: 10.5px;
+  color: var(--sub);
+}
+/* The count chips are the renderers' own component; in a table cell they stack one per line. */
+.m-rt .m-card-chips-c {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}

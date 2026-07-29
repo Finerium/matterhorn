@@ -70,15 +70,26 @@ export class UnitMismatchError extends Error {
 export interface RenderCtx {
   lang: Lang;
   theme: Theme;
+  /**
+   * Still mode: blueprint 4.4.6's "miniature, non-interactive". The component draws exactly what
+   * it always draws and offers nothing to press: no tab stop, no role, no evidence sheet. It is a
+   * property of the context rather than a prop, because the refusal has to reach every element a
+   * renderer marks addressable, and those all go through one helper (`elProps`) already.
+   *
+   * The landing is what needs it. A set piece is a picture of the product, and a picture that
+   * takes forty tab stops, announces forty buttons and opens a modal over the page is not one.
+   */
+  still?: boolean;
   /** The registry entry for `id`, or `OrphanNumberError`. */
   resolveSource(id: SourceId): Source;
 }
 
-export function makeCtx(sources: Source[], lang: Lang, theme: Theme): RenderCtx {
+export function makeCtx(sources: Source[], lang: Lang, theme: Theme, still = false): RenderCtx {
   const byId = new Map(sources.map((s) => [s.id, s]));
   return {
     lang,
     theme,
+    still,
     resolveSource(id: SourceId): Source {
       const found = byId.get(id);
       if (found === undefined) throw new OrphanNumberError(id);

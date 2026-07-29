@@ -5,6 +5,15 @@
 
    Class prefix `m-` matches renderers.css; no name in this file collides with one in that. */
 
+/* --- the document ---------------------------------------------------------------------- */
+
+/* The UA's 8px body margin. `/app` never showed it, because `.m-app` is `position: fixed; inset: 0`
+   and a fixed box does not care; every route that flows in the document did, as an 8px gutter of
+   nothing around the paper. Zeroed here, in the stylesheet every route loads, rather than in the
+   landing's own: a rule that changes the document from inside one route's sheet makes the other
+   routes look different depending on where the reader came from. */
+body { margin: 0; }
+
 /* --- the zip's shell keyframes, the ones renderers.css did not need -------------------- */
 
 @keyframes mgreet {
