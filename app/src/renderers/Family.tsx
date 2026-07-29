@@ -27,7 +27,7 @@ export default function Family({ narrative, ctx }: { narrative: Narrative; ctx: 
     panel === undefined ? {} : elProps(panel.el_id, open, () => panelSheet(ctx, title, body, sources), 'group');
 
   return (
-    <section className="m-panel" {...frame}>
+    <section className="m-panel" data-panel="family" {...frame}>
       <div className="m-panel-title">{title}</div>
       <div className="m-fam-note">{narrative.family.skeleton}</div>
       <div className="m-fam-list">

@@ -48,12 +48,17 @@ const esc = (text: string): string =>
  * it states three counts and points at the structure, and there is no branch in it that could
  * ever say anything else.
  */
+function descriptionFor(narrative: Narrative): string {
+  const { missing, unsourced, hidden } = narrative.counts;
+  return (
+    `${String(missing)} missing links · ${String(unsourced)} unsourced assumptions · ` +
+    `${String(hidden)} hidden stakeholders. No verdicts. See the structure.`
+  );
+}
+
 export function permalinkHead(narrative: Narrative): string {
   const title = `${headlineFor(narrative)} · Matterhorn`;
-  const { missing, unsourced, hidden } = narrative.counts;
-  const description =
-    `${String(missing)} missing links · ${String(unsourced)} unsourced assumptions · ` +
-    `${String(hidden)} hidden stakeholders. No verdicts. See the structure.`;
+  const description = descriptionFor(narrative);
   const image = `${SITE_URL}${narrative.og.image_path ?? DEFAULT_OG}`;
   const tags: Array<[string, string]> = [
     ['og:title', title],
@@ -70,9 +75,18 @@ export function permalinkHead(narrative: Narrative): string {
  * hashed filenames and all, on every build and in dev.
  */
 export function permalinkShell(indexHtml: string, narrative: Narrative): string {
-  return indexHtml
-    .replace(/<title>[^<]*<\/title>/i, `<title>${esc(`${headlineFor(narrative)} · Matterhorn`)}</title>`)
-    .replace('</head>', `\n${permalinkHead(narrative)}  </head>`);
+  return (
+    indexHtml
+      .replace(/<title>[^<]*<\/title>/i, `<title>${esc(`${headlineFor(narrative)} · Matterhorn`)}</title>`)
+      // The shell inherits app/index.html's landing description, which is the wrong summary for
+      // a permalink. Swapping it for the same counts line og:description carries keeps one
+      // description per document and keeps it verdict-free.
+      .replace(
+        /<meta\s+name="description"[\s\S]*?\/>/i,
+        `<meta name="description" content="${esc(descriptionFor(narrative))}" />`,
+      )
+      .replace('</head>', `\n${permalinkHead(narrative)}  </head>`)
+  );
 }
 
 /** Every narrative in a content root, in id order. Absent root, absent directory: no narratives. */

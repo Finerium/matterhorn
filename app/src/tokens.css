@@ -1,5 +1,22 @@
 /* Matterhorn design tokens. Extracted verbatim from the design zip (Matterhorn.dc.html
    lines 15-16): the .mth custom-property blocks, light and dark, every variable, unrenamed.
-   Do not add hues here. New color needs a design decision, not a new line in this file. */
-.mth{--paper:#F2F1EC;--surface:#FFFFFF;--ink:#1C1B17;--sub:#77736A;--body:#3E3B33;--hair:#ECEAE3;--hair2:#DDDAD1;--ph:#E9E7E0;--acc:#1C1B17;--accInk:#FFFFFF;--fill:rgba(28,27,23,.06);--frost:rgba(245,244,239,.85);--hairA:rgba(28,27,23,.1);--sup:#2A5B9E;--dis:#C2701E;--mis:#C23A32;--uns:#8A4A7C;--unsbg:rgba(138,74,124,.07);--unsbd:rgba(138,74,124,.30);--tint:rgba(42,91,158,.11);--misbg:rgba(194,58,50,.06);--misbd:rgba(194,58,50,.35);--amber:#A87B1E;--ambbg:rgba(168,123,30,.10);--shadow:0 1px 2px rgba(28,27,23,.03),0 10px 28px rgba(28,27,23,.06)}
-.mth[data-mth="dark"]{--paper:#0D0D0C;--surface:#1C1C1A;--ink:#F4F2EC;--sub:#98948A;--body:#CFCCC2;--hair:#2A2A27;--hair2:#3A3935;--ph:#232321;--acc:#F4F2EC;--accInk:#141412;--fill:rgba(244,242,236,.09);--frost:rgba(15,15,14,.8);--hairA:rgba(244,242,236,.12);--sup:#7FA8DC;--dis:#DFA05C;--mis:#E07A70;--uns:#C08CB4;--unsbg:rgba(192,140,180,.10);--unsbd:rgba(192,140,180,.34);--tint:rgba(127,168,220,.15);--misbg:rgba(224,122,112,.09);--misbd:rgba(224,122,112,.4);--amber:#D9A84E;--ambbg:rgba(217,168,78,.13);--shadow:0 1px 2px rgba(0,0,0,.2),0 10px 28px rgba(0,0,0,.25)}
+   Do not add hues here. New color needs a design decision, not a new line in this file.
+
+   THREE documented deviations from the zip, all of them contrast, all measured by axe.
+
+   Light `--sub` shipped as #77736A, which is 4.18:1 on --paper and 3.82:1 on --ph: below the
+   4.5:1 WCAG AA floor, and axe flagged it as serious on every surface at once (20 nodes on the
+   landing, 2 on /app, 1 on /research), because it is the secondary-text token the whole product
+   shares. #646057 is the same hue at 5.54:1 on --paper, 6.26:1 on --surface, 5.06:1 on --ph and
+   4.65:1 on --fill over --paper, which is the evidence-sheet pill and the tightest of the four.
+
+   Dark `--sub` fails the same way one background further in: #98948A is 6.42 / 5.64 / 5.20 on
+   --paper, --surface and --ph, but 4.43:1 on --fill over --surface, which is every chip and
+   translate affordance on a card. #A09C92 is 4.90 there and 5.7 or better everywhere else.
+
+   Light `--dis` shipped at #C2701E (3.30 on --paper) and light `--amber` at #A87B1E (3.37),
+   both status-text colours, both below AA. #985612 and #856013 are the same two hues at 5.05 on
+   --paper and 4.7 or better on every chip background they land on. The dark pair is untouched:
+   #DFA05C and #D9A84E already measure 8.63 and 8.95. Nothing else in either block moved. */
+.mth{--paper:#F2F1EC;--surface:#FFFFFF;--ink:#1C1B17;--sub:#646057;--body:#3E3B33;--hair:#ECEAE3;--hair2:#DDDAD1;--ph:#E9E7E0;--acc:#1C1B17;--accInk:#FFFFFF;--fill:rgba(28,27,23,.06);--frost:rgba(245,244,239,.85);--hairA:rgba(28,27,23,.1);--sup:#2A5B9E;--dis:#985612;--mis:#C23A32;--uns:#8A4A7C;--unsbg:rgba(138,74,124,.07);--unsbd:rgba(138,74,124,.30);--tint:rgba(42,91,158,.11);--misbg:rgba(194,58,50,.06);--misbd:rgba(194,58,50,.35);--amber:#856013;--ambbg:rgba(168,123,30,.10);--shadow:0 1px 2px rgba(28,27,23,.03),0 10px 28px rgba(28,27,23,.06)}
+.mth[data-mth="dark"]{--paper:#0D0D0C;--surface:#1C1C1A;--ink:#F4F2EC;--sub:#A09C92;--body:#CFCCC2;--hair:#2A2A27;--hair2:#3A3935;--ph:#232321;--acc:#F4F2EC;--accInk:#141412;--fill:rgba(244,242,236,.09);--frost:rgba(15,15,14,.8);--hairA:rgba(244,242,236,.12);--sup:#7FA8DC;--dis:#DFA05C;--mis:#E07A70;--uns:#C08CB4;--unsbg:rgba(192,140,180,.10);--unsbd:rgba(192,140,180,.34);--tint:rgba(127,168,220,.15);--misbg:rgba(224,122,112,.09);--misbd:rgba(224,122,112,.4);--amber:#D9A84E;--ambbg:rgba(217,168,78,.13);--shadow:0 1px 2px rgba(0,0,0,.2),0 10px 28px rgba(0,0,0,.25)}

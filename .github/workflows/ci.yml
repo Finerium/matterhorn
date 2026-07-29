@@ -12,11 +12,20 @@ concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  # AC-SEC-1 pins the scanner the way every other tool here is pinned. A security gate that
+  # follows a moving tag changes what it checks without anyone editing this file.
+  GITLEAKS_VERSION: 8.30.1
+
 jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # AC-SEC-1 scans the FULL history, and the default shallow clone has none of it: a
+          # depth-1 checkout would let the scan pass by having nothing to look at.
+          fetch-depth: 0
 
       - uses: pnpm/action-setup@v4
 
@@ -31,5 +40,65 @@ jobs:
       - run: pnpm lint
       - run: pnpm typecheck
       - run: pnpm test:unit
+      - run: pnpm test:pipeline
       - run: pnpm validate:content
+      - name: licence completeness (AC-SEC-5, AC-LAND-11)
+        run: pnpm check:licenses
+      # `pnpm build` ends in `check:build`, which is where AC-PERF-6, 7 and 8 are asserted.
       - run: pnpm build
+
+      - name: dependency audit (AC-SEC-2)
+        run: pnpm audit --audit-level high
+
+      - name: secret scan over the full history (AC-SEC-1)
+        run: |
+          curl -sSfL "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" \
+            | tar -xz gitleaks
+          ./gitleaks git --log-opts=--all --redact --exit-code 1
+
+  e2e:
+    # Its own job because it is the slow half: three of the five configs build the app and serve
+    # the dist before a single test runs. Failing here fails the workflow exactly as `verify` does.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # Every config in tests/e2e is chromium-only today. AC-APP-21's webkit and firefox projects
+      # arrive with the cross-browser matrix and will need their browsers added here.
+      - run: pnpm exec playwright install --with-deps chromium
+
+      # --ignore-snapshots, and why, stated rather than buried. The committed baselines are
+      # `-darwin`: the configs put the platform in the snapshot path precisely because linux and
+      # macOS rasterise text differently, so a linux runner has no baseline to compare against and
+      # would fail every toHaveScreenshot on the first run for a reason that is not a regression.
+      # What CI asserts is therefore everything else in these specs, which is most of them:
+      # behaviour, routing, DOM structure, copy, console hygiene (AC-APP-22), same-origin traffic
+      # (AC-SEC-6), the CSP (AC-SEC-3) and the link audit (AC-SEC-4). The pixel comparison stays a
+      # local gate on darwin. Upgrade path: commit linux baselines generated in the official
+      # Playwright container and drop this flag.
+      - name: grammar panels (AC-GRAM)
+        run: pnpm test:e2e -- --ignore-snapshots
+      - name: app states and flows (AC-APP)
+        run: pnpm test:e2e:app -- --ignore-snapshots
+      - name: offline (AC-APP-17)
+        run: pnpm test:e2e:offline -- --ignore-snapshots
+      - name: landing, security and licences (AC-LAND, AC-SEC-3/4/6)
+        run: pnpm test:e2e:landing -- --ignore-snapshots
+      - name: research surface (AC-RES)
+        run: pnpm test:e2e:research -- --ignore-snapshots
+
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-traces
+          path: test-results/
+          retention-days: 7

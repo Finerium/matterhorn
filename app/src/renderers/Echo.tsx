@@ -33,6 +33,7 @@ export default function Echo({ panel, ctx }: { panel: EchoPanel | null; ctx: Ren
   return (
     <section
       className="m-panel"
+      data-panel="echo"
       data-echo="cited"
       {...elProps(
         panel.el_id,

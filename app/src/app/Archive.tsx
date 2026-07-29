@@ -153,7 +153,10 @@ export default function Archive({ state, nav }: { state: AppState; nav: Nav }) {
 
       <div className="m-const" data-sr="1" data-testid="constellation-teaser">
         <div className="m-const-title">{t('archive.const.title')}</div>
-        <svg className="m-const-svg" viewBox="0 0 100 62" role="img" aria-label={t('archive.const.title')}>
+        {/* role="group", not "img": the nodes inside are real buttons, and an img whose
+            subtree is focusable is what axe reports as nested-interactive. A group with the
+            same label announces the teaser and still lets a reader tab into its nodes. */}
+        <svg className="m-const-svg" viewBox="0 0 100 62" role="group" aria-label={t('archive.const.title')}>
           {(graph?.links ?? []).map((link) => {
             const a = nodes.findIndex((node) => node.id === link.a);
             const b = nodes.findIndex((node) => node.id === link.b);

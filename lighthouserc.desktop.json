@@ -1,0 +1,33 @@
+{
+  "$comment": [
+    "Lighthouse CI, DESKTOP emulation. The second half of AC-LAND-9: `/` desktop performance at",
+    "least 95. Separate file because a Lighthouse run carries one form factor and one throttling",
+    "profile; everything else is the mobile config's reasoning, unchanged.",
+    "",
+    "`preset: desktop` is the tool's own desktop profile (1350x940, 1x CPU, no request throttling",
+    "beyond the desktop defaults). It is not a hand-tuned set of numbers chosen to clear the bar.",
+    "",
+    "Only performance is asserted here. Accessibility, best practices and SEO are properties of",
+    "the document rather than the viewport, and the mobile run already holds them to 95/95/90;",
+    "asserting them twice would report the same fact twice."
+  ],
+  "ci": {
+    "collect": {
+      "url": ["http://127.0.0.1:5247/"],
+      "startServerCommand": "pnpm exec vite preview app --port 5247 --strictPort",
+      "startServerReadyPattern": "Local:",
+      "numberOfRuns": 3,
+      "settings": { "preset": "desktop" }
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": ["error", { "minScore": 0.95 }]
+      }
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": "test-results/lighthouse/desktop",
+      "reportFilenamePattern": "%%PATHNAME%%-desktop.%%EXTENSION%%"
+    }
+  }
+}

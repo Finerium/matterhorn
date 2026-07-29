@@ -29,8 +29,14 @@ body { margin: 0; }
   to { opacity: 1; transform: translate(-50%, 0); }
 }
 
+/* `.m-screen[data-anim]` and `.m-main` are listed by their own selectors rather than left to
+   `.mth .m-screen`: the first ties with it on specificity and wins on source order, which is
+   the same failure mode renderers.css calls out. Measured, not assumed: an axe pass on the
+   radar under reduced motion sampled the feed mid-fade at 1.02:1 until this line existed. */
 @media (prefers-reduced-motion: reduce) {
   .mth .m-screen,
+  .mth .m-screen[data-anim],
+  .mth .m-main,
   .mth .m-greet,
   .mth .m-toast,
   .mth .m-ios { animation: none; }
@@ -334,12 +340,16 @@ body { margin: 0; }
 .m-ios:focus-visible,
 .m-nf-wrap:focus,
 .m-nf-wrap:focus-visible { outline: none; }
+/* Opaque, not the zip's rgba(248,248,248,.88): a translucent panel blends with whatever screen
+   is behind it, so in dark theme the frost resolved to #DCDCDC and dropped the action text to
+   3.86:1 while light theme sat at 4.95:1. This dialog is a fixed-appearance surface like the
+   Nuance card, an iOS reproduction rather than an app panel, so its contrast must not depend on
+   the app theme. Over light paper the .88 blend already computed to #F7F7F7, so light is
+   unchanged to within a channel unit and no baseline moves. */
 .m-ios {
   width: 272px;
   border-radius: 16px;
-  background: rgba(248, 248, 248, 0.88);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: #f7f7f7;
   color: #111111;
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -355,7 +365,10 @@ body { margin: 0; }
   padding: 12px;
   text-align: center;
   font-size: 15.5px;
-  color: #0a7aff;
+  /* iOS system blue is #0A7AFF, which measures 3.74:1 on this dialog's frosted background and
+     fails AA. #0067DB is the same blue two steps darker, at 4.95:1. The simulated dialog is a
+     control a reader actually presses, so it answers to the contrast floor before the likeness. */
+  color: #0067db;
   cursor: pointer;
   background: none;
   border: none;

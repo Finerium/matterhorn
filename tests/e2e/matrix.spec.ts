@@ -27,6 +27,7 @@ import { fileURLToPath } from 'node:url';
 import { expect, test, type Page } from '@playwright/test';
 
 import { guardConsole } from './console-collector';
+import { guardNetwork } from './net-collector';
 
 interface MatrixEntry {
   name: string;
@@ -53,6 +54,7 @@ const RAW_KEY =
   /\b(common|hello|lang|regions|notif|auth|sheet|tab|pack|radar|dissect|archive|settings|screen|queue|route|share|toast|boundary)\.[a-z][a-z0-9]*(\.[a-z0-9-]+)*\b/;
 
 guardConsole();
+guardNetwork();
 
 test('AC-APP-1 the matrix covers the Appendix A minimum', () => {
   const live = ENTRIES.filter((entry) => entry.gate5 !== true);

@@ -7,9 +7,20 @@
  *         AC-APP-22 rides along through guardConsole().
  *
  * Post-install home: tests/e2e/flows.spec.ts. Config: tests/e2e/app.config.ts, which serves
- * `vite app` in SEED MODE, so every string below is a tests/fixtures/seed value or an
- * app/src/i18n bundle value, quoted verbatim. A fixture edit is meant to show up here as a
- * failure rather than as a silently weaker test, which is the Gate 2 house rule.
+ * `vite app` over the PUBLISHED `content/` root. Nothing here reads tests/fixtures/seed: those
+ * fixtures are frozen for the AC-GRAM component photographs and are reachable only from the
+ * harness entry.
+ *
+ * Two kinds of string appear below, and the split is the point:
+ *
+ *   quoted     app/src/i18n bundle values and the blueprint's FROZEN microcopy. Those are code
+ *              and specification, so they are transcribed verbatim and an edit to either is
+ *              meant to fail here.
+ *   computed   everything that is CONTENT: headlines, sparring questions, element ids, counts,
+ *              narration, the symmetry receipt, the corrections log. Those are read from
+ *              content/ off disk at collection time, the way research.spec.ts already does it,
+ *              so both sides of the assertion move together when the pipeline republishes and
+ *              the check cannot rot into a transcription of last month's run.
  *
  * Hooks this spec pins. Everything with a [data-testid] that is not already shipped is the
  * contract a surface implementer builds to; the assertion fails RED until it exists, which is
@@ -44,16 +55,86 @@
  * hydrate to the full autopsy anyway. One opener, four narratives, no second mechanism.
  */
 import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 import { expect, test, type Page } from '@playwright/test';
 
+import type {
+  ClaimMapPanel,
+  Corrections,
+  DuelingPanel,
+  Feed,
+  Methodology,
+  MoneyFlowPanel,
+  Narrative,
+  Panel,
+  ScaleCheckPanel,
+  Source,
+  UrlIndex,
+} from '../../contracts/types';
 import { guardConsole } from './console-collector';
+import { guardNetwork } from './net-collector';
 
 guardConsole();
+guardNetwork();
+
+// --- what is published, read from disk -----------------------------------------------------
+
+const CONTENT = fileURLToPath(new URL('../../content', import.meta.url));
+const read = <T,>(relative: string): T => JSON.parse(readFileSync(join(CONTENT, relative), 'utf8')) as T;
+
+/**
+ * noUncheckedIndexedAccess makes every artifact lookup optional, and the contract makes a few
+ * fields nullable. This is the one unwrap, and it names what was missing rather than throwing a
+ * property access at a reader.
+ */
+function must<T>(value: T | null | undefined, what: string): T {
+  if (value === null || value === undefined) throw new Error(`content/ carries no ${what}`);
+  return value;
+}
+
+/** A panel by grammar component. A narrative that lost one is a content bug, not a flake. */
+function panelOf<T extends Panel>(narrative: Narrative, type: T['type']): T {
+  return must(
+    narrative.panels.find((panel): panel is T => panel.type === type),
+    `${type} panel in ${narrative.id}`,
+  );
+}
+
+/** The url_index pattern for a role: the string the share resolver actually matches on. */
+const urlFor = (id: string, role: UrlIndex['entries'][number]['role']): string =>
+  must(
+    read<UrlIndex>('url_index.json').entries.find((e) => e.narrative_id === id && e.role === role),
+    `${role} url for ${id}`,
+  ).pattern;
+
+/**
+ * The three narratives these flows drive, picked for what they carry rather than for their
+ * subject: mbg-stop is the only S3 (AC-APP-7) and the only money_flow (AC-APP-9); mbg-poisoning
+ * is S1 with the dueling panel; ppn-panic is S0, carries the echo, and is the via_dissect item.
+ */
+const STOP = read<Narrative>('narratives/mbg-stop.json');
+const POISON = read<Narrative>('narratives/mbg-poisoning.json');
+const PPN = read<Narrative>('narratives/ppn-panic.json');
+const SOURCES = read<Source[]>('sources.json');
+const METHODOLOGY = read<Methodology>('methodology.json');
+const CORRECTIONS = read<Corrections>('corrections.json');
+
+const STOP_CLAIM = panelOf<ClaimMapPanel>(STOP, 'claim_map');
+const STOP_FLOW = panelOf<MoneyFlowPanel>(STOP, 'money_flow');
+const STOP_SCALE = panelOf<ScaleCheckPanel>(STOP, 'scale_check');
+const DUEL = panelOf<DuelingPanel>(POISON, 'dueling');
+
+const publisherOf = (id: string): string => must(SOURCES.find((s) => s.id === id), `source ${id}`).publisher;
+
+const SYM = METHODOLOGY.symmetry;
+/** The receipt as the radar renders it, from the same numbers the methodology page reads. */
+const SYMMETRY = `${String(SYM.gov)}·${String(SYM.neutral)}·${String(SYM.opp)}`;
 
 // --- verbatim strings ---------------------------------------------------------------------
 
-/** app/src/i18n/en.json */
+/** app/src/i18n/en.json. The symmetry line is the bundle template over published numbers. */
 const EN = {
   continue: 'Continue',
   tagline: 'A causal literacy engine',
@@ -73,7 +154,7 @@ const EN = {
   sheetAuthBody:
     'Account sync ships with the store build; the demo runs fully on-device. Nothing you do here is transmitted anywhere.',
   radarFooter: 'Served from cache. No model on the read path.',
-  symmetryLine: 'Symmetry 4·2·4 →',
+  symmetryLine: `Symmetry ${SYMMETRY} →`,
   queueTitle: 'Queued to the private agent fleet',
   notFoundTitle: 'No such page',
 } as const;
@@ -82,7 +163,7 @@ const EN = {
 const ID = {
   tabSettings: 'Pengaturan',
   radarFooter: 'Disajikan dari cache. Tidak ada model di jalur baca.',
-  symmetryLine: 'Simetri 4·2·4 →',
+  symmetryLine: `Simetri ${SYMMETRY} →`,
 } as const;
 
 /** Blueprint Appendix C, FROZEN microcopy. */
@@ -92,76 +173,59 @@ const FROZEN = {
   queueBody:
     'This link is new to the archive. Fresh dissections are produced by the editorial fleet and land in the next cycle. Nothing is invented in the meantime.',
   notifTitle: 'New dissection · Indonesia',
-  /** blueprint 6.7 permalink shell, FROZEN: counts summary, verdict-free. */
+  /**
+   * Blueprint 6.7 permalink shell, FROZEN: counts summary, verdict-free. The TEMPLATE is the
+   * frozen part and is transcribed; the three numbers are mbg-stop's published derived counts,
+   * so a republished narrative moves the expectation with it.
+   */
   ogDescription:
-    '1 missing links · 1 unsourced assumptions · 4 hidden stakeholders. No verdicts. See the structure.',
+    `${String(STOP.counts.missing)} missing links · ${String(STOP.counts.unsourced)} unsourced assumptions · ` +
+    `${String(STOP.counts.hidden)} hidden stakeholders. No verdicts. See the structure.`,
 } as const;
 
-/** tests/fixtures/seed */
-const SEED = {
-  stopHeadlineEn: 'Stop MBG Permanently to Save the State Budget',
-  stopHeadlineId: 'Setop MBG Permanen demi Selamatkan APBN',
-  poisoningHeadlineEn: 'BGN Chief: MBG Poisoning Victims Reach 6,517',
-  canonicalStop: 'https://www.tribunnews.com/nasional/7844542',
-  freshDemo:
-    'https://www.antaranews.com/berita/4559522/kemenkeu-rilis-aturan-ppn-12-persen-hanya-untuk-barang-mewah',
-  unknownUrl: 'https://example.com/not-in-the-index',
-  /** mbg-stop money_flow: every row carries severed_if_stopped true. */
-  severedRows: ['m1', 'm2', 'm3', 'm4'],
-  /** mbg-stop narration, EN. */
-  sentence1: 'The budget arithmetic itself checks out: stopping MBG frees up to Rp88.15T a year.',
-  sentence1Els: ['p-claim', 'n1', 'n2'],
-  sentence3Els: ['h0', 'h1', 'h2', 'h3'],
-  /** mbg-stop sparring, EN. */
-  q1: 'The claim is that stopping MBG saves the economy. What mechanism does the story state?',
-  q1Right: 'It never states one',
-  q1Wrong: 'Unspent funds are reallocated to productive sectors',
-  q1Note:
-    'No article in this family states a pathway from unspent funds to growth. The claim map renders that as a gap.',
-  q2: 'Rp88.15T sounds enormous. Against what should it be read?',
-  q2Right: 'Total 2026 state spending, Rp3,786.5T in the draft architecture',
-  q3: 'If MBG stops today, who pays first?',
-  q3Right: 'Kitchens, suppliers and 1.28M program workers, within weeks',
-  q3Note:
-    '29,679 kitchens and 142,387 supplier contracts absorb the shock in weeks; any fiscal benefit is diffuse and delayed.',
-  /** mbg-poisoning prediction tap and dueling counts, EN. */
-  predictionPrompt: 'Before the reveal: where is the weakest edge? Tap it.',
-  duel: [
-    {
-      el: 'd0',
-      who: 'BGN',
-      count: '6,517 cases',
-      method: 'Running count of verified case reports, stated to a parliamentary commission.',
-      period: 'since January 2025, stated 1 Oct 2025',
-    },
-    {
-      el: 'd1',
-      who: 'BPOM',
-      count: '9,089 cases',
-      method: 'Food safety outbreak intake across districts and provinces.',
-      period: 'as of 1 Oct 2025',
-    },
-    {
-      el: 'd2',
-      who: 'JPPI',
-      count: '8,649 cases',
-      method: 'Civil society network tally collected from member reports.',
-      period: 'per 27 Sep 2025',
-    },
-  ],
-  /** ppn-panic echo. */
-  echoMotif: 'A restricted measure narrated as universal, with the alarm outliving the clarification.',
-  /** methodology.json, EN. */
-  policy65:
-    'Matterhorn takes no position on whether any protest, boycott, or campaign should happen. Echo surfaces the documented costs of acting on broken causal models; it never frames collective action itself as the harm. Protest can be legitimate on imperfect information; the product’s contribution is that participants and observers see the structure of what they are being told.',
-  disclosure:
-    'Every dissection on this page was produced by an automated agent fleet and is labelled as such. Each artifact names the models that generated it, and the analysis is computed once, before anyone asks for it. These seed artifacts were transcribed from the design fixture data and are not published analysis.',
-  /** corrections.json, EN. */
-  correctionUnderReview:
-    'The claim that MBG absorbs 1.28M workers was flagged by BGN. The entry stays open while the figure is re-read, and the review chip was visible within 24 hours.',
-  correctionCorrected:
-    'The net deposit figure in the judol dissection was updated to the PPATK Q1 2026 series, and the correction was published with equal prominence.',
-} as const;
+// --- published values, computed from the artifacts above -------------------------------------
+
+/** mbg-stop sparring, EN. `correct` is the artifact's own index, so no answer is transcribed. */
+const Q = STOP.sparring.questions.map((question, index) => {
+  const options = question.options.map((option) => option.en);
+  return {
+    q: question.q.en,
+    right: must(options[question.correct], `option ${String(question.correct)} of question ${String(index + 1)}`),
+    wrong: must(
+      options.find((_, at) => at !== question.correct),
+      `a wrong option for question ${String(index + 1)}`,
+    ),
+    note: question.note.en,
+  };
+});
+
+/** mbg-stop money_flow. Published content carries both kinds of row, which is what makes the
+ *  stop toggle a real assertion: an exact set, not "everything dims". */
+const SEVERED = STOP_FLOW.rows.filter((row) => row.severed_if_stopped).map((row) => row.el_id).sort();
+const UNSEVERED = STOP_FLOW.rows.filter((row) => !row.severed_if_stopped).map((row) => row.el_id).sort();
+
+/** mbg-stop narration, EN: the first sentence, and one that shares none of its elements. */
+const V1 = must(STOP.narration.en.sentences[0], 'an EN narration sentence in mbg-stop');
+const V_OTHER = must(
+  STOP.narration.en.sentences.find((s) => s.id !== V1.id && !s.els.some((el) => V1.els.includes(el))),
+  'a second EN mbg-stop sentence sharing no element with the first',
+);
+
+/** The hidden column, and an edge: what the hidden count chip must and must not light. An edge
+ *  can never carry the hidden status by the 6.4 contract, so it is the honest negative. */
+const HIDDEN_ELS = STOP_CLAIM.hidden.map((entry) => entry.el_id);
+const NOT_HIDDEN_EL = must(STOP_CLAIM.edges[0], 'an mbg-stop edge, which is never a hidden entry').el_id;
+
+/** Not in url_index by construction: the queue path. The share tests are what prove it. */
+const UNKNOWN_URL = 'https://example.com/not-in-the-index';
+const CANONICAL_STOP = urlFor(STOP.id, 'canonical');
+const FRESH_DEMO = urlFor(PPN.id, 'fresh_demo');
+
+/** The en pack's hero: what a pack switch has to land on, whichever narrative holds the slot. */
+const EN_HERO = must(
+  read<Feed>('packs/en/feed.json').items.find((item) => item.slot === 'hero'),
+  'a hero item in the en feed',
+).narrative_id;
 
 // --- helpers -------------------------------------------------------------------------------
 
@@ -184,11 +248,18 @@ async function openAutopsy(page: Page, id: string): Promise<void> {
   await expect(page.locator('[data-screen="autopsy"]'), `/n/${id} must hydrate to the autopsy`).toBeVisible();
 }
 
-/** Past the sparring gate to the panel stack, whatever gate this narrative carries. */
+/**
+ * Past the sparring gate to the panel stack, whatever gate this narrative carries.
+ *
+ * `data-panel` rather than `[data-el]`: every artifact names its own elements, so an element id
+ * in a selector is a content string that stops matching on the next publish. `data-panel` is the
+ * renderer's name for which grammar component it is, and the contract puts claim_map first in
+ * every narrative.
+ */
 async function skipSparring(page: Page): Promise<void> {
   const skip = page.getByTestId('spar-skip');
   if (await skip.isVisible()) await skip.click();
-  await expect(page.locator('[data-el="p-claim"], [data-el="p-duel"], [data-el="p-scale"]').first()).toBeVisible();
+  await expect(page.locator('[data-panel="claim_map"]')).toBeVisible();
 }
 
 // --- AC-APP-2 -------------------------------------------------------------------------------
@@ -293,7 +364,7 @@ test.describe('AC-APP-3 honest auth', () => {
       const text = await page.locator('body').innerText();
       expect(text, `state ${state} renders a signed-in string`).not.toMatch(SIGNED_IN);
     }
-    for (const route of ['/', '/methodology', '/n/mbg-stop', '/share?url=' + encodeURIComponent(SEED.canonicalStop)]) {
+    for (const route of ['/', '/methodology', `/n/${STOP.id}`, `/share?url=${encodeURIComponent(CANONICAL_STOP)}`]) {
       await page.goto(route);
       const text = await page.locator('body').innerText();
       expect(text, `route ${route} renders a signed-in string`).not.toMatch(SIGNED_IN);
@@ -309,12 +380,12 @@ test.describe('AC-APP-4 radar states', () => {
 
     // The default app language is en and the default pack is id, so an id-pack narrative shows
     // its en headline with the EN <- ID translated marker. Two independent settings, on purpose.
-    await expect(page.locator('[data-feed-item="mbg-stop"] .m-card')).toBeVisible();
-    await expect(page.locator('[data-feed-item="mbg-stop"]')).toContainText(SEED.stopHeadlineEn);
-    await expect(page.locator('[data-feed-item="mbg-poisoning"] .m-card-c')).toBeVisible();
-    await expect(page.locator('[data-feed-item="mbg-poisoning"]')).toContainText(SEED.poisoningHeadlineEn);
+    await expect(page.locator(`[data-feed-item="${STOP.id}"] .m-card`)).toBeVisible();
+    await expect(page.locator(`[data-feed-item="${STOP.id}"]`)).toContainText(STOP.headline.en);
+    await expect(page.locator(`[data-feed-item="${POISON.id}"] .m-card-c`)).toBeVisible();
+    await expect(page.locator(`[data-feed-item="${POISON.id}"]`)).toContainText(POISON.headline.en);
 
-    // The symmetry receipt is computed from methodology.json: gov 4, neutral 2, opp 4.
+    // The symmetry receipt is methodology.json's own derived spread, not a number typed here.
     await expect(page.locator('[data-screen="main-radar"]')).toContainText(EN.symmetryLine);
     await expect(page.locator('[data-screen="main-radar"]')).toContainText(EN.radarFooter);
   });
@@ -339,11 +410,17 @@ test.describe('AC-APP-4 radar states', () => {
   });
 
   test('the under-review chip renders from corrections.json', async ({ page }) => {
+    // Whatever is open in the published log is what the strip must be carrying, summary for
+    // summary. An empty log would leave nothing to assert, so that is a failure here too.
+    const open = CORRECTIONS.entries.filter((entry) => entry.status === 'under_review');
+    expect(open.length, 'corrections.json carries at least one open entry').toBeGreaterThan(0);
+
     await jump(page, 'radar.under-review');
-    // corrections.json carries mbg-jobs with status under_review and this summary.
     const chip = page.getByTestId('under-review-chip').first();
     await expect(chip).toBeVisible();
-    await expect(page.locator('[data-screen="main-radar"]')).toContainText(SEED.correctionUnderReview);
+    for (const entry of open) {
+      await expect(page.locator('[data-screen="main-radar"]')).toContainText(entry.summary.en);
+    }
   });
 });
 
@@ -352,23 +429,23 @@ test.describe('AC-APP-4 radar states', () => {
 test.describe('AC-APP-5 via-Dissect gating', () => {
   test('ppn-panic is absent from the initial Indonesia feed', async ({ page }) => {
     await jump(page, 'radar.default');
-    await expect(page.locator('[data-feed-item="mbg-stop"]')).toBeVisible();
+    await expect(page.locator(`[data-feed-item="${STOP.id}"]`)).toBeVisible();
     await expect(
-      page.locator('[data-feed-item="ppn-panic"]'),
-      'packs/id/feed.json marks ppn-panic via_dissect, so it is filtered out until the demo runs',
+      page.locator(`[data-feed-item="${PPN.id}"]`),
+      `packs/id/feed.json marks ${PPN.id} via_dissect, so it is filtered out until the demo runs`,
     ).toHaveCount(0);
   });
 
   test('ppn-panic joins the feed with the via-Dissect chip after the fresh-demo flow', async ({ page }) => {
     await jump(page, 'dissect.default');
-    await page.getByTestId('paste-box').fill(SEED.freshDemo);
+    await page.getByTestId('paste-box').fill(FRESH_DEMO);
     await page.getByTestId('paste-go').click();
 
     await expect(page.locator('[data-screen="progress"]')).toBeVisible();
     await expect(page.locator('[data-screen="autopsy"]')).toBeVisible({ timeout: 20_000 });
 
     await jump(page, 'radar.default');
-    const item = page.locator('[data-feed-item="ppn-panic"]');
+    const item = page.locator(`[data-feed-item="${PPN.id}"]`);
     await expect(item).toBeVisible();
     await expect(item.getByTestId('via-dissect-chip')).toBeVisible();
   });
@@ -401,7 +478,7 @@ test.describe('AC-APP-6 dissect flows', () => {
 
   test('an unknown URL shows the queue state with no progress animation', async ({ page }) => {
     await jump(page, 'dissect.default');
-    await page.getByTestId('paste-box').fill(SEED.unknownUrl);
+    await page.getByTestId('paste-box').fill(UNKNOWN_URL);
     await page.getByTestId('paste-go').click();
 
     const queue = page.locator('[data-screen="queue"]');
@@ -431,45 +508,44 @@ test.describe('AC-APP-6 dissect flows', () => {
 
 test.describe('AC-APP-7 sparring S3', () => {
   test('the right path walks three questions to the diff card', async ({ page }) => {
-    await openAutopsy(page, 'mbg-stop');
+    // The contract fixes three questions; the artifact fixes which three and which option is
+    // right. Walking `Q` rather than three transcribed pairs is what keeps this true after a
+    // republish, and what makes an artifact with two questions fail here rather than pass.
+    expect(Q.length, 'the contract fixes S3 sparring at three questions').toBe(3);
 
-    await expect(page.getByTestId('spar-q')).toContainText(SEED.q1);
+    await openAutopsy(page, STOP.id);
     await expect(page.locator('[data-spar-dot]'), 'S3 is three questions').toHaveCount(3);
-    await page.locator('[data-spar-option]', { hasText: SEED.q1Right }).click();
-    await expect(page.getByTestId('spar-note')).toContainText(SEED.q1Note);
-    await page.getByRole('button', { name: EN.continue }).click();
 
-    await expect(page.getByTestId('spar-q')).toContainText(SEED.q2);
-    await page.locator('[data-spar-option]', { hasText: SEED.q2Right }).click();
-    await page.getByRole('button', { name: EN.continue }).click();
-
-    await expect(page.getByTestId('spar-q')).toContainText(SEED.q3);
-    await page.locator('[data-spar-option]', { hasText: SEED.q3Right }).click();
-    await expect(page.getByTestId('spar-note')).toContainText(SEED.q3Note);
-    await page.getByRole('button', { name: EN.continue }).click();
+    for (const question of Q) {
+      await expect(page.getByTestId('spar-q')).toContainText(question.q);
+      await page.locator('[data-spar-option]', { hasText: question.right }).click();
+      await expect(page.getByTestId('spar-note')).toContainText(question.note);
+      await page.getByRole('button', { name: EN.continue }).click();
+    }
 
     await expect(page.getByTestId('diff-card')).toBeVisible();
-    await expect(page.locator('[data-el="p-claim"]')).toBeVisible();
+    await expect(page.locator('[data-panel="claim_map"]')).toBeVisible();
   });
 
   test('a wrong answer is marked wrong and still shows the note, without a verdict', async ({ page }) => {
-    await openAutopsy(page, 'mbg-stop');
+    const first = must(Q[0], 'a first sparring question');
+    await openAutopsy(page, STOP.id);
 
-    const wrong = page.locator('[data-spar-option]', { hasText: SEED.q1Wrong });
+    const wrong = page.locator('[data-spar-option]', { hasText: first.wrong });
     await wrong.click();
     await expect(wrong).toHaveAttribute('data-answer', 'wrong');
-    await expect(page.locator('[data-spar-option]', { hasText: SEED.q1Right })).toHaveAttribute(
+    await expect(page.locator('[data-spar-option]', { hasText: first.right })).toHaveAttribute(
       'data-answer',
       'right',
     );
-    await expect(page.getByTestId('spar-note')).toContainText(SEED.q1Note);
+    await expect(page.getByTestId('spar-note')).toContainText(first.note);
     // Sparring corrects a move, it does not score a person.
     await expect(page.getByTestId('spar-note')).not.toHaveText(/\bwrong\b|\bincorrect\b|\bfailed\b/i);
   });
 
   test('Skip is visible and functional at every step', async ({ page }) => {
-    for (const step of [0, 1, 2]) {
-      await openAutopsy(page, 'mbg-stop');
+    for (const step of Q.keys()) {
+      await openAutopsy(page, STOP.id);
       for (let advance = 0; advance < step; advance += 1) {
         await page.locator('[data-spar-option]').first().click();
         await page.getByRole('button', { name: EN.continue }).click();
@@ -477,7 +553,7 @@ test.describe('AC-APP-7 sparring S3', () => {
       const skip = page.getByTestId('spar-skip');
       await expect(skip, `Skip must be visible at question ${String(step + 1)}`).toBeVisible();
       await skip.click();
-      await expect(page.locator('[data-el="p-claim"]')).toBeVisible();
+      await expect(page.locator('[data-panel="claim_map"]')).toBeVisible();
       await expect(page.getByTestId('spar-q')).toHaveCount(0);
     }
   });
@@ -493,7 +569,7 @@ test.describe('AC-APP-8 S2, S1 and S0', () => {
     await jump(page, 'settings.default');
     await page.locator('[data-scaffold-option="S2"]').click();
 
-    await openAutopsy(page, 'mbg-stop');
+    await openAutopsy(page, STOP.id);
     await expect(page.getByTestId('spar-q')).toBeVisible();
     await expect(page.locator('[data-spar-dot]'), 'S2 is one rotating question, one dot').toHaveCount(1);
 
@@ -504,17 +580,19 @@ test.describe('AC-APP-8 S2, S1 and S0', () => {
 
   test('S1 shows the prediction tap', async ({ page }) => {
     // mbg-poisoning carries scaffold_default S1, so Auto reaches this without an override.
-    await openAutopsy(page, 'mbg-poisoning');
+    expect(POISON.scaffold_default, 'this test needs the S1 narrative').toBe('S1');
+    await openAutopsy(page, POISON.id);
     const prediction = page.getByTestId('prediction-tap');
     await expect(prediction).toBeVisible();
-    await expect(prediction).toContainText(SEED.predictionPrompt);
+    await expect(prediction).toContainText(POISON.prediction_tap.prompt.en);
     await expect(page.getByTestId('spar-q')).toHaveCount(0);
   });
 
   test('S0 shows the autopsy directly with a working spar-on-demand chip', async ({ page }) => {
     // ppn-panic carries scaffold_default S0.
-    await openAutopsy(page, 'ppn-panic');
-    await expect(page.locator('[data-el="p-claim"]')).toBeVisible();
+    expect(PPN.scaffold_default, 'this test needs the S0 narrative').toBe('S0');
+    await openAutopsy(page, PPN.id);
+    await expect(page.locator('[data-panel="claim_map"]')).toBeVisible();
     await expect(page.getByTestId('spar-q')).toHaveCount(0);
 
     const chip = page.getByTestId('spar-chip');
@@ -541,47 +619,59 @@ test.describe('AC-APP-8 S2, S1 and S0', () => {
 
 test.describe('AC-APP-9 panel behaviors', () => {
   test('the money_flow stop toggle dims exactly the severed_if_stopped rows', async ({ page }) => {
-    await openAutopsy(page, 'mbg-stop');
+    // Published mbg-stop carries both kinds of row, so "exactly" has two sides to check: the
+    // severed set is struck and the unsevered set is not. A panel whose rows were all severed
+    // would make the second half vacuous, so it is asserted rather than assumed.
+    expect(SEVERED.length, 'mbg-stop money_flow has severed rows').toBeGreaterThan(0);
+    expect(UNSEVERED.length, 'mbg-stop money_flow has a row a stop does not reach').toBeGreaterThan(0);
+
+    await openAutopsy(page, STOP.id);
     await skipSparring(page);
 
-    const flow = page.locator('[data-el="p-flow"]');
+    const flow = page.locator('[data-panel="money_flow"]');
     await expect(flow).toBeVisible();
     await expect(flow.locator('[data-strike="1"]'), 'nothing is struck before the toggle').toHaveCount(0);
 
     await flow.locator('[role="switch"]').click();
-    // Every mbg-stop row carries severed_if_stopped true, so the exact set is all four.
-    const struck = await flow
-      .locator('[data-strike="1"]')
-      .evaluateAll((nodes) => nodes.map((n) => n.getAttribute('data-el') ?? ''));
-    expect(struck.sort((a, b) => a.localeCompare(b))).toEqual([...SEED.severedRows]);
-    await expect(flow.locator('[data-strike="0"]'), 'no unsevered row is dimmed').toHaveCount(0);
+    const elsOf = async (strike: '0' | '1'): Promise<string[]> =>
+      (
+        await flow
+          .locator(`[data-strike="${strike}"]`)
+          .evaluateAll((nodes) => nodes.map((node) => node.getAttribute('data-el') ?? ''))
+      ).sort();
+    expect(await elsOf('1'), 'the struck rows are the severed_if_stopped rows').toEqual(SEVERED);
+    expect(await elsOf('0'), 'and nothing else is dimmed').toEqual(UNSEVERED);
   });
 
-  test('dueling shows all three institutional counts with method and period', async ({ page }) => {
-    await openAutopsy(page, 'mbg-poisoning');
+  test('dueling shows every institutional count with method and period', async ({ page }) => {
+    await openAutopsy(page, POISON.id);
     await skipSparring(page);
 
-    const duel = page.locator('[data-el="p-duel"]');
+    const duel = page.locator('[data-panel="dueling"]');
     await expect(duel).toBeVisible();
-    for (const count of SEED.duel) {
-      const row = duel.locator(`[data-el="${count.el}"]`);
+    expect(DUEL.counts.length, 'a dueling panel is 2 to 4 institutions').toBeGreaterThanOrEqual(2);
+    for (const count of DUEL.counts) {
+      const row = duel.locator(`[data-el="${count.el_id}"]`);
       await expect(row).toContainText(count.who);
-      await expect(row).toContainText(count.count);
-      await expect(row).toContainText(count.method);
+      await expect(row).toContainText(count.value.display.en);
+      await expect(row).toContainText(count.method.en);
       await expect(row).toContainText(count.period);
     }
     // No winner is chosen: the panel states the rule instead.
     await expect(duel).not.toHaveText(/\bcorrect count\b|\bthe real number\b|\bactually\b/i);
   });
 
-  test('echo renders only on ppn-panic, and the silence state elsewhere', async ({ page }) => {
-    await openAutopsy(page, 'ppn-panic');
+  test('echo renders only on the narrative that carries one, and the silence state elsewhere', async ({ page }) => {
+    const echo = must(PPN.echo, 'an echo panel on ppn-panic');
+    expect(STOP.echo, 'mbg-stop is the silence case').toBeNull();
+
+    await openAutopsy(page, PPN.id);
     await skipSparring(page);
     await expect(page.locator('[data-echo="cited"]')).toBeVisible();
-    await expect(page.locator('[data-el="p-echo"]')).toContainText(SEED.echoMotif);
+    await expect(page.locator('[data-panel="echo"]')).toContainText(echo.current_motif.en);
     await expect(page.locator('[data-echo="silence"]')).toHaveCount(0);
 
-    await openAutopsy(page, 'mbg-stop');
+    await openAutopsy(page, STOP.id);
     await skipSparring(page);
     await expect(page.locator('[data-echo="silence"]')).toBeVisible();
     await expect(page.locator('[data-echo="cited"]')).toHaveCount(0);
@@ -592,20 +682,23 @@ test.describe('AC-APP-9 panel behaviors', () => {
 
 test.describe('AC-APP-10 narration binding', () => {
   test('tapping a sentence highlights its els, and a second tap clears them', async ({ page }) => {
-    await openAutopsy(page, 'mbg-stop');
+    await openAutopsy(page, STOP.id);
     await skipSparring(page);
 
-    const sentence = page.locator('[data-sent]', { hasText: SEED.sentence1 }).first();
+    const sentence = page.locator('[data-sent]', { hasText: V1.text }).first();
     await expect(sentence).toBeVisible();
     await expect(page.locator('[data-hl]')).toHaveCount(0);
 
     await sentence.click();
     await expect(sentence).toHaveAttribute('data-sent', 'on');
-    for (const el of SEED.sentence1Els) {
-      await expect(page.locator(`[data-el="${el}"]`), `sentence v-1 highlights ${el}`).toHaveAttribute('data-hl', '1');
+    for (const el of V1.els) {
+      await expect(page.locator(`[data-el="${el}"]`), `sentence ${V1.id} highlights ${el}`).toHaveAttribute(
+        'data-hl',
+        '1',
+      );
     }
-    // Only its own els: v-3's four hidden branches are not part of this sentence.
-    for (const el of SEED.sentence3Els) {
+    // Only its own els: the elements of a sentence that shares none of them stay dark.
+    for (const el of V_OTHER.els) {
       await expect(page.locator(`[data-el="${el}"]`)).not.toHaveAttribute('data-hl', '1');
     }
 
@@ -615,16 +708,19 @@ test.describe('AC-APP-10 narration binding', () => {
   });
 
   test('tapping a count chip highlights every element of that status', async ({ page }) => {
-    await openAutopsy(page, 'mbg-stop');
+    // The hidden column IS counts.hidden, by the 6.5 derivation. Asserting that first is what
+    // makes the loop below a check on the app rather than a restatement of the artifact.
+    expect(HIDDEN_ELS.length, 'the hidden column is counts.hidden').toBe(STOP.counts.hidden);
+
+    await openAutopsy(page, STOP.id);
     await skipSparring(page);
 
-    // mbg-stop counts: hidden 4, which is h0..h3 in the claim map.
     await page.locator('[data-st="hidden"]').first().click();
-    for (const el of SEED.sentence3Els) {
+    for (const el of HIDDEN_ELS) {
       await expect(page.locator(`[data-el="${el}"]`), `the hidden chip highlights ${el}`).toHaveAttribute('data-hl', '1');
     }
-    // counts.missing is 1, and e1 is the edge it refers to, which this chip must not light.
-    await expect(page.locator('[data-el="e1"]')).not.toHaveAttribute('data-hl', '1');
+    // An edge is not a hidden entry, and this chip must not light one.
+    await expect(page.locator(`[data-el="${NOT_HIDDEN_EL}"]`)).not.toHaveAttribute('data-hl', '1');
   });
 });
 
@@ -634,41 +730,67 @@ interface SheetCase {
   from: string;
   narrative: string;
   el: string;
-  /** the evidence quote, the resolved source line, and the rationale */
-  fragments: RegExp[];
+  /** the quote, the value, the resolved source line and the rationale, per AC-APP-11 */
+  fragments: string[];
 }
 
-/** One opening per kind of tap target blueprint AC-APP-11 names. */
+/** The first element of each kind the artifacts carry, with the text its sheet must show. */
+const NODE = must(
+  STOP_CLAIM.spine.find((node) => node.value !== undefined),
+  'a claim-map node carrying a value in mbg-stop',
+);
+const EDGE = must(STOP_CLAIM.edges[0], 'a claim-map edge in mbg-stop');
+const HIDDEN = must(
+  STOP_CLAIM.hidden.find((entry) => entry.ev !== undefined),
+  'a hidden branch with evidence in mbg-stop',
+);
+const SEGMENT = must(STOP_SCALE.segments[0], 'a scale segment in mbg-stop');
+const COUNT = must(DUEL.counts[0], 'a dueling count in mbg-poisoning');
+
+/**
+ * One opening per kind of tap target blueprint AC-APP-11 names, every fragment read off the
+ * artifact the sheet is rendering. Nothing here is a transcription, so a re-analysed narrative
+ * moves the element, the quote and the publisher together and this stays a real check.
+ */
 const EVIDENCE: SheetCase[] = [
   {
     from: 'a claim-map node',
-    narrative: 'mbg-stop',
-    el: 'n2',
-    fragments: [/Rp88\.15T/, /Antara News/],
+    narrative: STOP.id,
+    el: NODE.el_id,
+    fragments: [
+      NODE.label.en,
+      must(NODE.value, 'the node value').display.en,
+      publisherOf(must(NODE.value, 'the node value').source_id),
+    ],
   },
   {
     from: 'a claim-map edge',
-    narrative: 'mbg-stop',
-    el: 'e0',
-    fragments: [/Realisasi anggaran MBG mencapai/, /Antara News/, /The saving exists and is correctly sized/],
+    narrative: STOP.id,
+    el: EDGE.el_id,
+    fragments: [EDGE.ev.quote, EDGE.ev.why.en],
   },
   {
     from: 'a hidden branch',
-    narrative: 'mbg-stop',
-    el: 'h0',
-    fragments: [/BGN mencatat 142\.387 pemasok/, /CNBC/, /Documented existing counterparties of the program/],
+    narrative: STOP.id,
+    el: HIDDEN.el_id,
+    fragments: [
+      HIDDEN.label.en,
+      HIDDEN.why_hidden.en,
+      must(HIDDEN.ev, 'the hidden entry evidence').quote,
+      publisherOf(must(HIDDEN.ev, 'the hidden entry evidence').source_id),
+    ],
   },
   {
     from: 'a scale segment',
-    narrative: 'mbg-stop',
-    el: 'sg0',
-    fragments: [/MBG realized/, /Rp88\.15T/, /Antara News/],
+    narrative: STOP.id,
+    el: SEGMENT.el_id,
+    fragments: [SEGMENT.label.en, SEGMENT.value.display.en, publisherOf(SEGMENT.value.source_id)],
   },
   {
     from: 'a dueling count',
-    narrative: 'mbg-poisoning',
-    el: 'd0',
-    fragments: [/Running count of verified case reports/, /CNN Indonesia/],
+    narrative: POISON.id,
+    el: COUNT.el_id,
+    fragments: [COUNT.who, COUNT.method.en, COUNT.period, publisherOf(COUNT.value.source_id)],
   },
 ];
 
@@ -684,19 +806,20 @@ test.describe('AC-APP-11 evidence sheets everywhere', () => {
       const sheet = page.getByTestId('evidence-sheet');
       await expect(sheet).toBeVisible();
       await expect(sheet).toHaveAttribute('role', 'dialog');
-      for (const fragment of c.fragments) await expect(sheet).toHaveText(fragment);
+      for (const fragment of c.fragments) await expect(sheet).toContainText(fragment);
     });
   }
 
   test('opens from a technique tag', async ({ page }) => {
-    await openAutopsy(page, 'mbg-stop');
+    const tag = must(STOP.tags[0], 'a technique tag on mbg-stop');
+    await openAutopsy(page, STOP.id);
     await skipSparring(page);
-    // mbg-stop tags: missing-link, hidden-stakeholder, no-denominator.
-    await page.locator('[data-tag="missing-link"]').first().click();
+    await page.locator(`[data-tag="${tag}"]`).first().click();
     const sheet = page.getByTestId('evidence-sheet');
     await expect(sheet).toBeVisible();
     await expect(sheet).toHaveAttribute('role', 'dialog');
-    await expect(sheet).toHaveText(/missing/i);
+    // The vocabulary is locked in contracts/technique-tags.json; the sheet names the tag it opened.
+    await expect(sheet).toContainText(tag);
   });
 });
 
@@ -713,7 +836,7 @@ test.describe('AC-APP-12 Nuance Card export', () => {
       await expect(overlay).toBeVisible();
       // Appendix C: no template variant may omit the counts row.
       await expect(overlay.locator('[data-st]').first()).toBeVisible();
-      await expect(overlay).toContainText('/n/mbg-stop');
+      await expect(overlay).toContainText(`/n/${STOP.id}`);
 
       const [download] = await Promise.all([
         page.waitForEvent('download'),
@@ -734,24 +857,24 @@ test.describe('AC-APP-12 Nuance Card export', () => {
 
 test.describe('AC-APP-13 share-target resolution', () => {
   test('a canonical URL resolves to the cached autopsy', async ({ page }) => {
-    await page.goto(`/share?url=${encodeURIComponent(SEED.canonicalStop)}`);
-    await expect(page.getByTestId('share-decision')).toContainText('mbg-stop');
+    await page.goto(`/share?url=${encodeURIComponent(CANONICAL_STOP)}`);
+    await expect(page.getByTestId('share-decision')).toContainText(STOP.id);
     await expect(page.getByTestId('share-decision')).toContainText('exact');
   });
 
   test('a text param carrying the URL resolves too', async ({ page }) => {
-    await page.goto(`/share?title=Shared&text=${encodeURIComponent(`Look at this ${SEED.canonicalStop}`)}`);
-    await expect(page.getByTestId('share-decision')).toContainText('mbg-stop');
+    await page.goto(`/share?title=Shared&text=${encodeURIComponent(`Look at this ${CANONICAL_STOP}`)}`);
+    await expect(page.getByTestId('share-decision')).toContainText(STOP.id);
   });
 
   test('an unknown URL routes to the queue state', async ({ page }) => {
-    await page.goto(`/share?url=${encodeURIComponent(SEED.unknownUrl)}`);
+    await page.goto(`/share?url=${encodeURIComponent(UNKNOWN_URL)}`);
     await expect(page.locator('[data-screen="queue"]')).toBeVisible();
     await expect(page.locator('[data-screen="queue"]')).toContainText(EN.queueTitle);
   });
 
   test('the fresh_demo URL routes to the progress flow', async ({ page }) => {
-    await page.goto(`/share?url=${encodeURIComponent(SEED.freshDemo)}`);
+    await page.goto(`/share?url=${encodeURIComponent(FRESH_DEMO)}`);
     const progress = page.locator('[data-screen="progress"]');
     await expect(progress).toBeVisible();
     await expect(progress).toContainText(FROZEN.honestLine);
@@ -780,14 +903,14 @@ test.describe('AC-APP-13 share-target resolution', () => {
 test.describe('AC-APP-14 region and language switching', () => {
   test('a region switch swaps the feed in under 300 ms of scripting, with no network', async ({ page }) => {
     await jump(page, 'radar.default');
-    await expect(page.locator('[data-feed-item="mbg-stop"]')).toBeVisible();
+    await expect(page.locator(`[data-feed-item="${STOP.id}"]`)).toBeVisible();
 
     // The warm-up prefetch has already resolved both packs, so the switch is a cache read.
     const requests: string[] = [];
     page.on('request', (request) => requests.push(request.url()));
 
     await page.getByTestId('pack-switch').click();
-    await expect(page.locator('[data-feed-item="tariffs-pay"]')).toBeVisible();
+    await expect(page.locator(`[data-feed-item="${EN_HERO}"]`)).toBeVisible();
 
     const ms = await page.evaluate(() => {
       try {
@@ -806,9 +929,13 @@ test.describe('AC-APP-14 region and language switching', () => {
   });
 
   test('the language toggle re-renders both the chrome and the narration', async ({ page }) => {
-    await openAutopsy(page, 'mbg-stop');
+    const claim = page.locator('[data-panel="claim_map"]');
+    const spine = must(STOP_CLAIM.spine[0], 'the first mbg-stop spine node');
+    const narrationId = must(STOP.narration.id.sentences[0], 'an ID narration sentence in mbg-stop');
+
+    await openAutopsy(page, STOP.id);
     await skipSparring(page);
-    await expect(page.locator('[data-el="p-claim"]')).toContainText('Stop MBG permanently');
+    await expect(claim).toContainText(spine.label.en);
 
     await jump(page, 'settings.default');
     await page.locator('[data-lang-option="id"]').click();
@@ -818,15 +945,15 @@ test.describe('AC-APP-14 region and language switching', () => {
     await expect(page.locator('[data-screen="main-radar"]')).toContainText(ID.symmetryLine);
     await expect(page.locator('[data-tab="settings"]')).toContainText(ID.tabSettings);
     // Content follows the app language too: the same card now draws its id headline.
-    await expect(page.locator('[data-feed-item="mbg-stop"]')).toContainText(SEED.stopHeadlineId);
+    await expect(page.locator(`[data-feed-item="${STOP.id}"]`)).toContainText(
+      must(STOP.headline.id, 'an ID headline for mbg-stop'),
+    );
 
-    await openAutopsy(page, 'mbg-stop');
+    await openAutopsy(page, STOP.id);
     await skipSparring(page);
     // Narration is content, localized inside the artifact rather than in the bundle.
-    await expect(page.locator('[data-sent]').first()).toContainText(
-      'Aritmetika anggarannya sendiri konsisten',
-    );
-    await expect(page.locator('[data-el="p-claim"]')).toContainText('Setop MBG permanen');
+    await expect(page.locator('[data-sent]').first()).toContainText(narrationId.text);
+    await expect(claim).toContainText(spine.label.id);
   });
 });
 
@@ -850,7 +977,7 @@ test.describe('AC-APP-17 offline', () => {
   test('a visited /n/{id} reloads offline', async ({ page, context }) => {
     await page.goto('/app');
     await page.waitForFunction(() => navigator.serviceWorker.controller !== null);
-    await page.goto('/n/mbg-stop');
+    await page.goto(`/n/${STOP.id}`);
     await expect(page.getByTestId('permalink-card')).toBeVisible();
 
     await context.setOffline(true);
@@ -871,8 +998,8 @@ test.describe('AC-APP-17 offline', () => {
 // --- AC-APP-18 ------------------------------------------------------------------------------
 
 test.describe('AC-APP-18 permalinks', () => {
-  test('/n/mbg-stop serves a shell whose og tags parse', async ({ page }) => {
-    const response = await page.request.get('/n/mbg-stop');
+  test(`/n/${STOP.id} serves a shell whose og tags parse`, async ({ page }) => {
+    const response = await page.request.get(`/n/${STOP.id}`);
     expect(response.status()).toBe(200);
     const html = await response.text();
 
@@ -881,29 +1008,29 @@ test.describe('AC-APP-18 permalinks', () => {
         `<meta[^>]+property=["']${property}["'][^>]+content=["']([^"']*)["']`,
         'i',
       ).exec(html);
-      expect(match, `${property} is present in the /n/mbg-stop shell`).not.toBeNull();
+      expect(match, `${property} is present in the /n/${STOP.id} shell`).not.toBeNull();
       return match?.[1] ?? '';
     };
 
     expect(meta('og:title')).toMatch(/ · Matterhorn$/);
     expect(
-      meta('og:title').includes(SEED.stopHeadlineEn) || meta('og:title').includes(SEED.stopHeadlineId),
+      meta('og:title').includes(STOP.headline.en) || meta('og:title').includes(STOP.headline.id ?? '\0'),
       'og:title carries the narrative headline',
     ).toBe(true);
-    // Blueprint 6.7, FROZEN template, verdict-free by construction.
+    // Blueprint 6.7, FROZEN template over mbg-stop's own derived counts, verdict-free by construction.
     expect(meta('og:description')).toBe(FROZEN.ogDescription);
     expect(meta('og:image')).toMatch(/^https?:\/\/|^\//);
-    expect(meta('og:url')).toContain('/n/mbg-stop');
+    expect(meta('og:url')).toContain(`/n/${STOP.id}`);
     expect(html).toMatch(/<title>[^<]*Matterhorn[^<]*<\/title>/i);
   });
 
-  test('/n/mbg-stop hydrates to the full autopsy', async ({ page }) => {
-    await page.goto('/n/mbg-stop');
+  test(`/n/${STOP.id} hydrates to the full autopsy`, async ({ page }) => {
+    await page.goto(`/n/${STOP.id}`);
     await expect(page.locator('[data-screen="autopsy"]')).toBeVisible();
-    await expect(page.getByTestId('permalink-card')).toContainText(SEED.stopHeadlineEn);
+    await expect(page.getByTestId('permalink-card')).toContainText(STOP.headline.en);
     await skipSparring(page);
-    await expect(page.locator('[data-el="p-claim"]')).toBeVisible();
-    await expect(page.locator('[data-el="p-flow"]')).toBeVisible();
+    await expect(page.locator('[data-panel="claim_map"]')).toBeVisible();
+    await expect(page.locator('[data-panel="money_flow"]')).toBeVisible();
   });
 });
 
@@ -915,17 +1042,26 @@ test.describe('AC-APP-19 methodology and 404', () => {
   }) => {
     await page.goto('/methodology');
 
-    await expect(page.getByTestId('policy-65')).toHaveText(SEED.policy65);
-    // Computed from the published lean fields: gov 4, neutral 2, opp 4.
-    await expect(page.getByTestId('methodology-symmetry')).toContainText('4');
-    await expect(page.getByTestId('methodology-symmetry')).toContainText('2');
-    await expect(page.getByTestId('methodology-disclosure')).toHaveText(SEED.disclosure);
+    await expect(page.getByTestId('policy-65')).toHaveText(METHODOLOGY.policy_65.en);
+    await expect(page.getByTestId('methodology-disclosure')).toHaveText(METHODOLOGY.disclosure.en);
 
+    // The receipt is methodology.json's own derived spread, and the page prints each lean with
+    // its share of the total. Recomputing the share here is what makes this a check on the
+    // rendering rather than a second copy of the number.
+    const receipt = page.getByTestId('methodology-symmetry');
+    const total = SYM.gov + SYM.neutral + SYM.opp;
+    for (const lean of [SYM.gov, SYM.neutral, SYM.opp]) {
+      await expect(receipt).toContainText(`${String(lean)} · ${((lean / total) * 100).toFixed(1)}%`);
+    }
+
+    // Every published correction, whatever the log holds. An empty log is a failure: AC-APP-19
+    // asks for the changelog, and a page with nothing on it would satisfy a weaker assertion.
+    expect(CORRECTIONS.entries.length, 'corrections.json carries a changelog').toBeGreaterThan(0);
     const log = page.getByTestId('corrections-log');
-    await expect(log).toContainText(SEED.correctionUnderReview);
-    await expect(log).toContainText(SEED.correctionCorrected);
-    await expect(log).toContainText('2026-06-24');
-    await expect(log).toContainText('2026-06-02');
+    for (const entry of CORRECTIONS.entries) {
+      await expect(log).toContainText(entry.summary.en);
+      await expect(log).toContainText(entry.date);
+    }
   });
 
   test('an unknown route renders the 404', async ({ page }) => {

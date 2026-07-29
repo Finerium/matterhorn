@@ -8,6 +8,12 @@
  * component per URL query, loading the seed content root by fetch at run time, never by
  * static import (validator check 7, asserted in tests/unit/renderers/quarantine.spec.ts).
  *
+ * THE ONLY SUITE THAT READS tests/fixtures/seed, and deliberately so. `--mode harness` is what
+ * defines `__SEED_ROOT__`; no other mode has it, and the app itself reads the published
+ * `content/` root everywhere (app/vite.config.ts). AC-GRAM is a component photograph against a
+ * fixed artifact: pinning it to a frozen fixture is what keeps these eight baselines still when
+ * the pipeline republishes. Every other e2e config in this directory is on content/.
+ *
  * Flake budget, in order of how much each one buys:
  *   reducedMotion 'reduce' plus animations 'disabled'  entrance animations are frozen, which
  *     is what makes a screenshot of an animated panel meaningful at all. The single exception

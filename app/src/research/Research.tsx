@@ -384,8 +384,12 @@ export default function Research() {
                 </>
               )}
 
+              {/* h2, not h3: the spread block renders whether or not a narrative is chosen, so
+                  with an empty rail it is the first heading under the page h1 and an h3 there
+                  skips a level. The two h3s above it are inside the selection, which brings its
+                  own h2 with it. */}
               <div className="m-rr-block m-num" data-testid="rail-lean">
-                <h3 className="m-rr-h">{t('research.rail.spread')}</h3>
+                <h2 className="m-rr-h">{t('research.rail.spread')}</h2>
                 <div className="m-symbar">
                   <div className="m-symbar-track" aria-hidden="true">
                     {(['gov', 'neutral', 'opp'] as const).map((tone) => (

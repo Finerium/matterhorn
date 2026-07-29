@@ -22,6 +22,7 @@ export default function Dueling({ panel, ctx }: { panel: DuelingPanel; ctx: Rend
   return (
     <section
       className="m-panel"
+      data-panel="dueling"
       {...elProps(panel.el_id, open, () => panelSheet(ctx, title, [t(ctx, panel.rule_line)], sources), 'group')}
     >
       <div className="m-panel-title">{title}</div>

@@ -174,10 +174,13 @@ export default function App({ start, banner }: { start?: Partial<AppState>; bann
 
   return (
     <LangContext.Provider value={state.lang}>
-      <div className="m-app">
+      {/* main, not div: every app screen lives in here, and without a landmark around them axe
+          reports the whole shell as content outside any region on every state. The routes
+          outside /app already answer that with `<main class="m-page">` in routes.tsx. */}
+      <main className="m-app">
         <Body state={state} nav={nav} setSheet={(sheet: SheetName | null) => { patch({ sheet }); }} />
         {banner}
-      </div>
+      </main>
     </LangContext.Provider>
   );
 }

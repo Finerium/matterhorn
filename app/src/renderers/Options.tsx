@@ -21,6 +21,7 @@ export default function Options({ panel, ctx }: { panel: OptionsPanel; ctx: Rend
   return (
     <section
       className="m-panel"
+      data-panel="options"
       {...elProps(panel.el_id, open, () => panelSheet(ctx, title, [t(ctx, UI.optionsIntro)], sources), 'group')}
     >
       <div className="m-panel-title">{title}</div>

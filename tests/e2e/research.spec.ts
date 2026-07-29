@@ -44,8 +44,10 @@ import { expect, test, type Locator, type Page } from '@playwright/test';
 
 import type { CaseLibrary, Constellation, Feed, Narrative } from '../../contracts/types';
 import { guardConsole } from './console-collector';
+import { guardNetwork } from './net-collector';
 
 guardConsole();
+guardNetwork();
 
 // --- what is published, read from disk -----------------------------------------------------
 

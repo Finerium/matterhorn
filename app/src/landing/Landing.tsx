@@ -14,9 +14,12 @@
  * screen reader builds is the section list the nav offers. The footer's two link groups are
  * `nav` landmarks named by their visible label, not headings, because they are navigation.
  *
- * No motion. Every set piece is drawn in the frame it holds standing still, which is the frame
- * reduced motion shows (AC-LAND-7). The choreography pass adds transform and opacity over these;
- * nothing below is a placeholder for it.
+ * Every set piece is drawn in the frame it holds STANDING STILL, and the choreography adds
+ * transform and opacity over that rather than toward it. `data-reveal` marks what reveals on
+ * enter; `data-beat` and `data-console-line` are in setpieces.tsx and this file's console list.
+ * None of them is a placeholder: strip motion.ts and landing.css's `no-preference` blocks and
+ * this document is still the finished page, which is exactly what a reduced-motion reader gets
+ * (AC-LAND-7).
  *
  * No video link and no watch affordance anywhere, locked by AC-LAND-13. No outbound link either,
  * as it happens: 4.4 names outlets and institutions but publishes no URL for any of them, and the
@@ -42,6 +45,7 @@ import {
   type SlotValues,
 } from './copy';
 import { useLanding } from './data';
+import { useChoreography } from './motion';
 import {
   Cascade,
   DeskWindow,
@@ -102,6 +106,9 @@ function Section({ anchor, children }: { anchor: string; children: ReactNode }) 
 export default function Landing() {
   const { data } = useLanding();
   const product = useProduct();
+  // `data-reveal` below and `data-beat` in setpieces.tsx are the seams; this only picks the path
+  // that drives them, and on the CSS baseline it does nothing but say which one won.
+  useChoreography(product !== null);
   const values: SlotValues = data ?? PENDING;
   const say = (parts: Line): string => fill(parts, values);
   const shots = grammarShots(product);
@@ -169,7 +176,7 @@ export default function Landing() {
             </div>
             <ol className="m-l-beatlist" role="list">
               {PROBLEM.beats.map((beat, at) => (
-                <li key={beat.kicker} className="m-l-beat" data-beat={at + 1}>
+                <li key={beat.kicker} className="m-l-beat" data-beat={at + 1} data-reveal>
                   <p className="m-l-beat-k">{beat.kicker}</p>
                   <p className="m-l-beat-b">{beat.body}</p>
                 </li>
@@ -190,7 +197,7 @@ export default function Landing() {
           <Cascade />
           <ul className="m-l-cases" role="list">
             {STAKES.cases.map((text) => (
-              <li key={text} className="m-l-case">
+              <li key={text} className="m-l-case" data-reveal>
                 {text}
               </li>
             ))}
@@ -221,7 +228,7 @@ export default function Landing() {
             </div>
             <ul className="m-l-receipts" role="list">
               {FLEET.receipts.map((text) => (
-                <li key={text} className="m-l-receipt" data-testid="receipt-card">
+                <li key={text} className="m-l-receipt" data-testid="receipt-card" data-reveal>
                   {text}
                 </li>
               ))}
@@ -238,7 +245,7 @@ export default function Landing() {
           <p className="m-l-lead">{GRAMMAR.lead}</p>
           <ul className="m-l-grid" role="list">
             {GRAMMAR.cards.map((text, at) => (
-              <li key={text} className="m-l-gcard" data-testid="grammar-card">
+              <li key={text} className="m-l-gcard" data-testid="grammar-card" data-reveal>
                 <div className="m-l-shot" inert>
                   {shots[at]}
                 </div>
@@ -271,7 +278,7 @@ export default function Landing() {
           </h2>
           <ul className="m-l-icards" role="list">
             {INTEGRITY.cards.map((card) => (
-              <li key={say(card)} className="m-l-icard">
+              <li key={say(card)} className="m-l-icard" data-reveal>
                 {say(card)}
               </li>
             ))}

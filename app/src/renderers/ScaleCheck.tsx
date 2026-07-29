@@ -40,6 +40,7 @@ export default function ScaleCheck({ panel, ctx }: { panel: ScaleCheckPanel; ctx
   return (
     <section
       className="m-panel"
+      data-panel="scale_check"
       {...elProps(panel.el_id, open, () => panelSheet(ctx, title, [t(ctx, panel.takeaway)], sources), 'group')}
     >
       <div className="m-panel-title">{title}</div>

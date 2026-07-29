@@ -9,11 +9,13 @@
    One exception, permitted by blueprint 4.1.2 and used nowhere else: the glacial gradient behind
    the hero. It is cool, non-semantic, and declared once as `--glacial`.
 
-   No motion. Every rule here is a resting state; the choreography pass animates transform and
-   opacity over them. `m-l-` prefixes everything and collides with nothing.
+   Every rule up to the breakpoints is a RESTING STATE, and the resting state is the final frame.
+   The choreography at the bottom animates transform and opacity over it, from inside
+   `prefers-reduced-motion: no-preference`, so removing that section leaves the finished page
+   rather than a half-drawn one. `m-l-` prefixes everything and collides with nothing.
 
    Class order follows the page: chrome, type, hero, then one block per section, then the
-   figures they share, then the breakpoints (480, 768, 900, 1024). */
+   figures they share, then the breakpoints (480, 768, 900, 1024), then the motion. */
 
 /* --- the page --------------------------------------------------------------------------- */
 
@@ -632,12 +634,213 @@
   .m-l-grid { --shot: 0.59; }
 }
 
+/* --- motion: the loops ------------------------------------------------------------------ */
+
+/* Everything below is DECLARED inside `no-preference`, which is the whole of the reduced-motion
+   story. There is no counter-block that switches these off, because under `reduce` none of these
+   rules exist: the resting state above IS the final frame, so a reader who asks for less motion
+   gets the finished picture and `document.getAnimations()` finds nothing to report (AC-LAND-7).
+
+   Two blocks, split by what they need rather than by what they look like. THIS one is ordinary
+   keyframes on a document timeline: no scroll involved, so it runs on every engine including
+   Firefox and GSAP is never asked for it. The next one is the scroll-linked half.
+
+   Transform and opacity only, per blueprint 4.4. Every gesture shares one shape (act, hold, ease
+   back) so a single keyframe set per gesture plus `animation-delay` stages the whole sequence,
+   and the cycle length stays 14 s for every part of it. */
+
+@media (prefers-reduced-motion: no-preference) {
+  /* 4.4.2: the claim map assembling itself, gently, every 14 s. The order is the storyboard's:
+     headline chip, spine nodes, the supported edge, the missing edge, the hidden branches from
+     the right, count chips last. Assembly order is DOM order, so the delays are the only thing
+     that says "next" and nothing here restructures the renderer it animates. */
+  .m-l-hero { --loop: 14s; }
+
+  .m-l-chip { animation: mth-drop var(--loop) infinite both; }
+
+  /* The spine rows. `n + 2` skips the column head; the cap matches the crop, so nothing is
+     animated that the mount is not showing. */
+  .m-l-mount-hero .m-map > div:first-child > div:nth-child(n + 2):nth-child(-n + 7) {
+    animation: mth-rise var(--loop) infinite both;
+  }
+  .m-l-mount-hero .m-map > div:first-child > div:nth-child(2) { animation-delay: 0.4s; }
+  .m-l-mount-hero .m-map > div:first-child > div:nth-child(3) { animation-delay: 0.55s; }
+  .m-l-mount-hero .m-map > div:first-child > div:nth-child(4) { animation-delay: 0.7s; }
+  .m-l-mount-hero .m-map > div:first-child > div:nth-child(5) { animation-delay: 0.85s; }
+  .m-l-mount-hero .m-map > div:first-child > div:nth-child(6) { animation-delay: 1s; }
+  .m-l-mount-hero .m-map > div:first-child > div:nth-child(7) { animation-delay: 1.15s; }
+
+  /* The edges draw. A stroke that grows is `scaleY` from its top, not a dash offset: dashoffset
+     is neither transform nor opacity, and the dash pattern here is carrying the status. */
+  .m-l-mount-hero .m-edge svg {
+    transform-origin: top center;
+    animation: mth-draw var(--loop) infinite both;
+  }
+  .m-l-mount-hero .m-edge[data-st='supported'] svg { animation-delay: 1.3s; }
+  .m-l-mount-hero .m-edge[data-st='missing'] svg { animation-delay: 1.6s; }
+  /* The gap pulse, on its own short cycle rather than the 14 s one: it is a property of the gap,
+     not a step in the assembly, and it is the one thing on this page that keeps moving. */
+  .m-l-mount-hero .m-edge[data-st='missing'] svg line { animation: mth-pulse 2.6s ease-in-out infinite; }
+
+  /* The hidden branches, in from the right. Six is what the published artifact carries. */
+  .m-l-mount-hero .m-hidden { animation: mth-slide var(--loop) infinite both; }
+  .m-l-mount-hero .m-hidden:nth-child(1) { animation-delay: 1.9s; }
+  .m-l-mount-hero .m-hidden:nth-child(2) { animation-delay: 2.02s; }
+  .m-l-mount-hero .m-hidden:nth-child(3) { animation-delay: 2.14s; }
+  .m-l-mount-hero .m-hidden:nth-child(4) { animation-delay: 2.26s; }
+  .m-l-mount-hero .m-hidden:nth-child(5) { animation-delay: 2.38s; }
+  .m-l-mount-hero .m-hidden:nth-child(6) { animation-delay: 2.5s; }
+
+  /* The callouts arrive with the thing each one names, and the counts pop last. */
+  .m-l-callout { animation: mth-pop var(--loop) infinite both; }
+  .m-l-callout:nth-child(1) { animation-delay: 1.4s; }
+  .m-l-callout:nth-child(2) { animation-delay: 1.7s; }
+  .m-l-callout:nth-child(3) { animation-delay: 2.1s; }
+  .m-l-counts { animation: mth-pop var(--loop) infinite both; animation-delay: 2.9s; }
+
+  /* 4.4.5: the console loops. The TEXT never changes opacity, only its position: these are seven
+     lines of prose about what the fleet did, and prose that dips below full contrast on a timer
+     is a legibility problem dressed as a set piece. The tick is what fades. */
+  .m-l-console { --console: 12s; }
+  .m-l-cline { animation: mth-line var(--console) infinite both; }
+  .m-l-tick { animation: mth-tick var(--console) infinite both; }
+  .m-l-cline[data-console-line='1'], .m-l-cline[data-console-line='1'] .m-l-tick { animation-delay: 0s; }
+  .m-l-cline[data-console-line='2'], .m-l-cline[data-console-line='2'] .m-l-tick { animation-delay: 0.85s; }
+  .m-l-cline[data-console-line='3'], .m-l-cline[data-console-line='3'] .m-l-tick { animation-delay: 1.7s; }
+  .m-l-cline[data-console-line='4'], .m-l-cline[data-console-line='4'] .m-l-tick { animation-delay: 2.55s; }
+  .m-l-cline[data-console-line='5'], .m-l-cline[data-console-line='5'] .m-l-tick { animation-delay: 3.4s; }
+  .m-l-cline[data-console-line='6'], .m-l-cline[data-console-line='6'] .m-l-tick { animation-delay: 4.25s; }
+  .m-l-cline[data-console-line='7'], .m-l-cline[data-console-line='7'] .m-l-tick { animation-delay: 5.1s; }
+}
+
+/* --- motion: the room the pinned sequence needs ------------------------------------------ */
+
+/* A pinned four-beat sequence needs scroll to advance through, and 4.4.3's four beats are about
+   595px of prose: at a 900px viewport the figure sticks for a couple of hundred pixels and all
+   four beats are over before the pin has properly engaged. Measured, not assumed. So at desktop
+   widths the beat list is given a viewport and a half and spreads its four blocks down it, which
+   is what turns `contain` below into a range that sits wholly inside the pin.
+
+   Inside `no-preference` on purpose, and this is the load-bearing half of AC-LAND-7's honesty: the
+   travel exists ONLY to carry motion, so a reader who asked for no motion is not made to scroll
+   through a viewport and a half of empty column to reach the same four paragraphs. Reduced motion
+   gets the compact block, all four spine groups drawn, and the beats as the list they already are.
+   The pin is `position: sticky`, declared at 900px above and untouched here, so it is the same pin
+   on every engine including the GSAP path; only the offset moves, to keep the figure beside the
+   beat it is illustrating rather than at the top of a very tall column. */
+
+@media (prefers-reduced-motion: no-preference) {
+  @media (min-width: 900px) {
+    .m-l-beatlist { min-height: 160vh; justify-content: space-between; }
+    .m-l-beats-fig { top: 30vh; }
+  }
+}
+
+/* --- motion: the scroll-linked half ------------------------------------------------------ */
+
+/* The native baseline of blueprint 4.4 and ADR-7. The `@supports` pair is the same predicate
+   motion.ts branches on, so a browser runs this block or it runs GSAP, never both and never
+   neither. What GSAP is NOT asked for is the pin: `.m-l-beats-fig` and `.m-l-console-hold` are
+   `position: sticky` at 900px and up, which is the pin, on every engine. */
+
+@supports (animation-timeline: view()) and (view-timeline-name: --v) {
+  @media (prefers-reduced-motion: no-preference) {
+    [data-reveal] {
+      animation: mth-reveal 1s linear both;
+      animation-timeline: view();
+      animation-range: entry 8% entry 62%;
+    }
+
+    /* 4.4.3 on desktop: the figure pins (sticky, above) and the graph evolves per beat. One named
+       timeline on the block both halves live in, so the four groups inside the pinned figure are
+       driven by how far the beat list has travelled. No `timeline-scope` is needed and none is
+       asked for: `--beats` is declared on an ancestor of the groups, which is the lookup that
+       works everywhere `animation-timeline` does.
+
+       `contain` on a block taller than the scrollport runs from "top edge at the top" to "bottom
+       edge at the bottom", and the sticky figure is pinned from slightly before the first to well
+       after the second, so the whole range sits inside the pin for any viewport height. That is
+       what the 160vh above buys, and it is why the range is `contain` rather than a hand-fitted
+       percentage of `cover`, which would only be right at one window size.
+
+       Below 900px none of this applies, the figure is not sticky, and the beats are what reveal:
+       blueprint 4.3's "reveal-on-enter, no pinning on touch viewports". */
+    @media (min-width: 900px) {
+      .m-l-beats { view-timeline-name: --beats; view-timeline-axis: block; }
+      .m-l-spine [data-beat] {
+        animation: mth-beat 1s linear both;
+        animation-timeline: --beats;
+      }
+      .m-l-spine [data-beat='1'] { animation-range: contain 2% contain 16%; }
+      .m-l-spine [data-beat='2'] { animation-range: contain 26% contain 40%; }
+      .m-l-spine [data-beat='3'] { animation-range: contain 50% contain 64%; }
+      .m-l-spine [data-beat='4'] { animation-range: contain 74% contain 88%; }
+    }
+  }
+}
+
+/* --- the keyframes ---------------------------------------------------------------------- */
+
+/* The loop shape, said once: act over the first few percent, hold, ease back over the last few.
+   That is what makes "every 14 s" gentle rather than a cut, and what lets `animation-delay` be
+   the only difference between one gesture and the next. */
+
+@keyframes mth-drop {
+  0% { opacity: 0; transform: translateY(-10px); }
+  4%, 95% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+@keyframes mth-rise {
+  0% { opacity: 0; transform: translateY(9px); }
+  4%, 95% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: translateY(9px); }
+}
+@keyframes mth-draw {
+  0% { transform: scaleY(0); }
+  4%, 95% { transform: none; }
+  100% { transform: scaleY(0); }
+}
+@keyframes mth-slide {
+  0% { opacity: 0; transform: translateX(20px); }
+  4%, 95% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: translateX(20px); }
+}
+@keyframes mth-pop {
+  0% { opacity: 0; transform: scale(0.94); }
+  4%, 95% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: scale(0.94); }
+}
+@keyframes mth-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+@keyframes mth-line {
+  0% { transform: translateY(7px); }
+  5%, 94% { transform: none; }
+  100% { transform: translateY(7px); }
+}
+@keyframes mth-tick {
+  0% { opacity: 0; transform: scale(0.4); }
+  5%, 94% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: scale(0.4); }
+}
+
+/* Scroll-linked, so these are progress rather than time: 0 is before, 1 is arrived. */
+@keyframes mth-reveal {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes mth-beat {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
 /* --- reduced motion --------------------------------------------------------------------- */
 
-/* Nothing here animates yet. The one behaviour that is motion is the sticky pin, and a pinned
-   figure with no animation on it is a figure that stays put, which is legible either way. This
-   block is where the choreography pass switches its own work off; it is left holding the press
-   transition the renderer layer puts on the cards inside the set pieces. */
+/* Deliberately almost empty, and that is the point. Every rule this page animates with is
+   declared inside `no-preference` above, so there is nothing here to switch off; what is left is
+   the press transition the renderer layer puts on the cards inside the set pieces, which is the
+   one piece of motion on this page that landing.css did not author. */
 @media (prefers-reduced-motion: reduce) {
   .m-l [data-press='1'] { transition: none; }
 }

@@ -43,7 +43,11 @@ export default defineConfig({
   testDir: '.',
   // Pinned, like every other config in this directory: three suites share one testDir and none of
   // them may collect another's specs.
-  testMatch: ['landing-copy.spec.ts', 'landing-responsive.spec.ts'],
+  // security.spec.ts rides here rather than in a fourth config: AC-SEC-3, 4, 6 and AC-LAND-11 all
+  // need the BUILT app served under the production headers, which is exactly what this config
+  // already stands up, and a second build-backed server would double the slowest job in CI for a
+  // page that is byte-identical to this one.
+  testMatch: ['landing-copy.spec.ts', 'landing-responsive.spec.ts', 'security.spec.ts'],
   // Its own root, so a landing width never collides with a Gate 2 panel or a Gate 3 state.
   snapshotDir: './__screenshots__/landing',
   snapshotPathTemplate: '{snapshotDir}/{projectName}/{arg}-{platform}{ext}',

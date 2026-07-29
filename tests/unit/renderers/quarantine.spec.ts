@@ -75,7 +75,8 @@ describe('seed quarantine', () => {
         'seed',
       ]);
       // The table has to have been read at all, or the assertion above is vacuous.
-      expect(Object.keys(checkTable(run.stdout)).length).toBe(10);
+      // Eleven rows: 6.11's ten checks plus the AC-PERF-2 size budgets.
+      expect(Object.keys(checkTable(run.stdout)).length).toBe(11);
 
       for (const file of [
         'narratives/mbg-stop.json',

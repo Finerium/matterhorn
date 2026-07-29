@@ -255,6 +255,10 @@ export default function Radar({ state, nav }: { state: AppState; nav: Nav }) {
                   type="button"
                   className="m-row"
                   data-dim={region.pack === null ? '1' : '0'}
+                  // Same reason as the onboarding rows: a region with no pack is not selectable,
+                  // and saying so is what makes the .45 dim honest to AT and exempt under WCAG
+                  // 1.4.3 rather than a silent 2.75:1 contrast failure.
+                  aria-disabled={region.pack === null ? true : undefined}
                   aria-pressed={region.pack !== null && region.pack === state.pack}
                   onClick={() => {
                     if (region.pack === null) {

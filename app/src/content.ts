@@ -4,12 +4,12 @@
  * One base path decides where content comes from, and it is a build-time define:
  *
  *   production build   `/content`, the shipped artifact root
- *   dev and e2e        SEED MODE, `/@fs<repo>/tests/fixtures/seed`, exactly the way the Gate 2
- *                      harness reaches the same root
+ *   dev and e2e        `/@fs<repo>/content`, the same published artifacts over vite's fs route
  *
- * That is the whole switch. When Gate C publishes real content into `content/`, nothing here
- * changes: the production define already points at it. And because the seed root is reached by
- * URL rather than by module specifier, no fixture can enter the app import graph, which is what
+ * That is the whole switch, and both sides of it are the generated `content/` root: the app has
+ * no fixture mode. The Gate 2 seed fixtures are reachable only from the harness entry, through a
+ * define that exists only in harness mode. And because every artifact is reached by URL rather
+ * than by module specifier, no fixture can enter the app import graph either way, which is what
  * blueprint 6.11 check 7 asserts (`validate:content --scan-app app/src`).
  *
  * Caching is a module-level map of resolved artifacts. It exists for one behaviour: switching

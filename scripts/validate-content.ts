@@ -1,5 +1,7 @@
 /**
- * Content validator CLI. Blueprint 6.11, all ten checks.
+ * Content validator CLI. Blueprint 6.11, all ten checks, plus the AC-PERF-2 size budgets as an
+ * eleventh: the budgets are a property of the published root, so they are asked where the root is
+ * already open rather than in a script of their own.
  *
  *   pnpm validate:content [--dir <path>] [--scan-app <dir>]
  *
@@ -622,6 +624,35 @@ function checkFeed(ctx: Ctx): Row {
   return row('feed', `${feeds.length} pack feed(s) resolve with one hero each`, failures);
 }
 
+// 11. AC-PERF-2 content budgets: the whole published root at most 2 MB, any one narrative 120 KB
+const TOTAL_MAX = 2 * 1024 * 1024;
+const NARRATIVE_MAX = 120 * 1024;
+const kb = (bytes: number): string => `${(bytes / 1024).toFixed(1)} KB`;
+
+/**
+ * Bytes on disk, not parsed size: what a reader downloads is the file, whitespace and all. The
+ * budget is over the JSON the app fetches at runtime, which is every artifact in the root, so the
+ * total is taken over ctx.artifacts rather than over narratives alone.
+ */
+function checkSize(ctx: Ctx): Row {
+  const sizes = ctx.artifacts.map((a) => ({ rel: a.rel, bytes: statSync(a.abs).size }));
+  const total = sizes.reduce((sum, s) => sum + s.bytes, 0);
+  const failures: Failure[] = sizes
+    .filter((s) => ctx.narratives.some((n) => n.rel === s.rel) && s.bytes > NARRATIVE_MAX)
+    .map((s) => ({ file: s.rel, message: `${kb(s.bytes)} exceeds the ${kb(NARRATIVE_MAX)} per-narrative budget` }));
+  if (total > TOTAL_MAX) {
+    failures.push({
+      file: `${ctx.label}${sep}`,
+      message: `published JSON totals ${kb(total)}, over the ${kb(TOTAL_MAX)} budget`,
+    });
+  }
+  const largest = [...sizes].sort((a, b) => b.bytes - a.bytes)[0];
+  const detail =
+    `${kb(total)} of ${kb(TOTAL_MAX)} total` +
+    (largest === undefined ? '' : `, largest ${largest.rel} at ${kb(largest.bytes)} of ${kb(NARRATIVE_MAX)}`);
+  return row('size', detail, failures);
+}
+
 // --- reporting ------------------------------------------------------------------------
 
 const clip = (s: string): string => (s.length > 80 ? `${s.slice(0, 77)}...` : s);
@@ -705,7 +736,7 @@ function main(): void {
     ajv,
   };
 
-  // Order is 6.11's. Every check runs; none may short-circuit another.
+  // Order is 6.11's, plus AC-PERF-2's size budgets last. Every check runs; none short-circuits.
   const rows = [
     checkSchema(ctx),
     checkOrphans(ctx),
@@ -717,6 +748,7 @@ function main(): void {
     checkUrlIndex(ctx),
     checkLiveness(ctx),
     checkFeed(ctx),
+    checkSize(ctx),
   ];
 
   console.log(`validate:content ${label}${sep} (${artifacts.length} artifact(s), ${narratives.length} narrative(s))`);
@@ -733,7 +765,9 @@ function main(): void {
     process.exit(1);
   }
   console.log('');
-  console.log(`OK: ${artifacts.length} artifact(s) in ${label}${sep} pass all ten checks of blueprint 6.11.`);
+  console.log(
+    `OK: ${artifacts.length} artifact(s) in ${label}${sep} pass all ten checks of blueprint 6.11 and the AC-PERF-2 size budgets.`,
+  );
 }
 
 main();

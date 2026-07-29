@@ -23,6 +23,7 @@ export default function ClaimMap({ panel, ctx }: { panel: ClaimMapPanel; ctx: Re
   return (
     <section
       className="m-panel"
+      data-panel="claim_map"
       {...elProps(panel.el_id, open, () => panelSheet(ctx, title, [t(ctx, UI.tapHint)], sources), 'group')}
     >
       <div className="m-panel-title">{title}</div>

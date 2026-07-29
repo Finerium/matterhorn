@@ -50,7 +50,19 @@ function Row({
   onTap: () => void;
 }) {
   return (
-    <button type="button" className="m-row" data-dim={dimmed === true ? '1' : '0'} aria-pressed={selected} onClick={onTap}>
+    // aria-disabled rather than disabled: the row is not selectable, which is what a reader
+    // needs announced, but it still answers a tap with the toast that says why. Without it a
+    // screen reader reads five equal choices where only two are real, and axe reads the .45
+    // dim as a contrast failure (2.87:1 label, 1.93:1 sub) on text WCAG 1.4.3 exempts as an
+    // inactive component. Both readings are fixed by saying the true thing once.
+    <button
+      type="button"
+      className="m-row"
+      data-dim={dimmed === true ? '1' : '0'}
+      aria-disabled={dimmed === true ? true : undefined}
+      aria-pressed={selected}
+      onClick={onTap}
+    >
       <span className="m-row-main">
         <span className="m-row-label">{label}</span>
         {sub === undefined ? null : <span className="m-row-sub">{sub}</span>}

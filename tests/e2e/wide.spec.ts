@@ -15,8 +15,10 @@
 import { expect, test } from '@playwright/test';
 
 import { guardConsole } from './console-collector';
+import { guardNetwork } from './net-collector';
 
 guardConsole();
+guardNetwork();
 
 declare global {
   interface Window {

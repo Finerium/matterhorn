@@ -133,17 +133,22 @@ test.describe('blueprint 4.3, /app at 768 and above renders inside the phone fra
 
 // --- the wide autopsy --------------------------------------------------------------------------
 
-/** Past the sparring gate to the panel stack, whatever gate this narrative carries. */
+/**
+ * Past the sparring gate to the panel stack, whatever gate this narrative carries.
+ *
+ * `data-panel` rather than `[data-el]`: element ids belong to the artifact and change on every
+ * publish, while `data-panel` is the renderer's own name for which grammar component it is.
+ */
 async function skipSparring(page: Page): Promise<void> {
   const skip = page.getByTestId('spar-skip');
   if (await skip.isVisible()) await skip.click();
-  await expect(page.locator('[data-el="p-claim"], [data-el="p-duel"], [data-el="p-scale"]').first()).toBeVisible();
+  await expect(page.locator('[data-panel="claim_map"]')).toBeVisible();
 }
 
 /** The narration and the first panel, measured. `.m-voice` is the narration renderer's root. */
 async function narrationAndPanels(page: Page): Promise<{ narration: Box; panels: Box }> {
   const narration = await boxOf(page.locator('.m-voice'), 'the narration');
-  const panels = await boxOf(page.locator('[data-el="p-claim"]'), 'the claim map panel');
+  const panels = await boxOf(page.locator('[data-panel="claim_map"]'), 'the claim map panel');
   return { narration, panels };
 }
 

@@ -33,6 +33,7 @@ export default function MoneyFlow({ panel, ctx, stopped, onToggle }: MoneyFlowPr
   return (
     <section
       className="m-panel"
+      data-panel="money_flow"
       {...elProps(panel.el_id, open, () => panelSheet(ctx, title, [t(ctx, panel.root.label)], sources), 'group')}
     >
       <div className="m-panel-title">{title}</div>

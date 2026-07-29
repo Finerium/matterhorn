@@ -19,8 +19,11 @@
  * page's, covering anything a renderer marks addressable in a later gate. A set piece is a
  * picture, and a picture that answers Enter is not one.
  *
- * ponytail: no motion. The frames here are what a reader with reduced motion sees, so they are
- * built as the finished picture and the choreography pass animates from them, not toward them.
+ * ponytail: no motion IN HERE. The frames are what a reader with reduced motion sees, so they are
+ * built as the finished picture and landing.css animates from them, not toward them. Nothing in
+ * this file knows whether anything is moving; the seams it leaves (`data-beat` on the spine
+ * groups, `data-console-line` on the fleet lines) are attributes, and a stylesheet that never
+ * loads leaves them as plain markup.
  */
 import { useMemo, type ReactNode } from 'react';
 import type {

@@ -4,6 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#F2F1EC" />
+    <!-- AC-LAND-9 SEO. Without this Lighthouse scores the landing's SEO category at 0.82, which
+         is under the 0.90 floor, on the meta-description audit alone. The text is HERO.subhead
+         from app/src/landing/copy.ts verbatim; a permalink replaces it with its own counts line
+         in scripts/build-permalinks.ts, so no page ships someone else's summary. -->
+    <meta
+      name="description"
+      content="Matterhorn dissects the news you actually see. Not whether each fact is true, but whether the story connecting them holds. No verdicts, no scores, no sides. You stay the judge."
+    />
     <link rel="icon" href="/icons/icon-192.png" />
     <link rel="apple-touch-icon" href="/icons/icon-192.png" />
     <title>Matterhorn</title>

@@ -23,6 +23,7 @@ export default function Incidence({ panel, ctx }: { panel: IncidencePanel; ctx: 
   return (
     <section
       className="m-panel"
+      data-panel="incidence"
       {...elProps(
         panel.el_id,
         open,

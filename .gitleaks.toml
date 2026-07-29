@@ -1,0 +1,37 @@
+# gitleaks config for AC-SEC-1: the secret scan over the full history.
+#
+#   gitleaks git --log-opts=--all --redact
+#
+# The default rule set runs untouched (`useDefault = true`). One allowlist sits on top of it,
+# and it exists because of a specific, checkable false positive rather than to quieten noise.
+#
+# WHAT IS ALLOWED, AND WHY IT IS NOT A SECRET
+# Every published narrative carries `manifest.gates.{symmetry,fidelity}.token`: a SHA-256 of the
+# artifact's own canonical bytes, computed by pipeline/lib/canonical.ts. gitleaks' generic-api-key
+# rule sees a 64-character high-entropy string under a key literally named "token" and reports it.
+# It is the opposite of a secret: it is derived from bytes that ship in the same file, anyone can
+# recompute it, and blueprint 6.11 check 6 does exactly that on every `pnpm validate:content` run.
+# A real credential pasted into that field would fail that check, which is why narrowing here does
+# not open a hole: the value is verified elsewhere, by recomputation, on every CI run.
+#
+# The allowlist is deliberately narrow on three axes at once (condition = "AND"):
+#   paths    only the three roots that hold published artifacts, run logs and their fixtures
+#   regexes  only a 64-hex value under the key "token", nothing else in those files
+# Anything else, anywhere, including a real key in content/, is still a finding.
+
+title = "Matterhorn"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Gate tokens: SHA-256 of the artifact's own bytes, recomputed by validate:content check 6"
+condition = "AND"
+regexTarget = "match"
+regexes = ['''token":\s*"[0-9a-f]{64}"''']
+paths = [
+  '''^content/''',
+  '''^pipeline/runs/''',
+  '''^tests/fixtures/''',
+  '''^tests/pipeline/fixtures/''',
+]

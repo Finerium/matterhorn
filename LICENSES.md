@@ -29,6 +29,18 @@ attributed link previews with the outlet's name and an outbound link (blueprint 
 7.3, standard link-preview practice). The complete per-narrative record, including
 original URLs, fetch dates, and fallbacks, lives in `content/og_attribution.json`.
 
+## App icons (`app/public/icons/`)
+
+First-party. Generated from the Matterhorn mark by `scripts/gen-icons.mjs` (sharp), committed so
+the build has no image step. No third-party rights attach to any of them.
+
+| File | Source page | Author (verbatim) | License | Attribution required | Notes |
+|---|---|---|---|---|---|
+| icon-192.png | `scripts/gen-icons.mjs` | Matterhorn (first party) | Owned, no third-party rights | No | PWA `any` purpose, 192x192. |
+| icon-512.png | `scripts/gen-icons.mjs` | Matterhorn (first party) | Owned, no third-party rights | No | PWA `any` purpose, 512x512. |
+| maskable-192.png | `scripts/gen-icons.mjs` | Matterhorn (first party) | Owned, no third-party rights | No | PWA `maskable` purpose, 192x192, safe-zone padded. |
+| maskable-512.png | `scripts/gen-icons.mjs` | Matterhorn (first party) | Owned, no third-party rights | No | PWA `maskable` purpose, 512x512, safe-zone padded. |
+
 ## Fonts
 
 The landing grotesque (Inter or Geist, OQ-8 decision at Gate 4) will be self-hosted

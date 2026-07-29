@@ -321,42 +321,42 @@
       "name": "autopsy.panel.claim-map",
       "goto": "autopsy.panel.claim-map",
       "screen": "autopsy",
-      "visible": "[data-el=\"p-claim\"]",
+      "visible": "[data-panel=\"claim_map\"]",
       "note": "Gate 2 ClaimMap mounted in the stack. mbg-stop: n1..n4, e0..e2, h0..h3."
     },
     {
       "name": "autopsy.panel.scale",
       "goto": "autopsy.panel.scale",
       "screen": "autopsy",
-      "visible": "[data-el=\"p-scale\"]",
+      "visible": "[data-panel=\"scale_check\"]",
       "note": "Gate 2 ScaleCheck. mbg-stop segments sg0 onward."
     },
     {
       "name": "autopsy.panel.money.off",
       "goto": "autopsy.panel.money.off",
       "screen": "autopsy",
-      "visible": "[data-el=\"p-flow\"] [role=\"switch\"][aria-checked=\"false\"]",
+      "visible": "[data-panel=\"money_flow\"] [role=\"switch\"][aria-checked=\"false\"]",
       "note": "AC-APP-9. Stop toggle off: no row struck."
     },
     {
       "name": "autopsy.panel.money.on",
       "goto": "autopsy.panel.money.on",
       "screen": "autopsy",
-      "visible": "[data-el=\"p-flow\"] [data-strike=\"1\"]",
+      "visible": "[data-panel=\"money_flow\"] [data-strike=\"1\"]",
       "note": "AC-APP-9. Stop toggle on: exactly the severed_if_stopped rows struck. All four of mbg-stop's rows are severed."
     },
     {
       "name": "autopsy.panel.incidence",
       "goto": "autopsy.panel.incidence",
       "screen": "autopsy",
-      "visible": "[data-el=\"p-inc\"]",
+      "visible": "[data-panel=\"incidence\"]",
       "note": "Gate 2 Incidence. mbg-stop cells i0..i2."
     },
     {
       "name": "autopsy.panel.dueling",
       "goto": "autopsy.panel.dueling",
       "screen": "autopsy",
-      "visible": "[data-el=\"p-duel\"]",
+      "visible": "[data-panel=\"dueling\"]",
       "note": "mbg-poisoning: BGN 6,517, BPOM 9,089, JPPI 8,649, each with method and period."
     },
     {
@@ -377,14 +377,14 @@
       "name": "autopsy.panel.options",
       "goto": "autopsy.panel.options",
       "screen": "autopsy",
-      "visible": "[data-el=\"p-options\"]",
+      "visible": "[data-panel=\"options\"]",
       "note": "Options plus the playbook. No ranking, no recommendation."
     },
     {
       "name": "autopsy.panel.family",
       "goto": "autopsy.panel.family",
       "screen": "autopsy",
-      "visible": "[data-el=\"p-family\"]",
+      "visible": "[data-panel=\"family\"]",
       "note": "The skeleton line and every member outlet."
     },
     {
