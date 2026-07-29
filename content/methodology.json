@@ -1,0 +1,78 @@
+{
+  "symmetry": {
+    "gov": 6,
+    "neutral": 1,
+    "opp": 3,
+    "computed_at": "2026-07-28T21:52:08Z"
+  },
+  "metrics": [
+    {
+      "key": "published",
+      "label": {
+        "en": "Dissections published in this run",
+        "id": "Diseksi yang diterbitkan pada proses ini"
+      },
+      "kind": "measured",
+      "value": "10",
+      "run_id": "run-2026-07-29"
+    },
+    {
+      "key": "audit_pass",
+      "label": {
+        "en": "Published dissections whose symmetry and fidelity verdicts both passed (none publishes otherwise)",
+        "id": "Diseksi terbit yang kedua putusan gerbangnya lolos, simetri dan fidelitas (tidak ada yang terbit tanpa itu)"
+      },
+      "kind": "measured",
+      "value": "10 of 10",
+      "run_id": "run-2026-07-29"
+    },
+    {
+      "key": "gate_blocks",
+      "label": {
+        "en": "Dissections a gate sent back for a fix before publication",
+        "id": "Diseksi yang dikembalikan gerbang untuk diperbaiki sebelum terbit"
+      },
+      "kind": "measured",
+      "value": "4 of 10, across 5 block(s)",
+      "run_id": "run-2026-07-29"
+    },
+    {
+      "key": "orphan_numbers",
+      "label": {
+        "en": "Numbers rendered without a source identifier",
+        "id": "Angka yang ditampilkan tanpa identitas sumber"
+      },
+      "kind": "measured",
+      "value": "0",
+      "run_id": "run-2026-07-29"
+    },
+    {
+      "key": "latency_target",
+      "label": {
+        "en": "Time to produce one dissection",
+        "id": "Waktu untuk menghasilkan satu diseksi"
+      },
+      "kind": "design_target",
+      "value": "under 3 minutes, not met in this run",
+      "run_id": "run-2026-07-29"
+    },
+    {
+      "key": "latency_median",
+      "label": {
+        "en": "Median wall clock per dissection in this run, fleet run concurrently, including any re-judging after a gate block",
+        "id": "Median waktu jam dinding per diseksi pada proses ini, armada berjalan serentak, termasuk penilaian ulang setelah gerbang memblokir"
+      },
+      "kind": "measured",
+      "value": "1h 26m",
+      "run_id": "run-2026-07-29"
+    }
+  ],
+  "policy_65": {
+    "en": "Matterhorn takes no position on whether any protest, boycott, or campaign should happen. Echo surfaces the documented costs of acting on broken causal models; it never frames collective action itself as the harm. Protest can be legitimate on imperfect information; the product’s contribution is that participants and observers see the structure of what they are being told.",
+    "id": "Matterhorn tidak mengambil posisi tentang apakah suatu protes, boikot, atau kampanye sebaiknya terjadi. Echo memunculkan biaya terdokumentasi dari bertindak di atas model sebab akibat yang rusak; ia tidak pernah membingkai tindakan kolektif itu sendiri sebagai kerugiannya. Protes dapat sah dilakukan di atas informasi yang tidak sempurna; sumbangan produk ini adalah agar peserta dan pengamat melihat struktur dari apa yang sedang disampaikan kepada mereka."
+  },
+  "disclosure": {
+    "en": "Every dissection here was produced by an automated agent fleet and is labelled as such. Each artifact names the models that generated it and the run it came from, and the analysis is computed once, before anyone asks for it. This page aggregates run run-2026-07-29.",
+    "id": "Setiap diseksi di sini diproduksi oleh armada agen otomatis dan diberi label demikian. Tiap artefak menyebut model yang menghasilkannya dan proses asalnya, dan analisisnya dihitung sekali, sebelum ada yang memintanya. Halaman ini merangkum proses run-2026-07-29."
+  }
+}

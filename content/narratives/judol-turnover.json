@@ -731,6 +731,16 @@
         "finished_at": "2026-07-29T04:13:27Z",
         "input_hash": "bd38f4b47cd5a9e9af474c18beafdfad98ada01474bc9add103e2a9e99519d54"
       }
-    ]
+    ],
+    "gates": {
+      "symmetry": {
+        "verdict": "pass",
+        "token": "523731e0b53ac58926a8357b5ccf4bfe360f03217edf5465251db9d874b9f6a1"
+      },
+      "fidelity": {
+        "verdict": "pass",
+        "token": "523731e0b53ac58926a8357b5ccf4bfe360f03217edf5465251db9d874b9f6a1"
+      }
+    }
   }
 }

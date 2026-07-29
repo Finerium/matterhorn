@@ -1,0 +1,17 @@
+{
+  "narrative_id": "mbg-stop",
+  "run_id": "run-2026-07-29",
+  "role": "A11",
+  "gate": "fidelity",
+  "verdict": "block",
+  "candidate_sha256": null,
+  "reasons": [
+    "en / v-2: binding that does not resolve. The sentence \"Four steps hold that argument up, and the graph marks each one: two rest on no entry in the source registry...\" binds els entry `mbgstop-p-family`, which is declared by no element in the candidate. The candidate declares 40 el_ids; `/candidate/family` carries only `skeleton` and `members` and has no `el_id`, and `panels[]` holds five entries (mbgstop-p-claim_map, mbgstop-p-scale_check, mbgstop-p-money_flow, mbgstop-p-incidence, mbgstop-p-options). A7.json emitted {\"type\":\"family\",\"el_id\":\"mbgstop-p-family\"} at /family; that element was dropped before the candidate while the narration kept binding to it. The claim the binding was carrying, \"stated by no article in this family\", is itself traceable to mbgstop-e3 and mbgstop-e4, whose quotes state exactly that, so the fix is to restore the family element with its el_id or rebind the sentence to declared ids. Do not delete the phrase.",
+    "id / v-2: binding that does not resolve. The sentence \"Yang menahan alur itu justru empat langkah penghubungnya: dua hanya dinyatakan oleh judul, dua lagi tidak dinyatakan oleh artikel mana pun dalam keluarga ini...\" binds els entry `mbgstop-p-family`, the same undeclared id as the en locale. Same cause and same fix: restore the family element carrying el_id `mbgstop-p-family` to the candidate, or rebind to mbgstop-e3 and mbgstop-e4, which already carry the \"tidak dinyatakan oleh artikel mana pun dalam keluarga ini\" claim in their quote and why text. Every other binding, figure, and characterisation in this sentence resolves."
+  ],
+  "judged_by": "claude-opus-5[1m]",
+  "reconstructed": true,
+  "reconstruction_note": "Transcribed from the run record. The orchestrator read this verdict from the judging workflow's structured output and dispatched the fix directly, so the runner never ingested the block and never wrote this file at the time. The verdict text is verbatim; the provenance is the workflow run id.",
+  "workflow_run_id": "wf_6e066b40-799",
+  "note": "Round 1. Hash pinning began the following round, so the judged bytes were not recorded as a digest at the time."
+}

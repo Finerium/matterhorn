@@ -21,7 +21,8 @@
     "pipeline": "tsx pipeline/run.ts",
     "icons": "node scripts/gen-icons.mjs",
     "validate:content": "tsx scripts/validate-content.ts --scan-app app/src",
-    "test:pipeline": "vitest run --config tests/pipeline/vitest.config.ts"
+    "test:pipeline": "vitest run --config tests/pipeline/vitest.config.ts",
+    "build:content-review": "tsx scripts/build-content-review.ts"
   },
   "dependencies": {
     "html-to-image": "1.11.13",

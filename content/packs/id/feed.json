@@ -1,0 +1,31 @@
+{
+  "pack": "id",
+  "updated_at": "2026-07-28T21:52:08Z",
+  "items": [
+    {
+      "narrative_id": "mbg-stop",
+      "slot": "hero"
+    },
+    {
+      "narrative_id": "mbg-cut",
+      "slot": "compact"
+    },
+    {
+      "narrative_id": "mbg-poisoning",
+      "slot": "compact"
+    },
+    {
+      "narrative_id": "mbg-jobs",
+      "slot": "compact"
+    },
+    {
+      "narrative_id": "judol-turnover",
+      "slot": "compact"
+    },
+    {
+      "narrative_id": "ppn-panic",
+      "slot": "compact",
+      "via_dissect": true
+    }
+  ]
+}

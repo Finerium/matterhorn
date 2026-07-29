@@ -1,0 +1,160 @@
+{
+  "entries": [
+    {
+      "match": "exact",
+      "pattern": "https://www.antaranews.com/berita/4559522/kemenkeu-rilis-aturan-ppn-12-persen-hanya-untuk-barang-mewah",
+      "narrative_id": "ppn-panic",
+      "role": "fresh_demo"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.tribunnews.com/nasional/7844542",
+      "narrative_id": "mbg-stop",
+      "role": "canonical"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://money.kompas.com/read/2026/06/06/213559526/anggaran-mbg-terserap-rp-8815-triliun-hingga-mei-2026",
+      "narrative_id": "mbg-cut",
+      "role": "canonical"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.cnnindonesia.com/nasional/20251001125738-20-1279693/kepala-bgn-korban-keracunan-mbg-capai-6517-orang-sejak-januari-2025",
+      "narrative_id": "mbg-poisoning",
+      "role": "canonical"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.cnbcindonesia.com/news/20260523162405-4-737426/program-mbg-serap-128-juta-tenaga-kerja-umkm-peternak-kecipratan",
+      "narrative_id": "mbg-jobs",
+      "role": "canonical"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.antaranews.com/berita/5663168",
+      "narrative_id": "judol-turnover",
+      "role": "canonical"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://ekonomi.bisnis.com/read/20250102/259/1828262/ppn-12-barang-mewah-berlaku-penuh-mulai-februari-2025-begini-penjelasannya",
+      "narrative_id": "ppn-panic",
+      "role": "canonical"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.factcheck.org/2026/01/trumps-tariffs-dont-come-close-to-funding-everything-hes-proposed/",
+      "narrative_id": "tariffs-pay",
+      "role": "canonical"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.kff.org/global-health-policy/kff-health-tracking-poll-february-2025-the-publics-views-on-global-health-and-usaid/",
+      "narrative_id": "usaid-deficit",
+      "role": "canonical"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.cato.org/policy-analysis/immigrants-cut-victimization-rates-boost-crime-reporting",
+      "narrative_id": "migrant-crime",
+      "role": "canonical"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01186-9/fulltext",
+      "narrative_id": "usaid-deaths",
+      "role": "canonical"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.tribunnews.com/nasional/7844542/menantang-pemerintah-setop-mbg-permanen-demi-selamatkan-apbn-dan-permudah-ungkap-korupsi",
+      "narrative_id": "mbg-stop",
+      "role": "family_member"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://video.kompas.com/watch/1936616",
+      "narrative_id": "mbg-stop",
+      "role": "family_member"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.antaranews.com/berita/5595513/purbaya-sebut-realisasi-anggaran-mbg-capai-rp8815-triliun",
+      "narrative_id": "mbg-stop",
+      "role": "family_member"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://databoks.katadata.co.id/ekonomi-makro/statistik/6a2653afd21cc/realisasi-belanja-mbg-tembus-rp88-triliun-sampai-mei-2026",
+      "narrative_id": "mbg-cut",
+      "role": "family_member"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.bloombergtechnoz.com/detail-news/85713/beda-data-klb-keracunan-mbg-bpom-vs-bgn",
+      "narrative_id": "mbg-poisoning",
+      "role": "family_member"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.cnnindonesia.com/nasional/20250929085833-20-1278711/data-jppi-per-september-8649-anak-keracunan-mbg",
+      "narrative_id": "mbg-poisoning",
+      "role": "family_member"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://money.kompas.com/read/2026/02/15/181700126/mbg-disebut-serap-987.000-tenaga-kerja-40.000-umkm-ikut-bergerak",
+      "narrative_id": "mbg-jobs",
+      "role": "family_member"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.cnbcindonesia.com/news/20260723082823-4-753122/ppatk-perputaran-dana-judi-online-turun-20-tersisa-rp28684-t",
+      "narrative_id": "judol-turnover",
+      "role": "family_member"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://nasional.kompas.com/read/2026/07/23/22413221/ppatk-catat-ada-penurunan-perputaran-uang-judol-di-era-prabowo",
+      "narrative_id": "judol-turnover",
+      "role": "family_member"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.pajak.go.id/en/node/113453",
+      "narrative_id": "ppn-panic",
+      "role": "family_member"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.crfb.org/blogs/cbos-new-projections-show-1-trillion-less-tariff-savings",
+      "narrative_id": "tariffs-pay",
+      "role": "family_member"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.crfb.org/blogs/top-13-fiscal-charts-2025",
+      "narrative_id": "tariffs-pay",
+      "role": "family_member"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_202509.pdf",
+      "narrative_id": "usaid-deficit",
+      "role": "family_member"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.pnas.org/doi/10.1073/pnas.2014704117",
+      "narrative_id": "migrant-crime",
+      "role": "family_member"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://www.fbi.gov/news/press-releases/fbi-releases-2024-reported-crimes-in-the-nation-statistics",
+      "narrative_id": "migrant-crime",
+      "role": "family_member"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "nodes": [
+    {
+      "id": "node-mbg-stop",
+      "narrative_id": "mbg-stop",
+      "label": {
+        "en": "Stop MBG Permanently to Save the State Budget",
+        "id": "Setop MBG Permanen demi Selamatkan APBN"
+      },
+      "pack": "id"
+    },
+    {
+      "id": "node-mbg-cut",
+      "narrative_id": "mbg-cut",
+      "label": {
+        "en": "The 2026 MBG Allocation Is Cut to Rp268 Trillion",
+        "id": "Pagu MBG 2026 Dipangkas Menjadi Rp268 Triliun"
+      },
+      "pack": "id"
+    },
+    {
+      "id": "node-mbg-poisoning",
+      "narrative_id": "mbg-poisoning",
+      "label": {
+        "en": "BGN Chief: MBG Poisoning Victims Reach 6,517",
+        "id": "Kepala BGN: Korban Keracunan MBG Capai 6.517 Orang"
+      },
+      "pack": "id"
+    },
+    {
+      "id": "node-mbg-jobs",
+      "narrative_id": "mbg-jobs",
+      "label": {
+        "en": "MBG Absorbed 1.28 Million Workers",
+        "id": "Program MBG Serap 1,28 Juta Tenaga Kerja"
+      },
+      "pack": "id"
+    },
+    {
+      "id": "node-judol-turnover",
+      "narrative_id": "judol-turnover",
+      "label": {
+        "en": "PPATK: Online Gambling Turnover Rp40.3 Trillion in Q1 2026",
+        "id": "PPATK: Perputaran Dana Judi Online Rp40,3 Triliun pada Triwulan I-2026"
+      },
+      "pack": "id"
+    },
+    {
+      "id": "node-ppn-panic",
+      "narrative_id": "ppn-panic",
+      "label": {
+        "en": "12% VAT Makes Everything More Expensive",
+        "id": "PPN 12% Bikin Semua Harga Naik"
+      },
+      "pack": "id"
+    },
+    {
+      "id": "node-tariffs-pay",
+      "narrative_id": "tariffs-pay",
+      "label": {
+        "en": "Tariffs Will Pay for All of It",
+        "id": "Tarif Impor Akan Membiayai Semuanya"
+      },
+      "pack": "en"
+    },
+    {
+      "id": "node-usaid-deficit",
+      "narrative_id": "usaid-deficit",
+      "label": {
+        "en": "Foreign Aid Is a Quarter of the Federal Budget",
+        "id": "Bantuan Luar Negeri Menyerap Seperempat Anggaran Federal"
+      },
+      "pack": "en"
+    },
+    {
+      "id": "node-migrant-crime",
+      "narrative_id": "migrant-crime",
+      "label": {
+        "en": "Immigrants Are Driving the Crime Wave",
+        "id": "Imigran Menjadi Penggerak Lonjakan Kejahatan"
+      },
+      "pack": "en"
+    },
+    {
+      "id": "node-usaid-deaths",
+      "narrative_id": "usaid-deaths",
+      "label": {
+        "en": "Ending USAID Means 14 Million More Deaths by 2030",
+        "id": "Penghentian USAID Berarti 14 Juta Kematian Tambahan sampai 2030"
+      },
+      "pack": "en"
+    }
+  ],
+  "links": [
+    {
+      "a": "node-mbg-stop",
+      "b": "node-mbg-cut",
+      "via": {
+        "en": "shared source: Antara News",
+        "id": "sumber bersama: Antara News"
+      }
+    },
+    {
+      "a": "node-mbg-stop",
+      "b": "node-mbg-poisoning",
+      "via": {
+        "en": "shared source: Antara News",
+        "id": "sumber bersama: Antara News"
+      }
+    },
+    {
+      "a": "node-mbg-stop",
+      "b": "node-mbg-jobs",
+      "via": {
+        "en": "shared source: Antara News",
+        "id": "sumber bersama: Antara News"
+      }
+    },
+    {
+      "a": "node-mbg-cut",
+      "b": "node-mbg-poisoning",
+      "via": {
+        "en": "shared source: Antara News",
+        "id": "sumber bersama: Antara News"
+      }
+    },
+    {
+      "a": "node-mbg-cut",
+      "b": "node-mbg-jobs",
+      "via": {
+        "en": "shared source: Antara News",
+        "id": "sumber bersama: Antara News"
+      }
+    },
+    {
+      "a": "node-mbg-poisoning",
+      "b": "node-mbg-jobs",
+      "via": {
+        "en": "shared source: Antara News",
+        "id": "sumber bersama: Antara News"
+      }
+    },
+    {
+      "a": "node-tariffs-pay",
+      "b": "node-usaid-deficit",
+      "via": {
+        "en": "shared source: U.S. Department of the Treasury",
+        "id": "sumber bersama: U.S. Department of the Treasury"
+      }
+    },
+    {
+      "a": "node-usaid-deficit",
+      "b": "node-usaid-deaths",
+      "via": {
+        "en": "shared source: The Lancet",
+        "id": "sumber bersama: The Lancet"
+      }
+    }
+  ]
+}

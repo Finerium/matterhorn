@@ -1,0 +1,22 @@
+{
+  "pack": "en",
+  "updated_at": "2026-07-28T21:52:08Z",
+  "items": [
+    {
+      "narrative_id": "tariffs-pay",
+      "slot": "hero"
+    },
+    {
+      "narrative_id": "usaid-deficit",
+      "slot": "compact"
+    },
+    {
+      "narrative_id": "migrant-crime",
+      "slot": "compact"
+    },
+    {
+      "narrative_id": "usaid-deaths",
+      "slot": "compact"
+    }
+  ]
+}

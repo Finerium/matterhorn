@@ -1,0 +1,17 @@
+{
+  "narrative_id": "judol-turnover",
+  "run_id": "run-2026-07-29",
+  "role": "A10",
+  "gate": "symmetry",
+  "verdict": "block",
+  "candidate_sha256": "2c069c719043f59c3887980cbc95cb438464a8099d865721a1c747b58a66fe79",
+  "reasons": [
+    "Asymmetry 1 (headline asserts the lean's unbaselined read in artifact voice): headline.en 'Online Gambling Turnover Falls to Rp40.3 Trillion in Q1 2026' and headline.id 'Perputaran Dana Judi Online Turun ke Rp40,3 Triliun pada Triwulan I-2026' add the directional verb 'Falls/Turun' to the Q1-2026 figure and drop the 'PPATK:' attribution, while original.text ('PPATK: Perputaran dana judi online Rp40,3 triliun pada triwulan I-2026') carries the attribution and no fall verb. No family member attaches a fall to Rp40.3T (CNBC's 'Turun 20%' and Kompas's 'Penurunan' attach to the 2025 annual Rp286.84T). The artifact's own record denies this read: jt-h5-quarter-baseline states no article in the family carries the matching quarter, jt-sc-chip-turnover-q1-2026 labels the figure 'three months against twelve', and jt-e1/jt-e2 are unsourced. Asserting in the display headline, on the gov side, a step the panels mark unsourced/missing is the check-1 leak; the mirror framing would not receive an unattributed directional strengthening (run convention confirms: all eight sibling slots restate their original without strengthening, and opp-lean mbg-poisoning keeps its 'Kepala BGN:' attribution). Fix: restate the original, e.g. 'PPATK: Online Gambling Turnover Rp40.3 Trillion in Q1 2026' / 'PPATK: Perputaran Dana Judi Online Rp40,3 Triliun pada Triwulan I-2026', or attach the fall verb only to the annual series a family member states.",
+    "Asymmetry 2 (mirror-side mechanism granted as fact in EN copy): panels[claim_map].hidden jt-h3-displaced-channels why_hidden.en states categorically 'Money that stops moving through closed rails does not stop moving', asserting the displacement mechanism — the mirror framing's key join — without a source, while every gov-side mechanism in the same artifact is tagged unsourced (jt-e1, jt-e2) or missing (jt-e3). The artifact's own Indonesian copy hedges the same sentence ('tidak dengan sendirinya berhenti bergerak' — does not by itself stop moving) and sparring question 1's correct option states it properly as a conditional ('has to stop moving, rather than run through channels the recording does not reach'). Fix: align EN to the ID hedge, e.g. 'Money that stops moving through closed rails does not, by itself, stop moving.'",
+    "Note (audit record, not a block reason): embedded candidate verified against sha256 2c069c719043f59c3887980cbc95cb438464a8099d865721a1c747b58a66fe79 and byte-identical to staged candidate.json; C1 verdict lexicon clean (the only 'false' match is the JSON boolean og.fallback, not user-facing copy; no 'salah satu' lint hit); no em dashes or emoji in user-facing copy; edge statuses, hidden-branch depth, dueling-panel method lines, and sparring burden are otherwise symmetric under the constructed mirror (same PPATK release and four-source registry, lean flipped to displacement-not-decline)."
+  ],
+  "judged_by": "claude-fable-5",
+  "reconstructed": true,
+  "reconstruction_note": "Transcribed from the run record. The orchestrator read this verdict from the judging workflow's structured output and dispatched the fix directly, so the runner never ingested the block and never wrote this file at the time. The verdict text is verbatim; the provenance is the workflow run id.",
+  "workflow_run_id": "wf_cfe319ac-92b"
+}

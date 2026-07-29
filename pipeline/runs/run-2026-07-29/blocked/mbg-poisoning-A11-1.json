@@ -1,0 +1,15 @@
+{
+  "narrative_id": "mbg-poisoning",
+  "run_id": "run-2026-07-29",
+  "role": "A11",
+  "gate": "fidelity",
+  "verdict": "block",
+  "candidate_sha256": "15f1ae2f618e51af2f2e6c40a397c4a1a59a2f8ca4a8a40f1e640b2721e8d877",
+  "reasons": [
+    "locale en, sentence v-6: a claim that traces to no element. The fragment \"The same meals came out of 29,679 SPPG kitchens operating\" asserts that the counted meals were produced by a population of 29,679 kitchens. The bound element i-kitchens carries \"A service unit cooked every counted meal\" and, as a separate item, a value of 29,679 SPPG kitchens whose as_of is May 2026 (source_id id-kompas-mbg-sppg-mei2026); the counted cases stop at 27 September and 1 October 2025 (d-jppi, d-bgn, d-bpom). No element carries the join between the 2025 counting window and the May 2026 kitchen population, and the artifact's own denominator sparring note states the opposite: \"both stand at May 2026 while the counts stop at 27 September and 1 October 2025. Nothing lines the two up.\" The clause \"which of those units the counted cases trace back to\" compounds it by narrowing the unknown to that same May 2026 set, which i-kitchens (beyond cell) does not do. The Indonesian v-6 binds the same elements and states the figure as \"29.679 dapur SPPG yang beroperasi per Mei 2026\" with no provenance claim, so the two locales disagree about a fact and the compliant phrasing already exists in the artifact: carry the as_of and drop the causal attachment to the counted meals. Scope of the required fix is this one sentence; the mechanical pre-pass is clean (all 22 el_id bindings resolve in both locales, all three panels covered in both locales, echo is null so no echo surface to check, lexicon and style clean in both locales including the salah-satu trap, no orphan Value, and counts recompute exactly to missing 1 / unsourced 4 / disputed 1 / supported 1 / hidden 6 / conflicts 3). The staged candidate was verified byte-identical to candidate.json at sha256 15f1ae2f618e51af2f2e6c40a397c4a1a59a2f8ca4a8a40f1e640b2721e8d877."
+  ],
+  "judged_by": "claude-opus-5[1m]",
+  "reconstructed": true,
+  "reconstruction_note": "Transcribed from the run record. The orchestrator read this verdict from the judging workflow's structured output and dispatched the fix directly, so the runner never ingested the block and never wrote this file at the time. The verdict text is verbatim; the provenance is the workflow run id.",
+  "workflow_run_id": "wf_cfe319ac-92b"
+}

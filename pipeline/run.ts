@@ -736,6 +736,9 @@ function assembleCandidate(args: Args, narrative: string): void {
 
 // --- A10 Symmetry Auditor, A11 Fidelity Guard --------------------------------------------------
 
+/** PRD's per-dissection latency claim. AC-PIPE-8 keys the metric's `kind` off it. */
+const LATENCY_TARGET_SECONDS = 180;
+
 const GATE_OF: Record<'A10' | 'A11', 'symmetry' | 'fidelity'> = { A10: 'symmetry', A11: 'fidelity' };
 
 /**
@@ -759,12 +762,20 @@ function stageGate(args: Args, role: 'A10' | 'A11'): void {
   const verdict = asStr(output.verdict);
   const reasons = asArr(output.reasons);
   if (verdict !== 'pass') {
-    writeJson(join(args.run, 'blocked', `${narrative}-${role}.json`), {
+    // One file per block, never overwritten: a narrative a gate sent back twice is two blocks,
+    // and the methodology metric counts them. Collapsing them would let a re-run quietly erase
+    // the record of the first objection.
+    const dir = join(args.run, 'blocked');
+    const taken = existsSync(dir) ? readdirSync(dir).filter((f) => f.startsWith(`${narrative}-${role}-`)).length : 0;
+    writeJson(join(dir, `${narrative}-${role}-${String(taken + 1)}.json`), {
       narrative_id: narrative,
       run_id: readRunManifest(args.run).run_id,
       role,
       gate,
       verdict: 'block',
+      // The bytes the gate actually judged. Without it a block record cannot be told apart
+      // from a block against some later revision of the same narrative.
+      candidate_sha256: sha256(readFileSync(slotPath(args.run, narrative, 'candidate.json'), 'utf8')),
       reasons,
       recorded_at: nowIso(),
     });
@@ -978,6 +989,12 @@ function stageA13(args: Args): void {
   const passed = judged.filter(
     (id) => asStr(at(readJson(slotPath(args.run, id, 'A10.json')), 'verdict')) === 'pass',
   );
+  const blockDir = join(args.run, 'blocked');
+  const blockFiles = existsSync(blockDir) ? readdirSync(blockDir).filter((f) => f.endsWith('.json')) : [];
+  const blocks = {
+    total: blockFiles.length,
+    narratives: new Set(blockFiles.map((f) => asStr(at(readJson(join(blockDir, f)), 'narrative_id')))).size,
+  };
   const walls = published.map(wallSeconds).filter((s): s is number => s !== undefined).sort((a, b) => a - b);
   const median =
     walls.length === 0
@@ -997,9 +1014,26 @@ function stageA13(args: Args): void {
     },
     {
       key: 'audit_pass',
-      label: { en: 'Symmetry Auditor pass rate', id: 'Tingkat kelulusan Auditor Simetri' },
+      // The parenthetical is load bearing. A12 refuses to publish a narrative without both gate
+      // tokens, so this ratio can only ever read n of n, and stating it as a "pass rate" would
+      // read as an auditor that approves everything. It is a structural fact, not a score.
+      label: {
+        en: 'Published dissections whose symmetry and fidelity verdicts both passed (none publishes otherwise)',
+        id: 'Diseksi terbit yang kedua putusan gerbangnya lolos, simetri dan fidelitas (tidak ada yang terbit tanpa itu)',
+      },
       kind: 'measured',
       value: judged.length === 0 ? 'not run' : `${passed.length} of ${judged.length}`,
+      run_id: manifest.run_id,
+    },
+    {
+      // The falsifiable companion to audit_pass: this one can read zero, and did not.
+      key: 'gate_blocks',
+      label: {
+        en: 'Dissections a gate sent back for a fix before publication',
+        id: 'Diseksi yang dikembalikan gerbang untuk diperbaiki sebelum terbit',
+      },
+      kind: 'measured',
+      value: `${String(blocks.narratives)} of ${String(published.length)}, across ${String(blocks.total)} block(s)`,
       run_id: manifest.run_id,
     },
     {
@@ -1012,19 +1046,50 @@ function stageA13(args: Args): void {
       value: String(orphans),
       run_id: manifest.run_id,
     },
-    ...(median === undefined
-      ? []
-      : [
+    // AC-PIPE-8 and D-3: the sub-3-minute figure ships as measured only if this run actually
+    // hit it, otherwise it ships as the design target it is. The companion measurement is
+    // labelled for what it really is, because these slots ran as a concurrent fleet and the
+    // span includes queueing and any re-judging after a gate block. Read as serial per-dissection
+    // cost it would be wrong by an order of magnitude, and overstating it is the same fault the
+    // product exists to point at.
+    ...(median !== undefined && median <= LATENCY_TARGET_SECONDS
+      ? [
           {
             key: 'latency_median',
             label: {
-              en: 'Median agent time per dissection, first slot to last',
-              id: 'Waktu agen median per diseksi, slot pertama hingga terakhir',
+              en: 'Median time to produce one dissection, first slot to last',
+              id: 'Waktu median untuk menghasilkan satu diseksi, slot pertama hingga terakhir',
             },
             kind: 'measured',
             value: humanDuration(median),
             run_id: manifest.run_id,
           },
+        ]
+      : [
+          {
+            key: 'latency_target',
+            label: {
+              en: 'Time to produce one dissection',
+              id: 'Waktu untuk menghasilkan satu diseksi',
+            },
+            kind: 'design_target',
+            value: `under ${String(Math.round(LATENCY_TARGET_SECONDS / 60))} minutes, not met in this run`,
+            run_id: manifest.run_id,
+          },
+          ...(median === undefined
+            ? []
+            : [
+                {
+                  key: 'latency_median',
+                  label: {
+                    en: 'Median wall clock per dissection in this run, fleet run concurrently, including any re-judging after a gate block',
+                    id: 'Median waktu jam dinding per diseksi pada proses ini, armada berjalan serentak, termasuk penilaian ulang setelah gerbang memblokir',
+                  },
+                  kind: 'measured',
+                  value: humanDuration(median),
+                  run_id: manifest.run_id,
+                },
+              ]),
         ]),
   ];
 
