@@ -1,0 +1,76 @@
+{
+  "narrative_id": "usaid-deaths",
+  "cluster": {
+    "narrative_id": "usaid-deaths",
+    "family_skeleton": "a modelled projection with a wide uncertainty interval carried as a settled count, which is the same certainty inflation from the other direction",
+    "members": [
+      {
+        "id": "usaid-deaths-m1",
+        "lang": "en",
+        "headline": "Evaluating the impact of two decades of USAID interventions and projecting the effects of defunding on mortality up to 2030 (DOI 10.1016/S0140-6736(25)01186-9)",
+        "outlet": "The Lancet",
+        "date": "2025-06-30",
+        "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01186-9/fulltext",
+        "note": "Verbatim title from content/sources.json (en-lancet-usaid). 14.05M additional deaths by 2030 with an uncertainty interval of 8.48M to 19.66M, and about 91.8M deaths prevented 2001 to 2021. The figure always carries its June 2025 date. GATE C TODO from the snapshot: a Feb 2026 follow-up reportedly revises the projection to 9.4M, and the run must find a citable source for it or leave it out."
+      }
+    ]
+  },
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "usaid-deaths-n1",
+        "label": {
+          "en": "USAID is defunded",
+          "id": "Pendanaan USAID dihentikan"
+        }
+      },
+      {
+        "el_id": "usaid-deaths-n2",
+        "label": {
+          "en": "Programmes that ran on USAID support stop",
+          "id": "Program yang berjalan atas dukungan USAID berhenti"
+        }
+      },
+      {
+        "el_id": "usaid-deaths-n3",
+        "label": {
+          "en": "Mortality rises in the populations those programmes reached",
+          "id": "Angka kematian meningkat di populasi yang dijangkau program tersebut"
+        }
+      },
+      {
+        "el_id": "usaid-deaths-n4",
+        "label": {
+          "en": "Additional deaths by 2030 reach the projected total",
+          "id": "Kematian tambahan hingga 2030 mencapai angka yang diproyeksikan"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "usaid-deaths-e1",
+        "from": "usaid-deaths-n1",
+        "to": "usaid-deaths-n2",
+        "quote": "no article in this family states the step from 'USAID is defunded' to 'programmes that ran on USAID support stop'"
+      },
+      {
+        "el_id": "usaid-deaths-e2",
+        "from": "usaid-deaths-n2",
+        "to": "usaid-deaths-n3",
+        "quote": "no article in this family states the step from 'programmes that ran on USAID support stop' to 'mortality rises in the populations those programmes reached'"
+      },
+      {
+        "el_id": "usaid-deaths-e3",
+        "from": "usaid-deaths-n3",
+        "to": "usaid-deaths-n4",
+        "quote": "no article in this family states the step from 'mortality rises in the populations those programmes reached' to 'additional deaths by 2030 reach the projected total'"
+      },
+      {
+        "el_id": "usaid-deaths-e4",
+        "from": "usaid-deaths-n1",
+        "to": "usaid-deaths-n4",
+        "quote": "projecting the effects of defunding on mortality up to 2030"
+      }
+    ]
+  }
+}

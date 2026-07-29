@@ -1,0 +1,175 @@
+{
+  "narrative_id": "ppn-panic",
+  "cluster": {
+    "narrative_id": "ppn-panic",
+    "family_skeleton": "a rule restricted to one class of goods narrated as if it applied to the whole basket",
+    "members": [
+      {
+        "id": "ppn-panic-m1",
+        "lang": "id",
+        "headline": "PPN 12% Barang Mewah Berlaku Penuh mulai Februari 2025, Begini Penjelasannya",
+        "outlet": "Bisnis.com",
+        "date": "2025-01-02",
+        "url": "https://ekonomi.bisnis.com/read/20250102/259/1828262/ppn-12-barang-mewah-berlaku-penuh-mulai-februari-2025-begini-penjelasannya",
+        "note": "Verbatim title from content/sources.json (id-bisnis-ppn-luxury). Restored at its full slug; the bare-id form 403s and was never dead."
+      },
+      {
+        "id": "ppn-panic-m2",
+        "lang": "id",
+        "headline": "Kemenkeu rilis aturan PPN 12 persen hanya untuk barang mewah",
+        "outlet": "Antara News",
+        "date": "2025-01-01",
+        "url": "https://www.antaranews.com/berita/4559522/kemenkeu-rilis-aturan-ppn-12-persen-hanya-untuk-barang-mewah",
+        "note": "Verbatim title from content/sources.json (id-antara-ppn-luxury). THE designated fresh-dissect article (blueprint 7.2.9, D-9): the only URL that runs the staged progress demo."
+      },
+      {
+        "id": "ppn-panic-m3",
+        "lang": "id",
+        "headline": "PMK 131/2024: Tarif PPN Sebelas-Dua Belas",
+        "outlet": "Direktorat Jenderal Pajak",
+        "date": "2024-12-31",
+        "url": "https://www.pajak.go.id/en/node/113453",
+        "note": "Verbatim title from content/sources.json (id-pajak-pmk131). The primary rule: 12 percent applies to luxury goods under PPnBM, and non-luxury keeps an effective 11 percent through the 11/12 nilai lain base. Grounding for the CF-5 scale panel, which ships only if A7 can put a sourced denominator against a sourced numerator."
+      }
+    ]
+  },
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "ppn-panic-s1",
+        "label": {
+          "en": "The finance ministry issues a new VAT tariff rule",
+          "id": "Kemenkeu menerbitkan aturan tarif PPN yang baru"
+        }
+      },
+      {
+        "el_id": "ppn-panic-s2",
+        "label": {
+          "en": "A higher VAT rate takes effect",
+          "id": "Tarif PPN yang lebih tinggi mulai berlaku"
+        }
+      },
+      {
+        "el_id": "ppn-panic-s3",
+        "label": {
+          "en": "The higher rate reaches every good and service in the basket",
+          "id": "Tarif yang lebih tinggi itu menjangkau semua barang dan jasa di keranjang belanja"
+        }
+      },
+      {
+        "el_id": "ppn-panic-s4",
+        "label": {
+          "en": "Every price rises",
+          "id": "Semua harga naik"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "ppn-panic-e1",
+        "from": "ppn-panic-s1",
+        "to": "ppn-panic-s2",
+        "quote": "Kemenkeu rilis aturan PPN 12 persen hanya untuk barang mewah"
+      },
+      {
+        "el_id": "ppn-panic-e2",
+        "from": "ppn-panic-s2",
+        "to": "ppn-panic-s3",
+        "quote": "no article in this family states the step from the higher rate taking effect to the rate reaching every good and service in the basket"
+      },
+      {
+        "el_id": "ppn-panic-e3",
+        "from": "ppn-panic-s3",
+        "to": "ppn-panic-s4",
+        "quote": "no article in this family states the step from the rate reaching every good and service to every price rising"
+      }
+    ]
+  },
+  "case_library": {
+    "cases": [
+      {
+        "id": "B-01",
+        "title": {
+          "en": "Casualty-inflation cascade",
+          "id": "Kaskade inflasi korban"
+        },
+        "period": "May 2019",
+        "motif": {
+          "en": "moral shock, fabricated count",
+          "id": "kejutan moral, angka rekaan"
+        },
+        "documented_outcome": {
+          "en": "A fabricated \"60 shot dead\" claim spread faster than any correction and amplified the post-election riots in Jakarta. The final human-rights investigation documented 10 people unlawfully killed, four of them minors.",
+          "id": "Klaim rekaan \"60 orang tewas ditembak\" menyebar lebih cepat dari koreksi mana pun dan memperbesar kerusuhan pasca pemilu di Jakarta. Investigasi hak asasi manusia final mendokumentasikan 10 orang terbunuh secara tidak sah, empat di antaranya anak-anak."
+        },
+        "citations": [
+          "id-aljazeera-2019-riots",
+          "id-tempo-cekfakta-60",
+          "id-liputan6-amnesty-2019"
+        ]
+      },
+      {
+        "id": "B-02",
+        "title": {
+          "en": "Fabricated-provision cascade",
+          "id": "Kaskade pasal rekaan"
+        },
+        "period": "Oct 2020",
+        "motif": {
+          "en": "scope inflation, fabricated provisions",
+          "id": "inflasi cakupan, pasal rekaan"
+        },
+        "documented_outcome": {
+          "en": "Invented provisions of a law whose final text was not yet public, from a minimum wage abolished to severance eliminated, fueled nationwide demonstrations. The communications ministry catalogued \"12 hoaks\" about the bill in a single list.",
+          "id": "Pasal-pasal rekaan atas undang-undang yang naskah finalnya belum terbit, dari upah minimum dihapus sampai pesangon ditiadakan, menyulut demonstrasi nasional. Kementerian komunikasi mengatalogkan \"12 hoaks\" tentang RUU itu dalam satu daftar."
+        },
+        "citations": [
+          "id-suara-kominfo-12hoax",
+          "id-kompas-omnibus-8hoax"
+        ]
+      },
+      {
+        "id": "B-03",
+        "title": {
+          "en": "Moral-shock acceleration",
+          "id": "Akselerasi kejutan moral"
+        },
+        "period": "Aug 2025",
+        "motif": {
+          "en": "moral shock, acceleration",
+          "id": "kejutan moral, akselerasi"
+        },
+        "documented_outcome": {
+          "en": "A viral death video mobilized nationwide protests within hours. In the escalations that followed, a regional parliament building fire in Makassar killed three people.",
+          "id": "Video kematian yang viral memobilisasi unjuk rasa nasional dalam hitungan jam. Dalam eskalasi yang menyusul, kebakaran gedung DPRD di Makassar menewaskan tiga orang."
+        },
+        "citations": [
+          "id-detik-timeline-aug2025",
+          "id-jakartapost-makassar-fire",
+          "id-jakartaglobe-protest-toll"
+        ]
+      },
+      {
+        "id": "B-04",
+        "title": {
+          "en": "Scope-inflation panic",
+          "id": "Panik inflasi cakupan"
+        },
+        "period": "Jan 2025",
+        "motif": {
+          "en": "scope inflation, manufactured urgency",
+          "id": "inflasi cakupan, urgensi semu"
+        },
+        "documented_outcome": {
+          "en": "The 12 percent VAT panic priced the whole consumption basket for weeks after PMK 131/2024 had restricted the rise to luxury goods already under the luxury sales tax; the clarification required a multi-channel communication effort.",
+          "id": "Panik PPN 12 persen menghitung seluruh keranjang konsumsi selama berminggu-minggu setelah PMK 131/2024 membatasi kenaikan pada barang mewah yang sudah dikenai pajak penjualan barang mewah; klarifikasinya menuntut upaya komunikasi lintas kanal."
+        },
+        "citations": [
+          "id-pajak-pmk131",
+          "id-antara-ppn-luxury",
+          "id-bisnis-ppn-luxury"
+        ]
+      }
+    ]
+  }
+}

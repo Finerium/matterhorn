@@ -1,0 +1,89 @@
+{
+  "hidden": [
+    {
+      "el_id": "jt-h1-two-series-gap",
+      "label": {
+        "en": "The gap in pace between the turnover series and the deposit series",
+        "id": "Beda laju antara deret perputaran dan deret setoran dana"
+      },
+      "why_hidden": {
+        "en": "The market-read step takes the fall in recorded turnover as the market shrinking by the same amount. Turnover counts the same money each time it is wagered, deposits count money coming in. Two members of this family carry deposit figures beside the turnover figures, yet no article joins the two series or states what a different pace of fall in each would do to the market read. The ratio between them, how many times a deposited rupiah is wagered again, is the quantity the read rests on, and no article follows it.",
+        "id": "Langkah pembacaan pasar menyamakan turunnya perputaran tercatat dengan menyusutnya pasar sebesar itu pula. Perputaran menghitung uang yang sama setiap kali dipertaruhkan, sedangkan setoran menghitung uang yang masuk. Dua artikel dalam keluarga ini memuat angka setoran di samping angka perputaran, tetapi tidak ada artikel yang mempertemukan kedua deret itu atau menyebut apa artinya bila keduanya turun dengan laju yang tidak sama. Nisbah antara keduanya, berapa kali satu rupiah setoran diputar kembali, adalah besaran yang menopang pembacaan itu dan tidak diikuti oleh artikel mana pun."
+      },
+      "where_to_look": "PPATK releases that define perputaran and deposit and publish both series for the same periods"
+    },
+    {
+      "el_id": "jt-h2-recording-coverage",
+      "label": {
+        "en": "The share of the market PPATK's recording instruments can see",
+        "id": "Porsi pasar yang terjangkau alat pencatat PPATK"
+      },
+      "why_hidden": {
+        "en": "The edge from the push to the fall states that the push lowers recorded turnover. A push that blocks accounts and payment channels also changes where transactions run. The articles treat the recorded figure as the market itself, and none follows whether the recording base, the reports from banks and payment providers inside the monitored system, stayed constant across the two years being compared.",
+        "id": "Sisi dari gempuran menuju penurunan menyatakan bahwa gempuran menurunkan perputaran yang tercatat. Gempuran yang memblokir rekening dan kanal pembayaran juga mengubah tempat transaksi berjalan. Artikel-artikel memperlakukan angka tercatat sebagai pasar itu sendiri, dan tidak satu pun menelusuri apakah dasar pencatatan, yaitu laporan bank dan penyedia jasa pembayaran di dalam sistem yang terpantau, tetap sama pada dua tahun yang dibandingkan."
+      },
+      "where_to_look": "PPATK methodology or annual report text describing which transaction reports feed the perputaran figure"
+    },
+    {
+      "el_id": "jt-h3-displaced-channels",
+      "label": {
+        "en": "Payment channels outside the blocked rails, from crypto assets to offshore gateways and informal top-up sellers",
+        "id": "Kanal pembayaran di luar jalur yang diblokir, dari aset kripto hingga gerbang luar negeri dan penjual isi ulang informal"
+      },
+      "why_hidden": {
+        "en": "The stated push works by closing sites and accounts. Money that stops moving through closed rails does not stop moving. The articles stop at the smaller recorded figure and never name the channels that would carry the flow the blocked rails lose.",
+        "id": "Gempuran yang dinyatakan bekerja dengan menutup situs dan rekening. Uang yang berhenti lewat jalur yang ditutup tidak dengan sendirinya berhenti bergerak. Artikel berhenti pada angka tercatat yang mengecil dan tidak menyebut kanal yang menampung aliran yang hilang dari jalur terblokir."
+      },
+      "where_to_look": "PPATK or task force statements on gambling flows through crypto assets and offshore payment gateways"
+    },
+    {
+      "el_id": "jt-h4-prior-trajectory",
+      "label": {
+        "en": "The path of the same turnover series in the years before the push",
+        "id": "Arah deret perputaran yang sama pada tahun-tahun sebelum gempuran"
+      },
+      "why_hidden": {
+        "en": "The era framing in the headlines ties the fall to the current push. That tie needs the path of the series before the push as its baseline. The articles compare two adjacent years and never state where the same series stood, or how fast it was moving, before the period they connect to the fall.",
+        "id": "Bingkai era pada judul mengaitkan penurunan dengan gempuran yang berjalan. Kaitan itu memerlukan arah deret sebelum gempuran sebagai pembanding. Artikel membandingkan dua tahun yang berurutan dan tidak menyebut posisi maupun laju deret yang sama pada masa sebelum periode yang dikaitkan dengan penurunan itu."
+      },
+      "where_to_look": "Earlier PPATK annual releases carrying the perputaran series for the years before the current push"
+    },
+    {
+      "el_id": "jt-h5-quarter-baseline",
+      "label": {
+        "en": "The matching quarter a year earlier for the new quarterly figure",
+        "id": "Triwulan pembanding setahun sebelumnya bagi angka triwulanan baru"
+      },
+      "why_hidden": {
+        "en": "One member carries a quarterly turnover figure inside a story about a year-on-year fall. A quarterly figure can only continue or break that fall against the matching quarter of the year before, and no article in the family carries that matching quarter.",
+        "id": "Satu artikel memuat angka perputaran triwulanan di dalam cerita tentang penurunan tahunan. Angka triwulanan hanya dapat meneruskan atau memutus penurunan itu terhadap triwulan yang sepadan pada tahun sebelumnya, dan tidak ada artikel dalam keluarga ini yang memuat triwulan pembanding tersebut."
+      },
+      "where_to_look": "PPATK quarterly bulletins carrying the matching quarter of the prior year"
+    },
+    {
+      "el_id": "jt-h6-player-count",
+      "label": {
+        "en": "The count of active players behind the rupiah figures",
+        "id": "Jumlah pemain aktif di balik angka rupiah"
+      },
+      "why_hidden": {
+        "en": "The outcome step states that online gambling recedes. A market can show smaller recorded turnover while its people stay, through smaller wagers per person or wagers moving off the recorded rails. The articles size the market only in rupiah, never in people, so the step from a smaller figure to a receding practice skips the series that counts participants.",
+        "id": "Langkah hasil menyatakan judi online surut. Pasar dapat menunjukkan perputaran tercatat yang mengecil sementara orang-orangnya tetap, entah karena taruhan per orang mengecil atau karena taruhan berpindah dari jalur yang terekam. Artikel mengukur pasar hanya dalam rupiah dan tidak dalam orang, sehingga langkah dari angka yang mengecil menuju praktik yang surut melewatkan deret yang menghitung peserta."
+      },
+      "where_to_look": "PPATK or Komdigi releases stating active player or account counts by year"
+    },
+    {
+      "el_id": "jt-h7-operator-outflow",
+      "label": {
+        "en": "The cross-border outflow carrying the operators' take",
+        "id": "Aliran dana lintas negara yang membawa bagian operator"
+      },
+      "why_hidden": {
+        "en": "The stated outcome, gambling recedes, reaches the question of whether the money drawn from players and moved onward fell as well. The family carries the recorded domestic series and stops before the destination side, where the gap between what players put in and what they take out goes.",
+        "id": "Hasil yang dinyatakan, judi online surut, menjangkau pertanyaan apakah uang yang ditarik dari pemain dan diteruskan ke luar ikut turun. Keluarga artikel ini memuat deret dalam negeri yang tercatat dan berhenti sebelum sisi tujuan, tempat selisih antara uang yang disetor pemain dan uang yang mereka tarik berpindah."
+      },
+      "where_to_look": "PPATK analyses of cross-border transfers linked to online gambling"
+    }
+  ],
+  "model": "claude-fable-5"
+}

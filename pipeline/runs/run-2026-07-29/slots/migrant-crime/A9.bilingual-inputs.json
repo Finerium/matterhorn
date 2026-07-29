@@ -1,0 +1,316 @@
+{
+  "en": {
+    "narration": {
+      "en": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "The claim moves in three steps: more immigrants enter and settle, immigrants commit crime at a rate above the rest of the population, and the national crime trend surges into a wave.",
+            "els": [
+              "mc-panel-claim-map",
+              "mc-asrt-arrivals",
+              "mc-asrt-offending",
+              "mc-asrt-wave"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "The two joints holding those steps together are never written down, so nothing in this family states how arrivals become a higher offending rate, and nothing states how any group's rate becomes a national line that an instrument assembles from its own agency coverage and its own reporting step.",
+            "els": [
+              "mc-edge-arrivals-offending",
+              "mc-edge-offending-wave"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "That same arrivals step settles those people inside the population any wave lands on, where the national victimization survey puts their chance of being violently victimized 44 percent lower than the native-born and their reporting of incidents to police 29 percent higher, which is the step a recorded trend is built out of.",
+            "els": [
+              "mc-hid-arrival-victims",
+              "mc-hid-reporting-rate"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "The word above needs a level to sit above, and that level never shares a page with the claim; the claim also prices every subgroup at a single rate, while the records that do compute rates keep undocumented immigrants, legal immigrants and US-born citizens apart.",
+            "els": [
+              "mc-hid-comparator-rate",
+              "mc-hid-status-bundling"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "A rate needs a divisor that settlement itself keeps growing, and a surge needs a year to rise from, which the national release for this period gives as murder and non-negligent manslaughter down 14.9 percent against the prior year, while the line the country would have drawn without the arrivals stays undrawn.",
+            "els": [
+              "mc-hid-population-denominator",
+              "mc-hid-baseline-year",
+              "mc-hid-counterfactual-trend"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "Three instruments answer three different questions here, and none of them is the offending rate the claim names: victimization runs 44 percent lower for immigrants, US-born citizens were arrested in one state at over 2 times the rate of undocumented immigrants, and reported offenses nationally are down 4.5 percent against the prior year.",
+            "els": [
+              "mc-panel-dueling",
+              "mc-duel-cato",
+              "mc-duel-pnas",
+              "mc-duel-fbi"
+            ]
+          }
+        ]
+      }
+    },
+    "sparring": {
+      "questions": [
+        {
+          "move": "mechanism",
+          "q": {
+            "en": "The story runs from arrivals to a national crime wave. Which link between those steps does any article in this family actually state?",
+            "id": "Cerita ini berjalan dari kedatangan menuju gelombang kejahatan nasional. Sambungan mana di antara langkah-langkah itu yang sungguh dinyatakan oleh artikel dalam keluarga ini?"
+          },
+          "options": [
+            {
+              "en": "The step from arrivals to a higher offending rate, written out in the reporting.",
+              "id": "Langkah dari kedatangan menuju laju tindak pidana yang lebih tinggi, tertulis di dalam pemberitaan."
+            },
+            {
+              "en": "Neither link. Both joints are left for the reader to supply.",
+              "id": "Tidak satu pun. Kedua sambungan itu dibiarkan diisi sendiri oleh pembaca."
+            },
+            {
+              "en": "The step from an offending rate to the national trend, carried by the crime release.",
+              "id": "Langkah dari laju tindak pidana menuju tren nasional, dibawa oleh rilis kejahatan."
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "en": "The claim map marks both edges as unstated: nothing in this family writes the step from arrivals to a higher offending rate, and nothing writes the step from any group's rate into a national line that an instrument assembles on its own agency coverage and its own reporting step.",
+            "id": "Peta klaim menandai kedua tepi itu sebagai tidak dinyatakan: tidak ada dalam keluarga ini yang menuliskan langkah dari kedatangan menuju laju yang lebih tinggi, dan tidak ada yang menuliskan langkah dari laju kelompok mana pun menuju garis nasional yang dirakit sebuah instrumen dengan cakupan lembaga dan langkah pelaporannya sendiri."
+          }
+        },
+        {
+          "move": "denominator",
+          "q": {
+            "en": "Both the offending step and the wave step are rate claims. What does settlement do to the number underneath them?",
+            "id": "Langkah tindak pidana dan langkah gelombang sama-sama klaim laju. Apa yang dilakukan pemukiman terhadap angka pembagi di bawah keduanya?"
+          },
+          "options": [
+            {
+              "en": "Nothing: a rate is a headcount of incidents, so arrivals move it directly.",
+              "id": "Tidak ada apa-apa: laju adalah hitungan kejadian, jadi kedatangan menggerakkannya secara langsung."
+            },
+            {
+              "en": "It grows the population every later rate divides by, so raw counts can climb while the per-person rate falls.",
+              "id": "Pemukiman membesarkan populasi yang menjadi pembagi bagi setiap laju berikutnya, sehingga jumlah mentah bisa naik sementara laju per orang turun."
+            },
+            {
+              "en": "It shrinks the base, because newly arrived people are counted separately from residents.",
+              "id": "Pemukiman mengecilkan basisnya, karena pendatang baru dihitung terpisah dari penduduk lama."
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "en": "The hidden layer names the population denominator that settlement itself grows. The claim quotes trend words without naming the divisor they stand on.",
+            "id": "Lapisan tersembunyi menyebut penyebut populasi yang justru membesar karena pemukiman. Klaim itu mengutip kata-kata tren tanpa menyebut pembagi yang menopangnya."
+          }
+        },
+        {
+          "move": "incidence",
+          "q": {
+            "en": "The arrivals step settles people inside the same population any national wave reaches. Where do the numbers in this family put them on the victim side?",
+            "id": "Langkah kedatangan menempatkan orang di dalam populasi yang sama yang dijangkau gelombang nasional mana pun. Di mana angka-angka dalam keluarga ini menempatkan mereka pada sisi korban?"
+          },
+          "options": [
+            {
+              "en": "Their chance of being violently victimized runs 44 percent lower than the native-born.",
+              "id": "Peluang mereka mengalami kekerasan tercatat 44 persen lebih rendah daripada warga kelahiran Amerika Serikat."
+            },
+            {
+              "en": "Their chance of being violently victimized tracks the native-born closely, with no gap worth reporting.",
+              "id": "Peluang mereka mengalami kekerasan berdekatan dengan warga kelahiran Amerika Serikat, tanpa jarak yang layak dilaporkan."
+            },
+            {
+              "en": "The victimization survey does not separate people by nativity, so nobody knows.",
+              "id": "Survei viktimisasi tidak memisahkan orang menurut status kelahiran, jadi tidak ada yang tahu."
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "en": "The dueling panel reads the national victimization survey for 2017 to 2023, which asks people directly what happened to them and splits the answer by nativity, and puts immigrants 44 percent lower on being violently victimized. The story follows the class only as a driver of offending and stops before the victim side.",
+            "id": "Panel bandingan membaca survei viktimisasi nasional 2017 hingga 2023, yang menanyai orang langsung tentang apa yang menimpa mereka dan memisahkan jawabannya menurut status kelahiran, lalu menempatkan imigran 44 persen lebih rendah dalam mengalami kekerasan. Cerita hanya mengikuti kelas ini sebagai pendorong tindak pidana dan berhenti sebelum sisi korban."
+          }
+        }
+      ]
+    },
+    "prediction_tap": {
+      "prompt": {
+        "en": "Before the map opens: this story runs from arrivals to a national crime wave. Which side of it do you expect to be missing from the page?",
+        "id": "Sebelum peta dibuka: cerita ini berjalan dari kedatangan menuju gelombang kejahatan nasional. Sisi mana darinya yang Anda perkirakan hilang dari halaman?"
+      },
+      "options": [
+        {
+          "en": "The comparison level, the rate the rest of the population offends at.",
+          "id": "Aras pembanding, yaitu laju tindak pidana penduduk selebihnya."
+        },
+        {
+          "en": "The people who arrived, counted as potential victims rather than as a cause.",
+          "id": "Orang yang datang itu, dihitung sebagai calon korban alih-alih sebagai penyebab."
+        },
+        {
+          "en": "The starting year the surge is measured up from.",
+          "id": "Tahun awal tempat lonjakan itu diukur naik."
+        },
+        {
+          "en": "The step that turns one group's rate into a national line.",
+          "id": "Langkah yang mengubah laju sebuah kelompok menjadi garis nasional."
+        }
+      ]
+    }
+  },
+  "id": {
+    "narration": {
+      "id": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "Cerita ini berdiri di atas tiga langkah: lebih banyak imigran masuk dan menetap, imigran melakukan kejahatan dengan laju melebihi penduduk lain, lalu tren kejahatan nasional melonjak menjadi gelombang.",
+            "els": [
+              "mc-panel-claim-map",
+              "mc-asrt-arrivals",
+              "mc-asrt-offending",
+              "mc-asrt-wave"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "Dua sambungan di antaranya tidak pernah dituliskan, dari kedatangan ke laju tindak pidana dan dari laju itu ke garis nasional, sementara seluruh rantai bersandar pada pengandaian yang tidak dinyatakan tentang ke mana tren nasional bergerak tanpa kedatangan tadi.",
+            "els": [
+              "mc-edge-arrivals-offending",
+              "mc-edge-offending-wave",
+              "mc-hid-counterfactual-trend"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "Cerita juga tidak menyebut penyebut populasi yang justru membesar karena pemukiman, dan melebur penduduk berizin tinggal serta warga naturalisasi ke dalam satu kelas yang dipatok pada laju tunggal, padahal laju di keluarga ini dihitung terpisah menurut status hukum.",
+            "els": [
+              "mc-hid-population-denominator",
+              "mc-hid-status-bundling"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "Dua tolok ukurnya tinggal di luar halaman: laju penduduk selebihnya, padahal catatan satu negara bagian menaruh warga kelahiran Amerika Serikat pada lebih dari 2 kali laju penangkapan imigran tanpa dokumen, dan tahun dasar lonjakannya, padahal rilis nasional periode ini mencatat pembunuhan turun 14,9 persen terhadap tahun sebelumnya.",
+            "els": [
+              "mc-hid-comparator-rate",
+              "mc-hid-baseline-year"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "Di luar bingkai berdiri orang yang sama: laju viktimisasi mereka 44 persen lebih rendah daripada warga kelahiran Amerika Serikat, sementara kemungkinan korban imigran melapor kepada polisi 29 persen lebih tinggi, dan pelaporan itulah yang mengubah tindak pidana menjadi garis yang tercatat.",
+            "els": [
+              "mc-hid-arrival-victims",
+              "mc-hid-reporting-rate"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "Tiga instrumen di panel angka bertanding menjawab tiga pertanyaan berbeda, siapa yang menjadi korban, siapa yang ditangkap di satu negara bagian, dan berapa tindak pidana yang dilaporkan secara nasional dengan angka turun 4,5 persen terhadap tahun sebelumnya, sedangkan laju tindak pidana yang dinamai klaim itu tidak diukur oleh satu pun di antara ketiganya.",
+            "els": [
+              "mc-panel-dueling",
+              "mc-duel-cato",
+              "mc-duel-pnas",
+              "mc-duel-fbi"
+            ]
+          }
+        ]
+      }
+    },
+    "sparring": {
+      "questions": [
+        {
+          "move": "mechanism",
+          "q": {
+            "id": "Apa yang menyambungkan langkah kedatangan ke langkah laju tindak pidana di dalam cerita ini?"
+          },
+          "options": [
+            {
+              "id": "Sebuah perbandingan laju yang diturunkan dari berapa banyak orang yang datang"
+            },
+            {
+              "id": "Tidak ada sambungan yang tertulis, kedua klaim hanya berdiri berdampingan"
+            },
+            {
+              "id": "Pengulangan klaim itu oleh banyak media sekaligus"
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "id": "Peta klaim menandai langkah itu sebagai bagian yang tidak dituliskan di keluarga artikel ini. Perbandingan laju yang memang ada dihitung menurut status hukum terhadap warga kelahiran Amerika Serikat, bukan diturunkan dari jumlah orang yang datang, dan pengulangan di banyak media memang yang ditawarkan cerita sebagai gantinya."
+          }
+        },
+        {
+          "move": "denominator",
+          "q": {
+            "id": "Pemukiman menambah jumlah orang di dalam populasi dasar. Apa yang bisa terjadi pada laju per orang ketika jumlah kejadian mentah naik?"
+          },
+          "options": [
+            {
+              "id": "Laju per orang bisa turun, karena pembaginya ikut membesar"
+            },
+            {
+              "id": "Laju per orang pasti ikut naik, karena pembaginya tetap"
+            },
+            {
+              "id": "Jumlah kejadian dan laju per orang adalah ukuran yang sama dengan dua nama"
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "id": "Peta klaim menyimpan penyebut populasi sebagai angka yang tidak pernah dinamai, padahal langkah tindak pidana maupun langkah gelombang sama-sama klaim laju. Pemukiman membesarkan penyebut itu sendiri, sehingga hitungan mentah dan hitungan per orang bisa bergerak ke arah yang berlainan."
+          }
+        },
+        {
+          "move": "incidence",
+          "q": {
+            "id": "Pada survei viktimisasi rumah tangga nasional 2017 hingga 2023, bagaimana laju viktimisasi imigran dibandingkan warga kelahiran Amerika Serikat?"
+          },
+          "options": [
+            {
+              "id": "Kira-kira setara, sehingga tidak ada bedanya bagi cerita ini"
+            },
+            {
+              "id": "Lebih tinggi, sejalan dengan arah cerita gelombang"
+            },
+            {
+              "id": "44 persen lebih rendah"
+            }
+          ],
+          "correct": 2,
+          "note": {
+            "id": "Kolom Cato pada panel angka bertanding memuat angka itu dari survei viktimisasi nasional untuk 2017 hingga 2023. Kolom tersebut mengukur siapa yang mengalami kejahatan, bukan siapa yang ditangkap, sehingga arah yang disiratkan cerita dan arah yang diukur survei berada di dua kolom yang berbeda."
+          }
+        }
+      ]
+    },
+    "prediction_tap": {
+      "prompt": {
+        "id": "Sebelum panelnya terbuka: sisi mana dari cerita ini yang menurut Anda tidak muncul di halaman?"
+      },
+      "options": [
+        {
+          "id": "Imigran sebagai pihak yang mengalami kejahatan, bukan hanya sebagai pendorongnya"
+        },
+        {
+          "id": "Laju penduduk selebihnya, aras yang menurut klaim itu dilampaui"
+        },
+        {
+          "id": "Tahun dasar tempat lonjakan nasional diukur"
+        },
+        {
+          "id": "Jumlah orang yang menjadi pembagi bagi setiap laju"
+        }
+      ]
+    }
+  }
+}

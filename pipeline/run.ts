@@ -596,7 +596,7 @@ function slotInput(args: Args, role: SlotRole, narrative: string): unknown {
         narrative_id: narrative,
         headline: entry?.headline ?? null,
         original: entry?.original ?? null,
-        panels: withFamilyMarker(requireSlot(run, narrative, 'A7')),
+        panels: shippingPanels(requireSlot(run, narrative, 'A7'), narrative),
         echo: at(ingestSlot(run, narrative, 'A8') ?? {}, 'echo') ?? null,
         lexicon: readJson(join(CONTRACTS, 'lexicon.json')),
       };
@@ -616,17 +616,22 @@ function slotInput(args: Args, role: SlotRole, narrative: string): unknown {
 }
 
 /**
- * A7's grounded panels plus its family marker, joined last (seed convention). The family strip
- * is a marker panel (6.4): A7 emits {type:'family', el_id} beside its panels, and the data the
- * marker renders is assembled from the cluster into the root family block. Both the A9 input
- * and the candidate must show the same shipping panel set, or narration binds against a
- * universe the fidelity gate will not recognise.
+ * A7's grounded panels normalised to the shipping panel set. Two scope rules, both
+ * deterministic: the echo never rides in panels[] (A8 is the historian; the contract carries
+ * the echo at the artifact root, seed convention), and the family strip is a marker panel
+ * (6.4) joined last: from A7's own family field when it emitted one, else synthesised as
+ * `<narrative>-p-family` when the registry work order lists family. Both the A9 input and the
+ * candidate must show the same shipping panel set, or narration binds against a universe the
+ * fidelity gate will not recognise.
  */
-function withFamilyMarker(grounded: Dict): unknown[] {
-  const panels = [...asArr(at(grounded, 'panels'))];
+function shippingPanels(grounded: Dict, narrative: string): unknown[] {
+  const panels = asArr(at(grounded, 'panels')).filter((p) => asStr(at(p, 'type')) !== 'echo');
+  const hasMarker = panels.some((p) => asStr(at(p, 'type')) === 'family');
   const marker = at(grounded, 'family');
-  if (asStr(at(marker, 'type')) === 'family' && asStr(at(marker, 'el_id')) !== '') {
+  if (!hasMarker && asStr(at(marker, 'type')) === 'family' && asStr(at(marker, 'el_id')) !== '') {
     panels.push({ type: 'family', el_id: asStr(at(marker, 'el_id')) });
+  } else if (!hasMarker && marker === undefined && (registryEntry(narrative)?.panels ?? []).includes('family')) {
+    panels.push({ type: 'family', el_id: `${narrative}-p-family` });
   }
   return panels;
 }
@@ -679,7 +684,7 @@ function assembleCandidate(args: Args, narrative: string): void {
     return step === undefined || step.model === '' ? requestedModel(role) : step.model;
   };
   const echo = at(ingestSlot(args.run, narrative, 'A8') ?? {}, 'echo') ?? null;
-  const panels = withFamilyMarker(grounded);
+  const panels = shippingPanels(grounded, narrative);
 
   const candidate: Dict = {
     id: entry.id,

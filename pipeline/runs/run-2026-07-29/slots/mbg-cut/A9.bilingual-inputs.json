@@ -1,0 +1,320 @@
+{
+  "en": {
+    "narration": {
+      "en": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "The chain starts with a lower 2026 ceiling for MBG, Rp268 trillion after a cut from Rp335 trillion, and runs on through 29,679 SPPG kitchens that were still cooking and still drawing on the budget at the end of May 2026.",
+            "els": [
+              "mbg-cut.panel.claim_map",
+              "mbg-cut.spine.n1",
+              "mbg-cut.scale.chip.mbg-allocation-before-cut",
+              "mbg-cut.spine.n2"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "One step in the middle holds on the record: Kompas puts MBG spending at Rp88.15 trillion through May 2026, and Antara carries the same figure from the finance minister.",
+            "els": [
+              "mbg-cut.spine.n3",
+              "mbg-cut.edge.n2-n3"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "The steps on either side of it are where the sources in this run stop, since none of them states that the reduced ceiling is what the programme has been spending against, and none carries the smaller envelope the remaining months have to run on.",
+            "els": [
+              "mbg-cut.edge.n1-n2",
+              "mbg-cut.edge.n3-n4",
+              "mbg-cut.spine.n4"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "Two things sit just outside the frame: the budget line that receives the fiscal room the cut freed, and the division nobody performs, how much of Rp268 trillion is already gone and how much the rest of the year has to work with.",
+            "els": [
+              "mbg-cut.hidden.cut-destination",
+              "mbg-cut.hidden.ceiling-denominator"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "The parties at the end of the money are counted nowhere in the chain: SPPG partners and the crews they pay, the farmers and suppliers whose income this spending is, the 63.13 million people reached through May 2026, and the kitchens and regions still waiting for a place in the programme.",
+            "els": [
+              "mbg-cut.hidden.sppg-payment-terms",
+              "mbg-cut.hidden.upstream-suppliers",
+              "mbg-cut.hidden.recipients-remainder",
+              "mbg-cut.hidden.expansion-queue"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "On the scale panel, the Rp268 trillion ceiling and the Rp88.15 trillion already spent sit inside total state spending of Rp3,842.7 trillion, next to Rp599.44 trillion of debt interest and Rp210.06 trillion of energy subsidy in the same enacted 2026 budget.",
+            "els": [
+              "mbg-cut.panel.scale_check",
+              "mbg-cut.scale.seg.mbg-ceiling-after-cut",
+              "mbg-cut.scale.seg.mbg-realized-may",
+              "mbg-cut.scale.seg.debt-interest",
+              "mbg-cut.scale.seg.energy-subsidy"
+            ]
+          }
+        ]
+      }
+    },
+    "sparring": {
+      "questions": [
+        {
+          "move": "mechanism",
+          "q": {
+            "en": "The chain here has three steps. Which one do the sources in this run carry end to end?"
+          },
+          "options": [
+            {
+              "en": "The step from the lower ceiling to the programme spending against it."
+            },
+            {
+              "en": "The step from kitchens running to Rp88.15 trillion drawn down through May 2026."
+            },
+            {
+              "en": "The step from May's cumulative total to the envelope left for the rest of the year."
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "en": "The claim map marks that middle step supported, with Kompas carrying MBG spending of Rp88.15 trillion through May 2026 and Antara carrying the same figure from the finance minister. The steps on either side are marked missing, so the chain holds in the middle and stops at both ends."
+          }
+        },
+        {
+          "move": "denominator",
+          "q": {
+            "en": "Rp88.15 trillion is spent through May 2026. Which number does the artifact send you looking for before that figure means much?"
+          },
+          "options": [
+            {
+              "en": "The ceiling it draws against, and what is left of it."
+            },
+            {
+              "en": "How many outlets carried the same figure that week."
+            },
+            {
+              "en": "What the programme spent in the same month a year earlier."
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "en": "The scale panel sets the Rp268 trillion ceiling and the Rp88.15 trillion spent side by side inside total state spending of Rp3,842.7 trillion. The hidden element names the pairing no article in this run makes: the share of the reduced ceiling already spent, and the pace the remainder can hold."
+          }
+        },
+        {
+          "move": "incidence",
+          "q": {
+            "en": "The rest of 2026 runs on a smaller envelope. Who does that reach before it reaches anyone at a ministry desk?"
+          },
+          "options": [
+            {
+              "en": "Bondholders, since debt interest sits in the same budget."
+            },
+            {
+              "en": "Kitchen partners billing per portion, their crews, and the suppliers they buy from."
+            },
+            {
+              "en": "The auditors reconciling the May figure."
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "en": "The claim map keeps four groups outside the chain: SPPG partners and their crews on payment terms, upstream suppliers whose income this spending is, recipients for the remaining months, and the kitchens and regions still queued. They stand at the end of the money, which is where a change in the envelope arrives first. Debt interest appears on the scale panel as its own line, not as a claim on what MBG has left."
+          }
+        }
+      ]
+    },
+    "prediction_tap": {
+      "prompt": {
+        "en": "Before you open the panels: a budget line gets cut, and the story reports how much of it has been spent. Which side of that goes missing?"
+      },
+      "options": [
+        {
+          "en": "The budget line that receives the room the cut freed up."
+        },
+        {
+          "en": "The ceiling the spending figure is measured against, and what remains of it."
+        },
+        {
+          "en": "The kitchen partners, crews and suppliers who bill against what remains."
+        },
+        {
+          "en": "The recipients for the rest of the year, and the households behind them."
+        }
+      ]
+    }
+  },
+  "id": {
+    "narration": {
+      "id": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "Cerita ini berdiri di atas dua angka: pagu anggaran MBG 2026 yang dipangkas ke Rp268 triliun, dan belanja yang terserap Rp88,15 triliun hingga Mei 2026.",
+            "els": [
+              "mbg-cut.panel.claim_map",
+              "mbg-cut.spine.n1",
+              "mbg-cut.spine.n3"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "Sambungan yang punya sumber adalah bagian tengahnya, saat program tetap berjalan dengan 29.679 dapur SPPG per akhir Mei 2026 dan Kompas memuat serapan Rp88,15 triliun hingga Mei 2026.",
+            "els": [
+              "mbg-cut.spine.n2",
+              "mbg-cut.spine.n3",
+              "mbg-cut.edge.n2-n3",
+              "mbg-cut.scale.chip.sppg-kitchens"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "Dua sambungan lain berhenti tanpa sumber: dari pagu yang dipangkas ke belanja yang sedang berjalan, dan dari angka kumulatif Mei ke sisa tahun yang berjalan dengan ruang belanja lebih kecil.",
+            "els": [
+              "mbg-cut.edge.n1-n2",
+              "mbg-cut.edge.n3-n4",
+              "mbg-cut.spine.n4"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "Panel skala menaruh keduanya, pagu Rp268 triliun dan belanja Rp88,15 triliun, di dalam total belanja negara APBN 2026 sebesar Rp3.842,7 triliun, berdampingan dengan bunga utang Rp599,44 triliun dan subsidi energi Rp210,06 triliun.",
+            "els": [
+              "mbg-cut.panel.scale_check",
+              "mbg-cut.scale.seg.mbg-ceiling-after-cut",
+              "mbg-cut.scale.seg.mbg-realized-may",
+              "mbg-cut.scale.seg.debt-interest",
+              "mbg-cut.scale.seg.energy-subsidy"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "Alokasi program pada awal 2026 tercatat Rp335 triliun, sementara yang tidak pernah disandingkan artikel mana pun adalah porsi pagu baru yang sudah terpakai dan ruang yang tersisa untuk bulan-bulan sesudah Mei.",
+            "els": [
+              "mbg-cut.scale.chip.mbg-allocation-before-cut",
+              "mbg-cut.hidden.ceiling-denominator"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "Di luar bingkai ada 1,28 juta pekerja dapur, 142.387 pemasok pangan, 63,13 juta orang penerima manfaat, antrean dapur yang belum terlayani, dan pos APBN yang menerima ruang fiskal hasil pemangkasan.",
+            "els": [
+              "mbg-cut.hidden.sppg-payment-terms",
+              "mbg-cut.hidden.upstream-suppliers",
+              "mbg-cut.hidden.recipients-remainder",
+              "mbg-cut.hidden.expansion-queue",
+              "mbg-cut.hidden.cut-destination",
+              "mbg-cut.scale.chip.beneficiaries"
+            ]
+          }
+        ]
+      }
+    },
+    "sparring": {
+      "questions": [
+        {
+          "move": "mechanism",
+          "q": {
+            "id": "Dalam rangkaian artikel ini, langkah mana yang punya sumber yang menyatakannya?"
+          },
+          "options": [
+            {
+              "id": "Bahwa program tetap berjalan dengan 29.679 dapur SPPG dan belanjanya tercatat Rp88,15 triliun hingga Mei 2026."
+            },
+            {
+              "id": "Bahwa pagu Rp268 triliun itulah acuan belanja program sejak pemangkasan."
+            },
+            {
+              "id": "Bahwa sisa tahun 2026 berjalan dengan ruang belanja yang lebih kecil."
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "id": "Peta klaim menandai sambungan tengah sebagai satu-satunya yang punya kutipan: Kompas memuat \"Anggaran MBG Terserap Rp 88,15 Triliun hingga Mei 2026\", dan Antara memuat angka yang sama dengan atribusi kepada Menteri Keuangan Purbaya Yudhi Sadewa. Dua sambungan di kiri dan kanannya belum punya sumber yang menyatakannya."
+          }
+        },
+        {
+          "move": "denominator",
+          "q": {
+            "id": "Di dalam artikel-artikelnya sendiri, angka Rp88,15 triliun hingga Mei 2026 diukur terhadap apa?"
+          },
+          "options": [
+            {
+              "id": "Terhadap total belanja negara APBN 2026 sebesar Rp3.842,7 triliun."
+            },
+            {
+              "id": "Terhadap pagu MBG setelah pemangkasan, Rp268 triliun, berikut sisa ruangnya."
+            },
+            {
+              "id": "Tidak terhadap apa pun: artikelnya memuat angka kumulatifnya saja."
+            }
+          ],
+          "correct": 2,
+          "note": {
+            "id": "Pembagi sebesar Rp3.842,7 triliun itu datang dari panel skala, bukan dari artikelnya. Di dalam artikel, angka Mei berdiri sendiri; elemen tersembunyi mencatat pagu Rp268 triliun sebagai pembagi yang tidak pernah disandingkan, berikut ruang yang tersisa untuk bulan-bulan sesudahnya."
+          }
+        },
+        {
+          "move": "incidence",
+          "q": {
+            "id": "Menurut elemen yang berada di luar bingkai artikel, pihak mana yang menagih dari sisa anggaran itu?"
+          },
+          "options": [
+            {
+              "id": "Kementerian Keuangan, yang mengumumkan angka realisasinya."
+            },
+            {
+              "id": "Mitra dapur SPPG dengan 1,28 juta pekerja, dan 142.387 pemasok pangan di hulu."
+            },
+            {
+              "id": "Lembaga pemeringkat dan pengamat anggaran yang menilai programnya."
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "id": "Peta klaim menaruh keduanya di luar bingkai: satuan dapur yang memasak, menyajikan, dan menagih per porsi, dengan 1,28 juta pekerja, serta 142.387 pemasok yang menerima belanja itu sebagai pendapatan. CNBC memuat \"Program MBG Serap 1,28 Juta Tenaga Kerja, UMKM-Peternak Kecipratan\", dan kedua angka itu dilaporkan pihak program sendiri. Artikelnya menghitung yang sudah dibelanjakan lalu berhenti sebelum pihak yang menagih dari sisanya."
+          }
+        }
+      ],
+      "editorial_notes": [
+        "Mechanism, correct index 0: mbg-cut.edge.n2-n3 is the only edge in the graph carrying status supported, quoted from Kompas and corroborated by Antara with attribution to the Finance Minister. Options 1 and 2 map exactly onto mbg-cut.edge.n1-n2 and mbg-cut.edge.n3-n4, both status missing. Those two are the steps a reader most naturally assumes are on the record, which is why they are the wrong answers worth offering.",
+        "Denominator, correct index 2: the Rp3.842,7 triliun figure is supplied by the scale_check panel, not by any article in the family, and mbg-cut.hidden.ceiling-denominator is the element recording that no article puts the Rp268 triliun ceiling beside the Rp88,15 triliun drawdown. Option 0 is the trap a reader can see afterwards: they have just met that denominator on the scale panel and can misattribute it to the reporting.",
+        "Incidence, correct index 1: mbg-cut.hidden.sppg-payment-terms and mbg-cut.hidden.upstream-suppliers are the two out-of-frame elements that bill against the remaining envelope. Option 0 names the party that announces the figure rather than one that invoices against it. Option 2 names commentary, which is what coverage of a budget cut usually supplies in place of incidence.",
+        "Both 1,28 juta pekerja and 142.387 pemasok carry a self_reported flag on their elements. The incidence note says so in words, so the two figures do not pass as independently verified inside the answer that rewards the reader for picking them.",
+        "No arithmetic anywhere. The share of the reduced ceiling already spent, and what remains after Rp88,15 triliun, are named in v-5 as quantities nobody published and are never computed, because mbg-cut.hidden.ceiling-denominator is precisely the element recording that the two figures are never placed side by side. Every figure emitted is the display.id string of an element bound in the same sentence.",
+        "Lexicon forcing: the ordinary Indonesian for 'one of the steps' is unusable under the whole-word lint, so v-3 counts them instead, 'Dua sambungan lain'. Edge status is carried as 'punya sumber' against 'berhenti tanpa sumber', which conveys supported against missing with no verdict word in either direction.",
+        "v-2 says 'Kompas memuat' rather than any verb implying confirmation. A supported edge means a source states the step, not that the step holds, and the sentence keeps that distinction visible.",
+        "Sentence order follows the order the reader meets the artifact: the two figures the story rests on, the step that has a source, the two steps that stop, the scale the figures sit inside, the denominator nobody printed, then the parties outside the frame.",
+        "Stayed unsaid: the destination of the freed fiscal room. v-6 names it as an open budget line and stops there. No candidate recipient is suggested, because mbg-cut.hidden.cut-destination records that no source in this family names one.",
+        "Stayed unsaid: serving days, portion standards and coverage for the remaining months are folded into 'penerima manfaat' and the queue in v-6 rather than spelled out as outcomes. Every sentence stays retrospective, and none states what happens next.",
+        "Prediction tap: all four options are genuine hidden elements, so none is a giveaway and none is a decoy the reveal contradicts. What the reveal returns is the count of how many of them the coverage left out, not a correction of the reader.",
+        "Shape: this slot is the Indonesian locale only, so narration carries the id bundle alone and every L10n object carries its id string alone, for merge with the English slot into the A9.json the runner reads whole."
+      ],
+      "model": "claude-opus-5[1m]"
+    },
+    "prediction_tap": {
+      "prompt": {
+        "id": "Sebelum panelnya terbuka: bagian mana dari cerita pemangkasan anggaran MBG ini yang menurut Anda tidak dimuat artikelnya?"
+      },
+      "options": [
+        {
+          "id": "Pos APBN yang menerima ruang fiskal hasil pemangkasan."
+        },
+        {
+          "id": "Sisa pagu setelah belanja Mei, dan laju belanja yang masih tertampung olehnya."
+        },
+        {
+          "id": "Termin pembayaran mitra dapur dan pemasok yang menagih dari sisa itu."
+        },
+        {
+          "id": "Cakupan penerima manfaat dan antrean dapur untuk bulan-bulan sesudahnya."
+        }
+      ]
+    }
+  }
+}

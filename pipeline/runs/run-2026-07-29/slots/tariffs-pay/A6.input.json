@@ -1,0 +1,88 @@
+{
+  "narrative_id": "tariffs-pay",
+  "cluster": {
+    "narrative_id": "tariffs-pay",
+    "family_skeleton": "one revenue lever framed as funding an entire agenda, carried without the cost side it is being measured against",
+    "members": [
+      {
+        "id": "tariffs-pay-m1",
+        "lang": "en",
+        "headline": "Trump's Tariffs Don't Come Close to Funding Everything He's Proposed",
+        "outlet": "FactCheck.org",
+        "date": "2026-01-20",
+        "url": "https://www.factcheck.org/2026/01/trumps-tariffs-dont-come-close-to-funding-everything-hes-proposed/",
+        "note": "Verbatim title from content/sources.json (en-factcheck-tariffs). The claim under dissection is the circulating one, not this title."
+      },
+      {
+        "id": "tariffs-pay-m2",
+        "lang": "en",
+        "headline": "CBO's New Projections Show $1 Trillion Less in Tariff Savings",
+        "outlet": "Committee for a Responsible Federal Budget",
+        "date": "2025-11-25",
+        "url": "https://www.crfb.org/blogs/cbos-new-projections-show-1-trillion-less-tariff-savings",
+        "note": "Verbatim title from content/sources.json (en-crfb-tariff-projections). $3.0T including interest against CBO's $2.5T primary, plus the IEEPA contingency that caveats every tariff revenue figure."
+      },
+      {
+        "id": "tariffs-pay-m3",
+        "lang": "en",
+        "headline": "Top 13 Fiscal Charts of 2025",
+        "outlet": "Committee for a Responsible Federal Budget",
+        "date": "2025-12-31",
+        "url": "https://www.crfb.org/blogs/top-13-fiscal-charts-2025",
+        "note": "Verbatim title from content/sources.json (en-crfb-top13-2025). The cost side: OBBBA adds $4.1T through 2034 conventionally scored."
+      }
+    ]
+  },
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "tariffs-pay-n-lever",
+        "label": {
+          "en": "Sweeping tariffs are imposed on imported goods",
+          "id": "Tarif menyeluruh dikenakan atas barang impor"
+        }
+      },
+      {
+        "el_id": "tariffs-pay-n-revenue",
+        "label": {
+          "en": "Tariff collections flow in as federal revenue",
+          "id": "Pungutan tarif masuk sebagai penerimaan federal"
+        }
+      },
+      {
+        "el_id": "tariffs-pay-n-scale",
+        "label": {
+          "en": "The revenue reaches the scale of the full cost of everything he has proposed",
+          "id": "Penerimaan itu mencapai skala biaya penuh semua usulannya"
+        }
+      },
+      {
+        "el_id": "tariffs-pay-n-funded",
+        "label": {
+          "en": "All of it is paid for out of tariff money",
+          "id": "Semuanya terbayar dari uang tarif"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "tariffs-pay-e-lever-revenue",
+        "from": "tariffs-pay-n-lever",
+        "to": "tariffs-pay-n-revenue",
+        "quote": "CBO's New Projections Show $1 Trillion Less in Tariff Savings"
+      },
+      {
+        "el_id": "tariffs-pay-e-revenue-scale",
+        "from": "tariffs-pay-n-revenue",
+        "to": "tariffs-pay-n-scale",
+        "quote": "Trump's Tariffs Don't Come Close to Funding Everything He's Proposed"
+      },
+      {
+        "el_id": "tariffs-pay-e-scale-funded",
+        "from": "tariffs-pay-n-scale",
+        "to": "tariffs-pay-n-funded",
+        "quote": "no article in this family states the step from the revenue reaching the scale of everything he has proposed to all of it being paid for"
+      }
+    ]
+  }
+}

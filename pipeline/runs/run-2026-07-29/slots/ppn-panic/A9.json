@@ -1,0 +1,243 @@
+{
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "The one step the sources carry is the first one: a national wire dated 1 January 2025 puts the finance ministry's new tariff rule and the 12 percent rate taking effect in a single line, and the tax authority page carries the same rule.",
+          "els": [
+            "ppn-panic-p-claim-map",
+            "ppn-panic-s1",
+            "ppn-panic-s2",
+            "ppn-panic-e1"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "After that the chain runs on its own: no article in this family states the move from the higher rate taking effect to that rate reaching every good and service in the basket, and none states the move from that reach to every price rising.",
+          "els": [
+            "ppn-panic-e2",
+            "ppn-panic-e3",
+            "ppn-panic-s3",
+            "ppn-panic-s4"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "The scale check sets the two rates one point apart, 12 percent on goods already carried by the luxury sales tax list and an effective 11 percent on everything off it, held there by an eleven-twelfths base.",
+          "els": [
+            "ppn-panic-p-scale-check",
+            "ppn-panic-sc-luxury-list",
+            "ppn-panic-sc-off-list"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "What the panel cannot show is how much of a household basket sits on that list, since no source in the registry carries it, and the stated mechanism has no way into the staple goods and exempt services that carry no VAT at any rate.",
+          "els": [
+            "ppn-panic-p-scale-check",
+            "ppn-panic-h1",
+            "ppn-panic-h2"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Standing outside the frame are the VAT-registered sellers who had one night to re-base every invoice, and the luxury dealers and buyers on either side of the February boundary.",
+          "els": [
+            "ppn-panic-h5",
+            "ppn-panic-h7"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "The statute had already scheduled the higher rate across the whole base, which is why the 11 percent now rests on a ministerial regulation, and the echo panel names the pattern: a scope stated inside a rule travels onward as a rise reaching everything, and the reach is never set against a basket.",
+          "els": [
+            "ppn-panic-h4",
+            "ppn-panic-p-echo"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Langkah pertama rantai ini punya pijakan: Kemenkeu menerbitkan aturan tarif PPN, tarif 12 persen mulai berlaku, dan kantor berita nasional memuat keduanya dalam satu baris bertanggal 1 Januari 2025.",
+          "els": [
+            "ppn-panic-p-claim-map",
+            "ppn-panic-s1",
+            "ppn-panic-s2",
+            "ppn-panic-e1"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Dua langkah sesudahnya tidak berpijak pada apa pun di kumpulan ini: perpindahan dari tarif yang berlaku ke jangkauan semua barang dan jasa di keranjang, lalu dari jangkauan itu ke semua harga naik, tidak dimuat satu pun artikel dalam keluarga ini.",
+          "els": [
+            "ppn-panic-e2",
+            "ppn-panic-e3",
+            "ppn-panic-s3",
+            "ppn-panic-s4"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Di luar bingkai berdiri pihak yang menanggung perubahan lebih dulu: pengusaha kena pajak yang hanya punya satu malam untuk mengganti dasar penghitungan setiap faktur, mesin kasir dan dokumen impor, lalu pembeli dan penjual barang mewah di dua sisi batas Februari 2025.",
+          "els": [
+            "ppn-panic-h5",
+            "ppn-panic-h7"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Yang justru tidak ada di mana pun adalah angka yang menentukan belanja rumah tangga: porsi keranjang yang dijangkau daftar barang mewah itu, dan bagian keranjang berupa bahan kebutuhan pokok serta jasa dalam ketentuan pengecualian dan fasilitas, yang tidak memikul PPN pada tarif berapa pun.",
+          "els": [
+            "ppn-panic-h1",
+            "ppn-panic-h2"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Panel skala menaruh kedua tarif berdampingan: 11 persen untuk segala yang di luar daftar pajak penjualan barang mewah lewat dasar pengenaan sebelas per dua belas, dan 12 persen untuk yang sudah ada di daftar itu, sedangkan jadwal dalam undang-undang PPN hasil perubahan sudah lebih dulu menempatkan tarif lebih tinggi pada seluruh basis PPN sejak awal 2025.",
+          "els": [
+            "ppn-panic-p-scale-check",
+            "ppn-panic-sc-off-list",
+            "ppn-panic-sc-luxury-list",
+            "ppn-panic-h4"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Pola ini punya rekam jejak: pembatasan cakupan yang dinyatakan di dalam aturan berjalan terus sebagai kenaikan yang menjangkau semua barang dan jasa, dan seluruh keranjang konsumsi sempat dihitung berminggu-minggu sampai klarifikasinya menuntut upaya komunikasi lintas kanal.",
+          "els": [
+            "ppn-panic-p-echo"
+          ]
+        }
+      ]
+    }
+  },
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "The chain runs from a new tariff rule all the way to every price rising. How much of that run do the sources actually state?",
+          "id": "Rantai ini berjalan dari aturan tarif baru sampai ke semua harga naik. Sejauh mana perjalanan itu sungguh dimuat sumbernya?"
+        },
+        "options": [
+          {
+            "en": "Only the first link, the ministry issuing the tariff rule and the higher rate taking effect.",
+            "id": "Hanya sambungan pertamanya, kementerian menerbitkan aturan tarifnya dan tarif lebih tinggi mulai berlaku."
+          },
+          {
+            "en": "All of it, since the rate is official and prices follow the rate.",
+            "id": "Seluruhnya, karena tarifnya resmi dan harga mengikuti tarif."
+          },
+          {
+            "en": "The later links too, once enough outlets carried the same headline.",
+            "id": "Sambungan berikutnya ikut terpenuhi begitu cukup banyak media memuat judul yang sama."
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The claim map marks the first edge as carried by a wire and a tax authority page, and leaves the next two with no article stating them. The rate is real and dated. What the panel shows is that the step from a rate to a basket, and the step from a basket to a price, are not in this set of articles, and headline count is not one of the edges.",
+          "id": "Panel peta klaim menandai sambungan pertama sebagai sambungan yang dipikul kantor berita nasional dan halaman otoritas pajak, lalu meninggalkan dua sambungan sesudahnya tanpa satu artikel pun yang memuatnya. Tarifnya nyata dan bertanggal. Yang ditunjukkan panel adalah bahwa langkah dari tarif ke keranjang, dan langkah dari keranjang ke harga, tidak ada di kumpulan artikel ini, sedangkan banyaknya pemberitaan bukan sambungan di antara keduanya."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "To turn the one point between the two rates into an effect on a household, one figure has to exist. Which one does the artifact say it cannot supply?",
+          "id": "Untuk mengubah jarak satu poin antara kedua tarif itu menjadi dampak pada satu rumah tangga, satu angka harus ada. Angka mana yang dinyatakan artefak ini tidak bisa ditampilkan?"
+        },
+        "options": [
+          {
+            "en": "The share of a household's spending that sits on the luxury sales tax list.",
+            "id": "Porsi belanja rumah tangga yang duduk di daftar pajak penjualan barang mewah."
+          },
+          {
+            "en": "The size of the package announced alongside the scope statement, Rp38.6T.",
+            "id": "Besar paket yang diumumkan bersamaan dengan pernyataan cakupan itu, Rp38,6 T."
+          },
+          {
+            "en": "The number of goods written into the luxury sales tax list.",
+            "id": "Jumlah barang yang tertulis di dalam daftar pajak penjualan barang mewah."
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The scale check names the gap directly: spending on luxury-list goods over spending on the whole basket, a ratio with no numerator and no denominator in this registry. The package figure sits right there on the panel as a context chip, so it is not the missing one, and a count of listed goods is a count, not a share of anyone's spending.",
+          "id": "Panel skala menyebut celahnya secara langsung: belanja atas barang di daftar mewah dibagi belanja atas seluruh keranjang, sebuah rasio yang tidak punya pembilang maupun penyebut di registri ini. Angka paketnya sendiri terpampang di panel yang sama sebagai keterangan pendamping, jadi bukan itu yang hilang, dan menghitung barang di dalam daftar hanya menghasilkan jumlah barang, bukan porsi belanja rumah tangga mana pun."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "The rule is dated the last day of the year and coverage of it in force ran the next day. Who does the artifact put first in line to absorb that timing?",
+          "id": "Aturannya bertanggal hari terakhir tahun dan pemberitaan pemberlakuannya terbit keesokan harinya. Siapa yang ditaruh artefak ini di barisan pertama untuk menanggung waktu sesempit itu?"
+        },
+        "options": [
+          {
+            "en": "VAT-registered sellers, who had a single night to re-base every tax invoice, cash register and import declaration.",
+            "id": "Pengusaha kena pajak, yang punya satu malam untuk mengganti dasar penghitungan setiap faktur pajak, mesin kasir dan dokumen impor."
+          },
+          {
+            "en": "Households, who met the new shelf prices the following morning.",
+            "id": "Rumah tangga, yang menemui harga rak baru keesokan paginya."
+          },
+          {
+            "en": "The tax authority, which had to publish the regulation page.",
+            "id": "Otoritas pajak, yang harus menerbitkan halaman aturannya."
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The hidden element on the changeover names the seller as the first payer of the step: off-list sales now invoice at 12 percent on an eleven-twelfths base in place of the old computation on full price, so the arithmetic changed at once. Households sit further along a chain the artifact never follows, because no article here tracks prices across the changeover at all.",
+          "id": "Elemen tersembunyi tentang masa peralihan menyebut penjual sebagai pembayar pertama langkah itu: penjualan di luar daftar mewah sejak saat itu difakturkan 12 persen atas dasar pengenaan sebelas per dua belas, menggantikan hitungan lama atas harga penuh, jadi aritmetikanya berubah seketika. Rumah tangga duduk lebih jauh di rantai yang tidak pernah diikuti artefak ini, karena tidak ada artikel di sini yang mengikuti harga sepanjang masa peralihan."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "This chain runs from a rule the finance ministry issued to every price rising. Before the panels open: which side of it do you expect to go missing?",
+      "id": "Sebelum panelnya terbuka, tebak dulu: bagian mana dari cerita kenaikan PPN ini yang tidak ikut diceritakan?"
+    },
+    "options": [
+      {
+        "en": "The list the rule actually draws the higher rate at, and how much of a basket sits on it.",
+        "id": "Daftar tempat aturan itu sungguh menarik tarif lebih tinggi, dan seberapa besar bagian keranjang yang duduk di dalamnya."
+      },
+      {
+        "en": "The parts of the basket that carry no VAT at any rate.",
+        "id": "Bagian keranjang yang tidak memikul PPN pada tarif berapa pun."
+      },
+      {
+        "en": "The sellers who had to change the arithmetic on every invoice overnight.",
+        "id": "Pihak yang harus mengganti dasar penghitungan setiap faktur dalam semalam."
+      },
+      {
+        "en": "The rate the statute had already scheduled before the ministry moved.",
+        "id": "Jadwal tarif yang sudah tertulis dalam undang-undang sebelum kementerian bertindak."
+      }
+    ]
+  },
+  "editorial_notes": [
+    "Neither locale authoring arrived carrying editorial_notes. Every note here is the reconciler's record.",
+    "Narration is verbatim per locale with exactly one exception, EN v-1.",
+    "EN v-1 fact fix. The authored line put the finance ministry's rule and the 12 percent rate together on 1 January 2025, which reads as the rule being issued that day. The ID narration and the EN incidence question both place the rule on the last day of the year with the rate in force the next day. The date now sits on the wire's dateline, matching where ID puts it. No figure added, none removed, els unchanged.",
+    "Sentence order differs by locale on purpose. EN runs rests-on, where it stops, scale, the gap, outside the frame, statute and echo. ID runs rests-on, where it stops, outside the frame, the gap, scale and statute, echo. A9.md permits the two locales to reach the same point by different routes, and they do not disagree about a fact after the v-1 fix.",
+    "El coverage holds in both locales for every panel's own el_id: ppn-panic-p-claim-map, ppn-panic-p-scale-check, ppn-panic-p-echo. The two authorings independently bound the identical el set, spine s1 to s4, edges e1 to e3, hidden h1, h2, h4, h5, h7, segments sc-luxury-list and sc-off-list.",
+    "Verification limit a human must clear. A9.input.json is absent for this slot and the panels JSON in the reconciler brief was truncated after the first spine label. Bindings were accepted on the agreement of two independent authorings plus the visible head of the panels JSON. If the shipping panels carry a family marker panel, neither locale narrates its el_id and neither authoring named one, so coverage must be added before the fidelity gate. Flagged rather than fixed, because inventing an el_id would ship a dangling binding, which is the worse failure.",
+    "mechanism, EN as base. EN asks how far along the whole chain the sourcing actually runs, which is the artifact's shape. ID had asked about a single edge. EN's two wrong options are what the story itself offers a reader, an official rate implying prices, and enough outlets carrying the same headline. ID authored natively from that frame. Correct index 0 in both locales.",
+    "mechanism figure fix. EN option 0 said the rule issuing and the rate taking effect happened on the same date, which contradicted the EN incidence question in the same set. The date clause is cut in both locales; the option still names only the first link and nothing more.",
+    "denominator, EN as base. Both wrong options are visible on the panel afterwards. Rp38.6T is a context chip sitting right there and is the number a reader reaches for. A count of listed goods is the count-for-share swap the move exists to catch. The ID original's second distractor, national annual VAT receipts, has nothing in the registry to settle it against, so it was filler. ID authored natively. Correct index 0 in both locales.",
+    "denominator locale figures. Rp38.6T in EN and Rp38,6 T in ID are the same chip under each locale's decimal convention, not a disagreement.",
+    "incidence, EN as base. Households as option 1 is the answer most readers will give and it is wrong for a reason the panel shows afterwards, the seller re-bases the arithmetic first. The ID original's second option pulled toward the aid package on a different panel. The strength of the ID authoring, the single night against the eleven-twelfths base, is carried into the ID note. Correct index 0 in both locales.",
+    "prediction_tap. Both prompts kept as authored; they ask the same question by different routes and neither gives the reveal away. ID option 0 was rewritten to carry both halves of EN option 0, the list the rule draws at and the share of a basket sitting on it, so the four options line up one to one across locales.",
+    "Lexicon. ID copy carries no whole-word collision. \"sebuah rasio\" stands in where \"salah satu\" would have been natural. \"satu artikel pun\" and \"satu malam\" carry the counting sense without the banned span. No verdict word in either locale.",
+    "Left unsaid on purpose. No sentence and no note states how a price moved after the changeover, because no article in this family tracks prices across it. Both incidence notes say so directly rather than letting an effect be inferred.",
+    "Effective 11 percent is stated in both locales as the 12 percent rate applied to an eleven-twelfths base, never as a cut and never as a rise. Both locales also agree that the statute had already scheduled the higher rate across the whole base, which is what leaves the 11 percent resting on a ministerial regulation."
+  ],
+  "model": "claude-opus-5[1m]"
+}

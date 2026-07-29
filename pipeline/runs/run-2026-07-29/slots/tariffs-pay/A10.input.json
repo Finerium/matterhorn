@@ -1,0 +1,1053 @@
+{
+  "narrative_id": "tariffs-pay",
+  "candidate": {
+    "id": "tariffs-pay",
+    "pack": "en",
+    "lean": "gov",
+    "status": "published",
+    "headline": {
+      "en": "Tariffs Will Pay for All of It",
+      "id": "Tarif Impor Akan Membiayai Semuanya"
+    },
+    "original": {
+      "text": "Tariffs will pay for all of it",
+      "lang": "en"
+    },
+    "outlet": "FactCheck.org",
+    "published_date": "2026-01-20",
+    "url": "https://www.factcheck.org/2026/01/trumps-tariffs-dont-come-close-to-funding-everything-hes-proposed/",
+    "og": {
+      "image_path": "/assets/og/tariffs-pay.jpg",
+      "fetched_at": "2026-07-28",
+      "attribution": "Link preview image from FactCheck.org, shown with the outlet name and an outbound link.",
+      "fallback": false
+    },
+    "tags": [
+      "missing-link",
+      "no-denominator",
+      "competing-counts"
+    ],
+    "counts": {
+      "missing": 1,
+      "unsourced": 3,
+      "disputed": 0,
+      "supported": 1,
+      "hidden": 7
+    },
+    "provenance": {
+      "analyzed_by": "claude-fable-5",
+      "narrated_by": "claude-opus-5[1m]",
+      "source_count": 6,
+      "computed_at": "2026-07-28",
+      "run_id": "run-2026-07-29"
+    },
+    "family": {
+      "skeleton": "one revenue lever framed as funding an entire agenda, carried without the cost side it is being measured against",
+      "members": [
+        {
+          "outlet": "FactCheck.org",
+          "headline": "Trump's Tariffs Don't Come Close to Funding Everything He's Proposed",
+          "url": "https://www.factcheck.org/2026/01/trumps-tariffs-dont-come-close-to-funding-everything-hes-proposed/",
+          "date": "2026-01-20"
+        },
+        {
+          "outlet": "Committee for a Responsible Federal Budget",
+          "headline": "CBO's New Projections Show $1 Trillion Less in Tariff Savings",
+          "url": "https://www.crfb.org/blogs/cbos-new-projections-show-1-trillion-less-tariff-savings",
+          "date": "2025-11-25"
+        },
+        {
+          "outlet": "Committee for a Responsible Federal Budget",
+          "headline": "Top 13 Fiscal Charts of 2025",
+          "url": "https://www.crfb.org/blogs/top-13-fiscal-charts-2025",
+          "date": "2025-12-31"
+        }
+      ]
+    },
+    "scaffold_default": "S0",
+    "sparring": {
+      "questions": [
+        {
+          "move": "mechanism",
+          "q": {
+            "en": "At what point does this claim chain stop being carried by a source registry entry?",
+            "id": "Di titik mana rantai klaim ini berhenti ditopang entri registri sumber?"
+          },
+          "options": [
+            {
+              "en": "At the first step, because the tariff collections are never recorded as federal revenue",
+              "id": "Pada langkah pertama, karena pungutan tarif tidak pernah tercatat sebagai penerimaan federal"
+            },
+            {
+              "en": "At the step from tariff revenue to the full cost of everything proposed, and again at the step to all of it being paid for",
+              "id": "Pada langkah dari penerimaan tarif menuju skala biaya penuh semua usulannya, lalu sekali lagi pada langkah menuju semuanya terbayar"
+            },
+            {
+              "en": "It does not: the chain holds end to end, because the revenue figure comes from an official Treasury document",
+              "id": "Rantai itu tersambung penuh, karena angka penerimaannya diambil dari dokumen resmi kas negara"
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "en": "The claim map marks the first step as carried by a source: the Treasury closing statement records the customs line for FY2025. The two steps after it are marked differently, one with no registry entry stating it and one with no sentence anywhere stating it.",
+            "id": "Peta klaim menandai langkah pertama sebagai ditopang sumber: laporan penutup kas negara mencatat pos bea masuknya untuk tahun anggaran 2025. Dua langkah sesudahnya ditandai lain, satu tanpa entri registri yang menyatakannya dan satu tanpa kalimat mana pun yang menyatakannya."
+          }
+        },
+        {
+          "move": "denominator",
+          "q": {
+            "en": "The revenue is being measured against the cost of everything proposed. What is that cost side, and what window does it run on?",
+            "id": "Penerimaan tarif itu diukur terhadap biaya semua usulannya. Angka mana yang menjadi sisi biaya itu, dan sampai tahun berapa jendelanya berjalan?"
+          },
+          "options": [
+            {
+              "en": "$4.1T, the conventional score of the enacted package, through 2034",
+              "id": "US$4,1 triliun, skor konvensional paket yang telah disahkan, sampai 2034"
+            },
+            {
+              "en": "$2.5T, the same figure the budget office puts on the tariffs, for 2025 to 2035",
+              "id": "US$2,5 triliun, angka yang dipasang kantor anggaran pada tarifnya sendiri, untuk 2025 sampai 2035"
+            },
+            {
+              "en": "$5.23T, total federal receipts, for FY2025",
+              "id": "US$5,23 triliun, total penerimaan federal, untuk tahun anggaran 2025"
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "en": "The scale panel runs against a $4.1T score of the enacted package that ends in 2034, a figure that never appears on the original page, while the tariff projections run out to 2035, so the score and the projections do not end in the same year. The $2.5T is the stream being measured rather than the thing it is measured against, and the $5.23T is the receipts pool the tariff line sits inside.",
+            "id": "Panel skala membawa pembaginya ke halaman, US$4,1 triliun sampai 2034, angka yang tidak pernah tampil di halaman aslinya, sementara proyeksi arus tarifnya berjalan sampai 2035, jadi keduanya tidak berakhir pada tahun yang sama. US$2,5 triliun adalah arus yang sedang diukur, bukan pembanding tempat arus itu diukur, dan US$5,23 triliun adalah kolam penerimaan tempat pos tarifnya berada."
+          }
+        },
+        {
+          "move": "incidence",
+          "q": {
+            "en": "Before the tariff money is booked as federal revenue, whose books does it leave first?",
+            "id": "Sebelum uang tarif tercatat sebagai penerimaan federal, dari pembukuan siapa uang itu keluar lebih dulu?"
+          },
+          "options": [
+            {
+              "en": "The importer of record at the border, and then the buyer at the counter as the charge passes through prices",
+              "id": "Importir dalam negeri di perbatasan, lalu pembeli di kasir ketika bebannya diteruskan lewat harga"
+            },
+            {
+              "en": "The foreign exporter, at the point of shipping",
+              "id": "Eksportir asing yang mengirimkan barangnya"
+            },
+            {
+              "en": "The domestic producer, absorbing it through a lower selling price",
+              "id": "Produsen dalam negeri, yang menanggungnya lewat harga jual yang lebih rendah"
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "en": "The incidence panel puts the duty-paying importer in the earliest column, with the household behind it taking the charge through prices, and it reads each scenario as a pair of figures, before buyers shift and after. The domestic producer sits on the opposite side: under the tariff umbrella their prices can go up instead, and that money never reaches the Treasury.",
+            "id": "Panel insidensi menaruh importir pembayar bea pada kolom paling awal, lalu rumah tangga yang menerimanya lewat harga, dan panel itu membaca tiap skenario sebagai sepasang angka, sebelum peralihan belanja dan sesudahnya. Produsen dalam negeri muncul di sisi berlawanan: di bawah payung tarif, harga mereka justru bisa naik, dan uangnya tidak sampai ke kas negara."
+          }
+        }
+      ]
+    },
+    "prediction_tap": {
+      "prompt": {
+        "en": "Before the panels open: which side of this claim is the one that goes missing?",
+        "id": "Sebelum panelnya terbuka: sisi mana dari klaim ini yang paling mungkin hilang dari halaman?"
+      },
+      "options": [
+        {
+          "en": "The party that meets the duty before any of it becomes revenue",
+          "id": "Siapa yang membayar bea itu lebih dulu, sebelum uangnya tercatat sebagai penerimaan"
+        },
+        {
+          "en": "The price of everything proposed, the number the revenue is being compared against",
+          "id": "Berapa harga total semua usulan yang menjadi pembanding penerimaan itu"
+        },
+        {
+          "en": "The year each figure runs to, and whether two counts of one stream can be stacked",
+          "id": "Jendela waktu tiap angka, dan apakah dua hitungan atas satu arus yang sama bisa ditumpuk"
+        },
+        {
+          "en": "The legal authority the collections rest on, and what becomes of money already booked if it goes",
+          "id": "Dasar hukum pungutannya, dan apa yang terjadi pada uang yang sudah tercatat jika dasar itu hilang"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "type": "claim_map",
+        "el_id": "tariffs-pay-claim-map",
+        "spine": [
+          {
+            "el_id": "tariffs-pay-n-lever",
+            "label": {
+              "en": "Sweeping tariffs are imposed on imported goods",
+              "id": "Tarif menyeluruh dikenakan atas barang impor"
+            }
+          },
+          {
+            "el_id": "tariffs-pay-n-revenue",
+            "label": {
+              "en": "Tariff collections flow in as federal revenue",
+              "id": "Pungutan tarif masuk sebagai penerimaan federal"
+            },
+            "value": {
+              "amount": 194.866,
+              "unit": "USD_B",
+              "display": {
+                "en": "$194.9B",
+                "id": "US$194,9 miliar"
+              },
+              "source_id": "en-treasury-mts-fy2025",
+              "as_of": "FY2025"
+            }
+          },
+          {
+            "el_id": "tariffs-pay-n-scale",
+            "label": {
+              "en": "The revenue reaches the scale of the full cost of everything he has proposed",
+              "id": "Penerimaan itu mencapai skala biaya penuh semua usulannya"
+            }
+          },
+          {
+            "el_id": "tariffs-pay-n-funded",
+            "label": {
+              "en": "All of it is paid for out of tariff money",
+              "id": "Semuanya terbayar dari uang tarif"
+            }
+          }
+        ],
+        "edges": [
+          {
+            "el_id": "tariffs-pay-e-lever-revenue",
+            "from": "tariffs-pay-n-lever",
+            "to": "tariffs-pay-n-revenue",
+            "status": "supported",
+            "ev": {
+              "quote": "CBO's New Projections Show $1 Trillion Less in Tariff Savings",
+              "source_id": "en-crfb-tariff-projections",
+              "why": {
+                "en": "The registry carries this step from both ends. The Treasury statement records a customs duties line for the fiscal year just closed, and the budget office and the fiscal watchdog each project that same stream forward from the schedule in force when they published.",
+                "id": "Registri sumber menopang langkah ini dari dua sisi. Laporan Kas Negara mencatat pos bea masuk untuk tahun anggaran yang baru ditutup, dan kantor anggaran serta lembaga pengawas fiskal sama-sama memproyeksikan arus yang sama ke depan dari jadwal tarif yang berlaku saat mereka menerbitkannya."
+              }
+            }
+          },
+          {
+            "el_id": "tariffs-pay-e-revenue-scale",
+            "from": "tariffs-pay-n-revenue",
+            "to": "tariffs-pay-n-scale",
+            "status": "unsourced",
+            "ev": {
+              "quote": "Trump's Tariffs Don't Come Close to Funding Everything He's Proposed",
+              "source_id": "en-factcheck-tariffs",
+              "why": {
+                "en": "The registry holds a projection of the tariff stream and a conventional score of the enacted package, and no entry in it states that the stream reaches the price of everything proposed. The scale panel sets the two magnitudes side by side with the window each one runs on.",
+                "id": "Registri sumber memuat proyeksi arus tarif dan skor konvensional atas paket yang telah disahkan, dan tidak ada entri di dalamnya yang menyatakan bahwa arus itu mencapai harga seluruh usulan. Panel skala menempatkan kedua besaran itu berdampingan beserta jendela waktu masing-masing."
+              }
+            }
+          },
+          {
+            "el_id": "tariffs-pay-e-scale-funded",
+            "from": "tariffs-pay-n-scale",
+            "to": "tariffs-pay-n-funded",
+            "status": "missing",
+            "ev": {
+              "quote": "no article in this family states the step from the revenue reaching the scale of everything he has proposed to all of it being paid for",
+              "why": {
+                "en": "No entry in the registry, and no line in the article, states the step from a stream reaching that scale to the bill actually being settled out of it. The step arrives from the order of the two sentences rather than from anything either sentence says.",
+                "id": "Tidak ada entri dalam registri sumber, dan tidak ada kalimat dalam artikelnya, yang menyatakan langkah dari arus yang mencapai skala itu menuju tagihan yang lunas dari arus tersebut. Langkah itu muncul dari urutan kedua kalimat, bukan dari isi kalimat mana pun di antara keduanya."
+              }
+            }
+          }
+        ],
+        "hidden": [
+          {
+            "el_id": "tariffs-pay-h-first-payer",
+            "label": {
+              "en": "Importers of record and the households behind them, meeting the duty before it becomes revenue",
+              "id": "Importir pembayar bea dan rumah tangga di belakangnya, menanggung pungutan sebelum menjadi penerimaan"
+            },
+            "why_hidden": {
+              "en": "Between the tariff being imposed and collections flowing in as federal revenue, somebody writes the check at the border: the domestic importer, and then the buyer at the counter as the charge passes through prices. The story books the arrival of the money and stops before naming whose ledger it left.",
+              "id": "Di antara pengenaan tarif dan masuknya pungutan sebagai penerimaan federal, ada pihak yang membayar lebih dulu di perbatasan: importir dalam negeri, lalu pembeli di kasir ketika beban itu diteruskan lewat harga. Narasinya mencatat kedatangan uang dan berhenti sebelum menyebut dari pembukuan siapa uang itu keluar."
+            },
+            "ev": {
+              "quote": "State of U.S. Tariffs: April 2, 2026",
+              "source_id": "en-yale-budgetlab-apr2026"
+            }
+          },
+          {
+            "el_id": "tariffs-pay-h-price-umbrella",
+            "label": {
+              "en": "The price umbrella collected by protected domestic producers, money that never reaches the Treasury",
+              "id": "Payung harga yang dinikmati produsen dalam negeri terlindungi, uang yang tidak pernah sampai ke kas negara"
+            },
+            "why_hidden": {
+              "en": "Once imports carry a duty, domestic substitutes can price up beneath the umbrella, and part of what buyers pay becomes producer income instead of federal revenue. The story reads only the customs ledger, so the surcharge households pay on domestic goods never appears in the ledger the story is reading.",
+              "id": "Begitu barang impor memikul bea, produk pengganti dalam negeri dapat menaikkan harga di bawah payung itu, dan sebagian dari yang dibayar pembeli menjadi pendapatan produsen, bukan penerimaan federal. Narasinya hanya membaca pembukuan bea masuk, sehingga tambahan harga yang ditanggung rumah tangga atas barang dalam negeri tidak pernah muncul dalam pembukuan yang dibaca narasi itu."
+            }
+          },
+          {
+            "el_id": "tariffs-pay-h-import-base",
+            "label": {
+              "en": "The import volume the revenue projection needs to keep flowing",
+              "id": "Volume impor yang harus terus mengalir agar proyeksi penerimaan tercapai"
+            },
+            "why_hidden": {
+              "en": "The revenue step taxes a base the tariff itself is built to shrink: buyers substitute, sourcing shifts, exemptions widen, and official projections get revised downward. The story holds the base still while the mechanism it describes is moving it.",
+              "id": "Langkah penerimaan memungut dari basis yang justru dirancang menyusut oleh tarif itu sendiri: pembeli beralih, rantai pasok berpindah, pengecualian melebar, dan proyeksi resmi direvisi turun. Narasinya menganggap basis itu diam padahal mekanisme yang digambarkannya sendiri sedang menggesernya."
+            },
+            "value": {
+              "amount": 4000,
+              "unit": "USD_B",
+              "display": {
+                "en": "$4.0T",
+                "id": "US$4,0 triliun"
+              },
+              "source_id": "en-crfb-tariff-projections",
+              "as_of": "August 2025 projection",
+              "flags": [
+                "modeled"
+              ]
+            },
+            "ev": {
+              "quote": "CBO's New Projections Show $1 Trillion Less in Tariff Savings",
+              "source_id": "en-crfb-tariff-projections"
+            }
+          },
+          {
+            "el_id": "tariffs-pay-h-refund-contingency",
+            "label": {
+              "en": "The court contingency that can turn booked collections into refunds owed to the payers",
+              "id": "Kontingensi pengadilan yang dapat mengubah pungutan yang sudah dibukukan menjadi kewajiban pengembalian kepada para pembayarnya"
+            },
+            "why_hidden": {
+              "en": "Collections raised under emergency tariff authority are under legal challenge, and an adverse ruling would convert money already counted as revenue into refund obligations to the importers who paid it. The story treats the stream as settled and never follows the authority it stands on.",
+              "id": "Pungutan yang ditarik berdasarkan wewenang tarif darurat sedang digugat di pengadilan, dan putusan yang berlawanan akan mengubah uang yang sudah dihitung sebagai penerimaan menjadi kewajiban pengembalian kepada importir yang membayarnya. Narasinya memperlakukan arus itu sebagai hal pasti dan tidak pernah menelusuri dasar wewenang yang menopangnya."
+            },
+            "value": {
+              "amount": 700,
+              "unit": "USD_B",
+              "display": {
+                "en": "about $0.7T",
+                "id": "sekitar US$0,7 triliun"
+              },
+              "source_id": "en-crfb-tariff-projections",
+              "as_of": "through FY2035, if the emergency authority is voided",
+              "flags": [
+                "modeled"
+              ]
+            },
+            "ev": {
+              "quote": "Trump's Tariffs Don't Come Close to Funding Everything He's Proposed",
+              "source_id": "en-factcheck-tariffs"
+            }
+          },
+          {
+            "el_id": "tariffs-pay-h-cost-side",
+            "label": {
+              "en": "The priced cost side of the agenda the revenue is being measured against",
+              "id": "Sisi biaya agenda yang menjadi pembanding penerimaan itu"
+            },
+            "why_hidden": {
+              "en": "The step from revenue to the scale of everything proposed needs a stated total for what everything proposed costs. The story carries the revenue lever alone and never puts the cost side on the page, so the comparison runs against a denominator it does not state.",
+              "id": "Langkah dari penerimaan menuju skala semua usulan membutuhkan total biaya semua usulan itu dinyatakan. Narasinya hanya membawa tuas penerimaan dan tidak pernah menampilkan sisi biaya, sehingga perbandingan berjalan terhadap pembagi yang tidak pernah disebutkan."
+            },
+            "value": {
+              "amount": 4100,
+              "unit": "USD_B",
+              "display": {
+                "en": "$4.1T",
+                "id": "US$4,1 triliun"
+              },
+              "source_id": "en-crfb-top13-2025",
+              "as_of": "through 2034",
+              "flags": [
+                "modeled"
+              ]
+            },
+            "ev": {
+              "quote": "Top 13 Fiscal Charts of 2025",
+              "source_id": "en-crfb-top13-2025"
+            }
+          },
+          {
+            "el_id": "tariffs-pay-h-interest-gap",
+            "label": {
+              "en": "Debt service accruing in the years between the spending and the collections",
+              "id": "Beban bunga yang berjalan pada tahun-tahun antara belanja dan pungutan"
+            },
+            "why_hidden": {
+              "en": "The agenda spends from enactment while tariff collections accrue gradually across the budget window. The gap is financed by borrowing, and the interest on that borrowing weighs on the same ledger the story says the tariffs fill. The story compares the stream to the sticker price and treats the waiting years as costless.",
+              "id": "Agenda itu mulai berbelanja sejak disahkan, sementara pungutan tarif terkumpul bertahap sepanjang jendela anggaran. Selisih waktu itu ditutup dengan utang, dan bunga utang tersebut membebani pembukuan yang sama yang menurut narasi diisi oleh tarif. Narasinya membandingkan arus penerimaan dengan harga total dan menganggap tahun-tahun menunggu itu tanpa biaya."
+            },
+            "value": {
+              "amount": 718,
+              "unit": "USD_B",
+              "display": {
+                "en": "$718B",
+                "id": "US$718 miliar"
+              },
+              "source_id": "en-crfb-top13-2025",
+              "as_of": "through 2034",
+              "flags": [
+                "modeled"
+              ]
+            },
+            "ev": {
+              "quote": "Top 13 Fiscal Charts of 2025",
+              "source_id": "en-crfb-top13-2025"
+            }
+          },
+          {
+            "el_id": "tariffs-pay-h-retaliation-offsets",
+            "label": {
+              "en": "Exporters facing countermeasures, and the compensation routed back out of the same pot",
+              "id": "Eksportir yang terkena balasan dagang, dan kompensasi yang dialirkan kembali dari kantong yang sama"
+            },
+            "why_hidden": {
+              "en": "Sweeping tariffs reach trading partners, and partners answer with duties on outbound goods; farm and factory exporters meet the lost sales before any funding arrives, and earlier rounds ended with support payments to them drawn from the collections being counted. The story counts the money coming in and not the money routed back out.",
+              "id": "Tarif menyeluruh menjangkau mitra dagang, dan mitra menjawab dengan bea atas barang ekspor; eksportir pertanian dan manufaktur menanggung hilangnya penjualan lebih dulu, dan putaran sebelumnya berakhir dengan pembayaran dukungan bagi mereka yang diambil dari pungutan yang sedang dihitung itu juga. Narasinya menghitung uang yang masuk dan tidak menghitung uang yang dialirkan kembali keluar."
+            }
+          }
+        ]
+      },
+      {
+        "type": "scale_check",
+        "el_id": "tariffs-pay-scale-check",
+        "denominator": {
+          "label": {
+            "en": "Conventional score of the enacted package, primary deficits plus interest",
+            "id": "Skor konvensional atas paket yang telah disahkan, defisit primer ditambah bunga"
+          },
+          "value": {
+            "amount": 4100,
+            "unit": "USD_B",
+            "display": {
+              "en": "$4.1T",
+              "id": "US$4,1 triliun"
+            },
+            "source_id": "en-crfb-top13-2025",
+            "as_of": "through 2034",
+            "flags": [
+              "modeled"
+            ]
+          }
+        },
+        "segments": [
+          {
+            "el_id": "tariffs-pay-sc-cbo-primary",
+            "label": {
+              "en": "Tariff effect on primary deficits, budget office projection published November 2025",
+              "id": "Dampak tarif terhadap defisit primer, proyeksi kantor anggaran federal yang terbit November 2025"
+            },
+            "value": {
+              "amount": 2500,
+              "unit": "USD_B",
+              "display": {
+                "en": "$2.5T",
+                "id": "US$2,5 triliun"
+              },
+              "source_id": "en-cbo-61877",
+              "as_of": "2025 to 2035",
+              "flags": [
+                "modeled"
+              ]
+            }
+          },
+          {
+            "el_id": "tariffs-pay-sc-crfb-debt",
+            "label": {
+              "en": "The same stream counted as debt reduction including interest, fiscal watchdog tally",
+              "id": "Arus yang sama dihitung sebagai pengurangan utang termasuk bunga, hitungan lembaga pengawas fiskal"
+            },
+            "value": {
+              "amount": 3000,
+              "unit": "USD_B",
+              "display": {
+                "en": "$3.0T",
+                "id": "US$3,0 triliun"
+              },
+              "source_id": "en-crfb-tariff-projections",
+              "as_of": "through FY2035",
+              "flags": [
+                "modeled"
+              ]
+            }
+          }
+        ],
+        "takeaway": {
+          "en": "Two counts of one stream, on two bases and two windows, set against one conventional score of the package. The counts are not added to each other, and the score and the projections do not end in the same year.",
+          "id": "Dua hitungan atas satu arus, pada dua dasar dan dua jendela waktu, ditempatkan terhadap satu skor konvensional atas paket itu. Kedua hitungan itu tidak dijumlahkan satu sama lain, dan skor serta proyeksinya tidak berakhir pada tahun yang sama."
+        },
+        "context_chips": [
+          {
+            "el_id": "tariffs-pay-sc-chip-august",
+            "label": {
+              "en": "The same debt figure as published in August, before the November revision",
+              "id": "Angka utang yang sama seperti diterbitkan pada Agustus, sebelum revisi November"
+            },
+            "value": {
+              "amount": 4000,
+              "unit": "USD_B",
+              "display": {
+                "en": "$4.0T",
+                "id": "US$4,0 triliun"
+              },
+              "source_id": "en-crfb-tariff-projections",
+              "as_of": "August 2025 projection",
+              "flags": [
+                "modeled"
+              ]
+            }
+          },
+          {
+            "el_id": "tariffs-pay-sc-chip-interest",
+            "label": {
+              "en": "Lower interest outlays the budget office counts on top of the primary effect",
+              "id": "Penghematan belanja bunga yang dihitung kantor anggaran di atas dampak primer"
+            },
+            "value": {
+              "amount": 500,
+              "unit": "USD_B",
+              "display": {
+                "en": "$0.5T",
+                "id": "US$0,5 triliun"
+              },
+              "source_id": "en-cbo-61877",
+              "as_of": "2025 to 2035",
+              "flags": [
+                "modeled"
+              ]
+            }
+          },
+          {
+            "el_id": "tariffs-pay-sc-chip-void-primary",
+            "label": {
+              "en": "The primary effect if the emergency tariff authority is voided",
+              "id": "Dampak primer jika wewenang tarif darurat dibatalkan"
+            },
+            "value": {
+              "amount": 700,
+              "unit": "USD_B",
+              "display": {
+                "en": "about $0.7T",
+                "id": "sekitar US$0,7 triliun"
+              },
+              "source_id": "en-crfb-tariff-projections",
+              "as_of": "through FY2035, if the emergency authority is voided",
+              "flags": [
+                "modeled"
+              ]
+            }
+          },
+          {
+            "el_id": "tariffs-pay-sc-chip-void-interest",
+            "label": {
+              "en": "The same effect including interest if that authority is voided",
+              "id": "Dampak yang sama termasuk bunga jika wewenang itu dibatalkan"
+            },
+            "value": {
+              "amount": 900,
+              "unit": "USD_B",
+              "display": {
+                "en": "about $0.9T",
+                "id": "sekitar US$0,9 triliun"
+              },
+              "source_id": "en-crfb-tariff-projections",
+              "as_of": "through FY2035, if the emergency authority is voided",
+              "flags": [
+                "modeled"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "money_flow",
+        "el_id": "tariffs-pay-money-flow",
+        "root": {
+          "label": {
+            "en": "Total federal receipts, net, fiscal year 2025",
+            "id": "Total penerimaan federal neto, tahun anggaran 2025"
+          },
+          "value": {
+            "amount": 5234.616,
+            "unit": "USD_B",
+            "display": {
+              "en": "$5.23T",
+              "id": "US$5,23 triliun"
+            },
+            "source_id": "en-treasury-mts-fy2025",
+            "as_of": "FY2025"
+          }
+        },
+        "rows": [
+          {
+            "el_id": "tariffs-pay-mf-customs",
+            "label": {
+              "en": "Customs duties, net of refunds, the tariff line inside those receipts",
+              "id": "Bea masuk neto setelah pengembalian, pos tarif di dalam penerimaan itu"
+            },
+            "value": {
+              "amount": 194.866,
+              "unit": "USD_B",
+              "display": {
+                "en": "$194.9B",
+                "id": "US$194,9 miliar"
+              },
+              "source_id": "en-treasury-mts-fy2025",
+              "as_of": "FY2025"
+            },
+            "severed_if_stopped": true,
+            "note": {
+              "en": "Both figures come from the same closing statement, on the same net basis, for the same year. What the tariff line pays for is not written anywhere in the statement: receipts arrive as one pool.",
+              "id": "Kedua angka berasal dari laporan penutup yang sama, atas dasar neto yang sama, untuk tahun yang sama. Apa yang dibiayai pos tarif itu tidak tertulis di mana pun dalam laporan tersebut: penerimaan tiba sebagai satu kolam bersama."
+            }
+          }
+        ]
+      },
+      {
+        "type": "incidence",
+        "el_id": "tariffs-pay-incidence",
+        "horizons": [
+          {
+            "key": "weeks",
+            "label": {
+              "en": "First weeks",
+              "id": "Pekan-pekan pertama"
+            }
+          },
+          {
+            "key": "months",
+            "label": {
+              "en": "First months",
+              "id": "Bulan-bulan pertama"
+            }
+          },
+          {
+            "key": "beyond",
+            "label": {
+              "en": "Further out",
+              "id": "Lebih jauh dari itu"
+            }
+          }
+        ],
+        "lanes": [
+          {
+            "el_id": "tariffs-pay-inc-importers",
+            "who": {
+              "en": "Importers of record, who pay the duty at the border",
+              "id": "Importir pembayar bea, yang membayar pungutan di perbatasan"
+            },
+            "cells": [
+              {
+                "horizon": "weeks",
+                "text": {
+                  "en": "The duty is met at entry, so the charge sits on the importer's books before any of it is booked on the federal side.",
+                  "id": "Pungutan ditanggung saat barang masuk, sehingga bebannya berada di pembukuan importir sebelum tercatat di sisi federal."
+                },
+                "ev": {
+                  "quote": "Final Monthly Treasury Statement, Fiscal Year 2025 (September 2025 issue)",
+                  "source_id": "en-treasury-mts-fy2025"
+                }
+              },
+              {
+                "horizon": "months",
+                "text": {
+                  "en": "Those payments accumulate into the customs duties line of the closing statement for the fiscal year, net of the refunds already returned.",
+                  "id": "Pembayaran itu terkumpul menjadi pos bea masuk dalam laporan penutup tahun anggaran, neto setelah pengembalian yang sudah dikembalikan."
+                },
+                "value": {
+                  "amount": 194.866,
+                  "unit": "USD_B",
+                  "display": {
+                    "en": "$194.9B",
+                    "id": "US$194,9 miliar"
+                  },
+                  "source_id": "en-treasury-mts-fy2025",
+                  "as_of": "FY2025"
+                },
+                "ev": {
+                  "quote": "Final Monthly Treasury Statement, Fiscal Year 2025 (September 2025 issue)",
+                  "source_id": "en-treasury-mts-fy2025"
+                }
+              },
+              {
+                "horizon": "beyond",
+                "text": {
+                  "en": "The stream rests on emergency tariff authority now before the court, and the watchdog states what the projected effect becomes if that authority is voided.",
+                  "id": "Arus itu bertumpu pada wewenang tarif darurat yang kini sedang diperiksa pengadilan, dan lembaga pengawas menyatakan menjadi berapa dampak proyeksinya jika wewenang itu dibatalkan."
+                },
+                "value": {
+                  "amount": 700,
+                  "unit": "USD_B",
+                  "display": {
+                    "en": "about $0.7T",
+                    "id": "sekitar US$0,7 triliun"
+                  },
+                  "source_id": "en-crfb-tariff-projections",
+                  "as_of": "through FY2035, if the emergency authority is voided",
+                  "flags": [
+                    "modeled"
+                  ]
+                },
+                "ev": {
+                  "quote": "CBO's New Projections Show $1 Trillion Less in Tariff Savings",
+                  "source_id": "en-crfb-tariff-projections"
+                }
+              }
+            ]
+          },
+          {
+            "el_id": "tariffs-pay-inc-households-expiry",
+            "who": {
+              "en": "Households buying tariffed goods, on the scenario where the current schedule expires",
+              "id": "Rumah tangga yang membeli barang terkena tarif, pada skenario ketika jadwal tarif saat ini berakhir"
+            },
+            "cells": [
+              {
+                "horizon": "months",
+                "text": {
+                  "en": "The Budget Lab prices the average annual cost per household before buyers shift what they buy.",
+                  "id": "Budget Lab menaksir biaya tahunan rata-rata per rumah tangga sebelum pembeli mengubah pilihan belanjanya."
+                },
+                "value": {
+                  "amount": 780,
+                  "unit": "USD",
+                  "display": {
+                    "en": "$780 per household, 2025 dollars",
+                    "id": "US$780 per rumah tangga, dolar 2025"
+                  },
+                  "source_id": "en-yale-budgetlab-apr2026",
+                  "as_of": "2 Apr 2026, 2025 dollars",
+                  "flags": [
+                    "modeled"
+                  ]
+                },
+                "ev": {
+                  "quote": "State of U.S. Tariffs: April 2, 2026",
+                  "source_id": "en-yale-budgetlab-apr2026"
+                }
+              },
+              {
+                "horizon": "beyond",
+                "text": {
+                  "en": "The same scenario after buyers substitute toward cheaper goods, which is also the shift that thins the base the collections are drawn from.",
+                  "id": "Skenario yang sama setelah pembeli beralih ke barang yang lebih murah, peralihan yang sekaligus menipiskan basis tempat pungutan itu ditarik."
+                },
+                "value": {
+                  "amount": 648,
+                  "unit": "USD",
+                  "display": {
+                    "en": "$648 per household, 2025 dollars",
+                    "id": "US$648 per rumah tangga, dolar 2025"
+                  },
+                  "source_id": "en-yale-budgetlab-apr2026",
+                  "as_of": "2 Apr 2026, 2025 dollars",
+                  "flags": [
+                    "modeled"
+                  ]
+                },
+                "ev": {
+                  "quote": "State of U.S. Tariffs: April 2, 2026",
+                  "source_id": "en-yale-budgetlab-apr2026"
+                }
+              }
+            ]
+          },
+          {
+            "el_id": "tariffs-pay-inc-households-extension",
+            "who": {
+              "en": "Households buying tariffed goods, on the scenario where the current schedule is extended",
+              "id": "Rumah tangga yang membeli barang terkena tarif, pada skenario ketika jadwal tarif saat ini diperpanjang"
+            },
+            "cells": [
+              {
+                "horizon": "months",
+                "text": {
+                  "en": "The same lab, the same report, the extension scenario before substitution.",
+                  "id": "Lab yang sama, laporan yang sama, skenario perpanjangan sebelum peralihan belanja."
+                },
+                "value": {
+                  "amount": 1338,
+                  "unit": "USD",
+                  "display": {
+                    "en": "$1,338 per household, 2025 dollars",
+                    "id": "US$1.338 per rumah tangga, dolar 2025"
+                  },
+                  "source_id": "en-yale-budgetlab-apr2026",
+                  "as_of": "2 Apr 2026, 2025 dollars",
+                  "flags": [
+                    "modeled"
+                  ]
+                },
+                "ev": {
+                  "quote": "State of U.S. Tariffs: April 2, 2026",
+                  "source_id": "en-yale-budgetlab-apr2026"
+                }
+              },
+              {
+                "horizon": "beyond",
+                "text": {
+                  "en": "The extension scenario after substitution. Each scenario is read as a pair, and the two scenarios are never mixed.",
+                  "id": "Skenario perpanjangan setelah peralihan belanja. Tiap skenario dibaca sebagai pasangan, dan kedua skenario tidak pernah dicampur."
+                },
+                "value": {
+                  "amount": 1130,
+                  "unit": "USD",
+                  "display": {
+                    "en": "$1,130 per household, 2025 dollars",
+                    "id": "US$1.130 per rumah tangga, dolar 2025"
+                  },
+                  "source_id": "en-yale-budgetlab-apr2026",
+                  "as_of": "2 Apr 2026, 2025 dollars",
+                  "flags": [
+                    "modeled"
+                  ]
+                },
+                "ev": {
+                  "quote": "State of U.S. Tariffs: April 2, 2026",
+                  "source_id": "en-yale-budgetlab-apr2026"
+                }
+              }
+            ]
+          },
+          {
+            "el_id": "tariffs-pay-inc-ledger",
+            "who": {
+              "en": "The federal ledger the collections join",
+              "id": "Pembukuan federal yang dimasuki pungutan itu"
+            },
+            "cells": [
+              {
+                "horizon": "weeks",
+                "text": {
+                  "en": "Duties post to the customs duties line of the monthly statement as entries clear.",
+                  "id": "Bea masuk tercatat pada pos bea masuk dalam laporan bulanan seiring barang selesai diproses."
+                },
+                "ev": {
+                  "quote": "Final Monthly Treasury Statement, Fiscal Year 2025 (September 2025 issue)",
+                  "source_id": "en-treasury-mts-fy2025"
+                }
+              },
+              {
+                "horizon": "months",
+                "text": {
+                  "en": "At the close of the year that line stands inside the full receipts total, on the same net basis.",
+                  "id": "Pada penutupan tahun, pos itu berdiri di dalam total penerimaan penuh, atas dasar neto yang sama."
+                },
+                "value": {
+                  "amount": 5234.616,
+                  "unit": "USD_B",
+                  "display": {
+                    "en": "$5.23T",
+                    "id": "US$5,23 triliun"
+                  },
+                  "source_id": "en-treasury-mts-fy2025",
+                  "as_of": "FY2025"
+                },
+                "ev": {
+                  "quote": "Final Monthly Treasury Statement, Fiscal Year 2025 (September 2025 issue)",
+                  "source_id": "en-treasury-mts-fy2025"
+                }
+              },
+              {
+                "horizon": "beyond",
+                "text": {
+                  "en": "Across the projection window the budget office carries the stream as a reduction in primary deficits, a decade of collections rather than a year of them.",
+                  "id": "Sepanjang jendela proyeksi, kantor anggaran mencatat arus itu sebagai pengurangan defisit primer, satu dekade pungutan dan bukan satu tahun pungutan."
+                },
+                "value": {
+                  "amount": 2500,
+                  "unit": "USD_B",
+                  "display": {
+                    "en": "$2.5T",
+                    "id": "US$2,5 triliun"
+                  },
+                  "source_id": "en-cbo-61877",
+                  "as_of": "2025 to 2035",
+                  "flags": [
+                    "modeled"
+                  ]
+                },
+                "ev": {
+                  "quote": "CBO's Updated Projections of the Budgetary Effects of Tariffs as of November 15, 2025 (publication 61877)",
+                  "source_id": "en-cbo-61877"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "echo": null,
+    "narration": {
+      "en": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "The claim moves in four steps: tariffs go on imported goods, the collections arrive as federal revenue, that revenue reaches the scale of everything he has proposed, and all of it is paid for out of tariff money.",
+            "els": [
+              "tariffs-pay-claim-map",
+              "tariffs-pay-n-lever",
+              "tariffs-pay-n-revenue",
+              "tariffs-pay-n-scale",
+              "tariffs-pay-n-funded"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "Step one is carried from both ends, with $194.9B in collections recorded for FY2025 and the same stream projected forward by the budget office and the fiscal watchdog.",
+            "els": [
+              "tariffs-pay-e-lever-revenue",
+              "tariffs-pay-n-revenue"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "Step two has no entry behind it, and step three has neither an entry nor a line in the article, so the move from a stream of that size to a bill actually settled comes from the order of two sentences rather than from what either one says.",
+            "els": [
+              "tariffs-pay-e-revenue-scale",
+              "tariffs-pay-e-scale-funded"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "The same closing statement puts that tariff line inside $5.23T of total federal receipts on the same net basis, and it never records what any line pays for, because receipts arrive as one pool.",
+            "els": [
+              "tariffs-pay-money-flow",
+              "tariffs-pay-mf-customs"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "Outside the frame stand the importer of record who meets the duty at entry, the domestic producer pricing up under the tariff umbrella, and the exporter facing countermeasures; the incidence panel prices the household side of the extension scenario at $1,338 per household, 2025 dollars, before buyers shift, and $1,130 per household, 2025 dollars, after.",
+            "els": [
+              "tariffs-pay-incidence",
+              "tariffs-pay-inc-importers",
+              "tariffs-pay-inc-households-extension",
+              "tariffs-pay-h-first-payer",
+              "tariffs-pay-h-price-umbrella",
+              "tariffs-pay-h-retaliation-offsets"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "The scale panel counts that one stream twice, $2.5T against primary deficits for 2025 to 2035 and $3.0T as debt reduction including interest through FY2035, and sets both beside a $4.1T score of the enacted package that ends in 2034; the two counts are not added to each other.",
+            "els": [
+              "tariffs-pay-scale-check",
+              "tariffs-pay-sc-cbo-primary",
+              "tariffs-pay-sc-crfb-debt",
+              "tariffs-pay-h-cost-side"
+            ]
+          }
+        ]
+      },
+      "id": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "Langkah pertama rantainya berdiri di atas dokumen: tarif menyeluruh dikenakan atas barang impor, pungutannya masuk sebagai penerimaan federal, dan laporan penutup kas negara mencatat US$194,9 miliar untuk tahun anggaran 2025.",
+            "els": [
+              "tariffs-pay-claim-map",
+              "tariffs-pay-n-lever",
+              "tariffs-pay-n-revenue",
+              "tariffs-pay-e-lever-revenue"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "Dua langkah sesudahnya berdiri di tempat lain: tidak ada entri registri sumber yang menyatakan arus itu mencapai skala biaya penuh semua usulannya, dan langkah menuju semuanya terbayar dari uang tarif tidak dinyatakan kalimat mana pun, hanya oleh urutan kedua kalimat itu.",
+            "els": [
+              "tariffs-pay-n-scale",
+              "tariffs-pay-e-revenue-scale",
+              "tariffs-pay-n-funded",
+              "tariffs-pay-e-scale-funded"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "Panel aliran uang menaruh pos itu pada tempatnya, US$194,9 miliar bea masuk neto di dalam total penerimaan federal neto US$5,23 triliun, dan laporan yang sama tidak menyebut pos itu membiayai apa: penerimaan tiba sebagai satu kolam bersama.",
+            "els": [
+              "tariffs-pay-money-flow",
+              "tariffs-pay-mf-customs"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "Di luar bingkai berdiri importir yang melunasi bea di perbatasan beserta rumah tangga di belakangnya yang menanggung beban itu lewat harga, produsen dalam negeri yang justru menaikkan harga di bawah payung tarif sehingga sebagian dari yang dibayar pembeli menjadi pendapatan mereka dan tidak pernah sampai ke kas negara, dan eksportir yang menghadapi balasan dagang. Wewenang tarif daruratnya sendiri kini sedang diperiksa pengadilan.",
+            "els": [
+              "tariffs-pay-h-first-payer",
+              "tariffs-pay-h-price-umbrella",
+              "tariffs-pay-h-retaliation-offsets",
+              "tariffs-pay-h-refund-contingency"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "Panel insidensi menyusun pembayarnya menurut waktu: importir melunasi bea di perbatasan lebih dulu, lalu rumah tangga menanggung US$780 per rumah tangga, dolar 2025 pada skenario jadwal tarif berakhir dan US$1.338 per rumah tangga, dolar 2025 pada skenario diperpanjang. Peralihan belanja yang menurunkan kedua angka itu sekaligus menipiskan basis tempat pungutannya ditarik.",
+            "els": [
+              "tariffs-pay-incidence",
+              "tariffs-pay-inc-importers",
+              "tariffs-pay-inc-households-expiry",
+              "tariffs-pay-inc-households-extension",
+              "tariffs-pay-h-import-base"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "Panel skala menghitung satu arus dua kali, US$2,5 triliun sebagai pengurang defisit primer untuk 2025 sampai 2035 dan US$3,0 triliun termasuk bunga sampai tahun anggaran 2035, terhadap skor konvensional US$4,1 triliun sampai 2034 yang tidak pernah tampil di halaman aslinya. Kedua hitungan itu tidak dijumlahkan, jendelanya tidak berakhir pada tahun yang sama, dan US$718 miliar bunga berjalan pada tahun-tahun menunggu di antaranya.",
+            "els": [
+              "tariffs-pay-scale-check",
+              "tariffs-pay-sc-cbo-primary",
+              "tariffs-pay-sc-crfb-debt",
+              "tariffs-pay-h-cost-side",
+              "tariffs-pay-h-interest-gap"
+            ]
+          }
+        ]
+      }
+    },
+    "manifest": {
+      "run_id": "run-2026-07-29",
+      "generated_at": "2026-07-28T21:52:08Z",
+      "steps": [
+        {
+          "role": "A5",
+          "model": "claude-fable-5",
+          "started_at": "2026-07-28T22:58:11Z",
+          "finished_at": "2026-07-29T00:22:12Z",
+          "input_hash": "a38dc8aab871d97b813ed1e1e6754a82609126a10d7a2911542589963f5b9d24"
+        },
+        {
+          "role": "A6",
+          "model": "claude-fable-5",
+          "started_at": "2026-07-29T00:22:12Z",
+          "finished_at": "2026-07-29T00:22:12Z",
+          "input_hash": "2a0bf1cec22280c1b15ca144e2829328b29378a80306b19295fc016bd2c0888f"
+        },
+        {
+          "role": "A7",
+          "model": "claude-opus-5[1m]",
+          "started_at": "2026-07-29T00:22:13Z",
+          "finished_at": "2026-07-29T00:22:13Z",
+          "input_hash": "9c1cb8d1fb14acbbd2dc233dc60a5308008d9eeae920d9eafdf236e313835c9b"
+        },
+        {
+          "role": "A8",
+          "model": "claude-opus-5[1m]",
+          "started_at": "2026-07-29T00:22:13Z",
+          "finished_at": "2026-07-29T00:22:13Z",
+          "input_hash": "5c919b4c7b3bd902b65cced722bcddfa8234a708f917e6f010587b3bf5e6b966"
+        },
+        {
+          "role": "A9",
+          "model": "claude-opus-5[1m]",
+          "started_at": "2026-07-29T00:22:13Z",
+          "finished_at": "2026-07-29T00:41:56Z",
+          "input_hash": "a8720fbfcef3a188dbbc76146e85b96cd0088db78e5959cf8eda492441893a7b"
+        }
+      ]
+    }
+  },
+  "mirror_brief": null
+}

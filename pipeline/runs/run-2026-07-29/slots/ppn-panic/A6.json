@@ -1,0 +1,89 @@
+{
+  "hidden": [
+    {
+      "el_id": "ppn-panic-h1",
+      "label": {
+        "en": "How much of the household basket the luxury-list rate reaches",
+        "id": "Seberapa besar porsi keranjang belanja rumah tangga yang dijangkau tarif daftar barang mewah"
+      },
+      "why_hidden": {
+        "en": "Step s3 asserts the higher rate reaches every good and service in the basket. The rule the family cites, PMK 131/2024, draws that reach at goods on the luxury-tax list, and services sit outside the list entirely. For s3 to carry weight the chain needs a ratio, spending on luxury-list goods over spending on the whole basket, and no article in the family puts a numerator against that denominator. Coverage stops at the phrase 'hanya untuk barang mewah' without saying how much of anyone's spending that is.",
+        "id": "Langkah s3 menyatakan tarif yang lebih tinggi menjangkau semua barang dan jasa di keranjang belanja. Aturan yang dikutip keluarga artikel ini, PMK 131/2024, menarik batas jangkauan itu pada barang dalam daftar kena pajak barang mewah, dan jasa sepenuhnya berada di luar daftar tersebut. Agar s3 punya bobot, rantai ini membutuhkan sebuah rasio, belanja atas barang dalam daftar mewah dibanding belanja seluruh keranjang, dan tidak ada artikel dalam keluarga ini yang menyandingkan pembilang dengan penyebut itu. Pemberitaan berhenti pada frasa 'hanya untuk barang mewah' tanpa menyebut seberapa besar bagian itu dalam belanja siapa pun."
+      },
+      "where_to_look": "BPS household consumption or CPI basket weights set against the luxury-goods list annexed to the PPnBM regulations, and PPnBM versus PPN receipt lines in APBN realization reports."
+    },
+    {
+      "el_id": "ppn-panic-h2",
+      "label": {
+        "en": "Goods and services that carry no VAT under the exemption and facility lists",
+        "id": "Barang dan jasa yang dibebaskan dari PPN menurut ketentuan pengecualian dan fasilitas"
+      },
+      "why_hidden": {
+        "en": "Step s4 asserts every price rises through the VAT channel. Part of the basket, staple goods and the services on the statutory exemption and facility lists, carries no VAT at any rate, so the stated mechanism has no channel into those prices. The chain jumps from the rate to every price, and no article in the family names the slice the channel cannot enter.",
+        "id": "Langkah s4 menyatakan semua harga naik lewat jalur PPN. Sebagian keranjang, bahan kebutuhan pokok serta jasa yang masuk ketentuan pengecualian dan fasilitas dalam undang-undang, tidak memikul PPN pada tarif berapa pun, sehingga mekanisme yang dinyatakan tidak punya jalur masuk ke harga-harga itu. Rantai melompat dari tarif ke semua harga, dan tidak ada artikel dalam keluarga ini yang menyebut bagian keranjang yang tidak bisa dimasuki jalur tersebut."
+      },
+      "where_to_look": "The exemption and facility provisions of the amended VAT law and the implementing government regulation listing VAT-free basic goods and services."
+    },
+    {
+      "el_id": "ppn-panic-h3",
+      "label": {
+        "en": "VAT revenue the 2025 budget assumed that the restricted reach does not collect",
+        "id": "Penerimaan PPN yang diasumsikan APBN 2025 dan tidak terpungut karena jangkauan tarif dibatasi"
+      },
+      "why_hidden": {
+        "en": "Steps s1 and s2 state the ministry issues the rule and the higher rate takes effect on the luxury list alone. Each point of rate not collected on the rest of the basket is a transfer, buyers keep it and the treasury forgoes it, while the 2025 revenue plan was set before this restriction existed, on the statute's full-rate schedule. The family presents the restriction as relief for the basket and stops before the budget line the relief comes out of.",
+        "id": "Langkah s1 dan s2 menyatakan kementerian menerbitkan aturan dan tarif lebih tinggi berlaku hanya pada daftar barang mewah. Setiap poin tarif yang tidak dipungut atas sisa keranjang merupakan sebuah transfer, pembeli menyimpannya dan kas negara melepasnya, sementara rencana penerimaan 2025 disusun sebelum pembatasan ini ada, di atas jadwal tarif penuh dalam undang-undang. Keluarga artikel menyajikan pembatasan itu sebagai kelonggaran bagi keranjang belanja dan berhenti sebelum menyebut pos anggaran yang menanggungnya."
+      },
+      "where_to_look": "The revenue assumptions of the 2025 state budget law and Kemenkeu releases on the fiscal cost of the year-end tax package."
+    },
+    {
+      "el_id": "ppn-panic-h4",
+      "label": {
+        "en": "The rate schedule already written into the VAT statute before the ministry moved",
+        "id": "Jadwal tarif yang sudah tertulis dalam undang-undang PPN sebelum kementerian bertindak"
+      },
+      "why_hidden": {
+        "en": "Step s1 casts the ministry rule as the first mover of the chain. The rule sits under the amended VAT statute, whose schedule already put the higher rate on the whole VAT base at the start of 2025; the eleven-twelfths base in PMK 131/2024 is the device that keeps everything off the luxury list at an effective 11 percent. The chain never states what the basket pays in the world where the ministry issues nothing, and no article follows the fact that the 11 percent now rests on a ministerial regulation while the statutory 12 percent stays on the books.",
+        "id": "Langkah s1 menempatkan aturan kementerian sebagai penggerak pertama rantai. Aturan itu berdiri di bawah undang-undang PPN hasil perubahan, yang jadwalnya sudah menempatkan tarif lebih tinggi pada seluruh basis PPN sejak awal 2025; dasar pengenaan sebelas per dua belas dalam PMK 131/2024 adalah perangkat yang menahan semua yang di luar daftar mewah pada tarif efektif 11 persen. Rantai tidak pernah menyatakan berapa yang dibayar keranjang seandainya kementerian tidak menerbitkan apa pun, dan tidak ada artikel yang mengikuti bahwa angka 11 persen kini bertumpu pada peraturan menteri sementara tarif 12 persen dalam undang-undang tetap tercantum."
+      },
+      "where_to_look": "The rate schedule of the amended VAT law read against the legal-basis recitals of PMK 131/2024."
+    },
+    {
+      "el_id": "ppn-panic-h5",
+      "label": {
+        "en": "VAT-registered sellers who had a single night to re-base every invoice",
+        "id": "Pengusaha kena pajak yang hanya punya satu malam untuk mengganti dasar penghitungan setiap faktur"
+      },
+      "why_hidden": {
+        "en": "Between s1 and s2 sits one night: the rule is dated the last day of the year and wire coverage of it in force ran the next day. Off-list sales now invoice at 12 percent on an eleven-twelfths base in place of the old flat computation on full price, so the arithmetic on every tax invoice, cash register and import declaration changed at once. The first payer of the step is the seller who implements it, and the family explains the formula while stopping before the people who had a single night to reprogram it.",
+        "id": "Di antara s1 dan s2 hanya ada satu malam: aturan bertanggal hari terakhir tahun dan pemberitaan kantor berita tentang pemberlakuannya terbit keesokan harinya. Penjualan di luar daftar mewah kini difakturkan 12 persen atas dasar pengenaan sebelas per dua belas, menggantikan hitungan lama atas harga penuh, sehingga aritmetika pada setiap faktur pajak, mesin kasir dan dokumen impor berubah seketika. Pembayar pertama langkah ini adalah penjual yang menerapkannya, dan keluarga artikel menjelaskan rumusnya sambil berhenti sebelum menyebut pihak yang hanya punya satu malam untuk memprogram ulang."
+      },
+      "where_to_look": "DJP transition provisions for tax invoices issued in early January 2025 and the invoice rules inside PMK 131/2024."
+    },
+    {
+      "el_id": "ppn-panic-h6",
+      "label": {
+        "en": "Buyers billed at the full base in the changeover, and sellers walking back preannounced full-rate prices",
+        "id": "Pembeli yang tertagih atas dasar penuh pada masa peralihan, dan penjual yang menarik kembali harga tarif penuh yang telanjur diumumkan"
+      },
+      "why_hidden": {
+        "en": "Step s2 lands at the end of a season in which the statute's full-rate schedule set public expectations, so price lists and billing set to 12 percent across the basket already existed when the restriction arrived dated the last day of the year. The stated step therefore reaches every transaction billed at the full base in the changeover window: one side holds the extra point, the other must route it back, and tags raised in anticipation do not mark themselves back down. The family announces the restriction and stops before the unwind.",
+        "id": "Langkah s2 tiba di ujung musim ketika jadwal tarif penuh dalam undang-undang membentuk ekspektasi publik, sehingga daftar harga dan penagihan yang disetel 12 persen untuk seluruh keranjang sudah ada ketika pembatasan keluar bertanggal hari terakhir tahun. Langkah yang dinyatakan itu menjangkau setiap transaksi yang tertagih atas dasar penuh pada masa peralihan: ada pihak yang memegang kelebihan satu poin, ada pihak yang harus mengembalikannya, dan label harga yang naik karena antisipasi tidak turun dengan sendirinya. Keluarga artikel mengumumkan pembatasan dan berhenti sebelum proses baliknya."
+      },
+      "where_to_look": "The DJP circular on invoices and overcollected output tax during the changeover, and the turn-of-year monthly CPI releases."
+    },
+    {
+      "el_id": "ppn-panic-h7",
+      "label": {
+        "en": "Luxury-goods buyers and dealers on either side of the February boundary",
+        "id": "Pembeli dan penjual barang mewah di dua sisi batas Februari"
+      },
+      "why_hidden": {
+        "en": "The Bisnis.com headline states full application for luxury goods starts in February 2025, so s2 arrives in two stages: first a window at the reduced base, then the full base. A boundary announced in advance on big-ticket goods reaches the timing of purchases, sales pulled into the window and tax remitted on either side of it. The article states the schedule and stops before following what the window does to when luxury sales happen.",
+        "id": "Judul Bisnis.com menyatakan pemberlakuan penuh untuk barang mewah dimulai Februari 2025, sehingga s2 datang dalam dua tahap: jendela dengan dasar pengenaan yang dikurangi lebih dulu, lalu dasar penuh sesudahnya. Batas yang diumumkan di muka pada barang bernilai besar menjangkau penentuan waktu pembelian, penjualan yang ditarik masuk ke jendela itu, dan pajak yang disetor di kedua sisinya. Artikel menyatakan jadwal dan berhenti sebelum mengikuti akibat jendela itu terhadap kapan penjualan barang mewah terjadi."
+      },
+      "where_to_look": "Monthly PPnBM and PPN receipt series around the February boundary and monthly sales series for the main luxury-listed goods."
+    }
+  ],
+  "model": "claude-fable-5"
+}

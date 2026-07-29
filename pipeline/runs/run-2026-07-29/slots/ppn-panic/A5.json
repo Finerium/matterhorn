@@ -1,0 +1,69 @@
+{
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "ppn-panic-s1",
+        "label": {
+          "en": "The finance ministry issues a new VAT tariff rule",
+          "id": "Kemenkeu menerbitkan aturan tarif PPN yang baru"
+        }
+      },
+      {
+        "el_id": "ppn-panic-s2",
+        "label": {
+          "en": "A higher VAT rate takes effect",
+          "id": "Tarif PPN yang lebih tinggi mulai berlaku"
+        }
+      },
+      {
+        "el_id": "ppn-panic-s3",
+        "label": {
+          "en": "The higher rate reaches every good and service in the basket",
+          "id": "Tarif yang lebih tinggi itu menjangkau semua barang dan jasa di keranjang belanja"
+        }
+      },
+      {
+        "el_id": "ppn-panic-s4",
+        "label": {
+          "en": "Every price rises",
+          "id": "Semua harga naik"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "ppn-panic-e1",
+        "from": "ppn-panic-s1",
+        "to": "ppn-panic-s2",
+        "quote": "Kemenkeu rilis aturan PPN 12 persen hanya untuk barang mewah"
+      },
+      {
+        "el_id": "ppn-panic-e2",
+        "from": "ppn-panic-s2",
+        "to": "ppn-panic-s3",
+        "quote": "no article in this family states the step from the higher rate taking effect to the rate reaching every good and service in the basket"
+      },
+      {
+        "el_id": "ppn-panic-e3",
+        "from": "ppn-panic-s3",
+        "to": "ppn-panic-s4",
+        "quote": "no article in this family states the step from the rate reaching every good and service to every price rising"
+      }
+    ]
+  },
+  "panel_skeleton": [
+    {
+      "type": "claim_map",
+      "el_id": "ppn-panic-p-claim-map"
+    },
+    {
+      "type": "scale_check",
+      "el_id": "ppn-panic-p-scale-check"
+    },
+    {
+      "type": "echo",
+      "el_id": "ppn-panic-p-echo"
+    }
+  ],
+  "model": "claude-fable-5"
+}

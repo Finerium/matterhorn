@@ -1,0 +1,188 @@
+{
+  "narrative_id": "mbg-jobs",
+  "cluster": {
+    "narrative_id": "mbg-jobs",
+    "family_skeleton": "a programme's own headcount, self reported and derived rather than counted, carried as an independent measure of the programme's worth",
+    "members": [
+      {
+        "id": "mbg-jobs-m1",
+        "lang": "id",
+        "headline": "Program MBG Serap 1,28 Juta Tenaga Kerja, UMKM-Peternak Kecipratan",
+        "outlet": "CNBC Indonesia",
+        "date": "2026-05-23",
+        "url": "https://www.cnbcindonesia.com/news/20260523162405-4-737426/program-mbg-serap-128-juta-tenaga-kerja-umkm-peternak-kecipratan",
+        "note": "Verbatim title from content/sources.json (id-cnbc-mbg-workers-suppliers). BGN self reported; the slug reads 128-juta and the body reads 1,28 juta."
+      },
+      {
+        "id": "mbg-jobs-m2",
+        "lang": "id",
+        "headline": "MBG Disebut Serap 987.000 Tenaga Kerja, 40.000 UMKM Ikut Bergerak",
+        "outlet": "Kompas.com",
+        "date": "2026-02-15",
+        "url": "https://money.kompas.com/read/2026/02/15/181700126/mbg-disebut-serap-987.000-tenaga-kerja-40.000-umkm-ikut-bergerak",
+        "note": "Verbatim title from content/sources.json (id-kompas-mbg-workers-feb2026). The February baseline is live, which reverses the blueprint D-6 default, but it is a derived estimate (about 47 kitchen workers times about 21,000 SPPG), so it ships flagged estimate and self_reported with the arithmetic exposed."
+      },
+      {
+        "id": "mbg-jobs-m3",
+        "lang": "id",
+        "headline": "Anggaran MBG Terserap Rp 88,15 Triliun hingga Mei 2026",
+        "outlet": "Kompas.com",
+        "date": "2026-06-06",
+        "url": "https://money.kompas.com/read/2026/06/06/213559526/anggaran-mbg-terserap-rp-8815-triliun-hingga-mei-2026",
+        "note": "Verbatim title from content/sources.json. Pins the 29,679 SPPG kitchen count that the per-kitchen derivation rests on."
+      }
+    ]
+  },
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "mbg-jobs-n1",
+        "label": {
+          "en": "The state budget flows into the MBG programme",
+          "id": "Anggaran negara mengalir ke program MBG"
+        }
+      },
+      {
+        "el_id": "mbg-jobs-n2",
+        "label": {
+          "en": "SPPG kitchens operate across the country",
+          "id": "Dapur SPPG beroperasi di berbagai daerah"
+        }
+      },
+      {
+        "el_id": "mbg-jobs-n3",
+        "label": {
+          "en": "The programme absorbs workers through its kitchen network",
+          "id": "Program menyerap tenaga kerja lewat jaringan dapurnya"
+        }
+      },
+      {
+        "el_id": "mbg-jobs-n4",
+        "label": {
+          "en": "MSMEs and small livestock farmers take in income as kitchen suppliers",
+          "id": "UMKM dan peternak kecil memperoleh pemasukan sebagai pemasok dapur"
+        }
+      },
+      {
+        "el_id": "mbg-jobs-n5",
+        "label": {
+          "en": "The programme's own headcount carries as the measure of its worth",
+          "id": "Angka serapan versi program sendiri dijadikan ukuran nilainya"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "mbg-jobs-e1",
+        "from": "mbg-jobs-n1",
+        "to": "mbg-jobs-n2",
+        "quote": "no article in this family states the step from the state budget to SPPG kitchens operating"
+      },
+      {
+        "el_id": "mbg-jobs-e2",
+        "from": "mbg-jobs-n2",
+        "to": "mbg-jobs-n3",
+        "quote": "MBG Disebut Serap 987.000 Tenaga Kerja"
+      },
+      {
+        "el_id": "mbg-jobs-e3",
+        "from": "mbg-jobs-n3",
+        "to": "mbg-jobs-n4",
+        "quote": "Program MBG Serap 1,28 Juta Tenaga Kerja, UMKM-Peternak Kecipratan"
+      },
+      {
+        "el_id": "mbg-jobs-e4",
+        "from": "mbg-jobs-n4",
+        "to": "mbg-jobs-n5",
+        "quote": "no article in this family states the step from supplier income to the headcount standing as the measure of the programme's worth"
+      }
+    ]
+  },
+  "case_library": {
+    "cases": [
+      {
+        "id": "B-01",
+        "title": {
+          "en": "Casualty-inflation cascade",
+          "id": "Kaskade inflasi korban"
+        },
+        "period": "May 2019",
+        "motif": {
+          "en": "moral shock, fabricated count",
+          "id": "kejutan moral, angka rekaan"
+        },
+        "documented_outcome": {
+          "en": "A fabricated \"60 shot dead\" claim spread faster than any correction and amplified the post-election riots in Jakarta. The final human-rights investigation documented 10 people unlawfully killed, four of them minors.",
+          "id": "Klaim rekaan \"60 orang tewas ditembak\" menyebar lebih cepat dari koreksi mana pun dan memperbesar kerusuhan pasca pemilu di Jakarta. Investigasi hak asasi manusia final mendokumentasikan 10 orang terbunuh secara tidak sah, empat di antaranya anak-anak."
+        },
+        "citations": [
+          "id-aljazeera-2019-riots",
+          "id-tempo-cekfakta-60",
+          "id-liputan6-amnesty-2019"
+        ]
+      },
+      {
+        "id": "B-02",
+        "title": {
+          "en": "Fabricated-provision cascade",
+          "id": "Kaskade pasal rekaan"
+        },
+        "period": "Oct 2020",
+        "motif": {
+          "en": "scope inflation, fabricated provisions",
+          "id": "inflasi cakupan, pasal rekaan"
+        },
+        "documented_outcome": {
+          "en": "Invented provisions of a law whose final text was not yet public, from a minimum wage abolished to severance eliminated, fueled nationwide demonstrations. The communications ministry catalogued \"12 hoaks\" about the bill in a single list.",
+          "id": "Pasal-pasal rekaan atas undang-undang yang naskah finalnya belum terbit, dari upah minimum dihapus sampai pesangon ditiadakan, menyulut demonstrasi nasional. Kementerian komunikasi mengatalogkan \"12 hoaks\" tentang RUU itu dalam satu daftar."
+        },
+        "citations": [
+          "id-suara-kominfo-12hoax",
+          "id-kompas-omnibus-8hoax"
+        ]
+      },
+      {
+        "id": "B-03",
+        "title": {
+          "en": "Moral-shock acceleration",
+          "id": "Akselerasi kejutan moral"
+        },
+        "period": "Aug 2025",
+        "motif": {
+          "en": "moral shock, acceleration",
+          "id": "kejutan moral, akselerasi"
+        },
+        "documented_outcome": {
+          "en": "A viral death video mobilized nationwide protests within hours. In the escalations that followed, a regional parliament building fire in Makassar killed three people.",
+          "id": "Video kematian yang viral memobilisasi unjuk rasa nasional dalam hitungan jam. Dalam eskalasi yang menyusul, kebakaran gedung DPRD di Makassar menewaskan tiga orang."
+        },
+        "citations": [
+          "id-detik-timeline-aug2025",
+          "id-jakartapost-makassar-fire",
+          "id-jakartaglobe-protest-toll"
+        ]
+      },
+      {
+        "id": "B-04",
+        "title": {
+          "en": "Scope-inflation panic",
+          "id": "Panik inflasi cakupan"
+        },
+        "period": "Jan 2025",
+        "motif": {
+          "en": "scope inflation, manufactured urgency",
+          "id": "inflasi cakupan, urgensi semu"
+        },
+        "documented_outcome": {
+          "en": "The 12 percent VAT panic priced the whole consumption basket for weeks after PMK 131/2024 had restricted the rise to luxury goods already under the luxury sales tax; the clarification required a multi-channel communication effort.",
+          "id": "Panik PPN 12 persen menghitung seluruh keranjang konsumsi selama berminggu-minggu setelah PMK 131/2024 membatasi kenaikan pada barang mewah yang sudah dikenai pajak penjualan barang mewah; klarifikasinya menuntut upaya komunikasi lintas kanal."
+        },
+        "citations": [
+          "id-pajak-pmk131",
+          "id-antara-ppn-luxury",
+          "id-bisnis-ppn-luxury"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "narrative_id": "usaid-deficit",
+  "cluster": {
+    "narrative_id": "usaid-deficit",
+    "family_skeleton": "a spending line the public believes is a quarter of the budget, carried as though the belief were the size",
+    "members": [
+      {
+        "id": "usaid-deficit-m1",
+        "lang": "en",
+        "headline": "KFF Health Tracking Poll February 2025: The Public's Views on Global Health and USAID",
+        "outlet": "KFF",
+        "date": "2025-03-04",
+        "url": "https://www.kff.org/global-health-policy/kff-health-tracking-poll-february-2025-the-publics-views-on-global-health-and-usaid/",
+        "note": "Verbatim title from content/sources.json (en-kff-tracking-feb2025). Average guess 26 percent of the federal budget against about 1 percent actual; 11 percent guessed correctly; support flips 58 to 34 once informed. The $43.8B dollar figure is NOT on this page and does not ship."
+      },
+      {
+        "id": "usaid-deficit-m2",
+        "lang": "en",
+        "headline": "Final Monthly Treasury Statement, Fiscal Year 2025 (September 2025 issue)",
+        "outlet": "U.S. Department of the Treasury",
+        "date": "2025-09",
+        "url": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_202509.pdf",
+        "note": "Verbatim title from content/sources.json (en-treasury-mts-fy2025). The denominator: total federal net receipts $5,234,616M. Not a news article, and listed here because the family panel shows what the claim would have to be read against."
+      }
+    ]
+  },
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "usaid-deficit-spine-size",
+        "label": {
+          "en": "Foreign aid takes a very large share of the federal budget, the size the claim asserts",
+          "id": "Bantuan luar negeri memakan porsi sangat besar dari anggaran federal, ukuran yang dinyatakan klaim itu"
+        }
+      },
+      {
+        "el_id": "usaid-deficit-spine-cut",
+        "label": {
+          "en": "Cutting foreign aid frees spending on that same scale",
+          "id": "Memangkas bantuan luar negeri membebaskan belanja pada skala yang sama"
+        }
+      },
+      {
+        "el_id": "usaid-deficit-spine-deficit",
+        "label": {
+          "en": "The federal deficit narrows substantially",
+          "id": "Defisit federal menyusut secara berarti"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "usaid-deficit-edge-size-cut",
+        "from": "usaid-deficit-spine-size",
+        "to": "usaid-deficit-spine-cut",
+        "quote": "no article in this family states the step from foreign aid taking a very large share of the federal budget to cutting foreign aid freeing spending on that same scale"
+      },
+      {
+        "el_id": "usaid-deficit-edge-cut-deficit",
+        "from": "usaid-deficit-spine-cut",
+        "to": "usaid-deficit-spine-deficit",
+        "quote": "no article in this family states the step from cutting foreign aid freeing spending on that same scale to the federal deficit narrowing substantially"
+      }
+    ]
+  }
+}

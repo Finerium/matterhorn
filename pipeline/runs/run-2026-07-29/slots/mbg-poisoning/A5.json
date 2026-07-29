@@ -1,0 +1,69 @@
+{
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "s-program",
+        "label": {
+          "en": "The MBG free meal program operates at national scale",
+          "id": "Program Makan Bergizi Gratis (MBG) beroperasi dalam skala nasional"
+        }
+      },
+      {
+        "el_id": "s-poisoning",
+        "label": {
+          "en": "Recipients, most of them schoolchildren, suffer food poisoning after the meals",
+          "id": "Penerima program, sebagian besar anak sekolah, mengalami keracunan makanan setelah menyantap menu MBG"
+        }
+      },
+      {
+        "el_id": "s-count",
+        "label": {
+          "en": "BGN, the agency running the program, announces its own running count of the victims",
+          "id": "BGN, badan yang menjalankan program itu, mengumumkan hitungan berjalan versinya sendiri atas jumlah korban"
+        }
+      },
+      {
+        "el_id": "s-scale",
+        "label": {
+          "en": "The agency's announced figure stands as the full national scale of the harm",
+          "id": "Angka yang diumumkan badan itu menjadi ukuran utuh skala keracunan secara nasional"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "e-serve-poison",
+        "from": "s-program",
+        "to": "s-poisoning",
+        "quote": "Data JPPI: Per September, 8.649 Anak Keracunan MBG"
+      },
+      {
+        "el_id": "e-poison-count",
+        "from": "s-poisoning",
+        "to": "s-count",
+        "quote": "Kepala BGN: Korban Keracunan MBG Capai 6.517 Orang Sejak Januari 2025"
+      },
+      {
+        "el_id": "e-count-scale",
+        "from": "s-count",
+        "to": "s-scale",
+        "quote": "no article in this family states the step from the agency's own announced count to that count standing as the full national scale of the harm"
+      }
+    ]
+  },
+  "panel_skeleton": [
+    {
+      "type": "claim_map",
+      "el_id": "panel-claim-map"
+    },
+    {
+      "type": "dueling",
+      "el_id": "panel-dueling"
+    },
+    {
+      "type": "incidence",
+      "el_id": "panel-incidence"
+    }
+  ],
+  "model": "claude-fable-5"
+}

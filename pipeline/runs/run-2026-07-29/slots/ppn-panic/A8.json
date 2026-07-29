@@ -1,0 +1,28 @@
+{
+  "echo": {
+    "type": "echo",
+    "el_id": "ppn-panic-p-echo",
+    "current_motif": {
+      "en": "A rule that draws the higher rate at a named list of goods is retold as reaching the whole basket, and that widened reach is read straight through to a rise in every price, on a changeover date that leaves no room to check the list.",
+      "id": "Aturan yang menarik tarif lebih tinggi pada daftar barang tertentu diceritakan ulang sebagai menjangkau seluruh keranjang belanja, dan jangkauan yang meluas itu dibaca langsung menjadi kenaikan pada semua harga, pada tanggal peralihan yang tidak menyisakan ruang untuk memeriksa daftarnya."
+    },
+    "historical": {
+      "case_id": "B-04",
+      "motif": {
+        "en": "scope inflation, manufactured urgency",
+        "id": "inflasi cakupan, urgensi semu"
+      },
+      "outcome": {
+        "en": "The 12 percent VAT panic priced the whole consumption basket for weeks after PMK 131/2024 had restricted the rise to luxury goods already under the luxury sales tax; the clarification required a multi-channel communication effort.",
+        "id": "Panik PPN 12 persen menghitung seluruh keranjang konsumsi selama berminggu-minggu setelah PMK 131/2024 membatasi kenaikan pada barang mewah yang sudah dikenai pajak penjualan barang mewah; klarifikasinya menuntut upaya komunikasi lintas kanal."
+      },
+      "citations": [
+        "id-pajak-pmk131",
+        "id-antara-ppn-luxury",
+        "id-bisnis-ppn-luxury"
+      ]
+    },
+    "disclaimer_key": "echo_disclaimer"
+  },
+  "model": "claude-opus-5[1m]"
+}

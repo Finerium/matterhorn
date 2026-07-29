@@ -1,0 +1,263 @@
+{
+  "panels": [
+    {
+      "type": "claim_map",
+      "el_id": "mc-panel-claim-map",
+      "spine": [
+        {
+          "el_id": "mc-asrt-arrivals",
+          "label": {
+            "en": "More immigrants enter and settle",
+            "id": "Lebih banyak imigran masuk dan menetap"
+          }
+        },
+        {
+          "el_id": "mc-asrt-offending",
+          "label": {
+            "en": "Immigrants commit crime at a rate above the rest of the population",
+            "id": "Imigran melakukan kejahatan dengan laju melebihi penduduk lain"
+          }
+        },
+        {
+          "el_id": "mc-asrt-wave",
+          "label": {
+            "en": "The national crime trend surges into a wave",
+            "id": "Tren kejahatan nasional melonjak menjadi gelombang"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "el_id": "mc-edge-arrivals-offending",
+          "from": "mc-asrt-arrivals",
+          "to": "mc-asrt-offending",
+          "status": "missing",
+          "ev": {
+            "quote": "no article in this family states the step from more immigrants entering and settling to immigrants committing crime at a rate above the rest of the population",
+            "why": {
+              "en": "The two claims sit next to each other and the step between them is never written down. Nothing in the registry states it either: the rate comparisons that do exist are computed by legal status against the US-born, not derived from how many people arrived.",
+              "id": "Kedua klaim itu berdampingan dan langkah di antara keduanya tidak pernah dituliskan. Tidak ada pula di dalam registri yang menyatakannya: perbandingan laju yang memang ada dihitung menurut status hukum terhadap warga kelahiran Amerika Serikat, bukan diturunkan dari berapa banyak orang yang datang."
+            }
+          }
+        },
+        {
+          "el_id": "mc-edge-offending-wave",
+          "from": "mc-asrt-offending",
+          "to": "mc-asrt-wave",
+          "status": "missing",
+          "ev": {
+            "quote": "no article in this family states the step from immigrants committing crime at a rate above the rest of the population to the national crime trend surging into a wave",
+            "why": {
+              "en": "A recorded national trend is produced by an instrument with its own agency coverage and its own reporting step, so a group's offending rate does not travel into it unchanged. The national release in this family states its own direction of change against the prior year, and the step from any group's rate to that national line is written nowhere.",
+              "id": "Tren nasional yang tercatat dihasilkan oleh instrumen dengan cakupan lembaga dan langkah pelaporannya sendiri, sehingga laju tindak pidana sebuah kelompok tidak berpindah ke dalamnya tanpa berubah. Rilis nasional dalam keluarga ini menyatakan arah perubahannya sendiri terhadap tahun sebelumnya, dan langkah dari laju kelompok mana pun menuju garis nasional itu tidak tertulis di mana pun."
+            }
+          }
+        }
+      ],
+      "hidden": [
+        {
+          "el_id": "mc-hid-arrival-victims",
+          "label": {
+            "en": "Immigrants on the victim side of the wave, and the victimization rate among them",
+            "id": "Imigran pada sisi korban gelombang, dan laju viktimisasi mereka"
+          },
+          "value": {
+            "amount": 44,
+            "unit": "percent",
+            "display": {
+              "en": "44 percent lower",
+              "id": "44 persen lebih rendah"
+            },
+            "source_id": "en-cato-pa1003",
+            "as_of": "NCVS 2017 to 2023, published August 2025"
+          },
+          "why_hidden": {
+            "en": "The arrivals step settles these people inside the same population any national wave then lands on, so the stated mechanism reaches them as potential victims. The story follows the class only as the driver of offending and stops before asking what the wave does to the people it just counted in.",
+            "id": "Langkah kedatangan menempatkan orang-orang ini di dalam populasi yang sama yang kemudian dilanda gelombang nasional mana pun, sehingga mekanisme yang dinyatakan menjangkau mereka sebagai calon korban. Cerita hanya mengikuti kelas ini sebagai pendorong kejahatan dan berhenti sebelum bertanya apa yang dilakukan gelombang itu terhadap orang yang baru saja dihitungnya masuk."
+          },
+          "ev": {
+            "quote": "Immigrants are less likely than the native-born to be violently victimized, measured on the national victimization survey across the years covered by this analysis.",
+            "source_id": "en-cato-pa1003"
+          }
+        },
+        {
+          "el_id": "mc-hid-reporting-rate",
+          "label": {
+            "en": "The reporting rate that converts offenses into the recorded national trend",
+            "id": "Tingkat pelaporan yang mengubah tindak pidana menjadi tren nasional yang tercatat"
+          },
+          "value": {
+            "amount": 29,
+            "unit": "percent",
+            "display": {
+              "en": "29 percent higher",
+              "id": "29 persen lebih tinggi"
+            },
+            "source_id": "en-cato-pa1003",
+            "as_of": "NCVS 2017 to 2023, published August 2025"
+          },
+          "why_hidden": {
+            "en": "The step from offending to a national wave runs through a statistic of reported crime, so the mechanism reaches the share of offenses that ever get reported. If settlement shifts how readily people report, the recorded line moves while the offending step stands still. The story reads the recorded trend as the offending trend and never names the conversion between them.",
+            "id": "Langkah dari tindak pidana menuju gelombang nasional melewati statistik kejahatan yang dilaporkan, sehingga mekanisme ini menjangkau porsi tindak pidana yang sampai dilaporkan. Bila pemukiman menggeser kesediaan orang untuk melapor, garis yang tercatat bergerak sementara langkah tindak pidananya diam. Cerita membaca tren tercatat sebagai tren tindak pidana dan tidak pernah menyebut konversi di antara keduanya."
+          },
+          "ev": {
+            "quote": "Immigrant victims of violent crime are more likely than native-born victims to report the incident to police, measured on the same victimization survey.",
+            "source_id": "en-cato-pa1003"
+          }
+        },
+        {
+          "el_id": "mc-hid-comparator-rate",
+          "label": {
+            "en": "The rest of the population's own offending rate, the comparator the claim requires",
+            "id": "Laju tindak pidana penduduk selebihnya, pembanding yang dituntut klaim itu"
+          },
+          "value": {
+            "amount": 2,
+            "unit": "count",
+            "display": {
+              "en": "over 2 times",
+              "id": "lebih dari 2 kali"
+            },
+            "source_id": "en-pnas-light-2020",
+            "as_of": "Texas, 2012 to 2018"
+          },
+          "why_hidden": {
+            "en": "The offending step claims a rate above the rest of the population, which reaches the rest of the population as the yardstick. The comparator rate itself never appears on the same page as the claim, so the reader gets the word above without the level it is above.",
+            "id": "Langkah tindak pidana mengklaim laju yang melebihi penduduk selebihnya, dan klaim itu menjangkau penduduk selebihnya sebagai tolok ukur. Laju pembandingnya sendiri tidak pernah tampil pada halaman yang sama dengan klaimnya, sehingga pembaca menerima kata melebihi tanpa aras yang dilampauinya."
+          },
+          "ev": {
+            "quote": "US-born citizens were arrested for violent crime at more than twice the rate of undocumented immigrants in the state records examined.",
+            "source_id": "en-pnas-light-2020"
+          }
+        },
+        {
+          "el_id": "mc-hid-population-denominator",
+          "label": {
+            "en": "The population denominator that settlement itself grows",
+            "id": "Penyebut populasi yang justru membesar karena pemukiman"
+          },
+          "why_hidden": {
+            "en": "The arrivals step enlarges the base population that every later rate divides by. Raw incident counts can climb while the per-person rate falls, and both the offending step and the wave step are rate claims. The story quotes the trend words and never names the divisor they stand on.",
+            "id": "Langkah kedatangan memperbesar populasi dasar yang menjadi pembagi bagi setiap laju berikutnya. Jumlah kejadian mentah bisa naik sementara laju per orang turun, padahal langkah tindak pidana maupun langkah gelombang sama-sama klaim laju. Cerita mengutip kata-kata tren tanpa pernah menyebut pembagi yang menopangnya."
+          }
+        },
+        {
+          "el_id": "mc-hid-baseline-year",
+          "label": {
+            "en": "The baseline year the national surge is measured from",
+            "id": "Tahun dasar tempat lonjakan nasional diukur"
+          },
+          "value": {
+            "amount": -14.9,
+            "unit": "percent",
+            "display": {
+              "en": "down 14.9 percent",
+              "id": "turun 14,9 persen"
+            },
+            "source_id": "en-fbi-2024-crime",
+            "as_of": "2024 against 2023"
+          },
+          "why_hidden": {
+            "en": "A wave is a comparison to an earlier level, so the wave step reaches the year and the level it rises from. The national release in this family states its own year-over-year direction, and the story never sets its wave against any named starting point.",
+            "id": "Gelombang adalah perbandingan terhadap aras yang lebih awal, sehingga langkah gelombang menjangkau tahun dan aras yang menjadi titik naiknya. Rilis nasional dalam keluarga ini menyatakan arah tahun-ke-tahunnya sendiri, dan cerita tidak pernah menyandingkan gelombangnya dengan titik awal mana pun yang disebut."
+          },
+          "ev": {
+            "quote": "Murder and non-negligent manslaughter fell against the prior year in the national release for this period, which states its own year-over-year direction of change.",
+            "source_id": "en-fbi-2024-crime"
+          }
+        },
+        {
+          "el_id": "mc-hid-status-bundling",
+          "label": {
+            "en": "Lawful residents and naturalized citizens folded into the single class named as driver",
+            "id": "Penduduk berizin tinggal dan warga naturalisasi yang dilebur ke dalam kelas tunggal yang dinamai pendorong"
+          },
+          "why_hidden": {
+            "en": "The offending step prices the whole class at a single rate, so it reaches every subgroup inside the class as part of the named driver. Where rates are actually computed in this family they are split by legal status, and the story never names the subgroups it bundles along the way.",
+            "id": "Langkah tindak pidana mematok seluruh kelas pada laju tunggal, sehingga menjangkau setiap subkelompok di dalam kelas itu sebagai bagian dari pendorong yang dinamai. Di tempat laju sungguh dihitung dalam keluarga ini, angkanya dipisah menurut status hukum, dan cerita tidak pernah menyebut subkelompok yang ikut dileburnya."
+          },
+          "ev": {
+            "quote": "The arrest rates are computed separately for undocumented immigrants, for legal immigrants, and for US-born citizens, rather than for immigrants as a single class.",
+            "source_id": "en-pnas-light-2020"
+          }
+        },
+        {
+          "el_id": "mc-hid-counterfactual-trend",
+          "label": {
+            "en": "The national trend absent the arrivals, the counterfactual the chain leans on",
+            "id": "Tren nasional tanpa kedatangan itu, pengandaian yang ditumpangi rantai cerita"
+          },
+          "why_hidden": {
+            "en": "Running from arrivals to a national wave assumes the line without the arrivals would sit flat or lower. That unstated line is what the whole chain is measured against, and the story stops before stating it or its direction.",
+            "id": "Rantai dari kedatangan menuju gelombang nasional mengandaikan garis tanpa kedatangan itu akan datar atau lebih rendah. Garis yang tak dinyatakan itulah pembanding bagi seluruh rantai, dan cerita berhenti sebelum menyatakannya ataupun arah geraknya."
+          }
+        }
+      ]
+    },
+    {
+      "type": "dueling",
+      "el_id": "mc-panel-dueling",
+      "counts": [
+        {
+          "el_id": "mc-duel-cato",
+          "who": "Cato Institute, Policy Analysis 1003",
+          "method": {
+            "en": "A national household victimization survey. People are asked directly what happened to them, so what is measured is the chance of being a victim, split by nativity. No arrest and no conviction is counted here.",
+            "id": "Survei viktimisasi rumah tangga nasional. Orang ditanya langsung tentang apa yang menimpa mereka, sehingga yang diukur adalah peluang menjadi korban, dipisah menurut status kelahiran. Tidak ada penangkapan dan tidak ada pemidanaan yang dihitung di sini."
+          },
+          "period": "NCVS 2017 to 2023, published August 2025",
+          "value": {
+            "amount": 44,
+            "unit": "percent",
+            "display": {
+              "en": "44 percent lower",
+              "id": "44 persen lebih rendah"
+            },
+            "source_id": "en-cato-pa1003"
+          }
+        },
+        {
+          "el_id": "mc-duel-pnas",
+          "who": "Light et al., PNAS 2020",
+          "method": {
+            "en": "Administrative records from a single state, with each arrest matched to a verified legal status, comparing undocumented immigrants, legal immigrants and US-born citizens across the study years. What is measured is arrests, not offenses and not victims.",
+            "id": "Catatan administratif dari satu negara bagian, dengan setiap penangkapan dicocokkan pada status hukum terverifikasi, membandingkan imigran tanpa dokumen, imigran berizin, dan warga kelahiran Amerika Serikat sepanjang tahun-tahun kajian. Yang diukur adalah penangkapan, bukan tindak pidana dan bukan korban."
+          },
+          "period": "Texas, 2012 to 2018, published December 2020",
+          "value": {
+            "amount": 2,
+            "unit": "count",
+            "display": {
+              "en": "over 2 times",
+              "id": "lebih dari 2 kali"
+            },
+            "source_id": "en-pnas-light-2020"
+          }
+        },
+        {
+          "el_id": "mc-duel-fbi",
+          "who": "FBI, reported crimes in the nation",
+          "method": {
+            "en": "Offenses reported to police and forwarded by participating agencies covering nearly the whole population, set against the same agencies' figures for the prior year. What is measured is reported offenses nationally, split by offense type and never by nativity.",
+            "id": "Tindak pidana yang dilaporkan kepada polisi dan diteruskan oleh lembaga peserta yang mencakup hampir seluruh penduduk, disandingkan dengan angka lembaga yang sama pada tahun sebelumnya. Yang diukur adalah tindak pidana yang dilaporkan secara nasional, dipisah menurut jenis tindak pidana dan tidak pernah menurut status kelahiran."
+          },
+          "period": "2024 against 2023",
+          "value": {
+            "amount": -4.5,
+            "unit": "percent",
+            "display": {
+              "en": "down 4.5 percent",
+              "id": "turun 4,5 persen"
+            },
+            "source_id": "en-fbi-2024-crime"
+          }
+        }
+      ],
+      "rule_line": {
+        "en": "Three instruments, three questions: who was victimized, who was arrested in one state, and how many offenses were reported nationwide. No arithmetic carries a figure out of one column and into another, and not one of the three is the offending rate the claim names.",
+        "id": "Tiga instrumen, tiga pertanyaan: siapa yang menjadi korban, siapa yang ditangkap di satu negara bagian, dan berapa banyak tindak pidana yang dilaporkan secara nasional. Tidak ada aritmetika yang memindahkan angka keluar dari satu kolom ke kolom lain, dan tidak satu pun dari ketiganya merupakan laju tindak pidana yang dinamai klaim itu."
+      }
+    }
+  ],
+  "model": "claude-opus-5[1m]"
+}

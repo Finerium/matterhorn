@@ -1,0 +1,267 @@
+{
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "The chain opens with money and kitchens: Rp88.15T of state budget realized through May 2026, and 29,679 SPPG kitchens operating by the end of that month.",
+          "els": [
+            "mbg-jobs-claim-map",
+            "mbg-jobs-n1",
+            "mbg-jobs-n2",
+            "mbg-jobs-e1",
+            "mbg-jobs-chip-kitchens"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "From the kitchens it steps to 1.28M workers and 142,387 suppliers as of May 2026, and both figures trace back to the programme's own agency.",
+          "els": [
+            "mbg-jobs-n3",
+            "mbg-jobs-n4",
+            "mbg-jobs-e2",
+            "mbg-jobs-e3",
+            "mbg-jobs-chip-workers",
+            "mbg-jobs-chip-suppliers"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "The chain stops at the last step, where no article in this family moves from supplier income to the headcount standing as the measure of the programme's worth, and the output side, 63.13M beneficiaries reached by the same spending, never enters the frame.",
+          "els": [
+            "mbg-jobs-n5",
+            "mbg-jobs-e4",
+            "mbg-jobs-h7",
+            "mbg-jobs-chip-beneficiaries"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Standing outside the frame are the school canteen sellers and stall vendors whose daily sales the free portion lands in place of, and the source the flow is drawn from, a budget carrying a Rp689.1T deficit.",
+          "els": [
+            "mbg-jobs-h1",
+            "mbg-jobs-h8"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Also left unstated: a payroll-grade count behind the multiplication, what the counted workers were doing beforehand, the pay, status and hours attached to each head, and when the cash actually lands with a supplier.",
+          "els": [
+            "mbg-jobs-h2",
+            "mbg-jobs-h3",
+            "mbg-jobs-h6",
+            "mbg-jobs-h5"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Set against Rp3,842.7T of state spending enacted for 2026, the realized MBG line of Rp88.15T sits beside Rp599.44T for debt interest and Rp210.06T for energy subsidy, while the February baseline of 987,000 workers was about 47 kitchen workers times about 21,000 kitchens.",
+          "els": [
+            "mbg-jobs-scale-check",
+            "mbg-jobs-seg-mbg",
+            "mbg-jobs-seg-debt-interest",
+            "mbg-jobs-seg-energy-subsidy",
+            "mbg-jobs-chip-feb-baseline",
+            "mbg-jobs-h4"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Rantainya terdengar rapi: anggaran negara mengalir ke program MBG, dapur SPPG beroperasi di berbagai daerah, jaringan dapur itu menyerap tenaga kerja, UMKM dan peternak kecil memperoleh pemasukan sebagai pemasok, lalu angka serapan versi program sendiri dijadikan ukuran nilai programnya.",
+          "els": [
+            "mbg-jobs-claim-map",
+            "mbg-jobs-n1",
+            "mbg-jobs-n2",
+            "mbg-jobs-n3",
+            "mbg-jobs-n4",
+            "mbg-jobs-n5"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Tiga langkah awalnya punya kutipan yang menyatakannya: Rp88,15 triliun terserap disebut bersama 29.679 dapur SPPG, lalu dari dapur ke 1,28 juta pekerja, lalu ke 142.387 pemasok yang dilaporkan ikut serta.",
+          "els": [
+            "mbg-jobs-e1",
+            "mbg-jobs-e2",
+            "mbg-jobs-e3",
+            "mbg-jobs-n1",
+            "mbg-jobs-n2",
+            "mbg-jobs-n3",
+            "mbg-jobs-n4",
+            "mbg-jobs-chip-suppliers"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Langkah terakhirnya berhenti di tempat: tidak ada artikel dalam keluarga pemberitaan ini yang menyatakan perpindahan dari pemasukan pemasok ke angka serapan sebagai ukuran nilai program, anggaran Rp88,15 triliun tidak pernah disandingkan dengan angka serapan itu, dan keluaran yang menjadi tujuan belanjanya, 63,13 juta penerima manfaat, tetap di luar hitungan.",
+          "els": [
+            "mbg-jobs-e4",
+            "mbg-jobs-n5",
+            "mbg-jobs-h4",
+            "mbg-jobs-h7",
+            "mbg-jobs-chip-beneficiaries"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Di luar bingkainya berdiri pedagang kantin sekolah dan penjaja di depan gerbang yang omzet hariannya tergantikan porsi gratis, upah dan status yang melekat pada tiap kepala yang dihitung, kegiatan para pekerja sebelum program merekrut mereka, serta uang yang sungguh mendarat di tangan pemasok setelah tagihan dan tempo pembayaran.",
+          "els": [
+            "mbg-jobs-h1",
+            "mbg-jobs-h6",
+            "mbg-jobs-h3",
+            "mbg-jobs-h5"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Panel skala menempatkan Rp88,15 triliun itu di dalam belanja negara APBN 2026 sebesar Rp3.842,7 triliun, berdampingan dengan bunga utang Rp599,44 triliun dan subsidi energi Rp210,06 triliun, sementara pos yang menyusut agar aliran itu terjadi, dengan defisit Rp689,1 triliun sebagai latarnya, tidak ikut disebut.",
+          "els": [
+            "mbg-jobs-scale-check",
+            "mbg-jobs-seg-mbg",
+            "mbg-jobs-seg-debt-interest",
+            "mbg-jobs-seg-energy-subsidy",
+            "mbg-jobs-h8"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Dua angka serapannya juga tidak disusun dengan cara yang sama: 987.000 pekerja pada Februari 2026 adalah hasil perkalian sekitar 47 pekerja dapur dengan sekitar 21.000 dapur, sedangkan 1,28 juta pekerja pada Mei 2026 bergerak mengikuti jumlah dapur yang tercatat 29.679, keduanya berpangkal pada lembaga program itu sendiri, dan hitungan berbasis daftar gaji belum muncul.",
+          "els": [
+            "mbg-jobs-chip-feb-baseline",
+            "mbg-jobs-chip-workers",
+            "mbg-jobs-chip-kitchens",
+            "mbg-jobs-h2"
+          ]
+        }
+      ]
+    }
+  },
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "The step from operating kitchens to absorbed workers has to be produced by something. Where does the February figure of 987,000 workers come from?",
+          "id": "Langkah dari dapur yang beroperasi ke tenaga kerja yang terserap harus dihasilkan oleh sesuatu. Angka 987.000 pekerja pada Februari 2026 itu keluar dari mana?"
+        },
+        "options": [
+          {
+            "en": "A payroll record collected at each SPPG kitchen.",
+            "id": "Pendataan daftar gaji di tiap dapur SPPG."
+          },
+          {
+            "en": "About 47 kitchen workers multiplied by about 21,000 kitchens.",
+            "id": "Perkalian asumsi sekitar 47 pekerja dapur dengan sekitar 21.000 dapur."
+          },
+          {
+            "en": "A tally of social security enrolments among kitchen workers.",
+            "id": "Rekapitulasi kepesertaan jaminan sosial pekerja dapur."
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The claim map marks the step from kitchens to workers as one that rests on the programme's own agency, and the February chip writes the number out as about 47 kitchen workers times about 21,000 kitchens. Payroll records and social security enrolments are where a count taken head by head usually lands, and a payroll-grade count is what the panel records as not yet appearing.",
+          "id": "Peta klaim mencatat langkah dari dapur ke pekerja sebagai langkah yang berpangkal pada lembaga program sendiri, dan chip Februari menuliskan asal angkanya sebagai perkalian sekitar 47 pekerja dapur dengan sekitar 21.000 dapur. Daftar gaji dan kepesertaan jaminan sosial adalah tempat hitungan kepala per kepala biasanya berlabuh, dan hitungan berbasis daftar gaji itulah yang dicatat panel sebagai belum muncul."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "The workforce figure arrives without a denominator. Which one does the scale check supply?",
+          "id": "Angka tenaga kerja itu datang tanpa penyebut. Penyebut mana yang disediakan panel skala?"
+        },
+        "options": [
+          {
+            "en": "State spending enacted for 2026 at Rp3,842.7T, with debt interest at Rp599.44T and energy subsidy at Rp210.06T beside it.",
+            "id": "Belanja negara yang ditetapkan untuk 2026 sebesar Rp3.842,7 triliun, dengan bunga utang Rp599,44 triliun dan subsidi energi Rp210,06 triliun di sebelahnya."
+          },
+          {
+            "en": "The national workforce, so the headcount reads as a share of all jobs.",
+            "id": "Jumlah angkatan kerja nasional, agar angka serapannya terbaca sebagai bagian dari seluruh lapangan kerja."
+          },
+          {
+            "en": "The count of SPPG kitchens, so the headcount reads as workers per kitchen.",
+            "id": "Jumlah dapur SPPG, agar angka serapannya terbaca sebagai pekerja per dapur."
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The scale check sizes the realized MBG line of Rp88.15T inside state spending enacted for the year and sets the enacted debt interest and energy subsidy lines next to it. The national workforce is not a figure this artifact carries, so it cannot do the sizing here. The kitchen count is already inside the February figure as its multiplier, so using it as a denominator would size the number against its own input.",
+          "id": "Panel skala menempatkan belanja MBG terealisasi Rp88,15 triliun di dalam belanja negara yang ditetapkan untuk setahun, dan menaruh pos bunga utang serta subsidi energi yang juga ditetapkan di sebelahnya. Angkatan kerja nasional bukan angka yang dibawa panel ini, jadi ia tidak bisa mengukur apa pun di sini. Jumlah dapur sudah berada di dalam angka Februari sebagai pengalinya, sehingga memakainya sebagai penyebut berarti mengukur angka itu terhadap masukannya sendiri."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "The meal is free at the point it is served. Whose income moves the other way?",
+          "id": "Porsi gratis mendarat di sekolah setiap hari, tanpa dipungut bayaran. Pemasukan siapa yang justru bergerak ke arah sebaliknya?"
+        },
+        "options": [
+          {
+            "en": "The suppliers under contract, who move along with the programme.",
+            "id": "Pemasok yang terikat kontrak, yang pemasukannya bergerak seiring programnya."
+          },
+          {
+            "en": "The school canteen sellers and stall vendors whose daily sales the free portion lands in place of.",
+            "id": "Pedagang kantin sekolah dan penjaja di depan gerbang yang jajan hariannya digantikan porsi gratis."
+          },
+          {
+            "en": "Nobody, since the budget pays for the meal and the money is new all the way down.",
+            "id": "Tidak ada, karena makanannya ditanggung anggaran negara dan uangnya seluruhnya uang baru."
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The hidden side of the claim map names the counter where a sale no longer happens. The articles count the income arriving on the supplier side and stop before that counter, so a mechanism that works as a transfer is carried as a gross gain. The budget carrying a Rp689.1T deficit sits on the same hidden side, as the source the flow is drawn from.",
+          "id": "Sisi tersembunyi pada peta klaim menyebut lapak tempat transaksi tidak lagi terjadi. Artikelnya menghitung pemasukan yang tiba di sisi pemasok lalu berhenti sebelum lapak itu, sehingga mekanisme yang bekerja sebagai pemindahan dibawa sebagai penambahan bruto. Anggaran yang membawa defisit Rp689,1 triliun berada di sisi tersembunyi yang sama, sebagai sumber tempat aliran dana itu diambil."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before you read on: a programme reports 1.28M workers absorbed. Which side of that number do you expect the coverage to leave out?",
+      "id": "Sebelum panelnya terbuka, tebak dulu: sebuah program melaporkan 1,28 juta pekerja terserap. Sisi mana dari angka itu yang paling mungkin tidak ikut disebut dalam pemberitaannya?"
+    },
+    "options": [
+      {
+        "en": "Where the count comes from, and whether anyone counted heads rather than multiplying.",
+        "id": "Asal usul angkanya, dan apakah ada yang menghitung kepala per kepala alih-alih mengalikan."
+      },
+      {
+        "en": "What each counted job pays, and on what terms.",
+        "id": "Upah tiap pekerjaan yang dihitung, dan dengan status kerja seperti apa."
+      },
+      {
+        "en": "Who loses a sale when the free portion arrives.",
+        "id": "Siapa yang kehilangan pembeli ketika porsi gratis datang."
+      },
+      {
+        "en": "What the same money delivers on the output side, and what it costs per worker.",
+        "id": "Apa yang dihasilkan uang yang sama di sisi keluaran, dan berapa harganya per pekerja."
+      }
+    ]
+  },
+  "editorial_notes": [
+    "Panels file absent: /Users/ghaisan/Documents/Matterhorn/matterhorn/pipeline/runs/run-2026-07-29/slots/mbg-jobs/A9.input.json does not exist (the slot dir holds only A5.input.json, cluster.json, steps.json), and the panels JSON pasted into the reconciler prompt was truncated after the first spine entry. The el universe was therefore taken as the union of the two authorings, which is identical in both: 27 el_ids (mbg-jobs-claim-map, n1 to n5, e1 to e4, h1 to h8, mbg-jobs-scale-check, seg-mbg, seg-debt-interest, seg-energy-subsidy, chip-kitchens, chip-workers, chip-suppliers, chip-beneficiaries, chip-feb-baseline). No el_id was invented and none was dropped. A human reviewer must confirm against the shipping panels that this set is complete, in particular whether a family marker panel el_id exists for this slot: A5's panel_plan lists claim_map and scale_check only, but the slot has a three member family and the sibling artifact mbg-stop ships a family panel, so an uncovered family el_id is the one coverage gap this reconciliation could not see.",
+    "Narration merged with no text edits. EN bundle is the EN authoring's en verbatim; ID bundle is the ID authoring's id verbatim, since that is the natively authored Indonesian. The EN authoring also produced an id bundle; it was discarded as a translation, per the once-per-language contract.",
+    "No cross-locale fact disagreement found. Every shared figure agrees across bundles: Rp88.15T / Rp88,15 triliun realized through May 2026; 29,679 / 29.679 SPPG kitchens; 1.28M / 1,28 juta workers; 142,387 / 142.387 suppliers; 63.13M / 63,13 juta beneficiaries; Rp3,842.7T / Rp3.842,7 triliun enacted state spending; Rp599.44T / Rp599,44 triliun debt interest; Rp210.06T / Rp210,06 triliun energy subsidy; Rp689.1T / Rp689,1 triliun deficit; 987,000 / 987.000 February workers as about 47 times about 21,000. Locale number formatting is each locale's own convention and was not normalised across the pair.",
+    "Coverage verified mechanically: all 27 el_ids are bound in BOTH locales, and the two locales bind exactly the same set, so there is no dangling binding and no uncovered panel element under the assumed universe.",
+    "Open item for sign-off, mbg-jobs-h4. The two locales read the same hidden element differently. The ID bundle treats h4 as the cost per worker gap, binding it in v-3 to the line that the Rp88,15 triliun spend is never set beside the headcount. The EN bundle binds h4 in v-6 to the sentence about the February derivation, where h4 adds no claim of its own; the EN claims there all trace to scale-check, the three segments and chip-feb-baseline. Coverage and fidelity both hold as written (claims trace to bound elements, and h4 is covered in both locales), so under the verbatim rule no edit was made. If the panel's h4 label is the cost per worker gap, the EN binding is decorative rather than wrong, and a reviewer may wish to have EN name that gap explicitly in a later pass.",
+    "Sparring, mechanism: ID authoring taken as base, EN authored natively against it. The ID version is the sharper of the two because it names the specific figure (987,000, February 2026) and asks for its origin, and both distractors are the places a head by head count would normally live. The EN authoring's version was set aside despite a good 'more outlets carrying the figure' distractor, since that move is better spent once, and the reveal here is arithmetic rather than repetition. Correct index 1 in both locales.",
+    "Sparring, mechanism note trimmed for graph fidelity. The ID base note ended by saying the panel records both payroll and social security enrolment as not yet appearing. Only a payroll-grade count is named on the hidden side (h2), so the closing clause was narrowed in both locales: payroll and social security are described generally as where a head by head count usually lands, and only the payroll-grade count is attributed to the panel.",
+    "Sparring, denominator: EN authoring taken as base, ID authored natively. The EN note carries the strongest single line in either set, that the kitchen count is already inside the February figure as its multiplier, so using it as the denominator would size the number against its own input. Correct index 0 in both locales.",
+    "Sparring, denominator note extended in both locales. As authored, the note explained why the kitchen count fails but said nothing about the national workforce distractor, leaving one wrong option wrong without a reason the reader can see. One sentence was added symmetrically in EN and ID: the national workforce is not a figure this panel carries, so it cannot do the sizing here.",
+    "Sparring, incidence: EN authoring taken as base, ID authored natively. EN's third option, that nobody's income moves the other way because the budget pays and the money is new all the way down, is the assumption the coverage actually rests on, which makes it a stronger distractor than the ID authoring's third option (SPPG kitchen workers), which merely repeats a counted party already used by option 0. EN's note also reaches h8, tying the deficit in as the source the flow is drawn from. Correct index 1 in both locales.",
+    "Correct indices vary across the three moves (1, 0, 1) so position carries no pattern a reader can exploit.",
+    "Prediction tap: EN authoring taken as base at four options, ID authored natively and meaning aligned one to one. The ID authoring's fifth option, the count of operating SPPG kitchens, was dropped: it is the one item the coverage does state, and while that makes it an instructive decoy, four options match the shipped house pattern and keep the tap readable on a phone. Each surviving option maps to a distinct region of the graph: origin of the count (h2 with chip-feb-baseline), pay and terms (h6), who loses a sale (h1), and the output side with cost per worker (h7 with h4).",
+    "Lexicon: the merged object was scanned mechanically against contracts/lexicon.json, whole word and case insensitive, over both verdict lists plus the fact-check colon pattern, em dash, emoji and the phrase 'salah satu'. Zero hits. Indonesian copy authored here deliberately routes around the collisions: 'sebuah program' rather than 'salah satu program' in the tap prompt, and 'terealisasi', 'tercatat', 'terserap', 'tergantikan' rather than any form the whole-word lint on 'terbukti' or 'benar' would reach.",
+    "No verdict is stated anywhere. The sparring notes say which step has evidence, which figure was derived rather than counted, and who stands outside the frame. None of them tells the reader they guessed incorrectly.",
+    "Neither upstream authoring supplied an editorial_notes array, so every note here is the reconciler's own record."
+  ],
+  "model": "claude-opus-5[1m]"
+}

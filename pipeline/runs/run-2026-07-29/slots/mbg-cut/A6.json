@@ -1,0 +1,77 @@
+{
+  "hidden": [
+    {
+      "el_id": "mbg-cut.hidden.cut-destination",
+      "label": {
+        "en": "Where the fiscal room freed by the cut goes",
+        "id": "Ke mana ruang fiskal hasil pemangkasan berpindah"
+      },
+      "why_hidden": {
+        "en": "The cut in the stated first step is a transfer: a lower MBG ceiling frees fiscal room that lands somewhere else in the 2026 budget. The articles record the drawdown figure and never name the line that receives what the programme gave up.",
+        "id": "Pemangkasan pada langkah pertama adalah sebuah pemindahan: pagu MBG yang lebih rendah membuka ruang fiskal yang mendarat di pos lain APBN 2026. Artikel mencatat angka realisasi dan tidak pernah menyebut pos yang menerima apa yang dilepaskan program ini."
+      },
+      "where_to_look": "The 2026 budget revision instruments: revised DIPA or the presidential regulation detailing revised 2026 allocations, showing which lines gained what MBG gave up."
+    },
+    {
+      "el_id": "mbg-cut.hidden.ceiling-denominator",
+      "label": {
+        "en": "The ceiling the May figure draws against, and what is left of it",
+        "id": "Pagu yang menjadi pembagi angka Mei, dan sisa ruangnya"
+      },
+      "why_hidden": {
+        "en": "A drawdown figure only means something against a denominator. The stated record step gives cumulative spending through May 2026; the stated first step says the ceiling is lower. No article puts the two side by side: the share of the reduced ceiling already spent, the envelope left for the remaining months, and the pace that remainder can sustain.",
+        "id": "Angka serapan hanya bermakna jika ada pembaginya. Langkah pencatatan menyebut belanja kumulatif hingga Mei 2026; langkah pertama menyebut pagu yang lebih rendah. Tidak ada artikel yang menyandingkan keduanya: porsi pagu baru yang sudah terpakai, ruang yang tersisa untuk bulan-bulan berikutnya, dan laju belanja yang masih tertampung oleh sisa itu."
+      },
+      "where_to_look": "Ministry of Finance monthly budget realization reporting (APBN KiTa tables) listing the MBG pagu after revision next to cumulative realization."
+    },
+    {
+      "el_id": "mbg-cut.hidden.sppg-payment-terms",
+      "label": {
+        "en": "SPPG kitchen partners, their crews and their payment terms",
+        "id": "Mitra dapur SPPG, para pekerjanya, dan termin pembayarannya"
+      },
+      "why_hidden": {
+        "en": "The stated drawdown step runs through kitchen units that cook, serve and invoice per portion. When the rest of the year runs on a smaller envelope, they meet the squeeze first: slower reimbursement, stretched payment terms, reduced hours for cooks and drivers. The articles count what was spent and stop before the parties who bill against what remains.",
+        "id": "Langkah serapan berjalan lewat satuan dapur yang memasak, menyajikan, dan menagih per porsi. Saat sisa tahun berjalan dengan ruang belanja lebih kecil, merekalah yang pertama menanggung: penggantian melambat, termin pembayaran memanjang, jam kerja juru masak dan pengantar berkurang. Artikel menghitung yang sudah dibelanjakan dan berhenti sebelum pihak yang menagih dari sisa anggaran."
+      },
+      "where_to_look": "BGN rules and circulars on per-portion tariffs and SPPG reimbursement schedules, and any reporting on payment arrears to kitchen partners."
+    },
+    {
+      "el_id": "mbg-cut.hidden.upstream-suppliers",
+      "label": {
+        "en": "Upstream food suppliers whose income the spending is",
+        "id": "Pemasok pangan di hulu yang pendapatannya berasal dari belanja itu"
+      },
+      "why_hidden": {
+        "en": "Every rupiah in the recorded figure is revenue to farmers, fishers, egg and vegetable suppliers and local markets that feed the kitchens. A smaller envelope for the rest of 2026 reaches their order books. The articles record the spending as a treasury figure and do not follow it to the counter where it is income.",
+        "id": "Setiap rupiah dalam angka yang tercatat adalah pendapatan bagi petani, nelayan, pemasok telur dan sayur, serta pasar lokal yang memasok dapur. Ruang belanja yang lebih kecil untuk sisa 2026 sampai ke buku pesanan mereka. Artikel mencatat belanja itu sebagai angka kas negara dan tidak mengikutinya hingga pihak yang menerimanya sebagai pendapatan."
+      },
+      "where_to_look": "BGN procurement and local sourcing rules for SPPG kitchens, and agriculture or fisheries ministry statements on offtake by the programme."
+    },
+    {
+      "el_id": "mbg-cut.hidden.recipients-remainder",
+      "label": {
+        "en": "Recipients for the rest of the year, and the households behind them",
+        "id": "Penerima manfaat untuk sisa tahun, dan rumah tangga di belakang mereka"
+      },
+      "why_hidden": {
+        "en": "The stated last step leaves the remaining months on a smaller envelope. That reaches serving days, portion standards and coverage for schoolchildren, toddlers, pregnant and breastfeeding mothers. A meal the envelope no longer covers is a cost that moves back to the household. The articles stop at the cumulative figure and never state what the remainder buys.",
+        "id": "Langkah terakhir meninggalkan bulan-bulan tersisa dengan ruang belanja lebih kecil. Itu menyentuh hari penyajian, standar porsi, dan cakupan bagi anak sekolah, balita, serta ibu hamil dan menyusui. Porsi yang tidak lagi dibiayai anggaran menjadi biaya yang kembali ke rumah tangga. Artikel berhenti di angka kumulatif dan tidak menyebut apa yang bisa dibeli dari sisanya."
+      },
+      "where_to_look": "BGN service statistics: beneficiaries and serving days per month, and stated targets for the remainder of 2026."
+    },
+    {
+      "el_id": "mbg-cut.hidden.expansion-queue",
+      "label": {
+        "en": "The expansion queue: kitchens and regions not yet on line",
+        "id": "Antrean perluasan: dapur dan daerah yang belum terlayani"
+      },
+      "why_hidden": {
+        "en": "Spending through May 2026 was recorded by kitchens already operating. The remaining envelope is also what brings the queue on line: kitchens under construction, regions and children not yet covered. A smaller rest-of-year envelope reaches that queue before it reaches anyone already served, and no article in the family follows it there.",
+        "id": "Belanja hingga Mei 2026 tercatat lewat dapur yang sudah beroperasi. Sisa ruang belanja juga yang membiayai antrean: dapur yang sedang dibangun, daerah dan anak yang belum tercakup. Ruang yang lebih kecil untuk sisa tahun sampai ke antrean itu lebih dulu daripada ke pihak yang sudah terlayani, dan tidak ada artikel dalam keluarga ini yang mengikutinya ke sana."
+      },
+      "where_to_look": "BGN statements of kitchen count and coverage targets for end of 2026 against the count operating in the May reporting."
+    }
+  ],
+  "model": "claude-fable-5"
+}

@@ -1,0 +1,75 @@
+{
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "usaid-deaths-n1",
+        "label": {
+          "en": "USAID is defunded",
+          "id": "Pendanaan USAID dihentikan"
+        }
+      },
+      {
+        "el_id": "usaid-deaths-n2",
+        "label": {
+          "en": "Programmes that ran on USAID support stop",
+          "id": "Program yang berjalan atas dukungan USAID berhenti"
+        }
+      },
+      {
+        "el_id": "usaid-deaths-n3",
+        "label": {
+          "en": "Mortality rises in the populations those programmes reached",
+          "id": "Angka kematian meningkat di populasi yang dijangkau program tersebut"
+        }
+      },
+      {
+        "el_id": "usaid-deaths-n4",
+        "label": {
+          "en": "Additional deaths by 2030 reach the projected total",
+          "id": "Kematian tambahan hingga 2030 mencapai angka yang diproyeksikan"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "usaid-deaths-e1",
+        "from": "usaid-deaths-n1",
+        "to": "usaid-deaths-n2",
+        "quote": "no article in this family states the step from 'USAID is defunded' to 'programmes that ran on USAID support stop'"
+      },
+      {
+        "el_id": "usaid-deaths-e2",
+        "from": "usaid-deaths-n2",
+        "to": "usaid-deaths-n3",
+        "quote": "no article in this family states the step from 'programmes that ran on USAID support stop' to 'mortality rises in the populations those programmes reached'"
+      },
+      {
+        "el_id": "usaid-deaths-e3",
+        "from": "usaid-deaths-n3",
+        "to": "usaid-deaths-n4",
+        "quote": "no article in this family states the step from 'mortality rises in the populations those programmes reached' to 'additional deaths by 2030 reach the projected total'"
+      },
+      {
+        "el_id": "usaid-deaths-e4",
+        "from": "usaid-deaths-n1",
+        "to": "usaid-deaths-n4",
+        "quote": "projecting the effects of defunding on mortality up to 2030"
+      }
+    ]
+  },
+  "panel_skeleton": [
+    {
+      "type": "claim_map",
+      "el_id": "usaid-deaths-panel-claim-map"
+    },
+    {
+      "type": "scale_check",
+      "el_id": "usaid-deaths-panel-scale-check"
+    },
+    {
+      "type": "incidence",
+      "el_id": "usaid-deaths-panel-incidence"
+    }
+  ],
+  "model": "claude-fable-5"
+}

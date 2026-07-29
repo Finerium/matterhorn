@@ -1,0 +1,241 @@
+{
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "The claim moves in three steps: more immigrants enter and settle, immigrants commit crime at a rate above the rest of the population, and the national crime trend surges into a wave.",
+          "els": [
+            "mc-panel-claim-map",
+            "mc-asrt-arrivals",
+            "mc-asrt-offending",
+            "mc-asrt-wave"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "The two joints holding those steps together are never written down, so nothing in this family states how arrivals become a higher offending rate, and nothing states how any group's rate becomes a national line that an instrument assembles from its own agency coverage and its own reporting step.",
+          "els": [
+            "mc-edge-arrivals-offending",
+            "mc-edge-offending-wave"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "That same arrivals step settles those people inside the population any wave lands on, where the national victimization survey puts their chance of being violently victimized 44 percent lower than the native-born and their reporting of incidents to police 29 percent higher, which is the step a recorded trend is built out of.",
+          "els": [
+            "mc-hid-arrival-victims",
+            "mc-hid-reporting-rate"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "The word above needs a level to sit above, and that level never shares a page with the claim; the claim also prices every subgroup at a single rate, while the records that do compute rates keep undocumented immigrants, legal immigrants and US-born citizens apart.",
+          "els": [
+            "mc-hid-comparator-rate",
+            "mc-hid-status-bundling"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "A rate needs a divisor that settlement itself keeps growing, and a surge needs a year to rise from, which the national release for this period gives as murder and non-negligent manslaughter down 14.9 percent against the prior year, while the line the country would have drawn without the arrivals stays undrawn.",
+          "els": [
+            "mc-hid-population-denominator",
+            "mc-hid-baseline-year",
+            "mc-hid-counterfactual-trend"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Three instruments answer three different questions here, and none of them is the offending rate the claim names: victimization runs 44 percent lower for immigrants, US-born citizens were arrested in one state at over 2 times the rate of undocumented immigrants, and reported offenses nationally are down 4.5 percent against the prior year.",
+          "els": [
+            "mc-panel-dueling",
+            "mc-duel-cato",
+            "mc-duel-pnas",
+            "mc-duel-fbi"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Cerita ini berdiri di atas tiga langkah: lebih banyak imigran masuk dan menetap, imigran melakukan kejahatan dengan laju melebihi penduduk lain, lalu tren kejahatan nasional melonjak menjadi gelombang.",
+          "els": [
+            "mc-panel-claim-map",
+            "mc-asrt-arrivals",
+            "mc-asrt-offending",
+            "mc-asrt-wave"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Dua sambungan di antaranya tidak pernah dituliskan, dari kedatangan ke laju tindak pidana dan dari laju itu ke garis nasional, sementara seluruh rantai bersandar pada pengandaian yang tidak dinyatakan tentang ke mana tren nasional bergerak tanpa kedatangan tadi.",
+          "els": [
+            "mc-edge-arrivals-offending",
+            "mc-edge-offending-wave",
+            "mc-hid-counterfactual-trend"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Cerita juga tidak menyebut penyebut populasi yang justru membesar karena pemukiman, dan melebur setiap subkelompok ke dalam satu kelas yang dipatok pada laju tunggal, padahal catatan yang memang menghitung laju memisahkan imigran tanpa dokumen, imigran berizin, dan warga kelahiran Amerika Serikat.",
+          "els": [
+            "mc-hid-population-denominator",
+            "mc-hid-status-bundling"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Dua tolok ukurnya tinggal di luar halaman: laju penduduk selebihnya, padahal catatan satu negara bagian menaruh warga kelahiran Amerika Serikat pada lebih dari 2 kali laju penangkapan imigran tanpa dokumen, dan tahun dasar lonjakannya, padahal rilis nasional periode ini mencatat pembunuhan dan pembunuhan tak berencana turun 14,9 persen terhadap tahun sebelumnya.",
+          "els": [
+            "mc-hid-comparator-rate",
+            "mc-hid-baseline-year",
+            "mc-duel-pnas"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Di luar bingkai berdiri orang yang sama: peluang mereka mengalami kekerasan 44 persen lebih rendah daripada warga kelahiran Amerika Serikat, sementara kemungkinan korban imigran melapor kepada polisi 29 persen lebih tinggi, dan pelaporan itulah yang mengubah tindak pidana menjadi garis yang tercatat.",
+          "els": [
+            "mc-hid-arrival-victims",
+            "mc-hid-reporting-rate"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Tiga instrumen di panel angka bertanding menjawab tiga pertanyaan berbeda, siapa yang menjadi korban, siapa yang ditangkap di satu negara bagian, dan berapa tindak pidana yang dilaporkan secara nasional dengan angka turun 4,5 persen terhadap tahun sebelumnya, sedangkan laju tindak pidana yang dinamai klaim itu tidak diukur oleh satu pun di antara ketiganya.",
+          "els": [
+            "mc-panel-dueling",
+            "mc-duel-cato",
+            "mc-duel-pnas",
+            "mc-duel-fbi"
+          ]
+        }
+      ]
+    }
+  },
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "What joins the arrivals step to the offending-rate step in this story?",
+          "id": "Apa yang menyambungkan langkah kedatangan ke langkah laju tindak pidana di dalam cerita ini?"
+        },
+        "options": [
+          {
+            "en": "A rate comparison derived from how many people arrived.",
+            "id": "Sebuah perbandingan laju yang diturunkan dari berapa banyak orang yang datang"
+          },
+          {
+            "en": "Nothing written down. The two claims just stand side by side.",
+            "id": "Tidak ada sambungan yang tertulis, kedua klaim hanya berdiri berdampingan"
+          },
+          {
+            "en": "The claim repeated by many outlets at once.",
+            "id": "Pengulangan klaim itu oleh banyak media sekaligus"
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The claim map marks that step as the one this family of articles never writes down. The rate comparison that does exist is computed by legal status against US-born citizens rather than derived from how many people arrived, and repetition across outlets is what the story offers where the step would go.",
+          "id": "Peta klaim menandai langkah itu sebagai bagian yang tidak dituliskan di keluarga artikel ini. Perbandingan laju yang memang ada dihitung menurut status hukum terhadap warga kelahiran Amerika Serikat, bukan diturunkan dari jumlah orang yang datang, dan pengulangan di banyak media memang yang ditawarkan cerita sebagai gantinya."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "Both the offending step and the wave step are rate claims. What does settlement do to the number underneath them?",
+          "id": "Langkah tindak pidana dan langkah gelombang sama-sama klaim laju. Ketika pendatang menetap, apa yang terjadi pada penyebut yang menopang kedua laju itu?"
+        },
+        "options": [
+          {
+            "en": "Nothing: a rate is a headcount of incidents, so arrivals move it directly.",
+            "id": "Tidak terjadi apa-apa, sebab laju hanyalah jumlah kejadian, sehingga kedatangan langsung menaikkannya."
+          },
+          {
+            "en": "It grows the population every later rate divides by, so raw counts can climb while the per-person rate falls.",
+            "id": "Penyebutnya ikut membesar, sehingga jumlah kejadian bisa naik sementara laju per orang justru turun."
+          },
+          {
+            "en": "It shrinks the base, because newly arrived people are counted separately from residents.",
+            "id": "Penyebutnya mengecil, sebab pendatang baru dihitung terpisah dari penduduk lama."
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The claim map's hidden layer names the population denominator that settlement itself grows. The claim quotes trend words without naming the divisor they stand on.",
+          "id": "Lapisan tersembunyi pada peta klaim menyebut penyebut populasi yang justru membesar oleh pemukiman itu sendiri. Cerita memakai kata-kata tren tanpa pernah menyebut pembagi yang menopangnya, padahal langkah tindak pidana dan langkah gelombang sama-sama klaim laju."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "The arrivals step settles people inside the same population any national wave reaches. Where do the numbers in this family put them on the victim side?",
+          "id": "Kedatangan menempatkan orang di dalam populasi yang sama, yang juga dijangkau gelombang nasional mana pun. Pada sisi korban, di mana angka-angka di keluarga artikel ini menaruh mereka?"
+        },
+        "options": [
+          {
+            "en": "Their chance of being violently victimized runs 44 percent lower than the native-born.",
+            "id": "Peluang mereka mengalami kekerasan 44 persen lebih rendah daripada warga kelahiran Amerika Serikat."
+          },
+          {
+            "en": "Their chance of being violently victimized tracks the native-born closely, with no gap worth reporting.",
+            "id": "Peluang mereka mengalami kekerasan berdekatan dengan warga kelahiran Amerika Serikat, tanpa jarak yang layak dicatat."
+          },
+          {
+            "en": "The victimization survey does not separate people by nativity, so nobody knows.",
+            "id": "Survei viktimisasi tidak memisahkan orang menurut status kelahiran, sehingga tidak ada yang tahu."
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The dueling panel reads the national victimization survey for 2017 to 2023, which asks people directly what happened to them and splits the answer by nativity, and puts immigrants 44 percent lower on being violently victimized. The story follows the class only as a driver of offending and stops before the victim side.",
+          "id": "Kolom Cato pada panel angka bertanding membaca survei viktimisasi nasional 2017 hingga 2023, yang menanyai orang secara langsung tentang apa yang menimpa mereka dan memilah jawabannya menurut status kelahiran, lalu menaruh imigran 44 persen lebih rendah dalam mengalami kekerasan. Kolom itu mengukur siapa yang mengalami kejahatan, bukan siapa yang ditangkap, sementara cerita hanya mengikuti kelas ini sebagai pendorong tindak pidana dan berhenti sebelum sisi korban."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before the map opens: this story runs from arrivals to a national crime wave. Which side of it do you expect to be missing from the page?",
+      "id": "Sebelum petanya terbuka: cerita ini berjalan dari kedatangan menuju gelombang kejahatan nasional. Sisi mana yang menurut Anda tidak muncul di halaman?"
+    },
+    "options": [
+      {
+        "en": "The comparison level, the rate the rest of the population offends at.",
+        "id": "Aras pembanding, yakni laju tindak pidana penduduk selebihnya."
+      },
+      {
+        "en": "The people who arrived, counted as potential victims rather than as a cause.",
+        "id": "Orang yang datang itu, dihitung sebagai calon korban dan bukan sebagai penyebab."
+      },
+      {
+        "en": "The starting year the surge is measured up from.",
+        "id": "Tahun awal yang menjadi titik ukur lonjakan itu."
+      },
+      {
+        "en": "The step that turns one group's rate into a national line.",
+        "id": "Langkah yang mengubah laju sebuah kelompok menjadi garis nasional."
+      }
+    ]
+  },
+  "editorial_notes": [
+    "Arbiter file absent at merge time: pipeline/runs/run-2026-07-29/slots/migrant-crime/A9.input.json does not exist on disk, so the el universe was checked against the panels fragment in the merge brief (claim_map mc-panel-claim-map, spine head mc-asrt-arrivals with its bilingual label) plus the union of bindings the two authorings reached independently. Both locales bound an identical 17-el set, which is the strongest cross-check available without the file. A human reviewer must confirm the shipping panels JSON holds no further panel el_id, in particular a family marker panel or a non-null echo, because an uncovered panel el_id is a coverage gap neither authoring could have seen.",
+    "Coverage after merge: both locales cover all 17 bound el_ids (mc-panel-claim-map, mc-asrt-arrivals, mc-asrt-offending, mc-asrt-wave, mc-edge-arrivals-offending, mc-edge-offending-wave, mc-hid-arrival-victims, mc-hid-reporting-rate, mc-hid-comparator-rate, mc-hid-status-bundling, mc-hid-population-denominator, mc-hid-baseline-year, mc-hid-counterfactual-trend, mc-panel-dueling, mc-duel-cato, mc-duel-pnas, mc-duel-fbi). The English bundle ships verbatim as authored, no edits.",
+    "Cross-locale figure agreement: 44 percent, 29 percent, 14.9 percent, 4.5 percent and the over 2 times arrest ratio agree in value and direction across both authorings. Indonesian keeps decimal commas (14,9 and 4,5). Every figure sits in a sentence that binds the element carrying it, after the v-4 binding fix below.",
+    "Edit, Indonesian v-3, cross-locale fact disagreement on mc-hid-status-bundling: the Indonesian named the bundled subgroups as residents with leave to remain and naturalised citizens, while the English names the record categories as undocumented immigrants, legal immigrants and US-born citizens. Naturalised citizens are a category the English never carries and the visible panel fragment does not show. Replaced with the categories the English carries, so both locales describe the same split. Bindings unchanged.",
+    "Edit, Indonesian v-4, figure without a carrier: the over 2 times arrest-rate figure is carried by mc-duel-pnas, which the English binds in v-6. The Indonesian wrote the figure while binding only mc-hid-comparator-rate and mc-hid-baseline-year. Added mc-duel-pnas to that sentence's els. Sentence text otherwise untouched by this fix.",
+    "Edit, Indonesian v-4, figure scope: the Indonesian attached 14,9 persen to murder alone where the English attaches it to murder and non-negligent manslaughter. Widened the Indonesian label so the number rides the same national series in both locales.",
+    "Edit, Indonesian v-5, figure scope: the Indonesian read victimisation rate in general where the English reads violent victimisation for the 44 percent. Changed to the chance of experiencing violence, so the figure measures the same thing on both pages.",
+    "Sparring mechanism: Indonesian authoring taken as base. Its two distractors are the ones a reader can see the reason for afterwards, a rate comparison derived from arrival counts and the same claim repeated across many outlets, and its note disposes of both. English authored natively against that base. Index 1 is correct in both locales because the claim map marks the arrivals to offending edge as unwritten. The English authoring's own mechanism question asked about both edges at once; narration v-2 already holds that ground in both locales, so nothing is lost by preferring the sharper single-edge question.",
+    "Sparring denominator: English authoring taken as base. The Indonesian stem stated that settlement adds people to the base population before asking what happens to the per-person rate, which hands the reader the answer; the English stem withholds it. Indonesian authored natively rather than reusing the English agent's Indonesian copy, which read as a translation. Index 1 is correct in both: settlement grows the divisor, so raw counts and per-person rates can move in opposite directions. The English note gained two words, the claim map's, so it names the settling panel rather than referring to a hidden layer with no panel attached.",
+    "Sparring incidence: English authoring taken as base, because its stem ties the victim side back to the claim instead of asking a bare survey recall question, and its three options stay in one register so the option carrying a number is not the format tell. Indonesian authored natively. The Indonesian note keeps the Indonesian authoring's sharpest line, that the Cato column measures who experiences crime rather than who is arrested, folded into the English note's account of what the survey does. Index 0 is correct in both.",
+    "Prediction tap: English prompt taken as base because it states the chain before asking which side goes missing, which a reader who has not opened the artifact needs. Four options kept in English order and Indonesian authored natively to the same four meanings, so a tap logged in either locale maps to the same option index.",
+    "Lexicon: the Indonesian copy is written around the whole-word lint. Narration v-6 uses satu pun di antara ketiganya and v-3 uses satu kelas where the natural phrase would collide; prediction tap option 3 uses sebuah kelompok for the same reason. No verdict word ships in either locale. Neither locale rules on the claim: both report which step is written down, which is not, and who is standing outside the frame.",
+    "Left unsaid on purpose: neither locale attributes the unwritten edges to intent, and neither counts the three instruments as agreeing or disagreeing with each other. They answer different questions, which is what the closing sentence says in both locales and what the dueling panel's rule line settles."
+  ],
+  "model": "claude-opus-5[1m]"
+}

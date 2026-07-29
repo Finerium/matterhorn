@@ -1,0 +1,258 @@
+{
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Two steps here are carried by sources outside the story: a program serving 63.13 million recipients as of May 2026, and recipients, most of them schoolchildren, falling ill after eating its meals.",
+          "els": [
+            "panel-claim-map",
+            "s-program",
+            "s-poisoning",
+            "e-serve-poison"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "The step no source takes is the last one, from one agency's own running count to that count standing as the full national scale of the harm.",
+          "els": [
+            "s-count",
+            "s-scale",
+            "e-count-scale"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "By 1 October 2025 three ledgers stood at three different places: BGN, the agency running the program, at 6,517 people; BPOM, the food and drug regulator, at 9,089 people; and JPPI, a civil-society network, at 8,649 children through 27 September.",
+          "els": [
+            "panel-dueling",
+            "d-bgn",
+            "d-bpom",
+            "d-jppi",
+            "e-poison-count"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "None of the three publishes the rule that decides what enters it, the served base it accumulated on, or the school outbreak ledger that was already being kept before the program existed.",
+          "els": [
+            "h-count-method",
+            "h-denominator-served",
+            "h-baseline-klb"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Outside the totals stand the people who meet each case first: households arranging care the same day, and the puskesmas and district health offices whose investigations turn an incident into the KLB record the national argument is fought over.",
+          "els": [
+            "panel-incidence",
+            "i-households",
+            "i-frontline",
+            "h-first-payers",
+            "h-surveillance-ledger"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "29,679 SPPG kitchens were operating as of May 2026, inside a program that counts 1.28 million program workers at the same date, and a service unit cooked every counted meal, though which service units the counted cases trace back to is published beside none of the three totals.",
+          "els": [
+            "i-kitchens",
+            "h-kitchens"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Program Makan Bergizi Gratis berjalan dalam skala nasional, dengan 63,13 juta penerima per Mei 2026, dan langkah dari program itu ke penerima yang jatuh sakit ditopang sumber di luar artikelnya sendiri.",
+          "els": [
+            "panel-claim-map",
+            "s-program",
+            "s-poisoning",
+            "e-serve-poison"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Rantainya berhenti di langkah terakhir: tidak ada sumber dalam registri yang menyatakan hitungan berjalan sebuah badan adalah ukuran utuh skala keracunan secara nasional.",
+          "els": [
+            "panel-claim-map",
+            "s-count",
+            "s-scale",
+            "e-count-scale"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Titik tempat sumber-sumber itu berpisah adalah hitungannya: BGN mencatat 6.517 orang sejak Januari 2025, BPOM 9.089 orang per 1 Oktober 2025, dan JPPI 8.649 anak per 27 September 2025.",
+          "els": [
+            "panel-dueling",
+            "e-poison-count",
+            "d-bgn",
+            "d-bpom",
+            "d-jppi"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Ketiganya dibiarkan berdampingan tanpa dilebur, sebab tiap total lahir dari aturan hitung, jendela waktu, dan satuan yang berbeda, sementara definisi kasus di balik masing-masing angka tidak pernah diumumkan.",
+          "els": [
+            "panel-dueling",
+            "s-count",
+            "h-count-method"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Penyebutnya juga belum dibuka: berapa penerima dan porsi yang tersalurkan pada rentang bulan yang sama, dan seberapa sering keracunan pangan di lingkungan sekolah tercatat sebelum program ini ada.",
+          "els": [
+            "h-denominator-served",
+            "h-baseline-klb",
+            "s-scale"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Di luar bingkai berdiri keluarga yang mengurus perawatan pada hari yang sama, puskesmas dan dinas kesehatan yang membuka catatan KLB, dan 29.679 dapur SPPG yang beroperasi per Mei 2026 bersama kru serta pemasok lokal yang ikut berhenti ketika sebuah unit berhenti memasak.",
+          "els": [
+            "panel-incidence",
+            "i-households",
+            "i-frontline",
+            "i-kitchens",
+            "h-first-payers",
+            "h-surveillance-ledger",
+            "h-kitchens"
+          ]
+        }
+      ]
+    }
+  },
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "Three institutions publish three different totals for the same program. What is doing most of the work in that gap?",
+          "id": "Tiga lembaga menerbitkan tiga total berbeda untuk program yang sama. Apa yang paling menentukan jarak di antaranya?"
+        },
+        "options": [
+          {
+            "en": "Each total is built from a different counting rule, over a different window, with a different unit.",
+            "id": "Tiap total dibangun dari aturan hitung yang berbeda, pada jendela waktu yang berbeda, dengan satuan yang berbeda."
+          },
+          {
+            "en": "More outlets repeated the larger figures, so those totals grew.",
+            "id": "Lebih banyak media mengulang angka yang besar, sehingga total itu ikut membesar."
+          },
+          {
+            "en": "The largest figure is simply the most recent one, and the others lag behind it.",
+            "id": "Angka terbesar sekadar angka paling baru, sedangkan sisanya tertinggal di belakangnya."
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The three counts panel puts the methods side by side: BGN keeps a running count of people inside its own program, BPOM sums victims from verified KLB events across regions, JPPI tallies children reported affected through 27 September 2025. BGN and BPOM even stand on the same date, 1 October 2025, at 6,517 people and 9,089 people. Elapsed time alone therefore does not hold the gap, and the panel's rule line keeps the three counts standing separately rather than merged.",
+          "id": "Panel tiga hitungan menaruh metodenya berdampingan: BGN memegang hitungan berjalan atas orang di dalam programnya sendiri, BPOM menjumlahkan korban dari kejadian luar biasa yang diverifikasi lintas daerah, JPPI menabulasi anak yang dilaporkan terdampak hingga 27 September 2025. BGN dan BPOM bahkan berdiri pada tanggal yang sama, 1 Oktober 2025, pada 6.517 orang dan 9.089 orang. Jadi selisih waktu saja tidak menampung jarak itu, dan baris aturan panel menahan ketiga hitungan tetap berdiri terpisah alih-alih dilebur."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "The counts are published as cumulative totals. What are they placed over?",
+          "id": "Hitungan itu diumumkan sebagai total kumulatif. Di atas basis apa angka itu diletakkan?"
+        },
+        "options": [
+          {
+            "en": "Over the recipients and portions the program served across the same months.",
+            "id": "Di atas penerima dan porsi yang tersalurkan pada rentang bulan yang sama."
+          },
+          {
+            "en": "Over the number of SPPG kitchens that cooked the program's meals.",
+            "id": "Di atas jumlah dapur SPPG yang memasak menu program."
+          },
+          {
+            "en": "Over nothing. No served base for the same window is published beside any of the three totals.",
+            "id": "Tidak di atas basis apa pun. Tidak ada basis penyaluran untuk rentang yang sama yang diumumkan berdampingan dengan satu pun dari tiga total itu."
+          }
+        ],
+        "correct": 2,
+        "note": {
+          "en": "The registry does carry served figures, 63.13 million recipients and 29,679 SPPG kitchens operating, but both stand at May 2026 while the counts stop at 27 September and 1 October 2025. Nothing lines the two up, so no rate comes out of them, and the served base is logged as one of the parts the story never opens. The kitchen count is a count of places, not of portions eaten, so it cannot carry a case rate either.",
+          "id": "Registri memang memuat angka penyaluran, 63,13 juta penerima dan 29.679 dapur SPPG beroperasi, tetapi keduanya berdiri pada Mei 2026 sementara hitungan korban berhenti pada 27 September dan 1 Oktober 2025. Tidak ada yang menyejajarkan keduanya, jadi tidak ada laju kejadian yang bisa dibaca dari sana, dan basis penyaluran itu tercatat sebagai bagian yang belum dibuka. Angka dapur adalah hitungan tempat, bukan hitungan porsi yang dimakan, jadi angka itu juga tidak bisa menopang laju kasus."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "One child is counted in an incident. Who meets the cost of that single case first, before it reaches any national total?",
+          "id": "Seorang anak terhitung dalam sebuah insiden. Siapa yang lebih dulu menanggung biaya kasus itu, sebelum kasusnya sampai ke total nasional mana pun?"
+        },
+        "options": [
+          {
+            "en": "The agency running the program, which logs the case into its national total.",
+            "id": "Badan pelaksana program, yang mencatatkan kasus itu ke dalam total nasionalnya."
+          },
+          {
+            "en": "The child's household, then the puskesmas, district hospital and district health office that treat the case and open the investigation.",
+            "id": "Rumah tangga anak itu, lalu puskesmas, rumah sakit daerah, dan dinas kesehatan yang merawatnya dan membuka penyelidikan."
+          },
+          {
+            "en": "The food and drug regulator, which verifies the KLB event before the case is recorded anywhere.",
+            "id": "Regulator obat dan makanan, yang memverifikasi kejadian luar biasa itu sebelum kasusnya tercatat di mana pun."
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The downstream panel starts at home and at the clinic: symptoms, a visit, school days lost the same day, and the district health office opening the investigation that turns an incident into a KLB record. The label the national dispute is fought over is produced there, in the district, and the routine surveillance ledger those facilities feed is cited by none of the three counts. The same panel follows the meal back to the kitchen unit, whose crew and local suppliers stop earning on the days it stops cooking, and none of the three totals moves to show it.",
+          "id": "Panel efek lanjutan bermula di rumah dan di fasilitas kesehatan: gejala, satu kunjungan, hari sekolah yang hilang pada hari yang sama, lalu dinas kesehatan membuka penyelidikan yang mengubah insiden menjadi catatan KLB. Label yang diperselisihkan di tingkat nasional justru diproduksi di daerah, dan pembukuan surveilans rutin yang diisi fasilitas-fasilitas itu tidak dikutip satu pun dari tiga hitungan. Panel yang sama menelusuri porsi itu kembali ke unit dapur, tempat kru dan pemasok lokal berhenti memperoleh penghasilan pada hari unit itu berhenti memasak, dan tidak ada satu pun dari tiga total yang bergerak menunjukkannya."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before you scroll: in a story about a program that feeds tens of millions and a running count of who got sick from it, which side of the claim goes missing first?",
+      "id": "Sebelum menggulir: dalam cerita tentang program yang memberi makan puluhan juta orang dan hitungan berjalan siapa yang jatuh sakit karenanya, sisi mana dari klaim ini yang lebih dulu menghilang?"
+    },
+    "options": [
+      {
+        "en": "The served base: how many recipients and portions the program delivered over the same months.",
+        "id": "Basis penyalurannya: berapa penerima dan porsi yang tersalurkan pada rentang bulan yang sama."
+      },
+      {
+        "en": "The counting rule behind each figure: which symptoms qualify, and who verifies a report.",
+        "id": "Aturan hitung di balik tiap angka: gejala apa yang memenuhi syarat, dan siapa yang memverifikasi laporan."
+      },
+      {
+        "en": "The baseline: how often school food poisoning was recorded before the program existed.",
+        "id": "Garis dasarnya: seberapa sering keracunan pangan di lingkungan sekolah tercatat sebelum program ini ada."
+      },
+      {
+        "en": "The first payers: the households and the clinics that meet each case the same day.",
+        "id": "Pihak yang lebih dulu menanggung: rumah tangga dan puskesmas yang menemui tiap kasus pada hari yang sama."
+      },
+      {
+        "en": "The kitchen side: the unit that cooked the meals, its crew, and the local suppliers that stop when it stops.",
+        "id": "Sisi dapurnya: unit yang memasak porsinya, kru dapur, dan pemasok lokal yang ikut berhenti ketika unit itu berhenti."
+      }
+    ]
+  },
+  "editorial_notes": [
+    "Input gap a reviewer must sign off: slots/mbg-poisoning/A9.input.json does not exist in run-2026-07-29 (the slot directory holds only A5.input.json, cluster.json and steps.json), and the panels JSON pasted into this reconciler prompt was truncated after the first spine entry. The el universe was therefore taken as the intersection of what both authorings bind, which is identical in the two locales: 22 el_ids over three panels, panel-claim-map with s-program, s-poisoning, s-count, s-scale, e-serve-poison, e-count-scale, h-count-method, h-denominator-served, h-baseline-klb, h-first-payers, h-surveillance-ledger, h-kitchens; panel-dueling with e-poison-count, d-bgn, d-bpom, d-jppi; panel-incidence with i-households, i-frontline, i-kitchens. Nothing outside that set was bound. If the shipping panels carry a family marker panel or a non-null echo, one sentence per locale needs that el_id added before the fidelity gate; no speculative binding was written, because a binding that resolves to nothing blocks the build.",
+    "Neither authoring supplied editorial_notes, so this set is the reconciliation record only.",
+    "Both narration bundles ship verbatim. No cross-locale fact disagreement surfaced. Figures agree in both locale conventions: 63.13 million and 63,13 juta recipients as of May 2026; BGN 6,517 and 6.517; BPOM 9,089 and 9.089; JPPI 8,649 and 8.649 children through 27 September 2025; 29,679 and 29.679 SPPG kitchens.",
+    "Asymmetric detail left standing, not treated as disagreement: the EN bundle carries 1.28 million program workers and the EN sparring carried 142,387 suppliers as of May 2026, neither of which the ID authoring uses. The ID side names crews and local suppliers without figures, which contradicts nothing. Because the panels file was unavailable, a reviewer with it open should confirm those two figures sit on i-kitchens or h-kitchens before publication.",
+    "EN v-3 opens all three ledgers under 'By 1 October 2025' and then dates JPPI to 27 September inside the same sentence, while ID v-3 dates each ledger separately and gives BGN its since-January-2025 window. Left as authored: both sparring notes agree that BGN and BPOM share the 1 October 2025 as-of date and that the BGN figure accumulates from January 2025, so the two routes reach the same facts.",
+    "Mechanism: ID authoring taken as base. Its two wrong options are the ones the story is actually offering, repetition by outlets and simple recency, which is the standard A9.md sets for a distractor. Correct index 0 holds in both locales because the option states the same thing in each: different rule, different window, different unit. One closing line was added per locale, carried over from the EN authoring, so the recency option is visibly answered (two of the totals share a date and still sit far apart) and the panel rule line is the thing cited.",
+    "Denominator: ID authoring taken as base, correct index 2 in both locales. Its answer is the finding itself, that the totals are placed over nothing for the same window, which is sharper than the EN authoring's 'what is missing before this is a rate'. Option 2 was tightened in both locales to say 'for the same window' so it does not read against its own note, which does list served figures standing at May 2026 while the counts stop in September and October 2025. One line was added per locale so the kitchen option is wrong for a reason the reader can see: kitchens count places, not portions eaten. The EN authoring's distractors, a provincial split and confirmation by another institution, were dropped because a single sentence answers both, so they were doing one job between them.",
+    "Incidence: ID authoring taken as base, correct index 1 in both locales. Household, then puskesmas, then district hospital, then dinas kesehatan is the order the incidence panel runs in, and the two wrong options are the two institutions the story quotes most, which is what makes them plausible rather than filler. The EN authoring's kitchen-side finding was folded into the note in both locales so the producing side is not lost from sparring: crew and local suppliers stop earning on the days a unit stops cooking, and no total moves to show it.",
+    "Two register fixes inside the ID-based sparring, no fact changed: 'that treat it' became 'that treat the case' in the EN option, and 'produced on that floor' became 'produced there, in the district', with the ID side moved from 'diproduksi di lantai itu' to 'diproduksi di daerah' for the same reason, since the floor image calques badly into Indonesian.",
+    "Prediction tap: ID prompt taken as base, already bilingual and sharper before the reveal. Options are the union of both authorings, five, one per hidden layer: served base, counting rule, baseline, first payers, kitchen side. Nothing is given away because every option is a layer the panels show unopened, so the tap records a guess rather than testing one. The first payers option came from the EN authoring and its Indonesian was written natively here rather than translated.",
+    "Tap options were reordered so the two ledger layers stand first, the baseline next, then the two human sides. Only the new option's text is new.",
+    "Indonesian lexicon: 'salah satu' avoided everywhere; the work is carried by 'sebuah', 'satu pun dari tiga total itu' and 'tidak dikutip satu pun dari tiga hitungan'. No verdict word appears in either locale, and no figure was introduced that neither authoring already carried. The copy says which step has a source and which does not, and leaves how the claim comes out to the reader.",
+    "Re-dispatch after an A11 fidelity block, scoped to EN v-6, which read 'The same meals came out of 29,679 SPPG kitchens operating, inside a program that counts 1.28 million program workers, and which of those units the counted cases trace back to is published beside none of the three totals.' That opening joined a kitchen population dated May 2026 to counted cases whose windows close on 27 September and 1 October 2025, a join no element carries and one this artifact's own denominator note contradicts, and 'which of those units' then narrowed the unpublished trace to that same May 2026 set. Rewritten to 'as of May 2026, inside a program that counts 1.28 million program workers at the same date, and a service unit cooked every counted meal, though which service units the counted cases trace back to is published beside none of the three totals.' Three changes: the kitchen figure now carries the as_of from i-kitchens, matching the compliant ID v-6 construction '29.679 dapur SPPG yang beroperasi per Mei 2026'; the 1.28 million workers figure on h-kitchens is dated to the same month rather than left floating; and the production fact is stated in the generic form the element itself uses, 'a service unit cooked every counted meal', so the counted meals are no longer attributed to the counted population, with the unknown widened back to 'which service units', the wording h-kitchens uses. Els unchanged at i-kitchens and h-kitchens: i-kitchens still carries the dated figure, the per-meal service-unit line and the unpublished trace, and h-kitchens still carries the workers figure and the hidden producing side. ID v-6 untouched. The locales still agree on every fact: both date the kitchen count to May 2026, and neither now says the counted meals came out of that population."
+  ],
+  "model": "claude-opus-5[1m]"
+}

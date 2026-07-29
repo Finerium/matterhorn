@@ -1,0 +1,175 @@
+{
+  "narrative_id": "mbg-cut",
+  "cluster": {
+    "narrative_id": "mbg-cut",
+    "family_skeleton": "the same budget lever reported as an arithmetic fact, which is what makes the family visible: one skeleton, two temperatures, two outlets",
+    "members": [
+      {
+        "id": "mbg-cut-m1",
+        "lang": "id",
+        "headline": "Anggaran MBG Terserap Rp 88,15 Triliun hingga Mei 2026",
+        "outlet": "Kompas.com",
+        "date": "2026-06-06",
+        "url": "https://money.kompas.com/read/2026/06/06/213559526/anggaran-mbg-terserap-rp-8815-triliun-hingga-mei-2026",
+        "note": "Verbatim title from content/sources.json (id-kompas-mbg-sppg-mei2026)."
+      },
+      {
+        "id": "mbg-cut-m2",
+        "lang": "id",
+        "headline": "Realisasi Belanja MBG Tembus Rp88 Triliun sampai Mei 2026",
+        "outlet": "Databoks (Katadata)",
+        "date": "2026-05",
+        "url": "https://databoks.katadata.co.id/ekonomi-makro/statistik/6a2653afd21cc/realisasi-belanja-mbg-tembus-rp88-triliun-sampai-mei-2026",
+        "note": "Verbatim title from content/sources.json (id-databoks-mbg-chart). Publication day not recorded at snapshot; the month is."
+      },
+      {
+        "id": "mbg-cut-m3",
+        "lang": "id",
+        "headline": "Purbaya sebut realisasi anggaran MBG capai Rp88,15 triliun",
+        "outlet": "Antara News",
+        "date": "2026-06-05",
+        "url": "https://www.antaranews.com/berita/5595513/purbaya-sebut-realisasi-anggaran-mbg-capai-rp8815-triliun",
+        "note": "Verbatim title from content/sources.json. Shared with the mbg-stop family on purpose: the same article carries the cut and the realisation, which is the point the family panel makes."
+      }
+    ]
+  },
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "mbg-cut.spine.n1",
+        "label": {
+          "en": "The 2026 MBG budget ceiling is cut to a lower level",
+          "id": "Pagu anggaran MBG 2026 dipangkas ke tingkat yang lebih rendah"
+        }
+      },
+      {
+        "el_id": "mbg-cut.spine.n2",
+        "label": {
+          "en": "The programme keeps running and draws down its budget",
+          "id": "Program tetap berjalan dan membelanjakan anggarannya"
+        }
+      },
+      {
+        "el_id": "mbg-cut.spine.n3",
+        "label": {
+          "en": "Realized MBG spending through May 2026 goes on the record",
+          "id": "Realisasi belanja MBG hingga Mei 2026 tercatat"
+        }
+      },
+      {
+        "el_id": "mbg-cut.spine.n4",
+        "label": {
+          "en": "The rest of 2026 runs on a smaller spending envelope",
+          "id": "Sisa tahun 2026 berjalan dengan ruang belanja yang lebih kecil"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "mbg-cut.edge.n1-n2",
+        "from": "mbg-cut.spine.n1",
+        "to": "mbg-cut.spine.n2",
+        "quote": "no article in this family states the step from the cut 2026 ceiling to the programme running and drawing down its budget"
+      },
+      {
+        "el_id": "mbg-cut.edge.n2-n3",
+        "from": "mbg-cut.spine.n2",
+        "to": "mbg-cut.spine.n3",
+        "quote": "Anggaran MBG Terserap Rp 88,15 Triliun hingga Mei 2026"
+      },
+      {
+        "el_id": "mbg-cut.edge.n3-n4",
+        "from": "mbg-cut.spine.n3",
+        "to": "mbg-cut.spine.n4",
+        "quote": "no article in this family states the step from realized spending through May 2026 to a smaller envelope for the rest of the year"
+      }
+    ]
+  },
+  "case_library": {
+    "cases": [
+      {
+        "id": "B-01",
+        "title": {
+          "en": "Casualty-inflation cascade",
+          "id": "Kaskade inflasi korban"
+        },
+        "period": "May 2019",
+        "motif": {
+          "en": "moral shock, fabricated count",
+          "id": "kejutan moral, angka rekaan"
+        },
+        "documented_outcome": {
+          "en": "A fabricated \"60 shot dead\" claim spread faster than any correction and amplified the post-election riots in Jakarta. The final human-rights investigation documented 10 people unlawfully killed, four of them minors.",
+          "id": "Klaim rekaan \"60 orang tewas ditembak\" menyebar lebih cepat dari koreksi mana pun dan memperbesar kerusuhan pasca pemilu di Jakarta. Investigasi hak asasi manusia final mendokumentasikan 10 orang terbunuh secara tidak sah, empat di antaranya anak-anak."
+        },
+        "citations": [
+          "id-aljazeera-2019-riots",
+          "id-tempo-cekfakta-60",
+          "id-liputan6-amnesty-2019"
+        ]
+      },
+      {
+        "id": "B-02",
+        "title": {
+          "en": "Fabricated-provision cascade",
+          "id": "Kaskade pasal rekaan"
+        },
+        "period": "Oct 2020",
+        "motif": {
+          "en": "scope inflation, fabricated provisions",
+          "id": "inflasi cakupan, pasal rekaan"
+        },
+        "documented_outcome": {
+          "en": "Invented provisions of a law whose final text was not yet public, from a minimum wage abolished to severance eliminated, fueled nationwide demonstrations. The communications ministry catalogued \"12 hoaks\" about the bill in a single list.",
+          "id": "Pasal-pasal rekaan atas undang-undang yang naskah finalnya belum terbit, dari upah minimum dihapus sampai pesangon ditiadakan, menyulut demonstrasi nasional. Kementerian komunikasi mengatalogkan \"12 hoaks\" tentang RUU itu dalam satu daftar."
+        },
+        "citations": [
+          "id-suara-kominfo-12hoax",
+          "id-kompas-omnibus-8hoax"
+        ]
+      },
+      {
+        "id": "B-03",
+        "title": {
+          "en": "Moral-shock acceleration",
+          "id": "Akselerasi kejutan moral"
+        },
+        "period": "Aug 2025",
+        "motif": {
+          "en": "moral shock, acceleration",
+          "id": "kejutan moral, akselerasi"
+        },
+        "documented_outcome": {
+          "en": "A viral death video mobilized nationwide protests within hours. In the escalations that followed, a regional parliament building fire in Makassar killed three people.",
+          "id": "Video kematian yang viral memobilisasi unjuk rasa nasional dalam hitungan jam. Dalam eskalasi yang menyusul, kebakaran gedung DPRD di Makassar menewaskan tiga orang."
+        },
+        "citations": [
+          "id-detik-timeline-aug2025",
+          "id-jakartapost-makassar-fire",
+          "id-jakartaglobe-protest-toll"
+        ]
+      },
+      {
+        "id": "B-04",
+        "title": {
+          "en": "Scope-inflation panic",
+          "id": "Panik inflasi cakupan"
+        },
+        "period": "Jan 2025",
+        "motif": {
+          "en": "scope inflation, manufactured urgency",
+          "id": "inflasi cakupan, urgensi semu"
+        },
+        "documented_outcome": {
+          "en": "The 12 percent VAT panic priced the whole consumption basket for weeks after PMK 131/2024 had restricted the rise to luxury goods already under the luxury sales tax; the clarification required a multi-channel communication effort.",
+          "id": "Panik PPN 12 persen menghitung seluruh keranjang konsumsi selama berminggu-minggu setelah PMK 131/2024 membatasi kenaikan pada barang mewah yang sudah dikenai pajak penjualan barang mewah; klarifikasinya menuntut upaya komunikasi lintas kanal."
+        },
+        "citations": [
+          "id-pajak-pmk131",
+          "id-antara-ppn-luxury",
+          "id-bisnis-ppn-luxury"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Four steps carry this story: a push against online gambling, a recorded turnover figure that falls, that figure read as the market itself, and gambling receding.",
+          "els": [
+            "jt-panel-claim-map",
+            "jt-s1-crackdown",
+            "jt-s2-turnover-fall",
+            "jt-s3-market-read",
+            "jt-s4-outcome"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "No source in the registry states the first two joins, and the last one, from a smaller figure to a receding practice, has no article behind it at all.",
+          "els": [
+            "jt-e1-crackdown-to-fall",
+            "jt-e2-fall-to-read",
+            "jt-e3-read-to-outcome"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "The reading rests on Rp286.84T for 2025 set against Rp359.81T for 2024: one series, two years.",
+          "els": [
+            "jt-panel-scale-check",
+            "jt-sc-turnover-2025",
+            "jt-duel-turnover-2024"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "The chips beside them count other things: Rp40.3T of turnover and Rp10.59T of deposits in the first quarter of 2026, 422.1 million transactions, 12.3 million depositors.",
+          "els": [
+            "jt-sc-chip-turnover-q1-2026",
+            "jt-sc-chip-deposits-q1-2026",
+            "jt-sc-chip-transactions-2025",
+            "jt-sc-chip-depositors-2025"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "One release carries both measures: turnover, which counts a rupiah again each time it moves, went from Rp359.81T to Rp286.84T, while net deposits, which count it once on the way in, went from Rp51.3T to Rp36.01T.",
+          "els": [
+            "jt-panel-dueling",
+            "jt-duel-turnover-2024",
+            "jt-duel-turnover-2025",
+            "jt-duel-deposits-2024",
+            "jt-duel-deposits-2025"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Standing outside the frame: the ratio between those two series, whether the recording base held across both years, the channels absorbing what the blocked rails lose, the path of the series before the push, the matching quarter for the new quarterly figure, the people behind the rupiah, and the outflow carrying the operators' take.",
+          "els": [
+            "jt-h1-two-series-gap",
+            "jt-h2-recording-coverage",
+            "jt-h3-displaced-channels",
+            "jt-h4-prior-trajectory",
+            "jt-h5-quarter-baseline",
+            "jt-h6-player-count",
+            "jt-h7-operator-outflow"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Cerita ini berjalan dalam empat langkah: gempuran terhadap judi online di era Prabowo, perputaran dana yang dicatat PPATK turun menjadi Rp286,84 triliun, angka itu dibaca sebagai ukuran pasar yang menyusut sebesar itu pula, lalu judi online disebut surut.",
+          "els": [
+            "jt-panel-claim-map",
+            "jt-s1-crackdown",
+            "jt-s2-turnover-fall",
+            "jt-s3-market-read",
+            "jt-s4-outcome"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Langkah dari gempuran ke angka bertumpu pada urutan tanggal, dan langkah dari angka ke ukuran pasar bertumpu pada satu kata di judul, yaitu tersisa.",
+          "els": [
+            "jt-e1-crackdown-to-fall",
+            "jt-e2-fall-to-read"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Langkah terakhir, dari pasar yang mengecil menuju praktik yang surut, tidak dipegang oleh artikel mana pun dalam keluarga ini.",
+          "els": [
+            "jt-e3-read-to-outcome",
+            "jt-s4-outcome"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Di luar bingkai berdiri porsi pasar yang masih terjangkau alat pencatat, kanal pembayaran di luar jalur yang diblokir, arah deret yang sama sebelum gempuran, triwulan pembanding setahun sebelumnya, dan aliran dana lintas negara yang membawa bagian operator.",
+          "els": [
+            "jt-h2-recording-coverage",
+            "jt-h3-displaced-channels",
+            "jt-h4-prior-trajectory",
+            "jt-h5-quarter-baseline",
+            "jt-h7-operator-outflow"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Penurunannya diukur di dalam satu deret, dari Rp359,81 triliun pada 2024 menjadi Rp286,84 triliun pada 2025, sementara keping di sampingnya menghitung besaran lain: Rp40,3 triliun perputaran dan Rp10,59 triliun setoran pada triwulan I-2026, serta 422,1 juta transaksi sepanjang 2025.",
+          "els": [
+            "jt-panel-scale-check",
+            "jt-sc-turnover-2025",
+            "jt-duel-turnover-2024",
+            "jt-sc-chip-turnover-q1-2026",
+            "jt-sc-chip-deposits-q1-2026",
+            "jt-sc-chip-transactions-2025"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Rilis yang sama memuat dua ukuran untuk satu kegiatan, yaitu perputaran, yang menghitung uang itu lagi setiap kali dipindahkan, dan setoran bersih, yang turun dari Rp51,3 triliun ke Rp36,01 triliun; tidak ada artikel yang mempertemukan kedua deret itu, dan tidak ada yang mengukur pasar dalam 12,3 juta penyetor alih-alih dalam rupiah.",
+          "els": [
+            "jt-panel-dueling",
+            "jt-duel-turnover-2024",
+            "jt-duel-turnover-2025",
+            "jt-duel-deposits-2024",
+            "jt-duel-deposits-2025",
+            "jt-h1-two-series-gap",
+            "jt-h6-player-count",
+            "jt-sc-chip-depositors-2025"
+          ]
+        }
+      ]
+    }
+  },
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "The recorded figure falls while sites, accounts and payment channels are being closed. For that fall to mean the activity itself fell, which step has to hold?",
+          "id": "Situs, rekening, dan kanal pembayaran ditutup, lalu angka tercatat turun. Agar penurunan angka itu berarti kegiatannya sendiri yang menyusut, syarat apa yang harus terpenuhi?"
+        },
+        "options": [
+          {
+            "en": "The two annual totals have to come from the same release.",
+            "id": "Kedua total tahunan itu harus berasal dari rilis yang sama."
+          },
+          {
+            "en": "Money leaving the blocked rails has to stop moving, rather than run through channels the recording does not reach.",
+            "id": "Uang yang keluar dari jalur yang diblokir harus berhenti berpindah, bukan pindah ke kanal yang luput dari pencatatan."
+          },
+          {
+            "en": "The fall has to be reported inside the current period.",
+            "id": "Penurunan itu harus dilaporkan di dalam periode yang sedang berjalan."
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The claim map's first join, from the push to the recorded fall, and the hidden card on payment channels outside the blocked rails both sit on this. The other two options are things the artifact does supply: the annual totals do come from one release, and the era framing is right there in the headline. Neither of them follows the money once a rail closes.",
+          "id": "Sisi pertama pada peta klaim, dari gempuran menuju angka yang turun, dan kartu tersembunyi tentang kanal pembayaran di luar jalur yang diblokir sama-sama bertumpu pada syarat ini. Dua pilihan lain memang disediakan artefaknya: kedua total tahunan terbit dalam satu rilis, dan bingkai eranya sudah ada di judul. Keduanya tidak mengikuti ke mana uang pergi setelah satu jalur ditutup."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "Rp286.84T is the recorded turnover for 2025. Which figure is it being read against?",
+          "id": "Rp286,84 triliun adalah perputaran tercatat sepanjang 2025. Angka itu dibaca terhadap angka yang mana?"
+        },
+        "options": [
+          {
+            "en": "Rp51.3T, the net deposits recorded for 2024.",
+            "id": "Rp51,3 triliun, setoran bersih yang tercatat sepanjang 2024."
+          },
+          {
+            "en": "Rp359.81T, the recorded turnover for 2024, from the same series.",
+            "id": "Rp359,81 triliun, perputaran tercatat sepanjang 2024, dari deret yang sama."
+          },
+          {
+            "en": "Rp40.3T, the recorded turnover for the first quarter of 2026.",
+            "id": "Rp40,3 triliun, perputaran tercatat pada triwulan I-2026."
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The scale check sets both figures in one series: recorded turnover for 2024 as the denominator, recorded turnover for 2025 as the figure read against it. The other two are real figures from the same story pulling in other directions. Rp51.3T measures money entering accounts rather than money moving, and Rp40.3T counts three months against twelve.",
+          "id": "Panel skala menaruh kedua angka itu dalam satu deret: perputaran tercatat 2024 sebagai penyebut, perputaran tercatat 2025 sebagai angka yang dibaca terhadapnya. Dua angka lain sama-sama nyata dalam cerita ini dan menarik ke arah lain. Rp51,3 triliun mengukur uang yang masuk ke rekening, bukan uang yang berpindah, dan Rp40,3 triliun menghitung tiga bulan berbanding dua belas."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "The rupiah totals size this market in money. Which count of people does the artifact actually carry?",
+          "id": "Total rupiah mengukur pasar ini dalam satuan uang. Hitungan orang mana yang sungguh dibawa artefak ini?"
+        },
+        "options": [
+          {
+            "en": "12.3 million depositors recorded in the 2025 series.",
+            "id": "12,3 juta penyetor dana yang tercatat dalam deret 2025."
+          },
+          {
+            "en": "422.1 million players active across 2025.",
+            "id": "422,1 juta pemain yang aktif sepanjang 2025."
+          },
+          {
+            "en": "No count of people appears anywhere in the artifact.",
+            "id": "Tidak ada hitungan orang di mana pun dalam artefak ini."
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The scale check carries 12.3 million depositors from the 2025 series. The 422.1 million figure is real, and it counts transactions behind that year's turnover rather than heads. Depositors are the people whose money entered; the hidden card asks after active players still wagering, and that is the count the articles never reach for.",
+          "id": "Keping pada panel skala memuat 12,3 juta penyetor dana dari deret 2025, berdampingan dengan 422,1 juta yang menghitung transaksi sepanjang tahun itu, bukan orang. Penyetor adalah orang yang uangnya masuk; kartu tersembunyi menanyakan pemain aktif yang masih bertaruh, dan hitungan itulah yang tidak dijangkau artikelnya."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before the panels open: in a story built on one falling rupiah total, which side goes missing first?",
+      "id": "Sebelum panelnya dibuka: dalam cerita yang bertumpu pada satu total rupiah yang menurun, sisi mana yang paling dulu hilang?"
+    },
+    "options": [
+      {
+        "en": "The second series in the same release, deposits, and how its pace compares.",
+        "id": "Deret kedua dalam rilis yang sama, yaitu setoran dana, beserta perbandingan lajunya."
+      },
+      {
+        "en": "The channels that carry the money once the blocked rails close.",
+        "id": "Kanal yang menampung uang setelah jalur pembayaran ditutup."
+      },
+      {
+        "en": "The count of people still wagering, as opposed to the count of rupiah.",
+        "id": "Jumlah orang yang masih bertaruh, bukan jumlah rupiahnya."
+      },
+      {
+        "en": "Where the same series stood before the push began.",
+        "id": "Posisi deret yang sama sebelum gempuran dimulai."
+      }
+    ]
+  },
+  "editorial_notes": [
+    "narration.en ships the EN authoring verbatim, all six sentences, no edits. The EN authoring also emitted an id bundle; it was dropped, because A9.md requires the Indonesian narration to be authored in Indonesian rather than carried over from the English, and the ID authoring's bundle is the natively authored one.",
+    "narration.id ships the ID authoring verbatim with exactly one change, and it is a binding, not prose: jt-duel-turnover-2024 added to the els of v-5. The sentence emits Rp359,81 triliun, and under the contract a scale_check denominator carries no el_id of its own, so the only element declaring that figure is the dueling count. EN v-3 already binds it for the same figure. Without the addition the ID sentence emits a figure it does not bind, which is the traceability fault A11 pass two catches.",
+    "Coverage after merge: 26 el_ids bound, identical set in both locales, no binding outside the set. Each panel el (jt-panel-claim-map, jt-panel-scale-check, jt-panel-dueling) is narrated in both locales, which is the rule scripts/validate-content.ts enforces at lines 334 to 354.",
+    "Family marker panel, flagged rather than guessed. A9.input.json for this slot is absent from the run directory (it holds only A5.input.json, cluster.json and steps.json), so the panels JSON quoted in the reconciler brief was truncated after the claim map spine. Neither authoring bound a family marker el, and the A5 panel plan is exactly claim_map, scale_check, dueling. If the shipping panels array does carry a family marker panel, its el_id needs adding to one sentence per locale before the fidelity gate, and v-1 in each locale is the natural host since both open on the family's four-step skeleton. Guessing an id such as jt-panel-family was rejected: binding an el_id that no element declares is the harder of the two failures, and the published precedent uses a different naming shape (mbgstop-p-family) than this slot's jt-panel-* convention.",
+    "Cross-locale route difference on the claim map edges, checked and kept. EN v-2 says no source in the registry states the first two joins; ID v-2 says instead what those two steps rest on, the order of the dates and one word in the headline, tersisa. They agree on the evidence status and differ only in route, which A9.md explicitly permits. The one line for a reviewer to check against the e2 edge quote is the ID reading of the CNBC headline word.",
+    "Mechanism question: EN authoring taken as base, correct index 1. It is a mechanism question in the strict sense, asking which step must hold for the recorded fall to carry the meaning the story gives it. The ID authoring's version asked what the sources supply for that edge, which is an evidence question wearing a mechanism label; its substance survives inside the ID note, which names the unsourced first edge and the hidden card. The Indonesian was authored to the base natively rather than translated: syarat apa yang harus terpenuhi, not a calque of which step has to hold.",
+    "Denominator question: both authorings reached the same answer, Rp359,81 triliun, at the same index, so the merge turned on the note. The EN note was taken as base because the ID authoring's note placed net deposits inside the scale check as a chip. The scale check's deposits chip is Rp10,59 triliun for the first quarter of 2026; the Rp51,3 triliun net deposit figure lives in the dueling panel. Panels arbitrate, so the misplacement was dropped and the ID note rewritten to keep only what holds: the penyebut framing from the ID authoring, and three months against twelve, which is true of Rp40,3 triliun in either panel.",
+    "Incidence question: EN authoring taken as base, correct index 0, 12.3 million depositors. The ID authoring asked the same thing with options permuted, but its 422.1 million option named transactions inside the option text, handing the reader the discriminator before the choice. The EN version presents 422.1 million as players, which is the exact substitution the scale check exists to separate. Both notes keep the distinction the hidden card rests on: depositors are the people whose money entered, and active players still wagering is the count no article in the family reaches for.",
+    "Prediction tap: EN prompt as base, four options, all four aligned across locales. Option 1 differed between authorings while pointing at the same hidden card. EN framed it as the second series and how its pace compares, ID as what turnover counts against money entering accounts. EN's framing was kept because the pace comparison is what jt-h1-two-series-gap is missing; the Indonesian was authored to that meaning.",
+    "Figures: every rupiah figure emitted matches the binding list at pipeline/agents/prompts/A7.md line 67 exactly, checked mechanically across all five figures in both locales. EN carries the T suffix form, ID spells triliun. Both authorings chose triliun independently, while the published ID precedent in content/narratives uses the Rp88,15 T form. Unit spelling is not a figure change and each locale is internally consistent, so it was left as authored; it is worth one reviewer decision if the archive wants a single ID unit form.",
+    "422.1 million transactions and 12.3 million depositors sit outside the binding figure list. Both authorings carry them identically as scale check chips from the same PPATK release, so they were kept as the panels have them.",
+    "Lexicon: no whole-word collisions in either locale, verified by running both the English and the Indonesian banned lists against every string in the output regardless of locale. No salah satu construction was needed anywhere in the Indonesian. In the incidence question the phrasing is sungguh dibawa rather than sebenarnya dibawa; sebenarnya does not trip a whole-word check on benar, but the safer word cost nothing.",
+    "What stayed unsaid: no sentence and no note says whether the recorded fall happened or what it implies about the size of the market. Both locales stop at what the release measures, which series moved, and which comparison the story never makes. The step from a smaller figure to a receding practice is described as unheld by any article in the family, which is a statement about the articles, not about the practice."
+  ],
+  "model": "claude-opus-5[1m]"
+}

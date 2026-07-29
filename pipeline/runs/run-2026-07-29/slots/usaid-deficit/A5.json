@@ -1,0 +1,52 @@
+{
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "usaid-deficit-spine-size",
+        "label": {
+          "en": "Foreign aid takes a very large share of the federal budget, the size the claim asserts",
+          "id": "Bantuan luar negeri memakan porsi sangat besar dari anggaran federal, ukuran yang dinyatakan klaim itu"
+        }
+      },
+      {
+        "el_id": "usaid-deficit-spine-cut",
+        "label": {
+          "en": "Cutting foreign aid frees spending on that same scale",
+          "id": "Memangkas bantuan luar negeri membebaskan belanja pada skala yang sama"
+        }
+      },
+      {
+        "el_id": "usaid-deficit-spine-deficit",
+        "label": {
+          "en": "The federal deficit narrows substantially",
+          "id": "Defisit federal menyusut secara berarti"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "usaid-deficit-edge-size-cut",
+        "from": "usaid-deficit-spine-size",
+        "to": "usaid-deficit-spine-cut",
+        "quote": "no article in this family states the step from foreign aid taking a very large share of the federal budget to cutting foreign aid freeing spending on that same scale"
+      },
+      {
+        "el_id": "usaid-deficit-edge-cut-deficit",
+        "from": "usaid-deficit-spine-cut",
+        "to": "usaid-deficit-spine-deficit",
+        "quote": "no article in this family states the step from cutting foreign aid freeing spending on that same scale to the federal deficit narrowing substantially"
+      }
+    ]
+  },
+  "panel_skeleton": [
+    {
+      "type": "claim_map",
+      "el_id": "usaid-deficit-panel-claim-map"
+    },
+    {
+      "type": "scale_check",
+      "el_id": "usaid-deficit-panel-scale-check"
+    }
+  ],
+  "model": "claude-fable-5"
+}

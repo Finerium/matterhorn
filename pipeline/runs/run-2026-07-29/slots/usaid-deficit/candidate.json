@@ -1,0 +1,554 @@
+{
+  "id": "usaid-deficit",
+  "pack": "en",
+  "lean": "gov",
+  "status": "published",
+  "headline": {
+    "en": "Foreign Aid Is a Quarter of the Federal Budget",
+    "id": "Bantuan Luar Negeri Menyerap Seperempat Anggaran Federal"
+  },
+  "original": {
+    "text": "Foreign aid is about a quarter of the federal budget",
+    "lang": "en"
+  },
+  "outlet": "KFF",
+  "published_date": "2025-03-04",
+  "url": "https://www.kff.org/global-health-policy/kff-health-tracking-poll-february-2025-the-publics-views-on-global-health-and-usaid/",
+  "og": {
+    "image_path": "/assets/og/usaid-deficit.jpg",
+    "fetched_at": "2026-07-28",
+    "attribution": "Link preview image from KFF, shown with the outlet name and an outbound link.",
+    "fallback": false
+  },
+  "tags": [
+    "no-denominator",
+    "scope-inflation"
+  ],
+  "counts": {
+    "missing": 2,
+    "unsourced": 4,
+    "disputed": 0,
+    "supported": 0,
+    "hidden": 5
+  },
+  "provenance": {
+    "analyzed_by": "claude-fable-5",
+    "narrated_by": "claude-opus-5[1m]",
+    "source_count": 3,
+    "computed_at": "2026-07-28",
+    "run_id": "run-2026-07-29"
+  },
+  "family": {
+    "skeleton": "a spending line the public believes is a quarter of the budget, carried as though the belief were the size",
+    "members": [
+      {
+        "outlet": "KFF",
+        "headline": "KFF Health Tracking Poll February 2025: The Public's Views on Global Health and USAID",
+        "url": "https://www.kff.org/global-health-policy/kff-health-tracking-poll-february-2025-the-publics-views-on-global-health-and-usaid/",
+        "date": "2025-03-04"
+      },
+      {
+        "outlet": "U.S. Department of the Treasury",
+        "headline": "Final Monthly Treasury Statement, Fiscal Year 2025 (September 2025 issue)",
+        "url": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_202509.pdf",
+        "date": "2025-09"
+      }
+    ]
+  },
+  "scaffold_default": "S1",
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "A cut lands on the foreign aid line. According to the artifact, what sits between cutting the line and the Treasury actually stopping payments?",
+          "id": "Pemangkasan jatuh pada pos bantuan luar negeri. Menurut artefak ini, apa yang berdiri di antara keputusan memangkas pos itu dan saat kas negara berhenti mengeluarkan pembayaran?"
+        },
+        "options": [
+          {
+            "en": "Nothing much: an appropriation cut stops the outflow the day it takes effect",
+            "id": "Nyaris tidak ada: pemangkasan anggaran menghentikan aliran keluar pada hari aturannya berlaku."
+          },
+          {
+            "en": "Signed obligations already in place and goods already in transit, which keep drawing money after the cut lands",
+            "id": "Kewajiban kontrak yang sudah diteken dan barang yang sudah dalam perjalanan, yang masih menarik uang setelah pemangkasan jatuh."
+          },
+          {
+            "en": "A confirming vote in Congress that has to clear before any payment pauses",
+            "id": "Pemungutan suara penegasan di Kongres yang harus lolos sebelum pembayaran mana pun dijeda."
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The claim map puts the already-obligated share of the line outside the frame. Between an appropriation and an outlay sit signed obligations and goods already in transit, residue that keeps drawing money after the cut lands. That is the step no member of the family follows: from cutting the line to what the Treasury actually stops paying, and when.",
+          "id": "Peta klaim menempatkan bagian pos yang sudah terikat kontrak di luar bingkai. Di antara keputusan anggaran dan uang yang keluar berdiri kewajiban yang sudah diteken dan barang yang sudah dalam perjalanan, sisa yang masih menarik uang setelah pemangkasan jatuh. Langkah itulah yang tidak diikuti anggota mana pun dalam keluarga ini: dari memangkas pos sampai ke apa yang berhenti dibayar kas negara, dan kapan."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "The scale check sets the poll's two share figures against one government-wide total. Which total is it?",
+          "id": "Panel skala menempatkan dua angka porsi dari jajak pendapat itu terhadap satu total pemerintah menyeluruh. Total mana yang dipakai?"
+        },
+        "options": [
+          {
+            "en": "The size of the federal deficit for that year",
+            "id": "Besarnya defisit federal pada tahun itu."
+          },
+          {
+            "en": "Total spending on global health programs and USAID",
+            "id": "Total belanja program kesehatan global dan USAID."
+          },
+          {
+            "en": "Total federal net receipts for fiscal year 2025, $5,234.6 billion",
+            "id": "Total penerimaan bersih federal tahun fiskal 2025, US$5.234,6 miliar."
+          }
+        ],
+        "correct": 2,
+        "note": {
+          "en": "The scale check reads both figures, the 26 percent respondents averaged and the share the poll states as the actual one, about 1 percent, against total federal net receipts of $5,234.6 billion for fiscal year 2025, from the Treasury statement. The deficit figure is the one the claim map lists as unstated, and it is the base that would decide whether any freed spending registers as substantial.",
+          "id": "Panel skala menyebut pembandingnya secara langsung, yaitu total penerimaan bersih federal tahun fiskal 2025 sebesar US$5.234,6 miliar, dan menempatkan 26 persen serta sekitar 1 persen terhadap total itu. Angka defisit justru tercatat sebagai dasar yang tidak disebut anggota mana pun, sehingga tidak tersedia untuk peran itu di sini."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "If the line's payments stop, who meets it first, and when?",
+          "id": "Jika pembayaran dari pos itu berhenti, siapa yang menanggungnya lebih dulu, dan kapan?"
+        },
+        "options": [
+          {
+            "en": "Implementing organizations, commodity producers and freight carriers, at the moment payments stop",
+            "id": "Lembaga pelaksana, produsen komoditas, dan pengangkut kargo, pada saat pembayaran berhenti."
+          },
+          {
+            "en": "Taxpayers, at the close of the fiscal year, through a narrower deficit",
+            "id": "Pembayar pajak, pada penutupan tahun fiskal, lewat defisit yang menyusut."
+          },
+          {
+            "en": "Congress, at the next appropriations cycle",
+            "id": "Kongres, pada siklus anggaran berikutnya."
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The claim map treats the cut as a transfer. The line's outlays are at present the income of implementing organizations, commodity producers and freight carriers, and they meet the stopped payments at the moment the cut lands, before any budget total moves. The people the programs serve reach the same point within weeks, while the deficit effect in the final step arrives only with the ledger's year end.",
+          "id": "Peta klaim mencatat belanja pos itu sebagai pendapatan lembaga pelaksana, produsen komoditas, dan pengangkut kargo pada saat ini, sehingga merekalah yang menanggung berhentinya pembayaran pada saat pemangkasan jatuh, sebelum total anggaran mana pun bergeser. Orang-orang yang dilayani program itu sampai pada titik yang sama dalam hitungan pekan, sedangkan efek defisit pada langkah terakhir baru tiba di penghujung tahun buku."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before you open it: in a claim that runs from foreign aid straight to the deficit, which side do you expect to go unstated?",
+      "id": "Sebelum Anda membukanya: dalam klaim yang berjalan dari bantuan luar negeri langsung ke defisit, bagian mana yang menurut Anda tidak disebut?"
+    },
+    "options": [
+      {
+        "en": "The dollar size of the foreign aid line itself",
+        "id": "Besaran belanja tahunan pos bantuan luar negeri itu dalam dolar."
+      },
+      {
+        "en": "The size of the deficit it is meant to narrow",
+        "id": "Besarnya defisit yang menurut klaim itu hendak disusutkan."
+      },
+      {
+        "en": "Who is currently paid from the line",
+        "id": "Pihak-pihak yang kini dibayar dari pos itu."
+      },
+      {
+        "en": "The timing, meaning when a cut actually stops money going out",
+        "id": "Soal waktu, yaitu kapan pemangkasan menghentikan uang yang keluar dari kas."
+      }
+    ]
+  },
+  "panels": [
+    {
+      "type": "claim_map",
+      "el_id": "usaid-deficit-panel-claim-map",
+      "spine": [
+        {
+          "el_id": "usaid-deficit-spine-size",
+          "label": {
+            "en": "Foreign aid takes a very large share of the federal budget, the size the claim asserts",
+            "id": "Bantuan luar negeri memakan porsi sangat besar dari anggaran federal, ukuran yang dinyatakan klaim itu"
+          }
+        },
+        {
+          "el_id": "usaid-deficit-spine-cut",
+          "label": {
+            "en": "Cutting foreign aid frees spending on that same scale",
+            "id": "Memangkas bantuan luar negeri membebaskan belanja pada skala yang sama"
+          }
+        },
+        {
+          "el_id": "usaid-deficit-spine-deficit",
+          "label": {
+            "en": "The federal deficit narrows substantially",
+            "id": "Defisit federal menyusut secara berarti"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "el_id": "usaid-deficit-edge-size-cut",
+          "from": "usaid-deficit-spine-size",
+          "to": "usaid-deficit-spine-cut",
+          "status": "missing",
+          "ev": {
+            "quote": "no article in this family states the step from foreign aid taking a very large share of the federal budget to cutting foreign aid freeing spending on that same scale",
+            "why": {
+              "en": "No source in the registry carries this step. Crossing it needs the line's annual outlay in dollars, while the poll carries a share of the budget and the Treasury statement carries the government-wide total, and neither of those is that outlay.",
+              "id": "Tidak ada sumber dalam registri yang memuat langkah ini. Melintasinya membutuhkan belanja tahunan pos itu dalam dolar, sementara jajak pendapat memuat porsi anggaran dan laporan Treasury memuat total pemerintah menyeluruh, dan tidak satu pun di antaranya adalah belanja tersebut."
+            }
+          }
+        },
+        {
+          "el_id": "usaid-deficit-edge-cut-deficit",
+          "from": "usaid-deficit-spine-cut",
+          "to": "usaid-deficit-spine-deficit",
+          "status": "missing",
+          "ev": {
+            "quote": "no article in this family states the step from cutting foreign aid freeing spending on that same scale to the federal deficit narrowing substantially",
+            "why": {
+              "en": "No source in the registry carries this step. Whether freed spending registers as substantial is a ratio against the size of the deficit itself, and no source in the registry states that deficit figure.",
+              "id": "Tidak ada sumber dalam registri yang memuat langkah ini. Apakah belanja yang dibebaskan tergolong berarti adalah soal rasio terhadap besar defisit itu sendiri, dan tidak ada sumber dalam registri yang menyebut angka defisit tersebut."
+            }
+          }
+        }
+      ],
+      "hidden": [
+        {
+          "el_id": "usaid-deficit-hidden-outlay-numerator",
+          "label": {
+            "en": "The line's actual annual outlay in dollars, the amount a cut could free",
+            "id": "Belanja tahunan aktual pos bantuan luar negeri dalam dolar, jumlah yang bisa dibebaskan oleh pemangkasan"
+          },
+          "why_hidden": {
+            "en": "The step from the cut to spending freed on the same scale needs the line's annual outlay in dollars as its numerator. The poll member carries the share as a slice of the budget and the treasury member carries the total that slice is read against, but no member states the dollar outlay itself, so the freed spending in the second step has no stated magnitude.",
+            "id": "Langkah dari pemangkasan menuju belanja yang dibebaskan pada skala yang sama membutuhkan belanja tahunan pos itu dalam dolar sebagai pembilangnya. Jajak pendapat dalam keluarga ini memuat porsinya sebagai irisan anggaran dan laporan Treasury memuat total pembanding irisan itu, tetapi tidak ada anggota yang menyebut besaran belanja dolarnya sendiri, sehingga belanja yang dibebaskan pada langkah kedua tidak punya besaran yang dinyatakan."
+          }
+        },
+        {
+          "el_id": "usaid-deficit-hidden-deficit-base",
+          "label": {
+            "en": "The size of the federal deficit the narrowing would be measured against",
+            "id": "Besarnya defisit federal yang menjadi pembanding penyusutan itu"
+          },
+          "why_hidden": {
+            "en": "The final step has the deficit narrowing substantially, and substantially is a ratio: spending freed set against the size of the deficit itself. The family reads the share claim against total receipts through the treasury member, but no member states the deficit figure, the base that decides whether any freed spending registers as substantial.",
+            "id": "Langkah terakhir menyatakan defisit menyusut secara berarti, dan berarti atau tidaknya adalah soal rasio: belanja yang dibebaskan dibanding besar defisit itu sendiri. Keluarga ini membaca klaim porsi terhadap total penerimaan lewat laporan Treasury, tetapi tidak ada anggota yang menyebut angka defisitnya, dasar yang menentukan apakah belanja yang dibebaskan itu tergolong berarti."
+          }
+        },
+        {
+          "el_id": "usaid-deficit-hidden-line-payees",
+          "label": {
+            "en": "The organizations and suppliers currently paid from the foreign aid line",
+            "id": "Lembaga pelaksana dan pemasok yang saat ini dibayar dari pos bantuan luar negeri"
+          },
+          "why_hidden": {
+            "en": "The second step treats the cut as spending freed. A cut is a transfer: the line's outlays are at present the income of implementing organizations, commodity producers and freight carriers, and they meet the stopped payments at the moment the cut lands, before any budget total moves. No member names who is currently paid from the line.",
+            "id": "Langkah kedua memperlakukan pemangkasan sebagai belanja yang dibebaskan. Pemangkasan adalah sebuah transfer: belanja pos itu saat ini merupakan pendapatan lembaga pelaksana, produsen komoditas, dan pengangkut kargo, dan merekalah yang menanggung terhentinya pembayaran pada saat pemangkasan jatuh, sebelum total anggaran mana pun bergeser. Tidak ada anggota yang menyebut siapa yang kini dibayar dari pos itu."
+          }
+        },
+        {
+          "el_id": "usaid-deficit-hidden-served-population",
+          "label": {
+            "en": "The people the funded programs serve at the point of delivery",
+            "id": "Orang-orang yang dilayani program-program yang didanai pos itu di titik layanan"
+          },
+          "why_hidden": {
+            "en": "The poll member asks the public about global health programs and USAID, so services in delivery are the family's own subject. The cut in the second step reaches those services at the counter, clinics, supplies and distributions, within weeks of payments stopping, while the deficit effect in the final step arrives only with the ledger's year end. No member names the served population as reached.",
+            "id": "Jajak pendapat dalam keluarga ini bertanya kepada publik tentang program kesehatan global dan USAID, sehingga layanan yang sedang berjalan adalah pokok keluarga ini sendiri. Pemangkasan pada langkah kedua mencapai layanan itu di titik layanan, klinik, pasokan, dan distribusi, dalam hitungan pekan setelah pembayaran berhenti, sementara efek defisit pada langkah terakhir baru tiba di penghujung tahun buku. Tidak ada anggota yang menyebut penduduk yang dilayani itu sebagai pihak yang terjangkau mekanisme."
+          },
+          "ev": {
+            "quote": "Evaluating the impact of two decades of USAID interventions and projecting the effects of defunding on mortality up to 2030",
+            "source_id": "en-lancet-usaid"
+          }
+        },
+        {
+          "el_id": "usaid-deficit-hidden-obligated-residue",
+          "label": {
+            "en": "The already-obligated share of the line that a cut does not return within the year",
+            "id": "Porsi pos yang sudah terikat kewajiban kontrak dan tidak kembali ke kas dalam tahun berjalan meski dipangkas"
+          },
+          "why_hidden": {
+            "en": "The second step equates the cut with spending freed on the same scale in the same year. Between an appropriation and an outlay sit signed obligations, goods in transit and termination and close-out costs, residue that keeps drawing money after the cut lands. No member follows the step from cutting the line to what the treasury actually stops paying, and when.",
+            "id": "Langkah kedua menyamakan pemangkasan dengan belanja yang dibebaskan pada skala yang sama di tahun yang sama. Di antara alokasi dan realisasi belanja terdapat kewajiban kontrak yang sudah diteken, barang yang sedang dalam perjalanan, serta biaya penghentian dan penutupan, sisa beban yang terus menarik uang setelah pemangkasan jatuh. Tidak ada anggota yang mengikuti langkah dari memangkas pos itu ke apa yang sungguh berhenti dibayar kas negara, dan kapan."
+          }
+        }
+      ]
+    },
+    {
+      "type": "scale_check",
+      "el_id": "usaid-deficit-panel-scale-check",
+      "denominator": {
+        "label": {
+          "en": "Total federal net receipts, fiscal year 2025, the government-wide total this family reads the share against",
+          "id": "Total penerimaan bersih federal, tahun fiskal 2025, total pemerintah menyeluruh yang menjadi pembanding porsi itu dalam keluarga ini"
+        },
+        "value": {
+          "amount": 5234.6,
+          "unit": "USD_B",
+          "display": {
+            "en": "$5,234.6 billion",
+            "id": "US$5.234,6 miliar"
+          },
+          "source_id": "en-treasury-mts-fy2025",
+          "as_of": "FY2025 (Oct 2024 to Sep 2025)"
+        }
+      },
+      "segments": [
+        {
+          "el_id": "usaid-deficit-seg-guessed-share",
+          "label": {
+            "en": "The share of the federal budget respondents gave on average for foreign aid, the size the claim asserts",
+            "id": "Porsi anggaran federal untuk bantuan luar negeri menurut tebakan rata-rata responden jajak pendapat itu, ukuran yang dinyatakan klaim itu"
+          },
+          "value": {
+            "amount": 26,
+            "unit": "percent",
+            "display": {
+              "en": "26 percent",
+              "id": "26 persen"
+            },
+            "source_id": "en-kff-tracking-feb2025",
+            "as_of": "fielded Feb 2025, published 4 Mar 2025"
+          }
+        },
+        {
+          "el_id": "usaid-deficit-seg-actual-share",
+          "label": {
+            "en": "The share of the federal budget the poll states as the actual one going to foreign aid",
+            "id": "Porsi aktual anggaran federal yang mengalir ke bantuan luar negeri menurut jajak pendapat itu"
+          },
+          "value": {
+            "amount": 1,
+            "unit": "percent",
+            "display": {
+              "en": "about 1 percent",
+              "id": "sekitar 1 persen"
+            },
+            "source_id": "en-kff-tracking-feb2025",
+            "as_of": "fielded Feb 2025, published 4 Mar 2025"
+          }
+        }
+      ],
+      "takeaway": {
+        "en": "The poll asked what share of the federal budget goes to foreign aid. The average answer respondents gave and the share the poll states as the actual one are set here against the government-wide total this family reads both against.",
+        "id": "Jajak pendapat itu menanyakan berapa porsi anggaran federal yang mengalir ke bantuan luar negeri. Tebakan rata-rata responden dan porsi aktual menurut jajak pendapat itu ditempatkan di sini terhadap total pemerintah menyeluruh yang menjadi pembanding keduanya dalam keluarga ini."
+      },
+      "context_chips": [
+        {
+          "el_id": "usaid-deficit-chip-correct-guess",
+          "label": {
+            "en": "Respondents whose guess landed on the actual share",
+            "id": "Responden yang tebakannya jatuh tepat pada porsi aktual itu"
+          },
+          "value": {
+            "amount": 11,
+            "unit": "percent",
+            "display": {
+              "en": "11 percent",
+              "id": "11 persen"
+            },
+            "source_id": "en-kff-tracking-feb2025",
+            "as_of": "fielded Feb 2025, published 4 Mar 2025"
+          }
+        },
+        {
+          "el_id": "usaid-deficit-chip-support-before",
+          "label": {
+            "en": "Support the poll records before respondents are shown the actual share",
+            "id": "Dukungan yang dicatat jajak pendapat itu sebelum responden ditunjukkan porsi aktualnya"
+          },
+          "value": {
+            "amount": 58,
+            "unit": "percent",
+            "display": {
+              "en": "58 percent",
+              "id": "58 persen"
+            },
+            "source_id": "en-kff-tracking-feb2025",
+            "as_of": "fielded Feb 2025, published 4 Mar 2025"
+          }
+        },
+        {
+          "el_id": "usaid-deficit-chip-support-after",
+          "label": {
+            "en": "Support the poll records after respondents are shown the actual share",
+            "id": "Dukungan yang dicatat jajak pendapat itu setelah responden ditunjukkan porsi aktualnya"
+          },
+          "value": {
+            "amount": 34,
+            "unit": "percent",
+            "display": {
+              "en": "34 percent",
+              "id": "34 persen"
+            },
+            "source_id": "en-kff-tracking-feb2025",
+            "as_of": "fielded Feb 2025, published 4 Mar 2025"
+          }
+        }
+      ]
+    }
+  ],
+  "echo": null,
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "The claim runs in three steps: foreign aid takes a very large share of the federal budget, cutting it frees spending on that same scale, and the federal deficit narrows substantially.",
+          "els": [
+            "usaid-deficit-panel-claim-map",
+            "usaid-deficit-spine-size",
+            "usaid-deficit-spine-cut",
+            "usaid-deficit-spine-deficit"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Both joins between those steps are where this family of articles goes quiet. No member states the move from the share to the spending freed, and none states the move from that spending to the deficit.",
+          "els": [
+            "usaid-deficit-edge-size-cut",
+            "usaid-deficit-edge-cut-deficit"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Crossing the first join needs the line's annual outlay in dollars. Judging the second needs the size of the deficit itself. No source in the registry states either number.",
+          "els": [
+            "usaid-deficit-hidden-outlay-numerator",
+            "usaid-deficit-hidden-deficit-base"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Standing outside the frame: the organizations, commodity producers and freight carriers currently paid from the line, the people its programs serve at the point of delivery, and the signed obligations and goods in transit that keep drawing money after a cut lands.",
+          "els": [
+            "usaid-deficit-hidden-line-payees",
+            "usaid-deficit-hidden-served-population",
+            "usaid-deficit-hidden-obligated-residue"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "The poll asked what share of the federal budget goes to foreign aid. Respondents averaged 26 percent; the poll states about 1 percent as the actual share. Both sit here against total federal net receipts of $5,234.6 billion for fiscal year 2025.",
+          "els": [
+            "usaid-deficit-panel-scale-check",
+            "usaid-deficit-seg-guessed-share",
+            "usaid-deficit-seg-actual-share"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Among respondents, 11 percent landed on that actual share. The support the poll records runs 58 percent before respondents are shown it and 34 percent after.",
+          "els": [
+            "usaid-deficit-chip-correct-guess",
+            "usaid-deficit-chip-support-before",
+            "usaid-deficit-chip-support-after"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Klaim ini berjalan dalam tiga langkah: bantuan luar negeri memakan porsi sangat besar dari anggaran federal, memangkasnya membebaskan belanja pada skala yang sama, lalu defisit federal menyusut secara berarti.",
+          "els": [
+            "usaid-deficit-panel-claim-map",
+            "usaid-deficit-spine-size",
+            "usaid-deficit-spine-cut",
+            "usaid-deficit-spine-deficit"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Dua sambungan di antara langkah-langkah itu tidak dimuat oleh sumber mana pun dalam keluarga artikel ini, jadi rantainya berhenti dua kali sebelum sampai ke defisit.",
+          "els": [
+            "usaid-deficit-edge-size-cut",
+            "usaid-deficit-edge-cut-deficit"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Untuk melintasi sambungan pertama dibutuhkan belanja tahunan pos itu dalam dolar sebagai pembilang, dan untuk melintasi yang kedua dibutuhkan angka defisit yang menjadi dasar pembandingnya, sementara tidak ada anggota keluarga ini yang menyebut kedua angka tersebut.",
+          "els": [
+            "usaid-deficit-hidden-outlay-numerator",
+            "usaid-deficit-hidden-deficit-base"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Di luar bingkai berdiri lembaga pelaksana, produsen komoditas, dan pengangkut kargo yang kini dibayar dari pos itu, orang-orang yang dilayani program-program itu di titik layanan, serta kewajiban kontrak yang sudah diteken dan tidak kembali ke kas dalam tahun berjalan.",
+          "els": [
+            "usaid-deficit-hidden-line-payees",
+            "usaid-deficit-hidden-served-population",
+            "usaid-deficit-hidden-obligated-residue"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Panel skala menempatkan tebakan rata-rata responden, 26 persen, dan porsi aktual menurut jajak pendapat itu, sekitar 1 persen, terhadap total penerimaan bersih federal tahun fiskal 2025 sebesar US$5.234,6 miliar.",
+          "els": [
+            "usaid-deficit-panel-scale-check",
+            "usaid-deficit-seg-guessed-share",
+            "usaid-deficit-seg-actual-share"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Sebanyak 11 persen responden menebak jatuh tepat pada porsi aktual itu, dan dukungan yang dicatat jajak pendapat itu bergerak dari 58 persen sebelum porsi aktualnya ditunjukkan ke 34 persen sesudahnya.",
+          "els": [
+            "usaid-deficit-chip-correct-guess",
+            "usaid-deficit-chip-support-before",
+            "usaid-deficit-chip-support-after"
+          ]
+        }
+      ]
+    }
+  },
+  "manifest": {
+    "run_id": "run-2026-07-29",
+    "generated_at": "2026-07-28T21:52:08Z",
+    "steps": [
+      {
+        "role": "A5",
+        "model": "claude-fable-5",
+        "started_at": "2026-07-28T22:58:12Z",
+        "finished_at": "2026-07-29T00:22:13Z",
+        "input_hash": "90404b718d1f9e55f8599f92bd6e1b5846d23ca17dac487d08339725973cb254"
+      },
+      {
+        "role": "A6",
+        "model": "claude-fable-5",
+        "started_at": "2026-07-29T00:22:14Z",
+        "finished_at": "2026-07-29T00:22:14Z",
+        "input_hash": "d2e3fa7a46c8d712e3196ad4967fcd815efec6d46b30894c2c6ba036a3711cac"
+      },
+      {
+        "role": "A7",
+        "model": "claude-opus-5[1m]",
+        "started_at": "2026-07-29T00:22:14Z",
+        "finished_at": "2026-07-29T00:22:14Z",
+        "input_hash": "a3e968efc7ea079f81ea03d9750e2699edc944bc703961e15ed780b2e639db09"
+      },
+      {
+        "role": "A8",
+        "model": "claude-opus-5[1m]",
+        "started_at": "2026-07-29T00:22:14Z",
+        "finished_at": "2026-07-29T00:22:14Z",
+        "input_hash": "55e548526d81b6d056c602fc114cada338251ae5433de430c60255484415324a"
+      },
+      {
+        "role": "A9",
+        "model": "claude-opus-5[1m]",
+        "started_at": "2026-07-29T00:22:15Z",
+        "finished_at": "2026-07-29T00:22:15Z",
+        "input_hash": "3b5a7afffd889b0f2177443dd294ce7d670be6cf95a9fdcbd457223d7e803bf2"
+      }
+    ]
+  }
+}

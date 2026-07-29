@@ -1,0 +1,291 @@
+{
+  "panels": [
+    {
+      "type": "claim_map",
+      "el_id": "ppn-panic-p-claim-map",
+      "spine": [
+        {
+          "el_id": "ppn-panic-s1",
+          "label": {
+            "en": "The finance ministry issues a new VAT tariff rule",
+            "id": "Kemenkeu menerbitkan aturan tarif PPN yang baru"
+          }
+        },
+        {
+          "el_id": "ppn-panic-s2",
+          "label": {
+            "en": "A higher VAT rate takes effect",
+            "id": "Tarif PPN yang lebih tinggi mulai berlaku"
+          },
+          "value": {
+            "amount": 12,
+            "unit": "percent",
+            "display": {
+              "en": "12 percent",
+              "id": "12 persen"
+            },
+            "source_id": "id-antara-ppn-luxury",
+            "as_of": "published 1 Jan 2025"
+          }
+        },
+        {
+          "el_id": "ppn-panic-s3",
+          "label": {
+            "en": "The higher rate reaches every good and service in the basket",
+            "id": "Tarif yang lebih tinggi itu menjangkau semua barang dan jasa di keranjang belanja"
+          }
+        },
+        {
+          "el_id": "ppn-panic-s4",
+          "label": {
+            "en": "Every price rises",
+            "id": "Semua harga naik"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "el_id": "ppn-panic-e1",
+          "from": "ppn-panic-s1",
+          "to": "ppn-panic-s2",
+          "status": "supported",
+          "ev": {
+            "quote": "Kemenkeu rilis aturan PPN 12 persen hanya untuk barang mewah",
+            "source_id": "id-antara-ppn-luxury",
+            "why": {
+              "en": "The national wire names the ministry rule and the 12 percent rate in the same line, dated 1 January 2025, and the tax authority page for PMK 131/2024 carries the same rate with effect from that date.",
+              "id": "Kantor berita nasional menyebut aturan kementerian dan tarif 12 persen dalam satu baris bertanggal 1 Januari 2025, dan halaman otoritas pajak untuk PMK 131/2024 memuat tarif yang sama berlaku sejak tanggal itu."
+            }
+          }
+        },
+        {
+          "el_id": "ppn-panic-e2",
+          "from": "ppn-panic-s2",
+          "to": "ppn-panic-s3",
+          "status": "missing",
+          "ev": {
+            "quote": "no article in this family states the step from the higher rate taking effect to the rate reaching every good and service in the basket",
+            "why": {
+              "en": "No entry in the registry carries this step. None sets spending on the luxury sales tax list against spending on the whole basket, so the ratio the step needs has no numerator and no denominator here.",
+              "id": "Tidak ada catatan dalam registri yang memuat langkah ini. Tidak ada yang menyandingkan belanja atas daftar pajak penjualan barang mewah dengan belanja seluruh keranjang, sehingga rasio yang dibutuhkan langkah ini tidak punya pembilang maupun penyebut di sini."
+            }
+          }
+        },
+        {
+          "el_id": "ppn-panic-e3",
+          "from": "ppn-panic-s3",
+          "to": "ppn-panic-s4",
+          "status": "missing",
+          "ev": {
+            "quote": "no article in this family states the step from the rate reaching every good and service to every price rising",
+            "why": {
+              "en": "No entry in the registry carries this step. None names the parts of the basket that carry no VAT at any rate, and none follows prices across the changeover, so the move from a rate to a price has nothing behind it in this set.",
+              "id": "Tidak ada catatan dalam registri yang memuat langkah ini. Tidak ada yang menyebut bagian keranjang yang tidak memikul PPN pada tarif berapa pun, dan tidak ada yang mengikuti harga sepanjang masa peralihan, sehingga perpindahan dari tarif ke harga tidak berpijak pada apa pun dalam kumpulan ini."
+            }
+          }
+        }
+      ],
+      "hidden": [
+        {
+          "el_id": "ppn-panic-h1",
+          "label": {
+            "en": "How much of the household basket the luxury-list rate reaches",
+            "id": "Seberapa besar porsi keranjang belanja rumah tangga yang dijangkau tarif daftar barang mewah"
+          },
+          "why_hidden": {
+            "en": "Step s3 asserts the higher rate reaches every good and service in the basket. The rule the family cites, PMK 131/2024, draws that reach at goods on the luxury-tax list, and services sit outside the list entirely. For s3 to carry weight the chain needs a ratio, spending on luxury-list goods over spending on the whole basket, and no article in the family puts a numerator against that denominator. Coverage stops at the phrase 'hanya untuk barang mewah' without saying how much of anyone's spending that is.",
+            "id": "Langkah s3 menyatakan tarif yang lebih tinggi menjangkau semua barang dan jasa di keranjang belanja. Aturan yang dikutip keluarga artikel ini, PMK 131/2024, menarik batas jangkauan itu pada barang dalam daftar kena pajak barang mewah, dan jasa sepenuhnya berada di luar daftar tersebut. Agar s3 punya bobot, rantai ini membutuhkan sebuah rasio, belanja atas barang dalam daftar mewah dibanding belanja seluruh keranjang, dan tidak ada artikel dalam keluarga ini yang menyandingkan pembilang dengan penyebut itu. Pemberitaan berhenti pada frasa 'hanya untuk barang mewah' tanpa menyebut seberapa besar bagian itu dalam belanja siapa pun."
+          }
+        },
+        {
+          "el_id": "ppn-panic-h2",
+          "label": {
+            "en": "Goods and services that carry no VAT under the exemption and facility lists",
+            "id": "Barang dan jasa yang dibebaskan dari PPN menurut ketentuan pengecualian dan fasilitas"
+          },
+          "why_hidden": {
+            "en": "Step s4 asserts every price rises through the VAT channel. Part of the basket, staple goods and the services on the statutory exemption and facility lists, carries no VAT at any rate, so the stated mechanism has no channel into those prices. The chain jumps from the rate to every price, and no article in the family names the slice the channel cannot enter.",
+            "id": "Langkah s4 menyatakan semua harga naik lewat jalur PPN. Sebagian keranjang, bahan kebutuhan pokok serta jasa yang masuk ketentuan pengecualian dan fasilitas dalam undang-undang, tidak memikul PPN pada tarif berapa pun, sehingga mekanisme yang dinyatakan tidak punya jalur masuk ke harga-harga itu. Rantai melompat dari tarif ke semua harga, dan tidak ada artikel dalam keluarga ini yang menyebut bagian keranjang yang tidak bisa dimasuki jalur tersebut."
+          }
+        },
+        {
+          "el_id": "ppn-panic-h4",
+          "label": {
+            "en": "The rate schedule already written into the VAT statute before the ministry moved",
+            "id": "Jadwal tarif yang sudah tertulis dalam undang-undang PPN sebelum kementerian bertindak"
+          },
+          "value": {
+            "amount": 11,
+            "unit": "percent",
+            "display": {
+              "en": "11 percent",
+              "id": "11 persen"
+            },
+            "source_id": "id-pajak-pmk131",
+            "as_of": "effective 1 Jan 2025"
+          },
+          "why_hidden": {
+            "en": "Step s1 casts the ministry rule as the first mover of the chain. The rule sits under the amended VAT statute, whose schedule already put the higher rate on the whole VAT base at the start of 2025; the eleven-twelfths base in PMK 131/2024 is the device that keeps everything off the luxury list at an effective 11 percent. The chain never states what the basket pays in the world where the ministry issues nothing, and no article follows the fact that the 11 percent now rests on a ministerial regulation while the statutory 12 percent stays on the books.",
+            "id": "Langkah s1 menempatkan aturan kementerian sebagai penggerak pertama rantai. Aturan itu berdiri di bawah undang-undang PPN hasil perubahan, yang jadwalnya sudah menempatkan tarif lebih tinggi pada seluruh basis PPN sejak awal 2025; dasar pengenaan sebelas per dua belas dalam PMK 131/2024 adalah perangkat yang menahan semua yang di luar daftar mewah pada tarif efektif 11 persen. Rantai tidak pernah menyatakan berapa yang dibayar keranjang seandainya kementerian tidak menerbitkan apa pun, dan tidak ada artikel yang mengikuti bahwa angka 11 persen kini bertumpu pada peraturan menteri sementara tarif 12 persen dalam undang-undang tetap tercantum."
+          },
+          "ev": {
+            "quote": "PMK 131/2024: Tarif PPN Sebelas-Dua Belas",
+            "source_id": "id-pajak-pmk131"
+          }
+        },
+        {
+          "el_id": "ppn-panic-h5",
+          "label": {
+            "en": "VAT-registered sellers who had a single night to re-base every invoice",
+            "id": "Pengusaha kena pajak yang hanya punya satu malam untuk mengganti dasar penghitungan setiap faktur"
+          },
+          "why_hidden": {
+            "en": "Between s1 and s2 sits one night: the rule is dated the last day of the year and wire coverage of it in force ran the next day. Off-list sales now invoice at 12 percent on an eleven-twelfths base in place of the old flat computation on full price, so the arithmetic on every tax invoice, cash register and import declaration changed at once. The first payer of the step is the seller who implements it, and the family explains the formula while stopping before the people who had a single night to reprogram it.",
+            "id": "Di antara s1 dan s2 hanya ada satu malam: aturan bertanggal hari terakhir tahun dan pemberitaan kantor berita tentang pemberlakuannya terbit keesokan harinya. Penjualan di luar daftar mewah kini difakturkan 12 persen atas dasar pengenaan sebelas per dua belas, menggantikan hitungan lama atas harga penuh, sehingga aritmetika pada setiap faktur pajak, mesin kasir dan dokumen impor berubah seketika. Pembayar pertama langkah ini adalah penjual yang menerapkannya, dan keluarga artikel menjelaskan rumusnya sambil berhenti sebelum menyebut pihak yang hanya punya satu malam untuk memprogram ulang."
+          },
+          "ev": {
+            "quote": "Kemenkeu rilis aturan PPN 12 persen hanya untuk barang mewah",
+            "source_id": "id-antara-ppn-luxury"
+          }
+        },
+        {
+          "el_id": "ppn-panic-h7",
+          "label": {
+            "en": "Luxury-goods buyers and dealers on either side of the February boundary",
+            "id": "Pembeli dan penjual barang mewah di dua sisi batas Februari"
+          },
+          "why_hidden": {
+            "en": "The Bisnis.com headline states full application for luxury goods starts in February 2025, so s2 arrives in two stages: first a window at the reduced base, then the full base. A boundary announced in advance on big-ticket goods reaches the timing of purchases, sales pulled into the window and tax remitted on either side of it. The article states the schedule and stops before following what the window does to when luxury sales happen.",
+            "id": "Judul Bisnis.com menyatakan pemberlakuan penuh untuk barang mewah dimulai Februari 2025, sehingga s2 datang dalam dua tahap: jendela dengan dasar pengenaan yang dikurangi lebih dulu, lalu dasar penuh sesudahnya. Batas yang diumumkan di muka pada barang bernilai besar menjangkau penentuan waktu pembelian, penjualan yang ditarik masuk ke jendela itu, dan pajak yang disetor di kedua sisinya. Artikel menyatakan jadwal dan berhenti sebelum mengikuti akibat jendela itu terhadap kapan penjualan barang mewah terjadi."
+          },
+          "ev": {
+            "quote": "PPN 12% Barang Mewah Berlaku Penuh mulai Februari 2025, Begini Penjelasannya",
+            "source_id": "id-bisnis-ppn-luxury"
+          }
+        }
+      ]
+    },
+    {
+      "type": "scale_check",
+      "el_id": "ppn-panic-p-scale-check",
+      "denominator": {
+        "label": {
+          "en": "The rate carried in the headline, which the chain applies to every good and service",
+          "id": "Tarif yang dibawa judul pemberitaan, yang oleh rantai ini dikenakan pada semua barang dan jasa"
+        },
+        "value": {
+          "amount": 12,
+          "unit": "percent",
+          "display": {
+            "en": "12 percent",
+            "id": "12 persen"
+          },
+          "source_id": "id-antara-ppn-luxury",
+          "as_of": "published 1 Jan 2025"
+        }
+      },
+      "segments": [
+        {
+          "el_id": "ppn-panic-sc-off-list",
+          "label": {
+            "en": "Effective rate kept by everything off the luxury sales tax list, through the eleven-twelfths base",
+            "id": "Tarif efektif yang tetap dipikul segala yang di luar daftar pajak penjualan barang mewah, lewat dasar pengenaan sebelas per dua belas"
+          },
+          "value": {
+            "amount": 11,
+            "unit": "percent",
+            "display": {
+              "en": "11 percent",
+              "id": "11 persen"
+            },
+            "source_id": "id-pajak-pmk131",
+            "as_of": "effective 1 Jan 2025"
+          }
+        },
+        {
+          "el_id": "ppn-panic-sc-luxury-list",
+          "label": {
+            "en": "Rate reaching goods already carried by the luxury sales tax list",
+            "id": "Tarif yang menjangkau barang yang sudah masuk daftar pajak penjualan barang mewah"
+          },
+          "value": {
+            "amount": 12,
+            "unit": "percent",
+            "display": {
+              "en": "12 percent",
+              "id": "12 persen"
+            },
+            "source_id": "id-pajak-pmk131",
+            "as_of": "effective 1 Jan 2025"
+          }
+        }
+      ],
+      "takeaway": {
+        "en": "The two rates sit one point apart, and which of them a purchase carries turns on whether the goods are on the luxury sales tax list. The share of a household basket that sits on that list is the figure this panel cannot show, because no source in the registry carries it.",
+        "id": "Kedua tarif berjarak satu poin, dan tarif mana yang dipikul sebuah pembelian bergantung pada apakah barangnya ada di daftar pajak penjualan barang mewah. Porsi keranjang belanja rumah tangga yang berada di daftar itu adalah angka yang tidak bisa ditampilkan panel ini, karena tidak ada sumber dalam registri yang memuatnya."
+      },
+      "context_chips": [
+        {
+          "el_id": "ppn-panic-sc-chip-stimulus",
+          "label": {
+            "en": "Package announced alongside the scope statement",
+            "id": "Paket yang diumumkan bersama pernyataan cakupan"
+          },
+          "value": {
+            "amount": 38.6,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp38.6T",
+              "id": "Rp38,6 T"
+            },
+            "source_id": "id-setneg-ppn-stimulus",
+            "as_of": "stated early Jan 2025"
+          }
+        },
+        {
+          "el_id": "ppn-panic-sc-chip-rice",
+          "label": {
+            "en": "Recipients of the 10 kg rice component of that package",
+            "id": "Penerima komponen beras 10 kg dalam paket itu"
+          },
+          "value": {
+            "amount": 16000000,
+            "unit": "people",
+            "display": {
+              "en": "16M",
+              "id": "16 juta"
+            },
+            "source_id": "id-setneg-ppn-stimulus",
+            "as_of": "stated early Jan 2025"
+          }
+        }
+      ]
+    },
+    {
+      "type": "echo",
+      "el_id": "ppn-panic-p-echo",
+      "current_motif": {
+        "en": "A scope restriction stated inside the rule travels onward as a rise reaching every good and service, and the reach is never set against a basket.",
+        "id": "Pembatasan cakupan yang dinyatakan di dalam aturan berjalan terus sebagai kenaikan yang menjangkau semua barang dan jasa, dan jangkauan itu tidak pernah disandingkan dengan keranjang belanja."
+      },
+      "historical": {
+        "case_id": "B-04",
+        "motif": {
+          "en": "scope inflation, manufactured urgency",
+          "id": "inflasi cakupan, urgensi semu"
+        },
+        "outcome": {
+          "en": "The 12 percent VAT panic priced the whole consumption basket for weeks after PMK 131/2024 had restricted the rise to luxury goods already under the luxury sales tax; the clarification required a multi-channel communication effort.",
+          "id": "Panik PPN 12 persen menghitung seluruh keranjang konsumsi selama berminggu-minggu setelah PMK 131/2024 membatasi kenaikan pada barang mewah yang sudah dikenai pajak penjualan barang mewah; klarifikasinya menuntut upaya komunikasi lintas kanal."
+        },
+        "citations": [
+          "id-pajak-pmk131",
+          "id-antara-ppn-luxury",
+          "id-bisnis-ppn-luxury"
+        ]
+      },
+      "disclaimer_key": "echo_disclaimer"
+    }
+  ],
+  "model": "claude-opus-5[1m]"
+}

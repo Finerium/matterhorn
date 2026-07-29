@@ -1,0 +1,15 @@
+{
+  "verdict": "pass",
+  "reasons": [
+    "Hash verified: embedded candidate re-serializes to sha256 8e7ca98bcda0920e98086d5a764a713a56870631bdf220e3a87668044f0c6488, byte-identical to slots/mbg-cut/candidate.json.",
+    "Edge statuses symmetric: the candidate marks its own framing's connectives missing (mbg-cut.edge.n1-n2, mbg-cut.edge.n3-n4) and grants supported only on a verbatim quote with second-source corroboration (mbg-cut.edge.n2-n3, Kompas + Antara); the mirror chain (absorption framing: 88.15T recorded, delivered at scale, on track within the 268T ceiling) receives the identical pattern from the same evidence, one quoted endpoint supported and unsourced connectives missing.",
+    "Hidden-branch count symmetric: 6 surfaced spanning both directions, 2 mirror-friendly (mbg-cut.hidden.cut-destination, mbg-cut.hidden.ceiling-denominator, whose unperformed division would if anything weaken the squeeze reading and is performed for neither side) and 4 incidence elements each written double-edged (spending-as-income beside conditional squeeze); the same method against the mirror yields the same set.",
+    "Temperature symmetric and C1 clean: no verdict-lexicon word in user-facing copy in either language (the only 'false' is the machine field og.fallback); attribution verbs uniform (puts on the record / carries / attributed to / memuat / mencatat; 'sebut' only inside a quoted Antara headline); self_reported hedge flags land on the 1.28M-worker and 142,387-supplier figures that magnify the candidate's own incidence framing, so hedging runs against its own side.",
+    "Depth symmetric: both missing edges carry bilingual method lines; every value has source_id and as_of down to Perpres 118/2025 on comparator segments; the one valueless hidden (cut-destination) tracks genuine evidence absence, which its method line states; EN and ID narrations cover the same elements.",
+    "Burden symmetric: sparring Q1 puts the burden on the candidate's own chain and teaches its first and last steps are unsourced; Q2 interrogates both temperatures of the family for the shared no-denominator omission; Q3's note shields the opposing reading (debt interest is not a claim on MBG's remainder); prediction-tap options span both directions.",
+    "C8: zero em dashes, zero emoji.",
+    "Non-blocking notes for the fixer (not asymmetries): counts.unsourced=1 has no matching unsourced edge in the claim map (plausibly books the unlinked original per the missing-link tag; A11 consistency item), and family.skeleton says 'two temperatures, two outlets' while listing three outlets (Kompas.com, Databoks/Katadata, Antara)."
+  ],
+  "model": "claude-fable-5",
+  "token": "3fdc8c32d2bf26c555958a15d5e796b9269651195be0cc864231ab828734f0a9"
+}

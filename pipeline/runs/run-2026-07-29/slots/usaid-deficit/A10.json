@@ -1,0 +1,15 @@
+{
+  "verdict": "pass",
+  "reasons": [
+    "Integrity: candidate.json sha256 matches 399fde947624f19f3363af04bb4a08e8f6d0d9699351aabdb49037715c9a8dc3 and the candidate embedded in A10.input.json is parse-identical to it; no mirror brief supplied, so the mirror was constructed as the same KFF/Treasury/Lancet evidence with the lean flipped (aid is about 1 percent, so a cut frees little and the deficit barely moves).",
+    "Edge statuses symmetric: usaid-deficit-edge-size-cut and usaid-deficit-edge-cut-deficit are marked missing for want of the line's dollar outlay and the deficit base; the mirror's equivalent joins need the same two numbers, and the registry confirms neither is captured (en-treasury-mts-fy2025 carries net receipts $5,234,616M only; the $43.8B outlay is excluded upstream), so the mirror would receive identical statuses from the same evidence.",
+    "No edge is crossed in the mirror's favor either: the scale_check panel and narration v-5/v-6 set 26 percent and about 1 percent against receipts and stop, withholding the deficit-negligibility inference the mirror framing would want by the same standard that marks the claim's final edge missing.",
+    "Hidden-branch count symmetric: of five branches, outlay-numerator and deficit-base are direction-shared, and line-payees, served-population and obligated-residue are the method's standard mechanism/incidence/timing branches for any cut-to-deficit chain; the mirror would surface a comparable count (the same two shared plus absolute-magnitude and aggregation branches), no sharp differential.",
+    "Temperature symmetric: no loaded adjectives, scare quotes, or says/claims splits in EN or ID; the sharpest phrase (v-2, 'where this family of articles goes quiet') is an absence statement the mirror family would receive identically, and the 58-to-34 support flip (chips, v-6) is stated without editorial framing.",
+    "Depth and burden symmetric: both sides' figures get the same instrumentation (source_id and as_of on every value); the one evidenced hidden branch quotes the Lancet title in a single attributed line the mirror map would reuse; sparring interrogates the artifact's own framing's chain and the incidence question carries the mirror-side answer (taxpayers via a narrower deficit) as a live option; prediction-tap options span omissions on both sides.",
+    "C1 clean in both languages (no verdict words; 'salah' absent entirely, so no lexicon fault to rephrase) and C8 clean (no em dashes, no en dashes, no emoji in user-facing copy).",
+    "Non-blocking observations for the record: counts.unsourced=4 has no corresponding unsourced elements in the panels (bookkeeping for the schema/QA lane, not a treatment differential); and the orchestrator message stated lean 'opp' while the artifact records 'gov' with no on-disk registry entry to arbitrate — the audit is direction-agnostic, so the symmetry verdict is unaffected."
+  ],
+  "model": "claude-fable-5",
+  "token": "56bf04d98c867624ba079351fd8d41ec93aba6a805179318d4b33f7c0b0cb574"
+}

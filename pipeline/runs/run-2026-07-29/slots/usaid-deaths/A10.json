@@ -1,0 +1,14 @@
+{
+  "verdict": "pass",
+  "reasons": [
+    "Integrity verified: staged candidate.json sha256 1686c6ca4b32b2d0476ec43ecf9c78fbe6e8b69ff85ec6ce0d25c44c4d713c12 matches the expected hash, and the embedded candidate in A10.input.json is structurally identical to those bytes.",
+    "Edge statuses are symmetric: the artifact marks its own framing's three mechanism steps (e1, e2, e3) missing with identical registry-based wording, carries the sole supported edge (e4) only in the source's published form (modelled projection, June 2025, interval beside the central figure), and equally declines to assert the mirror's unsourced substitution mechanism (h4 names it as the unstated counterfactual without sizing it either way).",
+    "Hidden-branch census shows no directional skew: 4 of 8 branches (h4 substitution, h6 co-financing attribution, h7 funding-path conditionality, h8 revision path) cut against the candidate's own framing, and the material a gov-lean mirror would surface (91.8M prevented, 4.5M under-five, immediate stop-work and out-of-pocket harms) already stands in the same panels (sc-chip-prevented, sc-chip-under-five, incidence lanes).",
+    "Depth is applied identically in both directions: the pro-USAID backward figure (91.8M prevented) gets the same attribution scrutiny as the forward 14.05M projection (h6 and the co-financiers beyond cell: 'the backward attribution and the forward projection rest on one division of credit'), both flagged modeled/estimate with as_of dates in EN and ID; the scale check declines both partisan denominators, using the projection's own published high end (19.66M) rather than total population (explicitly absent per the denominator sparring note).",
+    "Language temperature is even: no verdict-lexicon hits in English or Indonesian (the only 'true' in the file is the machine boolean og.fallback, not user-facing copy; 'salah' does not appear at all, so no salah-satu lint fault to report), no em dashes, no emoji, no loaded verbs or scare quotes; the sharpest formulations target the candidate's own framing, and the family skeleton names the failure mode as symmetric ('the same certainty inflation from the other direction').",
+    "Burden of proof is not one-sided: all three sparring questions direct scrutiny at the claim's own chain, and the prediction tap's five options span both harm parties and the mirror's substitution/conditionality side.",
+    "Note for the record: the task message stated the candidate's lean as gov, but the hash-verified artifact carries lean 'opp', which matches the claim's actual framing; the audit flipped the artifact's actual framing to construct the mirror, so the discrepancy does not affect the verdict."
+  ],
+  "model": "claude-fable-5",
+  "token": "a3c2761436529706e1f04fe738c2fbe546bad18a6c2fcf7cc2a554d83a3fbbf3"
+}

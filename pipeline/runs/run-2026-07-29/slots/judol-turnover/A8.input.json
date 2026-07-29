@@ -1,0 +1,175 @@
+{
+  "narrative_id": "judol-turnover",
+  "cluster": {
+    "narrative_id": "judol-turnover",
+    "family_skeleton": "a fall in one measure of a market read as the size of the fall in the market, with the measure that moved differently left out",
+    "members": [
+      {
+        "id": "judol-turnover-m1",
+        "lang": "id",
+        "headline": "PPATK: Perputaran dana judi online Rp40,3 triliun pada triwulan I-2026",
+        "outlet": "Antara News",
+        "date": "2026-07-23",
+        "url": "https://www.antaranews.com/berita/5663168",
+        "note": "Verbatim title from content/sources.json (id-antara-judol-q1-2026). Quoted to PPATK head Ivan Yustiavandana, with total deposits Rp10.59T in the same quarter."
+      },
+      {
+        "id": "judol-turnover-m2",
+        "lang": "id",
+        "headline": "PPATK: Perputaran Dana Judi Online Turun 20%, Tersisa Rp286,84 T",
+        "outlet": "CNBC Indonesia",
+        "date": "2026-07-23",
+        "url": "https://www.cnbcindonesia.com/news/20260723082823-4-753122/ppatk-perputaran-dana-judi-online-turun-20-tersisa-rp28684-t",
+        "note": "Verbatim title from content/sources.json (id-cnbc-judol-2025). The turnover series: Rp359.81T in 2024 to Rp286.84T in 2025."
+      },
+      {
+        "id": "judol-turnover-m3",
+        "lang": "id",
+        "headline": "PPATK Catat Ada Penurunan Perputaran Uang Judol di Era Prabowo",
+        "outlet": "Kompas.com",
+        "date": "2026-07-23",
+        "url": "https://nasional.kompas.com/read/2026/07/23/22413221/ppatk-catat-ada-penurunan-perputaran-uang-judol-di-era-prabowo",
+        "note": "Verbatim title from content/sources.json (id-kompas-judol-deposits). Carries the net deposit series, Rp51.3T to Rp36.01T, which is the denominator the turnover headline is missing."
+      }
+    ]
+  },
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "jt-s1-crackdown",
+        "label": {
+          "en": "The Prabowo-era push against online gambling",
+          "id": "Gempuran terhadap judi online di era Prabowo"
+        }
+      },
+      {
+        "el_id": "jt-s2-turnover-fall",
+        "label": {
+          "en": "PPATK's recorded turnover of online gambling funds falls year on year",
+          "id": "Perputaran dana judi online yang dicatat PPATK turun dari tahun ke tahun"
+        }
+      },
+      {
+        "el_id": "jt-s3-market-read",
+        "label": {
+          "en": "The smaller turnover figure is read as the market itself shrinking by that much",
+          "id": "Angka perputaran yang mengecil dibaca sebagai pasar judi online yang menyusut sebesar itu pula"
+        }
+      },
+      {
+        "el_id": "jt-s4-outcome",
+        "label": {
+          "en": "Online gambling in Indonesia recedes under the current push",
+          "id": "Judi online di Indonesia surut di bawah gempuran yang berjalan"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "jt-e1-crackdown-to-fall",
+        "from": "jt-s1-crackdown",
+        "to": "jt-s2-turnover-fall",
+        "quote": "PPATK Catat Ada Penurunan Perputaran Uang Judol di Era Prabowo"
+      },
+      {
+        "el_id": "jt-e2-fall-to-read",
+        "from": "jt-s2-turnover-fall",
+        "to": "jt-s3-market-read",
+        "quote": "PPATK: Perputaran Dana Judi Online Turun 20%, Tersisa Rp286,84 T"
+      },
+      {
+        "el_id": "jt-e3-read-to-outcome",
+        "from": "jt-s3-market-read",
+        "to": "jt-s4-outcome",
+        "quote": "no article in this family states the step from the turnover figure being read as the market shrinking to the outcome that online gambling recedes under the era's push"
+      }
+    ]
+  },
+  "case_library": {
+    "cases": [
+      {
+        "id": "B-01",
+        "title": {
+          "en": "Casualty-inflation cascade",
+          "id": "Kaskade inflasi korban"
+        },
+        "period": "May 2019",
+        "motif": {
+          "en": "moral shock, fabricated count",
+          "id": "kejutan moral, angka rekaan"
+        },
+        "documented_outcome": {
+          "en": "A fabricated \"60 shot dead\" claim spread faster than any correction and amplified the post-election riots in Jakarta. The final human-rights investigation documented 10 people unlawfully killed, four of them minors.",
+          "id": "Klaim rekaan \"60 orang tewas ditembak\" menyebar lebih cepat dari koreksi mana pun dan memperbesar kerusuhan pasca pemilu di Jakarta. Investigasi hak asasi manusia final mendokumentasikan 10 orang terbunuh secara tidak sah, empat di antaranya anak-anak."
+        },
+        "citations": [
+          "id-aljazeera-2019-riots",
+          "id-tempo-cekfakta-60",
+          "id-liputan6-amnesty-2019"
+        ]
+      },
+      {
+        "id": "B-02",
+        "title": {
+          "en": "Fabricated-provision cascade",
+          "id": "Kaskade pasal rekaan"
+        },
+        "period": "Oct 2020",
+        "motif": {
+          "en": "scope inflation, fabricated provisions",
+          "id": "inflasi cakupan, pasal rekaan"
+        },
+        "documented_outcome": {
+          "en": "Invented provisions of a law whose final text was not yet public, from a minimum wage abolished to severance eliminated, fueled nationwide demonstrations. The communications ministry catalogued \"12 hoaks\" about the bill in a single list.",
+          "id": "Pasal-pasal rekaan atas undang-undang yang naskah finalnya belum terbit, dari upah minimum dihapus sampai pesangon ditiadakan, menyulut demonstrasi nasional. Kementerian komunikasi mengatalogkan \"12 hoaks\" tentang RUU itu dalam satu daftar."
+        },
+        "citations": [
+          "id-suara-kominfo-12hoax",
+          "id-kompas-omnibus-8hoax"
+        ]
+      },
+      {
+        "id": "B-03",
+        "title": {
+          "en": "Moral-shock acceleration",
+          "id": "Akselerasi kejutan moral"
+        },
+        "period": "Aug 2025",
+        "motif": {
+          "en": "moral shock, acceleration",
+          "id": "kejutan moral, akselerasi"
+        },
+        "documented_outcome": {
+          "en": "A viral death video mobilized nationwide protests within hours. In the escalations that followed, a regional parliament building fire in Makassar killed three people.",
+          "id": "Video kematian yang viral memobilisasi unjuk rasa nasional dalam hitungan jam. Dalam eskalasi yang menyusul, kebakaran gedung DPRD di Makassar menewaskan tiga orang."
+        },
+        "citations": [
+          "id-detik-timeline-aug2025",
+          "id-jakartapost-makassar-fire",
+          "id-jakartaglobe-protest-toll"
+        ]
+      },
+      {
+        "id": "B-04",
+        "title": {
+          "en": "Scope-inflation panic",
+          "id": "Panik inflasi cakupan"
+        },
+        "period": "Jan 2025",
+        "motif": {
+          "en": "scope inflation, manufactured urgency",
+          "id": "inflasi cakupan, urgensi semu"
+        },
+        "documented_outcome": {
+          "en": "The 12 percent VAT panic priced the whole consumption basket for weeks after PMK 131/2024 had restricted the rise to luxury goods already under the luxury sales tax; the clarification required a multi-channel communication effort.",
+          "id": "Panik PPN 12 persen menghitung seluruh keranjang konsumsi selama berminggu-minggu setelah PMK 131/2024 membatasi kenaikan pada barang mewah yang sudah dikenai pajak penjualan barang mewah; klarifikasinya menuntut upaya komunikasi lintas kanal."
+        },
+        "citations": [
+          "id-pajak-pmk131",
+          "id-antara-ppn-luxury",
+          "id-bisnis-ppn-luxury"
+        ]
+      }
+    ]
+  }
+}

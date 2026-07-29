@@ -1,0 +1,736 @@
+{
+  "id": "judol-turnover",
+  "pack": "id",
+  "lean": "gov",
+  "status": "published",
+  "headline": {
+    "en": "PPATK: Online Gambling Turnover Rp40.3 Trillion in Q1 2026",
+    "id": "PPATK: Perputaran Dana Judi Online Rp40,3 Triliun pada Triwulan I-2026"
+  },
+  "original": {
+    "text": "PPATK: Perputaran dana judi online Rp40,3 triliun pada triwulan I-2026",
+    "lang": "id"
+  },
+  "outlet": "Antara News",
+  "published_date": "2026-07-23",
+  "url": "https://www.antaranews.com/berita/5663168",
+  "og": {
+    "image_path": "/assets/og/judol-turnover.jpg",
+    "fetched_at": "2026-07-28",
+    "attribution": "Link preview image from Antara News, shown with the outlet name and an outbound link.",
+    "fallback": false
+  },
+  "tags": [
+    "no-denominator",
+    "competing-counts"
+  ],
+  "counts": {
+    "missing": 1,
+    "unsourced": 7,
+    "disputed": 0,
+    "supported": 0,
+    "hidden": 7,
+    "conflicts": 4
+  },
+  "provenance": {
+    "analyzed_by": "claude-fable-5",
+    "narrated_by": "claude-opus-5[1m]",
+    "source_count": 4,
+    "computed_at": "2026-07-28",
+    "run_id": "run-2026-07-29"
+  },
+  "family": {
+    "skeleton": "a fall in one measure of a market read as the size of the fall in the market, with the measure that moved differently left out",
+    "members": [
+      {
+        "outlet": "Antara News",
+        "headline": "PPATK: Perputaran dana judi online Rp40,3 triliun pada triwulan I-2026",
+        "url": "https://www.antaranews.com/berita/5663168",
+        "date": "2026-07-23"
+      },
+      {
+        "outlet": "CNBC Indonesia",
+        "headline": "PPATK: Perputaran Dana Judi Online Turun 20%, Tersisa Rp286,84 T",
+        "url": "https://www.cnbcindonesia.com/news/20260723082823-4-753122/ppatk-perputaran-dana-judi-online-turun-20-tersisa-rp28684-t",
+        "date": "2026-07-23"
+      },
+      {
+        "outlet": "Kompas.com",
+        "headline": "PPATK Catat Ada Penurunan Perputaran Uang Judol di Era Prabowo",
+        "url": "https://nasional.kompas.com/read/2026/07/23/22413221/ppatk-catat-ada-penurunan-perputaran-uang-judol-di-era-prabowo",
+        "date": "2026-07-23"
+      }
+    ]
+  },
+  "scaffold_default": "S1",
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "The recorded figure falls while sites, accounts and payment channels are being closed. For that fall to mean the activity itself fell, which step has to hold?",
+          "id": "Situs, rekening, dan kanal pembayaran ditutup, lalu angka tercatat turun. Agar penurunan angka itu berarti kegiatannya sendiri yang menyusut, syarat apa yang harus terpenuhi?"
+        },
+        "options": [
+          {
+            "en": "The two annual totals have to come from the same release.",
+            "id": "Kedua total tahunan itu harus berasal dari rilis yang sama."
+          },
+          {
+            "en": "Money leaving the blocked rails has to stop moving, rather than run through channels the recording does not reach.",
+            "id": "Uang yang keluar dari jalur yang diblokir harus berhenti berpindah, bukan pindah ke kanal yang luput dari pencatatan."
+          },
+          {
+            "en": "The fall has to be reported inside the current period.",
+            "id": "Penurunan itu harus dilaporkan di dalam periode yang sedang berjalan."
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The claim map's first join, from the push to the recorded fall, and the hidden card on payment channels outside the blocked rails both sit on this. The other two options are things the artifact does supply: the annual totals do come from one release, and the era framing is right there in the headline. Neither of them follows the money once a rail closes.",
+          "id": "Sisi pertama pada peta klaim, dari gempuran menuju angka yang turun, dan kartu tersembunyi tentang kanal pembayaran di luar jalur yang diblokir sama-sama bertumpu pada syarat ini. Dua pilihan lain memang disediakan artefaknya: kedua total tahunan terbit dalam satu rilis, dan bingkai eranya sudah ada di judul. Keduanya tidak mengikuti ke mana uang pergi setelah satu jalur ditutup."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "Rp286.84T is the recorded turnover for 2025. Which figure is it being read against?",
+          "id": "Rp286,84 triliun adalah perputaran tercatat sepanjang 2025. Angka itu dibaca terhadap angka yang mana?"
+        },
+        "options": [
+          {
+            "en": "Rp51.3T, the net deposits recorded for 2024.",
+            "id": "Rp51,3 triliun, setoran bersih yang tercatat sepanjang 2024."
+          },
+          {
+            "en": "Rp359.81T, the recorded turnover for 2024, from the same series.",
+            "id": "Rp359,81 triliun, perputaran tercatat sepanjang 2024, dari deret yang sama."
+          },
+          {
+            "en": "Rp40.3T, the recorded turnover for the first quarter of 2026.",
+            "id": "Rp40,3 triliun, perputaran tercatat pada triwulan I-2026."
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The scale check sets both figures in one series: recorded turnover for 2024 as the denominator, recorded turnover for 2025 as the figure read against it. The other two are real figures from the same story pulling in other directions. Rp51.3T measures money entering accounts rather than money moving, and Rp40.3T counts three months against twelve.",
+          "id": "Panel skala menaruh kedua angka itu dalam satu deret: perputaran tercatat 2024 sebagai penyebut, perputaran tercatat 2025 sebagai angka yang dibaca terhadapnya. Dua angka lain sama-sama nyata dalam cerita ini dan menarik ke arah lain. Rp51,3 triliun mengukur uang yang masuk ke rekening, bukan uang yang berpindah, dan Rp40,3 triliun menghitung tiga bulan berbanding dua belas."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "The rupiah totals size this market in money. Which count of people does the artifact actually carry?",
+          "id": "Total rupiah mengukur pasar ini dalam satuan uang. Hitungan orang mana yang sungguh dibawa artefak ini?"
+        },
+        "options": [
+          {
+            "en": "12.3 million depositors recorded in the 2025 series.",
+            "id": "12,3 juta penyetor dana yang tercatat dalam deret 2025."
+          },
+          {
+            "en": "422.1 million players active across 2025.",
+            "id": "422,1 juta pemain yang aktif sepanjang 2025."
+          },
+          {
+            "en": "No count of people appears anywhere in the artifact.",
+            "id": "Tidak ada hitungan orang di mana pun dalam artefak ini."
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The scale check carries 12.3 million depositors from the 2025 series. The 422.1 million figure is real, and it counts transactions behind that year's turnover rather than heads. Depositors are the people whose money entered; the hidden card asks after active players still wagering, and that is the count the articles never reach for.",
+          "id": "Keping pada panel skala memuat 12,3 juta penyetor dana dari deret 2025, berdampingan dengan 422,1 juta yang menghitung transaksi sepanjang tahun itu, bukan orang. Penyetor adalah orang yang uangnya masuk; kartu tersembunyi menanyakan pemain aktif yang masih bertaruh, dan hitungan itulah yang tidak dijangkau artikelnya."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before the panels open: in a story built on one falling rupiah total, which side goes missing first?",
+      "id": "Sebelum panelnya dibuka: dalam cerita yang bertumpu pada satu total rupiah yang menurun, sisi mana yang paling dulu hilang?"
+    },
+    "options": [
+      {
+        "en": "The second series in the same release, deposits, and how its pace compares.",
+        "id": "Deret kedua dalam rilis yang sama, yaitu setoran dana, beserta perbandingan lajunya."
+      },
+      {
+        "en": "The channels that carry the money once the blocked rails close.",
+        "id": "Kanal yang menampung uang setelah jalur pembayaran ditutup."
+      },
+      {
+        "en": "The count of people still wagering, as opposed to the count of rupiah.",
+        "id": "Jumlah orang yang masih bertaruh, bukan jumlah rupiahnya."
+      },
+      {
+        "en": "Where the same series stood before the push began.",
+        "id": "Posisi deret yang sama sebelum gempuran dimulai."
+      }
+    ]
+  },
+  "panels": [
+    {
+      "type": "claim_map",
+      "el_id": "jt-panel-claim-map",
+      "spine": [
+        {
+          "el_id": "jt-s1-crackdown",
+          "label": {
+            "en": "The Prabowo-era push against online gambling",
+            "id": "Gempuran terhadap judi online di era Prabowo"
+          }
+        },
+        {
+          "el_id": "jt-s2-turnover-fall",
+          "label": {
+            "en": "PPATK's recorded turnover of online gambling funds falls year on year",
+            "id": "Perputaran dana judi online yang dicatat PPATK turun dari tahun ke tahun"
+          },
+          "value": {
+            "amount": 286.84,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp286.84T",
+              "id": "Rp286,84 triliun"
+            },
+            "source_id": "id-ppatk-capaian-2025",
+            "as_of": "2025 full year"
+          }
+        },
+        {
+          "el_id": "jt-s3-market-read",
+          "label": {
+            "en": "The smaller turnover figure is read as the market itself shrinking by that much",
+            "id": "Angka perputaran yang mengecil dibaca sebagai pasar judi online yang menyusut sebesar itu pula"
+          }
+        },
+        {
+          "el_id": "jt-s4-outcome",
+          "label": {
+            "en": "Online gambling in Indonesia recedes under the current push",
+            "id": "Judi online di Indonesia surut di bawah gempuran yang berjalan"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "el_id": "jt-e1-crackdown-to-fall",
+          "from": "jt-s1-crackdown",
+          "to": "jt-s2-turnover-fall",
+          "status": "unsourced",
+          "ev": {
+            "quote": "PPATK Catat Ada Penurunan Perputaran Uang Judol di Era Prabowo",
+            "source_id": "id-kompas-judol-deposits",
+            "why": {
+              "en": "The headline places the recorded fall inside the current period. The registry sources carry the two annual totals and the period they sit in; none of them states the path from the enforcement push to the recorded figure, so the step from one to the other rests on the order of the dates.",
+              "id": "Judul menempatkan penurunan tercatat di dalam periode yang berjalan. Sumber dalam daftar memuat dua total tahunan dan periode tempat total itu berada; tidak ada yang menyebut jalur dari gempuran penegakan menuju angka tercatat, sehingga langkah dari yang satu ke yang lain bertumpu pada urutan tanggal."
+            }
+          }
+        },
+        {
+          "el_id": "jt-e2-fall-to-read",
+          "from": "jt-s2-turnover-fall",
+          "to": "jt-s3-market-read",
+          "status": "unsourced",
+          "ev": {
+            "quote": "PPATK: Perputaran Dana Judi Online Turun 20%, Tersisa Rp286,84 T",
+            "source_id": "id-cnbc-judol-2025",
+            "why": {
+              "en": "The headline's word for what is left turns a recorded total into the size of the market still standing. The registry sources carry that total and, in the same release, a second total of money entering the accounts; neither states that a smaller recorded total means a market smaller by the same share.",
+              "id": "Kata tersisa pada judul mengubah total tercatat menjadi ukuran pasar yang masih berdiri. Sumber dalam daftar memuat total itu dan, dalam rilis yang sama, total kedua berupa uang yang masuk ke rekening; tidak ada yang menyatakan bahwa total tercatat yang mengecil berarti pasar yang mengecil dengan besaran yang sama."
+            }
+          }
+        },
+        {
+          "el_id": "jt-e3-read-to-outcome",
+          "from": "jt-s3-market-read",
+          "to": "jt-s4-outcome",
+          "status": "missing",
+          "ev": {
+            "quote": "no article in this family states the step from the turnover figure being read as the market shrinking to the outcome that online gambling recedes under the era's push",
+            "why": {
+              "en": "The outcome step needs the recorded rupiah total to stand for the practice itself: people wagering, accounts active, money reaching operators. The registry carries the rupiah series and a count of depositors for one year, and no source in it follows the practice from a falling total to a receding activity.",
+              "id": "Langkah hasil memerlukan total rupiah tercatat untuk mewakili praktiknya sendiri: orang yang bertaruh, rekening yang aktif, uang yang sampai ke operator. Daftar sumber memuat deret rupiah dan jumlah penyetor untuk satu tahun, dan tidak ada sumber di dalamnya yang mengikuti praktik itu dari total yang menurun menuju kegiatan yang surut."
+            }
+          }
+        }
+      ],
+      "hidden": [
+        {
+          "el_id": "jt-h1-two-series-gap",
+          "label": {
+            "en": "The gap in pace between the turnover series and the deposit series",
+            "id": "Beda laju antara deret perputaran dan deret setoran dana"
+          },
+          "why_hidden": {
+            "en": "The market-read step takes the fall in recorded turnover as the market shrinking by the same amount. Turnover counts the same money each time it is wagered, deposits count money coming in. Two members of this family carry deposit figures beside the turnover figures, yet no article joins the two series or states what a different pace of fall in each would do to the market read. The ratio between them, how many times a deposited rupiah is wagered again, is the quantity the read rests on, and no article follows it.",
+            "id": "Langkah pembacaan pasar menyamakan turunnya perputaran tercatat dengan menyusutnya pasar sebesar itu pula. Perputaran menghitung uang yang sama setiap kali dipertaruhkan, sedangkan setoran menghitung uang yang masuk. Dua artikel dalam keluarga ini memuat angka setoran di samping angka perputaran, tetapi tidak ada artikel yang mempertemukan kedua deret itu atau menyebut apa artinya bila keduanya turun dengan laju yang tidak sama. Nisbah antara keduanya, berapa kali satu rupiah setoran diputar kembali, adalah besaran yang menopang pembacaan itu dan tidak diikuti oleh artikel mana pun."
+          },
+          "ev": {
+            "quote": "PPATK Catat Ada Penurunan Perputaran Uang Judol di Era Prabowo",
+            "source_id": "id-kompas-judol-deposits"
+          }
+        },
+        {
+          "el_id": "jt-h2-recording-coverage",
+          "label": {
+            "en": "The share of the market PPATK's recording instruments can see",
+            "id": "Porsi pasar yang terjangkau alat pencatat PPATK"
+          },
+          "why_hidden": {
+            "en": "The edge from the push to the fall states that the push lowers recorded turnover. A push that blocks accounts and payment channels also changes where transactions run. The articles treat the recorded figure as the market itself, and none follows whether the recording base, the reports from banks and payment providers inside the monitored system, stayed constant across the two years being compared.",
+            "id": "Sisi dari gempuran menuju penurunan menyatakan bahwa gempuran menurunkan perputaran yang tercatat. Gempuran yang memblokir rekening dan kanal pembayaran juga mengubah tempat transaksi berjalan. Artikel-artikel memperlakukan angka tercatat sebagai pasar itu sendiri, dan tidak satu pun menelusuri apakah dasar pencatatan, yaitu laporan bank dan penyedia jasa pembayaran di dalam sistem yang terpantau, tetap sama pada dua tahun yang dibandingkan."
+          }
+        },
+        {
+          "el_id": "jt-h3-displaced-channels",
+          "label": {
+            "en": "Payment channels outside the blocked rails, from crypto assets to offshore gateways and informal top-up sellers",
+            "id": "Kanal pembayaran di luar jalur yang diblokir, dari aset kripto hingga gerbang luar negeri dan penjual isi ulang informal"
+          },
+          "why_hidden": {
+            "en": "The stated push works by closing sites and accounts. Money that stops moving through closed rails does not, by itself, stop moving. The articles stop at the smaller recorded figure and never name the channels that would carry the flow the blocked rails lose.",
+            "id": "Gempuran yang dinyatakan bekerja dengan menutup situs dan rekening. Uang yang berhenti lewat jalur yang ditutup tidak dengan sendirinya berhenti bergerak. Artikel berhenti pada angka tercatat yang mengecil dan tidak menyebut kanal yang menampung aliran yang hilang dari jalur terblokir."
+          }
+        },
+        {
+          "el_id": "jt-h4-prior-trajectory",
+          "label": {
+            "en": "The path of the same turnover series in the years before the push",
+            "id": "Arah deret perputaran yang sama pada tahun-tahun sebelum gempuran"
+          },
+          "why_hidden": {
+            "en": "The era framing in the headlines ties the fall to the current push. That tie needs the path of the series before the push as its baseline. The articles compare two adjacent years and never state where the same series stood, or how fast it was moving, before the period they connect to the fall.",
+            "id": "Bingkai era pada judul mengaitkan penurunan dengan gempuran yang berjalan. Kaitan itu memerlukan arah deret sebelum gempuran sebagai pembanding. Artikel membandingkan dua tahun yang berurutan dan tidak menyebut posisi maupun laju deret yang sama pada masa sebelum periode yang dikaitkan dengan penurunan itu."
+          }
+        },
+        {
+          "el_id": "jt-h5-quarter-baseline",
+          "label": {
+            "en": "The matching quarter a year earlier for the new quarterly figure",
+            "id": "Triwulan pembanding setahun sebelumnya bagi angka triwulanan baru"
+          },
+          "why_hidden": {
+            "en": "One member carries a quarterly turnover figure inside a story about a year-on-year fall. A quarterly figure can only continue or break that fall against the matching quarter of the year before, and no article in the family carries that matching quarter.",
+            "id": "Satu artikel memuat angka perputaran triwulanan di dalam cerita tentang penurunan tahunan. Angka triwulanan hanya dapat meneruskan atau memutus penurunan itu terhadap triwulan yang sepadan pada tahun sebelumnya, dan tidak ada artikel dalam keluarga ini yang memuat triwulan pembanding tersebut."
+          }
+        },
+        {
+          "el_id": "jt-h6-player-count",
+          "label": {
+            "en": "The count of active players behind the rupiah figures",
+            "id": "Jumlah pemain aktif di balik angka rupiah"
+          },
+          "why_hidden": {
+            "en": "The outcome step states that online gambling recedes. A market can show smaller recorded turnover while its people stay, through smaller wagers per person or wagers moving off the recorded rails. The articles size the market only in rupiah, never in people, so the step from a smaller figure to a receding practice skips the series that counts participants.",
+            "id": "Langkah hasil menyatakan judi online surut. Pasar dapat menunjukkan perputaran tercatat yang mengecil sementara orang-orangnya tetap, entah karena taruhan per orang mengecil atau karena taruhan berpindah dari jalur yang terekam. Artikel mengukur pasar hanya dalam rupiah dan tidak dalam orang, sehingga langkah dari angka yang mengecil menuju praktik yang surut melewatkan deret yang menghitung peserta."
+          },
+          "value": {
+            "amount": 12300000,
+            "unit": "people",
+            "display": {
+              "en": "12.3 million",
+              "id": "12,3 juta"
+            },
+            "source_id": "id-ppatk-capaian-2025",
+            "as_of": "2025 series, published 28 Jan 2026"
+          },
+          "ev": {
+            "quote": "Catatan Capaian Strategis PPATK Tahun 2025",
+            "source_id": "id-ppatk-capaian-2025"
+          }
+        },
+        {
+          "el_id": "jt-h7-operator-outflow",
+          "label": {
+            "en": "The cross-border outflow carrying the operators' take",
+            "id": "Aliran dana lintas negara yang membawa bagian operator"
+          },
+          "why_hidden": {
+            "en": "The stated outcome, gambling recedes, reaches the question of whether the money drawn from players and moved onward fell as well. The family carries the recorded domestic series and stops before the destination side, where the gap between what players put in and what they take out goes.",
+            "id": "Hasil yang dinyatakan, judi online surut, menjangkau pertanyaan apakah uang yang ditarik dari pemain dan diteruskan ke luar ikut turun. Keluarga artikel ini memuat deret dalam negeri yang tercatat dan berhenti sebelum sisi tujuan, tempat selisih antara uang yang disetor pemain dan uang yang mereka tarik berpindah."
+          }
+        }
+      ]
+    },
+    {
+      "type": "scale_check",
+      "el_id": "jt-panel-scale-check",
+      "denominator": {
+        "label": {
+          "en": "Recorded turnover of online gambling funds in 2024, the year the fall is measured from",
+          "id": "Perputaran dana judi online yang tercatat pada 2024, tahun pangkal pengukuran penurunan"
+        },
+        "value": {
+          "amount": 359.81,
+          "unit": "IDR_T",
+          "display": {
+            "en": "Rp359.81T",
+            "id": "Rp359,81 triliun"
+          },
+          "source_id": "id-ppatk-capaian-2025",
+          "as_of": "2024 full year"
+        }
+      },
+      "segments": [
+        {
+          "el_id": "jt-sc-turnover-2025",
+          "label": {
+            "en": "Recorded turnover in 2025, the figure read as the size of the market",
+            "id": "Perputaran tercatat pada 2025, angka yang dibaca sebagai ukuran pasar"
+          },
+          "value": {
+            "amount": 286.84,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp286.84T",
+              "id": "Rp286,84 triliun"
+            },
+            "source_id": "id-ppatk-capaian-2025",
+            "as_of": "2025 full year"
+          }
+        }
+      ],
+      "takeaway": {
+        "en": "Both figures come from one series, recorded turnover, so the 2024 total is the denominator the 2025 total is being read against. The chips beside them count other quantities, and each carries the period it belongs to.",
+        "id": "Kedua angka berasal dari satu deret, yaitu perputaran tercatat, sehingga total 2024 menjadi penyebut bagi pembacaan total 2025. Keping di sampingnya menghitung besaran lain, dan setiap keping membawa periodenya sendiri."
+      },
+      "context_chips": [
+        {
+          "el_id": "jt-sc-chip-turnover-q1-2026",
+          "label": {
+            "en": "Recorded turnover in the first quarter of 2026, three months against twelve",
+            "id": "Perputaran tercatat pada triwulan I-2026, tiga bulan berbanding dua belas"
+          },
+          "value": {
+            "amount": 40.3,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp40.3T",
+              "id": "Rp40,3 triliun"
+            },
+            "source_id": "id-antara-judol-q1-2026",
+            "as_of": "Q1 2026"
+          }
+        },
+        {
+          "el_id": "jt-sc-chip-deposits-q1-2026",
+          "label": {
+            "en": "Total deposits recorded in that same quarter",
+            "id": "Total setoran dana yang tercatat pada triwulan yang sama"
+          },
+          "value": {
+            "amount": 10.59,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp10.59T",
+              "id": "Rp10,59 triliun"
+            },
+            "source_id": "id-antara-judol-q1-2026",
+            "as_of": "Q1 2026"
+          }
+        },
+        {
+          "el_id": "jt-sc-chip-transactions-2025",
+          "label": {
+            "en": "Transactions behind the 2025 turnover total",
+            "id": "Transaksi di balik total perputaran 2025"
+          },
+          "value": {
+            "amount": 422100000,
+            "unit": "count",
+            "display": {
+              "en": "422.1 million",
+              "id": "422,1 juta"
+            },
+            "source_id": "id-ppatk-capaian-2025",
+            "as_of": "2025 full year"
+          }
+        },
+        {
+          "el_id": "jt-sc-chip-depositors-2025",
+          "label": {
+            "en": "Depositors recorded in the 2025 series",
+            "id": "Penyetor dana yang tercatat dalam deret 2025"
+          },
+          "value": {
+            "amount": 12300000,
+            "unit": "people",
+            "display": {
+              "en": "12.3 million",
+              "id": "12,3 juta"
+            },
+            "source_id": "id-ppatk-capaian-2025",
+            "as_of": "2025 series, published 28 Jan 2026"
+          }
+        }
+      ]
+    },
+    {
+      "type": "dueling",
+      "el_id": "jt-panel-dueling",
+      "counts": [
+        {
+          "el_id": "jt-duel-turnover-2024",
+          "who": "PPATK, perputaran",
+          "method": {
+            "en": "Turnover: the recorded value of funds moving through the monitored accounts, where the same money enters the total again each time it is wagered or moved.",
+            "id": "Perputaran: nilai dana yang tercatat bergerak melalui rekening yang terpantau, dengan uang yang sama masuk lagi ke dalam total setiap kali dipertaruhkan atau dipindahkan."
+          },
+          "period": "2024 full year",
+          "value": {
+            "amount": 359.81,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp359.81T",
+              "id": "Rp359,81 triliun"
+            },
+            "source_id": "id-ppatk-capaian-2025",
+            "as_of": "2024 full year"
+          }
+        },
+        {
+          "el_id": "jt-duel-turnover-2025",
+          "who": "PPATK, perputaran",
+          "method": {
+            "en": "Turnover: the recorded value of funds moving through the monitored accounts, where the same money enters the total again each time it is wagered or moved.",
+            "id": "Perputaran: nilai dana yang tercatat bergerak melalui rekening yang terpantau, dengan uang yang sama masuk lagi ke dalam total setiap kali dipertaruhkan atau dipindahkan."
+          },
+          "period": "2025 full year",
+          "value": {
+            "amount": 286.84,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp286.84T",
+              "id": "Rp286,84 triliun"
+            },
+            "source_id": "id-ppatk-capaian-2025",
+            "as_of": "2025 full year"
+          }
+        },
+        {
+          "el_id": "jt-duel-deposits-2024",
+          "who": "PPATK, setoran bersih",
+          "method": {
+            "en": "Net deposits: the recorded value of money entering the gambling accounts across the year, netted, so a rupiah sits in the total once, for the deposit that brought it in.",
+            "id": "Setoran bersih: nilai uang yang tercatat masuk ke rekening judi sepanjang tahun, secara bersih, sehingga satu rupiah berada di dalam total satu kali, untuk setoran yang membawanya masuk."
+          },
+          "period": "2024 full year",
+          "value": {
+            "amount": 51.3,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp51.3T",
+              "id": "Rp51,3 triliun"
+            },
+            "source_id": "id-ppatk-capaian-2025",
+            "as_of": "2024 full year"
+          }
+        },
+        {
+          "el_id": "jt-duel-deposits-2025",
+          "who": "PPATK, setoran bersih",
+          "method": {
+            "en": "Net deposits: the recorded value of money entering the gambling accounts across the year, netted, so a rupiah sits in the total once, for the deposit that brought it in.",
+            "id": "Setoran bersih: nilai uang yang tercatat masuk ke rekening judi sepanjang tahun, secara bersih, sehingga satu rupiah berada di dalam total satu kali, untuk setoran yang membawanya masuk."
+          },
+          "period": "2025 full year",
+          "value": {
+            "amount": 36.01,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp36.01T",
+              "id": "Rp36,01 triliun"
+            },
+            "source_id": "id-ppatk-capaian-2025",
+            "as_of": "2025 full year"
+          }
+        }
+      ],
+      "rule_line": {
+        "en": "Two measures of one activity, published in the same release: money counted again each time it moves, and money counted as it comes in. Each series carries its own prior year, and the two totals neither add together nor stand in for each other.",
+        "id": "Dua ukuran untuk satu kegiatan, terbit dalam rilis yang sama: uang yang dihitung lagi setiap kali berpindah, dan uang yang dihitung saat masuk. Masing-masing deret membawa tahun sebelumnya sendiri, dan kedua total itu tidak dijumlahkan maupun saling menggantikan."
+      }
+    }
+  ],
+  "echo": null,
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Four steps carry this story: a push against online gambling, a recorded turnover figure that falls, that figure read as the market itself, and gambling receding.",
+          "els": [
+            "jt-panel-claim-map",
+            "jt-s1-crackdown",
+            "jt-s2-turnover-fall",
+            "jt-s3-market-read",
+            "jt-s4-outcome"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "No source in the registry states the first two joins, and the last one, from a smaller figure to a receding practice, has no article behind it at all.",
+          "els": [
+            "jt-e1-crackdown-to-fall",
+            "jt-e2-fall-to-read",
+            "jt-e3-read-to-outcome"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "The reading rests on Rp286.84T for 2025 set against Rp359.81T for 2024: one series, two years.",
+          "els": [
+            "jt-panel-scale-check",
+            "jt-sc-turnover-2025",
+            "jt-duel-turnover-2024"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "The chips beside them count other things: Rp40.3T of turnover and Rp10.59T of deposits in the first quarter of 2026, 422.1 million transactions, 12.3 million depositors.",
+          "els": [
+            "jt-sc-chip-turnover-q1-2026",
+            "jt-sc-chip-deposits-q1-2026",
+            "jt-sc-chip-transactions-2025",
+            "jt-sc-chip-depositors-2025"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "One release carries both measures: turnover, which counts a rupiah again each time it moves, went from Rp359.81T to Rp286.84T, while net deposits, which count it once on the way in, went from Rp51.3T to Rp36.01T.",
+          "els": [
+            "jt-panel-dueling",
+            "jt-duel-turnover-2024",
+            "jt-duel-turnover-2025",
+            "jt-duel-deposits-2024",
+            "jt-duel-deposits-2025"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Standing outside the frame: the ratio between those two series, whether the recording base held across both years, the channels absorbing what the blocked rails lose, the path of the series before the push, the matching quarter for the new quarterly figure, the people behind the rupiah, and the outflow carrying the operators' take.",
+          "els": [
+            "jt-h1-two-series-gap",
+            "jt-h2-recording-coverage",
+            "jt-h3-displaced-channels",
+            "jt-h4-prior-trajectory",
+            "jt-h5-quarter-baseline",
+            "jt-h6-player-count",
+            "jt-h7-operator-outflow"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Cerita ini berjalan dalam empat langkah: gempuran terhadap judi online di era Prabowo, perputaran dana yang dicatat PPATK turun menjadi Rp286,84 triliun, angka itu dibaca sebagai ukuran pasar yang menyusut sebesar itu pula, lalu judi online disebut surut.",
+          "els": [
+            "jt-panel-claim-map",
+            "jt-s1-crackdown",
+            "jt-s2-turnover-fall",
+            "jt-s3-market-read",
+            "jt-s4-outcome"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Langkah dari gempuran ke angka bertumpu pada urutan tanggal, dan langkah dari angka ke ukuran pasar bertumpu pada satu kata di judul, yaitu tersisa.",
+          "els": [
+            "jt-e1-crackdown-to-fall",
+            "jt-e2-fall-to-read"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Langkah terakhir, dari pasar yang mengecil menuju praktik yang surut, tidak dipegang oleh artikel mana pun dalam keluarga ini.",
+          "els": [
+            "jt-e3-read-to-outcome",
+            "jt-s4-outcome"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Di luar bingkai berdiri porsi pasar yang masih terjangkau alat pencatat, kanal pembayaran di luar jalur yang diblokir, arah deret yang sama sebelum gempuran, triwulan pembanding setahun sebelumnya, dan aliran dana lintas negara yang membawa bagian operator.",
+          "els": [
+            "jt-h2-recording-coverage",
+            "jt-h3-displaced-channels",
+            "jt-h4-prior-trajectory",
+            "jt-h5-quarter-baseline",
+            "jt-h7-operator-outflow"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Penurunannya diukur di dalam satu deret, dari Rp359,81 triliun pada 2024 menjadi Rp286,84 triliun pada 2025, sementara keping di sampingnya menghitung besaran lain: Rp40,3 triliun perputaran dan Rp10,59 triliun setoran pada triwulan I-2026, serta 422,1 juta transaksi sepanjang 2025.",
+          "els": [
+            "jt-panel-scale-check",
+            "jt-sc-turnover-2025",
+            "jt-duel-turnover-2024",
+            "jt-sc-chip-turnover-q1-2026",
+            "jt-sc-chip-deposits-q1-2026",
+            "jt-sc-chip-transactions-2025"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Rilis yang sama memuat dua ukuran untuk satu kegiatan, yaitu perputaran, yang menghitung uang itu lagi setiap kali dipindahkan, dan setoran bersih, yang turun dari Rp51,3 triliun ke Rp36,01 triliun; tidak ada artikel yang mempertemukan kedua deret itu, dan tidak ada yang mengukur pasar dalam 12,3 juta penyetor alih-alih dalam rupiah.",
+          "els": [
+            "jt-panel-dueling",
+            "jt-duel-turnover-2024",
+            "jt-duel-turnover-2025",
+            "jt-duel-deposits-2024",
+            "jt-duel-deposits-2025",
+            "jt-h1-two-series-gap",
+            "jt-h6-player-count",
+            "jt-sc-chip-depositors-2025"
+          ]
+        }
+      ]
+    }
+  },
+  "manifest": {
+    "run_id": "run-2026-07-29",
+    "generated_at": "2026-07-28T21:52:08Z",
+    "steps": [
+      {
+        "role": "A5",
+        "model": "claude-fable-5",
+        "started_at": "2026-07-28T22:58:11Z",
+        "finished_at": "2026-07-29T00:22:09Z",
+        "input_hash": "c064a2c00d8710058711b7b45f463fdca1796a2a66962fd963a042580e9ffd28"
+      },
+      {
+        "role": "A6",
+        "model": "claude-fable-5",
+        "started_at": "2026-07-29T00:22:09Z",
+        "finished_at": "2026-07-29T00:22:09Z",
+        "input_hash": "199d7e883d8452220575965d333ba2946e51dcadad298aa4f44a91eb5845ef09"
+      },
+      {
+        "role": "A7",
+        "model": "claude-opus-5[1m]",
+        "started_at": "2026-07-29T00:22:09Z",
+        "finished_at": "2026-07-29T00:41:55Z",
+        "input_hash": "489d9dae5f0a279d8240c761ba87aab58c682af9aa451767ce3e0c2f0657ba8a"
+      },
+      {
+        "role": "A8",
+        "model": "claude-opus-5[1m]",
+        "started_at": "2026-07-29T00:22:10Z",
+        "finished_at": "2026-07-29T00:22:10Z",
+        "input_hash": "3f80cac5393b407f78bbc6713e92e73a950e34cee6eda9001aeb8fe731d94031"
+      },
+      {
+        "role": "A9",
+        "model": "claude-opus-5[1m]",
+        "started_at": "2026-07-29T00:41:56Z",
+        "finished_at": "2026-07-29T00:41:56Z",
+        "input_hash": "bd38f4b47cd5a9e9af474c18beafdfad98ada01474bc9add103e2a9e99519d54"
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "hidden": [
+    {
+      "el_id": "h-count-method",
+      "label": {
+        "en": "The case definition and counting method behind each published figure",
+        "id": "Definisi kasus dan metode penghitungan di balik tiap angka yang diumumkan"
+      },
+      "why_hidden": {
+        "en": "The count step (s-count) publishes a running total, and the cluster carries two other totals from BPOM and from the civil-society network JPPI, yet no article states how a case enters any of the three ledgers: which symptoms qualify, who verifies a report, whether the unit is an incident or a person, and whether the counted population is schoolchildren only or every class of recipient. The story stops at the totals themselves, and the gap between them is exactly the quantity it never follows.",
+        "id": "Langkah penghitungan (s-count) mengumumkan total berjalan, dan klaster ini memuat dua total lain dari BPOM dan dari jaringan masyarakat sipil JPPI, tetapi tidak ada artikel yang menjelaskan bagaimana sebuah kasus masuk ke tiap pembukuan: gejala apa yang memenuhi syarat, siapa yang memverifikasi laporan, apakah satuannya insiden atau orang, dan apakah populasi yang dihitung hanya anak sekolah atau seluruh golongan penerima. Cerita berhenti pada totalnya sendiri, padahal selisih di antara ketiganya justru besaran yang tidak pernah diikuti."
+      },
+      "where_to_look": "Each institution's own methodology or press documentation: BGN incident-reporting releases, BPOM outbreak (KLB) case-definition documents, JPPI monitoring methodology notes."
+    },
+    {
+      "el_id": "h-denominator-served",
+      "label": {
+        "en": "The served base: recipients and portions delivered over the same counting window",
+        "id": "Basis penyaluran: penerima dan porsi yang tersalurkan sepanjang jendela penghitungan yang sama"
+      },
+      "why_hidden": {
+        "en": "The scale step (s-scale) lets the agency's cumulative victim count stand as the national measure of the harm, and the program step (s-program) states the program runs at national scale, but no article places the count over the base it accumulated on: how many recipients and portions the program served across the same months. A running count with no served base carries no rate, and the story stops before asking for one.",
+        "id": "Langkah skala (s-scale) menjadikan hitungan kumulatif korban versi badan itu sebagai ukuran nasional dampaknya, dan langkah program (s-program) menyebut program berjalan dalam skala nasional, tetapi tidak ada artikel yang meletakkan hitungan itu di atas basis penyalurannya: berapa penerima dan porsi yang tersalurkan pada rentang bulan yang sama. Hitungan berjalan tanpa basis penyaluran tidak membawa laju kejadian, dan cerita berhenti sebelum menanyakannya."
+      },
+      "where_to_look": "BGN's own distribution reporting: portions served and recipients enrolled by month, in agency releases or budget-realization documents."
+    },
+    {
+      "el_id": "h-baseline-klb",
+      "label": {
+        "en": "The pre-program baseline of school food-poisoning outbreaks",
+        "id": "Garis dasar keracunan pangan di lingkungan sekolah sebelum program berjalan"
+      },
+      "why_hidden": {
+        "en": "Reading the agency's figure as the full national scale of the harm (s-scale) treats every counted case as new harm against an unstated baseline of zero. Food-poisoning outbreaks in schools were a routinely tracked category before the program existed, and no article in the family places the program-era counts next to that prior ledger. The comparison the scale claim depends on is never opened.",
+        "id": "Membaca angka badan itu sebagai ukuran utuh skala keracunan nasional (s-scale) memperlakukan setiap kasus yang terhitung sebagai dampak baru terhadap garis dasar nol yang tidak pernah disebut. Keracunan pangan di lingkungan sekolah sudah menjadi kategori yang rutin dicatat jauh sebelum program ini ada, dan tidak ada artikel dalam keluarga ini yang menyandingkan hitungan era program dengan pembukuan sebelumnya itu. Perbandingan yang menjadi sandaran klaim skala tidak pernah dibuka."
+      },
+      "where_to_look": "Annual food-poisoning outbreak (KLB keracunan pangan) recaps from BPOM and the health ministry for the years before the program started."
+    },
+    {
+      "el_id": "h-first-payers",
+      "label": {
+        "en": "The households and frontline health facilities that absorb each case first",
+        "id": "Rumah tangga dan fasilitas kesehatan lini depan yang menanggung tiap kasus lebih dulu"
+      },
+      "why_hidden": {
+        "en": "The poisoning step (s-poisoning) lands on schoolchildren, which means it lands the same hour on their families and on the puskesmas, local hospitals and district health offices that treat the cases and work each outbreak. The articles follow the cases upward into national totals and never downward into who met the cost of a single one: treatment bills, transport, parents' lost workdays, children's lost school days, and whether the bill stopped with the household, the public health insurer or a local budget.",
+        "id": "Langkah keracunan (s-poisoning) jatuh pada anak sekolah, artinya pada jam yang sama jatuh pula pada keluarga mereka dan pada puskesmas, rumah sakit daerah, serta dinas kesehatan yang merawat kasus dan menangani tiap kejadian luar biasa. Artikel mengikuti kasus ke atas menjadi total nasional dan tidak pernah ke bawah menuju siapa yang menanggung biaya satu kasus pun: tagihan perawatan, ongkos perjalanan, hari kerja orang tua yang hilang, hari sekolah anak yang hilang, dan apakah tagihan itu berhenti di rumah tangga, penanggung jaminan kesehatan publik, atau anggaran daerah."
+      },
+      "where_to_look": "District health office outbreak investigation reports and statements on who covered treatment costs; BPJS Kesehatan or local government statements on claims from the incidents."
+    },
+    {
+      "el_id": "h-kitchens",
+      "label": {
+        "en": "The kitchen units that cooked the meals in the counted cases, their workers and local suppliers",
+        "id": "Unit dapur yang memasak menu dalam kasus-kasus yang terhitung, para pekerjanya, dan pemasok lokalnya"
+      },
+      "why_hidden": {
+        "en": "The serving edge (e-serve-poison) runs from program to poisoning through a physical kitchen every time: some unit cooked each counted meal. The articles total the victims and never name the producing side of the same cases: which service units the cases trace to, what happens to a unit's operations once cases are logged against it, and who carries that stoppage, from kitchen crews to the smallholders and vendors whose produce the unit buys daily.",
+        "id": "Sisi penyajian (e-serve-poison) bergerak dari program ke keracunan lewat dapur fisik setiap kalinya: ada unit yang memasak tiap porsi yang masuk hitungan. Artikel menjumlahkan korban dan tidak pernah menyebut sisi produksi dari kasus yang sama: unit layanan mana yang tersangkut kasus, apa yang terjadi pada operasional sebuah unit begitu kasus tercatat atasnya, dan siapa yang memikul penghentian itu, dari kru dapur sampai petani kecil dan pedagang yang produknya dibeli unit itu setiap hari."
+      },
+      "where_to_look": "BGN or local government announcements on service-unit operations after incidents, and local reporting on kitchen crews and suppliers in affected districts."
+    },
+    {
+      "el_id": "h-surveillance-ledger",
+      "label": {
+        "en": "The statutory outbreak-surveillance chain the KLB label points to",
+        "id": "Rantai surveilans kejadian luar biasa yang menjadi rujukan label KLB"
+      },
+      "why_hidden": {
+        "en": "One member of the family frames the dispute as regulator versus implementing agency over KLB data, and KLB is a term with an owner: outbreaks are reported by health facilities, investigated by district health offices, and recapped by the health ministry through routine surveillance. The count step (s-count) arrives as one agency's announcement and the competing counts as other announcements, while the routine surveillance ledger the KLB label itself points to, the one channel with a statutory mandate to arbitrate between them, is never cited by any of the three.",
+        "id": "Satu anggota keluarga ini membingkai perselisihan sebagai data KLB regulator melawan badan pelaksana, dan KLB adalah istilah yang ada pemiliknya: kejadian luar biasa dilaporkan fasilitas kesehatan, diselidiki dinas kesehatan, dan direkap kementerian kesehatan lewat surveilans rutin. Langkah penghitungan (s-count) hadir sebagai pengumuman satu badan dan hitungan tandingan hadir sebagai pengumuman badan lain, sementara pembukuan surveilans rutin yang justru dirujuk label KLB itu, satu-satunya jalur dengan mandat resmi untuk menengahi ketiganya, tidak pernah dikutip siapa pun."
+      },
+      "where_to_look": "Health ministry routine outbreak surveillance recaps and district health office KLB investigation reports covering the program period."
+    }
+  ],
+  "model": "claude-fable-5"
+}

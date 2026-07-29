@@ -1,0 +1,273 @@
+{
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "The chain has four steps: USAID is defunded, the programmes that ran on its support stop, mortality rises in the populations those programmes reached, and the additional deaths by 2030 come to 14.05 million, with a published uncertainty interval of 8.48 million to 19.66 million, projected June 2025.",
+          "els": [
+            "usaid-deaths-panel-claim-map",
+            "usaid-deaths-n1",
+            "usaid-deaths-n2",
+            "usaid-deaths-n3",
+            "usaid-deaths-n4"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "The one link with a source behind it is the long jump from defunding straight to the 2030 total, so the three steps in between are what the model supplies, and the June 2025 run is the one this family still carries.",
+          "els": [
+            "usaid-deaths-e4",
+            "usaid-deaths-e1",
+            "usaid-deaths-e2",
+            "usaid-deaths-e3",
+            "usaid-deaths-h8"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "The unstated quantities are the interesting ones: how much of a programme stops when its award stops, how much of the caseload somebody else picks up, and how deep a cut has to hold, and for how long, for one total to land in 2030.",
+          "els": [
+            "usaid-deaths-e1",
+            "usaid-deaths-e2",
+            "usaid-deaths-e3",
+            "usaid-deaths-h4",
+            "usaid-deaths-h7"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "The parties the chain never names are standing at the front of it: the implementing partners and field staff whose payroll the award was, the stock already bought and sitting in warehouses, the manufacturers and carriers whose order books the procurement was, the households that meet the gap with their own money, and the ministries and other funders the caseload arrives at.",
+          "els": [
+            "usaid-deaths-h1",
+            "usaid-deaths-h2",
+            "usaid-deaths-h3",
+            "usaid-deaths-h5",
+            "usaid-deaths-h4"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Sorted by when it lands, the sequence is plain: stop work notices and unpaid invoices within weeks, organisations closing and treatment dropped within months, and the projected total itself only at the far end, in 2030.",
+          "els": [
+            "usaid-deaths-panel-incidence",
+            "usaid-deaths-inc-implementers",
+            "usaid-deaths-inc-suppliers",
+            "usaid-deaths-inc-households",
+            "usaid-deaths-inc-cofinanciers"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "The figure that travels is the centre of a range its own paper printed, 8.48 million at the low end and 19.66 million at the high end, and the same paper puts about 4.5 million children under five inside that centre and credits about 91.8 million deaths prevented from 2001 to 2021 to programmes that other funders paid into as well.",
+          "els": [
+            "usaid-deaths-panel-scale-check",
+            "usaid-deaths-sc-seg-central",
+            "usaid-deaths-sc-seg-lower",
+            "usaid-deaths-sc-seg-upper",
+            "usaid-deaths-sc-chip-under-five",
+            "usaid-deaths-sc-chip-prevented",
+            "usaid-deaths-h6"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Registri memuat satu garis bersumber untuk klaim ini, dan garis itu melompat dari penghentian pendanaan USAID langsung ke 14,05 juta kematian tambahan hingga 2030 (interval ketidakpastian 8,48 juta sampai 19,66 juta, diproyeksikan Juni 2025).",
+          "els": [
+            "usaid-deaths-panel-claim-map",
+            "usaid-deaths-n1",
+            "usaid-deaths-n4",
+            "usaid-deaths-e4"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Tiga langkah di antaranya, yaitu program berhenti, angka kematian naik di populasi yang dijangkau, lalu kenaikan itu menjadi satu total, berdiri tanpa sumber di registri dan tanpa pernyataan dari artikel mana pun dalam keluarga ini.",
+          "els": [
+            "usaid-deaths-n2",
+            "usaid-deaths-n3",
+            "usaid-deaths-e1",
+            "usaid-deaths-e2",
+            "usaid-deaths-e3"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Tiga besaran menopang lompatan itu tanpa pernah dituliskan: berapa bagian layanan terhenti yang diambil alih kementerian kesehatan, lembaga dana multilateral, dan pendonor bilateral lain; seberapa dalam pemotongan harus bertahan sampai 2030; dan berapa porsi pembiayaan yang selama ini datang dari uang selain USAID.",
+          "els": [
+            "usaid-deaths-e2",
+            "usaid-deaths-h4",
+            "usaid-deaths-h6",
+            "usaid-deaths-h7"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Di luar bingkai berdiri pihak-pihak yang tersentuh lebih dulu: mitra pelaksana beserta staf lapangannya, stok obat dan pangan yang terlanjur dibeli dan tertahan di gudang, pemasok yang hidup dari pengadaan itu, dan rumah tangga yang merogoh kantong sendiri begitu klinik menutup pintu.",
+          "els": [
+            "usaid-deaths-h1",
+            "usaid-deaths-h2",
+            "usaid-deaths-h3",
+            "usaid-deaths-h5"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Urutan waktunya membalik urutan ceritanya: surat penghentian kerja, buku pesanan yang berhenti, dan biaya yang pindah ke rumah tangga tiba dalam hitungan minggu, beban pasien mendarat di kementerian kesehatan sebelum mereka sempat memutuskan anggaran sendiri, dan angka 2030 baru berdiri di kolom terjauh.",
+          "els": [
+            "usaid-deaths-panel-incidence",
+            "usaid-deaths-inc-implementers",
+            "usaid-deaths-inc-suppliers",
+            "usaid-deaths-inc-households",
+            "usaid-deaths-inc-cofinanciers"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Angka yang beredar adalah estimasi tengah dari sebuah rentang yang diterbitkan makalah yang sama: 8,48 juta di ujung bawah, 19,66 juta di ujung atas, sekitar 4,5 juta anak di bawah lima tahun di dalam proyeksi tengah, dan sekitar 91,8 juta kematian yang dicegah sepanjang 2001 sampai 2021 di sisi hitungan ke belakang, dengan proyeksinya bertanggal Juni 2025 untuk cakrawala 2030.",
+          "els": [
+            "usaid-deaths-panel-scale-check",
+            "usaid-deaths-sc-seg-central",
+            "usaid-deaths-sc-seg-lower",
+            "usaid-deaths-sc-seg-upper",
+            "usaid-deaths-sc-chip-under-five",
+            "usaid-deaths-sc-chip-prevented",
+            "usaid-deaths-h8"
+          ]
+        }
+      ]
+    }
+  },
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "Four steps run from the funding stop to the 2030 death total. Which link does the registry actually carry a source for?",
+          "id": "Empat langkah membentang dari penghentian pendanaan sampai angka kematian 2030. Untuk tautan yang mana registri memuat sumber?"
+        },
+        "options": [
+          {
+            "en": "The step from defunding to the programmes stopping.",
+            "id": "Langkah dari penghentian pendanaan ke berhentinya program."
+          },
+          {
+            "en": "The whole jump, from defunding straight to the projected 2030 total.",
+            "id": "Lompatan penuhnya, dari penghentian pendanaan langsung ke angka proyeksi 2030."
+          },
+          {
+            "en": "The step from stopped programmes to rising mortality.",
+            "id": "Langkah dari program yang berhenti ke naiknya angka kematian."
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The claim map marks the long edge, defunding to the 2030 total, as the sourced one, quoting the paper's own projection. The three steps in the middle carry no source, so the mechanics a reader would most want checked are the part the model fills in.",
+          "id": "Peta klaim menandai garis panjangnya, dari penghentian pendanaan langsung ke total 2030, sebagai satu-satunya langkah yang punya sumber, dan memuatnya dalam bentuk yang diterbitkan sumbernya: proyeksi bertanggal Juni 2025. Registri tidak memuat sumber untuk tiga langkah di tengahnya, sehingga mekanisme yang paling ingin diperiksa pembaca justru bagian yang dipasok model."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "The scale panel puts the June 2025 projection for additional deaths by 2030 inside what?",
+          "id": "Panel skala menaruh proyeksi Juni 2025 untuk kematian tambahan hingga 2030 di dalam apa?"
+        },
+        "options": [
+          {
+            "en": "Inside the total population of the countries those programmes reached.",
+            "id": "Di dalam jumlah penduduk negara-negara yang dijangkau program tersebut."
+          },
+          {
+            "en": "Inside the uncertainty range published with it, 8.48 million at the low end to 19.66 million at the high end, projected June 2025.",
+            "id": "Di dalam rentang ketidakpastian yang diterbitkan bersamanya, 8,48 juta di ujung bawah sampai 19,66 juta di ujung atas, proyeksi Juni 2025."
+          },
+          {
+            "en": "Inside the roughly 91.8 million deaths prevented from 2001 to 2021, an estimate from the same paper, June 2025.",
+            "id": "Di dalam sekitar 91,8 juta kematian yang dicegah sepanjang 2001 sampai 2021, estimasi dari makalah yang sama, Juni 2025."
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The scale check takes the high end of the published range, 19.66 million, as its denominator, then sets the central estimate of 14.05 million and the low end of 8.48 million inside it, all dated June 2025 for a 2030 horizon. The roughly 91.8 million deaths prevented from 2001 to 2021 does stand in the same panel, but as a context chip beside the projection, and population appears in no panel at all.",
+          "id": "Panel skala memakai ujung atas rentang yang diterbitkan, 19,66 juta, sebagai penyebutnya, lalu menaruh estimasi tengah 14,05 juta dan ujung bawah 8,48 juta di dalamnya, semuanya bertanggal Juni 2025 untuk cakrawala 2030. Angka sekitar 91,8 juta kematian yang dicegah sepanjang 2001 sampai 2021 memang berdiri di panel yang sama, tetapi sebagai keping konteks di samping proyeksinya, dan jumlah penduduk tidak dimuat di panel mana pun."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "In the first weeks, who meets this funding stop first, and through what?",
+          "id": "Dalam hitungan minggu pertama, siapa yang lebih dulu merasakan penghentian pendanaan ini, dan lewat apa?"
+        },
+        "options": [
+          {
+            "en": "Households in the populations the programmes reached, through a rise in mortality.",
+            "id": "Rumah tangga di populasi yang dijangkau, lewat naiknya angka kematian."
+          },
+          {
+            "en": "Health ministries, once they have taken a funding decision of their own on the services that lapsed.",
+            "id": "Kementerian kesehatan, setelah mereka mengambil keputusan pendanaan sendiri atas layanan yang terhenti."
+          },
+          {
+            "en": "Implementing partners and suppliers, through stop work notices, unpaid invoices and order books that stop with the contract.",
+            "id": "Mitra pelaksana dan pemasok, lewat surat penghentian kerja, tagihan tak terbayar, dan buku pesanan yang berhenti bersama kontraknya."
+          }
+        ],
+        "correct": 2,
+        "note": {
+          "en": "The incidence panel puts stop work notices, unpaid invoices and halted order books in the weeks column. Households stand in that same column, but what they meet first is their own money for medicine, travel and user fees, while the 2030 mortality figure appears only in the furthest column. The caseload reaches health ministries in those same weeks, before any funding decision of their own has been taken.",
+          "id": "Panel insidensi menaruh surat penghentian kerja, tagihan tak terbayar, dan buku pesanan yang berhenti di kolom minggu. Rumah tangga berdiri di kolom yang sama, tetapi yang mereka temui lebih dulu adalah uang sendiri untuk obat, perjalanan, dan biaya layanan, sementara angka kematian 2030 baru muncul di kolom terjauh. Beban pasien tiba di kementerian kesehatan pada minggu yang sama pula, sebelum keputusan pendanaan mereka sempat diambil."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before the panels open: in the chain from the USAID funding stop to the 2030 death figure, which side do you think is missing from the frame?",
+      "id": "Sebelum panelnya terbuka: dalam rantai dari penghentian pendanaan USAID sampai angka kematian 2030, sisi mana yang menurut Anda hilang dari bingkai?"
+    },
+    "options": [
+      {
+        "en": "The implementing partners and health workers whose wages came out of that award",
+        "id": "Mitra pelaksana dan tenaga kesehatan yang gajinya ditarik dari kontrak itu"
+      },
+      {
+        "en": "The suppliers whose income the procurement was: medicine manufacturers, food commodity producers, freight carriers",
+        "id": "Pemasok yang hidup dari pengadaannya: produsen obat, produsen komoditas pangan, dan pengangkut"
+      },
+      {
+        "en": "The other funders and health ministries that could absorb the services that stopped",
+        "id": "Pendonor lain dan kementerian kesehatan yang dapat mengambil alih layanan yang berhenti"
+      },
+      {
+        "en": "The households paying out of pocket to replace the services that stopped",
+        "id": "Rumah tangga yang membayar sendiri pengganti layanan yang berhenti"
+      },
+      {
+        "en": "The funding path the 2030 total is conditional on, how deep the cut runs and how long it holds",
+        "id": "Jalur pendanaan yang menjadi syarat tercapainya angka 2030 itu"
+      }
+    ]
+  },
+  "editorial_notes": [
+    "Input provenance: pipeline/runs/run-2026-07-29/slots/usaid-deaths/A9.input.json does not exist, so the locked panels were read in full from the copy at /private/tmp/claude-501/-Users-ghaisan-Documents-Matterhorn/4122d109-f395-4118-8925-14fb957134a5/scratchpad/usaid-deaths-panels.json. Neither authoring arrived with editorial_notes of its own, so this set is the reconciler's record.",
+    "El universe is exactly 28 el_ids: claim map panel plus n1 to n4, e1 to e4 and h1 to h8; scale check panel plus three segments and two context chips; incidence panel plus four lanes. The shipping panels carry no family marker panel and no echo, so nothing outside those 28 is bound anywhere in either locale.",
+    "Narration: the EN bundle is the EN authoring verbatim. The ID bundle is the native ID authoring, not the EN run's Indonesian, and carries three edits, all recorded below. The EN run's own ID bundle was set aside so the Indonesian is the one written by someone thinking in Indonesian.",
+    "ID v-1 edit: 'Registri memuat satu garis untuk klaim ini' became 'Registri memuat satu garis bersumber untuk klaim ini'. Cross-locale arbitration: EN v-1 tells the reader the chain has four steps while the ID as authored read as though the map held one edge. The claim map declares e1 to e4 with three of them at status missing, so the added word restores the panel's own distinction between an edge that exists and an edge that has a source.",
+    "ID v-2 edit: 'tidak dimuat registri dan tidak dinyatakan artikel mana pun' became 'berdiri tanpa sumber di registri dan tanpa pernyataan dari artikel mana pun'. Same arbitration, and the replacement is the panel's wording: each of e1, e2 and e3 says the registry holds no source for the step and that no article in this family states it either. The sentence binds e1 to e3, so it could not also say those elements are absent from the registry.",
+    "ID v-6 edit: the closing clause 'semuanya bertanggal Juni 2025 untuk cakrawala 2030' became 'dengan proyeksinya bertanggal Juni 2025 untuk cakrawala 2030'. The list it closed included the 2001 to 2021 backward count, which carries a June 2025 date but not a 2030 horizon; the scale check takeaway scopes the 2030 horizon to the interval alone. EN v-6 made no such attribution, so this was a cross-locale mismatch as well as a figure-scope one.",
+    "Mechanism, base EN. Its two wrong options are the two links a reader expects to be the evidenced ones, defunding to programmes stopping and stopped programmes to rising mortality, and the correct answer is the counterintuitive long edge. The ID authoring's correct option carried the answer's reasoning inside the option text and its note named raw element ids to the reader. The Indonesian was written natively against e4's own evidence, which says in both locales that the three middle steps are the part the model supplies.",
+    "Denominator, base ID. It asks what the projection sits inside, which is the denominator move proper, and both wrong options are live rather than filler: total population is the denominator a reader brings to a death count, and the 91.8 million prevented deaths genuinely stands in the same panel, as a context chip beside the projection. The EN authoring asked what the paper printed beside the figure and leaned on a straw distractor about resolved uncertainty. The English was written natively from the panel: denominator 19.66 million, central 14.05 million and low end 8.48 million inside it.",
+    "Incidence, base ID, for its who-and-through-what framing, which is what the incidence move is for. Correct index 2 in both locales, and each distractor fails for a reason the panel shows: households are in the weeks column but meet cost before mortality, and the 2030 figure sits in the furthest column.",
+    "Cross-locale disagreement resolved at the incidence note: the EN authoring wrote that the other funders settle their share over months, the ID authoring wrote that the caseload reaches them in the same weeks. The co-financier lane settles it as both, since the weeks cell says the caseload arrives the moment services lapse before any funding decision of their own, and the months cell says each settles what share to absorb. The merged note keeps only the weeks claim, which is the one the question turns on and the one that makes distractor 1 visibly wrong.",
+    "Prediction tap, base ID prompt, because it anchors on this claim's own chain rather than on funding-cut stories in general. All five options kept, each mapped to a declared hidden element: h1 implementers and their staff, h3 suppliers, h4 other funders and ministries, h5 households paying out of pocket, h7 the funding path the total is conditional on. The English was written natively against those labels so no option is a giveaway and none names a party the artifact does not declare.",
+    "Figure discipline, checked mechanically: every numeral shipped in either locale appears verbatim in the panels JSON, 14.05 and 14,05, 8.48 and 8,48, 19.66 and 19,66, 4.5 and 4,5, 91.8 and 91,8, plus June 2025, 2030 and 2001 to 2021. Indonesian uses the decimal comma throughout, English the point. The interval and the June 2025 date always travel with the central figure, never after it alone.",
+    "Lexicon: the Indonesian carries no whole-word collision. 'sebuah rentang' and 'satu-satunya' do the work that 'salah satu' would normally do, so that phrase never appears; the intensifier 'benar-benar' was deliberately kept out of the mechanism question because a hyphen is a word boundary and a bare-word check would trip on it. No verdict word appears in either locale, and no sentence characterises the claim, only which step carries a source, which does not, and who stands outside the frame.",
+    "What stayed unsaid: the copy never states how much of the caseload another funder actually absorbs, and never states whether later model runs revise the June 2025 figure. Both are declared as open quantities by h4 and h8 and are left open, since the panels record them as unstated rather than answered.",
+    "Verification before shipping: 28 of 28 el_ids covered by at least one sentence in both locales, zero bindings outside the panel set, sentence ids v-1 to v-6 aligned across locales, three sparring moves each with three options and both locales aligned so one correct index holds in both, five prediction options, no em dash, no emoji, no future-tense harm construction."
+  ],
+  "model": "claude-opus-5[1m]"
+}

@@ -1,0 +1,73 @@
+{
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "tariffs-pay-n-lever",
+        "label": {
+          "en": "Sweeping tariffs are imposed on imported goods",
+          "id": "Tarif menyeluruh dikenakan atas barang impor"
+        }
+      },
+      {
+        "el_id": "tariffs-pay-n-revenue",
+        "label": {
+          "en": "Tariff collections flow in as federal revenue",
+          "id": "Pungutan tarif masuk sebagai penerimaan federal"
+        }
+      },
+      {
+        "el_id": "tariffs-pay-n-scale",
+        "label": {
+          "en": "The revenue reaches the scale of the full cost of everything he has proposed",
+          "id": "Penerimaan itu mencapai skala biaya penuh semua usulannya"
+        }
+      },
+      {
+        "el_id": "tariffs-pay-n-funded",
+        "label": {
+          "en": "All of it is paid for out of tariff money",
+          "id": "Semuanya terbayar dari uang tarif"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "tariffs-pay-e-lever-revenue",
+        "from": "tariffs-pay-n-lever",
+        "to": "tariffs-pay-n-revenue",
+        "quote": "CBO's New Projections Show $1 Trillion Less in Tariff Savings"
+      },
+      {
+        "el_id": "tariffs-pay-e-revenue-scale",
+        "from": "tariffs-pay-n-revenue",
+        "to": "tariffs-pay-n-scale",
+        "quote": "Trump's Tariffs Don't Come Close to Funding Everything He's Proposed"
+      },
+      {
+        "el_id": "tariffs-pay-e-scale-funded",
+        "from": "tariffs-pay-n-scale",
+        "to": "tariffs-pay-n-funded",
+        "quote": "no article in this family states the step from the revenue reaching the scale of everything he has proposed to all of it being paid for"
+      }
+    ]
+  },
+  "panel_skeleton": [
+    {
+      "type": "claim_map",
+      "el_id": "tariffs-pay-claim-map"
+    },
+    {
+      "type": "scale_check",
+      "el_id": "tariffs-pay-scale-check"
+    },
+    {
+      "type": "money_flow",
+      "el_id": "tariffs-pay-money-flow"
+    },
+    {
+      "type": "incidence",
+      "el_id": "tariffs-pay-incidence"
+    }
+  ],
+  "model": "claude-fable-5"
+}

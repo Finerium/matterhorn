@@ -1,0 +1,743 @@
+{
+  "narrative_id": "mbg-jobs",
+  "cluster": {
+    "narrative_id": "mbg-jobs",
+    "family_skeleton": "a programme's own headcount, self reported and derived rather than counted, carried as an independent measure of the programme's worth",
+    "members": [
+      {
+        "id": "mbg-jobs-m1",
+        "lang": "id",
+        "headline": "Program MBG Serap 1,28 Juta Tenaga Kerja, UMKM-Peternak Kecipratan",
+        "outlet": "CNBC Indonesia",
+        "date": "2026-05-23",
+        "url": "https://www.cnbcindonesia.com/news/20260523162405-4-737426/program-mbg-serap-128-juta-tenaga-kerja-umkm-peternak-kecipratan",
+        "note": "Verbatim title from content/sources.json (id-cnbc-mbg-workers-suppliers). BGN self reported; the slug reads 128-juta and the body reads 1,28 juta."
+      },
+      {
+        "id": "mbg-jobs-m2",
+        "lang": "id",
+        "headline": "MBG Disebut Serap 987.000 Tenaga Kerja, 40.000 UMKM Ikut Bergerak",
+        "outlet": "Kompas.com",
+        "date": "2026-02-15",
+        "url": "https://money.kompas.com/read/2026/02/15/181700126/mbg-disebut-serap-987.000-tenaga-kerja-40.000-umkm-ikut-bergerak",
+        "note": "Verbatim title from content/sources.json (id-kompas-mbg-workers-feb2026). The February baseline is live, which reverses the blueprint D-6 default, but it is a derived estimate (about 47 kitchen workers times about 21,000 SPPG), so it ships flagged estimate and self_reported with the arithmetic exposed."
+      },
+      {
+        "id": "mbg-jobs-m3",
+        "lang": "id",
+        "headline": "Anggaran MBG Terserap Rp 88,15 Triliun hingga Mei 2026",
+        "outlet": "Kompas.com",
+        "date": "2026-06-06",
+        "url": "https://money.kompas.com/read/2026/06/06/213559526/anggaran-mbg-terserap-rp-8815-triliun-hingga-mei-2026",
+        "note": "Verbatim title from content/sources.json. Pins the 29,679 SPPG kitchen count that the per-kitchen derivation rests on."
+      }
+    ]
+  },
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "mbg-jobs-n1",
+        "label": {
+          "en": "The state budget flows into the MBG programme",
+          "id": "Anggaran negara mengalir ke program MBG"
+        }
+      },
+      {
+        "el_id": "mbg-jobs-n2",
+        "label": {
+          "en": "SPPG kitchens operate across the country",
+          "id": "Dapur SPPG beroperasi di berbagai daerah"
+        }
+      },
+      {
+        "el_id": "mbg-jobs-n3",
+        "label": {
+          "en": "The programme absorbs workers through its kitchen network",
+          "id": "Program menyerap tenaga kerja lewat jaringan dapurnya"
+        }
+      },
+      {
+        "el_id": "mbg-jobs-n4",
+        "label": {
+          "en": "MSMEs and small livestock farmers take in income as kitchen suppliers",
+          "id": "UMKM dan peternak kecil memperoleh pemasukan sebagai pemasok dapur"
+        }
+      },
+      {
+        "el_id": "mbg-jobs-n5",
+        "label": {
+          "en": "The programme's own headcount carries as the measure of its worth",
+          "id": "Angka serapan versi program sendiri dijadikan ukuran nilainya"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "mbg-jobs-e1",
+        "from": "mbg-jobs-n1",
+        "to": "mbg-jobs-n2",
+        "quote": "no article in this family states the step from the state budget to SPPG kitchens operating"
+      },
+      {
+        "el_id": "mbg-jobs-e2",
+        "from": "mbg-jobs-n2",
+        "to": "mbg-jobs-n3",
+        "quote": "MBG Disebut Serap 987.000 Tenaga Kerja"
+      },
+      {
+        "el_id": "mbg-jobs-e3",
+        "from": "mbg-jobs-n3",
+        "to": "mbg-jobs-n4",
+        "quote": "Program MBG Serap 1,28 Juta Tenaga Kerja, UMKM-Peternak Kecipratan"
+      },
+      {
+        "el_id": "mbg-jobs-e4",
+        "from": "mbg-jobs-n4",
+        "to": "mbg-jobs-n5",
+        "quote": "no article in this family states the step from supplier income to the headcount standing as the measure of the programme's worth"
+      }
+    ]
+  },
+  "panel_skeleton": [
+    {
+      "type": "claim_map",
+      "el_id": "mbg-jobs-claim-map"
+    },
+    {
+      "type": "scale_check",
+      "el_id": "mbg-jobs-scale-check"
+    }
+  ],
+  "hidden_candidates": [
+    {
+      "el_id": "mbg-jobs-h1",
+      "label": {
+        "en": "School canteen vendors and food sellers whose daily sales the free meal replaces",
+        "id": "Pedagang kantin sekolah dan penjaja makanan yang omzet hariannya tergantikan oleh porsi gratis"
+      },
+      "why_hidden": {
+        "en": "The stated chain has kitchens operating and small suppliers taking in new income. The same meal that routes demand to contracted suppliers lands in place of the purchase a student used to make at the canteen or the stall outside the gate. The articles count the income arriving on the supplier side and stop before the counter where a sale no longer happens, so the family carries a gross gain for a mechanism that works as a transfer.",
+        "id": "Rantai yang dinyatakan memuat dapur yang beroperasi dan pemasok kecil yang menerima pemasukan baru. Porsi gratis yang mengalihkan permintaan ke pemasok kontrak mendarat menggantikan jajan yang biasa dibeli siswa di kantin atau di lapak depan gerbang sekolah. Artikel menghitung pemasukan yang tiba di sisi pemasok dan berhenti sebelum lapak tempat transaksi tidak lagi terjadi, sehingga keluarga pemberitaan ini membawa angka bruto untuk mekanisme yang bekerja sebagai pengalihan."
+      },
+      "where_to_look": "School canteen operator surveys, local trade or cooperative office reports on school-adjacent vendors, vendor association statements."
+    },
+    {
+      "el_id": "mbg-jobs-h2",
+      "label": {
+        "en": "A payroll-grade count behind the derived headcount",
+        "id": "Hitungan berbasis daftar gaji di balik angka serapan hasil perkalian"
+      },
+      "why_hidden": {
+        "en": "The February figure in the family is an arithmetic product, a per-kitchen staffing assumption multiplied by a kitchen count, and the later, larger figure moves with the kitchen count. The step from kitchens operating to workers absorbed reaches actual payrolls and social security enrolments, yet the articles stop at the multiplication, so no independently counted figure anchors the claim.",
+        "id": "Angka bulan Februari dalam keluarga pemberitaan ini adalah hasil perkalian, asumsi jumlah pekerja per dapur dikalikan jumlah dapur, dan angka yang lebih besar sesudahnya bergerak mengikuti pertambahan dapur. Langkah dari dapur beroperasi ke tenaga kerja terserap menjangkau daftar gaji dan kepesertaan jaminan sosial yang nyata, tetapi artikel berhenti pada perkalian, sehingga tidak ada hitungan independen yang menjangkar klaim itu."
+      },
+      "where_to_look": "BPJS Ketenagakerjaan enrolment data for SPPG staff, BGN payroll or honorarium disbursement records."
+    },
+    {
+      "el_id": "mbg-jobs-h3",
+      "label": {
+        "en": "What the absorbed workers were doing before the programme recruited them",
+        "id": "Kegiatan para pekerja terserap sebelum program merekrut mereka"
+      },
+      "why_hidden": {
+        "en": "The step from kitchens to jobs is stated as absorption, a word that reads as people drawn out of joblessness. The articles never state how many of the counted heads moved over from existing work, so the counterfactual that gives the headcount its meaning, employment without the programme, goes unpriced.",
+        "id": "Langkah dari dapur ke lapangan kerja dinyatakan sebagai penyerapan, dan kata itu terbaca seolah orang ditarik keluar dari pengangguran. Artikel tidak menyebut berapa banyak dari kepala yang dihitung itu berpindah dari pekerjaan yang sudah ada, sehingga pembanding yang memberi makna pada angka serapan, yaitu keadaan kerja tanpa program, tidak pernah ikut dihitung."
+      },
+      "where_to_look": "BPS labour force survey rounds spanning the programme's rollout, BGN recruitment records on applicants' prior employment."
+    },
+    {
+      "el_id": "mbg-jobs-h4",
+      "label": {
+        "en": "The budget figure set beside the headcount it is meant to support",
+        "id": "Angka anggaran yang disandingkan dengan angka serapan yang dijadikan ukuran nilai program"
+      },
+      "why_hidden": {
+        "en": "The family carries the absorbed budget in one member and the headcount in the others and never sets one against the other. The step that makes headcount the measure of the programme's worth needs the cost side as its denominator, and the articles stop before the join, so the price of an absorbed worker never appears.",
+        "id": "Keluarga pemberitaan ini membawa angka anggaran terserap di satu artikel dan angka tenaga kerja di artikel lain, dan tidak pernah menyandingkan keduanya. Langkah yang menjadikan angka serapan sebagai ukuran nilai program membutuhkan sisi biaya sebagai penyebutnya, dan artikel berhenti sebelum penyandingan itu, sehingga harga per pekerja terserap tidak pernah muncul."
+      },
+      "where_to_look": "Finance ministry budget realization reports for the programme, parliamentary hearing documents where cost per job or per beneficiary is tabled."
+    },
+    {
+      "el_id": "mbg-jobs-h5",
+      "label": {
+        "en": "Cash actually landing with suppliers, against invoices and payment lags",
+        "id": "Uang yang sungguh diterima pemasok, dibandingkan tagihan dan jeda pembayaran"
+      },
+      "why_hidden": {
+        "en": "The stated step has small suppliers taking in income, yet the articles measure participation, suppliers moving along with the programme, rather than receipts. Between delivery and cash sit invoices, payment terms and possible arrears, and the family stops before asking when and whether the money lands.",
+        "id": "Langkah yang dinyatakan menempatkan pemasok kecil sebagai penerima pemasukan, tetapi artikel mengukur keikutsertaan, pemasok yang ikut bergerak bersama program, bukan penerimaan uang. Di antara pengiriman barang dan uang masuk ada tagihan, tempo pembayaran, dan kemungkinan tunggakan, dan keluarga pemberitaan ini berhenti sebelum menanyakan kapan dan apakah uangnya mendarat."
+      },
+      "where_to_look": "SPPG or BGN accounts payable records, supplier cooperative complaints, ombudsman or local council hearing minutes on kitchen payment delays."
+    },
+    {
+      "el_id": "mbg-jobs-h6",
+      "label": {
+        "en": "The pay, status and hours attached to each counted head",
+        "id": "Upah, status, dan jam kerja yang melekat pada tiap kepala yang dihitung"
+      },
+      "why_hidden": {
+        "en": "Absorption transfers income to a household only through a wage. The stated step from kitchens to workers reaches contracts, honorarium levels, volunteer versus employee status and full-time versus part-time hours, and the articles carry the headcount without any of these terms, so what a counted job actually transfers stays unstated.",
+        "id": "Penyerapan baru memindahkan pemasukan ke rumah tangga melalui upah. Langkah dari dapur ke pekerja menjangkau kontrak, besaran honor, status relawan atau pegawai, serta jam kerja penuh atau paruh waktu, dan artikel membawa angka serapan tanpa satu pun ketentuan itu, sehingga apa yang sungguh dipindahkan oleh satu pekerjaan yang dihitung tidak pernah dinyatakan."
+      },
+      "where_to_look": "SPPG staffing contracts, BGN honorarium schedules, ministry circulars on kitchen staffing standards."
+    },
+    {
+      "el_id": "mbg-jobs-h7",
+      "label": {
+        "en": "Meals delivered and recipients reached, the output side of the worth claim",
+        "id": "Porsi makanan yang tersalurkan dan penerima yang terjangkau, sisi keluaran dari klaim nilai program"
+      },
+      "why_hidden": {
+        "en": "Every stated step exists to put meals in front of recipients, and the headcount the family carries as worth is an input to that output. The articles measure the programme by the people it employs and stop before the quantity the budget is appropriated for, so the output that would anchor the worth claim never enters the frame.",
+        "id": "Seluruh langkah yang dinyatakan ada untuk mengantarkan makanan ke penerima, dan angka serapan yang dibawa sebagai ukuran nilai adalah masukan bagi keluaran itu. Artikel mengukur program dari jumlah orang yang dipekerjakannya dan berhenti sebelum besaran yang menjadi tujuan anggaran itu, sehingga keluaran yang seharusnya menjangkar klaim nilai tidak pernah masuk bingkai."
+      },
+      "where_to_look": "BGN distribution reports on meals served and schools covered, education ministry recipient counts."
+    },
+    {
+      "el_id": "mbg-jobs-h8",
+      "label": {
+        "en": "The budget lines that yield so the flow into the programme can happen",
+        "id": "Pos anggaran yang menyusut agar aliran dana ke program dapat terjadi"
+      },
+      "why_hidden": {
+        "en": "The first stated step has the state budget flowing into the programme, and money that flows in is money that stops flowing somewhere else. The articles report absorption as progress and never name the source side, the reallocations or borrowing that meet the charge, so the first payer in the chain stays off the page.",
+        "id": "Langkah pertama yang dinyatakan adalah anggaran negara mengalir ke program, dan dana yang mengalir masuk adalah dana yang berhenti mengalir ke tempat lain. Artikel melaporkan penyerapan anggaran sebagai kemajuan dan tidak pernah menyebut sisi sumbernya, realokasi atau pembiayaan yang menanggung beban itu, sehingga pembayar pertama dalam rantai tetap berada di luar halaman."
+      },
+      "where_to_look": "State budget documents and revisions for the fiscal year, directives on spending reallocation, regional transfer allocation tables."
+    }
+  ],
+  "panel_plan": [
+    "claim_map",
+    "scale_check"
+  ],
+  "sources": [
+    {
+      "id": "id-kemenkeu-apbn2026-enacted",
+      "title": "RAPBN 2026: Belanja Menggelembung, Defisit Melebar (Banggar DPR revision, enacted as UU 17/2025)",
+      "publisher": "KPPOD (republishing Kompas.id)",
+      "url": "https://www.kppod.org/berita/view?id=1465",
+      "retrieved_at": "2026-07-28",
+      "period": "APBN 2026, enacted",
+      "kind": "ngo",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Carries the enacted figures verbatim: spending revised Rp3,786.5T to Rp3,842.7T, revenue Rp3,147.7T to Rp3,153.6T, deficit widened 2.48 to 2.68 percent of GDP (Rp689.1T), agreed at Banggar DPR 18 Sep 2025 and enacted as UU 17/2025. Republication of paywalled Kompas.id article. Page exposes no og meta tags."
+    },
+    {
+      "id": "id-perpres-118-2025",
+      "title": "Perpres Nomor 118 Tahun 2025 tentang Rincian APBN Tahun Anggaran 2026 (BPK JDIH record with lampiran)",
+      "publisher": "BPK JDIH",
+      "url": "https://peraturan.bpk.go.id/Details/341138/perpres-no-118-tahun-2025",
+      "retrieved_at": "2026-07-28",
+      "period": "APBN 2026, enacted (Perpres 118/2025)",
+      "kind": "official",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Primary legal artifact for enacted APBN 2026 line items. Lampiran I, II, IV PDF (2.8 MB) verified downloadable at peraturan.bpk.go.id/Download/404243."
+    },
+    {
+      "id": "id-setneg-rapbn2026-address",
+      "title": "Presiden Prabowo Targetkan APBN 2026 Efisien, Transparan, dan Tepat Sasaran (15 Aug 2025 address)",
+      "publisher": "Sekretariat Negara",
+      "url": "https://setneg.go.id/baca/index/presiden_prabowo_targetkan_apbn_2026_efisien_transparan_dan_tepat_sasaran",
+      "retrieved_at": "2026-07-28",
+      "period": "RAPBN 2026, draft (Aug 2025)",
+      "kind": "official",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Draft architecture figures: spending Rp3,786.5T, revenue Rp3,147.7T, deficit Rp638.8T (2.48 percent). Superseded by the enacted revision. Mirror of the presidenri.go.id release, whose domain 403s all automated clients."
+    },
+    {
+      "id": "id-bisnis-debt-interest-2026",
+      "title": "Beban APBN Kian Berat, Duit Rp599,4 Triliun buat Bayar Bunga Utang Tahun Ini",
+      "publisher": "Bisnis.com",
+      "url": "https://ekonomi.bisnis.com/read/20260122/10/1946376/beban-apbn-kian-berat-duit-rp5994-triliun-buat-bayar-bunga-utang-tahun-ini",
+      "retrieved_at": "2026-07-28",
+      "period": "APBN 2026, enacted (Perpres 118/2025)",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Debt interest Rp599.44T per Perpres 118/2025 Lampiran IV: Rp538.7T domestic plus Rp60.7T foreign. Published 22 Jan 2026."
+    },
+    {
+      "id": "id-cnbc-debt-position-mar2026",
+      "title": "Total Utang Pemerintah Rp9.920 T Akhir Maret 2026, Setara 40,75% PDB",
+      "publisher": "CNBC Indonesia",
+      "url": "https://www.cnbcindonesia.com/news/20260508043014-4-733271/total-utang-pemerintah-rp9920-t-akhir-maret-2026-setara-4075-pdb",
+      "retrieved_at": "2026-07-28",
+      "period": "as of March 2026",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Debt position Rp9,920.42T, 40.75 percent of GDP, per DJPPR Kemenkeu. og:image is a 2018 stock photo at 650px, weak as a card hero."
+    },
+    {
+      "id": "id-kompas-energy-subsidy-enacted",
+      "title": "Subsidi Energi, Defisit APBN, dan Efek Lanjutan jika AS-Iran Gagal Damai",
+      "publisher": "Kompas.com",
+      "url": "https://money.kompas.com/read/2026/04/14/144000726/subsidi-energi-defisit-apbn-dan-efek-lanjutan-jika-as-iran-gagal-damai",
+      "retrieved_at": "2026-07-28",
+      "period": "APBN 2026, enacted (Perpres 118/2025)",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Enacted energy subsidy Rp210.06T citing Perpres 118/2025 explicitly; components sum exactly: listrik Rp104.65T, LPG 3kg Rp80.27T, JBT Pertalite/Solar Rp25.14T. Corroborated by CNBC Indonesia 22 Jan 2026 (Rp210.06T, listrik Rp104.64T, one-basis-point rounding variance). Resolves blueprint OQ-7: the enacted line replaces the RAPBN draft Rp210.1T."
+    },
+    {
+      "id": "id-antara-energy-subsidy-draft",
+      "title": "Anggaran untuk subsidi energi dalam RAPBN 2026 tembus Rp210,1 triliun",
+      "publisher": "Antara News",
+      "url": "https://megapolitan.antaranews.com/berita/422769/anggaran-untuk-subsidi-energi-dalam-rapbn-2026-tembus-rp2101-triliun",
+      "retrieved_at": "2026-07-28",
+      "period": "RAPBN 2026, draft (Aug 2025)",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Draft figure Rp210.1T (BBM plus LPG Rp105.4T, listrik Rp104.6T) from the 15 Aug 2025 Nota Keuangan. Kept for provenance of the draft-vs-enacted distinction; the shipping figure is the enacted Rp210.06T."
+    },
+    {
+      "id": "id-kontan-deficit-outlook-2026",
+      "title": "Defisit APBN 2026 Diproyeksi Melebar jadi Rp734,3 Triliun, Belanja Negara Naik",
+      "publisher": "Kontan",
+      "url": "https://nasional.kontan.co.id/news/defisit-apbn-2026-diproyeksi-melebar-jadi-rp-7343-triliun-belanja-negara-naik",
+      "retrieved_at": "2026-07-28",
+      "period": "mid-2026 outlook",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Outlook deficit Rp734.3T (2.85 percent). Context only; the enacted target remains 2.68 percent."
+    },
+    {
+      "id": "id-antara-mbg-realisasi-mei2026",
+      "title": "Purbaya sebut realisasi anggaran MBG capai Rp88,15 triliun",
+      "publisher": "Antara News",
+      "url": "https://www.antaranews.com/berita/5595513/purbaya-sebut-realisasi-anggaran-mbg-capai-rp8815-triliun",
+      "retrieved_at": "2026-07-28",
+      "period": "realized, as of May 2026",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "MBG realized spending Rp88.15T through May 2026 for 63.13M beneficiaries (48.9M students, 14.3M non-students), per Menkeu Purbaya Yudhi Sadewa, published 5 Jun 2026. Also documents the 2026 allocation cut Rp335T to Rp268T. Replaces dead gorontalo.antaranews.com/berita/405133. Antara sets og:type to website site-wide."
+    },
+    {
+      "id": "id-kompas-mbg-sppg-mei2026",
+      "title": "Anggaran MBG Terserap Rp 88,15 Triliun hingga Mei 2026",
+      "publisher": "Kompas.com",
+      "url": "https://money.kompas.com/read/2026/06/06/213559526/anggaran-mbg-terserap-rp-8815-triliun-hingga-mei-2026",
+      "retrieved_at": "2026-07-28",
+      "period": "as of end May 2026",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Pins the SPPG kitchen count: 29,679 operating SPPG attributed directly to Menkeu Purbaya, each serving 500 to 3,000 beneficiaries. Variance note: CNBC 23 May 2026 reported 29,602 at an earlier cutoff; databoks carries 29,679. The shipped figure is 29,679 with this date and source."
+    },
+    {
+      "id": "id-databoks-mbg-chart",
+      "title": "Realisasi Belanja MBG Tembus Rp88 Triliun sampai Mei 2026",
+      "publisher": "Databoks (Katadata)",
+      "url": "https://databoks.katadata.co.id/ekonomi-makro/statistik/6a2653afd21cc/realisasi-belanja-mbg-tembus-rp88-triliun-sampai-mei-2026",
+      "retrieved_at": "2026-07-28",
+      "period": "as of May 2026",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Chart corroboration of Rp88.15T, 63.13M beneficiaries, 29,679 SPPG. og:image is a rendered chart thumbnail."
+    },
+    {
+      "id": "id-cnbc-mbg-workers-suppliers",
+      "title": "Program MBG Serap 1,28 Juta Tenaga Kerja, UMKM-Peternak Kecipratan",
+      "publisher": "CNBC Indonesia",
+      "url": "https://www.cnbcindonesia.com/news/20260523162405-4-737426/program-mbg-serap-128-juta-tenaga-kerja-umkm-peternak-kecipratan",
+      "retrieved_at": "2026-07-28",
+      "period": "as of May 2026",
+      "kind": "outlet",
+      "self_reported": true,
+      "liveness": "live",
+      "notes": "BGN self-reported: 1.28M program workers; 142,387 suppliers (59,921 UMKM, 13,306 koperasi, 1,410 BUMDes, 690 KDKMP, 157 BUMDesma, 66,903 other). URL slug reads 128-juta but the title and body say 1,28 juta (1.28 million). Article also reports 29,602 SPPG at its 23 May cutoff."
+    },
+    {
+      "id": "id-kompas-mbg-workers-feb2026",
+      "title": "MBG Disebut Serap 987.000 Tenaga Kerja, 40.000 UMKM Ikut Bergerak",
+      "publisher": "Kompas.com",
+      "url": "https://money.kompas.com/read/2026/02/15/181700126/mbg-disebut-serap-987.000-tenaga-kerja-40.000-umkm-ikut-bergerak",
+      "retrieved_at": "2026-07-28",
+      "period": "as of February 2026",
+      "kind": "outlet",
+      "self_reported": true,
+      "liveness": "live",
+      "notes": "The February worker baseline, re-sourced live (reverses blueprint D-6 default with evidence). HONESTY CAVEAT: a derived estimate, not a headcount; the article shows the arithmetic (about 47 kitchen workers per SPPG times about 21,000 SPPG equals 987,000), attributed to BGN via press statement. Any rendering must flag estimate and self_reported."
+    },
+    {
+      "id": "id-cnn-bgn-poisoning-6517",
+      "title": "Kepala BGN: Korban Keracunan MBG Capai 6.517 Orang Sejak Januari 2025",
+      "publisher": "CNN Indonesia",
+      "url": "https://www.cnnindonesia.com/nasional/20251001125738-20-1279693/kepala-bgn-korban-keracunan-mbg-capai-6517-orang-sejak-januari-2025",
+      "retrieved_at": "2026-07-28",
+      "period": "running count since January 2025, stated 1 Oct 2025",
+      "kind": "outlet",
+      "self_reported": true,
+      "liveness": "live",
+      "notes": "BGN head Dadan Hindayana at Komisi IX DPR, 1 Oct 2025. BGN counting incidents in its own program: flagged self-reported. Sibling BGN figure 6,457 (per 30 Sep, regional breakdown) appears in comparison coverage; the 4,711 figure in the PRD was never verified and does not ship."
+    },
+    {
+      "id": "id-bloombergtechnoz-bpom-9089",
+      "title": "Beda Data KLB Keracunan MBG: BPOM vs BGN",
+      "publisher": "Bloomberg Technoz",
+      "url": "https://www.bloombergtechnoz.com/detail-news/85713/beda-data-klb-keracunan-mbg-bpom-vs-bgn",
+      "retrieved_at": "2026-07-28",
+      "period": "as of 1 Oct 2025",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Strongest citation for the BPOM count: direct quote of BPOM head Taruna Ikrar, 103 KLB with 9,089 victims across 83 kabupaten/kota in 28 provinces. Footnote: Tribunnews national reported 9,083 from the same briefing; majority and direct-quote evidence favor 9,089. No BPOM primary press release exists online (pom.go.id carries none; bpom.go.id does not resolve)."
+    },
+    {
+      "id": "id-tribunbangka-bpom-infographic",
+      "title": "Beda Data Korban Keracunan MBG: BPOM 9.089 Orang, BGN Hanya 6.457 Orang",
+      "publisher": "Tribun Bangka",
+      "url": "https://bangka.tribunnews.com/news/1664970/beda-data-korban-keracunan-mbg-bpom-9089-orang-bgn-hanya-6457-orang",
+      "retrieved_at": "2026-07-28",
+      "period": "as of 2 Oct 2025",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Corroboration with the only story-specific data infographic (og:image 1200x675, 2 Oct 2025)."
+    },
+    {
+      "id": "id-cnn-jppi-8649",
+      "title": "Data JPPI: Per September, 8.649 Anak Keracunan MBG",
+      "publisher": "CNN Indonesia",
+      "url": "https://www.cnnindonesia.com/nasional/20250929085833-20-1278711/data-jppi-per-september-8649-anak-keracunan-mbg",
+      "retrieved_at": "2026-07-28",
+      "period": "per 27 Sep 2025",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Civil-society network tally (JPPI): 8,649, including 3,289 new cases in the last two weeks of September."
+    },
+    {
+      "id": "id-ppatk-capaian-2025",
+      "title": "Catatan Capaian Strategis PPATK Tahun 2025 (siaran pers B/001/HM.05/3.1/I/2026)",
+      "publisher": "PPATK",
+      "url": "https://www.ppatk.go.id/siaran_pers/read/1594/",
+      "retrieved_at": "2026-07-28",
+      "period": "2024 and 2025 full-year series, published 28 Jan 2026",
+      "kind": "official",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Single primary source for all judol series figures: turnover Rp359.81T (2024) to Rp286.84T (2025, minus 20 percent, 422.1M transactions); net deposits Rp51.3T (2024) to Rp36.01T (2025); 12.3M depositors. Page has no og meta and a generic title: cards need a locally authored headline and image."
+    },
+    {
+      "id": "id-antara-judol-q1-2026",
+      "title": "PPATK: Perputaran dana judi online Rp40,3 triliun pada triwulan I-2026",
+      "publisher": "Antara News",
+      "url": "https://www.antaranews.com/berita/5663168",
+      "retrieved_at": "2026-07-28",
+      "period": "Q1 2026, published 23 Jul 2026",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Q1 2026 turnover Rp40.3T with total deposits Rp10.59T, quoted to PPATK head Ivan Yustiavandana. Bonus context: QRIS was about 78.5 percent of 2025 deposit frequency."
+    },
+    {
+      "id": "id-cnbc-judol-2025",
+      "title": "PPATK: Perputaran Dana Judi Online Turun 20%, Tersisa Rp286,84 T",
+      "publisher": "CNBC Indonesia",
+      "url": "https://www.cnbcindonesia.com/news/20260723082823-4-753122/ppatk-perputaran-dana-judi-online-turun-20-tersisa-rp28684-t",
+      "retrieved_at": "2026-07-28",
+      "period": "2025 full year, published 23 Jul 2026",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Secondary corroboration of the PPATK 2024-2025 turnover series."
+    },
+    {
+      "id": "id-kompas-judol-deposits",
+      "title": "PPATK Catat Ada Penurunan Perputaran Uang Judol di Era Prabowo",
+      "publisher": "Kompas.com",
+      "url": "https://nasional.kompas.com/read/2026/07/23/22413221/ppatk-catat-ada-penurunan-perputaran-uang-judol-di-era-prabowo",
+      "retrieved_at": "2026-07-28",
+      "period": "2024 and 2025 full-year series, published 23 Jul 2026",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Secondary corroboration of net deposits Rp51.3T to Rp36.01T. Kompas renders currency with a space (Rp 51,3): match on digits."
+    },
+    {
+      "id": "id-pajak-pmk131",
+      "title": "PMK 131/2024: Tarif PPN Sebelas-Dua Belas",
+      "publisher": "Direktorat Jenderal Pajak",
+      "url": "https://www.pajak.go.id/en/node/113453",
+      "retrieved_at": "2026-07-28",
+      "period": "effective 1 Jan 2025",
+      "kind": "official",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "The 12 percent rate applies only to luxury goods under PPnBM; non-luxury keeps an effective 11 percent via the 11/12 nilai lain base. Signed 31 Dec 2024. Canonical og:image is served over plain http (secure variant in og:image:secure_url)."
+    },
+    {
+      "id": "id-antara-ppn-luxury",
+      "title": "Kemenkeu rilis aturan PPN 12 persen hanya untuk barang mewah",
+      "publisher": "Antara News",
+      "url": "https://www.antaranews.com/berita/4559522/kemenkeu-rilis-aturan-ppn-12-persen-hanya-untuk-barang-mewah",
+      "retrieved_at": "2026-07-28",
+      "period": "published 1 Jan 2025",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "THE FRESH-DEMO ARTICLE (blueprint 7.2.9): national wire, stable, clean topical og:image at 1200x800, states the PMK 131/2024 scope clarification in the headline."
+    },
+    {
+      "id": "id-bisnis-ppn-luxury",
+      "title": "PPN 12% Barang Mewah Berlaku Penuh mulai Februari 2025, Begini Penjelasannya",
+      "publisher": "Bisnis.com",
+      "url": "https://ekonomi.bisnis.com/read/20250102/259/1828262/ppn-12-barang-mewah-berlaku-penuh-mulai-februari-2025-begini-penjelasannya",
+      "retrieved_at": "2026-07-28",
+      "period": "published 2 Jan 2025",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "The original demo URL restored at its full slug; the bare-ID form 403s (anti-bot on non-canonical URLs), it was never dead. Richest body of all PPN candidates. Enters url_index as a legacy alias of ppn-panic."
+    },
+    {
+      "id": "id-setneg-ppn-stimulus",
+      "title": "Keterangan Pers Presiden tentang PPN 12 Persen Dikenakan Hanya terhadap Barang dan Jasa Mewah",
+      "publisher": "Sekretariat Negara",
+      "url": "https://www.setneg.go.id/baca/index/keterangan_pers_presiden_tentang_pajak_pertambahan_nilai_ppn_12_persen_dikenakan_hanya_terhadap_barang_dan_jasa_mewah",
+      "retrieved_at": "2026-07-28",
+      "period": "stated early Jan 2025",
+      "kind": "official",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Rp38.6T stimulus stated twice in the presidential transcript, with components: 10kg rice for 16M recipients, 50 percent electricity discount up to 2,200 VA, PPh relief for salaries to Rp10M/month, UMKM PPh exemption under Rp500M/year."
+    },
+    {
+      "id": "id-aljazeera-2019-riots",
+      "title": "Rights group: 10 unlawfully killed in Indonesia election riots",
+      "publisher": "Al Jazeera",
+      "url": "https://www.aljazeera.com/amp/news/2019/10/29/rights-group-10-unlawfully-killed-in-indonesia-election-riots",
+      "retrieved_at": "2026-07-28",
+      "period": "May 2019 riots, reported Oct 2019",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Komnas HAM final finding: 10 unlawfully killed, 4 minors. Case B-01 anchor."
+    },
+    {
+      "id": "id-liputan6-amnesty-2019",
+      "title": "Amnesty International Pertanyakan Nasib Korban Tewas Kerusuhan 21-22 Mei 2019",
+      "publisher": "Liputan6",
+      "url": "https://www.liputan6.com/news/read/4007568/amnesty-international-pertanyakan-nasib-korban-tewas-kerusuhan-21-22-mei-2019",
+      "retrieved_at": "2026-07-28",
+      "period": "May 2019 riots",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Amnesty corroboration for B-01. Stored at full slug; bare-ID form relies on a redirect."
+    },
+    {
+      "id": "id-tempo-cekfakta-60",
+      "title": "[Fakta atau Hoaks] Benarkah Ada 60 Korban Meninggal dalam Kerusuhan 21-22 Mei 2019?",
+      "publisher": "Tempo Cek Fakta",
+      "url": "https://www.tempo.co/cekfakta/-fakta-atau-hoaks-benarkah-ada-60-korban-meninggal-dalam-kerusuhan-21-22-mei-2019--251847",
+      "retrieved_at": "2026-07-28",
+      "period": "May 2019, debunk published 24 May 2019",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Satisfies blueprint 7.2.10: the fabricated 60 shot dead figure MAY be named with this exact link. The legacy cekfakta.tempo.co/fakta/295 form now soft-redirects to the tempo.co homepage (returns 200 but loses the article): never cite the short form. Case-library quote exemption applies (institutional debunk language inside quotation marks with citation)."
+    },
+    {
+      "id": "id-suara-kominfo-12hoax",
+      "title": "Kominfo Ungkap 12 Hoaks dan Fakta soal Omnibus Law Cipta Kerja",
+      "publisher": "Suara.com",
+      "url": "https://www.suara.com/news/2020/10/10/194645/kominfo-ungkap-12-hoaks-dan-fakta-soal-omnibus-law-cipta-kerja",
+      "retrieved_at": "2026-07-28",
+      "period": "Oct 2020",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Satisfies blueprint 7.2.10 for the Kominfo 12-hoax catalogue count. The government primary is gone: kominfo.go.id no longer resolves (ministry rebranded to Komdigi; legacy archive not served). Never cite a kominfo.go.id URL."
+    },
+    {
+      "id": "id-kompas-omnibus-8hoax",
+      "title": "Simak, Ini 8 Hoaks dan Fakta yang Banyak Beredar soal Omnibus Law Cipta Kerja",
+      "publisher": "Kompas.com",
+      "url": "https://www.kompas.com/tren/read/2020/10/09/194500465/simak-ini-8-hoaks-dan-fakta-yang-banyak-beredar-soal-omnibus-law-cipta",
+      "retrieved_at": "2026-07-28",
+      "period": "Oct 2020",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "EIGHT hoaxes, not twelve: the PRD Appendix F mislabels this article. Cite only as an 8-item list; the 12-item count belongs to the Suara/Kominfo source."
+    },
+    {
+      "id": "id-jakartapost-makassar-fire",
+      "title": "Protest blaze kills 3 as anger erupts over ojek driver death",
+      "publisher": "The Jakarta Post",
+      "url": "https://www.thejakartapost.com/indonesia/2025/08/30/protest-blaze-kills-3-as-anger-erupts-over-ojek-driver-death",
+      "retrieved_at": "2026-07-28",
+      "period": "30 Aug 2025",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Makassar DPRD fire, 3 deaths confirmed (some outlets report 4). Stored at the no-.html canonical (the .html form 301s here)."
+    },
+    {
+      "id": "id-jakartaglobe-protest-toll",
+      "title": "Ten Killed in Week of Protests and Riots Across Indonesia",
+      "publisher": "Jakarta Globe",
+      "url": "https://jakartaglobe.id/news/ten-killed-in-week-of-protests-and-riots-across-indonesia",
+      "retrieved_at": "2026-07-28",
+      "period": "Aug-Sep 2025",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Nationwide toll reported 7 to 10 by outlet; per blueprint 7.2.10 the product uses the Makassar 3 with citation and avoids a single nationwide total. og:image is 960x620 webp, below the 1200 ideal."
+    },
+    {
+      "id": "id-detik-timeline-aug2025",
+      "title": "Lini Masa Demo Agustus 2025: Dari Joget DPR Hingga Rumah Sahroni Dijarah",
+      "publisher": "Detik Jabar",
+      "url": "https://www.detik.com/jabar/berita/d-8088075/lini-masa-demo-agustus-2025-dari-joget-dpr-hingga-rumah-sahroni-dijarah",
+      "retrieved_at": "2026-07-28",
+      "period": "Aug 2025, published 30 Aug 2025",
+      "kind": "outlet",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Case B-03 timeline anchor including the Affan Kurniawan tragedy and the 29-30 Aug escalations. Stored at full slug; detik hard-404s bare-ID forms without redirecting."
+    },
+    {
+      "id": "en-cbo-61877",
+      "title": "CBO's Updated Projections of the Budgetary Effects of Tariffs as of November 15, 2025 (publication 61877)",
+      "publisher": "Congressional Budget Office",
+      "url": "https://www.cbo.gov/publication/61877",
+      "retrieved_at": "2026-07-28",
+      "period": "tariffs enacted 6 Jan to 15 Nov 2025, effects 2025-2035",
+      "kind": "official",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Primary deficits reduced $2.5T over 11 years, plus $0.5T lower interest outlays. cbo.gov 403s all automated clients domain-wide; verified live via search corroboration 2026-07-28 (snapshot HTTP 403). Supersedes the Aug 2025 publication 61697, which is not cited to avoid a title collision and stale figures."
+    },
+    {
+      "id": "en-crfb-tariff-projections",
+      "title": "CBO's New Projections Show $1 Trillion Less in Tariff Savings",
+      "publisher": "Committee for a Responsible Federal Budget",
+      "url": "https://www.crfb.org/blogs/cbos-new-projections-show-1-trillion-less-tariff-savings",
+      "retrieved_at": "2026-07-28",
+      "period": "through FY2035, published 25 Nov 2025",
+      "kind": "ngo",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "$3.0T debt reduction including interest, revised down from $4.0T in August. Carries the IEEPA contingency: if SCOTUS voids IEEPA tariffs, primary impact drops to about $0.7T ($0.9T with interest): a live caveat on every tariff-revenue figure. og:image is CRFB's generic site-wide card."
+    },
+    {
+      "id": "en-yale-budgetlab-apr2026",
+      "title": "State of U.S. Tariffs: April 2, 2026",
+      "publisher": "The Budget Lab at Yale",
+      "url": "https://budgetlab.yale.edu/research/state-us-tariffs-april-2-2026",
+      "retrieved_at": "2026-07-28",
+      "period": "as of 2 Apr 2026, figures in 2025 dollars",
+      "kind": "academic",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Per-household cost pairs, 2025 dollars, scenario-consistent: Section 122 EXPIRATION $780 pre-substitution to $648 post; EXTENSION $1,338 pre to $1,130 post. The PRD's $1,700 does not appear in this report and is banned. Never mix figures across the two scenarios. Effective tariff rate 11.0 percent (highest since 1943)."
+    },
+    {
+      "id": "en-kff-tracking-feb2025",
+      "title": "KFF Health Tracking Poll February 2025: The Public's Views on Global Health and USAID",
+      "publisher": "KFF",
+      "url": "https://www.kff.org/global-health-policy/kff-health-tracking-poll-february-2025-the-publics-views-on-global-health-and-usaid/",
+      "retrieved_at": "2026-07-28",
+      "period": "fielded Feb 2025, published 4 Mar 2025",
+      "kind": "ngo",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Confirmed verbatim on page: average guess 26 percent of federal budget vs about 1 percent actual; 11 percent guessed correctly; support flips 58 to 34 when informed. The $43.8B dollar figure is NOT on this page and does not ship (blueprint 7.2.11 default). Automated extraction trap: the string 11 percent appears five times with four meanings; anchor on the correctly-estimating sentence. og:image is the actual flip chart at 1680x940."
+    },
+    {
+      "id": "en-cato-pa1003",
+      "title": "Immigrants Cut Victimization Rates, Boost Crime Reporting (Policy Analysis No. 1003)",
+      "publisher": "Cato Institute",
+      "url": "https://www.cato.org/policy-analysis/immigrants-cut-victimization-rates-boost-crime-reporting",
+      "retrieved_at": "2026-07-28",
+      "period": "NCVS 2017-2023, published Aug 2025",
+      "kind": "ngo",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Immigrants 44 percent less likely to be violently victimized; immigrant victims 29 percent more likely to report violent crime. LIVENESS TRAP: the page returns HTTP 200 with an Incapsula challenge body to automated clients (soft block); verified live via search corroboration. Fetchable artifact: the PDF at cato.org/sites/cato.org/files/2025-08/PA%201003_update.pdf (curl 200)."
+    },
+    {
+      "id": "en-pnas-light-2020",
+      "title": "Comparing crime rates between undocumented immigrants, legal immigrants, and native-born US citizens in Texas (DOI 10.1073/pnas.2014704117)",
+      "publisher": "PNAS",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2014704117",
+      "retrieved_at": "2026-07-28",
+      "period": "Texas data 2012-2018, published Dec 2020",
+      "kind": "academic",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "US-born citizens over 2x more likely to be arrested for violent crimes than undocumented immigrants. pnas.org 403s automated clients; verified live via search corroboration (snapshot HTTP 403). Fetchable mirror: pmc.ncbi.nlm.nih.gov/articles/PMC7768760."
+    },
+    {
+      "id": "en-fbi-2024-crime",
+      "title": "FBI Releases 2024 Reported Crimes in the Nation Statistics",
+      "publisher": "FBI",
+      "url": "https://www.fbi.gov/news/press-releases/fbi-releases-2024-reported-crimes-in-the-nation-statistics",
+      "retrieved_at": "2026-07-28",
+      "period": "2024 vs 2023, 16,000+ agencies covering 95.6 percent of population",
+      "kind": "official",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Violent crime down an estimated 4.5 percent; murder and non-negligent manslaughter down 14.9 percent. fbi.gov 403s automated clients; verified live via search corroboration (snapshot HTTP 403). Context note: a House Oversight letter disputes quiet revisions to FBI statistics; the product renders the official figures with their period label."
+    },
+    {
+      "id": "en-lancet-usaid",
+      "title": "Evaluating the impact of two decades of USAID interventions and projecting the effects of defunding on mortality up to 2030 (DOI 10.1016/S0140-6736(25)01186-9)",
+      "publisher": "The Lancet",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01186-9/fulltext",
+      "retrieved_at": "2026-07-28",
+      "period": "published 30 Jun 2025; projection horizon to 2030",
+      "kind": "academic",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "14.05M additional deaths by 2030 (UI 8.48-19.66M, including about 4.5M under five); about 91.8M deaths prevented 2001-2021. Stored at the canonical journals/lancet PII form. thelancet.com 403s automated clients; verified live via search corroboration (snapshot HTTP 403). Fetchable mirror: pubmed.ncbi.nlm.nih.gov/40609560. STALENESS: a Feb 2026 follow-up reportedly revises the projection to 9.4M; the June 2025 figure must always carry its date, and Gate C should verify a citable revision source."
+    },
+    {
+      "id": "en-factcheck-tariffs",
+      "title": "Trump's Tariffs Don't Come Close to Funding Everything He's Proposed",
+      "publisher": "FactCheck.org",
+      "url": "https://www.factcheck.org/2026/01/trumps-tariffs-dont-come-close-to-funding-everything-hes-proposed/",
+      "retrieved_at": "2026-07-28",
+      "period": "published 20 Jan 2026",
+      "kind": "ngo",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "Grounding piece for tariffs-pay. Notes IEEPA tariffs are 67 percent of tariff revenue collected (CBP data) with the SCOTUS case pending. Scrape trap: page HTML contains a second title tag from an embedded widget; take the first."
+    },
+    {
+      "id": "en-crfb-top13-2025",
+      "title": "Top 13 Fiscal Charts of 2025",
+      "publisher": "Committee for a Responsible Federal Budget",
+      "url": "https://www.crfb.org/blogs/top-13-fiscal-charts-2025",
+      "retrieved_at": "2026-07-28",
+      "period": "through 2034, published 31 Dec 2025",
+      "kind": "ngo",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "OBBBA adds $3.4T to primary deficits, $718B interest, $4.1T total through 2034 (conventional scoring)."
+    },
+    {
+      "id": "en-treasury-mts-fy2025",
+      "title": "Final Monthly Treasury Statement, Fiscal Year 2025 (September 2025 issue)",
+      "publisher": "U.S. Department of the Treasury",
+      "url": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_202509.pdf",
+      "retrieved_at": "2026-07-28",
+      "period": "FY2025 (Oct 2024 to Sep 2025)",
+      "kind": "official",
+      "self_reported": false,
+      "liveness": "live",
+      "notes": "The tariff-ratio source (blueprint 7.2.11): customs duties net $194,866M ($194.9B; gross $202,357M less $7,492M refunds, Table 4) and total federal net receipts $5,234,616M ($5.23T). Derived ratio 3.7 percent: the PRD's under-2-percent phrasing is contradicted by the primary document and never ships. Use net figures for both sides. Directly fetchable PDF (curl 200, 4.0 MB)."
+    }
+  ]
+}

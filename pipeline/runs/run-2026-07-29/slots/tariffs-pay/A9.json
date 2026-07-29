@@ -1,0 +1,253 @@
+{
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "The claim moves in four steps: tariffs go on imported goods, the collections arrive as federal revenue, that revenue reaches the scale of everything he has proposed, and all of it is paid for out of tariff money.",
+          "els": [
+            "tariffs-pay-claim-map",
+            "tariffs-pay-n-lever",
+            "tariffs-pay-n-revenue",
+            "tariffs-pay-n-scale",
+            "tariffs-pay-n-funded"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Step one is carried from both ends, with $194.9B in collections recorded for FY2025 and the same stream projected forward by the budget office and the fiscal watchdog.",
+          "els": [
+            "tariffs-pay-e-lever-revenue",
+            "tariffs-pay-n-revenue"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Step two has no entry behind it, and step three has neither an entry nor a line in the article, so the move from a stream of that size to a bill actually settled comes from the order of two sentences rather than from what either one says.",
+          "els": [
+            "tariffs-pay-e-revenue-scale",
+            "tariffs-pay-e-scale-funded"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "The same closing statement puts that tariff line inside $5.23T of total federal receipts on the same net basis, and it never records what any line pays for, because receipts arrive as one pool.",
+          "els": [
+            "tariffs-pay-money-flow",
+            "tariffs-pay-mf-customs"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Outside the frame stand the importer of record who meets the duty at entry, the domestic producer pricing up under the tariff umbrella, and the exporter facing countermeasures; the incidence panel prices the household side of the extension scenario at $1,338 per household, 2025 dollars, before buyers shift, and $1,130 per household, 2025 dollars, after.",
+          "els": [
+            "tariffs-pay-incidence",
+            "tariffs-pay-inc-importers",
+            "tariffs-pay-inc-households-extension",
+            "tariffs-pay-h-first-payer",
+            "tariffs-pay-h-price-umbrella",
+            "tariffs-pay-h-retaliation-offsets"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "The scale panel counts that one stream twice, $2.5T against primary deficits for 2025 to 2035 and $3.0T as debt reduction including interest through FY2035, and sets both beside a $4.1T score of the enacted package that ends in 2034; the two counts are not added to each other.",
+          "els": [
+            "tariffs-pay-scale-check",
+            "tariffs-pay-sc-cbo-primary",
+            "tariffs-pay-sc-crfb-debt",
+            "tariffs-pay-h-cost-side"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Langkah pertama rantainya berdiri di atas dokumen: tarif menyeluruh dikenakan atas barang impor, pungutannya masuk sebagai penerimaan federal, dan laporan penutup kas negara mencatat US$194,9 miliar untuk tahun anggaran 2025.",
+          "els": [
+            "tariffs-pay-claim-map",
+            "tariffs-pay-n-lever",
+            "tariffs-pay-n-revenue",
+            "tariffs-pay-e-lever-revenue"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Dua langkah sesudahnya berdiri di tempat lain: tidak ada entri registri sumber yang menyatakan arus itu mencapai skala biaya penuh semua usulannya, dan langkah menuju semuanya terbayar dari uang tarif tidak dinyatakan kalimat mana pun, hanya oleh urutan kedua kalimat itu.",
+          "els": [
+            "tariffs-pay-n-scale",
+            "tariffs-pay-e-revenue-scale",
+            "tariffs-pay-n-funded",
+            "tariffs-pay-e-scale-funded"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Panel aliran uang menaruh pos itu pada tempatnya, US$194,9 miliar bea masuk neto di dalam total penerimaan federal neto US$5,23 triliun, dan laporan yang sama tidak menyebut pos itu membiayai apa: penerimaan tiba sebagai satu kolam bersama.",
+          "els": [
+            "tariffs-pay-money-flow",
+            "tariffs-pay-mf-customs"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Di luar bingkai berdiri importir yang melunasi bea di perbatasan beserta rumah tangga di belakangnya yang menanggung beban itu lewat harga, produsen dalam negeri yang justru menaikkan harga di bawah payung tarif sehingga sebagian dari yang dibayar pembeli menjadi pendapatan mereka dan tidak pernah sampai ke kas negara, dan eksportir yang menghadapi balasan dagang. Wewenang tarif daruratnya sendiri kini sedang diperiksa pengadilan.",
+          "els": [
+            "tariffs-pay-h-first-payer",
+            "tariffs-pay-h-price-umbrella",
+            "tariffs-pay-h-retaliation-offsets",
+            "tariffs-pay-h-refund-contingency"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Panel insidensi menyusun pembayarnya menurut waktu: importir melunasi bea di perbatasan lebih dulu, lalu rumah tangga menanggung US$780 per rumah tangga, dolar 2025 pada skenario jadwal tarif berakhir dan US$1.338 per rumah tangga, dolar 2025 pada skenario diperpanjang. Peralihan belanja yang menurunkan kedua angka itu sekaligus menipiskan basis tempat pungutannya ditarik.",
+          "els": [
+            "tariffs-pay-incidence",
+            "tariffs-pay-inc-importers",
+            "tariffs-pay-inc-households-expiry",
+            "tariffs-pay-inc-households-extension",
+            "tariffs-pay-h-import-base"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Panel skala menghitung satu arus dua kali, US$2,5 triliun sebagai pengurang defisit primer untuk 2025 sampai 2035 dan US$3,0 triliun termasuk bunga sampai tahun anggaran 2035, terhadap skor konvensional US$4,1 triliun sampai 2034 yang tidak pernah tampil di halaman aslinya. Kedua hitungan itu tidak dijumlahkan, jendelanya tidak berakhir pada tahun yang sama, dan US$718 miliar bunga berjalan pada tahun-tahun menunggu di antaranya.",
+          "els": [
+            "tariffs-pay-scale-check",
+            "tariffs-pay-sc-cbo-primary",
+            "tariffs-pay-sc-crfb-debt",
+            "tariffs-pay-h-cost-side",
+            "tariffs-pay-h-interest-gap"
+          ]
+        }
+      ]
+    }
+  },
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "At what point does this claim chain stop being carried by a source registry entry?",
+          "id": "Di titik mana rantai klaim ini berhenti ditopang entri registri sumber?"
+        },
+        "options": [
+          {
+            "en": "At the first step, because the tariff collections are never recorded as federal revenue",
+            "id": "Pada langkah pertama, karena pungutan tarif tidak pernah tercatat sebagai penerimaan federal"
+          },
+          {
+            "en": "At the step from tariff revenue to the full cost of everything proposed, and again at the step to all of it being paid for",
+            "id": "Pada langkah dari penerimaan tarif menuju skala biaya penuh semua usulannya, lalu sekali lagi pada langkah menuju semuanya terbayar"
+          },
+          {
+            "en": "It does not: the chain holds end to end, because the revenue figure comes from an official Treasury document",
+            "id": "Rantai itu tersambung penuh, karena angka penerimaannya diambil dari dokumen resmi kas negara"
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The claim map marks the first step as carried by a source: the Treasury closing statement records the customs line for FY2025. The two steps after it are marked differently, one with no registry entry stating it and one with no sentence anywhere stating it.",
+          "id": "Peta klaim menandai langkah pertama sebagai ditopang sumber: laporan penutup kas negara mencatat pos bea masuknya untuk tahun anggaran 2025. Dua langkah sesudahnya ditandai lain, satu tanpa entri registri yang menyatakannya dan satu tanpa kalimat mana pun yang menyatakannya."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "The revenue is being measured against the cost of everything proposed. What is that cost side, and what window does it run on?",
+          "id": "Penerimaan tarif itu diukur terhadap biaya semua usulannya. Angka mana yang menjadi sisi biaya itu, dan sampai tahun berapa jendelanya berjalan?"
+        },
+        "options": [
+          {
+            "en": "$4.1T, the conventional score of the enacted package, through 2034",
+            "id": "US$4,1 triliun, skor konvensional paket yang telah disahkan, sampai 2034"
+          },
+          {
+            "en": "$2.5T, the same figure the budget office puts on the tariffs, for 2025 to 2035",
+            "id": "US$2,5 triliun, angka yang dipasang kantor anggaran pada tarifnya sendiri, untuk 2025 sampai 2035"
+          },
+          {
+            "en": "$5.23T, total federal receipts, for FY2025",
+            "id": "US$5,23 triliun, total penerimaan federal, untuk tahun anggaran 2025"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The scale panel runs against a $4.1T score of the enacted package that ends in 2034, a figure that never appears on the original page, while the tariff projections run out to 2035, so the score and the projections do not end in the same year. The $2.5T is the stream being measured rather than the thing it is measured against, and the $5.23T is the receipts pool the tariff line sits inside.",
+          "id": "Panel skala membawa pembaginya ke halaman, US$4,1 triliun sampai 2034, angka yang tidak pernah tampil di halaman aslinya, sementara proyeksi arus tarifnya berjalan sampai 2035, jadi keduanya tidak berakhir pada tahun yang sama. US$2,5 triliun adalah arus yang sedang diukur, bukan pembanding tempat arus itu diukur, dan US$5,23 triliun adalah kolam penerimaan tempat pos tarifnya berada."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "Before the tariff money is booked as federal revenue, whose books does it leave first?",
+          "id": "Sebelum uang tarif tercatat sebagai penerimaan federal, dari pembukuan siapa uang itu keluar lebih dulu?"
+        },
+        "options": [
+          {
+            "en": "The importer of record at the border, and then the buyer at the counter as the charge passes through prices",
+            "id": "Importir dalam negeri di perbatasan, lalu pembeli di kasir ketika bebannya diteruskan lewat harga"
+          },
+          {
+            "en": "The foreign exporter, at the point of shipping",
+            "id": "Eksportir asing yang mengirimkan barangnya"
+          },
+          {
+            "en": "The domestic producer, absorbing it through a lower selling price",
+            "id": "Produsen dalam negeri, yang menanggungnya lewat harga jual yang lebih rendah"
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The incidence panel puts the duty-paying importer in the earliest column, with the household behind it taking the charge through prices, and it reads each scenario as a pair of figures, before buyers shift and after. The domestic producer sits on the opposite side: under the tariff umbrella their prices can go up instead, and that money never reaches the Treasury.",
+          "id": "Panel insidensi menaruh importir pembayar bea pada kolom paling awal, lalu rumah tangga yang menerimanya lewat harga, dan panel itu membaca tiap skenario sebagai sepasang angka, sebelum peralihan belanja dan sesudahnya. Produsen dalam negeri muncul di sisi berlawanan: di bawah payung tarif, harga mereka justru bisa naik, dan uangnya tidak sampai ke kas negara."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before the panels open: which side of this claim is the one that goes missing?",
+      "id": "Sebelum panelnya terbuka: sisi mana dari klaim ini yang paling mungkin hilang dari halaman?"
+    },
+    "options": [
+      {
+        "en": "The party that meets the duty before any of it becomes revenue",
+        "id": "Siapa yang membayar bea itu lebih dulu, sebelum uangnya tercatat sebagai penerimaan"
+      },
+      {
+        "en": "The price of everything proposed, the number the revenue is being compared against",
+        "id": "Berapa harga total semua usulan yang menjadi pembanding penerimaan itu"
+      },
+      {
+        "en": "The year each figure runs to, and whether two counts of one stream can be stacked",
+        "id": "Jendela waktu tiap angka, dan apakah dua hitungan atas satu arus yang sama bisa ditumpuk"
+      },
+      {
+        "en": "The legal authority the collections rest on, and what becomes of money already booked if it goes",
+        "id": "Dasar hukum pungutannya, dan apa yang terjadi pada uang yang sudah tercatat jika dasar itu hilang"
+      }
+    ]
+  },
+  "editorial_notes": [
+    "INPUT GAP: slots/tariffs-pay/A9.input.json is absent from the run tree (only A5.input.json, cluster.json, steps.json are on disk), and the panels JSON supplied in the reconciler prompt was truncated mid-spine. The full el universe could not be verified against the arbiter. Both bundles were therefore kept as authored and the el_id sets checked for internal consistency only. A human reviewer must diff the 24 bound el_ids against the shipping panels before the fidelity gate.",
+    "BINDING ASYMMETRY (accepted, not repaired): EN binds 20 el_ids, ID binds 24. The EN set is a strict subset of the ID set, so no EN binding can dangle unless the matching ID binding dangles too. The four ID-only bindings are tariffs-pay-h-refund-contingency, tariffs-pay-inc-households-expiry, tariffs-pay-h-import-base, tariffs-pay-h-interest-gap.",
+    "COVERAGE VERIFIED: all four panel root el_ids (tariffs-pay-claim-map, tariffs-pay-money-flow, tariffs-pay-incidence, tariffs-pay-scale-check) are covered by at least one sentence in BOTH locales, which is the rule A9.md states. No sentence repeats an el_id within itself. No coverage repair was needed, so both narration bundles ship VERBATIM as authored, with zero edits to either locale.",
+    "CROSS-LOCALE FACT CHECK, household figures: EN carries the extension scenario as a before/after pair, $1,338 then $1,130 per household, 2025 dollars. ID carries the before-substitution figure for each of the two scenarios, US$780 for expiry and US$1.338 for extension. These are two different cuts of one matrix, not a disagreement: EN's dropped sparring option named $648 as the after-substitution figure on the expiry scenario, which is only consistent if US$780 is the before-substitution figure on that same scenario. The panels should confirm the four-cell matrix reads 780/648 for expiry and 1,338/1,130 for extension.",
+    "CROSS-LOCALE FACT CHECK, everything else: $194.9B FY2025 customs, $5.23T FY2025 total receipts, $2.5T for 2025 to 2035, $3.0T through FY2035, and the $4.1T score ending 2034 appear identically in both locales. The $718B interest figure and the emergency-authority litigation appear in ID only, with no EN statement contradicting either.",
+    "SPARRING, mechanism: the ID authoring is the base. Its question asks where the chain stops being carried by a registry entry, which is a mechanism question about the claim chain itself; the EN authoring had filed a who-pays question under mechanism, which is an incidence question by move taxonomy. EN was authored natively at correct index 1 to match. Wrong option 2 is the one the story actually offers, that an official Treasury figure at step one carries the whole chain, and the claim map is what settles it.",
+    "SPARRING, denominator: the EN authoring is the base and ships as authored at correct index 0. It is the stronger of the two because it asks for the figure AND the window in one question, and because its wrong option 1 ($2.5T) is the sharpest trap available, mistaking the stream being measured for the thing it is measured against. The ID authoring's wrong option ($194.9B) was the weaker distractor and was replaced. ID was authored natively against the EN option order.",
+    "SPARRING, denominator, one fact dropped: the ID authoring's note described the $4.1T basis as 'defisit primer ditambah bunga'. The EN authoring never characterises the $4.1T that way, and with A9.input.json missing there was no arbiter to settle which basis the score is on. The characterisation was dropped from both notes rather than propagated into EN. If the scale panel does carry that basis, a reviewer may restore it to both locales together.",
+    "SPARRING, denominator, one fact promoted: the ID authoring's observation that the $4.1T never appears on the original page was carried into the EN note as well, because EN narration v-3 already states the same thing ('neither an entry nor a line in the article'). Both notes now say it.",
+    "SPARRING, incidence: the ID authoring is the base at correct index 0, whose books the money leaves first. This is the payoff of prediction tap option 0 in both locales and the reveal the whole claim turns on, since the intuitive answer is the foreign exporter. EN was authored natively against the ID option order. Wrong option 2 (the domestic producer absorbing it through a lower price) is wrong in a direction the reader can see afterwards: the price-umbrella element has domestic producers pricing UP, in the opposite direction, with money that never reaches the Treasury.",
+    "SPARRING, incidence, one question dropped: the EN authoring's incidence question was a figure recall on $1,130 with $648 and $1,338 as distractors. It tested a real trap (mixing the after-substitution figure of one scenario with the before-substitution figure of the other) but it is answerable only by recall, not by reasoning, and the who-pays-first question is the stronger reveal. The substitution pairing was preserved qualitatively in the incidence note of both locales ('reads each scenario as a pair of figures, before buyers shift and after') so the insight survives without carrying four figures into a note. The figures themselves stay in narration v-5, where each locale already qualifies them.",
+    "PREDICTION TAP: both authorings had already converged on four options in the same order, so option order was kept and only options 2 and 3 were tightened to align index-for-index. Option 2 now carries the stacking question in both locales (ID previously had only the same-end-year half). Option 3 now carries both halves in both locales, the legal authority and what happens to money already booked (ID previously led with the court, EN with the authority). Prompts were kept as each locale authored them; they are semantically aligned and neither reads as a translation of the other.",
+    "LEXICON: the merged corpus of 51 strings was checked whole-word against the verdict list in both languages (true, false, hoax, fake, misleading, debunked, disinformation, lie, liar, busted, fact-check, hoaks, bohong, palsu, benar, salah, sesat, menyesatkan, terbukti, dusta), plus 'bakal', future-harm constructions, em dashes and emoji. Zero hits. 'salah satu' was avoided throughout; the ID mechanism note reaches the same meaning with 'satu tanpa entri registri ... dan satu tanpa kalimat mana pun', and the ID tap option 2 uses 'satu arus yang sama' rather than any 'salah satu' construction.",
+    "VERDICT-FREE POSTURE: no sentence or note states that any step is wrong. Every claim about the chain is stated as what is carried by a source, what has no entry behind it, and who stands outside the frame. The two notes that could most easily have slipped (mechanism and denominator) say what the panel marks and what each figure is, never what the claimant did.",
+    "RE-DISPATCH after the A11 fidelity block, scope ID v-4 only: the sentence headed its enumeration with a collective payer noun ('Yang berdiri di luar bingkai adalah para pembayarnya:') and then listed the domestic producer inside that head, while the bound element tariffs-pay-h-price-umbrella runs the other way. In the element the producer is the income recipient ('sebagian dari yang dibayar pembeli menjadi pendapatan produsen, bukan penerimaan federal') and the buyers and households are the ones paying. The head noun was removed and the enumeration rebuilt natively in Indonesian as parties standing outside the frame, each characterised as its own element characterises it: 'Di luar bingkai berdiri importir yang melunasi bea di perbatasan beserta rumah tangga di belakangnya yang menanggung beban itu lewat harga, produsen dalam negeri yang justru menaikkan harga di bawah payung tarif sehingga sebagian dari yang dibayar pembeli menjadi pendapatan mereka dan tidak pernah sampai ke kas negara, dan eksportir yang menghadapi balasan dagang.' This is the structure EN v-5 already uses, which binds no collective noun over the three parties, so the two locales now place the producer on the same side of the flow and no longer disagree about a fact. The four el bindings are unchanged and each still owns a clause: h-first-payer (importer plus the households behind it), h-price-umbrella (producer pricing up, money that stays outside the Treasury), h-retaliation-offsets (exporter facing countermeasures), h-refund-contingency (the court sentence, carried forward untouched). The ID incidence sparring note already read the producer this way, so ID narration and ID sparring now agree as well. Every other field of this slot is byte-identical to the blocked output. The new sentence was re-run through the whole-word verdict lint and the em dash and emoji sweep in both languages with zero hits, and it contains no 'salah' or 'benar' in any construction."
+  ],
+  "model": "claude-opus-5[1m]"
+}

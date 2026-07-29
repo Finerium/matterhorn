@@ -1,0 +1,411 @@
+{
+  "en": {
+    "narration": {
+      "en": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "The chain opens with money and kitchens: Rp88.15T of state budget realized through May 2026, and 29,679 SPPG kitchens operating by the end of that month.",
+            "els": [
+              "mbg-jobs-claim-map",
+              "mbg-jobs-n1",
+              "mbg-jobs-n2",
+              "mbg-jobs-e1",
+              "mbg-jobs-chip-kitchens"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "From the kitchens it steps to 1.28M workers and 142,387 suppliers as of May 2026, and both figures trace back to the programme's own agency.",
+            "els": [
+              "mbg-jobs-n3",
+              "mbg-jobs-n4",
+              "mbg-jobs-e2",
+              "mbg-jobs-e3",
+              "mbg-jobs-chip-workers",
+              "mbg-jobs-chip-suppliers"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "The chain stops at the last step, where no article in this family moves from supplier income to the headcount standing as the measure of the programme's worth, and the output side, 63.13M beneficiaries reached by the same spending, never enters the frame.",
+            "els": [
+              "mbg-jobs-n5",
+              "mbg-jobs-e4",
+              "mbg-jobs-h7",
+              "mbg-jobs-chip-beneficiaries"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "Standing outside the frame are the school canteen sellers and stall vendors whose daily sales the free portion lands in place of, and the source the flow is drawn from, a budget carrying a Rp689.1T deficit.",
+            "els": [
+              "mbg-jobs-h1",
+              "mbg-jobs-h8"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "Also left unstated: a payroll-grade count behind the multiplication, what the counted workers were doing beforehand, the pay, status and hours attached to each head, and when the cash actually lands with a supplier.",
+            "els": [
+              "mbg-jobs-h2",
+              "mbg-jobs-h3",
+              "mbg-jobs-h6",
+              "mbg-jobs-h5"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "Set against Rp3,842.7T of state spending enacted for 2026, the realized MBG line of Rp88.15T sits beside Rp599.44T for debt interest and Rp210.06T for energy subsidy, while the February baseline of 987,000 workers was about 47 kitchen workers times about 21,000 kitchens.",
+            "els": [
+              "mbg-jobs-scale-check",
+              "mbg-jobs-seg-mbg",
+              "mbg-jobs-seg-debt-interest",
+              "mbg-jobs-seg-energy-subsidy",
+              "mbg-jobs-chip-feb-baseline",
+              "mbg-jobs-h4"
+            ]
+          }
+        ]
+      },
+      "id": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "Rantainya dibuka oleh uang dan dapur: Rp88,15 triliun anggaran negara terealisasi hingga Mei 2026, dan 29.679 dapur SPPG beroperasi sampai akhir bulan itu.",
+            "els": [
+              "mbg-jobs-claim-map",
+              "mbg-jobs-n1",
+              "mbg-jobs-n2",
+              "mbg-jobs-e1",
+              "mbg-jobs-chip-kitchens"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "Dari dapur, langkah berikutnya menyebut 1,28 juta pekerja dan 142.387 pemasok per Mei 2026, dan kedua angka itu berpangkal pada lembaga program itu sendiri.",
+            "els": [
+              "mbg-jobs-n3",
+              "mbg-jobs-n4",
+              "mbg-jobs-e2",
+              "mbg-jobs-e3",
+              "mbg-jobs-chip-workers",
+              "mbg-jobs-chip-suppliers"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "Langkah terakhir menjadi tempat rantai berhenti: tidak ada artikel dalam keluarga pemberitaan ini yang berpindah dari pemasukan pemasok ke angka serapan sebagai ukuran nilai program, sementara sisi keluarannya, 63,13 juta penerima manfaat yang terjangkau oleh belanja yang sama, tidak pernah masuk bingkai.",
+            "els": [
+              "mbg-jobs-n5",
+              "mbg-jobs-e4",
+              "mbg-jobs-h7",
+              "mbg-jobs-chip-beneficiaries"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "Di luar bingkai berdiri pedagang kantin sekolah dan penjaja makanan yang omzet hariannya tergantikan oleh porsi gratis, dan sumber tempat aliran dana itu diambil, yaitu anggaran yang membawa defisit Rp689,1 triliun.",
+            "els": [
+              "mbg-jobs-h1",
+              "mbg-jobs-h8"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "Yang juga tidak dinyatakan: hitungan berbasis daftar gaji di balik perkalian itu, kegiatan para pekerja sebelum direkrut, upah, status, dan jam kerja yang melekat pada tiap kepala, serta kapan uangnya sungguh mendarat di tangan pemasok.",
+            "els": [
+              "mbg-jobs-h2",
+              "mbg-jobs-h3",
+              "mbg-jobs-h6",
+              "mbg-jobs-h5"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "Disandingkan dengan belanja negara Rp3.842,7 triliun yang ditetapkan untuk 2026, belanja MBG terealisasi Rp88,15 triliun berada di samping Rp599,44 triliun untuk bunga utang dan Rp210,06 triliun untuk subsidi energi, sedangkan basis Februari 987.000 pekerja berasal dari sekitar 47 pekerja dapur dikali sekitar 21.000 dapur.",
+            "els": [
+              "mbg-jobs-scale-check",
+              "mbg-jobs-seg-mbg",
+              "mbg-jobs-seg-debt-interest",
+              "mbg-jobs-seg-energy-subsidy",
+              "mbg-jobs-chip-feb-baseline",
+              "mbg-jobs-h4"
+            ]
+          }
+        ]
+      }
+    },
+    "sparring": {
+      "questions": [
+        {
+          "move": "mechanism",
+          "q": {
+            "en": "The reported worker figure keeps climbing. What moves it?",
+            "id": "Angka pekerja yang dilaporkan terus naik. Apa yang menggerakkannya?"
+          },
+          "options": [
+            {
+              "en": "More kitchens opening, with the headcount derived from a staffing assumption per kitchen.",
+              "id": "Bertambahnya dapur yang beroperasi, dengan angka serapan diturunkan dari asumsi jumlah pekerja per dapur."
+            },
+            {
+              "en": "Payrolls and social security enrolments, counted head by head.",
+              "id": "Daftar gaji dan kepesertaan jaminan sosial, dihitung satu per satu."
+            },
+            {
+              "en": "More outlets carrying the figure, each one picking it up from the last.",
+              "id": "Bertambahnya media yang memuat angka itu, masing-masing mengutip dari yang sebelumnya."
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "en": "The claim map's step from kitchens to workers rests on the programme's own agency, and the February chip on the scale check shows the figure derived as about 47 kitchen workers times about 21,000 kitchens. A payroll-grade count sits on the hidden side of the claim map, because no such count appears in this family.",
+            "id": "Langkah dari dapur ke pekerja pada peta klaim bertumpu pada lembaga program itu sendiri, dan chip Februari pada panel skala menunjukkan angka itu diturunkan dari sekitar 47 pekerja dapur dikali sekitar 21.000 dapur. Hitungan berbasis daftar gaji berada di sisi tersembunyi peta klaim, karena hitungan seperti itu tidak muncul dalam keluarga pemberitaan ini."
+          }
+        },
+        {
+          "move": "denominator",
+          "q": {
+            "en": "The workforce figure arrives without a denominator. Which one does the scale check supply?",
+            "id": "Angka tenaga kerja datang tanpa penyebut. Penyebut mana yang disediakan panel skala?"
+          },
+          "options": [
+            {
+              "en": "State spending enacted for 2026 at Rp3,842.7T, with debt interest at Rp599.44T and energy subsidy at Rp210.06T beside it.",
+              "id": "Belanja negara yang ditetapkan untuk 2026 sebesar Rp3.842,7 triliun, dengan bunga utang Rp599,44 triliun dan subsidi energi Rp210,06 triliun di sampingnya."
+            },
+            {
+              "en": "The national workforce, so the headcount reads as a share of all jobs.",
+              "id": "Angkatan kerja nasional, agar angka serapan terbaca sebagai bagian dari seluruh lapangan kerja."
+            },
+            {
+              "en": "The count of SPPG kitchens, so the headcount reads as workers per kitchen.",
+              "id": "Jumlah dapur SPPG, agar angka serapan terbaca sebagai pekerja per dapur."
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "en": "The scale check sizes the realized MBG line of Rp88.15T inside state spending enacted for the year and sets the enacted debt interest and energy subsidy lines next to it. The kitchen count is already inside the February figure as its multiplier, so using it as a denominator would size the number against its own input.",
+            "id": "Panel skala menempatkan belanja MBG terealisasi Rp88,15 triliun di dalam belanja negara yang ditetapkan untuk setahun dan menyandingkannya dengan pos bunga utang dan subsidi energi yang juga ditetapkan. Jumlah dapur sudah berada di dalam angka Februari sebagai pengalinya, sehingga memakainya sebagai penyebut berarti mengukur angka itu terhadap masukannya sendiri."
+          }
+        },
+        {
+          "move": "incidence",
+          "q": {
+            "en": "The meal is free at the point it is served. Whose income moves the other way?",
+            "id": "Makanannya gratis di titik penyajian. Pemasukan siapa yang bergerak ke arah sebaliknya?"
+          },
+          "options": [
+            {
+              "en": "The suppliers under contract, who move along with the programme.",
+              "id": "Pemasok kontrak, yang ikut bergerak bersama program."
+            },
+            {
+              "en": "The school canteen sellers and stall vendors whose daily sales the free portion lands in place of.",
+              "id": "Pedagang kantin sekolah dan penjaja makanan yang omzet hariannya tergantikan oleh porsi gratis."
+            },
+            {
+              "en": "Nobody, since the budget pays for the meal and the money is new all the way down.",
+              "id": "Tidak ada, karena anggaran menanggung makanannya dan uangnya seluruhnya uang baru."
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "en": "The hidden side of the claim map names the counter where a sale no longer happens. The articles count the income arriving on the supplier side and stop before that counter, so a mechanism that works as a transfer is carried as a gross gain. The budget carrying a Rp689.1T deficit sits on the same hidden side, as the source the flow is drawn from.",
+            "id": "Sisi tersembunyi pada peta klaim menyebut lapak tempat transaksi tidak lagi terjadi. Artikel menghitung pemasukan yang tiba di sisi pemasok dan berhenti sebelum lapak itu, sehingga mekanisme yang bekerja sebagai pengalihan dibawa sebagai penambahan bruto. Anggaran yang membawa defisit Rp689,1 triliun berada di sisi tersembunyi yang sama, sebagai sumber tempat aliran dana itu diambil."
+          }
+        }
+      ]
+    },
+    "prediction_tap": {
+      "prompt": {
+        "en": "Before you read on: a programme reports 1.28M workers absorbed. Which side of that number do you expect the coverage to leave out?",
+        "id": "Sebelum membaca lebih jauh: sebuah program melaporkan 1,28 juta pekerja terserap. Sisi mana dari angka itu yang Anda duga tidak masuk dalam pemberitaan?"
+      },
+      "options": [
+        {
+          "en": "Where the count comes from, and whether anyone counted heads rather than multiplying.",
+          "id": "Asal angkanya, dan apakah ada yang menghitung kepala alih-alih mengalikan."
+        },
+        {
+          "en": "What each counted job pays, and on what terms.",
+          "id": "Berapa upah tiap pekerjaan yang dihitung, dan dengan ketentuan apa."
+        },
+        {
+          "en": "Who loses a sale when the free portion arrives.",
+          "id": "Siapa yang kehilangan penjualan ketika porsi gratis datang."
+        },
+        {
+          "en": "What the same money delivers on the output side, and what it costs per worker.",
+          "id": "Apa yang disalurkan uang yang sama di sisi keluaran, dan berapa biayanya per pekerja."
+        }
+      ]
+    }
+  },
+  "id": {
+    "narration": {
+      "id": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "Rantainya terdengar rapi: anggaran negara mengalir ke program MBG, dapur SPPG beroperasi di berbagai daerah, jaringan dapur itu menyerap tenaga kerja, UMKM dan peternak kecil memperoleh pemasukan sebagai pemasok, lalu angka serapan versi program sendiri dijadikan ukuran nilai programnya.",
+            "els": [
+              "mbg-jobs-claim-map",
+              "mbg-jobs-n1",
+              "mbg-jobs-n2",
+              "mbg-jobs-n3",
+              "mbg-jobs-n4",
+              "mbg-jobs-n5"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "Tiga langkah awalnya punya kutipan yang menyatakannya: Rp88,15 triliun terserap disebut bersama 29.679 dapur SPPG, lalu dari dapur ke 1,28 juta pekerja, lalu ke 142.387 pemasok yang dilaporkan ikut serta.",
+            "els": [
+              "mbg-jobs-e1",
+              "mbg-jobs-e2",
+              "mbg-jobs-e3",
+              "mbg-jobs-n1",
+              "mbg-jobs-n2",
+              "mbg-jobs-n3",
+              "mbg-jobs-n4",
+              "mbg-jobs-chip-suppliers"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "Langkah terakhirnya berhenti di tempat: tidak ada artikel dalam keluarga pemberitaan ini yang menyatakan perpindahan dari pemasukan pemasok ke angka serapan sebagai ukuran nilai program, anggaran Rp88,15 triliun tidak pernah disandingkan dengan angka serapan itu, dan keluaran yang menjadi tujuan belanjanya, 63,13 juta penerima manfaat, tetap di luar hitungan.",
+            "els": [
+              "mbg-jobs-e4",
+              "mbg-jobs-n5",
+              "mbg-jobs-h4",
+              "mbg-jobs-h7",
+              "mbg-jobs-chip-beneficiaries"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "Di luar bingkainya berdiri pedagang kantin sekolah dan penjaja di depan gerbang yang omzet hariannya tergantikan porsi gratis, upah dan status yang melekat pada tiap kepala yang dihitung, kegiatan para pekerja sebelum program merekrut mereka, serta uang yang sungguh mendarat di tangan pemasok setelah tagihan dan tempo pembayaran.",
+            "els": [
+              "mbg-jobs-h1",
+              "mbg-jobs-h6",
+              "mbg-jobs-h3",
+              "mbg-jobs-h5"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "Panel skala menempatkan Rp88,15 triliun itu di dalam belanja negara APBN 2026 sebesar Rp3.842,7 triliun, berdampingan dengan bunga utang Rp599,44 triliun dan subsidi energi Rp210,06 triliun, sementara pos yang menyusut agar aliran itu terjadi, dengan defisit Rp689,1 triliun sebagai latarnya, tidak ikut disebut.",
+            "els": [
+              "mbg-jobs-scale-check",
+              "mbg-jobs-seg-mbg",
+              "mbg-jobs-seg-debt-interest",
+              "mbg-jobs-seg-energy-subsidy",
+              "mbg-jobs-h8"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "Dua angka serapannya juga tidak disusun dengan cara yang sama: 987.000 pekerja pada Februari 2026 adalah hasil perkalian sekitar 47 pekerja dapur dengan sekitar 21.000 dapur, sedangkan 1,28 juta pekerja pada Mei 2026 bergerak mengikuti jumlah dapur yang tercatat 29.679, keduanya berpangkal pada lembaga program itu sendiri, dan hitungan berbasis daftar gaji belum muncul.",
+            "els": [
+              "mbg-jobs-chip-feb-baseline",
+              "mbg-jobs-chip-workers",
+              "mbg-jobs-chip-kitchens",
+              "mbg-jobs-h2"
+            ]
+          }
+        ]
+      }
+    },
+    "sparring": {
+      "questions": [
+        {
+          "move": "mechanism",
+          "q": {
+            "id": "Langkah dari dapur yang beroperasi ke tenaga kerja yang terserap harus dihasilkan oleh sesuatu. Angka 987.000 pekerja pada Februari 2026 itu keluar dari mana?"
+          },
+          "options": [
+            {
+              "id": "Pendataan daftar gaji di tiap dapur SPPG."
+            },
+            {
+              "id": "Perkalian asumsi sekitar 47 pekerja dapur dengan sekitar 21.000 dapur."
+            },
+            {
+              "id": "Rekapitulasi kepesertaan jaminan sosial pekerja dapur."
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "id": "Peta klaim mencatat langkah dari dapur ke pekerja sebagai langkah yang berpangkal pada lembaga program sendiri, dan chip Februari menuliskan asal angkanya sebagai perkalian sekitar 47 pekerja dapur dengan sekitar 21.000 dapur. Daftar gaji dan kepesertaan jaminan sosial memang tempat hitungan semacam ini biasanya berlabuh, dan justru keduanya yang dicatat panel sebagai belum muncul."
+          }
+        },
+        {
+          "move": "denominator",
+          "q": {
+            "id": "Angka 1,28 juta pekerja dipakai sebagai ukuran nilai program. Supaya angka itu bermakna, ia perlu dibaca terhadap apa?"
+          },
+          "options": [
+            {
+              "id": "Jumlah dapur SPPG yang beroperasi, 29.679 dapur."
+            },
+            {
+              "id": "Belanja yang menopangnya, Rp88,15 triliun, di dalam belanja negara Rp3.842,7 triliun."
+            },
+            {
+              "id": "Banyaknya media yang mengangkat angka serapan itu."
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "id": "Panel skala memasang belanja negara APBN 2026 sebesar Rp3.842,7 triliun sebagai penyebut dan menaruh belanja MBG Rp88,15 triliun di dalamnya, bersebelahan dengan bunga utang Rp599,44 triliun dan subsidi energi Rp210,06 triliun. Jumlah dapur bergerak seiring angka pekerja, jadi keduanya bercerita dari sisi yang sama, sedangkan banyaknya pemberitaan menambah gema tanpa menambah penyebut."
+          }
+        },
+        {
+          "move": "incidence",
+          "q": {
+            "id": "Porsi gratis mendarat di sekolah setiap hari. Sisi mana yang pemasukannya berpindah tetapi tidak ikut masuk hitungan yang dilaporkan?"
+          },
+          "options": [
+            {
+              "id": "Pemasok kontrak yang dilaporkan ikut serta, 142.387 pemasok."
+            },
+            {
+              "id": "Pedagang kantin sekolah dan penjaja di depan gerbang yang jajan hariannya tergantikan."
+            },
+            {
+              "id": "Pekerja dapur SPPG yang masuk ke dalam angka 1,28 juta pekerja."
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "id": "Peta klaim menaruh pedagang kantin dan penjaja di depan gerbang di luar bingkai: permintaan yang berpindah ke pemasok kontrak mendarat menggantikan jajan yang biasa dibeli siswa. Pemasok dan pekerja dapur justru sisi yang dihitung dan diberitakan, sehingga keduanya sudah ada di dalam angka, sementara lapak yang kehilangan transaksi tidak punya barisnya sendiri."
+          }
+        }
+      ]
+    },
+    "prediction_tap": {
+      "prompt": {
+        "id": "Sebelum panelnya terbuka, tebak dulu: dari klaim bahwa MBG menyerap 1,28 juta pekerja, sisi mana yang paling mungkin tidak ikut disebut?"
+      },
+      "options": [
+        {
+          "id": "Harga per pekerja yang terserap, yaitu belanja programnya dibagi jumlah pekerjanya."
+        },
+        {
+          "id": "Pedagang kantin sekolah dan penjaja di depan gerbang yang omzetnya tergantikan porsi gratis."
+        },
+        {
+          "id": "Cara angka pekerjanya disusun, apakah dari daftar gaji atau dari perkalian."
+        },
+        {
+          "id": "Jumlah dapur SPPG yang beroperasi di berbagai daerah."
+        },
+        {
+          "id": "Upah, status, dan jam kerja yang melekat pada tiap pekerja yang dihitung."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "mbg-cut.spine.n1",
+        "label": {
+          "en": "The 2026 MBG budget ceiling is cut to a lower level",
+          "id": "Pagu anggaran MBG 2026 dipangkas ke tingkat yang lebih rendah"
+        }
+      },
+      {
+        "el_id": "mbg-cut.spine.n2",
+        "label": {
+          "en": "The programme keeps running and draws down its budget",
+          "id": "Program tetap berjalan dan membelanjakan anggarannya"
+        }
+      },
+      {
+        "el_id": "mbg-cut.spine.n3",
+        "label": {
+          "en": "Realized MBG spending through May 2026 goes on the record",
+          "id": "Realisasi belanja MBG hingga Mei 2026 tercatat"
+        }
+      },
+      {
+        "el_id": "mbg-cut.spine.n4",
+        "label": {
+          "en": "The rest of 2026 runs on a smaller spending envelope",
+          "id": "Sisa tahun 2026 berjalan dengan ruang belanja yang lebih kecil"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "mbg-cut.edge.n1-n2",
+        "from": "mbg-cut.spine.n1",
+        "to": "mbg-cut.spine.n2",
+        "quote": "no article in this family states the step from the cut 2026 ceiling to the programme running and drawing down its budget"
+      },
+      {
+        "el_id": "mbg-cut.edge.n2-n3",
+        "from": "mbg-cut.spine.n2",
+        "to": "mbg-cut.spine.n3",
+        "quote": "Anggaran MBG Terserap Rp 88,15 Triliun hingga Mei 2026"
+      },
+      {
+        "el_id": "mbg-cut.edge.n3-n4",
+        "from": "mbg-cut.spine.n3",
+        "to": "mbg-cut.spine.n4",
+        "quote": "no article in this family states the step from realized spending through May 2026 to a smaller envelope for the rest of the year"
+      }
+    ]
+  },
+  "panel_skeleton": [
+    {
+      "type": "claim_map",
+      "el_id": "mbg-cut.panel.claim_map"
+    },
+    {
+      "type": "scale_check",
+      "el_id": "mbg-cut.panel.scale_check"
+    },
+    {
+      "type": "family",
+      "el_id": "mbg-cut.panel.family",
+      "family_id": "fam-mbg-budget",
+      "members": [
+        "mbg-cut",
+        "mbg-stop"
+      ]
+    }
+  ],
+  "model": "claude-fable-5"
+}

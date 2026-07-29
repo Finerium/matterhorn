@@ -1,0 +1,14 @@
+{
+  "verdict": "pass",
+  "reasons": [
+    "Integrity: embedded candidate in A10.input.json is byte-identical in content to candidate.json, whose sha256 matches the staged ee67f68c694c40829a68b26ec01cfda65576112eebad11c6b60e06abd8c7597f.",
+    "Edge statuses are symmetric: one rule (source states the step => supported with provenance flags; no source => missing) governs e1-e4, and applied to the mirror's equivalent edges it yields the same statuses — the unsourced displacement mechanism is carried as hidden (mbg-jobs-h1), not as a supported edge, while the artifact's own supported edges are scrutinized in their why lines (e2 names the self-reported 47x21,000 derivation, e3 names participation-vs-receipts distance).",
+    "Hidden-branch rigor is symmetric in count and license: 8 branches run against the artifact's own framing, and the why_hidden assertion license is used on both valences (h7 asserts the pro-programme output side of 63.13M beneficiaries; h1/h8 assert incidence counters; h2/h3/h5/h6 interrogate); mirror-favorable data (beneficiaries chip, supplier count, kitchen count, Kompas's own disclosure of the multiplication) is carried, not suppressed.",
+    "Depth and temperature are even: both sides' figures get sources, as_of and method treatment; the scale check's realized-vs-enacted mismatch (which sizes MBG smaller, against the mirror's framing) is disclosed in segment labels and takeaway; attribution verbs are uniform, with 'Disebut' appearing only inside a quoted source headline.",
+    "C1 clean: no verdict-lexicon word in EN or ID user-facing copy (sole regex hit is the JSON boolean \"fallback\": false in og metadata); no narrative or outlet scoring; no 'salah satu' occurrence to lint.",
+    "C8 clean: no em dashes and no emoji in user-facing copy.",
+    "Non-blocking faults to note for the next run: (1) h1 label 'whose daily sales the free meal replaces' / 'yang omzet hariannya tergantikan oleh porsi gratis' states whole-turnover replacement where the why_hidden's careful form ('the purchase a student used to make') claims only the substitution margin — add a qualifier such as 'part of'; (2) ID narration v-1 'Rantainya terdengar rapi' is a concessive setup absent from the EN v-1 — align registers across languages."
+  ],
+  "model": "claude-fable-5",
+  "token": "9002cb45f5be8c44eb115c14c097319f65b3e7b41d59b58f1e9335ab5a35f3b0"
+}

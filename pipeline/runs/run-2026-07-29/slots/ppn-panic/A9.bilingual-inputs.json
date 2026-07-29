@@ -1,0 +1,297 @@
+{
+  "en": {
+    "narration": {
+      "en": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "The one step the sources carry is the first one: a national wire and the tax authority page both put the finance ministry's new rule and the 12 percent rate on 1 January 2025.",
+            "els": [
+              "ppn-panic-p-claim-map",
+              "ppn-panic-s1",
+              "ppn-panic-s2",
+              "ppn-panic-e1"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "After that the chain runs on its own: no article in this family states the move from the higher rate taking effect to that rate reaching every good and service in the basket, and none states the move from that reach to every price rising.",
+            "els": [
+              "ppn-panic-e2",
+              "ppn-panic-e3",
+              "ppn-panic-s3",
+              "ppn-panic-s4"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "The scale check sets the two rates one point apart, 12 percent on goods already carried by the luxury sales tax list and an effective 11 percent on everything off it, held there by an eleven-twelfths base.",
+            "els": [
+              "ppn-panic-p-scale-check",
+              "ppn-panic-sc-luxury-list",
+              "ppn-panic-sc-off-list"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "What the panel cannot show is how much of a household basket sits on that list, since no source in the registry carries it, and the stated mechanism has no way into the staple goods and exempt services that carry no VAT at any rate.",
+            "els": [
+              "ppn-panic-p-scale-check",
+              "ppn-panic-h1",
+              "ppn-panic-h2"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "Standing outside the frame are the VAT-registered sellers who had one night to re-base every invoice, and the luxury dealers and buyers on either side of the February boundary.",
+            "els": [
+              "ppn-panic-h5",
+              "ppn-panic-h7"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "The statute had already scheduled the higher rate across the whole base, which is why the 11 percent now rests on a ministerial regulation, and the echo panel names the pattern: a scope stated inside a rule travels onward as a rise reaching everything, and the reach is never set against a basket.",
+            "els": [
+              "ppn-panic-h4",
+              "ppn-panic-p-echo"
+            ]
+          }
+        ]
+      }
+    },
+    "sparring": {
+      "questions": [
+        {
+          "move": "mechanism",
+          "q": {
+            "en": "The chain runs from a new tariff rule all the way to every price rising. How much of that run do the sources actually state?"
+          },
+          "options": [
+            {
+              "en": "Only the first link, the ministry issuing the rule and the higher rate taking effect on the same date."
+            },
+            {
+              "en": "All of it, since the rate is official and prices follow the rate."
+            },
+            {
+              "en": "The later links too, once enough outlets carried the same headline."
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "en": "The claim map marks the first edge as carried by a wire and a tax authority page, and leaves the next two with no article stating them. The rate is real and dated. What the panel shows is that the step from a rate to a basket, and the step from a basket to a price, are not in this set of articles, and headline count is not one of the edges."
+          }
+        },
+        {
+          "move": "denominator",
+          "q": {
+            "en": "To turn the one point between the two rates into an effect on a household, one figure has to exist. Which one does the artifact say it cannot supply?"
+          },
+          "options": [
+            {
+              "en": "The share of a household's spending that sits on the luxury sales tax list."
+            },
+            {
+              "en": "The size of the package announced alongside the scope statement, Rp38.6T."
+            },
+            {
+              "en": "The number of goods written into the luxury sales tax list."
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "en": "The scale check names the gap directly: spending on luxury-list goods over spending on the whole basket, a ratio with no numerator and no denominator in this registry. The package figure sits right there on the panel as a context chip, so it is not the missing one, and a count of listed goods is a count, not a share of anyone's spending."
+          }
+        },
+        {
+          "move": "incidence",
+          "q": {
+            "en": "The rule is dated the last day of the year and coverage of it in force ran the next day. Who does the artifact put first in line to absorb that timing?"
+          },
+          "options": [
+            {
+              "en": "VAT-registered sellers, who had a single night to re-base every tax invoice, cash register and import declaration."
+            },
+            {
+              "en": "Households, who met the new shelf prices the following morning."
+            },
+            {
+              "en": "The tax authority, which had to publish the regulation page."
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "en": "The hidden element on the changeover names the seller as the first payer of the step: off-list sales now invoice at 12 percent on an eleven-twelfths base in place of the old computation on full price, so the arithmetic changed at once. Households sit further along a chain the artifact never follows, because no article here tracks prices across the changeover at all."
+          }
+        }
+      ]
+    },
+    "prediction_tap": {
+      "prompt": {
+        "en": "This chain runs from a rule the finance ministry issued to every price rising. Before the panels open: which side of it do you expect to go missing?"
+      },
+      "options": [
+        {
+          "en": "The list the rule actually draws the higher rate at, and how much of a basket sits on it."
+        },
+        {
+          "en": "The parts of the basket that carry no VAT at any rate."
+        },
+        {
+          "en": "The sellers who had to change the arithmetic on every invoice overnight."
+        },
+        {
+          "en": "The rate the statute had already scheduled before the ministry moved."
+        }
+      ]
+    }
+  },
+  "id": {
+    "narration": {
+      "id": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "Langkah pertama rantai ini punya pijakan: Kemenkeu menerbitkan aturan tarif PPN, tarif 12 persen mulai berlaku, dan kantor berita nasional memuat keduanya dalam satu baris bertanggal 1 Januari 2025.",
+            "els": [
+              "ppn-panic-p-claim-map",
+              "ppn-panic-s1",
+              "ppn-panic-s2",
+              "ppn-panic-e1"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "Dua langkah sesudahnya tidak berpijak pada apa pun di kumpulan ini: perpindahan dari tarif yang berlaku ke jangkauan semua barang dan jasa di keranjang, lalu dari jangkauan itu ke semua harga naik, tidak dimuat satu pun artikel dalam keluarga ini.",
+            "els": [
+              "ppn-panic-e2",
+              "ppn-panic-e3",
+              "ppn-panic-s3",
+              "ppn-panic-s4"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "Di luar bingkai berdiri pihak yang menanggung perubahan lebih dulu: pengusaha kena pajak yang hanya punya satu malam untuk mengganti dasar penghitungan setiap faktur, mesin kasir dan dokumen impor, lalu pembeli dan penjual barang mewah di dua sisi batas Februari 2025.",
+            "els": [
+              "ppn-panic-h5",
+              "ppn-panic-h7"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "Yang justru tidak ada di mana pun adalah angka yang menentukan belanja rumah tangga: porsi keranjang yang dijangkau daftar barang mewah itu, dan bagian keranjang berupa bahan kebutuhan pokok serta jasa dalam ketentuan pengecualian dan fasilitas, yang tidak memikul PPN pada tarif berapa pun.",
+            "els": [
+              "ppn-panic-h1",
+              "ppn-panic-h2"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "Panel skala menaruh kedua tarif berdampingan: 11 persen untuk segala yang di luar daftar pajak penjualan barang mewah lewat dasar pengenaan sebelas per dua belas, dan 12 persen untuk yang sudah ada di daftar itu, sedangkan jadwal dalam undang-undang PPN hasil perubahan sudah lebih dulu menempatkan tarif lebih tinggi pada seluruh basis PPN sejak awal 2025.",
+            "els": [
+              "ppn-panic-p-scale-check",
+              "ppn-panic-sc-off-list",
+              "ppn-panic-sc-luxury-list",
+              "ppn-panic-h4"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "Pola ini punya rekam jejak: pembatasan cakupan yang dinyatakan di dalam aturan berjalan terus sebagai kenaikan yang menjangkau semua barang dan jasa, dan seluruh keranjang konsumsi sempat dihitung berminggu-minggu sampai klarifikasinya menuntut upaya komunikasi lintas kanal.",
+            "els": [
+              "ppn-panic-p-echo"
+            ]
+          }
+        ]
+      }
+    },
+    "sparring": {
+      "questions": [
+        {
+          "move": "mechanism",
+          "q": {
+            "id": "Menurut panel peta klaim, apa yang terjadi pada langkah dari 'tarif menjangkau semua barang dan jasa' ke 'semua harga naik'?"
+          },
+          "options": [
+            {
+              "id": "Langkah itu tidak dimuat sumber mana pun, dan sebagian keranjang tidak memikul PPN pada tarif berapa pun sehingga jalur PPN tidak masuk ke harga-harga itu."
+            },
+            {
+              "id": "Langkah itu dimuat, tetapi pedagang menunda penyesuaian harga sampai Februari."
+            },
+            {
+              "id": "Langkah itu dimuat cukup banyak media, sehingga cakupannya dianggap sudah jelas."
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "id": "Panel peta klaim menandai langkah itu sebagai langkah yang tidak dimuat artikel mana pun dalam keluarga ini, dan menaruh alasannya di sebelahnya: bahan kebutuhan pokok serta jasa dalam ketentuan pengecualian dan fasilitas tidak memikul PPN pada tarif berapa pun, sehingga mekanisme yang dinyatakan tidak punya jalur masuk ke harga-harga tersebut. Tidak ada pula artikel yang mengikuti harga sepanjang masa peralihan."
+          }
+        },
+        {
+          "move": "denominator",
+          "q": {
+            "id": "Angka mana yang dibutuhkan untuk menakar seberapa jauh kenaikan ini menjangkau belanja Anda, dan tidak dimuat kumpulan sumber ini?"
+          },
+          "options": [
+            {
+              "id": "Porsi keranjang belanja rumah tangga yang berada di daftar pajak penjualan barang mewah."
+            },
+            {
+              "id": "Jarak antara tarif 11 persen dan tarif 12 persen."
+            },
+            {
+              "id": "Total penerimaan PPN negara sepanjang setahun."
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "id": "Panel skala menampilkan kedua tarif, 11 persen untuk segala yang di luar daftar dan 12 persen untuk yang sudah ada di dalamnya, lalu menyatakan sendiri bahwa porsi keranjang rumah tangga yang duduk di daftar itu adalah angka yang tidak bisa ditampilkan panel tersebut, karena tidak ada sumber dalam registri yang memuatnya. Tanpa pembilang di atas penyebut itu, rasio yang dibutuhkan rantai ini tidak punya kedua sisinya."
+          }
+        },
+        {
+          "move": "incidence",
+          "q": {
+            "id": "Siapa yang menjalankan perubahan penghitungan ini lebih dulu, sebelum pembeli menemuinya di harga?"
+          },
+          "options": [
+            {
+              "id": "Pengusaha kena pajak yang harus mengganti dasar penghitungan setiap faktur, mesin kasir dan dokumen impor dalam satu malam."
+            },
+            {
+              "id": "Penerima beras 10 kg dalam paket Rp38,6 T yang diumumkan bersamaan."
+            },
+            {
+              "id": "Kementerian yang menerbitkan aturan pada hari terakhir tahun."
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "id": "Panel peta klaim menaruh satu malam di antara aturan terbit dan tarif berlaku: aturan bertanggal hari terakhir tahun, pemberitaan pemberlakuannya terbit keesokan harinya, dan penjualan di luar daftar mewah sejak itu difakturkan 12 persen atas dasar pengenaan sebelas per dua belas, menggantikan hitungan lama atas harga penuh. Pembayar pertama langkah itu adalah penjual yang menerapkannya. Paket Rp38,6 T dengan komponen beras 10 kg untuk 16 juta penerima muncul di panel skala sebagai bantuan yang menyertai pengumuman, bukan sebagai pihak yang memprogram ulang penghitungan."
+          }
+        }
+      ]
+    },
+    "prediction_tap": {
+      "prompt": {
+        "id": "Sebelum panelnya terbuka, tebak dulu: bagian mana dari cerita kenaikan PPN ini yang tidak ikut diceritakan?"
+      },
+      "options": [
+        {
+          "id": "Seberapa besar bagian keranjang belanja rumah tangga yang sungguh dijangkau daftar barang mewah."
+        },
+        {
+          "id": "Bagian keranjang yang tidak memikul PPN pada tarif berapa pun."
+        },
+        {
+          "id": "Pihak yang harus mengganti dasar penghitungan setiap faktur dalam semalam."
+        },
+        {
+          "id": "Jadwal tarif yang sudah tertulis dalam undang-undang sebelum kementerian bertindak."
+        }
+      ]
+    }
+  }
+}

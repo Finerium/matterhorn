@@ -1,0 +1,101 @@
+{
+  "hidden": [
+    {
+      "el_id": "mbg-jobs-h1",
+      "label": {
+        "en": "School canteen vendors and food sellers whose daily sales the free meal replaces",
+        "id": "Pedagang kantin sekolah dan penjaja makanan yang omzet hariannya tergantikan oleh porsi gratis"
+      },
+      "why_hidden": {
+        "en": "The stated chain has kitchens operating and small suppliers taking in new income. The same meal that routes demand to contracted suppliers lands in place of the purchase a student used to make at the canteen or the stall outside the gate. The articles count the income arriving on the supplier side and stop before the counter where a sale no longer happens, so the family carries a gross gain for a mechanism that works as a transfer.",
+        "id": "Rantai yang dinyatakan memuat dapur yang beroperasi dan pemasok kecil yang menerima pemasukan baru. Porsi gratis yang mengalihkan permintaan ke pemasok kontrak mendarat menggantikan jajan yang biasa dibeli siswa di kantin atau di lapak depan gerbang sekolah. Artikel menghitung pemasukan yang tiba di sisi pemasok dan berhenti sebelum lapak tempat transaksi tidak lagi terjadi, sehingga keluarga pemberitaan ini membawa angka bruto untuk mekanisme yang bekerja sebagai pengalihan."
+      },
+      "where_to_look": "School canteen operator surveys, local trade or cooperative office reports on school-adjacent vendors, vendor association statements."
+    },
+    {
+      "el_id": "mbg-jobs-h2",
+      "label": {
+        "en": "A payroll-grade count behind the derived headcount",
+        "id": "Hitungan berbasis daftar gaji di balik angka serapan hasil perkalian"
+      },
+      "why_hidden": {
+        "en": "The February figure in the family is an arithmetic product, a per-kitchen staffing assumption multiplied by a kitchen count, and the later, larger figure moves with the kitchen count. The step from kitchens operating to workers absorbed reaches actual payrolls and social security enrolments, yet the articles stop at the multiplication, so no independently counted figure anchors the claim.",
+        "id": "Angka bulan Februari dalam keluarga pemberitaan ini adalah hasil perkalian, asumsi jumlah pekerja per dapur dikalikan jumlah dapur, dan angka yang lebih besar sesudahnya bergerak mengikuti pertambahan dapur. Langkah dari dapur beroperasi ke tenaga kerja terserap menjangkau daftar gaji dan kepesertaan jaminan sosial yang nyata, tetapi artikel berhenti pada perkalian, sehingga tidak ada hitungan independen yang menjangkar klaim itu."
+      },
+      "where_to_look": "BPJS Ketenagakerjaan enrolment data for SPPG staff, BGN payroll or honorarium disbursement records."
+    },
+    {
+      "el_id": "mbg-jobs-h3",
+      "label": {
+        "en": "What the absorbed workers were doing before the programme recruited them",
+        "id": "Kegiatan para pekerja terserap sebelum program merekrut mereka"
+      },
+      "why_hidden": {
+        "en": "The step from kitchens to jobs is stated as absorption, a word that reads as people drawn out of joblessness. The articles never state how many of the counted heads moved over from existing work, so the counterfactual that gives the headcount its meaning, employment without the programme, goes unpriced.",
+        "id": "Langkah dari dapur ke lapangan kerja dinyatakan sebagai penyerapan, dan kata itu terbaca seolah orang ditarik keluar dari pengangguran. Artikel tidak menyebut berapa banyak dari kepala yang dihitung itu berpindah dari pekerjaan yang sudah ada, sehingga pembanding yang memberi makna pada angka serapan, yaitu keadaan kerja tanpa program, tidak pernah ikut dihitung."
+      },
+      "where_to_look": "BPS labour force survey rounds spanning the programme's rollout, BGN recruitment records on applicants' prior employment."
+    },
+    {
+      "el_id": "mbg-jobs-h4",
+      "label": {
+        "en": "The budget figure set beside the headcount it is meant to support",
+        "id": "Angka anggaran yang disandingkan dengan angka serapan yang dijadikan ukuran nilai program"
+      },
+      "why_hidden": {
+        "en": "The family carries the absorbed budget in one member and the headcount in the others and never sets one against the other. The step that makes headcount the measure of the programme's worth needs the cost side as its denominator, and the articles stop before the join, so the price of an absorbed worker never appears.",
+        "id": "Keluarga pemberitaan ini membawa angka anggaran terserap di satu artikel dan angka tenaga kerja di artikel lain, dan tidak pernah menyandingkan keduanya. Langkah yang menjadikan angka serapan sebagai ukuran nilai program membutuhkan sisi biaya sebagai penyebutnya, dan artikel berhenti sebelum penyandingan itu, sehingga harga per pekerja terserap tidak pernah muncul."
+      },
+      "where_to_look": "Finance ministry budget realization reports for the programme, parliamentary hearing documents where cost per job or per beneficiary is tabled."
+    },
+    {
+      "el_id": "mbg-jobs-h5",
+      "label": {
+        "en": "Cash actually landing with suppliers, against invoices and payment lags",
+        "id": "Uang yang sungguh diterima pemasok, dibandingkan tagihan dan jeda pembayaran"
+      },
+      "why_hidden": {
+        "en": "The stated step has small suppliers taking in income, yet the articles measure participation, suppliers moving along with the programme, rather than receipts. Between delivery and cash sit invoices, payment terms and possible arrears, and the family stops before asking when and whether the money lands.",
+        "id": "Langkah yang dinyatakan menempatkan pemasok kecil sebagai penerima pemasukan, tetapi artikel mengukur keikutsertaan, pemasok yang ikut bergerak bersama program, bukan penerimaan uang. Di antara pengiriman barang dan uang masuk ada tagihan, tempo pembayaran, dan kemungkinan tunggakan, dan keluarga pemberitaan ini berhenti sebelum menanyakan kapan dan apakah uangnya mendarat."
+      },
+      "where_to_look": "SPPG or BGN accounts payable records, supplier cooperative complaints, ombudsman or local council hearing minutes on kitchen payment delays."
+    },
+    {
+      "el_id": "mbg-jobs-h6",
+      "label": {
+        "en": "The pay, status and hours attached to each counted head",
+        "id": "Upah, status, dan jam kerja yang melekat pada tiap kepala yang dihitung"
+      },
+      "why_hidden": {
+        "en": "Absorption transfers income to a household only through a wage. The stated step from kitchens to workers reaches contracts, honorarium levels, volunteer versus employee status and full-time versus part-time hours, and the articles carry the headcount without any of these terms, so what a counted job actually transfers stays unstated.",
+        "id": "Penyerapan baru memindahkan pemasukan ke rumah tangga melalui upah. Langkah dari dapur ke pekerja menjangkau kontrak, besaran honor, status relawan atau pegawai, serta jam kerja penuh atau paruh waktu, dan artikel membawa angka serapan tanpa satu pun ketentuan itu, sehingga apa yang sungguh dipindahkan oleh satu pekerjaan yang dihitung tidak pernah dinyatakan."
+      },
+      "where_to_look": "SPPG staffing contracts, BGN honorarium schedules, ministry circulars on kitchen staffing standards."
+    },
+    {
+      "el_id": "mbg-jobs-h7",
+      "label": {
+        "en": "Meals delivered and recipients reached, the output side of the worth claim",
+        "id": "Porsi makanan yang tersalurkan dan penerima yang terjangkau, sisi keluaran dari klaim nilai program"
+      },
+      "why_hidden": {
+        "en": "Every stated step exists to put meals in front of recipients, and the headcount the family carries as worth is an input to that output. The articles measure the programme by the people it employs and stop before the quantity the budget is appropriated for, so the output that would anchor the worth claim never enters the frame.",
+        "id": "Seluruh langkah yang dinyatakan ada untuk mengantarkan makanan ke penerima, dan angka serapan yang dibawa sebagai ukuran nilai adalah masukan bagi keluaran itu. Artikel mengukur program dari jumlah orang yang dipekerjakannya dan berhenti sebelum besaran yang menjadi tujuan anggaran itu, sehingga keluaran yang seharusnya menjangkar klaim nilai tidak pernah masuk bingkai."
+      },
+      "where_to_look": "BGN distribution reports on meals served and schools covered, education ministry recipient counts."
+    },
+    {
+      "el_id": "mbg-jobs-h8",
+      "label": {
+        "en": "The budget lines that yield so the flow into the programme can happen",
+        "id": "Pos anggaran yang menyusut agar aliran dana ke program dapat terjadi"
+      },
+      "why_hidden": {
+        "en": "The first stated step has the state budget flowing into the programme, and money that flows in is money that stops flowing somewhere else. The articles report absorption as progress and never name the source side, the reallocations or borrowing that meet the charge, so the first payer in the chain stays off the page.",
+        "id": "Langkah pertama yang dinyatakan adalah anggaran negara mengalir ke program, dan dana yang mengalir masuk adalah dana yang berhenti mengalir ke tempat lain. Artikel melaporkan penyerapan anggaran sebagai kemajuan dan tidak pernah menyebut sisi sumbernya, realokasi atau pembiayaan yang menanggung beban itu, sehingga pembayar pertama dalam rantai tetap berada di luar halaman."
+      },
+      "where_to_look": "State budget documents and revisions for the fiscal year, directives on spending reallocation, regional transfer allocation tables."
+    }
+  ],
+  "model": "claude-fable-5"
+}

@@ -1,0 +1,418 @@
+{
+  "en": {
+    "narration": {
+      "en": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "The chain has four steps: USAID is defunded, the programmes that ran on its support stop, mortality rises in the populations those programmes reached, and the additional deaths by 2030 come to 14.05 million, with a published uncertainty interval of 8.48 million to 19.66 million, projected June 2025.",
+            "els": [
+              "usaid-deaths-panel-claim-map",
+              "usaid-deaths-n1",
+              "usaid-deaths-n2",
+              "usaid-deaths-n3",
+              "usaid-deaths-n4"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "The one link with a source behind it is the long jump from defunding straight to the 2030 total, so the three steps in between are what the model supplies, and the June 2025 run is the one this family still carries.",
+            "els": [
+              "usaid-deaths-e4",
+              "usaid-deaths-e1",
+              "usaid-deaths-e2",
+              "usaid-deaths-e3",
+              "usaid-deaths-h8"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "The unstated quantities are the interesting ones: how much of a programme stops when its award stops, how much of the caseload somebody else picks up, and how deep a cut has to hold, and for how long, for one total to land in 2030.",
+            "els": [
+              "usaid-deaths-e1",
+              "usaid-deaths-e2",
+              "usaid-deaths-e3",
+              "usaid-deaths-h4",
+              "usaid-deaths-h7"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "The parties the chain never names are standing at the front of it: the implementing partners and field staff whose payroll the award was, the stock already bought and sitting in warehouses, the manufacturers and carriers whose order books the procurement was, the households that meet the gap with their own money, and the ministries and other funders the caseload arrives at.",
+            "els": [
+              "usaid-deaths-h1",
+              "usaid-deaths-h2",
+              "usaid-deaths-h3",
+              "usaid-deaths-h5",
+              "usaid-deaths-h4"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "Sorted by when it lands, the sequence is plain: stop work notices and unpaid invoices within weeks, organisations closing and treatment dropped within months, and the projected total itself only at the far end, in 2030.",
+            "els": [
+              "usaid-deaths-panel-incidence",
+              "usaid-deaths-inc-implementers",
+              "usaid-deaths-inc-suppliers",
+              "usaid-deaths-inc-households",
+              "usaid-deaths-inc-cofinanciers"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "The figure that travels is the centre of a range its own paper printed, 8.48 million at the low end and 19.66 million at the high end, and the same paper puts about 4.5 million children under five inside that centre and credits about 91.8 million deaths prevented from 2001 to 2021 to programmes that other funders paid into as well.",
+            "els": [
+              "usaid-deaths-panel-scale-check",
+              "usaid-deaths-sc-seg-central",
+              "usaid-deaths-sc-seg-lower",
+              "usaid-deaths-sc-seg-upper",
+              "usaid-deaths-sc-chip-under-five",
+              "usaid-deaths-sc-chip-prevented",
+              "usaid-deaths-h6"
+            ]
+          }
+        ]
+      },
+      "id": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "Rantainya empat langkah: pendanaan USAID dihentikan, program yang berjalan atas dukungan itu berhenti, angka kematian meningkat di populasi yang dijangkau program tersebut, dan kematian tambahan hingga 2030 mencapai 14,05 juta, dengan interval ketidakpastian yang diterbitkan 8,48 juta sampai 19,66 juta, diproyeksikan Juni 2025.",
+            "els": [
+              "usaid-deaths-panel-claim-map",
+              "usaid-deaths-n1",
+              "usaid-deaths-n2",
+              "usaid-deaths-n3",
+              "usaid-deaths-n4"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "Hanya satu tautan yang punya sumber di belakangnya, yaitu lompatan panjang dari penghentian pendanaan langsung ke angka 2030, sehingga tiga langkah di antaranya dipasok model, dan penghitungan Juni 2025 itulah yang masih dibawa keluarga artikel ini.",
+            "els": [
+              "usaid-deaths-e4",
+              "usaid-deaths-e1",
+              "usaid-deaths-e2",
+              "usaid-deaths-e3",
+              "usaid-deaths-h8"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "Besaran yang tidak dinyatakan justru yang paling menentukan: berapa banyak sebuah program berhenti ketika kontraknya berhenti, berapa besar beban pasien yang diambil alih pihak lain, dan seberapa dalam pemotongan harus bertahan, serta berapa lama, agar satu angka total tiba pada 2030.",
+            "els": [
+              "usaid-deaths-e1",
+              "usaid-deaths-e2",
+              "usaid-deaths-e3",
+              "usaid-deaths-h4",
+              "usaid-deaths-h7"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "Pihak yang tidak pernah disebut rantai ini justru berdiri paling depan: mitra pelaksana dan staf lapangan yang gajinya berasal dari kontrak itu, stok yang sudah terlanjur dibeli dan tertahan di gudang, produsen serta pengangkut yang hidup dari pengadaan itu, rumah tangga yang merogoh kantong sendiri, dan kementerian kesehatan serta pendonor lain yang menerima limpahan beban pasien.",
+            "els": [
+              "usaid-deaths-h1",
+              "usaid-deaths-h2",
+              "usaid-deaths-h3",
+              "usaid-deaths-h5",
+              "usaid-deaths-h4"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "Diurutkan menurut waktu tibanya, urutannya jelas: surat penghentian kerja dan tagihan tak terbayar dalam hitungan minggu, organisasi yang tutup dan pengobatan yang tertunda dalam hitungan bulan, lalu angka proyeksi itu sendiri baru di ujung, pada 2030.",
+            "els": [
+              "usaid-deaths-panel-incidence",
+              "usaid-deaths-inc-implementers",
+              "usaid-deaths-inc-suppliers",
+              "usaid-deaths-inc-households",
+              "usaid-deaths-inc-cofinanciers"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "Angka yang beredar adalah titik tengah sebuah rentang yang diterbitkan makalah yang sama, 8,48 juta di ujung bawah dan 19,66 juta di ujung atas, dan makalah itu juga menempatkan sekitar 4,5 juta anak di bawah lima tahun di dalam titik tengah tersebut serta menyandarkan sekitar 91,8 juta kematian yang dicegah pada 2001 sampai 2021 kepada program yang juga dibiayai pendonor lain.",
+            "els": [
+              "usaid-deaths-panel-scale-check",
+              "usaid-deaths-sc-seg-central",
+              "usaid-deaths-sc-seg-lower",
+              "usaid-deaths-sc-seg-upper",
+              "usaid-deaths-sc-chip-under-five",
+              "usaid-deaths-sc-chip-prevented",
+              "usaid-deaths-h6"
+            ]
+          }
+        ]
+      }
+    },
+    "sparring": {
+      "questions": [
+        {
+          "move": "mechanism",
+          "q": {
+            "en": "Four steps run from the funding stop to the 2030 death total. Which link does the registry actually carry a source for?",
+            "id": "Empat langkah berjalan dari penghentian dana ke angka kematian 2030. Tautan mana yang sungguh dimuat sumbernya di registri?"
+          },
+          "options": [
+            {
+              "en": "The step from defunding to the programmes stopping.",
+              "id": "Langkah dari penghentian pendanaan ke berhentinya program."
+            },
+            {
+              "en": "The whole jump, from defunding straight to the projected 2030 total.",
+              "id": "Lompatan penuh, dari penghentian pendanaan langsung ke angka proyeksi 2030."
+            },
+            {
+              "en": "The step from stopped programmes to rising mortality.",
+              "id": "Langkah dari program yang berhenti ke naiknya angka kematian."
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "en": "The claim map marks the long edge, defunding to the 2030 total, as the sourced one, quoting the paper's own projection. The three steps in the middle carry no source, so the mechanics a reader would most want checked are the part the model fills in.",
+            "id": "Peta klaim menandai garis panjang, dari penghentian pendanaan ke angka 2030, sebagai satu-satunya yang bersumber, mengutip proyeksi makalahnya sendiri. Tiga langkah di tengah tidak memuat sumber, sehingga mekanisme yang paling ingin diperiksa pembaca justru bagian yang diisi model."
+          }
+        },
+        {
+          "move": "denominator",
+          "q": {
+            "en": "The 14.05 million that travels is the central estimate of a June 2025 projection. What did the same paper print beside it?",
+            "id": "Angka 14,05 juta yang beredar adalah estimasi tengah dari proyeksi Juni 2025. Apa yang dicetak makalah yang sama di sampingnya?"
+          },
+          "options": [
+            {
+              "en": "A settled count, with the modelling uncertainty resolved before publication.",
+              "id": "Sebuah hitungan final, dengan ketidakpastian model sudah diselesaikan sebelum terbit."
+            },
+            {
+              "en": "A per-country breakdown showing where the deaths fall.",
+              "id": "Rincian per negara yang menunjukkan di mana kematian itu jatuh."
+            },
+            {
+              "en": "An interval running from 8.48 million at the low end to 19.66 million at the high end, dated June 2025 for a 2030 horizon.",
+              "id": "Interval dari 8,48 juta di ujung bawah sampai 19,66 juta di ujung atas, bertanggal Juni 2025 untuk cakrawala 2030."
+            }
+          ],
+          "correct": 2,
+          "note": {
+            "en": "The scale check sets the travelling figure against the high end of its own published interval and stands the low end beside it. Same paper, same date, three numbers rather than one, and about 4.5 million children under five sit inside the central one.",
+            "id": "Panel skala menaruh angka yang beredar di hadapan ujung atas intervalnya sendiri dan mendudukkan ujung bawah di sampingnya. Makalah yang sama, tanggal yang sama, tiga angka alih-alih satu, dan sekitar 4,5 juta anak di bawah lima tahun berada di dalam angka tengahnya."
+          }
+        },
+        {
+          "move": "incidence",
+          "q": {
+            "en": "The incidence panel sorts the parties by when the funding stop reaches them. What arrives in the first weeks?",
+            "id": "Panel insidensi mengurutkan para pihak menurut kapan penghentian dana menyentuh mereka. Apa yang tiba dalam minggu-minggu pertama?"
+          },
+          "options": [
+            {
+              "en": "Stop work notices, unpaid invoices and order books closing, at the partners and suppliers the money passed through.",
+              "id": "Surat penghentian kerja, tagihan tak terbayar, dan buku pesanan yang tutup, pada mitra pelaksana dan pemasok yang dilewati uang itu."
+            },
+            {
+              "en": "The first measurable rise in mortality in the populations the programmes reached.",
+              "id": "Kenaikan angka kematian pertama yang dapat diukur di populasi yang dijangkau program."
+            },
+            {
+              "en": "A decision from the other funders on how much of the stopped work they absorb.",
+              "id": "Keputusan pendonor lain tentang berapa banyak pekerjaan terhenti yang mereka ambil alih."
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "en": "The incidence panel puts terminated agreements, unpaid invoices and halted consignments in the weeks column, at implementing partners and their suppliers. The other funders settle their share over months, and the projected total sits at the far horizon, in 2030.",
+            "id": "Panel insidensi menaruh pemutusan perjanjian, tagihan tak terbayar, dan kiriman yang tertahan di kolom minggu, pada mitra pelaksana dan pemasok mereka. Pendonor lain menetapkan bagiannya dalam hitungan bulan, dan angka proyeksi berada di cakrawala terjauh, pada 2030."
+          }
+        }
+      ]
+    },
+    "prediction_tap": {
+      "prompt": {
+        "en": "Before you scroll. In a story about deaths from a funding cut, which side of the transaction usually goes missing?",
+        "id": "Sebelum menggulir. Dalam cerita tentang kematian akibat pemotongan dana, sisi mana dari transaksi itu yang biasanya menghilang?"
+      },
+      "options": [
+        {
+          "en": "The people whose wages and invoices the funding was, at the organisations that delivered the work.",
+          "id": "Orang-orang yang upah dan tagihannya berasal dari dana itu, di organisasi yang mengerjakan programnya."
+        },
+        {
+          "en": "The suppliers who sold into it: medicine makers, food commodity growers, the carriers that moved the stock.",
+          "id": "Pemasok yang menjual ke dalamnya: produsen obat, petani komoditas pangan, dan pengangkut yang memindahkan stok."
+        },
+        {
+          "en": "The other funders and health ministries the caseload lands on the moment a service lapses.",
+          "id": "Pendonor lain dan kementerian kesehatan yang menerima limpahan beban pasien begitu sebuah layanan terhenti."
+        },
+        {
+          "en": "The households paying out of pocket for the service that stopped.",
+          "id": "Rumah tangga yang membayar sendiri layanan yang berhenti."
+        }
+      ]
+    }
+  },
+  "id": {
+    "narration": {
+      "id": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "Registri memuat satu garis untuk klaim ini, dan garis itu melompat dari penghentian pendanaan USAID langsung ke 14,05 juta kematian tambahan hingga 2030 (interval ketidakpastian 8,48 juta sampai 19,66 juta, diproyeksikan Juni 2025).",
+            "els": [
+              "usaid-deaths-panel-claim-map",
+              "usaid-deaths-n1",
+              "usaid-deaths-n4",
+              "usaid-deaths-e4"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "Tiga langkah di antaranya, yaitu program berhenti, angka kematian naik di populasi yang dijangkau, lalu kenaikan itu menjadi satu total, tidak dimuat registri dan tidak dinyatakan artikel mana pun dalam keluarga ini.",
+            "els": [
+              "usaid-deaths-n2",
+              "usaid-deaths-n3",
+              "usaid-deaths-e1",
+              "usaid-deaths-e2",
+              "usaid-deaths-e3"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "Tiga besaran menopang lompatan itu tanpa pernah dituliskan: berapa bagian layanan terhenti yang diambil alih kementerian kesehatan, lembaga dana multilateral, dan pendonor bilateral lain; seberapa dalam pemotongan harus bertahan sampai 2030; dan berapa porsi pembiayaan yang selama ini datang dari uang selain USAID.",
+            "els": [
+              "usaid-deaths-e2",
+              "usaid-deaths-h4",
+              "usaid-deaths-h6",
+              "usaid-deaths-h7"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "Di luar bingkai berdiri pihak-pihak yang tersentuh lebih dulu: mitra pelaksana beserta staf lapangannya, stok obat dan pangan yang terlanjur dibeli dan tertahan di gudang, pemasok yang hidup dari pengadaan itu, dan rumah tangga yang merogoh kantong sendiri begitu klinik menutup pintu.",
+            "els": [
+              "usaid-deaths-h1",
+              "usaid-deaths-h2",
+              "usaid-deaths-h3",
+              "usaid-deaths-h5"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "Urutan waktunya membalik urutan ceritanya: surat penghentian kerja, buku pesanan yang berhenti, dan biaya yang pindah ke rumah tangga tiba dalam hitungan minggu, beban pasien mendarat di kementerian kesehatan sebelum mereka sempat memutuskan anggaran sendiri, dan angka 2030 baru berdiri di kolom terjauh.",
+            "els": [
+              "usaid-deaths-panel-incidence",
+              "usaid-deaths-inc-implementers",
+              "usaid-deaths-inc-suppliers",
+              "usaid-deaths-inc-households",
+              "usaid-deaths-inc-cofinanciers"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "Angka yang beredar adalah estimasi tengah dari sebuah rentang yang diterbitkan makalah yang sama: 8,48 juta di ujung bawah, 19,66 juta di ujung atas, sekitar 4,5 juta anak di bawah lima tahun di dalam proyeksi tengah, dan sekitar 91,8 juta kematian yang dicegah sepanjang 2001 sampai 2021 di sisi hitungan ke belakang, semuanya bertanggal Juni 2025 untuk cakrawala 2030.",
+            "els": [
+              "usaid-deaths-panel-scale-check",
+              "usaid-deaths-sc-seg-central",
+              "usaid-deaths-sc-seg-lower",
+              "usaid-deaths-sc-seg-upper",
+              "usaid-deaths-sc-chip-under-five",
+              "usaid-deaths-sc-chip-prevented",
+              "usaid-deaths-h8"
+            ]
+          }
+        ]
+      }
+    },
+    "sparring": {
+      "questions": [
+        {
+          "move": "mechanism",
+          "q": {
+            "id": "Dari penghentian pendanaan USAID sampai angka kematian 2030, langkah mana yang punya sumber di registri?"
+          },
+          "options": [
+            {
+              "id": "Satu garis saja, dari penghentian pendanaan langsung ke total 2030, sedangkan tiga langkah di antaranya tidak dimuat."
+            },
+            {
+              "id": "Keempat langkahnya, dari penghentian pendanaan sampai total 2030, masing-masing dengan sumbernya sendiri."
+            },
+            {
+              "id": "Langkah dari program yang berhenti ke naiknya angka kematian, dan langkah itulah yang menopang sisa rantainya."
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "id": "Peta klaim menandai e4, dari penghentian pendanaan langsung ke total 2030, sebagai satu-satunya langkah yang punya sumber di registri, dan memuatnya dalam bentuk yang diterbitkan sumbernya: proyeksi bertanggal Juni 2025 dengan interval ketidakpastian tercetak di sampingnya. Tiga langkah di antaranya, yaitu e1, e2, dan e3, berdiri tanpa sumber di registri dan tanpa pernyataan dari artikel mana pun dalam keluarga ini."
+          }
+        },
+        {
+          "move": "denominator",
+          "q": {
+            "id": "Panel skala menaruh proyeksi Juni 2025 untuk kematian tambahan hingga 2030 di dalam apa?"
+          },
+          "options": [
+            {
+              "id": "Di dalam jumlah penduduk negara-negara yang dijangkau program tersebut."
+            },
+            {
+              "id": "Di dalam rentang ketidakpastian yang diterbitkan bersamanya, 8,48 juta di ujung bawah sampai 19,66 juta di ujung atas, proyeksi Juni 2025."
+            },
+            {
+              "id": "Di dalam sekitar 91,8 juta kematian yang dicegah sepanjang 2001 sampai 2021, estimasi dari makalah yang sama, Juni 2025."
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "id": "Panel skala memakai ujung atas rentang yang diterbitkan, 19,66 juta, sebagai penyebutnya, lalu menaruh estimasi tengah 14,05 juta dan ujung bawah 8,48 juta di dalamnya, semuanya bertanggal Juni 2025 untuk cakrawala 2030. Angka sekitar 91,8 juta kematian yang dicegah sepanjang 2001 sampai 2021 memang berdiri di panel yang sama, tetapi sebagai keping konteks di samping proyeksinya, dan jumlah penduduk tidak dimuat di panel mana pun."
+          }
+        },
+        {
+          "move": "incidence",
+          "q": {
+            "id": "Dalam hitungan minggu pertama, siapa yang lebih dulu merasakan penghentian pendanaan ini, dan lewat apa?"
+          },
+          "options": [
+            {
+              "id": "Rumah tangga di populasi yang dijangkau, lewat naiknya angka kematian."
+            },
+            {
+              "id": "Kementerian kesehatan, setelah mereka mengambil keputusan pendanaan sendiri atas layanan yang terhenti."
+            },
+            {
+              "id": "Mitra pelaksana dan pemasok, lewat surat penghentian kerja, tagihan tak terbayar, dan buku pesanan yang berhenti bersama kontraknya."
+            }
+          ],
+          "correct": 2,
+          "note": {
+            "id": "Panel insidensi menaruh surat penghentian kerja, tagihan tak terbayar, dan buku pesanan yang berhenti di kolom minggu. Rumah tangga berdiri di kolom yang sama, tetapi yang mereka temui lebih dulu adalah uang sendiri untuk obat, perjalanan, dan biaya layanan, sementara angka kematian 2030 baru muncul di kolom terjauh. Beban pasien tiba di kementerian kesehatan pada minggu yang sama pula, sebelum keputusan pendanaan mereka sempat diambil."
+          }
+        }
+      ]
+    },
+    "prediction_tap": {
+      "prompt": {
+        "id": "Sebelum panelnya terbuka: dalam rantai dari penghentian pendanaan USAID sampai angka kematian 2030, sisi mana yang menurut Anda hilang dari bingkai?"
+      },
+      "options": [
+        {
+          "id": "Mitra pelaksana dan tenaga kesehatan yang gajinya ditarik dari kontrak itu"
+        },
+        {
+          "id": "Pemasok yang hidup dari pengadaannya: produsen obat, produsen komoditas pangan, dan pengangkut"
+        },
+        {
+          "id": "Pendonor lain dan kementerian kesehatan yang dapat mengambil alih layanan yang berhenti"
+        },
+        {
+          "id": "Rumah tangga yang membayar sendiri pengganti layanan yang berhenti"
+        },
+        {
+          "id": "Jalur pendanaan yang menjadi syarat tercapainya angka 2030 itu"
+        }
+      ]
+    }
+  }
+}

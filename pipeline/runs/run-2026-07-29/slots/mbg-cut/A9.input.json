@@ -1,0 +1,551 @@
+{
+  "narrative_id": "mbg-cut",
+  "headline": {
+    "en": "The 2026 MBG Allocation Is Cut to Rp268 Trillion",
+    "id": "Pagu MBG 2026 Dipangkas Menjadi Rp268 Triliun"
+  },
+  "original": {
+    "text": "Pagu MBG 2026 dipangkas dari Rp335 triliun menjadi Rp268 triliun",
+    "lang": "id"
+  },
+  "panels": [
+    {
+      "type": "claim_map",
+      "el_id": "mbg-cut.panel.claim_map",
+      "spine": [
+        {
+          "el_id": "mbg-cut.spine.n1",
+          "label": {
+            "en": "The 2026 MBG budget ceiling is cut to a lower level",
+            "id": "Pagu anggaran MBG 2026 dipangkas ke tingkat yang lebih rendah"
+          },
+          "value": {
+            "amount": 268,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp268 trillion",
+              "id": "Rp268 triliun"
+            },
+            "source_id": "id-antara-mbg-realisasi-mei2026",
+            "as_of": "2026 allocation after the cut, as reported 5 June 2026"
+          }
+        },
+        {
+          "el_id": "mbg-cut.spine.n2",
+          "label": {
+            "en": "The programme keeps running and draws down its budget",
+            "id": "Program tetap berjalan dan membelanjakan anggarannya"
+          },
+          "value": {
+            "amount": 29679,
+            "unit": "count",
+            "display": {
+              "en": "29,679 SPPG kitchens",
+              "id": "29.679 dapur SPPG"
+            },
+            "source_id": "id-kompas-mbg-sppg-mei2026",
+            "as_of": "as of end May 2026"
+          }
+        },
+        {
+          "el_id": "mbg-cut.spine.n3",
+          "label": {
+            "en": "Realized MBG spending through May 2026 goes on the record",
+            "id": "Realisasi belanja MBG hingga Mei 2026 tercatat"
+          },
+          "value": {
+            "amount": 88.15,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp88.15 trillion",
+              "id": "Rp88,15 triliun"
+            },
+            "source_id": "id-antara-mbg-realisasi-mei2026",
+            "as_of": "realized, as of May 2026"
+          }
+        },
+        {
+          "el_id": "mbg-cut.spine.n4",
+          "label": {
+            "en": "The rest of 2026 runs on a smaller spending envelope",
+            "id": "Sisa tahun 2026 berjalan dengan ruang belanja yang lebih kecil"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "el_id": "mbg-cut.edge.n1-n2",
+          "from": "mbg-cut.spine.n1",
+          "to": "mbg-cut.spine.n2",
+          "status": "missing",
+          "ev": {
+            "quote": "no article in this family states the step from the cut 2026 ceiling to the programme running and drawing down its budget",
+            "why": {
+              "en": "The lower ceiling is on the record and so is the drawdown, each on its own. No source in this run states the step between them, that the reduced ceiling is the amount the programme has been spending against since the cut.",
+              "id": "Pagu yang lebih rendah tercatat dan angka serapan juga tercatat, masing-masing berdiri sendiri. Tidak ada sumber dalam rangkaian ini yang menyatakan langkah di antara keduanya, bahwa pagu yang dikurangi itulah acuan belanja program sejak pemangkasan."
+            }
+          }
+        },
+        {
+          "el_id": "mbg-cut.edge.n2-n3",
+          "from": "mbg-cut.spine.n2",
+          "to": "mbg-cut.spine.n3",
+          "status": "supported",
+          "ev": {
+            "quote": "Anggaran MBG Terserap Rp 88,15 Triliun hingga Mei 2026",
+            "source_id": "id-kompas-mbg-sppg-mei2026",
+            "why": {
+              "en": "Kompas puts cumulative MBG spending of Rp88.15 trillion through May 2026 on the record, which is the drawdown this step names. Antara carries the same figure attributed to Finance Minister Purbaya Yudhi Sadewa.",
+              "id": "Kompas mencatat belanja kumulatif MBG sebesar Rp88,15 triliun hingga Mei 2026, yaitu serapan yang dimaksud langkah ini. Antara memuat angka yang sama dengan atribusi kepada Menteri Keuangan Purbaya Yudhi Sadewa."
+            }
+          }
+        },
+        {
+          "el_id": "mbg-cut.edge.n3-n4",
+          "from": "mbg-cut.spine.n3",
+          "to": "mbg-cut.spine.n4",
+          "status": "missing",
+          "ev": {
+            "quote": "no article in this family states the step from realized spending through May 2026 to a smaller envelope for the rest of the year",
+            "why": {
+              "en": "The May figure is a cumulative record of months already closed, not a statement about the months after it. No source in this run carries what is left of the ceiling, or the monthly pace that remainder holds.",
+              "id": "Angka Mei adalah catatan kumulatif atas bulan-bulan yang sudah lewat, bukan pernyataan tentang bulan-bulan sesudahnya. Tidak ada sumber dalam rangkaian ini yang memuat sisa pagu, atau laju belanja bulanan yang masih tertampung oleh sisa itu."
+            }
+          }
+        }
+      ],
+      "hidden": [
+        {
+          "el_id": "mbg-cut.hidden.cut-destination",
+          "label": {
+            "en": "Where the fiscal room freed by the cut goes",
+            "id": "Ke mana ruang fiskal hasil pemangkasan berpindah"
+          },
+          "why_hidden": {
+            "en": "The cut in the stated first step is a transfer: a lower MBG ceiling frees fiscal room that lands somewhere else in the 2026 budget. The articles record the drawdown figure and never name the line that receives what the programme gave up.",
+            "id": "Pemangkasan pada langkah pertama adalah sebuah pemindahan: pagu MBG yang lebih rendah membuka ruang fiskal yang mendarat di pos lain APBN 2026. Artikel mencatat angka realisasi dan tidak pernah menyebut pos yang menerima apa yang dilepaskan program ini."
+          }
+        },
+        {
+          "el_id": "mbg-cut.hidden.ceiling-denominator",
+          "label": {
+            "en": "The ceiling the May figure draws against, and what is left of it",
+            "id": "Pagu yang menjadi pembagi angka Mei, dan sisa ruangnya"
+          },
+          "value": {
+            "amount": 268,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp268 trillion",
+              "id": "Rp268 triliun"
+            },
+            "source_id": "id-antara-mbg-realisasi-mei2026",
+            "as_of": "2026 allocation after the cut, as reported 5 June 2026"
+          },
+          "why_hidden": {
+            "en": "A drawdown figure only means something against a denominator. The stated record step gives cumulative spending through May 2026; the stated first step says the ceiling is lower. No article puts the two side by side: the share of the reduced ceiling already spent, the envelope left for the remaining months, and the pace that remainder can sustain.",
+            "id": "Angka serapan hanya bermakna jika ada pembaginya. Langkah pencatatan menyebut belanja kumulatif hingga Mei 2026; langkah pertama menyebut pagu yang lebih rendah. Tidak ada artikel yang menyandingkan keduanya: porsi pagu baru yang sudah terpakai, ruang yang tersisa untuk bulan-bulan berikutnya, dan laju belanja yang masih tertampung oleh sisa itu."
+          },
+          "ev": {
+            "quote": "Purbaya sebut realisasi anggaran MBG capai Rp88,15 triliun",
+            "source_id": "id-antara-mbg-realisasi-mei2026"
+          }
+        },
+        {
+          "el_id": "mbg-cut.hidden.sppg-payment-terms",
+          "label": {
+            "en": "SPPG kitchen partners, their crews and their payment terms",
+            "id": "Mitra dapur SPPG, para pekerjanya, dan termin pembayarannya"
+          },
+          "value": {
+            "amount": 1280000,
+            "unit": "people",
+            "display": {
+              "en": "1.28 million workers",
+              "id": "1,28 juta pekerja"
+            },
+            "source_id": "id-cnbc-mbg-workers-suppliers",
+            "as_of": "as of May 2026",
+            "flags": [
+              "self_reported"
+            ]
+          },
+          "why_hidden": {
+            "en": "The stated drawdown step runs through kitchen units that cook, serve and invoice per portion. When the rest of the year runs on a smaller envelope, they meet the squeeze first: slower reimbursement, stretched payment terms, reduced hours for cooks and drivers. The articles count what was spent and stop before the parties who bill against what remains.",
+            "id": "Langkah serapan berjalan lewat satuan dapur yang memasak, menyajikan, dan menagih per porsi. Saat sisa tahun berjalan dengan ruang belanja lebih kecil, merekalah yang pertama menanggung: penggantian melambat, termin pembayaran memanjang, jam kerja juru masak dan pengantar berkurang. Artikel menghitung yang sudah dibelanjakan dan berhenti sebelum pihak yang menagih dari sisa anggaran."
+          },
+          "ev": {
+            "quote": "Program MBG Serap 1,28 Juta Tenaga Kerja, UMKM-Peternak Kecipratan",
+            "source_id": "id-cnbc-mbg-workers-suppliers"
+          }
+        },
+        {
+          "el_id": "mbg-cut.hidden.upstream-suppliers",
+          "label": {
+            "en": "Upstream food suppliers whose income the spending is",
+            "id": "Pemasok pangan di hulu yang pendapatannya berasal dari belanja itu"
+          },
+          "value": {
+            "amount": 142387,
+            "unit": "count",
+            "display": {
+              "en": "142,387 suppliers",
+              "id": "142.387 pemasok"
+            },
+            "source_id": "id-cnbc-mbg-workers-suppliers",
+            "as_of": "as of May 2026",
+            "flags": [
+              "self_reported"
+            ]
+          },
+          "why_hidden": {
+            "en": "Every rupiah in the recorded figure is revenue to farmers, fishers, egg and vegetable suppliers and local markets that feed the kitchens. A smaller envelope for the rest of 2026 reaches their order books. The articles record the spending as a treasury figure and do not follow it to the counter where it is income.",
+            "id": "Setiap rupiah dalam angka yang tercatat adalah pendapatan bagi petani, nelayan, pemasok telur dan sayur, serta pasar lokal yang memasok dapur. Ruang belanja yang lebih kecil untuk sisa 2026 sampai ke buku pesanan mereka. Artikel mencatat belanja itu sebagai angka kas negara dan tidak mengikutinya hingga pihak yang menerimanya sebagai pendapatan."
+          },
+          "ev": {
+            "quote": "Program MBG Serap 1,28 Juta Tenaga Kerja, UMKM-Peternak Kecipratan",
+            "source_id": "id-cnbc-mbg-workers-suppliers"
+          }
+        },
+        {
+          "el_id": "mbg-cut.hidden.recipients-remainder",
+          "label": {
+            "en": "Recipients for the rest of the year, and the households behind them",
+            "id": "Penerima manfaat untuk sisa tahun, dan rumah tangga di belakang mereka"
+          },
+          "value": {
+            "amount": 63130000,
+            "unit": "people",
+            "display": {
+              "en": "63.13 million people",
+              "id": "63,13 juta orang"
+            },
+            "source_id": "id-databoks-mbg-chart",
+            "as_of": "as of May 2026"
+          },
+          "why_hidden": {
+            "en": "The stated last step leaves the remaining months on a smaller envelope. That reaches serving days, portion standards and coverage for schoolchildren, toddlers, pregnant and breastfeeding mothers. A meal the envelope no longer covers is a cost that moves back to the household. The articles stop at the cumulative figure and never state what the remainder buys.",
+            "id": "Langkah terakhir meninggalkan bulan-bulan tersisa dengan ruang belanja lebih kecil. Itu menyentuh hari penyajian, standar porsi, dan cakupan bagi anak sekolah, balita, serta ibu hamil dan menyusui. Porsi yang tidak lagi dibiayai anggaran menjadi biaya yang kembali ke rumah tangga. Artikel berhenti di angka kumulatif dan tidak menyebut apa yang bisa dibeli dari sisanya."
+          },
+          "ev": {
+            "quote": "Realisasi Belanja MBG Tembus Rp88 Triliun sampai Mei 2026",
+            "source_id": "id-databoks-mbg-chart"
+          }
+        },
+        {
+          "el_id": "mbg-cut.hidden.expansion-queue",
+          "label": {
+            "en": "The expansion queue: kitchens and regions not yet on line",
+            "id": "Antrean perluasan: dapur dan daerah yang belum terlayani"
+          },
+          "value": {
+            "amount": 29679,
+            "unit": "count",
+            "display": {
+              "en": "29,679 SPPG kitchens",
+              "id": "29.679 dapur SPPG"
+            },
+            "source_id": "id-kompas-mbg-sppg-mei2026",
+            "as_of": "as of end May 2026"
+          },
+          "why_hidden": {
+            "en": "Spending through May 2026 was recorded by kitchens already operating. The remaining envelope is also what brings the queue on line: kitchens under construction, regions and children not yet covered. A smaller rest-of-year envelope reaches that queue before it reaches anyone already served, and no article in the family follows it there.",
+            "id": "Belanja hingga Mei 2026 tercatat lewat dapur yang sudah beroperasi. Sisa ruang belanja juga yang membiayai antrean: dapur yang sedang dibangun, daerah dan anak yang belum tercakup. Ruang yang lebih kecil untuk sisa tahun sampai ke antrean itu lebih dulu daripada ke pihak yang sudah terlayani, dan tidak ada artikel dalam keluarga ini yang mengikutinya ke sana."
+          },
+          "ev": {
+            "quote": "Anggaran MBG Terserap Rp 88,15 Triliun hingga Mei 2026",
+            "source_id": "id-kompas-mbg-sppg-mei2026"
+          }
+        }
+      ]
+    },
+    {
+      "type": "scale_check",
+      "el_id": "mbg-cut.panel.scale_check",
+      "denominator": {
+        "label": {
+          "en": "Total state spending, APBN 2026, enacted",
+          "id": "Total belanja negara, APBN 2026 yang disahkan"
+        },
+        "value": {
+          "amount": 3842.7,
+          "unit": "IDR_T",
+          "display": {
+            "en": "Rp3,842.7 trillion",
+            "id": "Rp3.842,7 triliun"
+          },
+          "source_id": "id-kemenkeu-apbn2026-enacted",
+          "as_of": "APBN 2026, enacted"
+        }
+      },
+      "segments": [
+        {
+          "el_id": "mbg-cut.scale.seg.mbg-ceiling-after-cut",
+          "label": {
+            "en": "MBG budget ceiling after the 2026 cut",
+            "id": "Pagu anggaran MBG setelah pemangkasan 2026"
+          },
+          "value": {
+            "amount": 268,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp268 trillion",
+              "id": "Rp268 triliun"
+            },
+            "source_id": "id-antara-mbg-realisasi-mei2026",
+            "as_of": "2026 allocation after the cut, as reported 5 June 2026"
+          }
+        },
+        {
+          "el_id": "mbg-cut.scale.seg.mbg-realized-may",
+          "label": {
+            "en": "MBG spending realized through May 2026",
+            "id": "Belanja MBG yang terserap hingga Mei 2026"
+          },
+          "value": {
+            "amount": 88.15,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp88.15 trillion",
+              "id": "Rp88,15 triliun"
+            },
+            "source_id": "id-kompas-mbg-sppg-mei2026",
+            "as_of": "as of end May 2026"
+          }
+        },
+        {
+          "el_id": "mbg-cut.scale.seg.debt-interest",
+          "label": {
+            "en": "Debt interest payments, APBN 2026",
+            "id": "Pembayaran bunga utang, APBN 2026"
+          },
+          "value": {
+            "amount": 599.44,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp599.44 trillion",
+              "id": "Rp599,44 triliun"
+            },
+            "source_id": "id-bisnis-debt-interest-2026",
+            "as_of": "APBN 2026, enacted (Perpres 118/2025)"
+          }
+        },
+        {
+          "el_id": "mbg-cut.scale.seg.energy-subsidy",
+          "label": {
+            "en": "Energy subsidy, APBN 2026",
+            "id": "Subsidi energi, APBN 2026"
+          },
+          "value": {
+            "amount": 210.06,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp210.06 trillion",
+              "id": "Rp210,06 triliun"
+            },
+            "source_id": "id-kompas-energy-subsidy-enacted",
+            "as_of": "APBN 2026, enacted (Perpres 118/2025)"
+          }
+        }
+      ],
+      "takeaway": {
+        "en": "Two quantities sit inside one budget line here: the ceiling the programme now works against, and what it had already spent by the end of May 2026. Both are placed against total state spending for the year, and against the allocation the programme started 2026 with.",
+        "id": "Dua besaran berada dalam satu pos anggaran di sini: pagu yang kini menjadi acuan program, dan belanja yang sudah terpakai sampai akhir Mei 2026. Keduanya ditempatkan terhadap total belanja negara sepanjang tahun, dan terhadap alokasi awal program pada 2026."
+      },
+      "context_chips": [
+        {
+          "el_id": "mbg-cut.scale.chip.mbg-allocation-before-cut",
+          "label": {
+            "en": "MBG allocation before the cut",
+            "id": "Alokasi MBG sebelum pemangkasan"
+          },
+          "value": {
+            "amount": 335,
+            "unit": "IDR_T",
+            "display": {
+              "en": "Rp335 trillion",
+              "id": "Rp335 triliun"
+            },
+            "source_id": "id-antara-mbg-realisasi-mei2026",
+            "as_of": "2026 allocation before the cut, as reported 5 June 2026"
+          }
+        },
+        {
+          "el_id": "mbg-cut.scale.chip.beneficiaries",
+          "label": {
+            "en": "Beneficiaries reached through May 2026",
+            "id": "Penerima manfaat hingga Mei 2026"
+          },
+          "value": {
+            "amount": 63130000,
+            "unit": "people",
+            "display": {
+              "en": "63.13 million people",
+              "id": "63,13 juta orang"
+            },
+            "source_id": "id-antara-mbg-realisasi-mei2026",
+            "as_of": "as of May 2026"
+          }
+        },
+        {
+          "el_id": "mbg-cut.scale.chip.sppg-kitchens",
+          "label": {
+            "en": "SPPG kitchens operating, May 2026",
+            "id": "Dapur SPPG yang beroperasi, Mei 2026"
+          },
+          "value": {
+            "amount": 29679,
+            "unit": "count",
+            "display": {
+              "en": "29,679 SPPG kitchens",
+              "id": "29.679 dapur SPPG"
+            },
+            "source_id": "id-kompas-mbg-sppg-mei2026",
+            "as_of": "as of end May 2026"
+          }
+        }
+      ]
+    },
+    {
+      "type": "family",
+      "el_id": "mbg-cut-p-family"
+    }
+  ],
+  "echo": null,
+  "lexicon": {
+    "note": "Blueprint 6.9, as data. scripts/validate-content.ts check 5 is the only reader. Matching is case-insensitive and whole-word for every verdict entry, including the ID class-ID words (benar, salah, terbukti), which 6.9 scopes to verdict use and which are matched as whole words like the rest.",
+    "verdict": {
+      "note": "6.9 also names two phrasings rather than bare words: disinformation verdict phrasing ('this is disinformation'), caught by its constituent word below, and fact-checked as a verdict ('fact-check: false'), whose colon construction is carried in `phrases` because the verdict word after the colon may be one 6.9 does not list. `phrases` entries are regex sources matched case-insensitively against the same copy strings and reported and exempted exactly like a verdict word.",
+      "en": [
+        "hoax",
+        "false",
+        "fake",
+        "true",
+        "debunked",
+        "misleading",
+        "disinformation",
+        "lie",
+        "liar",
+        "busted"
+      ],
+      "id": [
+        "hoaks",
+        "bohong",
+        "palsu",
+        "benar",
+        "salah",
+        "sesat",
+        "menyesatkan",
+        "terbukti",
+        "dusta"
+      ],
+      "phrases": [
+        {
+          "label": "fact-check as a verdict",
+          "pattern": "fact[\\s-]?check(?:ed)?\\s*:",
+          "why": "6.9 names 'fact-check: false' as verdict phrasing. Narrow by construction: only the colon form delivers a verdict. Prose about fact-checking as a genre ('we are not a fact-checking service', 'fact-checkers publish after the fact') carries no colon and stays legal."
+        }
+      ]
+    },
+    "future_harm": {
+      "note": "6.9: lint fails on 'will cause', 'will lead to', 'akan menyebabkan', 'akan memicu', and 'bakal' plus a harm noun. Scoped to the retrospective surfaces, which are the ones 6.9 names: Echo outcome text and case-library documented_outcome. A scope entry names a run of consecutive keys and matches wherever that run sits in the path, not only at its head: 6.3 puts EchoPanel in the Panel union, so the same Echo outcome text is reached at echo.historical.outcome under the artifact root and at panels.historical.outcome inside panels[], and both are the same surface. Entries stay this specific on purpose: panels.takeaway and family.members.headline are ordinary forward-looking copy and stay out of scope.",
+      "scope": [
+        "historical.outcome",
+        "cases.documented_outcome"
+      ],
+      "patterns": [
+        "will cause",
+        "will lead to",
+        "akan menyebabkan",
+        "akan memicu"
+      ],
+      "hedge": "bakal",
+      "harm_nouns": [
+        "harm",
+        "shortage",
+        "shortages",
+        "death",
+        "deaths",
+        "collapse",
+        "crisis",
+        "loss",
+        "losses",
+        "damage",
+        "hunger",
+        "famine",
+        "kelaparan",
+        "kerugian",
+        "korban",
+        "krisis",
+        "bencana",
+        "kerusakan",
+        "kematian",
+        "kekurangan"
+      ]
+    },
+    "style": {
+      "note": "6.9 style lint on all user-facing copy, both locales and the landing.",
+      "banned_chars": [
+        {
+          "char": "—",
+          "name": "em dash (U+2014)"
+        }
+      ],
+      "emoji_pattern": "\\p{Extended_Pictographic}"
+    },
+    "not_copy_keys": {
+      "note": "Keys whose values are machine identifiers, URLs, or hashes rather than copy. Outside the lint domain everywhere: a slug or a URL path segment is not Matterhorn saying the word. One collision: `id` is also the Indonesian locale key, so it counts as copy whenever its object carries an `en` string sibling.",
+      "keys": [
+        "id",
+        "el_id",
+        "source_id",
+        "narrative_id",
+        "case_id",
+        "run_id",
+        "key",
+        "disclaimer_key",
+        "url",
+        "pattern",
+        "image_path",
+        "image_url_original",
+        "input_hash",
+        "token"
+      ]
+    },
+    "exemptions": [
+      {
+        "file": "methodology.json",
+        "key": "policy_65",
+        "rules": [
+          "verdict"
+        ],
+        "why": "6.9 scoped exemption: the methodology page may use these words when describing what Matterhorn does not do."
+      },
+      {
+        "file": "case_library.json",
+        "key": "cases.documented_outcome",
+        "rules": [
+          "verdict"
+        ],
+        "condition": "quoted_with_citation",
+        "why": "6.9 scoped exemption: case-library outcome text may quote an institution's own language inside quotation marks with a citation."
+      },
+      {
+        "file": "sources.json",
+        "key": "title",
+        "rules": [
+          "verdict"
+        ],
+        "why": "The source registry is the citation apparatus, not Matterhorn's voice: a title is the publisher's own wording, verbatim, and the entry that carries it IS the citation. Same reasoning as the 6.9 case-library quote exemption."
+      },
+      {
+        "file": "sources.json",
+        "key": "notes",
+        "rules": [
+          "verdict"
+        ],
+        "why": "Registry notes are operator provenance annotations (discrepancies, replacement history). They never render as user-facing copy."
+      }
+    ]
+  }
+}

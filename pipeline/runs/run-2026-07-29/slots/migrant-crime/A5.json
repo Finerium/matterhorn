@@ -1,0 +1,52 @@
+{
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "mc-asrt-arrivals",
+        "label": {
+          "en": "More immigrants enter and settle",
+          "id": "Lebih banyak imigran masuk dan menetap"
+        }
+      },
+      {
+        "el_id": "mc-asrt-offending",
+        "label": {
+          "en": "Immigrants commit crime at a rate above the rest of the population",
+          "id": "Imigran melakukan kejahatan dengan laju melebihi penduduk lain"
+        }
+      },
+      {
+        "el_id": "mc-asrt-wave",
+        "label": {
+          "en": "The national crime trend surges into a wave",
+          "id": "Tren kejahatan nasional melonjak menjadi gelombang"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "mc-edge-arrivals-offending",
+        "from": "mc-asrt-arrivals",
+        "to": "mc-asrt-offending",
+        "quote": "no article in this family states the step from more immigrants entering and settling to immigrants committing crime at a rate above the rest of the population"
+      },
+      {
+        "el_id": "mc-edge-offending-wave",
+        "from": "mc-asrt-offending",
+        "to": "mc-asrt-wave",
+        "quote": "no article in this family states the step from immigrants committing crime at a rate above the rest of the population to the national crime trend surging into a wave"
+      }
+    ]
+  },
+  "panel_skeleton": [
+    {
+      "type": "claim_map",
+      "el_id": "mc-panel-claim-map"
+    },
+    {
+      "type": "dueling",
+      "el_id": "mc-panel-dueling"
+    }
+  ],
+  "model": "claude-fable-5"
+}

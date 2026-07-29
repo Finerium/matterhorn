@@ -1,0 +1,101 @@
+{
+  "hidden": [
+    {
+      "el_id": "usaid-deaths-h1",
+      "label": {
+        "en": "Implementing partners and their field staff at the moment the awards stop",
+        "id": "Mitra pelaksana dan staf lapangan mereka pada saat kontrak kerja sama dihentikan"
+      },
+      "why_hidden": {
+        "en": "The step from defunding to programmes stopping (e1) lands first on the organisations that held the awards: contractors, local NGOs and the health workers on their payrolls, who meet terminated agreements, unpaid invoices and layoffs before any mortality effect can begin. The stated chain runs on to deaths among the populations reached and never names this first landing point.",
+        "id": "Langkah dari penghentian pendanaan ke berhentinya program (e1) jatuh lebih dulu ke organisasi pemegang kontrak: kontraktor, LSM lokal, dan tenaga kesehatan dalam daftar gaji mereka, yang menghadapi pemutusan perjanjian, tagihan tak terbayar, dan PHK sebelum dampak kematian apa pun dimulai. Rantai yang dinyatakan terus melaju ke kematian di populasi yang dijangkau dan tidak pernah menyebut titik pendaratan pertama ini."
+      },
+      "where_to_look": "Award termination notices, litigation over unpaid obligations to implementers, and inspector general or GAO reporting on terminated USAID awards."
+    },
+    {
+      "el_id": "usaid-deaths-h2",
+      "label": {
+        "en": "Commodities already bought and sitting in the pipeline when programmes stop",
+        "id": "Komoditas yang sudah terlanjur dibeli dan tertahan di jalur distribusi ketika program berhenti"
+      },
+      "why_hidden": {
+        "en": "Between defunding (n1) and programmes stopping (n2) sits stock the money had already bought: food aid, medicines and bednets in warehouses, ports and transit. A programme stopped mid-delivery leaves residue that neither reaches the populations counted in the projection nor returns to the funder, and the stated chain does not follow where that stock goes.",
+        "id": "Di antara penghentian pendanaan (n1) dan berhentinya program (n2) ada stok yang sudah terlanjur dibeli: bantuan pangan, obat, dan kelambu di gudang, pelabuhan, dan perjalanan. Program yang berhenti di tengah pengiriman meninggalkan sisa yang tidak sampai ke populasi yang dihitung proyeksi dan tidak pula kembali ke pemberi dana, dan rantai yang dinyatakan tidak mengikuti ke mana stok itu pergi."
+      },
+      "where_to_look": "Inspector general reports and congressional correspondence on undelivered commodities and stock on hand after the stop-work orders."
+    },
+    {
+      "el_id": "usaid-deaths-h3",
+      "label": {
+        "en": "Suppliers whose income the procurement was: medicine manufacturers, food commodity producers, freight carriers",
+        "id": "Pemasok yang hidup dari pengadaan itu: produsen obat, produsen komoditas pangan, dan pengangkut"
+      },
+      "why_hidden": {
+        "en": "A cut is a transfer that stops on both sides. When programmes stop (n2), the order books of generic medicine manufacturers, growers of food aid commodities and the carriers that move them stop with them, before any health effect appears. The stated chain runs from stopped programmes to mortality and never passes through the procurement lines that were somebody's revenue.",
+        "id": "Pemotongan adalah transfer yang terhenti di kedua sisi. Ketika program berhenti (n2), buku pesanan produsen obat generik, petani komoditas bantuan pangan, dan pengangkut yang memindahkannya ikut terhenti, sebelum dampak kesehatan apa pun muncul. Rantai yang dinyatakan berjalan dari program yang berhenti ke angka kematian dan tidak pernah melewati jalur pengadaan yang menjadi pendapatan pihak lain."
+      },
+      "where_to_look": "USAID supply chain and procurement award data, plus statements from manufacturers and commodity groups after the stop-work orders."
+    },
+    {
+      "el_id": "usaid-deaths-h4",
+      "label": {
+        "en": "Other funders and recipient-government health budgets that could absorb the stopped programmes",
+        "id": "Pendonor lain dan anggaran kesehatan pemerintah negara penerima yang dapat mengambil alih program yang berhenti"
+      },
+      "why_hidden": {
+        "en": "The step from stopped programmes to rising mortality (e2) assumes the gap stays a gap. Ministries of health, multilateral funds and other bilateral donors are reached the moment services lapse, because the caseload lands on them, and the share of stopped services any of them picks up is the unstated counterfactual the projected total is conditional on. The stated chain never sizes that substitution.",
+        "id": "Langkah dari program yang berhenti ke naiknya angka kematian (e2) mengandaikan celah itu tetap terbuka. Kementerian kesehatan, lembaga dana multilateral, dan pendonor bilateral lain langsung tersentuh begitu layanan terhenti, karena beban pasien jatuh ke mereka, dan berapa bagian layanan terhenti yang mereka ambil alih adalah pengandaian tak tertulis yang menjadi syarat angka proyeksi itu. Rantai yang dinyatakan tidak pernah mengukur substitusi itu."
+      },
+      "where_to_look": "The paper's scenario assumptions, development assistance for health tracking, and funding announcements by governments and multilaterals after the cuts."
+    },
+    {
+      "el_id": "usaid-deaths-h5",
+      "label": {
+        "en": "Households paying out of pocket to replace the stopped services",
+        "id": "Rumah tangga yang merogoh kantong sendiri untuk mengganti layanan yang berhenti"
+      },
+      "why_hidden": {
+        "en": "Between a programme stopping (n2) and mortality rising (n3), the people the programme reached meet the gap first with their own money: medicines at market price, travel to farther facilities, user fees. That household spending, and who cannot carry it, is the branch the death count summarises without naming.",
+        "id": "Di antara berhentinya program (n2) dan naiknya angka kematian (n3), warga yang dijangkau program menghadapi celah itu lebih dulu dengan uang sendiri: obat dengan harga pasar, perjalanan ke fasilitas yang lebih jauh, biaya layanan. Pengeluaran rumah tangga itu, dan siapa yang tak sanggup memikulnya, adalah cabang yang diringkas oleh angka kematian tanpa pernah disebut."
+      },
+      "where_to_look": "Household health expenditure and catastrophic health spending surveys in countries with large stopped portfolios."
+    },
+    {
+      "el_id": "usaid-deaths-h6",
+      "label": {
+        "en": "The share of the financing, and of the mortality decline, carried by money other than USAID's",
+        "id": "Porsi pembiayaan, dan porsi penurunan kematian, yang ditopang dana selain USAID"
+      },
+      "why_hidden": {
+        "en": "The programmes in the chain ran on blended money: multilateral funds, other bilaterals and domestic budgets paid into the same clinics and campaigns. The stated mechanism attributes deaths prevented over 2001 to 2021 and deaths projected to 2030 to USAID support, so it reaches the co-financiers of every programme it counts, and no step in the chain follows how the attribution divides among them. This is the denominator both totals need.",
+        "id": "Program dalam rantai ini berjalan dengan dana campuran: lembaga dana multilateral, pendonor bilateral lain, dan anggaran dalam negeri mengalir ke klinik dan kampanye yang sama. Mekanisme yang dinyatakan menyandarkan kematian yang dicegah selama 2001 sampai 2021 dan kematian yang diproyeksikan sampai 2030 pada dukungan USAID, sehingga menjangkau para pembiaya pendamping dari setiap program yang dihitungnya, dan tidak ada langkah dalam rantai yang mengikuti bagaimana atribusi terbagi di antara mereka. Inilah penyebut yang dibutuhkan kedua angka besar itu."
+      },
+      "where_to_look": "Development assistance for health databases that split financing by source, and the paper's attribution methods."
+    },
+    {
+      "el_id": "usaid-deaths-h7",
+      "label": {
+        "en": "The funding path the 2030 total is conditional on: how deep the cut runs and how long it holds",
+        "id": "Jalur pendanaan yang menjadi syarat angka 2030: seberapa dalam pemotongan dan berapa lama bertahan"
+      },
+      "why_hidden": {
+        "en": "The one stated edge runs from defunding straight to the 2030 total (e4). That total is conditional on a particular depth of cut holding through 2030, across appropriations cycles, court rulings and reorganisations. The figure travels as a finished count while the funding trajectory it is conditional on stays behind in the methods, so a reader never learns what has to stay cut, and for how long, for the total to arrive.",
+        "id": "Satu-satunya garis yang dinyatakan berjalan dari penghentian pendanaan langsung ke angka 2030 (e4). Angka itu bersyarat pada kedalaman pemotongan tertentu yang bertahan sampai 2030, melewati siklus anggaran, putusan pengadilan, dan reorganisasi. Angkanya beredar sebagai hitungan jadi sementara jalur pendanaan yang menjadi syaratnya tertinggal di bagian metode, sehingga pembaca tidak pernah tahu apa yang harus tetap terpotong, dan berapa lama, agar total itu tercapai."
+      },
+      "where_to_look": "The paper's funding scenario definitions and subsequent appropriations or administrative records showing the level of cut actually sustained."
+    },
+    {
+      "el_id": "usaid-deaths-h8",
+      "label": {
+        "en": "The projection's own revision path as observed mortality data arrive",
+        "id": "Jalur revisi proyeksi itu sendiri seiring masuknya data kematian terpantau"
+      },
+      "why_hidden": {
+        "en": "The final node is dated 2030 while the estimate is dated June 2025, so years of observable mortality stand between the claim and its horizon. Each round of actual data lets the same modelling approach re-estimate the total, and the family carries the June 2025 figure without following what later runs report. The party downstream in time here is the figure itself.",
+        "id": "Simpul terakhir bertanggal 2030 sedangkan estimasinya bertanggal Juni 2025, jadi bertahun-tahun data kematian yang dapat dipantau terbentang antara klaim dan cakrawalanya. Setiap putaran data aktual memungkinkan pendekatan model yang sama menghitung ulang totalnya, dan keluarga artikel ini membawa angka Juni 2025 tanpa mengikuti apa yang dilaporkan penghitungan ulang berikutnya. Pihak yang berada di hilir waktu di sini adalah angka itu sendiri."
+      },
+      "where_to_look": "Follow-up publications or preprints from the same modelling group that re-estimate the 2030 projection after the cuts took effect."
+    }
+  ],
+  "model": "claude-fable-5"
+}

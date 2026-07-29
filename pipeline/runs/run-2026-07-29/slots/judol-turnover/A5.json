@@ -1,0 +1,69 @@
+{
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "jt-s1-crackdown",
+        "label": {
+          "en": "The Prabowo-era push against online gambling",
+          "id": "Gempuran terhadap judi online di era Prabowo"
+        }
+      },
+      {
+        "el_id": "jt-s2-turnover-fall",
+        "label": {
+          "en": "PPATK's recorded turnover of online gambling funds falls year on year",
+          "id": "Perputaran dana judi online yang dicatat PPATK turun dari tahun ke tahun"
+        }
+      },
+      {
+        "el_id": "jt-s3-market-read",
+        "label": {
+          "en": "The smaller turnover figure is read as the market itself shrinking by that much",
+          "id": "Angka perputaran yang mengecil dibaca sebagai pasar judi online yang menyusut sebesar itu pula"
+        }
+      },
+      {
+        "el_id": "jt-s4-outcome",
+        "label": {
+          "en": "Online gambling in Indonesia recedes under the current push",
+          "id": "Judi online di Indonesia surut di bawah gempuran yang berjalan"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "jt-e1-crackdown-to-fall",
+        "from": "jt-s1-crackdown",
+        "to": "jt-s2-turnover-fall",
+        "quote": "PPATK Catat Ada Penurunan Perputaran Uang Judol di Era Prabowo"
+      },
+      {
+        "el_id": "jt-e2-fall-to-read",
+        "from": "jt-s2-turnover-fall",
+        "to": "jt-s3-market-read",
+        "quote": "PPATK: Perputaran Dana Judi Online Turun 20%, Tersisa Rp286,84 T"
+      },
+      {
+        "el_id": "jt-e3-read-to-outcome",
+        "from": "jt-s3-market-read",
+        "to": "jt-s4-outcome",
+        "quote": "no article in this family states the step from the turnover figure being read as the market shrinking to the outcome that online gambling recedes under the era's push"
+      }
+    ]
+  },
+  "panel_skeleton": [
+    {
+      "type": "claim_map",
+      "el_id": "jt-panel-claim-map"
+    },
+    {
+      "type": "scale_check",
+      "el_id": "jt-panel-scale-check"
+    },
+    {
+      "type": "dueling",
+      "el_id": "jt-panel-dueling"
+    }
+  ],
+  "model": "claude-fable-5"
+}

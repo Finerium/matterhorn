@@ -1,0 +1,241 @@
+{
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "The claim runs in three steps: foreign aid takes a very large share of the federal budget, cutting it frees spending on that same scale, and the federal deficit narrows substantially.",
+          "els": [
+            "usaid-deficit-panel-claim-map",
+            "usaid-deficit-spine-size",
+            "usaid-deficit-spine-cut",
+            "usaid-deficit-spine-deficit"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Both joins between those steps are where this family of articles goes quiet. No member states the move from the share to the spending freed, and none states the move from that spending to the deficit.",
+          "els": [
+            "usaid-deficit-edge-size-cut",
+            "usaid-deficit-edge-cut-deficit"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Crossing the first join needs the line's annual outlay in dollars. Judging the second needs the size of the deficit itself. No source in the registry states either number.",
+          "els": [
+            "usaid-deficit-hidden-outlay-numerator",
+            "usaid-deficit-hidden-deficit-base"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Standing outside the frame: the organizations, commodity producers and freight carriers currently paid from the line, the people its programs serve at the point of delivery, and the signed obligations and goods in transit that keep drawing money after a cut lands.",
+          "els": [
+            "usaid-deficit-hidden-line-payees",
+            "usaid-deficit-hidden-served-population",
+            "usaid-deficit-hidden-obligated-residue"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "The poll asked what share of the federal budget goes to foreign aid. Respondents averaged 26 percent; the poll states about 1 percent as the actual share. Both sit here against total federal net receipts of $5,234.6 billion for fiscal year 2025.",
+          "els": [
+            "usaid-deficit-panel-scale-check",
+            "usaid-deficit-seg-guessed-share",
+            "usaid-deficit-seg-actual-share"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Among respondents, 11 percent landed on that actual share. The support the poll records runs 58 percent before respondents are shown it and 34 percent after.",
+          "els": [
+            "usaid-deficit-chip-correct-guess",
+            "usaid-deficit-chip-support-before",
+            "usaid-deficit-chip-support-after"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Klaim ini berjalan dalam tiga langkah: bantuan luar negeri memakan porsi sangat besar dari anggaran federal, memangkasnya membebaskan belanja pada skala yang sama, lalu defisit federal menyusut secara berarti.",
+          "els": [
+            "usaid-deficit-panel-claim-map",
+            "usaid-deficit-spine-size",
+            "usaid-deficit-spine-cut",
+            "usaid-deficit-spine-deficit"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Dua sambungan di antara langkah-langkah itu tidak dimuat oleh sumber mana pun dalam keluarga artikel ini, jadi rantainya berhenti dua kali sebelum sampai ke defisit.",
+          "els": [
+            "usaid-deficit-edge-size-cut",
+            "usaid-deficit-edge-cut-deficit"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Untuk melintasi sambungan pertama dibutuhkan belanja tahunan pos itu dalam dolar sebagai pembilang, dan untuk melintasi yang kedua dibutuhkan angka defisit yang menjadi dasar pembandingnya, sementara tidak ada anggota keluarga ini yang menyebut kedua angka tersebut.",
+          "els": [
+            "usaid-deficit-hidden-outlay-numerator",
+            "usaid-deficit-hidden-deficit-base"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Di luar bingkai berdiri lembaga pelaksana, produsen komoditas, dan pengangkut kargo yang kini dibayar dari pos itu, orang-orang yang dilayani program-program itu di titik layanan, serta kewajiban kontrak yang sudah diteken dan tidak kembali ke kas dalam tahun berjalan.",
+          "els": [
+            "usaid-deficit-hidden-line-payees",
+            "usaid-deficit-hidden-served-population",
+            "usaid-deficit-hidden-obligated-residue"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Panel skala menempatkan tebakan rata-rata responden, 26 persen, dan porsi aktual menurut jajak pendapat itu, sekitar 1 persen, terhadap total penerimaan bersih federal tahun fiskal 2025 sebesar US$5.234,6 miliar.",
+          "els": [
+            "usaid-deficit-panel-scale-check",
+            "usaid-deficit-seg-guessed-share",
+            "usaid-deficit-seg-actual-share"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Sebanyak 11 persen responden menebak jatuh tepat pada porsi aktual itu, dan dukungan yang dicatat jajak pendapat itu bergerak dari 58 persen sebelum porsi aktualnya ditunjukkan ke 34 persen sesudahnya.",
+          "els": [
+            "usaid-deficit-chip-correct-guess",
+            "usaid-deficit-chip-support-before",
+            "usaid-deficit-chip-support-after"
+          ]
+        }
+      ]
+    }
+  },
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "A cut lands on the foreign aid line. According to the artifact, what sits between cutting the line and the Treasury actually stopping payments?",
+          "id": "Pemangkasan jatuh pada pos bantuan luar negeri. Menurut artefak ini, apa yang berdiri di antara keputusan memangkas pos itu dan saat kas negara berhenti mengeluarkan pembayaran?"
+        },
+        "options": [
+          {
+            "en": "Nothing much: an appropriation cut stops the outflow the day it takes effect",
+            "id": "Nyaris tidak ada: pemangkasan anggaran menghentikan aliran keluar pada hari aturannya berlaku."
+          },
+          {
+            "en": "Signed obligations already in place and goods already in transit, which keep drawing money after the cut lands",
+            "id": "Kewajiban kontrak yang sudah diteken dan barang yang sudah dalam perjalanan, yang masih menarik uang setelah pemangkasan jatuh."
+          },
+          {
+            "en": "A confirming vote in Congress that has to clear before any payment pauses",
+            "id": "Pemungutan suara penegasan di Kongres yang harus lolos sebelum pembayaran mana pun dijeda."
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The claim map puts the already-obligated share of the line outside the frame. Between an appropriation and an outlay sit signed obligations and goods already in transit, residue that keeps drawing money after the cut lands. That is the step no member of the family follows: from cutting the line to what the Treasury actually stops paying, and when.",
+          "id": "Peta klaim menempatkan bagian pos yang sudah terikat kontrak di luar bingkai. Di antara keputusan anggaran dan uang yang keluar berdiri kewajiban yang sudah diteken dan barang yang sudah dalam perjalanan, sisa yang masih menarik uang setelah pemangkasan jatuh. Langkah itulah yang tidak diikuti anggota mana pun dalam keluarga ini: dari memangkas pos sampai ke apa yang berhenti dibayar kas negara, dan kapan."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "The scale check sets the poll's two share figures against one government-wide total. Which total is it?",
+          "id": "Panel skala menempatkan dua angka porsi dari jajak pendapat itu terhadap satu total pemerintah menyeluruh. Total mana yang dipakai?"
+        },
+        "options": [
+          {
+            "en": "The size of the federal deficit for that year",
+            "id": "Besarnya defisit federal pada tahun itu."
+          },
+          {
+            "en": "Total spending on global health programs and USAID",
+            "id": "Total belanja program kesehatan global dan USAID."
+          },
+          {
+            "en": "Total federal net receipts for fiscal year 2025, $5,234.6 billion",
+            "id": "Total penerimaan bersih federal tahun fiskal 2025, US$5.234,6 miliar."
+          }
+        ],
+        "correct": 2,
+        "note": {
+          "en": "The scale check reads both figures, the 26 percent respondents averaged and the share the poll states as the actual one, about 1 percent, against total federal net receipts of $5,234.6 billion for fiscal year 2025, from the Treasury statement. The deficit figure is the one the claim map lists as unstated, and it is the base that would decide whether any freed spending registers as substantial.",
+          "id": "Panel skala menyebut pembandingnya secara langsung, yaitu total penerimaan bersih federal tahun fiskal 2025 sebesar US$5.234,6 miliar, dan menempatkan 26 persen serta sekitar 1 persen terhadap total itu. Angka defisit justru tercatat sebagai dasar yang tidak disebut anggota mana pun, sehingga tidak tersedia untuk peran itu di sini."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "If the line's payments stop, who meets it first, and when?",
+          "id": "Jika pembayaran dari pos itu berhenti, siapa yang menanggungnya lebih dulu, dan kapan?"
+        },
+        "options": [
+          {
+            "en": "Implementing organizations, commodity producers and freight carriers, at the moment payments stop",
+            "id": "Lembaga pelaksana, produsen komoditas, dan pengangkut kargo, pada saat pembayaran berhenti."
+          },
+          {
+            "en": "Taxpayers, at the close of the fiscal year, through a narrower deficit",
+            "id": "Pembayar pajak, pada penutupan tahun fiskal, lewat defisit yang menyusut."
+          },
+          {
+            "en": "Congress, at the next appropriations cycle",
+            "id": "Kongres, pada siklus anggaran berikutnya."
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The claim map treats the cut as a transfer. The line's outlays are at present the income of implementing organizations, commodity producers and freight carriers, and they meet the stopped payments at the moment the cut lands, before any budget total moves. The people the programs serve reach the same point within weeks, while the deficit effect in the final step arrives only with the ledger's year end.",
+          "id": "Peta klaim mencatat belanja pos itu sebagai pendapatan lembaga pelaksana, produsen komoditas, dan pengangkut kargo pada saat ini, sehingga merekalah yang menanggung berhentinya pembayaran pada saat pemangkasan jatuh, sebelum total anggaran mana pun bergeser. Orang-orang yang dilayani program itu sampai pada titik yang sama dalam hitungan pekan, sedangkan efek defisit pada langkah terakhir baru tiba di penghujung tahun buku."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before you open it: in a claim that runs from foreign aid straight to the deficit, which side do you expect to go unstated?",
+      "id": "Sebelum Anda membukanya: dalam klaim yang berjalan dari bantuan luar negeri langsung ke defisit, bagian mana yang menurut Anda tidak disebut?"
+    },
+    "options": [
+      {
+        "en": "The dollar size of the foreign aid line itself",
+        "id": "Besaran belanja tahunan pos bantuan luar negeri itu dalam dolar."
+      },
+      {
+        "en": "The size of the deficit it is meant to narrow",
+        "id": "Besarnya defisit yang menurut klaim itu hendak disusutkan."
+      },
+      {
+        "en": "Who is currently paid from the line",
+        "id": "Pihak-pihak yang kini dibayar dari pos itu."
+      },
+      {
+        "en": "The timing, meaning when a cut actually stops money going out",
+        "id": "Soal waktu, yaitu kapan pemangkasan menghentikan uang yang keluar dari kas."
+      }
+    ]
+  },
+  "editorial_notes": [
+    "Narration: both bundles ship verbatim as authored. No cross-locale fact disagreement was found. Every figure matches across locales: 26 percent, about 1 percent, $5,234.6 billion against US$5.234,6 miliar, 11 percent, 58 percent before and 34 percent after. No edit was needed under any of the four allowed reasons.",
+    "Element coverage: the two bundles bind an identical set of 17 el_ids in identical per-sentence groupings, so no panel named by one locale is left uncovered by the other and there is no dangling binding relative to the other authoring.",
+    "Panels arbitration was unavailable. slots/usaid-deficit/A9.input.json does not exist in the run directory and no other file in the repository carries these el_ids, so the shipping panels JSON could not be read past the fragment quoted in the reconciler prompt. A reviewer must confirm the panel set contains no el_id outside the 17 the narration binds. If a family marker panel or a non-null echo carries its own el_id, that is an uncovered panel in BOTH locales and needs one sentence per locale. Nothing was invented to close it: a binding to an el_id I could not verify is exactly the fidelity block the gate exists to catch.",
+    "Hidden obligated residue: the EN sentence v-4 describes it as signed obligations and goods in transit that keep drawing money after a cut lands, the ID sentence v-4 as signed contract obligations that do not return to the treasury within the running year. Two angles on the same element rather than a contradiction, so both stay verbatim. Flagged because a reviewer with the panel text may want them tightened to one shared description.",
+    "Mechanism, base choice: the EN authoring is the base. It opens a dimension neither other move touches, the distance between an appropriation being cut and the Treasury stopping payments. The ID authoring's mechanism asked what crossing the first join requires, which restates the hidden outlay numerator already carried by narration v-3 and overlaps the denominator move. The ID locale was authored natively against the EN base rather than translated.",
+    "Mechanism, fidelity trim: the EN base option 1 and its note carried 'termination and close-out costs'. That phrase appears in neither narration and could not be checked against the panels file, so it was cut from both the option and the note, leaving signed obligations and goods already in transit, which both narrations carry. The correct index is unchanged at 1. This is the only edit made to an authored sparring base.",
+    "Mechanism, wrong options: option 0 is what a reader assumes, that an appropriation cut stops the outflow the day it takes effect, and it is wrong for a reason the artifact shows afterwards. Option 2 names a procedural step that sounds institutionally plausible but is not what stands between the cut and the payment.",
+    "Denominator: EN is the base because it names the move plainly, two share figures against one government-wide total. Both authorings offered the same three option meanings in different order, EN with the receipts total last and ID with it first. EN's order was kept, so correct is 2 in both locales and the ID options were re-authored natively into that order. The ID note from the ID authoring was kept: it settles on the same panel and makes the same point that the deficit figure is recorded as unstated and therefore unavailable for the comparison role.",
+    "Incidence: EN is the base for its who-and-when pairing. Options 0 and 1 already matched across authorings. Option 2 diverged, EN offering Congress at the next appropriations cycle and ID offering the poll respondents. The Congress option was kept in both locales because it is the plausible institutional distractor; the poll-respondent option was a category error a reader dismisses without learning anything. Correct index is 0 in both.",
+    "Incidence, ID note: the phrase 'sebelum total anggaran mana pun bergeser' was folded from the ID authoring's question into the ID note, since the aligned question no longer carries it. The ID authoring's clinic, supply and distribution specifics were dropped because no narration sentence carries them and the panels file was unavailable to confirm them.",
+    "Prediction tap: EN prompt is the base for its pre-reveal framing. Options 0 through 2 matched across authorings. Option 3 diverged, EN offering the timing and ID offering the budget share respondents guessed. Timing was kept in both, because it is a live candidate the mechanism question later settles, whereas the guessed-share option pointed at a figure the poll does state and would have read as the one option to eliminate.",
+    "Lexicon: the merged Indonesian copy was checked whole-word and carries no collision. 'salah satu' is absent throughout. 'benar-benar' was deliberately avoided in the new ID sparring copy, because the hyphen leaves 'benar' standing as a whole word to a boundary-based lint; intensifiers were dropped rather than rephrased. Verdict vocabulary is absent from both locales, and no scores appear anywhere.",
+    "Future tense: the ID prediction option 1 reads 'hendak disusutkan' rather than 'akan menyusut', keeping the tap clear of forward-looking construction while still naming the deficit the final step aims at.",
+    "ID sentence v-6 'menebak jatuh tepat pada porsi aktual itu' reads slightly stiff. It is not a fact disagreement, a dangling binding, a coverage gap or a lexicon violation, so it ships verbatim under the merge rule. Noted here in case a human editor wants the smoother 'jatuh tepat pada porsi aktual itu'."
+  ],
+  "model": "claude-opus-5[1m]"
+}

@@ -1,0 +1,163 @@
+{
+  "narrative_id": "usaid-deaths",
+  "cluster": {
+    "narrative_id": "usaid-deaths",
+    "family_skeleton": "a modelled projection with a wide uncertainty interval carried as a settled count, which is the same certainty inflation from the other direction",
+    "members": [
+      {
+        "id": "usaid-deaths-m1",
+        "lang": "en",
+        "headline": "Evaluating the impact of two decades of USAID interventions and projecting the effects of defunding on mortality up to 2030 (DOI 10.1016/S0140-6736(25)01186-9)",
+        "outlet": "The Lancet",
+        "date": "2025-06-30",
+        "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01186-9/fulltext",
+        "note": "Verbatim title from content/sources.json (en-lancet-usaid). 14.05M additional deaths by 2030 with an uncertainty interval of 8.48M to 19.66M, and about 91.8M deaths prevented 2001 to 2021. The figure always carries its June 2025 date. GATE C TODO from the snapshot: a Feb 2026 follow-up reportedly revises the projection to 9.4M, and the run must find a citable source for it or leave it out."
+      }
+    ]
+  },
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "usaid-deaths-n1",
+        "label": {
+          "en": "USAID is defunded",
+          "id": "Pendanaan USAID dihentikan"
+        }
+      },
+      {
+        "el_id": "usaid-deaths-n2",
+        "label": {
+          "en": "Programmes that ran on USAID support stop",
+          "id": "Program yang berjalan atas dukungan USAID berhenti"
+        }
+      },
+      {
+        "el_id": "usaid-deaths-n3",
+        "label": {
+          "en": "Mortality rises in the populations those programmes reached",
+          "id": "Angka kematian meningkat di populasi yang dijangkau program tersebut"
+        }
+      },
+      {
+        "el_id": "usaid-deaths-n4",
+        "label": {
+          "en": "Additional deaths by 2030 reach the projected total",
+          "id": "Kematian tambahan hingga 2030 mencapai angka yang diproyeksikan"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "usaid-deaths-e1",
+        "from": "usaid-deaths-n1",
+        "to": "usaid-deaths-n2",
+        "quote": "no article in this family states the step from 'USAID is defunded' to 'programmes that ran on USAID support stop'"
+      },
+      {
+        "el_id": "usaid-deaths-e2",
+        "from": "usaid-deaths-n2",
+        "to": "usaid-deaths-n3",
+        "quote": "no article in this family states the step from 'programmes that ran on USAID support stop' to 'mortality rises in the populations those programmes reached'"
+      },
+      {
+        "el_id": "usaid-deaths-e3",
+        "from": "usaid-deaths-n3",
+        "to": "usaid-deaths-n4",
+        "quote": "no article in this family states the step from 'mortality rises in the populations those programmes reached' to 'additional deaths by 2030 reach the projected total'"
+      },
+      {
+        "el_id": "usaid-deaths-e4",
+        "from": "usaid-deaths-n1",
+        "to": "usaid-deaths-n4",
+        "quote": "projecting the effects of defunding on mortality up to 2030"
+      }
+    ]
+  },
+  "case_library": {
+    "cases": [
+      {
+        "id": "B-01",
+        "title": {
+          "en": "Casualty-inflation cascade",
+          "id": "Kaskade inflasi korban"
+        },
+        "period": "May 2019",
+        "motif": {
+          "en": "moral shock, fabricated count",
+          "id": "kejutan moral, angka rekaan"
+        },
+        "documented_outcome": {
+          "en": "A fabricated \"60 shot dead\" claim spread faster than any correction and amplified the post-election riots in Jakarta. The final human-rights investigation documented 10 people unlawfully killed, four of them minors.",
+          "id": "Klaim rekaan \"60 orang tewas ditembak\" menyebar lebih cepat dari koreksi mana pun dan memperbesar kerusuhan pasca pemilu di Jakarta. Investigasi hak asasi manusia final mendokumentasikan 10 orang terbunuh secara tidak sah, empat di antaranya anak-anak."
+        },
+        "citations": [
+          "id-aljazeera-2019-riots",
+          "id-tempo-cekfakta-60",
+          "id-liputan6-amnesty-2019"
+        ]
+      },
+      {
+        "id": "B-02",
+        "title": {
+          "en": "Fabricated-provision cascade",
+          "id": "Kaskade pasal rekaan"
+        },
+        "period": "Oct 2020",
+        "motif": {
+          "en": "scope inflation, fabricated provisions",
+          "id": "inflasi cakupan, pasal rekaan"
+        },
+        "documented_outcome": {
+          "en": "Invented provisions of a law whose final text was not yet public, from a minimum wage abolished to severance eliminated, fueled nationwide demonstrations. The communications ministry catalogued \"12 hoaks\" about the bill in a single list.",
+          "id": "Pasal-pasal rekaan atas undang-undang yang naskah finalnya belum terbit, dari upah minimum dihapus sampai pesangon ditiadakan, menyulut demonstrasi nasional. Kementerian komunikasi mengatalogkan \"12 hoaks\" tentang RUU itu dalam satu daftar."
+        },
+        "citations": [
+          "id-suara-kominfo-12hoax",
+          "id-kompas-omnibus-8hoax"
+        ]
+      },
+      {
+        "id": "B-03",
+        "title": {
+          "en": "Moral-shock acceleration",
+          "id": "Akselerasi kejutan moral"
+        },
+        "period": "Aug 2025",
+        "motif": {
+          "en": "moral shock, acceleration",
+          "id": "kejutan moral, akselerasi"
+        },
+        "documented_outcome": {
+          "en": "A viral death video mobilized nationwide protests within hours. In the escalations that followed, a regional parliament building fire in Makassar killed three people.",
+          "id": "Video kematian yang viral memobilisasi unjuk rasa nasional dalam hitungan jam. Dalam eskalasi yang menyusul, kebakaran gedung DPRD di Makassar menewaskan tiga orang."
+        },
+        "citations": [
+          "id-detik-timeline-aug2025",
+          "id-jakartapost-makassar-fire",
+          "id-jakartaglobe-protest-toll"
+        ]
+      },
+      {
+        "id": "B-04",
+        "title": {
+          "en": "Scope-inflation panic",
+          "id": "Panik inflasi cakupan"
+        },
+        "period": "Jan 2025",
+        "motif": {
+          "en": "scope inflation, manufactured urgency",
+          "id": "inflasi cakupan, urgensi semu"
+        },
+        "documented_outcome": {
+          "en": "The 12 percent VAT panic priced the whole consumption basket for weeks after PMK 131/2024 had restricted the rise to luxury goods already under the luxury sales tax; the clarification required a multi-channel communication effort.",
+          "id": "Panik PPN 12 persen menghitung seluruh keranjang konsumsi selama berminggu-minggu setelah PMK 131/2024 membatasi kenaikan pada barang mewah yang sudah dikenai pajak penjualan barang mewah; klarifikasinya menuntut upaya komunikasi lintas kanal."
+        },
+        "citations": [
+          "id-pajak-pmk131",
+          "id-antara-ppn-luxury",
+          "id-bisnis-ppn-luxury"
+        ]
+      }
+    ]
+  }
+}

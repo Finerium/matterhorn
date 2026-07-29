@@ -1,0 +1,15 @@
+{
+  "verdict": "pass",
+  "reasons": [
+    "Integrity: embedded candidate matches staged candidate.json, sha256 c09660f9278dfe1b6d2435e313e55436f4c9d889fabe29ac1e371e96f8b85e63.",
+    "Edge statuses symmetric: the sole supported edge (ppn-panic-e1) rests on verbatim wire and tax-authority text the mirror would grant identically; the mirror's load-bearing reassurance edge (luxury restriction -> basket untouched) would be missing on the exact ground the candidate pre-commits at ppn-panic-h1 and the scale-check takeaway (no numerator or denominator for the basket-share ratio in the registry); e3's gap statement is direction-neutral, blocking 'every price rises' and 'prices won't rise' alike, and the narration never asserts the negation.",
+    "Hidden-branch count balanced: h4 (statutory 12 percent already on the whole base, the 11 percent resting on a ministerial regulation), h5 (sellers re-basing every invoice overnight) and the second half of h1 (coverage stops at 'hanya untuk barang mewah' unquantified) cut against the artifact's own gov-clarification framing; h1 and h2 cut against the panic chain; h7 neutral. The mirror method would surface substantially the same set.",
+    "Temperature symmetric: uniform attribution verbs (sources 'state'/'carry', government figures 'stated'), no claims/admits split, no scare quotes; 'panic' occurs only in the echo panel's historical case B-04 outcome, while the candidate's own motif voice stays cool and places the timing burden on the rule-maker ('a changeover date that leaves no room to check the list').",
+    "Depth symmetric: the deepest technical scrutiny (h4, statute-vs-PMK hierarchy and the missing counterfactual) targets the artifact's own framing, and the scale check corrects the strongest gov spin by showing off-list goods at effective 11 percent rather than zero; gov context chips carry the same attributed as_of regime as the panic side's 12 percent denominator.",
+    "Burden distributed: sparring q1 interrogates the panic chain, q3 the government's one-night changeover (answer: VAT-registered sellers), q2 the artifact's own missing figure; prediction tap offers two anti-panic and two anti-gov options.",
+    "C1 clean: no verdict lexicon in either language ('false' appears only as the og.fallback JSON boolean, not copy; no salah/benar/hoaks hits at all); no narrative or outlet scoring. C8 clean: no em dashes, no emoji.",
+    "Noted for other auditors, not a symmetry fault: counts.unsourced=2 has no visibly unsourced claim-map element; counts consistency sits outside A10's remit."
+  ],
+  "model": "claude-fable-5",
+  "token": "cdd41f77ea04e06a6c8ec6449e482b442e4d07df41690f0fdd5dba535e9faa04"
+}

@@ -1,0 +1,65 @@
+{
+  "hidden": [
+    {
+      "el_id": "usaid-deficit-hidden-outlay-numerator",
+      "label": {
+        "en": "The line's actual annual outlay in dollars, the amount a cut could free",
+        "id": "Belanja tahunan aktual pos bantuan luar negeri dalam dolar, jumlah yang bisa dibebaskan oleh pemangkasan"
+      },
+      "why_hidden": {
+        "en": "The step from the cut to spending freed on the same scale needs the line's annual outlay in dollars as its numerator. The poll member carries the share as a slice of the budget and the treasury member carries the total that slice is read against, but no member states the dollar outlay itself, so the freed spending in the second step has no stated magnitude.",
+        "id": "Langkah dari pemangkasan menuju belanja yang dibebaskan pada skala yang sama membutuhkan belanja tahunan pos itu dalam dolar sebagai pembilangnya. Jajak pendapat dalam keluarga ini memuat porsinya sebagai irisan anggaran dan laporan Treasury memuat total pembanding irisan itu, tetapi tidak ada anggota yang menyebut besaran belanja dolarnya sendiri, sehingga belanja yang dibebaskan pada langkah kedua tidak punya besaran yang dinyatakan."
+      },
+      "where_to_look": "Monthly Treasury Statement agency outlay tables, or ForeignAssistance.gov annual disbursement totals for the foreign assistance accounts"
+    },
+    {
+      "el_id": "usaid-deficit-hidden-deficit-base",
+      "label": {
+        "en": "The size of the federal deficit the narrowing would be measured against",
+        "id": "Besarnya defisit federal yang menjadi pembanding penyusutan itu"
+      },
+      "why_hidden": {
+        "en": "The final step has the deficit narrowing substantially, and substantially is a ratio: spending freed set against the size of the deficit itself. The family reads the share claim against total receipts through the treasury member, but no member states the deficit figure, the base that decides whether any freed spending registers as substantial.",
+        "id": "Langkah terakhir menyatakan defisit menyusut secara berarti, dan berarti atau tidaknya adalah soal rasio: belanja yang dibebaskan dibanding besar defisit itu sendiri. Keluarga ini membaca klaim porsi terhadap total penerimaan lewat laporan Treasury, tetapi tidak ada anggota yang menyebut angka defisitnya, dasar yang menentukan apakah belanja yang dibebaskan itu tergolong berarti."
+      },
+      "where_to_look": "Monthly Treasury Statement summary table of receipts, outlays and deficit for the fiscal year"
+    },
+    {
+      "el_id": "usaid-deficit-hidden-line-payees",
+      "label": {
+        "en": "The organizations and suppliers currently paid from the foreign aid line",
+        "id": "Lembaga pelaksana dan pemasok yang saat ini dibayar dari pos bantuan luar negeri"
+      },
+      "why_hidden": {
+        "en": "The second step treats the cut as spending freed. A cut is a transfer: the line's outlays are at present the income of implementing organizations, commodity producers and freight carriers, and they meet the stopped payments at the moment the cut lands, before any budget total moves. No member names who is currently paid from the line.",
+        "id": "Langkah kedua memperlakukan pemangkasan sebagai belanja yang dibebaskan. Pemangkasan adalah sebuah transfer: belanja pos itu saat ini merupakan pendapatan lembaga pelaksana, produsen komoditas, dan pengangkut kargo, dan merekalah yang menanggung terhentinya pembayaran pada saat pemangkasan jatuh, sebelum total anggaran mana pun bergeser. Tidak ada anggota yang menyebut siapa yang kini dibayar dari pos itu."
+      },
+      "where_to_look": "USASpending award records or ForeignAssistance.gov implementing-partner disbursement listings"
+    },
+    {
+      "el_id": "usaid-deficit-hidden-served-population",
+      "label": {
+        "en": "The people the funded programs serve at the point of delivery",
+        "id": "Orang-orang yang dilayani program-program yang didanai pos itu di titik layanan"
+      },
+      "why_hidden": {
+        "en": "The poll member asks the public about global health programs and USAID, so services in delivery are the family's own subject. The cut in the second step reaches those services at the counter, clinics, supplies and distributions, within weeks of payments stopping, while the deficit effect in the final step arrives only with the ledger's year end. No member names the served population as reached.",
+        "id": "Jajak pendapat dalam keluarga ini bertanya kepada publik tentang program kesehatan global dan USAID, sehingga layanan yang sedang berjalan adalah pokok keluarga ini sendiri. Pemangkasan pada langkah kedua mencapai layanan itu di titik layanan, klinik, pasokan, dan distribusi, dalam hitungan pekan setelah pembayaran berhenti, sementara efek defisit pada langkah terakhir baru tiba di penghujung tahun buku. Tidak ada anggota yang menyebut penduduk yang dilayani itu sebagai pihak yang terjangkau mekanisme."
+      },
+      "where_to_look": "Agency program results reporting for the global health accounts the poll asks about, listing services delivered under the line"
+    },
+    {
+      "el_id": "usaid-deficit-hidden-obligated-residue",
+      "label": {
+        "en": "The already-obligated share of the line that a cut does not return within the year",
+        "id": "Porsi pos yang sudah terikat kewajiban kontrak dan tidak kembali ke kas dalam tahun berjalan meski dipangkas"
+      },
+      "why_hidden": {
+        "en": "The second step equates the cut with spending freed on the same scale in the same year. Between an appropriation and an outlay sit signed obligations, goods in transit and termination and close-out costs, residue that keeps drawing money after the cut lands. No member follows the step from cutting the line to what the treasury actually stops paying, and when.",
+        "id": "Langkah kedua menyamakan pemangkasan dengan belanja yang dibebaskan pada skala yang sama di tahun yang sama. Di antara alokasi dan realisasi belanja terdapat kewajiban kontrak yang sudah diteken, barang yang sedang dalam perjalanan, serta biaya penghentian dan penutupan, sisa beban yang terus menarik uang setelah pemangkasan jatuh. Tidak ada anggota yang mengikuti langkah dari memangkas pos itu ke apa yang sungguh berhenti dibayar kas negara, dan kapan."
+      },
+      "where_to_look": "Agency unliquidated obligation and unexpended balance reports, or GAO reviews of award terminations and close-out costs"
+    }
+  ],
+  "model": "claude-fable-5"
+}

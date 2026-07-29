@@ -1,0 +1,89 @@
+{
+  "hidden": [
+    {
+      "el_id": "tariffs-pay-h-first-payer",
+      "label": {
+        "en": "Importers of record and the households behind them, meeting the duty before it becomes revenue",
+        "id": "Importir pembayar bea dan rumah tangga di belakangnya, menanggung pungutan sebelum menjadi penerimaan"
+      },
+      "why_hidden": {
+        "en": "Between the tariff being imposed and collections flowing in as federal revenue, somebody writes the check at the border: the domestic importer, and then the buyer at the counter as the charge passes through prices. The story books the arrival of the money and stops before naming whose ledger it left.",
+        "id": "Di antara pengenaan tarif dan masuknya pungutan sebagai penerimaan federal, ada pihak yang membayar lebih dulu di perbatasan: importir dalam negeri, lalu pembeli di kasir ketika beban itu diteruskan lewat harga. Narasinya mencatat kedatangan uang dan berhenti sebelum menyebut dari pembukuan siapa uang itu keluar."
+      },
+      "where_to_look": "Customs collection records and tariff-incidence studies tracing pass-through into import and consumer prices."
+    },
+    {
+      "el_id": "tariffs-pay-h-price-umbrella",
+      "label": {
+        "en": "The price umbrella collected by protected domestic producers, money that never reaches the Treasury",
+        "id": "Payung harga yang dinikmati produsen dalam negeri terlindungi, uang yang tidak pernah sampai ke kas negara"
+      },
+      "why_hidden": {
+        "en": "Once imports carry a duty, domestic substitutes can price up beneath the umbrella, and part of what buyers pay becomes producer income instead of federal revenue. The story reads only the customs ledger, so the surcharge households pay on domestic goods never appears in the ledger the story is reading.",
+        "id": "Begitu barang impor memikul bea, produk pengganti dalam negeri dapat menaikkan harga di bawah payung itu, dan sebagian dari yang dibayar pembeli menjadi pendapatan produsen, bukan penerimaan federal. Narasinya hanya membaca pembukuan bea masuk, sehingga tambahan harga yang ditanggung rumah tangga atas barang dalam negeri tidak pernah muncul dalam pembukuan yang dibaca narasi itu."
+      },
+      "where_to_look": "Price studies of tariffed goods comparing import prices with domestic substitute price paths."
+    },
+    {
+      "el_id": "tariffs-pay-h-import-base",
+      "label": {
+        "en": "The import volume the revenue projection needs to keep flowing",
+        "id": "Volume impor yang harus terus mengalir agar proyeksi penerimaan tercapai"
+      },
+      "why_hidden": {
+        "en": "The revenue step taxes a base the tariff itself is built to shrink: buyers substitute, sourcing shifts, exemptions widen, and official projections get revised downward. The story holds the base still while the mechanism it describes is moving it.",
+        "id": "Langkah penerimaan memungut dari basis yang justru dirancang menyusut oleh tarif itu sendiri: pembeli beralih, rantai pasok berpindah, pengecualian melebar, dan proyeksi resmi direvisi turun. Narasinya menganggap basis itu diam padahal mekanisme yang digambarkannya sendiri sedang menggesernya."
+      },
+      "where_to_look": "Successive official revenue projections and the import-volume assumptions behind the downward revisions."
+    },
+    {
+      "el_id": "tariffs-pay-h-refund-contingency",
+      "label": {
+        "en": "The court contingency that can turn booked collections into refunds owed to the payers",
+        "id": "Kontingensi pengadilan yang dapat mengubah pungutan yang sudah dibukukan menjadi kewajiban pengembalian kepada para pembayarnya"
+      },
+      "why_hidden": {
+        "en": "Collections raised under emergency tariff authority are under legal challenge, and an adverse ruling would convert money already counted as revenue into refund obligations to the importers who paid it. The story treats the stream as settled and never follows the authority it stands on.",
+        "id": "Pungutan yang ditarik berdasarkan wewenang tarif darurat sedang digugat di pengadilan, dan putusan yang berlawanan akan mengubah uang yang sudah dihitung sebagai penerimaan menjadi kewajiban pengembalian kepada importir yang membayarnya. Narasinya memperlakukan arus itu sebagai hal pasti dan tidak pernah menelusuri dasar wewenang yang menopangnya."
+      },
+      "where_to_look": "The contingency language budget offices attach to tariff revenue projections and the dockets of challenges to the emergency tariff authority."
+    },
+    {
+      "el_id": "tariffs-pay-h-cost-side",
+      "label": {
+        "en": "The priced cost side of the agenda the revenue is being measured against",
+        "id": "Sisi biaya agenda yang menjadi pembanding penerimaan itu"
+      },
+      "why_hidden": {
+        "en": "The step from revenue to the scale of everything proposed needs a stated total for what everything proposed costs. The story carries the revenue lever alone and never puts the cost side on the page, so the comparison runs against a denominator it does not state.",
+        "id": "Langkah dari penerimaan menuju skala semua usulan membutuhkan total biaya semua usulan itu dinyatakan. Narasinya hanya membawa tuas penerimaan dan tidak pernah menampilkan sisi biaya, sehingga perbandingan berjalan terhadap pembagi yang tidak pernah disebutkan."
+      },
+      "where_to_look": "Conventional scorekeeping of the enacted and proposed packages: official cost estimates and fiscal watchdog tallies of the agenda being funded."
+    },
+    {
+      "el_id": "tariffs-pay-h-interest-gap",
+      "label": {
+        "en": "Debt service accruing in the years between the spending and the collections",
+        "id": "Beban bunga yang berjalan pada tahun-tahun antara belanja dan pungutan"
+      },
+      "why_hidden": {
+        "en": "The agenda spends from enactment while tariff collections accrue gradually across the budget window. The gap is financed by borrowing, and the interest on that borrowing weighs on the same ledger the story says the tariffs fill. The story compares the stream to the sticker price and treats the waiting years as costless.",
+        "id": "Agenda itu mulai berbelanja sejak disahkan, sementara pungutan tarif terkumpul bertahap sepanjang jendela anggaran. Selisih waktu itu ditutup dengan utang, dan bunga utang tersebut membebani pembukuan yang sama yang menurut narasi diisi oleh tarif. Narasinya membandingkan arus penerimaan dengan harga total dan menganggap tahun-tahun menunggu itu tanpa biaya."
+      },
+      "where_to_look": "Budget projections that state tariff effects with and without interest, side by side."
+    },
+    {
+      "el_id": "tariffs-pay-h-retaliation-offsets",
+      "label": {
+        "en": "Exporters facing countermeasures, and the compensation routed back out of the same pot",
+        "id": "Eksportir yang terkena balasan dagang, dan kompensasi yang dialirkan kembali dari kantong yang sama"
+      },
+      "why_hidden": {
+        "en": "Sweeping tariffs reach trading partners, and partners answer with duties on outbound goods; farm and factory exporters meet the lost sales before any funding arrives, and earlier rounds ended with support payments to them drawn from the collections being counted. The story counts the money coming in and not the money routed back out.",
+        "id": "Tarif menyeluruh menjangkau mitra dagang, dan mitra menjawab dengan bea atas barang ekspor; eksportir pertanian dan manufaktur menanggung hilangnya penjualan lebih dulu, dan putaran sebelumnya berakhir dengan pembayaran dukungan bagi mereka yang diambil dari pungutan yang sedang dihitung itu juga. Narasinya menghitung uang yang masuk dan tidak menghitung uang yang dialirkan kembali keluar."
+      },
+      "where_to_look": "Trading-partner countermeasure schedules and records of offsetting farm-support outlays."
+    }
+  ],
+  "model": "claude-fable-5"
+}

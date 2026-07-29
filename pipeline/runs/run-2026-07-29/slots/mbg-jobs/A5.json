@@ -1,0 +1,78 @@
+{
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "mbg-jobs-n1",
+        "label": {
+          "en": "The state budget flows into the MBG programme",
+          "id": "Anggaran negara mengalir ke program MBG"
+        }
+      },
+      {
+        "el_id": "mbg-jobs-n2",
+        "label": {
+          "en": "SPPG kitchens operate across the country",
+          "id": "Dapur SPPG beroperasi di berbagai daerah"
+        }
+      },
+      {
+        "el_id": "mbg-jobs-n3",
+        "label": {
+          "en": "The programme absorbs workers through its kitchen network",
+          "id": "Program menyerap tenaga kerja lewat jaringan dapurnya"
+        }
+      },
+      {
+        "el_id": "mbg-jobs-n4",
+        "label": {
+          "en": "MSMEs and small livestock farmers take in income as kitchen suppliers",
+          "id": "UMKM dan peternak kecil memperoleh pemasukan sebagai pemasok dapur"
+        }
+      },
+      {
+        "el_id": "mbg-jobs-n5",
+        "label": {
+          "en": "The programme's own headcount carries as the measure of its worth",
+          "id": "Angka serapan versi program sendiri dijadikan ukuran nilainya"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "mbg-jobs-e1",
+        "from": "mbg-jobs-n1",
+        "to": "mbg-jobs-n2",
+        "quote": "no article in this family states the step from the state budget to SPPG kitchens operating"
+      },
+      {
+        "el_id": "mbg-jobs-e2",
+        "from": "mbg-jobs-n2",
+        "to": "mbg-jobs-n3",
+        "quote": "MBG Disebut Serap 987.000 Tenaga Kerja"
+      },
+      {
+        "el_id": "mbg-jobs-e3",
+        "from": "mbg-jobs-n3",
+        "to": "mbg-jobs-n4",
+        "quote": "Program MBG Serap 1,28 Juta Tenaga Kerja, UMKM-Peternak Kecipratan"
+      },
+      {
+        "el_id": "mbg-jobs-e4",
+        "from": "mbg-jobs-n4",
+        "to": "mbg-jobs-n5",
+        "quote": "no article in this family states the step from supplier income to the headcount standing as the measure of the programme's worth"
+      }
+    ]
+  },
+  "panel_skeleton": [
+    {
+      "type": "claim_map",
+      "el_id": "mbg-jobs-claim-map"
+    },
+    {
+      "type": "scale_check",
+      "el_id": "mbg-jobs-scale-check"
+    }
+  ],
+  "model": "claude-fable-5"
+}
