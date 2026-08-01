@@ -2,8 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "pnpm build",
   "outputDirectory": "app/dist",
-  "cleanUrls": true,
-  "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)",
@@ -31,7 +29,7 @@
       ]
     },
     {
-      "source": "/assets/(?!og/|land/)(.*)",
+      "source": "/assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -91,7 +89,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!n/|assets/|icons/|content/|sw\\.js|manifest\\.webmanifest|robots\\.txt|sitemap\\.xml|offline).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]

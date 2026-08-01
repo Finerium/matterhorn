@@ -5,8 +5,8 @@
  * against nothing, so both have to carry the origin. Everything else in the app addresses
  * itself with a path and never needs this.
  *
- * `http://localhost` is a placeholder that is honest about being one: it is not a domain
- * anybody will ship, so a shell that escapes with it is obvious rather than plausible. Gate 8
- * replaces this line with the deployed origin, and nothing else in the repo changes.
+ * Set at Gate 8 to the claimed production domain (OQ-1 chain: matterhorn-app.vercel.app was
+ * free and is ours). Everything that needs an absolute origin (og tags, sitemap, the replay
+ * QR payload) derives from this one line.
  */
-export const SITE_URL = 'http://localhost';
+export const SITE_URL = 'https://matterhorn-app.vercel.app';

@@ -20,3 +20,5 @@ playwright-report/
 # lhci's uploaded reports, the AC-LAND-8/9 and AC-PERF-3 evidence. Its own directory rather
 # than test-results/, which Playwright wipes at the start of every suite run.
 lighthouse-report/
+.vercel
+.env*
