@@ -52,3 +52,18 @@ stack (zero bundled font bytes).
 
 Runtime and build dependencies are npm packages under their own licenses (MIT-class),
 recorded in `package.json` and the lockfile; `pnpm licenses list` reproduces the set.
+
+One runtime dependency is NOT MIT and is called out here rather than left inside
+"MIT-class", because the sentence above would otherwise be false:
+
+| Package | Version | License | Terms | What it is used for |
+|---|---|---|---|---|
+| gsap (incl. ScrollTrigger) | 3.15.0 (pinned) | GreenSock Standard "no charge" License | https://gsap.com/standard-license | The landing's scroll choreography on browsers without native scroll-driven animations, today Firefox (`app/src/landing/motion.ts`). Blueprint 7.5 lists gsap on the runtime allowlist and ADR-7 names it. |
+
+The standard license is free of charge for this use. It permits use in websites and
+applications that are not sold to multiple end users as a product where the code
+itself is the thing being licensed on; Matterhorn is a freely readable site with no
+paid tier and no redistribution of GSAP as a library, so no Business Green
+subscription is required. ScrollTrigger has been included in the free tier since
+GSAP 3.13 (April 2025), so no "club" plugin licensing applies either. The license
+banner ships verbatim inside the built chunk, as GreenSock's terms ask.

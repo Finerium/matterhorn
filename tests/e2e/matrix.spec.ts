@@ -110,6 +110,13 @@ for (const entry of ENTRIES) {
       ).toBeVisible();
     }
 
+    // AC-APP-15. Without this a dark row whose theme never applied screenshots the light surface
+    // and passes, which is the one way a parity picture can lie. `data-mth` on body is what every
+    // token in app/src/tokens.css hangs off, so asserting it is asserting the whole dark block.
+    if (entry.name.startsWith('dark.')) {
+      await expect(page.locator('body[data-mth="dark"]'), `${entry.name} must apply the dark theme`).toBeAttached();
+    }
+
     // AC-APP-16, the half a key scan cannot prove: a key declared in both bundles and looked
     // up under the wrong name still reaches the screen as itself.
     const text = await page.locator('body').innerText();

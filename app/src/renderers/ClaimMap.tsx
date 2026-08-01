@@ -31,7 +31,11 @@ export default function ClaimMap({ panel, ctx }: { panel: ClaimMapPanel; ctx: Re
         <div>
           <div className="m-colhead">{t(ctx, UI.storyAsTold)}</div>
           {panel.spine.map((node) => {
-            const edge = panel.edges.find((e) => e.from === node.el_id);
+            // Every edge leaving this node, not the first one. Section 6.4 puts no arity on
+            // `edges`, and published claim maps fan: mbg-stop hangs three steps off its first
+            // node. `find` drew one of them and silently dropped the rest, taking their status,
+            // their evidence and their narration binding off the screen with them.
+            const edges = panel.edges.filter((e) => e.from === node.el_id);
             return (
               <div key={node.el_id}>
                 <div
@@ -55,8 +59,9 @@ export default function ClaimMap({ panel, ctx }: { panel: ClaimMapPanel; ctx: Re
                     </>
                   )}
                 </div>
-                {edge === undefined ? null : (
+                {edges.map((edge) => (
                   <div
+                    key={edge.el_id}
                     className="m-edge"
                     data-st={edge.status}
                     {...elProps(edge.el_id, open, () => ({
@@ -83,7 +88,7 @@ export default function ClaimMap({ panel, ctx }: { panel: ClaimMapPanel; ctx: Re
                       <div className="m-edge-note">{t(ctx, edge.ev.why)}</div>
                     </div>
                   </div>
-                )}
+                ))}
               </div>
             );
           })}

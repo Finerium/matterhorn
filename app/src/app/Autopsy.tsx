@@ -189,10 +189,16 @@ export default function Autopsy({ state, nav }: { state: AppState; nav: Nav }) {
     }
   });
 
-  /** A state that names a panel scrolls to it, so the state is what is on screen. */
+  /**
+   * A state that names a panel scrolls to it, so the state is what is on screen.
+   *
+   * `start`, like the Archive's own focus effect. `center` framed a seed panel because a seed
+   * panel fitted a screen; a published claim map runs several screens of hidden column, and
+   * centring one puts its middle in the frame and its title off the top.
+   */
   useEffect(() => {
     if (state.focus === null || n === null) return;
-    body.current?.querySelector(state.focus)?.scrollIntoView({ block: 'center' });
+    body.current?.querySelector(state.focus)?.scrollIntoView({ block: 'start' });
   }, [state.focus, n]);
 
   if (n === null || sources.data === null) {

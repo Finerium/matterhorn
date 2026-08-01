@@ -26,7 +26,7 @@
     },
     "upload": {
       "target": "filesystem",
-      "outputDir": "test-results/lighthouse/desktop",
+      "outputDir": "lighthouse-report/desktop",
       "reportFilenamePattern": "%%PATHNAME%%-desktop.%%EXTENSION%%"
     }
   }

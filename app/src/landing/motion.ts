@@ -86,8 +86,13 @@ async function gsapPath(): Promise<() => void> {
   // beat a moment at full before the next starts, which is what reads as four beats rather than
   // one long fade.
   mm.add(`${MOVES} and ${PINNED}`, () => {
+    // `scrub: true`, not a smoothed number. A smoothing value eases the playhead toward the scroll
+    // position over a fraction of a second, which looks marginally nicer on a wheel and makes this
+    // path lag the CSS one: measured, beat 4 was still catching up after the pin had released. A
+    // view timeline has no such lag, and two paths that reach the same frames at different scroll
+    // positions are two designs.
     const timeline = gsap.timeline({
-      scrollTrigger: { trigger: '.m-l-beats', start: 'top top', end: 'bottom bottom', scrub: 0.3 },
+      scrollTrigger: { trigger: '.m-l-beats', start: 'top top', end: 'bottom bottom', scrub: true },
     });
     const groups = gsap.utils.toArray<SVGGElement>('.m-l-spine [data-beat]');
     // `set` then `to`, rather than four `fromTo`s: a `fromTo` inside a scrubbed timeline renders

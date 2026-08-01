@@ -157,6 +157,10 @@ export default defineConfig(({ command, mode }) => {
     // the content root, and only ever while serving.
     server: serving ? { host: '127.0.0.1', fs: { allow: [REPO_ROOT] } } : {},
     preview: { host: '127.0.0.1', headers: productionHeaders() },
-    build: { rollupOptions: { input: join(APP_ROOT, 'index.html') } },
+    // manifest: the chunk graph, emitted so AC-PERF-1 can be measured rather than estimated.
+    // scripts/check-bundle.ts walks it to get each route's real initial-JS closure; reading the
+    // import graph out of the emitted JS with a regex, or guessing it from chunk filenames, would
+    // both be a budget that stops matching the bundler the first time chunking changes.
+    build: { manifest: true, rollupOptions: { input: join(APP_ROOT, 'index.html') } },
   };
 });

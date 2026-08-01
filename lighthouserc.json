@@ -48,7 +48,7 @@
     },
     "upload": {
       "target": "filesystem",
-      "outputDir": "test-results/lighthouse/mobile",
+      "outputDir": "lighthouse-report/mobile",
       "reportFilenamePattern": "%%PATHNAME%%-mobile.%%EXTENSION%%"
     }
   }

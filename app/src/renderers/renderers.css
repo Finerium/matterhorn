@@ -226,7 +226,11 @@
   background: var(--surface);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
-.m-toggle-on .m-toggle-knob { background: #ffffff; }
+/* The zip forces the knob to #ffffff once the toggle is on. In light theme `--surface` IS
+   #ffffff, so the rule paints nothing; in dark it pins a light-theme white onto a dark surface,
+   which is the exact shape AC-APP-15 calls a non-parity. Deleted rather than themed: `--surface`
+   above already says the right thing in both themes, and on dark `--mis` it reads at 4.16:1
+   where the hardcoded white read at 3.05:1. No light pixel moves. */
 .m-flow-struck { font-size: 11px; font-weight: 600; color: var(--mis); }
 .m-flow-root { background: var(--fill); border-radius: 12px; padding: 10px 12px; }
 .m-flow-label { font-size: 13.5px; font-weight: 650; }

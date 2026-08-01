@@ -16,8 +16,10 @@
     "  gate5    the driver skips it. research.* and desktop.* land with the Gate 5 surface.",
     "  note     what the state is, and what has to exist for it to be reachable.",
     "",
-    "Deliberately absent: the Appendix A dark.* rows (Gate 6, AC-APP-15, a theme modifier on",
-    "rows already here) and land.* rows (Gate 4, the landing page, AC-LAND).",
+    "Deliberately absent: the land.* rows (Gate 4, the landing page, AC-LAND, whose widths are",
+    "tests/e2e/landing-responsive.spec.ts). The dark.* rows are present: `dark.` is a prefix on",
+    "a row already here, resolved by gotoPatch in app/src/app/state.ts, and AC-APP-15 asks for the",
+    "picture of each one.",
     "",
     "Selectors reuse what already ships wherever possible: .m-card and .m-card-c are the two",
     "Card slots, [data-el] is the Gate 2 element id, [data-testid=evidence-sheet] is the Gate 2",
@@ -69,7 +71,6 @@
       "sheet": "honest-auth",
       "note": "Appendix C honest-auth copy, opened by either provider button. Ships."
     },
-
     {
       "name": "radar.default",
       "goto": "radar.default",
@@ -119,7 +120,6 @@
       "visible": "[data-feed-item=\"tariffs-pay\"]",
       "note": "Contract-implied by the shipped [data-testid=pack-switch] and packs/en/feed.json. The EN-Global pack, hero tariffs-pay. Backs AC-APP-14."
     },
-
     {
       "name": "dissect.default",
       "goto": "dissect.default",
@@ -161,7 +161,6 @@
       "visible": "[data-testid=\"from-another-app\"]",
       "note": "Blueprint 3.2 item 7 names the from-another-app card; Appendix A folds it into dissect. Listed so the share-sheet entry point has a screenshot."
     },
-
     {
       "name": "archive.default",
       "goto": "archive.default",
@@ -197,7 +196,6 @@
       "visible": "[data-testid=\"case-library\"]",
       "note": "case_library.json rendered: B-01 onward, each with its documented outcome and citations."
     },
-
     {
       "name": "settings.default",
       "goto": "settings.default",
@@ -247,7 +245,6 @@
       "visible": "[data-testid=\"appearance-dark\"][aria-pressed=\"true\"]",
       "note": "The appearance row with dark selected. body[data-mth=dark] follows from it; the dark.* screenshots themselves are Gate 6."
     },
-
     {
       "name": "autopsy.default",
       "goto": "autopsy.default",
@@ -450,7 +447,6 @@
       "sheet": "nuance-chat",
       "note": "AC-APP-12. The 1200x628 Chat template, counts row included."
     },
-
     {
       "name": "system.chat-sim",
       "goto": "system.chat-sim",
@@ -538,7 +534,41 @@
       "sheet": "share-sim",
       "note": "Blueprint 3.2 lists the share-sheet simulation among the overlays. Not in Appendix A; listed because it is a named overlay with its own screenshot."
     },
-
+    {
+      "name": "dark.radar",
+      "goto": "dark.radar",
+      "screen": "main-radar",
+      "visible": "[data-feed-item=\"mbg-stop\"]",
+      "note": "AC-APP-15. radar.default with theme dark. body[data-mth=dark] is what the tokens hang off."
+    },
+    {
+      "name": "dark.autopsy",
+      "goto": "dark.autopsy",
+      "screen": "autopsy",
+      "visible": "[data-panel=\"claim_map\"]",
+      "note": "AC-APP-15. The assembled panel stack in dark, which is where the status hues carry the most meaning."
+    },
+    {
+      "name": "dark.settings",
+      "goto": "dark.settings",
+      "screen": "main-settings",
+      "visible": "[data-testid=\"account-row\"]",
+      "note": "AC-APP-15. Rows, switches and the appearance control itself, in the theme it selects."
+    },
+    {
+      "name": "dark.methodology",
+      "goto": "dark.methodology",
+      "screen": "methodology",
+      "visible": "[data-testid=\"policy-65\"]",
+      "note": "AC-APP-15. The longest body copy in the product, in dark."
+    },
+    {
+      "name": "dark.autopsy.evidence-sheet",
+      "goto": "dark.autopsy.evidence-sheet",
+      "screen": "autopsy",
+      "visible": "[data-testid=\"evidence-sheet\"]",
+      "note": "AC-APP-15 names sheets explicitly: a sheet is its own surface colour over a scrim, so dark parity has to be seen there and not inferred from the screen behind it."
+    },
     {
       "name": "research.default",
       "goto": null,

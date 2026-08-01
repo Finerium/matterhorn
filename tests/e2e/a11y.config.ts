@@ -59,7 +59,7 @@ export default defineConfig({
 
   webServer: {
     cwd: REPO_ROOT,
-    command: `pnpm build && rm -rf app/dist/content && cp -R content app/dist/content && pnpm exec vite preview app --port ${PORT} --strictPort`,
+    command: `pnpm build && pnpm exec vite preview app --port ${PORT} --strictPort`,
     url: `${BASE_URL}/`,
     reuseExistingServer: false,
     timeout: 180_000,

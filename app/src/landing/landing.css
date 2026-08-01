@@ -219,6 +219,13 @@
    of hero here; the fade says there is more rather than pretending this is all of it. The frame
    keeps the panel's own radius, so what is cropped is the content and not the object. */
 .m-l-mount-hero {
+  /* min and max at the same clamp, which is a reserved box rather than a decorative one. The
+     claim map arrives from a fetch, so until it does this mount is 0 tall and the callouts and
+     count line below it sit where the map will be; when it lands they drop by the full height.
+     Lighthouse desktop scored that single shift at 0.165 CLS and the performance category at 93
+     against AC-LAND-9's 95. The map always overflows the clamp at every width from 390 to 1680
+     (measured: 1407 to 3043 px against a 504 px box), so reserving it changes no painted frame. */
+  min-height: clamp(420px, 56vh, 580px);
   max-height: clamp(420px, 56vh, 580px);
   overflow: hidden;
   border-radius: 20px;

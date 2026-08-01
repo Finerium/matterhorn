@@ -49,11 +49,56 @@ Not the layout. Three places:
 Motion is the last step deliberately: a set piece whose static frame is illegible cannot be
 fixed by adding animation, and reduced motion is a hard criterion, not a degradation.
 
+## Dependency justification: gsap 3.15.0 (blueprint 7.5)
+
+Blueprint 7.5 lists `gsap` on the runtime bundle allowlist and ADR-7 names it, so this is not a
+new class of dependency. It still gets a written justification, because "allowed" is not "needed"
+and the honest answer to "why not CSS only" is not obvious.
+
+**What the CSS baseline does cover, and does cover alone.** More than the ADR assumed. The pin is
+`position: sticky`, which every engine has had for years, so no library is needed to pin anything.
+The hero's 14 s assembly and the fleet console loop are ordinary keyframes on the document
+timeline, so they run on every engine too, Firefox included, and GSAP is never asked for them. The
+four-beat advance and the reveals run on `animation-timeline: view()` and a named `view-timeline`
+declared on the block the pinned figure lives in. Chromium and Safari therefore run the entire
+choreography with zero JavaScript driving it.
+
+**What it cannot cover.** Firefox has not shipped scroll-driven animations: measured on the
+Playwright 1.62 firefox build, `CSS.supports('animation-timeline', 'view()')` is false. There is no
+CSS-only substitute, because the missing capability IS "link an animation to scroll position".
+The alternatives were considered and rejected:
+
+- *Do nothing on Firefox.* The four-beat sequence and every reveal would sit at their final frame.
+  Legible, but AC-LAND-14 asks specifically that scroll reveals RUN there, and a set piece that
+  moves for 70 percent of readers and not the rest is two designs.
+- *Hand-roll it.* A scroll listener plus IntersectionObserver plus a rAF interpolator is perhaps
+  120 lines to write and considerably more to get right: refresh on layout change, reverting
+  cleanly when the motion preference flips, not fighting the sticky pin. Two of the three bugs
+  found while building this (a `from` tween re-applying its start state on refresh, and overlapping
+  setups clobbering each other) are bugs the hand-rolled version would also have had, without a
+  library's `matchMedia().revert()` to lean on. This is rung 5 of the ladder, not rung 7.
+
+**Cost, and why it is nearly zero.** The import is dynamic and gated on the same predicate the CSS
+`@supports` block uses, so a browser runs one path or the other and only the GSAP path downloads
+GSAP. Measured: the landing route's initial JS is 108.8 KB gzip without this work and 109.4 KB with
+it, against a 250 KB budget; the 43.5 KB gzip of GSAP is in deferred chunks that Chromium never
+requests (asserted in `tests/e2e/landing-motion.spec.ts`). The service worker's precache would have
+undone that by fetching every emitted chunk on install, so `app/vite.config.ts` excludes the two by
+glob and the test reads the emitted manifest back.
+
+**License.** GreenSock Standard "no charge" License, free for this use, recorded with its terms and
+its reasoning in `LICENSES.md`. ScrollTrigger has been in the free tier since GSAP 3.13, April 2025.
+Version pinned exact, lockfile committed, per 7.5.
+
 ## What is NOT in this gate
 
-`/research` is Gate 5. Lighthouse and axe thresholds (AC-LAND-8/9/10) and the scroll-smoothness
-trace (AC-PERF-5) run in Gate 6 hardening against the built site; Gate 4 is done when the page
-is correct and its behavioral ACs are green, not when it is tuned.
+`/research` is Gate 5. Lighthouse and axe thresholds (AC-LAND-8/9/10) run in Gate 6 hardening
+against the built site; Gate 4 is done when the page is correct and its behavioral ACs are green,
+not when it is tuned.
+
+AC-PERF-5 moved forward into this gate rather than waiting for Gate 6: the scroll-smoothness trace
+measures the choreography, so deferring it would have shipped the motion without ever asking what
+it costs. It is in `tests/e2e/landing-motion.spec.ts` with the rest of the choreography evidence.
 
 ## Worker separation
 

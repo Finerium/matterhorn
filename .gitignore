@@ -14,3 +14,9 @@ dist/
 staging/
 test-results/
 playwright-report/
+# lhci autorun's scratch directory. The reports it keeps are the ones the config uploads to
+# lighthouse-report/, below.
+.lighthouseci/
+# lhci's uploaded reports, the AC-LAND-8/9 and AC-PERF-3 evidence. Its own directory rather
+# than test-results/, which Playwright wipes at the start of every suite run.
+lighthouse-report/

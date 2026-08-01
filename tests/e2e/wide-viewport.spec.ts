@@ -140,6 +140,10 @@ test.describe('blueprint 4.3, /app at 768 and above renders inside the phone fra
  * publish, while `data-panel` is the renderer's own name for which grammar component it is.
  */
 async function skipSparring(page: Page): Promise<void> {
+  // Wait for the autopsy to have decided what it is showing before asking whether Skip is up.
+  // A bare `isVisible()` on a page still fetching its artifact answers false, and the walk then
+  // waits for panels the gate is still covering.
+  await expect(page.locator('[data-testid="spar-skip"], [data-panel="claim_map"]').first()).toBeVisible();
   const skip = page.getByTestId('spar-skip');
   if (await skip.isVisible()) await skip.click();
   await expect(page.locator('[data-panel="claim_map"]')).toBeVisible();

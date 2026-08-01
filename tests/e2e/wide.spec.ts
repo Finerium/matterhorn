@@ -12,7 +12,7 @@
  * built preview). This one owns what the frame must never do to the app inside it, and it drives
  * the dev server so it can reach an autopsy sheet through `__mthGoto`.
  */
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 
 import { guardConsole } from './console-collector';
 import { guardNetwork } from './net-collector';
@@ -31,11 +31,23 @@ const DESKTOP = { width: 1280, height: 800 };
 /** The ported logical width, blueprint 4.3 and the zip's ios-frame.jsx default. */
 const FRAME_WIDTH = 402;
 
+/**
+ * `/app` mounted, not merely loaded. The bundle mounts React after the load event, so a raw
+ * `page.evaluate` straight off `goto` measures an empty `#root` and reports it as a broken
+ * frame. Every measurement below goes through here, and the assertions are then about the app.
+ */
+async function openFramedApp(page: Page): Promise<void> {
+  await page.goto(APP);
+  await expect(page.getByTestId('app-frame')).toBeVisible();
+  await expect(page.locator('[data-screen]').first()).toBeVisible();
+  await page.waitForFunction(() => typeof window.__mthGoto === 'function');
+}
+
 test.describe('the frame is chrome and nothing else', () => {
   test.use({ viewport: DESKTOP });
 
   test('holds no focus: the caption is reachable, and tabbing past it returns to the app', async ({ page }) => {
-    await page.goto(APP);
+    await openFramedApp(page);
 
     // The app fills the frame and nothing else is inside it. The island and the home indicator
     // are pseudo-elements: no element, so no tab stop and no accessibility node, by construction.
@@ -67,7 +79,7 @@ test.describe('the frame is chrome and nothing else', () => {
   });
 
   test('intercepts no tap: the island and the home indicator hit-test through to the app', async ({ page }) => {
-    await page.goto(APP);
+    await openFramedApp(page);
 
     const hits = await page.evaluate(() => {
       const frame = document.querySelector('.m-frame');
@@ -96,8 +108,9 @@ test.describe('the frame is chrome and nothing else', () => {
   });
 
   test('keeps the app overlays inside it: the sheet is 402 wide, not 1280', async ({ page }) => {
-    await page.goto(APP);
+    await openFramedApp(page);
     await page.evaluate(() => window.__mthGoto?.('autopsy.evidence-sheet'));
+    await expect(page.locator('.m-sheet')).toBeVisible();
 
     // `position: fixed` inside the frame means fixed to the frame. Without the containment in
     // wide.css these two cover the whole desktop, which is a phone sheet over a browser window.
@@ -109,7 +122,7 @@ test.describe('the frame is chrome and nothing else', () => {
 
   test('breaks no scrolling: the stage scrolls when the frame is taller than the viewport', async ({ page }) => {
     await page.setViewportSize({ width: 1280, height: 600 });
-    await page.goto(APP);
+    await openFramedApp(page);
 
     const scrolled = await page.evaluate(() => {
       const stage = document.querySelector('.m-stage');
