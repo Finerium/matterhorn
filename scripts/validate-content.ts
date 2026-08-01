@@ -46,6 +46,7 @@ const SCHEMA_FILES = [
   'methodology.schema.json',
   'corrections.schema.json',
   'og_attribution.schema.json',
+  'replay.schema.json',
 ];
 
 /** Artifact kind to the schema its whole file must satisfy. */
@@ -59,6 +60,7 @@ const KIND_SCHEMAS: Record<string, AnySchema> = {
   methodology: { $ref: 'methodology.schema.json' },
   corrections: { $ref: 'corrections.schema.json' },
   og_attribution: { $ref: 'og_attribution.schema.json' },
+  replay: { $ref: 'replay.schema.json' },
 };
 
 // --- tiny unknown-shaped-data helpers -------------------------------------------------

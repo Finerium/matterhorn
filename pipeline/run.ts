@@ -58,6 +58,7 @@ const CONTRACT_SCHEMAS = [
   'methodology.schema.json',
   'corrections.schema.json',
   'og_attribution.schema.json',
+  'replay.schema.json',
 ];
 
 // --- tiny unknown-shaped-data helpers, same idiom as the validator ----------------------

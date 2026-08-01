@@ -98,8 +98,17 @@ function main(): void {
   // narrative they belong to, which is the join.
   const ogIds = new Set<string>();
   if (existsSync(OG_REGISTRY)) {
-    const registry = JSON.parse(readFileSync(OG_REGISTRY, 'utf8')) as { entries?: Array<{ narrative_id?: string }> };
-    for (const entry of registry.entries ?? []) if (entry.narrative_id !== undefined) ogIds.add(entry.narrative_id);
+    const registry = JSON.parse(readFileSync(OG_REGISTRY, 'utf8')) as {
+      entries?: Array<{ narrative_id?: string; image_path?: string | null }>;
+    };
+    for (const entry of registry.entries ?? []) {
+      if (entry.narrative_id !== undefined) ogIds.add(entry.narrative_id);
+      // Member link previews are recorded with an explicit staged path; the file is covered by
+      // the entry that names it, not by a filename convention.
+      if (typeof entry.image_path === 'string') {
+        ogIds.add(basename(entry.image_path).replace(/\.[^.]+$/, ''));
+      }
+    }
   }
   const covered = (file: Found): boolean =>
     documented.has(file.name) || ogIds.has(file.name.replace(/\.[^.]+$/, ''));

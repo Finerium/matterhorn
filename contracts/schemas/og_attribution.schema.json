@@ -5,27 +5,75 @@
   "description": "Blueprint 6.10. content/og_attribution.json as shipped: a render `policy` statement plus one entry per narrative recorded by scripts/fetch-og. status fallback means the styled placeholder ships, and then the original url and fetch date may be null.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["policy", "entries"],
+  "required": [
+    "policy",
+    "entries"
+  ],
   "properties": {
     "seed": {
       "const": true,
       "description": "Quarantine flag on transcribed seed fixtures (Gate 2). Optional, true only, and absent from every artifact in content/: check 7 (slug seed) is this field's validator coverage and fails any content root that carries it. The root stays closed otherwise.",
       "type": "boolean"
     },
-    "policy": { "type": "string", "minLength": 1 },
+    "policy": {
+      "type": "string",
+      "minLength": 1
+    },
     "entries": {
       "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["narrative_id", "image_url_original", "outlet", "fetched_at", "status"],
+        "required": [
+          "narrative_id",
+          "image_url_original",
+          "outlet",
+          "fetched_at",
+          "status"
+        ],
         "properties": {
-          "narrative_id": { "type": "string", "minLength": 1 },
-          "image_url_original": { "type": ["string", "null"] },
-          "outlet": { "type": "string", "minLength": 1 },
-          "fetched_at": { "type": ["string", "null"] },
-          "status": { "enum": ["fetched", "fallback"] },
-          "note": { "type": "string", "minLength": 1 }
+          "narrative_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "image_url_original": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "outlet": {
+            "type": "string",
+            "minLength": 1
+          },
+          "fetched_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "enum": [
+              "fetched",
+              "fallback"
+            ]
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1
+          },
+          "image_path": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Additive optional (member link previews): the staged asset path for this preview, e.g. /assets/og/members/mbg-stop-m1.jpg. The licence gate matches files to entries by this path's basename."
+          },
+          "member_url": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Additive optional: the family-member article this preview belongs to. Absent on the ten original narrative-level entries."
+          }
         }
       }
     }

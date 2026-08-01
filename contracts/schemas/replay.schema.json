@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "replay.schema.json",
+  "title": "Fleet replay record",
+  "description": "content/replay.json. The data behind the research desk's replay console: a distillation of the committed run log, produced by scripts/build-replay.ts. Additive to the Section 6 contract set, never referenced by the frozen artifact schemas. The honesty rule it encodes: every model, verdict and block traces to the run directory, no durations are carried because the recorded timestamps bracket ingest rather than agent wall clock, and the disclosure strings are the label the UI must keep visible while replaying.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "generated_at", "disclosure", "models", "narratives_total", "narratives_blocked", "blocks_total", "narratives"],
+  "properties": {
+    "seed": { "const": true, "type": "boolean" },
+    "run_id": { "type": "string", "minLength": 1 },
+    "generated_at": { "type": "string", "minLength": 1 },
+    "disclosure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "id"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "id": { "type": "string", "minLength": 1 }
+      }
+    },
+    "models": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+    "narratives_total": { "type": "integer", "minimum": 0 },
+    "narratives_blocked": { "type": "integer", "minimum": 0 },
+    "blocks_total": { "type": "integer", "minimum": 0 },
+    "narratives": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["narrative_id", "blocked_rounds", "events"],
+        "properties": {
+          "narrative_id": { "type": "string", "minLength": 1 },
+          "blocked_rounds": { "type": "integer", "minimum": 0 },
+          "events": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["kind"],
+              "properties": {
+                "kind": { "enum": ["slot", "block", "verdict", "published"] },
+                "role": { "type": "string" },
+                "label": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["en", "id"],
+                  "properties": {
+                    "en": { "type": "string", "minLength": 1 },
+                    "id": { "type": "string", "minLength": 1 }
+                  }
+                },
+                "model": { "type": "string" },
+                "at": { "type": "string" },
+                "gate": { "enum": ["symmetry", "fidelity"] },
+                "judged_by": { "type": "string" },
+                "verdict": { "enum": ["pass", "block"] },
+                "reason": { "type": "string" },
+                "summary": { "type": "string" },
+                "token": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

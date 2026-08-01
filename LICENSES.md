@@ -67,3 +67,13 @@ paid tier and no redistribution of GSAP as a library, so no Business Green
 subscription is required. ScrollTrigger has been included in the free tier since
 GSAP 3.13 (April 2025), so no "club" plugin licensing applies either. The license
 banner ships verbatim inside the built chunk, as GreenSock's terms ask.
+
+## Family-member link previews (`public/assets/og/members/`)
+
+Outlet og:images for the family-member articles of each narrative, fetched once at build per
+blueprint 7.3 and rendered only as attributed link previews with the outlet name and an
+outbound link. Per-file attribution (source URL, outlet, fetch date, honest fallbacks) is
+recorded in `content/og_attribution.json` entries carrying an `image_path` under this
+directory; the licence gate matches files to those entries. Never reused outside the owning
+narrative's cards.
+

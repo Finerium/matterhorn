@@ -1,0 +1,146 @@
+/**
+ * The shared surface system: soft paper, hard glass. docs/design-direction.md is the prose
+ * contract; this file is its tokens and utility classes, additive only. Nothing here restyles
+ * an existing selector, so importing it changes nothing until a surface opts in with a class.
+ *
+ * Scope: the landing, the research desk, and the desktop stage around the phone frame. The
+ * phone's inner screens are zip-frozen (AC-GRAM-9) and never carry these classes.
+ */
+
+:root {
+  --m-paper: #f2f1ec;
+  --m-ink: #1a1a18;
+  --m-relief-raised: 6px 6px 14px rgba(26, 26, 24, 0.08), -6px -6px 14px rgba(255, 255, 255, 0.85);
+  --m-relief-rest: 3px 3px 8px rgba(26, 26, 24, 0.06), -3px -3px 8px rgba(255, 255, 255, 0.7);
+  --m-relief-pressed: inset 3px 3px 8px rgba(26, 26, 24, 0.09), inset -3px -3px 8px rgba(255, 255, 255, 0.75);
+  --m-glass-fill: rgba(252, 251, 247, 0.62);
+  --m-glass-edge-strong: rgba(255, 255, 255, 0.55);
+  --m-glass-edge-weak: rgba(255, 255, 255, 0.25);
+  --m-glass-drop: 0 12px 32px rgba(26, 26, 24, 0.1);
+  --m-r-paper: 16px;
+  --m-r-glass: 20px;
+  --m-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --m-t-micro: 120ms;
+  --m-t-standard: 240ms;
+  --m-t-entrance: 420ms;
+  /* Cursor system: one rAF-throttled pointermove writes these; CSS consumes them. */
+  --mx: 50vw;
+  --my: 50vh;
+}
+
+[data-theme='dark'] {
+  --m-paper: #141412;
+  --m-ink: #edebe4;
+  --m-relief-raised: 6px 6px 14px rgba(0, 0, 0, 0.45), -6px -6px 14px rgba(255, 255, 255, 0.035);
+  --m-relief-rest: 3px 3px 8px rgba(0, 0, 0, 0.35), -3px -3px 8px rgba(255, 255, 255, 0.025);
+  --m-relief-pressed: inset 3px 3px 8px rgba(0, 0, 0, 0.5), inset -3px -3px 8px rgba(255, 255, 255, 0.03);
+  --m-glass-fill: rgba(28, 28, 26, 0.58);
+  --m-glass-edge-strong: rgba(255, 255, 255, 0.09);
+  --m-glass-edge-weak: rgba(255, 255, 255, 0.04);
+  --m-glass-drop: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Paper: soft-extruded surfaces that ARE the page. */
+.g-paper {
+  background: var(--m-paper);
+  border-radius: var(--m-r-paper);
+  box-shadow: var(--m-relief-rest);
+}
+.g-paper-raised {
+  background: var(--m-paper);
+  border-radius: var(--m-r-paper);
+  box-shadow: var(--m-relief-raised);
+}
+.g-well {
+  background: var(--m-paper);
+  border-radius: var(--m-r-paper);
+  box-shadow: var(--m-relief-pressed);
+}
+
+/* Glass: everything that floats over the page. The sheen layer lives on ::before so content
+   stacking stays untouched; --px/--py are panel-relative 0..1, written by the route's cursor
+   listener onto each .g-glass element it owns. */
+.g-glass {
+  position: relative;
+  background: var(--m-glass-fill);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+  backdrop-filter: blur(18px) saturate(1.15);
+  border: 1px solid;
+  border-color: var(--m-glass-edge-strong) var(--m-glass-edge-weak) rgba(26, 26, 24, 0.06)
+    var(--m-glass-edge-weak);
+  border-radius: var(--m-r-glass);
+  box-shadow: var(--m-glass-drop);
+}
+.g-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--m-t-standard) var(--m-ease);
+}
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  .g-glass::before {
+    background: radial-gradient(
+      600px circle at calc(var(--px, 0.5) * 100%) calc(var(--py, 0.5) * 100%),
+      rgba(255, 255, 255, 0.1),
+      transparent 40%
+    );
+  }
+  .g-glass:hover::before {
+    opacity: 1;
+  }
+
+  /* Tilt cards: max 4deg, driven by panel-relative cursor variables. */
+  .g-tilt {
+    transform: perspective(900px) rotateX(calc((var(--py, 0.5) - 0.5) * -8deg))
+      rotateY(calc((var(--px, 0.5) - 0.5) * 8deg));
+    transition: transform var(--m-t-standard) var(--m-ease), box-shadow var(--m-t-standard) var(--m-ease);
+    will-change: transform;
+  }
+  .g-tilt:hover {
+    box-shadow: var(--m-relief-raised), var(--m-glass-drop);
+  }
+
+  /* Magnetic CTAs: the route's listener writes --pull-x/--pull-y in px, capped at 10. */
+  .g-magnet {
+    transform: translate(var(--pull-x, 0px), var(--pull-y, 0px));
+    transition: transform 0.45s var(--m-ease);
+  }
+  .g-magnet > .g-magnet-inner {
+    display: inline-block;
+    transform: translate(calc(var(--pull-x, 0px) * -0.4), calc(var(--pull-y, 0px) * -0.4));
+    transition: transform 0.45s var(--m-ease);
+  }
+}
+
+/* Keyboard parity: every cursor affordance has a focus twin. Never pointer-only. */
+.g-glass:focus-visible,
+.g-tilt:focus-visible {
+  outline: 2px solid var(--m-ink);
+  outline-offset: 2px;
+}
+.g-magnet:focus-visible {
+  outline: 2px solid var(--m-ink);
+  outline-offset: 2px;
+  box-shadow: var(--m-relief-raised);
+}
+
+/* Entrances: rise and fade. Exits fade only. Applied by routes, inert under reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .g-enter {
+    animation: g-rise var(--m-t-entrance) var(--m-ease) both;
+  }
+  @keyframes g-rise {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}

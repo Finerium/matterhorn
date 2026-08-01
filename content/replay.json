@@ -1,0 +1,1026 @@
+{
+  "run_id": "run-2026-07-29",
+  "generated_at": "2026-07-28T21:52:08Z",
+  "disclosure": {
+    "en": "Replay of editorial run run-2026-07-29. Every step, model, verdict and block below is the recorded run; on-screen pacing is compressed and not to scale.",
+    "id": "Pemutaran ulang proses editorial run-2026-07-29. Setiap langkah, model, putusan dan blokir di bawah ini adalah rekaman proses aslinya; tempo di layar dipadatkan dan tidak berskala."
+  },
+  "models": [
+    "claude-fable-5",
+    "claude-opus-5[1m]"
+  ],
+  "narratives_total": 10,
+  "narratives_blocked": 5,
+  "blocks_total": 7,
+  "narratives": [
+    {
+      "narrative_id": "mbg-stop",
+      "blocked_rounds": 1,
+      "events": [
+        {
+          "kind": "slot",
+          "role": "A5",
+          "label": {
+            "en": "Causal Extractor · mapping the asserted spine",
+            "id": "Causal Extractor · memetakan rangka klaim"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-28T21:52:10Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A6",
+          "label": {
+            "en": "Hidden-Node Hunter · hunting what the story prices at zero",
+            "id": "Hidden-Node Hunter · memburu yang dihargai nol oleh berita"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-28T22:56:01Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A7",
+          "label": {
+            "en": "Evidence Grounder · attaching sources, refusing orphan numbers",
+            "id": "Evidence Grounder · menambatkan sumber, menolak angka tanpa sumber"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-28T22:56:26Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A8",
+          "label": {
+            "en": "Cascade Historian · searching the case library for echoes",
+            "id": "Cascade Historian · mencari gema di pustaka kasus"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-28T22:56:02Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A9",
+          "label": {
+            "en": "Narrator · writing both languages from the locked graph",
+            "id": "Narrator · menulis dua bahasa dari graf terkunci"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-28T23:28:07Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A10",
+          "label": {
+            "en": "Symmetry Auditor · dissecting the mirror framing",
+            "id": "Symmetry Auditor · membedah bingkai cermin"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-28T23:26:35Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A11",
+          "label": {
+            "en": "Fidelity Guard · tracing every sentence to the graph",
+            "id": "Fidelity Guard · menelusuri tiap kalimat ke graf"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-28T23:26:35Z"
+        },
+        {
+          "kind": "block",
+          "role": "A11",
+          "gate": "fidelity",
+          "judged_by": "claude-opus-5[1m]",
+          "reason": "en / v-2: binding that does not resolve."
+        },
+        {
+          "kind": "verdict",
+          "role": "A10",
+          "gate": "symmetry",
+          "verdict": "pass",
+          "model": "claude-fable-5",
+          "summary": "Integrity: the attested sha256 df7b90d4… is candidate.json; the candidate embedded in A10.input.json is byte-identical to it."
+        },
+        {
+          "kind": "verdict",
+          "role": "A11",
+          "gate": "fidelity",
+          "verdict": "pass",
+          "model": "claude-opus-5[1m]",
+          "summary": "Pass one, bindings: 41 el_ids declared across 6 panels (claim_map spine n1-n4, edges e1-e4, hidden h1-h6; scale_check segments and chips; money_flow rows; incidence lanes; options and playbook steps; family marker mbg..."
+        },
+        {
+          "kind": "published",
+          "token": "f2468186c3b5"
+        }
+      ]
+    },
+    {
+      "narrative_id": "mbg-cut",
+      "blocked_rounds": 0,
+      "events": [
+        {
+          "kind": "slot",
+          "role": "A5",
+          "label": {
+            "en": "Causal Extractor · mapping the asserted spine",
+            "id": "Causal Extractor · memetakan rangka klaim"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-28T22:58:10Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A6",
+          "label": {
+            "en": "Hidden-Node Hunter · hunting what the story prices at zero",
+            "id": "Hidden-Node Hunter · memburu yang dihargai nol oleh berita"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-29T00:22:19Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A7",
+          "label": {
+            "en": "Evidence Grounder · attaching sources, refusing orphan numbers",
+            "id": "Evidence Grounder · menambatkan sumber, menolak angka tanpa sumber"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:19Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A8",
+          "label": {
+            "en": "Cascade Historian · searching the case library for echoes",
+            "id": "Cascade Historian · mencari gema di pustaka kasus"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:19Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A9",
+          "label": {
+            "en": "Narrator · writing both languages from the locked graph",
+            "id": "Narrator · menulis dua bahasa dari graf terkunci"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:26:56Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A10",
+          "label": {
+            "en": "Symmetry Auditor · dissecting the mirror framing",
+            "id": "Symmetry Auditor · membedah bingkai cermin"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-29T00:27:00Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A11",
+          "label": {
+            "en": "Fidelity Guard · tracing every sentence to the graph",
+            "id": "Fidelity Guard · menelusuri tiap kalimat ke graf"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:27:01Z"
+        },
+        {
+          "kind": "verdict",
+          "role": "A10",
+          "gate": "symmetry",
+          "verdict": "pass",
+          "model": "claude-fable-5",
+          "summary": "Hash verified: embedded candidate re-serializes to sha256 8e7ca98bcda0920e98086d5a764a713a56870631bdf220e3a87668044f0c6488, byte-identical to slots/mbg-cut/candidate.json."
+        },
+        {
+          "kind": "verdict",
+          "role": "A11",
+          "gate": "fidelity",
+          "verdict": "pass",
+          "model": "claude-opus-5[1m]",
+          "summary": "Candidate integrity verified: candidate.json hashes to 8e7ca98bcda0920e98086d5a764a713a56870631bdf220e3a87668044f0c6488 as stated, and the candidate embedded in A11.input.json is deep-equal to those bytes (identical c..."
+        },
+        {
+          "kind": "published",
+          "token": "3fdc8c32d2bf"
+        }
+      ]
+    },
+    {
+      "narrative_id": "mbg-poisoning",
+      "blocked_rounds": 1,
+      "events": [
+        {
+          "kind": "slot",
+          "role": "A5",
+          "label": {
+            "en": "Causal Extractor · mapping the asserted spine",
+            "id": "Causal Extractor · memetakan rangka klaim"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-28T22:58:10Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A6",
+          "label": {
+            "en": "Hidden-Node Hunter · hunting what the story prices at zero",
+            "id": "Hidden-Node Hunter · memburu yang dihargai nol oleh berita"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-29T00:22:06Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A7",
+          "label": {
+            "en": "Evidence Grounder · attaching sources, refusing orphan numbers",
+            "id": "Evidence Grounder · menambatkan sumber, menolak angka tanpa sumber"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:06Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A8",
+          "label": {
+            "en": "Cascade Historian · searching the case library for echoes",
+            "id": "Cascade Historian · mencari gema di pustaka kasus"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:06Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A9",
+          "label": {
+            "en": "Narrator · writing both languages from the locked graph",
+            "id": "Narrator · menulis dua bahasa dari graf terkunci"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:07Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A10",
+          "label": {
+            "en": "Symmetry Auditor · dissecting the mirror framing",
+            "id": "Symmetry Auditor · membedah bingkai cermin"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-29T00:41:57Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A11",
+          "label": {
+            "en": "Fidelity Guard · tracing every sentence to the graph",
+            "id": "Fidelity Guard · menelusuri tiap kalimat ke graf"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:41:57Z"
+        },
+        {
+          "kind": "block",
+          "role": "A11",
+          "gate": "fidelity",
+          "judged_by": "claude-opus-5[1m]",
+          "reason": "locale en, sentence v-6: a claim that traces to no element."
+        },
+        {
+          "kind": "verdict",
+          "role": "A10",
+          "gate": "symmetry",
+          "verdict": "pass",
+          "model": "claude-fable-5",
+          "summary": "Integrity verified: embedded candidate in A10.input.json serializes to sha256 dd38e9c29d71964091a4c17b47f6235821d96bab7750deda4a431854607c725b and is byte-identical to the staged candidate.json."
+        },
+        {
+          "kind": "verdict",
+          "role": "A11",
+          "gate": "fidelity",
+          "verdict": "pass",
+          "model": "claude-opus-5[1m]",
+          "summary": "Input integrity verified: the candidate embedded in A11.input.json is deep-equal and canonical-equal to candidate.json at sha256 dd38e9c29d71964091a4c17b47f6235821d96bab7750deda4a431854607c725b."
+        },
+        {
+          "kind": "published",
+          "token": "8a5d85f60982"
+        }
+      ]
+    },
+    {
+      "narrative_id": "mbg-jobs",
+      "blocked_rounds": 0,
+      "events": [
+        {
+          "kind": "slot",
+          "role": "A5",
+          "label": {
+            "en": "Causal Extractor · mapping the asserted spine",
+            "id": "Causal Extractor · memetakan rangka klaim"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-28T22:58:11Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A6",
+          "label": {
+            "en": "Hidden-Node Hunter · hunting what the story prices at zero",
+            "id": "Hidden-Node Hunter · memburu yang dihargai nol oleh berita"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-29T00:22:07Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A7",
+          "label": {
+            "en": "Evidence Grounder · attaching sources, refusing orphan numbers",
+            "id": "Evidence Grounder · menambatkan sumber, menolak angka tanpa sumber"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:08Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A8",
+          "label": {
+            "en": "Cascade Historian · searching the case library for echoes",
+            "id": "Cascade Historian · mencari gema di pustaka kasus"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:08Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A9",
+          "label": {
+            "en": "Narrator · writing both languages from the locked graph",
+            "id": "Narrator · menulis dua bahasa dari graf terkunci"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:08Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A10",
+          "label": {
+            "en": "Symmetry Auditor · dissecting the mirror framing",
+            "id": "Symmetry Auditor · membedah bingkai cermin"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-29T00:22:35Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A11",
+          "label": {
+            "en": "Fidelity Guard · tracing every sentence to the graph",
+            "id": "Fidelity Guard · menelusuri tiap kalimat ke graf"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:35Z"
+        },
+        {
+          "kind": "verdict",
+          "role": "A10",
+          "gate": "symmetry",
+          "verdict": "pass",
+          "model": "claude-fable-5",
+          "summary": "Integrity: embedded candidate in A10.input.json is byte-identical in content to candidate.json, whose sha256 matches the staged ee67f68c694c40829a68b26ec01cfda65576112eebad11c6b60e06abd8c7597f."
+        },
+        {
+          "kind": "verdict",
+          "role": "A11",
+          "gate": "fidelity",
+          "verdict": "pass",
+          "model": "claude-opus-5[1m]",
+          "summary": "PROVENANCE: candidate.json sha256 = ee67f68c694c40829a68b26ec01cfda65576112eebad11c6b60e06abd8c7597f, matching the declared hash; the candidate embedded in A11.input.json is deep-diff identical to those bytes."
+        },
+        {
+          "kind": "published",
+          "token": "9002cb45f5be"
+        }
+      ]
+    },
+    {
+      "narrative_id": "judol-turnover",
+      "blocked_rounds": 2,
+      "events": [
+        {
+          "kind": "slot",
+          "role": "A5",
+          "label": {
+            "en": "Causal Extractor · mapping the asserted spine",
+            "id": "Causal Extractor · memetakan rangka klaim"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-28T22:58:11Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A6",
+          "label": {
+            "en": "Hidden-Node Hunter · hunting what the story prices at zero",
+            "id": "Hidden-Node Hunter · memburu yang dihargai nol oleh berita"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-29T00:22:09Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A7",
+          "label": {
+            "en": "Evidence Grounder · attaching sources, refusing orphan numbers",
+            "id": "Evidence Grounder · menambatkan sumber, menolak angka tanpa sumber"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:09Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A8",
+          "label": {
+            "en": "Cascade Historian · searching the case library for echoes",
+            "id": "Cascade Historian · mencari gema di pustaka kasus"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:10Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A9",
+          "label": {
+            "en": "Narrator · writing both languages from the locked graph",
+            "id": "Narrator · menulis dua bahasa dari graf terkunci"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:41:56Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A10",
+          "label": {
+            "en": "Symmetry Auditor · dissecting the mirror framing",
+            "id": "Symmetry Auditor · membedah bingkai cermin"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T04:13:27Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A11",
+          "label": {
+            "en": "Fidelity Guard · tracing every sentence to the graph",
+            "id": "Fidelity Guard · menelusuri tiap kalimat ke graf"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T04:13:27Z"
+        },
+        {
+          "kind": "block",
+          "role": "A10",
+          "gate": "symmetry",
+          "judged_by": "claude-fable-5",
+          "reason": "Asymmetry 1 (headline asserts the lean's unbaselined read in artifact voice): headline.en 'Online Gambling Turnover Falls to Rp40.3 Trillion in Q1 2026' and headline.id 'Perputaran Dana Judi Online Turun ke Rp40,3 Tri..."
+        },
+        {
+          "kind": "block",
+          "role": "A10",
+          "gate": "symmetry",
+          "judged_by": "claude-opus-5[1m]",
+          "reason": "BLOCKING ASYMMETRY."
+        },
+        {
+          "kind": "verdict",
+          "role": "A10",
+          "gate": "symmetry",
+          "verdict": "pass",
+          "model": "claude-opus-5[1m]",
+          "summary": "Integrity verified before judging: candidate.json hashes to 60fe26b9acbd5e210f642bd3393dfe23a0b9c014c564c541a9dd41b29b31187b as stated, and the candidate embedded in A10.input.json is deep-equal to those bytes."
+        },
+        {
+          "kind": "verdict",
+          "role": "A11",
+          "gate": "fidelity",
+          "verdict": "pass",
+          "model": "claude-opus-5[1m]",
+          "summary": "Integrity: candidate.json raw sha256 is 60fe26b9acbd5e210f642bd3393dfe23a0b9c014c564c541a9dd41b29b31187b as stated, and the candidate embedded in A11.input.json is deep-equal to it (identical canonical digest)."
+        },
+        {
+          "kind": "published",
+          "token": "523731e0b53a"
+        }
+      ]
+    },
+    {
+      "narrative_id": "ppn-panic",
+      "blocked_rounds": 0,
+      "events": [
+        {
+          "kind": "slot",
+          "role": "A5",
+          "label": {
+            "en": "Causal Extractor · mapping the asserted spine",
+            "id": "Causal Extractor · memetakan rangka klaim"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-28T22:58:11Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A6",
+          "label": {
+            "en": "Hidden-Node Hunter · hunting what the story prices at zero",
+            "id": "Hidden-Node Hunter · memburu yang dihargai nol oleh berita"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-29T00:22:11Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A7",
+          "label": {
+            "en": "Evidence Grounder · attaching sources, refusing orphan numbers",
+            "id": "Evidence Grounder · menambatkan sumber, menolak angka tanpa sumber"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:11Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A8",
+          "label": {
+            "en": "Cascade Historian · searching the case library for echoes",
+            "id": "Cascade Historian · mencari gema di pustaka kasus"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:11Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A9",
+          "label": {
+            "en": "Narrator · writing both languages from the locked graph",
+            "id": "Narrator · menulis dua bahasa dari graf terkunci"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:12Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A10",
+          "label": {
+            "en": "Symmetry Auditor · dissecting the mirror framing",
+            "id": "Symmetry Auditor · membedah bingkai cermin"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-29T00:22:36Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A11",
+          "label": {
+            "en": "Fidelity Guard · tracing every sentence to the graph",
+            "id": "Fidelity Guard · menelusuri tiap kalimat ke graf"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:36Z"
+        },
+        {
+          "kind": "verdict",
+          "role": "A10",
+          "gate": "symmetry",
+          "verdict": "pass",
+          "model": "claude-fable-5",
+          "summary": "Integrity: embedded candidate matches staged candidate.json, sha256 c09660f9278dfe1b6d2435e313e55436f4c9d889fabe29ac1e371e96f8b85e63."
+        },
+        {
+          "kind": "verdict",
+          "role": "A11",
+          "gate": "fidelity",
+          "verdict": "pass",
+          "model": "claude-opus-5[1m]",
+          "summary": ""
+        },
+        {
+          "kind": "published",
+          "token": "cdd41f77ea04"
+        }
+      ]
+    },
+    {
+      "narrative_id": "tariffs-pay",
+      "blocked_rounds": 1,
+      "events": [
+        {
+          "kind": "slot",
+          "role": "A5",
+          "label": {
+            "en": "Causal Extractor · mapping the asserted spine",
+            "id": "Causal Extractor · memetakan rangka klaim"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-28T22:58:11Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A6",
+          "label": {
+            "en": "Hidden-Node Hunter · hunting what the story prices at zero",
+            "id": "Hidden-Node Hunter · memburu yang dihargai nol oleh berita"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-29T00:22:12Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A7",
+          "label": {
+            "en": "Evidence Grounder · attaching sources, refusing orphan numbers",
+            "id": "Evidence Grounder · menambatkan sumber, menolak angka tanpa sumber"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:13Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A8",
+          "label": {
+            "en": "Cascade Historian · searching the case library for echoes",
+            "id": "Cascade Historian · mencari gema di pustaka kasus"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:13Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A9",
+          "label": {
+            "en": "Narrator · writing both languages from the locked graph",
+            "id": "Narrator · menulis dua bahasa dari graf terkunci"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T05:25:43Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A10",
+          "label": {
+            "en": "Symmetry Auditor · dissecting the mirror framing",
+            "id": "Symmetry Auditor · membedah bingkai cermin"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T05:32:02Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A11",
+          "label": {
+            "en": "Fidelity Guard · tracing every sentence to the graph",
+            "id": "Fidelity Guard · menelusuri tiap kalimat ke graf"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T05:32:02Z"
+        },
+        {
+          "kind": "block",
+          "role": "A11",
+          "gate": "fidelity",
+          "judged_by": "claude-opus-5[1m]",
+          "reason": "locale id, sentence v-4: characterisation that traces to no element."
+        },
+        {
+          "kind": "verdict",
+          "role": "A10",
+          "gate": "symmetry",
+          "verdict": "pass",
+          "model": "claude-opus-5[1m]",
+          "summary": "Integrity check passed."
+        },
+        {
+          "kind": "verdict",
+          "role": "A11",
+          "gate": "fidelity",
+          "verdict": "pass",
+          "model": "claude-opus-5[1m]",
+          "summary": "Input verified: the candidate embedded in A11.input.json is parse-identical to candidate.json at sha256 862aa887257165eaa2c47416142afcb6881314805cb2a0f29311a6c3e55c60d0."
+        },
+        {
+          "kind": "published",
+          "token": "68affdc305ea"
+        }
+      ]
+    },
+    {
+      "narrative_id": "usaid-deficit",
+      "blocked_rounds": 2,
+      "events": [
+        {
+          "kind": "slot",
+          "role": "A5",
+          "label": {
+            "en": "Causal Extractor · mapping the asserted spine",
+            "id": "Causal Extractor · memetakan rangka klaim"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-28T22:58:12Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A6",
+          "label": {
+            "en": "Hidden-Node Hunter · hunting what the story prices at zero",
+            "id": "Hidden-Node Hunter · memburu yang dihargai nol oleh berita"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-29T00:22:14Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A7",
+          "label": {
+            "en": "Evidence Grounder · attaching sources, refusing orphan numbers",
+            "id": "Evidence Grounder · menambatkan sumber, menolak angka tanpa sumber"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:14Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A8",
+          "label": {
+            "en": "Cascade Historian · searching the case library for echoes",
+            "id": "Cascade Historian · mencari gema di pustaka kasus"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:14Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A9",
+          "label": {
+            "en": "Narrator · writing both languages from the locked graph",
+            "id": "Narrator · menulis dua bahasa dari graf terkunci"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T05:08:59Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A10",
+          "label": {
+            "en": "Symmetry Auditor · dissecting the mirror framing",
+            "id": "Symmetry Auditor · membedah bingkai cermin"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T05:32:02Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A11",
+          "label": {
+            "en": "Fidelity Guard · tracing every sentence to the graph",
+            "id": "Fidelity Guard · menelusuri tiap kalimat ke graf"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T05:32:03Z"
+        },
+        {
+          "kind": "block",
+          "role": "A10",
+          "gate": "symmetry",
+          "judged_by": "claude-opus-5[1m]",
+          "reason": "BLOCK 1 - scale-check narration still describes the discarded denominator, both locales."
+        },
+        {
+          "kind": "block",
+          "role": "A11",
+          "gate": "fidelity",
+          "judged_by": "claude-opus-5[1m]",
+          "reason": "en / v-5: a claim that traces to no element."
+        },
+        {
+          "kind": "verdict",
+          "role": "A10",
+          "gate": "symmetry",
+          "verdict": "pass",
+          "model": "claude-opus-5[1m]",
+          "summary": "Integrity: the candidate embedded in A10.input.json is object-identical to the staged candidate.json, sha256 061048f185bb468d4bff1c0dca095f2f5a74ecec0a4bf1072df50c85ccc06c2e, matching the tasked hash."
+        },
+        {
+          "kind": "verdict",
+          "role": "A11",
+          "gate": "fidelity",
+          "verdict": "pass",
+          "model": "claude-opus-5[1m]",
+          "summary": "Candidate integrity: the candidate embedded in A11.input.json is deep-equal to the staged candidate.json, whose sha256 is 061048f185bb468d4bff1c0dca095f2f5a74ecec0a4bf1072df50c85ccc06c2e, matching the hash given."
+        },
+        {
+          "kind": "published",
+          "token": "7cf4a40f6961"
+        }
+      ]
+    },
+    {
+      "narrative_id": "migrant-crime",
+      "blocked_rounds": 0,
+      "events": [
+        {
+          "kind": "slot",
+          "role": "A5",
+          "label": {
+            "en": "Causal Extractor · mapping the asserted spine",
+            "id": "Causal Extractor · memetakan rangka klaim"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-28T22:58:12Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A6",
+          "label": {
+            "en": "Hidden-Node Hunter · hunting what the story prices at zero",
+            "id": "Hidden-Node Hunter · memburu yang dihargai nol oleh berita"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-29T00:22:15Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A7",
+          "label": {
+            "en": "Evidence Grounder · attaching sources, refusing orphan numbers",
+            "id": "Evidence Grounder · menambatkan sumber, menolak angka tanpa sumber"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:16Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A8",
+          "label": {
+            "en": "Cascade Historian · searching the case library for echoes",
+            "id": "Cascade Historian · mencari gema di pustaka kasus"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:16Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A9",
+          "label": {
+            "en": "Narrator · writing both languages from the locked graph",
+            "id": "Narrator · menulis dua bahasa dari graf terkunci"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:16Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A10",
+          "label": {
+            "en": "Symmetry Auditor · dissecting the mirror framing",
+            "id": "Symmetry Auditor · membedah bingkai cermin"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-29T00:22:38Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A11",
+          "label": {
+            "en": "Fidelity Guard · tracing every sentence to the graph",
+            "id": "Fidelity Guard · menelusuri tiap kalimat ke graf"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:38Z"
+        },
+        {
+          "kind": "verdict",
+          "role": "A10",
+          "gate": "symmetry",
+          "verdict": "pass",
+          "model": "claude-fable-5",
+          "summary": "Integrity: embedded candidate is object-identical to staged candidate.json, sha256 62a7725f59ca8bf4360d1e23809a2f91f38f633f758f8505681dcc7d096a03aa, matching the tasked hash; mirror_brief is null so the mirror was con..."
+        },
+        {
+          "kind": "verdict",
+          "role": "A11",
+          "gate": "fidelity",
+          "verdict": "pass",
+          "model": "claude-opus-5[1m]",
+          "summary": "Integrity: embedded candidate is deep-equal and canonical-hash-equal to candidate.json, which hashes to the declared sha256 62a7725f59ca8bf4360d1e23809a2f91f38f633f758f8505681dcc7d096a03aa."
+        },
+        {
+          "kind": "published",
+          "token": "591735f087db"
+        }
+      ]
+    },
+    {
+      "narrative_id": "usaid-deaths",
+      "blocked_rounds": 0,
+      "events": [
+        {
+          "kind": "slot",
+          "role": "A5",
+          "label": {
+            "en": "Causal Extractor · mapping the asserted spine",
+            "id": "Causal Extractor · memetakan rangka klaim"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-28T22:58:12Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A6",
+          "label": {
+            "en": "Hidden-Node Hunter · hunting what the story prices at zero",
+            "id": "Hidden-Node Hunter · memburu yang dihargai nol oleh berita"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-29T00:22:17Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A7",
+          "label": {
+            "en": "Evidence Grounder · attaching sources, refusing orphan numbers",
+            "id": "Evidence Grounder · menambatkan sumber, menolak angka tanpa sumber"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:17Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A8",
+          "label": {
+            "en": "Cascade Historian · searching the case library for echoes",
+            "id": "Cascade Historian · mencari gema di pustaka kasus"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:18Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A9",
+          "label": {
+            "en": "Narrator · writing both languages from the locked graph",
+            "id": "Narrator · menulis dua bahasa dari graf terkunci"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:18Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A10",
+          "label": {
+            "en": "Symmetry Auditor · dissecting the mirror framing",
+            "id": "Symmetry Auditor · membedah bingkai cermin"
+          },
+          "model": "claude-fable-5",
+          "at": "2026-07-29T00:22:38Z"
+        },
+        {
+          "kind": "slot",
+          "role": "A11",
+          "label": {
+            "en": "Fidelity Guard · tracing every sentence to the graph",
+            "id": "Fidelity Guard · menelusuri tiap kalimat ke graf"
+          },
+          "model": "claude-opus-5[1m]",
+          "at": "2026-07-29T00:22:38Z"
+        },
+        {
+          "kind": "verdict",
+          "role": "A10",
+          "gate": "symmetry",
+          "verdict": "pass",
+          "model": "claude-fable-5",
+          "summary": "Integrity verified: staged candidate.json sha256 1686c6ca4b32b2d0476ec43ecf9c78fbe6e8b69ff85ec6ce0d25c44c4d713c12 matches the expected hash, and the embedded candidate in A10.input.json is structurally identical to th..."
+        },
+        {
+          "kind": "verdict",
+          "role": "A11",
+          "gate": "fidelity",
+          "verdict": "pass",
+          "model": "claude-opus-5[1m]",
+          "summary": "Integrity: candidate.json sha256 = 1686c6ca4b32b2d0476ec43ecf9c78fbe6e8b69ff85ec6ce0d25c44c4d713c12, matching the stated digest; the candidate embedded in A11.input.json is identical to it under canonical serialisation."
+        },
+        {
+          "kind": "published",
+          "token": "a3c276143652"
+        }
+      ]
+    }
+  ]
+}

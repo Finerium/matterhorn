@@ -72,6 +72,255 @@
       "fetched_at": null,
       "status": "fallback",
       "note": "thelancet.com 403s automated clients and exposes no fetchable og image; the styled placeholder ships."
+    },
+    {
+      "narrative_id": "mbg-stop",
+      "image_url_original": "https://asset.tribunnews.com/EfbiAcTwTZZcbTktTCZeTxCfgjE=/1200x675/filters:upscale():quality(30):format(webp):focal(0.5x0.5:0.5x0.5)/tribunnews/foto/bank/originals/Menu-mbg-usai-dadan-opot.jpg",
+      "outlet": "Tribunnews",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://www.tribunnews.com/nasional/7844542/menantang-pemerintah-setop-mbg-permanen-demi-selamatkan-apbn-dan-permudah-ungkap-korupsi",
+      "image_path": "/assets/og/members/mbg-stop-m1.jpg"
+    },
+    {
+      "narrative_id": "mbg-stop",
+      "image_url_original": null,
+      "outlet": "Kompas video",
+      "fetched_at": null,
+      "status": "fallback",
+      "member_url": "https://video.kompas.com/watch/1936616",
+      "image_path": null,
+      "note": "Honest fallback: member URL is reconstructed; not fetched"
+    },
+    {
+      "narrative_id": "mbg-stop",
+      "image_url_original": "https://img.antaranews.com/cache/1200x800/2026/06/05/konferensi-pers-apbn-kita-edisi-juni-2026-050626-dr-01_1.jpg",
+      "outlet": "Antara News",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://www.antaranews.com/berita/5595513/purbaya-sebut-realisasi-anggaran-mbg-capai-rp8815-triliun",
+      "image_path": "/assets/og/members/mbg-stop-m3.jpg"
+    },
+    {
+      "narrative_id": "mbg-cut",
+      "image_url_original": "https://asset.kompas.com/crops/Vp8FbnemEaDfv1j3CUAE_59qRPY=/0x0:5568x3712/1200x675/filters:watermark(data/photo/2026/01/30/697c815e7ef28.png,0,-0,1)/data/photo/2026/04/16/69e010e7e5799.jpg",
+      "outlet": "Kompas.com",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://money.kompas.com/read/2026/06/06/213559526/anggaran-mbg-terserap-rp-8815-triliun-hingga-mei-2026",
+      "image_path": "/assets/og/members/mbg-cut-m1.jpg"
+    },
+    {
+      "narrative_id": "mbg-cut",
+      "image_url_original": "https://cdn1.katadata.co.id/media/chart_thumbnail/228213-realisasi-belanja-mbg-tembus-rp88-triliun-sampai-mei-2026.png?v=1780909052",
+      "outlet": "Databoks (Katadata)",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://databoks.katadata.co.id/ekonomi-makro/statistik/6a2653afd21cc/realisasi-belanja-mbg-tembus-rp88-triliun-sampai-mei-2026",
+      "image_path": "/assets/og/members/mbg-cut-m2.jpg"
+    },
+    {
+      "narrative_id": "mbg-cut",
+      "image_url_original": "https://img.antaranews.com/cache/1200x800/2026/06/05/konferensi-pers-apbn-kita-edisi-juni-2026-050626-dr-01_1.jpg",
+      "outlet": "Antara News",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://www.antaranews.com/berita/5595513/purbaya-sebut-realisasi-anggaran-mbg-capai-rp8815-triliun",
+      "image_path": "/assets/og/members/mbg-cut-m3.jpg"
+    },
+    {
+      "narrative_id": "mbg-poisoning",
+      "image_url_original": "https://akcdn.detik.net.id/visual/2025/09/26/pemkab-sumedang-pastikan-70-siswa-keracunan-mbg-dapat-penanganan-medis-1758870546649_169.png?w=1200",
+      "outlet": "CNN Indonesia",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://www.cnnindonesia.com/nasional/20251001125738-20-1279693/kepala-bgn-korban-keracunan-mbg-capai-6517-orang-sejak-januari-2025",
+      "image_path": "/assets/og/members/mbg-poisoning-m1.jpg"
+    },
+    {
+      "narrative_id": "mbg-poisoning",
+      "image_url_original": "https://images.bloombergtechnoz.com/data/2025/02/image-20250217154937.jpg",
+      "outlet": "Bloomberg Technoz",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://www.bloombergtechnoz.com/detail-news/85713/beda-data-klb-keracunan-mbg-bpom-vs-bgn",
+      "image_path": "/assets/og/members/mbg-poisoning-m2.jpg"
+    },
+    {
+      "narrative_id": "mbg-poisoning",
+      "image_url_original": "https://akcdn.detik.net.id/visual/2025/01/06/pelaksanaan-program-makan-siang-gratis-di-palembang_169.jpeg?w=1200",
+      "outlet": "CNN Indonesia",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://www.cnnindonesia.com/nasional/20250929085833-20-1278711/data-jppi-per-september-8649-anak-keracunan-mbg",
+      "image_path": "/assets/og/members/mbg-poisoning-m3.jpg"
+    },
+    {
+      "narrative_id": "mbg-jobs",
+      "image_url_original": "https://awsimages.detik.net.id/visual/2026/04/21/wapres-gibran-meninjau-pembagian-mbg-di-kabupaten-mimika-papua-tengah-selasa-2142026-1776733327731_169.jpeg?w=650&q=90",
+      "outlet": "CNBC Indonesia",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://www.cnbcindonesia.com/news/20260523162405-4-737426/program-mbg-serap-128-juta-tenaga-kerja-umkm-peternak-kecipratan",
+      "image_path": "/assets/og/members/mbg-jobs-m1.jpg"
+    },
+    {
+      "narrative_id": "mbg-jobs",
+      "image_url_original": "https://asset.kompas.com/crops/obYtoKvABWGBsnjwv8DoyUmEwi4=/0x0:0x0/1200x675/filters:watermark(data/photo/2026/01/30/697c815e7ef28.png,0,-0,1)/data/photo/2026/02/10/698af5d6555aa.jpg",
+      "outlet": "Kompas.com",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://money.kompas.com/read/2026/02/15/181700126/mbg-disebut-serap-987.000-tenaga-kerja-40.000-umkm-ikut-bergerak",
+      "image_path": "/assets/og/members/mbg-jobs-m2.jpg"
+    },
+    {
+      "narrative_id": "mbg-jobs",
+      "image_url_original": "https://asset.kompas.com/crops/Vp8FbnemEaDfv1j3CUAE_59qRPY=/0x0:5568x3712/1200x675/filters:watermark(data/photo/2026/01/30/697c815e7ef28.png,0,-0,1)/data/photo/2026/04/16/69e010e7e5799.jpg",
+      "outlet": "Kompas.com",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://money.kompas.com/read/2026/06/06/213559526/anggaran-mbg-terserap-rp-8815-triliun-hingga-mei-2026",
+      "image_path": "/assets/og/members/mbg-jobs-m3.jpg"
+    },
+    {
+      "narrative_id": "judol-turnover",
+      "image_url_original": "https://cdn.antaranews.com/cache/1200x800/2026/06/26/Konpers-kasus-judi-online-jaringan-internasional-260626-fzn-1.jpg",
+      "outlet": "Antara News",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://www.antaranews.com/berita/5663168",
+      "image_path": "/assets/og/members/judol-turnover-m1.jpg"
+    },
+    {
+      "narrative_id": "judol-turnover",
+      "image_url_original": "https://awsimages.detik.net.id/visual/2025/08/06/kepala-pusat-pelaporan-dan-analisis-transaksi-keuangan-ppatk-ivan-yustiavandana-cnbc-indonesiaarrijal-1754457854999_169.jpeg?w=650&q=90",
+      "outlet": "CNBC Indonesia",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://www.cnbcindonesia.com/news/20260723082823-4-753122/ppatk-perputaran-dana-judi-online-turun-20-tersisa-rp28684-t",
+      "image_path": "/assets/og/members/judol-turnover-m2.jpg"
+    },
+    {
+      "narrative_id": "judol-turnover",
+      "image_url_original": "https://asset.kompas.com/crops/L5xKA9eC_vKOWtQE6HF5fI5wfMk=/0x0:1280x853/1200x675/filters:watermark(data/photo/2026/01/30/697c815a5f0b9.png,0,-0,1)/data/photo/2026/03/03/69a634cd41d23.jpg",
+      "outlet": "Kompas.com",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://nasional.kompas.com/read/2026/07/23/22413221/ppatk-catat-ada-penurunan-perputaran-uang-judol-di-era-prabowo",
+      "image_path": "/assets/og/members/judol-turnover-m3.jpg"
+    },
+    {
+      "narrative_id": "ppn-panic",
+      "image_url_original": "https://images.bisnis.com/posts/2025/01/02/1828262/ilus_ppn_12_1734946415.jpg",
+      "outlet": "Bisnis.com",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://ekonomi.bisnis.com/read/20250102/259/1828262/ppn-12-barang-mewah-berlaku-penuh-mulai-februari-2025-begini-penjelasannya",
+      "image_path": "/assets/og/members/ppn-panic-m1.jpg"
+    },
+    {
+      "narrative_id": "ppn-panic",
+      "image_url_original": "https://img.antaranews.com/cache/1200x800/2025/01/01/1000007554.jpg",
+      "outlet": "Antara News",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://www.antaranews.com/berita/4559522/kemenkeu-rilis-aturan-ppn-12-persen-hanya-untuk-barang-mewah",
+      "image_path": "/assets/og/members/ppn-panic-m2.jpg"
+    },
+    {
+      "narrative_id": "ppn-panic",
+      "image_url_original": "http://www.pajak.go.id/sites/default/files/2025-01/20241231-ppn-1024x683.jpeg",
+      "outlet": "Direktorat Jenderal Pajak",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://www.pajak.go.id/en/node/113453",
+      "image_path": "/assets/og/members/ppn-panic-m3.jpg"
+    },
+    {
+      "narrative_id": "tariffs-pay",
+      "image_url_original": "https://cdn.factcheck.org/UploadedFiles/TrumpTariffThumb.jpg",
+      "outlet": "FactCheck.org",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://www.factcheck.org/2026/01/trumps-tariffs-dont-come-close-to-funding-everything-hes-proposed/",
+      "image_path": "/assets/og/members/tariffs-pay-m1.jpg"
+    },
+    {
+      "narrative_id": "tariffs-pay",
+      "image_url_original": "https://www.crfb.org/sites/default/files/images/crfb-og.jpeg",
+      "outlet": "Committee for a Responsible Federal Budget",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://www.crfb.org/blogs/cbos-new-projections-show-1-trillion-less-tariff-savings",
+      "image_path": "/assets/og/members/tariffs-pay-m2.jpg"
+    },
+    {
+      "narrative_id": "tariffs-pay",
+      "image_url_original": "https://www.crfb.org/sites/default/files/images/crfb-og.jpeg",
+      "outlet": "Committee for a Responsible Federal Budget",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://www.crfb.org/blogs/top-13-fiscal-charts-2025",
+      "image_path": "/assets/og/members/tariffs-pay-m3.jpg"
+    },
+    {
+      "narrative_id": "usaid-deficit",
+      "image_url_original": "https://www.kff.org/wp-content/uploads/sites/7/2025/03/FEATURE-after-hearing-that-the-u-s-spends-about-1-on-foreign-aid-fewer-adults-across-political-parties-say-it-is-too-much.png",
+      "outlet": "KFF",
+      "fetched_at": "2026-08-02",
+      "status": "fetched",
+      "member_url": "https://www.kff.org/global-health-policy/kff-health-tracking-poll-february-2025-the-publics-views-on-global-health-and-usaid/",
+      "image_path": "/assets/og/members/usaid-deficit-m1.jpg"
+    },
+    {
+      "narrative_id": "usaid-deficit",
+      "image_url_original": null,
+      "outlet": "U.S. Department of the Treasury",
+      "fetched_at": null,
+      "status": "fallback",
+      "member_url": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_202509.pdf",
+      "image_path": null,
+      "note": "Honest fallback: no og:image tag"
+    },
+    {
+      "narrative_id": "migrant-crime",
+      "image_url_original": null,
+      "outlet": "Cato Institute",
+      "fetched_at": null,
+      "status": "fallback",
+      "member_url": "https://www.cato.org/policy-analysis/immigrants-cut-victimization-rates-boost-crime-reporting",
+      "image_path": null,
+      "note": "Honest fallback: no og:image tag"
+    },
+    {
+      "narrative_id": "migrant-crime",
+      "image_url_original": null,
+      "outlet": "PNAS",
+      "fetched_at": null,
+      "status": "fallback",
+      "member_url": "https://www.pnas.org/doi/10.1073/pnas.2014704117",
+      "image_path": null,
+      "note": "Honest fallback: no og:image tag"
+    },
+    {
+      "narrative_id": "migrant-crime",
+      "image_url_original": null,
+      "outlet": "FBI",
+      "fetched_at": null,
+      "status": "fallback",
+      "member_url": "https://www.fbi.gov/news/press-releases/fbi-releases-2024-reported-crimes-in-the-nation-statistics",
+      "image_path": null,
+      "note": "Honest fallback: no og:image tag"
+    },
+    {
+      "narrative_id": "usaid-deaths",
+      "image_url_original": null,
+      "outlet": "The Lancet",
+      "fetched_at": null,
+      "status": "fallback",
+      "member_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01186-9/fulltext",
+      "image_path": null,
+      "note": "Honest fallback: no og:image tag"
     }
   ]
 }
