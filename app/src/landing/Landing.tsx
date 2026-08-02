@@ -123,6 +123,25 @@ export default function Landing() {
   useEffect(() => {
     document.getElementById('static-hero')?.remove();
   }, []);
+  // Predecode the demo cards' imagery once the page is idle. Below-fold images are lazy
+  // (AC-LAND-11) and stay lazy: decode() triggers their load without touching the attribute.
+  // Without this, each image decodes and uploads mid-scroll, in the exact window AC-PERF-5
+  // traces, and on a machine without a GPU that is a run of partially presented frames. The
+  // cost is honest and small: the landing's six 480px previews, fetched while nothing else is
+  // happening, for every reader whose scroll then stays smooth.
+  useEffect(() => {
+    // typeof-guarded because lib.dom declares requestIdleCallback unconditionally and Safari
+    // below 18 does not have it.
+    const hasIdle = typeof window.requestIdleCallback === 'function';
+    const run = () => {
+      for (const img of Array.from(document.images)) void img.decode().catch(() => undefined);
+    };
+    const handle = hasIdle ? window.requestIdleCallback(run) : window.setTimeout(run, 1200);
+    return () => {
+      if (hasIdle) window.cancelIdleCallback(handle);
+      else window.clearTimeout(handle);
+    };
+  }, []);
   const values: SlotValues = data ?? PENDING;
   const say = (parts: Line): string => fill(parts, values);
   const shots = grammarShots(product);
