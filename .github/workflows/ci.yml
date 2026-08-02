@@ -147,10 +147,14 @@ jobs:
       - name: pin the browser lighthouse drives
         run: echo "CHROME_PATH=$(node -e "console.log(require('@playwright/test').chromium.executablePath())")" >> "$GITHUB_ENV"
 
+      # Ubuntu 24 runners ship AppArmor rules that block unprivileged user namespaces, so
+      # Chrome's sandbox cannot start under chrome-launcher and the run dies before the first
+      # audit ("No usable sandbox", FATAL zygote_host). --no-sandbox is scoped to CI only and
+      # changes nothing about what is measured or asserted.
       - name: mobile, / and /app (AC-LAND-8, AC-LAND-9, AC-PERF-3)
-        run: pnpm lh
+        run: pnpm lh --collect.settings.chromeFlags="--no-sandbox"
       - name: desktop, / (AC-LAND-9)
-        run: pnpm lh:desktop
+        run: pnpm lh:desktop --collect.settings.chromeFlags="--no-sandbox"
 
       - if: always()
         uses: actions/upload-artifact@v4

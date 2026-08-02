@@ -16,6 +16,8 @@
   --m-glass-fill: rgba(252, 251, 247, 0.62);
   --m-glass-edge-strong: rgba(255, 255, 255, 0.55);
   --m-glass-edge-weak: rgba(255, 255, 255, 0.25);
+  --m-glass-edge-bottom: rgba(26, 26, 24, 0.06);
+  --m-glass-sheen: rgba(255, 255, 255, 0.1);
   --m-glass-drop: 0 12px 32px rgba(26, 26, 24, 0.1);
   --m-r-paper: 16px;
   --m-r-glass: 20px;
@@ -37,6 +39,10 @@
   --m-glass-fill: rgba(28, 28, 26, 0.58);
   --m-glass-edge-strong: rgba(255, 255, 255, 0.09);
   --m-glass-edge-weak: rgba(255, 255, 255, 0.04);
+  /* The bottom edge and the sheen keep their light values: the bottom edge is a shadow line
+     that is already near-invisible over dark glass, and the sheen is white light either way. */
+  --m-glass-edge-bottom: rgba(26, 26, 24, 0.06);
+  --m-glass-sheen: rgba(255, 255, 255, 0.1);
   --m-glass-drop: 0 12px 32px rgba(0, 0, 0, 0.5);
 }
 
@@ -66,7 +72,7 @@
   -webkit-backdrop-filter: blur(18px) saturate(1.15);
   backdrop-filter: blur(18px) saturate(1.15);
   border: 1px solid;
-  border-color: var(--m-glass-edge-strong) var(--m-glass-edge-weak) rgba(26, 26, 24, 0.06)
+  border-color: var(--m-glass-edge-strong) var(--m-glass-edge-weak) var(--m-glass-edge-bottom)
     var(--m-glass-edge-weak);
   border-radius: var(--m-r-glass);
   box-shadow: var(--m-glass-drop);
@@ -85,7 +91,7 @@
   .g-glass::before {
     background: radial-gradient(
       600px circle at calc(var(--px, 0.5) * 100%) calc(var(--py, 0.5) * 100%),
-      rgba(255, 255, 255, 0.1),
+      var(--m-glass-sheen),
       transparent 40%
     );
   }

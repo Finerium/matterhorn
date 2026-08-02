@@ -3,9 +3,9 @@
  *
  *   1. Precache the shell. `self.__WB_MANIFEST` is the built asset list, injected by
  *      vite-plugin-pwa in injectManifest mode. Installing fetches all of it.
- *   2. Content JSON is stale-while-revalidate: the cached artifact answers immediately and the
- *      network refresh lands in the cache for next time. That is the read path the product
- *      promises, cache first with no model behind it.
+ *   2. Content JSON and og imagery are stale-while-revalidate: the cached artifact answers
+ *      immediately and the network refresh lands in the cache for next time. That is the read
+ *      path the product promises, cache first with no model behind it.
  *   3. A navigation that misses both network and cache falls back to `/offline`.
  *
  * ponytail: no workbox. The three strategies above are the whole worker, and hand-writing them
@@ -103,8 +103,8 @@ async function cacheFirst(request: Request): Promise<Response> {
   return (await cache.match(request, MATCH)) ?? (await fetch(request));
 }
 
-/** Rule 2: answer from cache, refresh behind it. */
-async function staleWhileRevalidate(request: Request): Promise<Response> {
+/** Rule 2: answer from cache, refresh behind it. `miss` answers when both cache and network do. */
+async function staleWhileRevalidate(request: Request, miss: () => Response): Promise<Response> {
   const cache = await caches.open(CONTENT);
   const cached = await cache.match(request, MATCH);
   const network = fetch(request)
@@ -116,8 +116,22 @@ async function staleWhileRevalidate(request: Request): Promise<Response> {
   if (cached !== undefined) return cached;
   const fresh = await network;
   if (fresh !== undefined) return fresh;
-  return new Response('{}', { status: 504, headers: { 'content-type': 'application/json' } });
+  return miss();
 }
+
+const contentMiss = (): Response =>
+  new Response('{}', { status: 504, headers: { 'content-type': 'application/json' } });
+
+/**
+ * An og image neither cache holds while offline. A thrown fetch or an error status would log a
+ * console error (AC-APP-22 forbids any), so the miss is an empty 200 SVG: the card's own
+ * placeholder shows through it, which is the recorded-fallback state anyway.
+ */
+const imageMiss = (): Response =>
+  new Response('<svg xmlns="http://www.w3.org/2000/svg"/>', {
+    status: 200,
+    headers: { 'content-type': 'image/svg+xml' },
+  });
 
 /**
  * Can the app actually draw this route from what is already in the caches?
@@ -167,7 +181,13 @@ self.addEventListener('fetch', (event) => {
     return;
   }
   if (url.pathname.startsWith('/content/') && url.pathname.endsWith('.json')) {
-    event.respondWith(staleWhileRevalidate(request));
+    event.respondWith(staleWhileRevalidate(request, contentMiss));
+    return;
+  }
+  // og imagery (narrative cards and member previews) rides the content cache for the same
+  // reason the JSON does: a visited page must reload offline complete.
+  if (url.pathname.startsWith('/assets/og/')) {
+    event.respondWith(staleWhileRevalidate(request, imageMiss));
     return;
   }
   event.respondWith(cacheFirst(request));

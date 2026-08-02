@@ -15,9 +15,10 @@ proves it.
   blueprint 6.11 (`pnpm validate:content`, all green, output quoted in the proposal's asset
   folder as well).
 - All analysis produced at build time by the 13-agent pipeline under `pipeline/`; the read
-  path never touches a model and never holds a key. There is no `.env` in this repository and
-  never was one committed; the two the Vercel CLI dropped during deploys were deleted on the
-  spot.
+  path never touches a model and never holds a key. No `.env` was ever committed (the CI
+  secret scan covers the full git history); the Vercel CLI drops an untracked OIDC token file
+  under `.vercel/` on every deploy, and each one was deleted, the last of them caught by the
+  final acceptance reviewer rather than by me.
 - The research desk replays the RECORDED run (`content/replay.json`, distilled from
   `pipeline/runs/run-2026-07-29/`), publishes to a phone by QR (`/n/{id}?published=1`) and to
   a same-machine app tab by BroadcastChannel `mth-updates`, per `docs/replay-protocol.md`.
@@ -55,15 +56,17 @@ Reproduce with `pnpm lh` and `pnpm lh:desktop`; both assertion suites exit 0. Re
 
 ## Generation log summary
 
-Run `run-2026-07-29` under `pipeline/runs/run-2026-07-29/`: 10 narratives, 90 slot executions
-recorded with inputs and outputs (`slots/{narrative}/A*.json`), gate ledger in `blocked/`.
+Run `run-2026-07-29` under `pipeline/runs/run-2026-07-29/`: 10 narratives, 70 slot executions
+recorded as input and output pairs (`slots/{narrative}/A*.json`), plus 4 stage summaries and
+the gate ledger in `blocked/`.
 
 - Executing models, as recorded per slot and shown verbatim in every provenance sheet:
   `claude-opus-5[1m]` (43 slot outputs) and `claude-fable-5` (27). The model floor of
   AC-PIPE-7 (A5, A6, A10 and final acceptance on Fable 5) held except where flagged below.
 - Gate verdicts: 5 of 10 dissections were blocked at least once before publication, across 7
-  committed block records. Every block names the candidate bytes it judged
-  (`candidate_sha256`); the superseded-block rule is enforced by the validator.
+  committed block records. Six of the seven pin the candidate bytes they judged
+  (`candidate_sha256`); the earliest (`mbg-stop-A11-1`) predates hash pinning and says so in
+  its own note. The superseded-block rule is enforced by the validator.
 - Fresh-demo honesty: exactly one `fresh_demo` entry (`ppn-panic`); the app says compressed
   when it replays, and unknown URLs get the queue state, never a fake analysis.
 - All 44 sources recorded live at snapshot; no URL replacements were needed.
@@ -105,10 +108,12 @@ recorded with inputs and outputs (`slots/{narrative}/A*.json`), gate ledger in `
   exhausted mid-run; `judol-turnover`'s A10 and some reviewer slots executed on
   `claude-opus-5[1m]` instead. Recorded in the run log at the time; provenance sheets show
   the models that actually executed, so the product never overstates.
-- **Reconstructed block records.** `usaid-deficit`'s round-2 A10/A11 blocks were found
-  missing from the ledger after the fact and were backfilled from the judge outputs with
-  `reconstructed: true` and the `candidate_sha256` of the bytes actually judged. The gap and
-  the repair are both visible in the files.
+- **The entire block ledger is an after-the-fact transcription.** All seven block records
+  carry `reconstructed: true`: the run produced its blocks in judge outputs but never wrote
+  the ledger files at the time, and every record says so in its own note. Each was
+  transcribed from the verbatim judge output, six with the `candidate_sha256` of the bytes
+  actually judged; `usaid-deficit`'s round-2 pair was the last gap found and backfilled. The
+  verdict text is the judges' own; what is reconstructed is the filing, not the judgment.
 - **Em-dash normalization at the replay boundary.** One judge wrote prose with an em dash;
   the pipeline record stays verbatim under `pipeline/runs/`, and `build-replay.ts` normalizes
   it for display so the user-facing lexicon rule holds without rewriting history.

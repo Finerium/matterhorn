@@ -70,11 +70,16 @@
 }
 /* The same clause, from the panel's side: this surface's glass carries a stronger fill than the
    token, because it is the one surface that floats over a photograph rather than over paper. */
-.m-rs .g-glass {
-  background: rgba(252, 251, 247, 0.72);
+.m-rs {
+  --m-rs-glass: rgba(252, 251, 247, 0.72);
+  --m-rp-scrim-fill: rgba(26, 26, 24, 0.35);
 }
-.m-rs[data-theme='dark'] .g-glass {
-  background: rgba(28, 28, 26, 0.66);
+.m-rs[data-theme='dark'] {
+  --m-rs-glass: rgba(28, 28, 26, 0.66);
+  --m-rp-scrim-fill: rgba(0, 0, 0, 0.55);
+}
+.m-rs .g-glass {
+  background: var(--m-rs-glass);
 }
 
 .m-rs-main {
@@ -587,9 +592,8 @@
 .m-rp-scrim {
   position: absolute;
   inset: 0;
-  background: rgba(26, 26, 24, 0.35);
+  background: var(--m-rp-scrim-fill);
 }
-[data-theme='dark'] .m-rp-scrim { background: rgba(0, 0, 0, 0.55); }
 .m-rp-pane {
   position: relative;
   display: flex;
