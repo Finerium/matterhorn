@@ -97,3 +97,18 @@ Read all 7 records in full. Findings:
 - Editorial approval and the Android device checklist remain open and are honestly disclosed in the Report; blueprint 10.3 does not block the tag on them.
 
 ### Overall: **DO-NOT-TAG** until the two blocking items are cleared — delete `.vercel/.env.production.local`, and correct the four Report.md claims (env, every-block-sha, reconstruction scope, 90-executions). Both are documentation/hygiene fixes; no product or test defect was found. After those fixes this reviewer would pass v1.0.0.
+
+## 9. Re-verification of blocking items (2026-08-02 ~09:05 WIB, after commit 8e42193)
+
+1. **Secret file: CLEAN.** `find . -name ".env*"` excluding node_modules: zero hits, `.vercel/` included. The 09:00 deploy left `project.json`, `README.txt`, `node/`, `output/` but no fresh token file; grep over `.vercel/output/` for `VERCEL_OIDC_TOKEN` / the JWT prefix: zero hits. No new finding.
+2. **Report.md corrections: all four verified against disk.**
+   - (a) Env sentence now reads "No .env was ever committed... the Vercel CLI drops an untracked OIDC token file under .vercel/ on every deploy, and each one was deleted" — accurate (history clean per earlier `git log --diff-filter=A`, tree clean now).
+   - (b) Ledger claim now "Six of the seven pin the candidate bytes... the earliest (mbg-stop-A11-1) predates hash pinning and says so in its own note" — matches the 7 files on disk exactly.
+   - (c) Deviations now leads with "The entire block ledger is an after-the-fact transcription. All seven block records carry reconstructed: true" — matches disk.
+   - (d) Generation log now "70 slot executions recorded as input and output pairs... plus 4 stage summaries and the gate ledger" — matches disk (70 model outputs with inputs, 4 stage files, 7 block records).
+3. **CI fixes weakened nothing.**
+   - `git show HEAD -- app/src/sw.ts`: og imagery added to the existing stale-while-revalidate lane; the empty 200 SVG answers only when BOTH cache and network miss (offline), so online 404s still surface and the card's recorded-fallback placeholder shows. Content JSON keeps its 504 `{}` miss. No assertion touched.
+   - `pnpm token-audit`: green — "25 token(s), light and dark blocks in step... OK: no light-theme literal paints outside a theme scope, and every token has a dark value (AC-APP-15)."
+   - Last commit touches only `.crown/acceptance-final.md`, `.github/workflows/ci.yml`, `research.css`, `surface.css`, `sw.ts`, `Report.md`. **`lighthouserc.json` and `lighthouserc.desktop.json` are untouched** — the `--no-sandbox` flag lives in ci.yml only; assertions unchanged.
+
+### Final verdict: **TAG.** Both blockers cleared, no new findings, no check weakened.
