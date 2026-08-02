@@ -19,6 +19,11 @@
  * budgets each route's initial JS on its own, so `/app` must not carry the landing's renderer
  * mounts and set pieces, and `/` must not carry seven app screens to show a page nobody has
  * navigated into yet. Everything else here is small and stays in the entry.
+ *
+ * The landing's LCP (AC-LAND-8) cannot afford to wait for this boot: the shell paints a static
+ * copy of the hero (app/index.html #static-hero) that stays in the document as an under-layer
+ * on `/`, so its early paint remains the LCP candidate while the hydrated landing covers it.
+ * Chromium drops a candidate whose node is removed, which is why it is covered, not removed.
  */
 import { Suspense, lazy, useState, type ReactNode } from 'react';
 import { Link, Route, Routes, useParams, useSearchParams } from 'react-router';

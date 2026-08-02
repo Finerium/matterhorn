@@ -15,8 +15,38 @@
     <link rel="icon" href="/icons/icon-192.png" />
     <link rel="apple-touch-icon" href="/icons/icon-192.png" />
     <title>Matterhorn</title>
+    <!-- The static hero's own styles. The landing's LCP is its H1, and a client-rendered H1
+         waits for the whole bundle to execute (measured: 80 percent of LCP is render delay).
+         This paints the same text at the same metrics as .m-l-eyebrow/.m-l-h1 the moment the
+         render-blocking CSS arrives, and then STAYS in the document as an under-layer:
+         Chromium drops an LCP candidate whose node is removed, so the hydrated landing covers
+         it (an opaque page over a z-index:-1 layer) rather than replacing it. Equal paint size
+         means no later candidate, so the early paint remains the LCP. Tokens come from
+         tokens.css (render-blocking, in the head), so both themes resolve before boot. -->
+    <style>
+      #static-hero{position:absolute;top:0;left:0;right:0;min-height:100vh;z-index:-1;pointer-events:none;user-select:none;background:var(--paper,#f2f1ec);color:var(--ink,#1a1a18);font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',sans-serif;padding-top:calc(76px + clamp(44px,6vw,92px))}
+      #static-hero>div{max-width:1180px;margin-inline:auto;padding-inline:clamp(20px,4vw,40px)}
+      #static-hero .sh-e{margin:0 0 18px;font-size:11px;font-weight:600;letter-spacing:.2em;color:var(--sub,#646057)}
+      #static-hero .sh-h{margin:0;font-size:clamp(34px,5.6vw,60px);line-height:1.04;font-weight:700;letter-spacing:-.033em;text-wrap:balance}
+    </style>
   </head>
   <body class="mth">
+    <!-- Outside #root so React never unmounts it, aria-hidden because the hydrated landing
+         repeats this text for real. Paragraphs, not headings: the page's one H1 arrives with
+         hydration. The copy is HERO.eyebrow and HERO.h1 from app/src/landing/copy.ts,
+         verbatim. -->
+    <section id="static-hero" aria-hidden="true">
+      <div>
+        <p class="sh-e">A VERDICT-FREE CAUSAL LITERACY ENGINE</p>
+        <p class="sh-h">Most people see the peak. The Matterhorn shows the journey and its impact.</p>
+      </div>
+    </section>
+    <!-- Two pre-paint jobs, and the production CSP allows exactly these bytes by hash
+         (vercel.json script-src): stamp the remembered dark theme the way main.tsx will
+         (stored 'dark' or nothing; the default is light), and remove the static hero on every
+         route that is not the landing, since the SPA rewrite serves this document for /app,
+         /research and the permalink shells too. -->
+    <script>(function(){try{if(localStorage.getItem('mth:theme')==='dark'){document.body.dataset.mth='dark'}}catch(e){}var h=document.getElementById('static-hero');if(h&&location.pathname!=='/'){h.parentNode.removeChild(h)}})()</script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

@@ -34,7 +34,7 @@ after the final deploy.
 | AC-GRAM (grammar surfaces) | green | `tests/e2e/grammar.config.ts`: 30 passed; parity screenshots in `tests/e2e/__screenshots__/parity/` |
 | AC-APP (app surfaces) | green | `tests/e2e/app.config.ts`: 114 passed, 9 skipped (skips are documented single-browser guards) |
 | AC-PIPE (pipeline) | green with two flags | `tests/pipeline`: 27 passed; flags below under Deviations |
-| AC-LAND (landing) | green | `tests/e2e/landing.config.ts`: 51 passed; LHCI mobile `/` 97/100/96/100 |
+| AC-LAND (landing) | green | `tests/e2e/landing.config.ts`: 51 passed; LHCI mobile `/` 99/100/96/100 |
 | AC-PERF (budgets, motion, caching) | green | `check:bundle` (landing 109.9 KB and `/app` 114.5 KB initial JS, both under budget); motion suite 8 passed, scripted-scroll dropped frames 2.755 percent (floor: under 10); cache split proven live (immutable hashed chunks, revalidating stable-name imagery) |
 | AC-SEC (zero secrets, CSP) | green | no `.env` exists; CSP served live with `default-src 'self'` and no `unsafe-eval` (prod smoke asserts it) |
 | AC-DOC (docs and honesty artifacts) | green, one pending | README, ARCHITECTURE, RUNBOOK, LICENSES, CHANGELOG, `content-review.md` (approval PENDING, below), this Report |
@@ -47,9 +47,9 @@ Lighthouse CI, medians of 3 runs, built bytes, default emulation (no loosening):
 
 | Target | Perf | A11y | Best practices | SEO | LCP | TBT | CLS |
 |---|---|---|---|---|---|---|---|
-| mobile `/` | 97 | 100 | 96 | 100 | 2.3 s | 0 ms | 0 |
+| mobile `/` | 99 | 100 | 96 | 100 | 1.66 s | 0 ms | 0 |
 | mobile `/app` | 96 | 100 | 100 | 100 | 2.6 s | 0 ms | 0 |
-| desktop `/` | 100 | 100 | 100 | 100 | 0.6 s | 0 ms | 0 |
+| desktop `/` | 100 | 100 | 100 | 100 | 0.58 s | 0 ms | 0 |
 
 Reproduce with `pnpm lh` and `pnpm lh:desktop`; both assertion suites exit 0. Reports land in
 `lighthouse-report/` (gitignored by design; the numbers here are the committed evidence).

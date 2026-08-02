@@ -39,6 +39,12 @@ interface CardProps {
    * whole-card tap and the Gate 2 harness both want.
    */
   onTap?: (kind: CardTap, key: string) => void;
+  /**
+   * The og:image loads eagerly at high priority. Only the surface knows whether this card sits
+   * above the fold: the radar's hero does (it is the feed's LCP candidate), the landing's demo
+   * cards do not (AC-LAND-11 requires below-fold imagery to lazy-load). Default lazy.
+   */
+  eager?: boolean;
   /** Meta-row chrome the surface owns: the corrections chip, the via-Dissect chip. */
   meta?: ReactNode;
 }
@@ -87,7 +93,7 @@ export function CountChips({ counts, ctx }: { counts: DerivedCounts; ctx: Render
   );
 }
 
-export default function Card({ narrative, variant, ctx, onTap, meta }: CardProps) {
+export default function Card({ narrative, variant, ctx, onTap, meta, eager = false }: CardProps) {
   // Narrative-scoped orphan refusal: the card draws no Value of its own, and a narrative
   // carrying a reference that does not resolve is not a renderable narrative.
   resolveAll(narrative, ctx);
@@ -145,8 +151,11 @@ export default function Card({ narrative, variant, ctx, onTap, meta }: CardProps
     <img
       className="m-card-ogimg"
       src={`${ASSET_BASE}/assets/og/${narrative.id}.jpg`}
+      srcSet={`${ASSET_BASE}/assets/og/${narrative.id}-480.jpg 480w, ${ASSET_BASE}/assets/og/${narrative.id}.jpg 1200w`}
+      sizes={variant === 'hero' ? '(max-width: 480px) 100vw, 420px' : '72px'}
       alt=""
-      loading="lazy"
+      loading={eager ? 'eager' : 'lazy'}
+      fetchPriority={eager ? 'high' : 'auto'}
       decoding="async"
       onError={(event) => {
         (event.target as HTMLImageElement).style.display = 'none';

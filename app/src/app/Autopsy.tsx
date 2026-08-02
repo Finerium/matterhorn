@@ -328,6 +328,7 @@ export default function Autopsy({ state, nav }: { state: AppState; nav: Nav }) {
           <Card
             narrative={n}
             variant="hero"
+            eager
             ctx={ctx}
             onTap={(kind, key) => {
               if (kind === 'tag') {

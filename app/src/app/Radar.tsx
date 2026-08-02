@@ -202,6 +202,7 @@ export default function Radar({ state, nav }: { state: AppState; nav: Nav }) {
             <Card
               narrative={item.narrative}
               variant={item.slot}
+              eager={item.slot === 'hero'}
               ctx={ctx}
               onTap={(kind) => {
                 if (kind === 'original') nav.patch({ narrative: id, sheet: 'original' });

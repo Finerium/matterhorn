@@ -110,8 +110,10 @@ function main(): void {
       }
     }
   }
+  // A `-480` suffix marks a resized derivative (scripts/resize-og.mjs): same image, same
+  // licence, covered by the original's record.
   const covered = (file: Found): boolean =>
-    documented.has(file.name) || ogIds.has(file.name.replace(/\.[^.]+$/, ''));
+    documented.has(file.name) || ogIds.has(file.name.replace(/\.[^.]+$/, '').replace(/-480$/, ''));
 
   const files = ASSET_ROOTS.flatMap((root) => walk(root)).sort((a, b) => a.rel.localeCompare(b.rel));
   const dirs = [...new Set(files.map((f) => f.dir))].sort((a, b) => a.localeCompare(b));

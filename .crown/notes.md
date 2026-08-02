@@ -384,3 +384,13 @@ Counts: 1 blocking, 6 major, 7 minor, 11 observation.
   drops an OIDC token file under .vercel/ on every deploy; it was deleted again after the
   final redeploy, and the Report sentence now describes the recurrence instead of denying it.
 - Production redeployed with the offline fix; smoke 10 of 10 against the live origin.
+- Round two of CI reds, both real product debts my card-imagery change exposed rather than
+  test noise: the landing's demo cards ship the same og:images and needed srcset (fixed with
+  built 480px variants), and the landing LCP sat 60ms over the CI budget because a
+  client-rendered H1 pays the whole boot before it paints. Two failed attempts are recorded
+  here on purpose: eager-importing Landing blew the 300KB single-asset budget, and a
+  modulepreload of the lazy chunk bought 27ms while costing FCP 225ms in fetch contention.
+  What worked is a static copy of the hero in the shell kept as a permanent under-layer,
+  because Chromium discards the LCP candidacy of a removed node: LCP 2303ms to 1663ms.
+  The 25 visual baselines were updated only after eyeballing the diffs: the only change is
+  the intended imagery, light and dark.
