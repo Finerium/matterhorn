@@ -83,6 +83,11 @@ export interface AppState {
   flagReason: number | null;
   /** Narrative ids this device has flagged. Drives the local under-review chip (ADR-12). */
   flags: string[];
+  /**
+   * docs/replay-protocol.md: narrative id to the ISO timestamp the desk republished it at.
+   * Drives the just-updated badge wherever that narrative appears, until its autopsy is opened.
+   */
+  updated: Record<string, string>;
   /** True when this session was entered through /n/{id} rather than through the shell. */
   permalink: boolean;
   /**
@@ -147,6 +152,8 @@ export const LS = {
   notifcfg: 'mth:notifcfg',
   /** `1` once the fresh-dissect demo has published its narrative into the shared cache. */
   via: 'mth:via',
+  /** docs/replay-protocol.md: `{ [narrative_id]: "<ISO timestamp>" }`, the just-updated map. */
+  updated: 'mth:updated',
   /** Narrative ids this device has resolved, most recent first. */
   recents: 'mth:recents',
   /** `1` once the install hint has been dismissed. */
@@ -184,6 +191,48 @@ function readList(key: string, fallback: string[]): string[] {
   } catch {
     return fallback;
   }
+}
+
+// --- the update map, docs/replay-protocol.md --------------------------------------------
+
+/** The persisted map, or an empty one. Same tolerance as `readList`: unreadable is not fatal. */
+export function readUpdated(): Record<string, string> {
+  try {
+    const stored: unknown = JSON.parse(readStore(LS.updated) ?? 'null');
+    if (typeof stored !== 'object' || stored === null || Array.isArray(stored)) return {};
+    return Object.fromEntries(
+      Object.entries(stored).filter((entry): entry is [string, string] => typeof entry[1] === 'string'),
+    );
+  } catch {
+    return {};
+  }
+}
+
+const without = (map: Record<string, string>, id: string): Record<string, string> =>
+  Object.fromEntries(Object.entries(map).filter(([key]) => key !== id));
+
+/** A publish arrived for `id`. Read, write, return: the caller patches state from the result. */
+export function markUpdated(id: string, at: string): Record<string, string> {
+  const next = { ...readUpdated(), [id]: at };
+  writeStore(LS.updated, JSON.stringify(next));
+  return next;
+}
+
+/** The reader opened that autopsy, which is what consumes the badge. */
+export function clearUpdated(id: string): void {
+  writeStore(LS.updated, JSON.stringify(without(readUpdated(), id)));
+}
+
+/**
+ * The feed join: the `via_dissect` item stops being filtered out and stays that way.
+ *
+ * One mechanism, two doors (docs/replay-protocol.md): the fresh-dissect demo lands here when its
+ * progress screen finishes, and a publish event for that narrative lands here too. The flag and
+ * the patch travel together, so neither door can flip one and forget the other.
+ */
+export function joinFeed(): Partial<AppState> {
+  writeStore(LS.via, '1');
+  return { viaDissect: true };
 }
 
 /**
@@ -266,6 +315,7 @@ export function initialState(): AppState {
     hlStatus: null,
     flagReason: null,
     flags: readList(LS.flags, []),
+    updated: readUpdated(),
     permalink: false,
     focus: null,
 

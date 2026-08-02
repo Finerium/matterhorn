@@ -137,4 +137,29 @@ test.describe('the frame is chrome and nothing else', () => {
     // Scrolled to the end the caption is on screen: the frame strands nothing below it.
     await expect(page.locator('.m-caption a[href="/research"]')).toBeInViewport();
   });
+
+  /**
+   * docs/design-direction.md's inertness rule, on the one surface that can break it silently.
+   * This config runs with `reducedMotion: 'reduce'`, so a reader who asked for no motion is
+   * exactly what is under the cursor here: Frame.tsx must attach no listener and write no
+   * variables, and the parallax rules in wide.css must stay behind their media guard. A stage
+   * that drifts under this pointer is the rest state failing to look finished.
+   */
+  test('moves nothing under a reduced-motion pointer: the stage parallax stays inert', async ({ page }) => {
+    await openFramedApp(page);
+    await page.mouse.move(200, 200);
+    await page.mouse.move(1100, 700);
+
+    const at = await page.evaluate(() => {
+      const stage = document.querySelector<HTMLElement>('.m-stage');
+      const frame = document.querySelector<HTMLElement>('.m-frame');
+      if (stage === null || frame === null) return null;
+      return {
+        written: stage.style.getPropertyValue('--fx'),
+        transform: getComputedStyle(frame).transform,
+      };
+    });
+    expect(at?.written, 'no cursor variable is written for a reduced-motion reader').toBe('');
+    expect(at?.transform, 'the frame sits still').toBe('none');
+  });
 });

@@ -12,8 +12,9 @@
  * the matrix can address them; each surface implementer replaces one body.
  */
 import { useCallback, useEffect, useState, type ReactNode } from 'react';
-import { LangContext, useT, type Key } from '../i18n';
-import { PACKS, prefetchRadar } from '../content';
+import type { Feed } from '../../../contracts/types';
+import { LangContext, translate, useT, type Key } from '../i18n';
+import { PACKS, PATHS, loadJson, prefetchRadar } from '../content';
 import { trapRef } from '../trap';
 import Archive from './Archive';
 import Autopsy from './Autopsy';
@@ -22,9 +23,13 @@ import { AuthScreen, Hello, LangScreen, NotifScreen, RegionsScreen, type Nav } f
 import Radar from './Radar';
 import Settings, { MethodologyScreen, NotifSettings } from './Settings';
 import {
+  clearUpdated,
   gotoPatch,
   initialState,
+  joinFeed,
   LS,
+  markUpdated,
+  readUpdated,
   screenName,
   writeStore,
   type AppState,
@@ -82,6 +87,30 @@ const STANDALONE: Partial<Record<Screen, Key>> = {
   'lock-preview': 'screen.lock-preview',
 };
 
+/** docs/replay-protocol.md. The desk posts `{type:'published', narrative_id, at}` on this. */
+const CHANNEL = 'mth-updates';
+
+/**
+ * Whether a publish for `id` also opens the feed, read from the feeds rather than named here.
+ * `via_dissect` is a property of the feed item, so a narrative id written into app source would
+ * be a content string that stops being true the next time the pipeline publishes.
+ *
+ * It loads rather than peeks. The QR door lands on `/n/{id}?published=1` and receives during
+ * mount, before the boot prefetch below has resolved anything, and a peek there answers "no join"
+ * for the one narrative the protocol says must join. `loadJson` is the cache the prefetch fills,
+ * so a shell that has been open a while answers without a second fetch.
+ */
+const joinsFeed = async (id: string): Promise<boolean> => {
+  const feeds = await Promise.all(PACKS.map((pack) => loadJson<Feed>(PATHS.feed(pack))));
+  return feeds.some((feed) => feed.items.some((item) => item.narrative_id === id && item.via_dissect === true));
+};
+
+/** Two update maps with the same ids in them. Used to bail out of a pointless re-render. */
+const sameIds = (a: Record<string, string>, b: Record<string, string>): boolean => {
+  const keys = Object.keys(a);
+  return keys.length === Object.keys(b).length && keys.every((key) => b[key] !== undefined);
+};
+
 /**
  * `start` is the state a route hands the shell before first paint. `/n/{id}` uses it to open on
  * the autopsy for that narrative, which is how AC-APP-18 hydrates a permalink into the real
@@ -89,13 +118,86 @@ const STANDALONE: Partial<Record<Screen, Key>> = {
  *
  * `banner` is chrome a route pins over the shell. `/share` uses it to state the resolution it
  * took on the way in, so the decision is visible on top of the screen that decision produced.
+ *
+ * `published` is docs/replay-protocol.md's second door: `/n/{id}?published=1` is a broadcast that
+ * arrived by camera instead of by channel, and the shell treats it as exactly that.
  */
-export default function App({ start, banner }: { start?: Partial<AppState>; banner?: ReactNode }) {
+export default function App({
+  start,
+  banner,
+  published,
+}: {
+  start?: Partial<AppState>;
+  banner?: ReactNode;
+  published?: string;
+}) {
   const [state, setState] = useState<AppState>(() => ({ ...initialState(), ...start }));
 
   const patch = useCallback((next: Partial<AppState>) => {
     setState((current) => ({ ...current, ...next }));
   }, []);
+
+  /**
+   * A publish arrived, from either door: badge, toast, persist, and for the `via_dissect`
+   * narrative the feed join, through the same `joinFeed` the fresh-dissect demo lands on.
+   *
+   * The join lands as its own patch because it has to read the feed first. Every storage write
+   * happens here rather than inside an updater, which StrictMode invokes twice.
+   */
+  const receive = useCallback((id: string) => {
+    const updated = markUpdated(id, new Date().toISOString());
+    setState((current) => ({ ...current, updated, toast: translate(current.lang, 'toast.updated') }));
+    void joinsFeed(id).then(
+      (joins) => {
+        if (!joins) return;
+        const join = joinFeed();
+        setState((current) => ({ ...current, ...join }));
+      },
+      () => {
+        /* a feed that cannot be read is a badge without a join, not a publish that failed */
+      },
+    );
+  }, []);
+
+  // The same-machine channel. A browser without BroadcastChannel loses nothing it had: the QR is
+  // the cross-device door and does not go through here.
+  useEffect(() => {
+    if (typeof BroadcastChannel === 'undefined') return;
+    const channel = new BroadcastChannel(CHANNEL);
+    channel.onmessage = (event: MessageEvent<unknown>) => {
+      const message = event.data as { type?: unknown; narrative_id?: unknown } | null;
+      if (message === null || typeof message !== 'object') return;
+      if (message.type !== 'published' || typeof message.narrative_id !== 'string') return;
+      receive(message.narrative_id);
+    };
+    return () => {
+      channel.close();
+    };
+  }, [receive]);
+
+  useEffect(() => {
+    if (published !== undefined) receive(published);
+  }, [published, receive]);
+
+  /**
+   * Opening that autopsy is what consumes the badge. The store forgets the id on the way in, so
+   * a reload cannot bring the notice back; the state keeps it until the reader leaves the
+   * screen, because a notice that clears itself before it can be read is not a notice.
+   *
+   * The map IS a dependency, because a publish can arrive for the narrative already on screen:
+   * the QR door opens `/n/{id}?published=1` straight onto that autopsy, and the same-machine
+   * channel can land while the reader is sitting on it. Neither has a screen change to ride, and
+   * without this the id survives a read and badges its own feed card afterwards. The clear
+   * touches storage only, so the notice stays visible until the reader leaves.
+   */
+  useEffect(() => {
+    if (state.screen === 'autopsy' && state.updated[state.narrative] !== undefined) {
+      clearUpdated(state.narrative);
+      return;
+    }
+    const stored = readUpdated();
+    setState((current) => (sameIds(current.updated, stored) ? current : { ...current, updated: stored }));
+  }, [state.screen, state.narrative, state.updated]);
 
   // Preferences and the theme attribute, written wherever they land from.
   useEffect(() => {

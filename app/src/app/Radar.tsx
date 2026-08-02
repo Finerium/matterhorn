@@ -220,6 +220,13 @@ export default function Radar({ state, nav }: { state: AppState; nav: Nav }) {
                       {t('radar.viadissect')}
                     </span>
                   ) : null}
+                  {/* docs/replay-protocol.md: the desk republished this one, and the badge stays
+                      on the card until the reader opens its autopsy. */}
+                  {state.updated[id] === undefined ? null : (
+                    <span className="m-updated" data-testid="updated-badge">
+                      {t('badge.updated')}
+                    </span>
+                  )}
                 </>
               }
             />

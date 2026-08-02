@@ -9,6 +9,13 @@
    One exception, permitted by blueprint 4.1.2 and used nowhere else: the glacial gradient behind
    the hero. It is cool, non-semantic, and declared once as `--glacial`.
 
+   The surface system (soft paper, hard glass) is docs/design-direction.md by way of surface.css:
+   the markup opts set pieces and cards into `.g-paper` / `.g-glass` / `.g-tilt` / `.g-magnet`,
+   and this file only consumes the `--m-*` variables where a surface is not one of those classes
+   (the nav bar, the count pill). The sheen, tilt and magnet behaviour live in surface.css inside
+   the direction's `no-preference and (hover) and (pointer: fine)` guard, driven by the twenty
+   lines in cursor.ts, so none of it exists for a reduced-motion or coarse-pointer reader.
+
    Every rule up to the breakpoints is a RESTING STATE, and the resting state is the final frame.
    The choreography at the bottom animates transform and opacity over it, from inside
    `prefers-reduced-motion: no-preference`, so removing that section leaves the finished page
@@ -55,10 +62,32 @@
   position: sticky;
   top: 0;
   z-index: 40;
-  background: var(--frost);
-  backdrop-filter: blur(24px) saturate(1.8);
-  -webkit-backdrop-filter: blur(24px) saturate(1.8);
-  border-bottom: 0.5px solid var(--hairA);
+}
+/* The nav's glass, on its own layer so scroll can pour it in with opacity alone (blueprint 4.4
+   animates transform and opacity only; the blur itself never animates). At rest the layer is ON,
+   which is the finished state reduced-motion readers and engines without scroll timelines keep;
+   inside the guard below, the first 160px of scroll are what the glass arrives over. */
+.m-l-nav::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--m-glass-fill);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+  backdrop-filter: blur(18px) saturate(1.15);
+  border-bottom: 1px solid var(--m-glass-edge-weak);
+  box-shadow: var(--m-glass-drop);
+}
+@media (prefers-reduced-motion: no-preference) {
+  /* ponytail: scroll() only; Firefox is on the GSAP choreography path and keeps the rest state
+     (glass from the first frame), which is the same finished bar reduce gets. */
+  @supports (animation-timeline: scroll()) {
+    .m-l-nav::before {
+      animation: mth-nav-glass 1s linear both;
+      animation-timeline: scroll();
+      animation-range: 0 160px;
+    }
+  }
 }
 .m-l-nav-in {
   display: flex;
@@ -166,8 +195,10 @@
   font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.01em;
+  /* The paper relief under the pills: the ink pill is the most extruded thing on the page. */
+  box-shadow: var(--m-relief-raised);
 }
-.m-l-cta-soft { background: var(--fill); color: var(--ink); }
+.m-l-cta-soft { background: var(--fill); color: var(--ink); box-shadow: var(--m-relief-rest); }
 .m-l-cta-sm { height: 44px; padding: 0 18px; font-size: 14px; flex: none; }
 .m-l-cta:focus-visible,
 .m-l-nav-link:focus-visible,
@@ -200,7 +231,9 @@
   pointer-events: none;
 }
 .m-l-hero-in { display: grid; gap: clamp(36px, 5vw, 56px); }
-.m-l-piece { display: flex; flex-direction: column; gap: 12px; }
+/* The hero's set piece on a raised paper panel (.g-paper-raised in the markup): the chip, the
+   cropped map, the callouts and the count pill share one extruded frame. */
+.m-l-piece { display: flex; flex-direction: column; gap: 12px; padding: clamp(16px, 2.2vw, 26px); }
 .m-l-chip {
   align-self: flex-start;
   max-width: 100%;
@@ -245,6 +278,8 @@
   background: var(--fill);
   border-radius: 999px;
   padding: 8px 14px;
+  /* A pressed well in the paper: the counts sit IN the panel, the way a readout does. */
+  box-shadow: var(--m-relief-pressed);
 }
 
 /* --- the divider pull-quote ------------------------------------------------------------- */
@@ -262,7 +297,9 @@
 /* --- 4.4.3 the problem ------------------------------------------------------------------ */
 
 .m-l-beats { display: grid; gap: 26px; margin-top: 44px; }
-.m-l-beats-fig { display: flex; justify-content: flex-start; }
+/* A paper panel (.g-paper in the markup) so the diagram reads as one extruded object while it
+   pins; the spine SVG keeps its own 240px measure inside the padding. */
+.m-l-beats-fig { display: flex; justify-content: center; padding: clamp(16px, 2vw, 24px); }
 .m-l-spine { width: 100%; max-width: 240px; height: auto; }
 .m-l-sp-head { fill: var(--ink); }
 .m-l-sp-node { fill: var(--fill); }
@@ -301,26 +338,26 @@
 .m-l-cas-dot { fill: var(--sub); }
 
 .m-l-cases { display: grid; gap: 14px; }
+/* The li is the reveal target and nothing else: its scroll-driven animation holds `transform:
+   none` at fill, which would pin the tilt flat if the two shared an element. The glass card is
+   the child (.m-l-case-in, .g-glass .g-tilt in the markup). display: grid stretches the card to
+   the row, so the three tilt panels stand equal height at 768 and up. */
 .m-l-case {
-  background: var(--surface);
-  border-radius: 20px;
-  box-shadow: var(--shadow);
-  padding: 18px 20px;
+  display: grid;
   font-size: 14px;
   line-height: 1.62;
   color: var(--body);
   text-wrap: pretty;
 }
+.m-l-case-in { padding: 18px 20px; }
 
 /* --- 4.4.5 the fleet -------------------------------------------------------------------- */
 
 .m-l-fleet { display: grid; gap: 24px; margin-top: 44px; }
+/* A console pane floats over the page, so it is glass (.g-glass in the markup) and the class
+   carries its surface; only the layout is said here. */
 .m-l-console {
-  background: var(--surface);
-  border: 1px solid var(--hair2);
-  border-radius: 20px;
   padding: 14px 16px;
-  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
 }
@@ -340,9 +377,10 @@
 .m-l-cline-text { font-size: 13px; line-height: 1.5; color: var(--body); font-variant-numeric: tabular-nums; text-wrap: pretty; }
 
 .m-l-receipts { display: grid; gap: 14px; }
+/* Receipts are evidence, and evidence floats: glass cards (.g-glass in the markup) rather than
+   the hairline strips they grew up as. */
 .m-l-receipt {
-  border-top: 1px solid var(--hair2);
-  padding-top: 16px;
+  padding: 16px 18px;
   font-size: 14.5px;
   line-height: 1.6;
   color: var(--body);
@@ -358,10 +396,9 @@
   margin-top: 44px;
   --shot: 0.33;
 }
+/* Glass (.g-glass in the markup): the grammar is the product's evidence layer shown floating,
+   and the cursor sheen surface.css puts on glass is what these eight catch. */
 .m-l-gcard {
-  background: var(--surface);
-  border-radius: 20px;
-  box-shadow: var(--shadow);
   padding: 10px 10px 14px;
   min-width: 0;
 }
@@ -405,13 +442,12 @@
   -webkit-mask-image: linear-gradient(#000 68%, transparent);
 }
 .m-l-board { display: flex; gap: 12px; }
+/* Paper frames (.g-paper in the markup): the storyboard is a diagram of the page, not something
+   hovering over it. */
 .m-l-board-frame {
   flex: 1 1 0;
   min-width: 0;
   height: 200px;
-  border-radius: 20px;
-  border: 1px solid var(--hair2);
-  background: var(--surface);
   padding: 14px;
   display: flex;
   flex-direction: column;
@@ -449,10 +485,9 @@
 /* --- 4.4.8 integrity -------------------------------------------------------------------- */
 
 .m-l-icards { display: grid; gap: 14px; margin-top: 40px; }
+/* Integrity is a property of the page, not something floating over it: soft-extruded paper
+   (.g-paper in the markup), which carries the surface. */
 .m-l-icard {
-  background: var(--surface);
-  border-radius: 20px;
-  box-shadow: var(--shadow);
   padding: 18px 20px;
   font-size: 14px;
   line-height: 1.62;
@@ -521,13 +556,11 @@
   mask-image: linear-gradient(#000 84%, transparent);
   -webkit-mask-image: linear-gradient(#000 84%, transparent);
 }
+/* Raised paper (.g-paper-raised in the markup); the radius is the class's 16px, and overflow
+   stays here so the chrome bar keeps the corners. */
 .m-l-window {
   width: 100%;
-  border-radius: 16px;
   overflow: hidden;
-  border: 1px solid var(--hair2);
-  background: var(--surface);
-  box-shadow: var(--shadow);
 }
 .m-l-window-bar {
   display: flex;
@@ -613,7 +646,9 @@
 
 @media (min-width: 900px) {
   .m-l-hero-in { grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr); align-items: center; }
-  .m-l-beats { grid-template-columns: 240px minmax(0, 1fr); gap: 56px; align-items: start; }
+  /* 288 = the spine's 240 measure plus the paper panel's padding, so the figure column carries
+     the frame without shrinking the diagram. */
+  .m-l-beats { grid-template-columns: 288px minmax(0, 1fr); gap: 56px; align-items: start; }
   /* The pin the four-beat sequence advances in. Static, it is simply the figure staying put. */
   .m-l-beats-fig { position: sticky; top: 96px; }
   .m-l-fleet { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 44px; align-items: start; }
@@ -833,6 +868,10 @@
 }
 
 /* Scroll-linked, so these are progress rather than time: 0 is before, 1 is arrived. */
+@keyframes mth-nav-glass {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 @keyframes mth-reveal {
   from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: none; }

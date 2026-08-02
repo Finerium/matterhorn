@@ -47,7 +47,11 @@
 @media (min-width: 768px) {
   /* The stage scrolls, not the document. The frame is 874px tall and a laptop viewport is often
      shorter, and `margin: auto` on a flex child centres what fits while leaving what does not
-     reachable in both directions, which `align-items: center` does not. */
+     reachable in both directions, which `align-items: center` does not.
+
+     docs/design-direction.md: the stage is the product's warm paper as a material, so its
+     background and ink are the surface system's own tokens (Frame.tsx mirrors the theme onto
+     `data-theme` here, which is what switches them). Nothing sheens on paper. */
   .m-stage {
     display: flex;
     flex-direction: column;
@@ -55,8 +59,8 @@
     inset: 0;
     overflow: auto;
     padding: 28px 16px;
-    background: var(--paper);
-    color: var(--ink);
+    background: var(--m-paper);
+    color: var(--m-ink);
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
   }
   .m-stage-in {
@@ -65,8 +69,34 @@
     align-items: center;
     gap: 16px;
     margin: auto;
+    position: relative;
   }
 
+  /* The soft depth the direction puts behind the phone: the neumorphic light pair, on the
+     phone's own geometry, so the paper reads as extruded around the device rather than as a
+     flat backdrop behind it. It carries the frame's radius rather than a paper radius because
+     it is the phone's own shadow, not a paper panel with the phone on top of it.
+
+     A pseudo-element, like the island and the home indicator: nothing to focus, nothing to read
+     out, nothing to hit, and `pointer-events: none` so the frame's tap tests are untouched. */
+  .m-stage-in::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 402px;
+    height: 874px;
+    margin-left: -201px;
+    border-radius: 48px;
+    background: var(--m-paper);
+    box-shadow: var(--m-relief-raised), 0 40px 80px rgba(0, 0, 0, 0.18);
+    pointer-events: none;
+  }
+
+  /* The zip's shadow pair, split by the direction rather than changed: the 1px ring is the
+     device's own edge and stays glued to it, the 0 40px 80px drop moves to the depth layer
+     above, which is the layer that counters the parallax. Same geometry, so the picture at rest
+     is the one the wide gate verified. */
   .m-frame {
     display: block;
     position: relative;
@@ -76,7 +106,7 @@
     border-radius: 48px;
     overflow: hidden;
     background: var(--paper);
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
   }
   /* The one thing the frame changes about the app: it stops being the viewport. */
   .m-frame .m-app { position: absolute; }
@@ -113,12 +143,16 @@
   }
   [data-mth='dark'] .m-frame::after { background: rgba(255, 255, 255, 0.7); }
 
+  /* Glass, per the direction: it floats over the paper, so it takes the fill, the blur, the edge
+     and the drop from `.g-glass` in surface.css and adds only its own box. The padding is here
+     because a glass panel needs one; the radius is the glass radius, and nothing mixes it. */
   .m-caption {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 7px;
     max-width: 402px;
+    padding: 14px 20px;
     text-align: center;
   }
   .m-caption-text { font-size: 12.5px; line-height: 1.55; color: var(--sub); text-wrap: pretty; }
@@ -131,6 +165,22 @@
   .m-caption-note { font-size: 12.5px; }
   .m-caption-sum { font-weight: 600; color: var(--ink); cursor: pointer; }
   .m-caption-note .m-caption-text { display: block; margin-top: 6px; }
+
+  /* The stage parallax, inside the direction's media guard, which is the whole of its inertness:
+     a touch or reduced-motion reader never reaches these rules and Frame.tsx never writes the
+     variables they read. The frame moves against the cursor by at most 6px; the depth behind it
+     counters at 30 percent, which is what makes the phone read as lifted off the paper rather
+     than painted on it. Nothing inside the frame moves: `.m-app` is not transformed. */
+  @media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+    .m-frame {
+      transform: translate3d(var(--fx, 0px), var(--fy, 0px), 0);
+      transition: transform var(--m-t-standard) var(--m-ease);
+    }
+    .m-stage-in::before {
+      transform: translate3d(calc(var(--fx, 0px) * -0.3), calc(var(--fy, 0px) * -0.3), 0);
+      transition: transform var(--m-t-standard) var(--m-ease);
+    }
+  }
 }
 
 /* --- surface 19: the autopsy beside its narration ---------------------------------------- */

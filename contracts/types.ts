@@ -333,5 +333,38 @@ export interface OgAttribution {
     fetched_at: string | null;
     status: 'fetched' | 'fallback';
     note?: string;
+    /** Additive optional (member link previews): the staged asset path, null on a fallback. */
+    image_path?: string | null;
+    /** Additive optional: the family-member article this preview belongs to. */
+    member_url?: string;
   }>;
+}
+
+// --- fleet replay: content/replay.json ---
+// Distilled from the committed run log by scripts/build-replay.ts; the schema mirror is
+// contracts/schemas/replay.schema.json. Additive to the Section 6 set, read only by the
+// research desk's replay console. No durations are carried, and the disclosure strings are
+// the label the console must keep visible for the whole replay.
+
+export type ReplayEvent =
+  | { kind: 'slot'; role: string; label: { en: string; id: string }; model: string; at: string }
+  | { kind: 'block'; role: string; gate: 'symmetry' | 'fidelity'; judged_by: string; reason: string }
+  | { kind: 'verdict'; role: string; gate: 'symmetry' | 'fidelity'; verdict: 'pass' | 'block'; model: string; summary: string }
+  | { kind: 'published'; token: string };
+
+export interface ReplayRun {
+  narrative_id: string;
+  blocked_rounds: number;
+  events: ReplayEvent[];
+}
+
+export interface Replay {
+  run_id: string;
+  generated_at: string;
+  disclosure: { en: string; id: string };
+  models: string[];
+  narratives_total: number;
+  narratives_blocked: number;
+  blocks_total: number;
+  narratives: ReplayRun[];
 }

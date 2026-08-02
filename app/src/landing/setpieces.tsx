@@ -128,7 +128,7 @@ function Mount({ className, testId, children }: { className: string; testId?: st
 export function HeroPiece({ product, counts }: { product: Product | null; counts: string }) {
   const panel = product === null ? undefined : panelOf<ClaimMapPanel>(product.hero, 'claim_map');
   return (
-    <figure className="m-l-piece">
+    <figure className="m-l-piece g-paper-raised">
       <figcaption className="m-l-chip">{headlineChip}</figcaption>
       <Mount className="m-l-mount-hero" testId="hero-claim-map">
         {panel === undefined || product === null ? null : <ClaimMap panel={panel} ctx={product.ctx} />}
@@ -314,13 +314,13 @@ export function FeedStack({ product }: { product: Product | null }) {
 export function ShareBoard({ wordmark }: { wordmark: string }) {
   return (
     <div className="m-l-board" data-testid="two-modes-panel">
-      <div className="m-l-board-frame" aria-hidden="true">
+      <div className="m-l-board-frame g-paper" aria-hidden="true">
         <div className="m-l-bubble">
           <span className="m-l-bubble-line" />
           <span className="m-l-bubble-link" />
         </div>
       </div>
-      <div className="m-l-board-frame" aria-hidden="true">
+      <div className="m-l-board-frame g-paper" aria-hidden="true">
         <div className="m-l-sheet">
           <span className="m-l-sheet-grab" />
           <div className="m-l-sheet-row m-l-sheet-row-on">
@@ -374,7 +374,7 @@ export function PhoneFeed({ product }: { product: Product | null }) {
 /** The desktop surface, framed. Chrome only: no address text, because there is none to quote. */
 export function DeskWindow({ product }: { product: Product | null }) {
   return (
-    <div className="m-l-window">
+    <div className="m-l-window g-paper-raised">
       <div className="m-l-window-bar" aria-hidden="true">
         <span className="m-l-window-dot" />
         <span className="m-l-window-dot" />

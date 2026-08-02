@@ -66,7 +66,14 @@ function Status({ loading, error }: { loading: boolean; error: string | null }) 
  */
 function Permalink() {
   const { id = '' } = useParams();
-  return <App start={{ screen: 'autopsy', narrative: id, spar: 'gate', permalink: true }} />;
+  const [params] = useSearchParams();
+  // docs/replay-protocol.md: a static host cannot push across devices, so the QR the desk renders
+  // IS the second channel. `?published=1` is a broadcast that arrived by camera, and the shell
+  // runs it through the same receiver the same-machine channel lands on.
+  const published = params.get('published') === '1' ? id : undefined;
+  return (
+    <App start={{ screen: 'autopsy', narrative: id, spar: 'gate', permalink: true }} published={published} />
+  );
 }
 
 function MethodologyPage() {

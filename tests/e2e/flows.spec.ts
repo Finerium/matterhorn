@@ -4,6 +4,7 @@
  *         10 narration binding, 11 evidence sheets everywhere, 12 Nuance Card export,
  *         13 share-target resolution, 14 region and language switching, 17 offline,
  *         18 permalinks, 19 methodology and 404, 20 notification preview.
+ *         Also docs/replay-protocol.md, both doors of the update receiver.
  *         AC-APP-22 rides along through guardConsole().
  *
  * Post-install home: tests/e2e/flows.spec.ts. Config: tests/e2e/app.config.ts, which serves
@@ -50,6 +51,7 @@
  *   routes            [data-testid=route-notfound], [data-testid=route-offline],
  *                     [data-testid=methodology-symmetry], [data-testid=methodology-disclosure],
  *                     [data-testid=corrections-log]
+ *   replay receiver   [data-testid=updated-badge], on the feed card and the provenance line
  *
  * The autopsy is opened by `/n/{id}` throughout, because AC-APP-18 requires that route to
  * hydrate to the full autopsy anyway. One opener, four narratives, no second mechanism.
@@ -154,6 +156,8 @@ const EN = {
   sheetAuthBody:
     'Account sync ships with the store build; the demo runs fully on-device. Nothing you do here is transmitted anywhere.',
   radarFooter: 'Served from cache. No model on the read path.',
+  badgeUpdated: 'Just updated',
+  toastUpdated: 'Republished from research mode: this dissection carries a newer run',
   symmetryLine: `Symmetry ${SYMMETRY} →`,
   queueTitle: 'Queued to the private agent fleet',
   notFoundTitle: 'No such page',
@@ -1132,5 +1136,55 @@ test.describe('AC-APP-20 notification settings and preview', () => {
     expect(fired[0]?.body).toMatch(/·/);
     expect(fired[0]?.body).toMatch(/\d+ missing links/);
     expect(fired[0]?.body).toMatch(/\d+ hidden stakeholders/);
+  });
+});
+
+// --- docs/replay-protocol.md ------------------------------------------------------------------
+
+/** The map the protocol persists the badge in, and the flag the feed join is remembered by. */
+const readKey = (page: Page, key: string): Promise<string | null> =>
+  page.evaluate((name: string) => window.localStorage.getItem(name), key);
+
+test.describe('docs/replay-protocol.md, the update receiver', () => {
+  test('the same-machine channel badges the feed card, toasts, and persists', async ({ page }) => {
+    await jump(page, 'radar.default');
+
+    // A second BroadcastChannel object in the page, because the protocol's sender is the research
+    // desk in another tab and a channel never delivers to the object that posted.
+    await page.evaluate((id: string) => {
+      new BroadcastChannel('mth-updates').postMessage({
+        type: 'published',
+        narrative_id: id,
+        at: new Date().toISOString(),
+      });
+    }, STOP.id);
+
+    await expect(page.locator('[data-toast="1"]')).toHaveText(EN.toastUpdated);
+    const card = page.locator(`[data-feed-item="${STOP.id}"]`);
+    await expect(card.getByTestId('updated-badge')).toHaveText(EN.badgeUpdated);
+    await expect
+      .poll(() => readKey(page, 'mth:updated'), { message: 'the badge survives a reload until it is read' })
+      .toContain(STOP.id);
+  });
+
+  test('the QR door badges the provenance line, joins the feed, and is consumed by the read', async ({ page }) => {
+    // No server can push to a second device, so `?published=1` IS the cross-device channel.
+    await page.goto(`/n/${PPN.id}?published=1`);
+    await expect(page.locator('[data-screen="autopsy"]')).toBeVisible();
+
+    await expect(page.locator('.m-provline').getByTestId('updated-badge')).toHaveText(EN.badgeUpdated);
+    await expect
+      .poll(() => readKey(page, 'mth:updated'), { message: 'opening the autopsy consumes the badge' })
+      .not.toContain(PPN.id);
+    await expect
+      .poll(() => readKey(page, 'mth:via'), { message: `${PPN.id} is via_dissect, so a publish opens the feed too` })
+      .toBe('1');
+
+    // The same join the fresh-dissect demo produces, reached through the other door.
+    await jump(page, 'radar.default');
+    const item = page.locator(`[data-feed-item="${PPN.id}"]`);
+    await expect(item).toBeVisible();
+    await expect(item.getByTestId('via-dissect-chip')).toBeVisible();
+    await expect(item.getByTestId('updated-badge'), 'a consumed badge does not come back').toHaveCount(0);
   });
 });

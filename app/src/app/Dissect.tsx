@@ -24,7 +24,7 @@ import { trapRef } from '../trap';
 import { makeCtx } from '../renderers/ctx';
 import { CountChips, headlineOf } from '../renderers/Card';
 import { resolveUrl, roleUrl } from './resolve';
-import { FRESH_CAP, freshUsed, LS, markFresh, writeStore, type AppState } from './state';
+import { FRESH_CAP, freshUsed, joinFeed, markFresh, type AppState } from './state';
 import type { Nav } from './Onboarding';
 
 /**
@@ -256,14 +256,14 @@ export function Progress({ state, nav }: { state: AppState; nav: Nav }) {
     );
     const land = setTimeout(() => {
       // The fresh dissection is spent, the artifact is in the shared cache, and the feed item
-      // it was filtered out of is now a real one. All three are the same event.
+      // it was filtered out of is now a real one. All three are the same event, and the third is
+      // `joinFeed`, which a replay publish for this narrative lands on too.
       markFresh();
-      writeStore(LS.via, '1');
       nav.patch({
         screen: 'autopsy',
         narrative: to,
         spar: 'gate',
-        viaDissect: true,
+        ...joinFeed(),
         recents: remember(state.recents, to),
         progTo: null,
         progStage: STAGES.length,

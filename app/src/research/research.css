@@ -1,27 +1,85 @@
 /* Matterhorn research mode: the desktop surface at /research.
 
-   The zip has no desktop screens, so nothing here is a port. What is carried over instead is its
-   vocabulary: the same tokens, the same radii and hairlines, the same chip and bar components
-   (.m-fchip, .m-symbar, .m-card-chip all come from shell.css and renderers.css and are reused
-   unchanged), the same type ramp. No hue is introduced, and the status hues keep their meanings:
-   nothing on this page borrows orange or red to mean "note".
+   The zip has no desktop screens, so nothing here is a port. The surface system is
+   docs/design-direction.md, soft paper and hard glass: the licensed fog photograph is graded
+   into the paper system and lies under everything; the page's own voice (the header, the
+   redirect card) is extruded paper; the instruments the analyst works with (filters, the
+   constellation, the rail, the table, the replay console) float over the ground as glass.
+   Tokens and the shared classes (.g-glass, .g-paper-raised, .g-well, .g-enter) come from
+   surface.css; the zip vocabulary (.m-fchip, .m-symbar, .m-card-chip, the type ramp) is reused
+   unchanged. No new hue: the one accent on this page is --mis on a recorded block reason,
+   which is exactly what that color means everywhere else.
 
-   Blueprint 4.3 fixes the two breakpoints, and both are CSS only, so the surface never measures
-   its own width in JavaScript:
-     1024 and up   the table in one column, the constellation and the rail beside it in the other
+   Blueprint 4.3 fixes the two desktop breakpoints, and both are CSS, so the surface never
+   measures its own width in JavaScript for layout:
+     1024 and up   the table in one column, the constellation and the rail beside it
      768 to 1024   one column in source order, constellation above the table
-     under 768     the redirect card, until the reader presses continue anyway */
+     under 768     the redirect card, which Research.tsx mounts only below the breakpoint
+                   (blueprint 4.3 gives 768-and-up no redirect surface at all); the @media
+                   block below is the belt for the frames between a resize and the re-render */
 
 /* --- the surface frame ------------------------------------------------------------------ */
 
 .m-rs {
+  position: relative;
   min-height: 100vh;
-  background: var(--paper);
+  background: var(--m-paper);
   color: var(--ink);
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
   padding: 34px 22px 72px;
 }
+
+/* The licensed fog (LICENSES.md: fog-fernando.jpg), duotone-graded per the direction: grayscale
+   under a --m-paper multiply overlay, so the photograph becomes ink on this paper rather than a
+   second palette. Fixed only for fine pointers; touch scrolls it with the page. */
+.m-rs-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: url('/assets/land/fog-fernando.jpg') center / cover no-repeat;
+  filter: grayscale(1) contrast(0.9) brightness(1.06);
+}
+.m-rs-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--m-paper);
+  mix-blend-mode: multiply;
+}
+/* Content protection, the direction's own clause: if the image fights the text, the image
+   loses. The photograph's lower third is dark forest, and 38 percent of near-black through the
+   glass drags panel text under AA there, so a paper veil rises toward the foot of the page.
+   Functional scrim, not decoration: it exists to keep --sub at 4.5:1 on every panel. */
+.m-rs-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--m-paper) 24%, transparent),
+    color-mix(in srgb, var(--m-paper) 34%, transparent) 45%,
+    color-mix(in srgb, var(--m-paper) 72%, transparent)
+  );
+}
+@media (hover: hover) and (pointer: fine) {
+  .m-rs-bg {
+    position: fixed;
+  }
+}
+/* The same clause, from the panel's side: this surface's glass carries a stronger fill than the
+   token, because it is the one surface that floats over a photograph rather than over paper. */
+.m-rs .g-glass {
+  background: rgba(252, 251, 247, 0.72);
+}
+.m-rs[data-theme='dark'] .g-glass {
+  background: rgba(28, 28, 26, 0.66);
+}
+
 .m-rs-main {
+  position: relative;
+  z-index: 1;
   max-width: 1560px;
   margin: 0 auto;
 }
@@ -30,6 +88,7 @@
   flex-direction: column;
   gap: 7px;
   align-items: flex-start;
+  padding: 22px 24px;
 }
 .m-rs-title {
   font-size: 30px;
@@ -62,10 +121,11 @@
 /* It is a real page, not a shrug: it says what this surface is, why a narrow screen is the wrong
    room for it, what the reader should open instead, and that continuing is allowed. */
 .m-rs-narrow {
-  display: none;
+  position: relative;
+  z-index: 1;
   max-width: 34rem;
   margin: 0 auto;
-  padding: 40px 0 0;
+  padding: 28px 24px 30px;
 }
 .m-rs-narrow-title {
   font-size: 26px;
@@ -104,9 +164,14 @@
   text-wrap: pretty;
 }
 
+/* Belt only: Research.tsx does not mount the card at 768 and up, nor the main column under 768
+   before "continue anyway". These rules cover the frames between a resize crossing the
+   breakpoint and React re-rendering, the same belt Frame.tsx wears in wide.css. */
 @media (max-width: 767.98px) {
-  .m-rs[data-anyway='0'] .m-rs-narrow { display: block; }
   .m-rs[data-anyway='0'] .m-rs-main { display: none; }
+}
+@media (min-width: 768px) {
+  .m-rs-narrow { display: none; }
 }
 
 /* --- the three regions ------------------------------------------------------------------ */
@@ -136,6 +201,9 @@
 
 /* --- filters ---------------------------------------------------------------------------- */
 
+.m-rs-filters {
+  padding: 16px 18px 18px;
+}
 .m-rf {
   display: flex;
   flex-wrap: wrap;
@@ -153,14 +221,15 @@
   font-weight: 600;
   color: var(--sub);
 }
+/* The controls are pressed wells in the paper (.g-well carries the relief); this adds the type
+   and the box the relief sits in. Native controls stay native: the date field keeps its picker,
+   the select keeps its arrow, and the keyboard owes nothing to a widget. */
 .m-rf-in {
   font-family: inherit;
   font-size: 13px;
   color: var(--ink);
-  background: var(--surface);
-  border: 1px solid var(--hair2);
-  border-radius: 10px;
-  padding: 9px 11px;
+  border: none;
+  padding: 9px 13px;
   min-height: 40px;
 }
 .m-rf-clear {
@@ -196,20 +265,23 @@
 
 /* --- the constellation ------------------------------------------------------------------ */
 
+.m-rs-graph {
+  padding: 16px 18px 14px;
+}
 .m-rc {
   display: flex;
   flex-direction: column;
   gap: 9px;
 }
 /* aspect-ratio matches the viewBox exactly, which is what lets the pointer maths be one scalar
-   (user units per CSS pixel) instead of a letterboxing calculation. */
+   (user units per CSS pixel) instead of a letterboxing calculation. The box is a pressed well:
+   the one instrument screen sunk INTO the glass bench rather than floating on it. */
 .m-rc-box {
   position: relative;
   aspect-ratio: 16 / 10;
-  background: var(--surface);
-  border: 1px solid var(--hair);
-  border-radius: 16px;
-  box-shadow: var(--shadow);
+  background: var(--m-paper);
+  border-radius: var(--m-r-paper);
+  box-shadow: var(--m-relief-pressed);
   overflow: hidden;
   cursor: grab;
   touch-action: none;
@@ -226,11 +298,20 @@
   stroke-width: 1;
 }
 .m-rc-links line[data-on='0'] { stroke: var(--hair); }
+/* Size is the counts total, fill is the published lean, in exactly the three tones the rail's
+   spread legend uses (m-symbar-item .m-dot): the picture and the legend speak one language.
+   Out of scope dims by opacity so a node's lean survives its own dimming. */
 .m-rc-nodes circle {
   fill: var(--ink);
   cursor: pointer;
 }
-.m-rc-nodes circle[data-on='0'] { fill: var(--hair2); }
+.m-rc-nodes circle[data-lean='neutral'] {
+  fill: var(--hair2);
+  stroke: var(--sub);
+  stroke-width: 0.2;
+}
+.m-rc-nodes circle[data-lean='opp'] { fill: var(--sub); }
+.m-rc-nodes circle[data-on='0'] { opacity: 0.3; }
 .m-rc-labels text {
   font-size: 2.9px;
   font-weight: 600;
@@ -238,6 +319,18 @@
   pointer-events: none;
 }
 .m-rc-labels text[data-on='0'] { fill: var(--hair2); }
+/* The full label, drawn for the hovered or selected node only, with a paper stroke under the
+   glyphs so it stays readable over links and neighbours. */
+.m-rc-callout {
+  font-size: 3.2px;
+  font-weight: 600;
+  fill: var(--ink);
+  stroke: var(--m-paper);
+  stroke-width: 0.9px;
+  paint-order: stroke;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
 .m-rc-sel-links line {
   stroke: var(--uns);
   stroke-width: 1.6;
@@ -255,15 +348,17 @@
 .m-rc-tool {
   width: 34px;
   height: 34px;
-  background: var(--fill);
+  background: var(--m-paper);
   border: none;
   border-radius: 999px;
+  box-shadow: var(--m-relief-rest);
   font-family: inherit;
   font-size: 15px;
   font-weight: 600;
   color: var(--body);
   cursor: pointer;
 }
+.m-rc-tool:active { box-shadow: var(--m-relief-pressed); }
 .m-rc-tool-w {
   width: auto;
   padding: 0 15px;
@@ -281,10 +376,6 @@
 
 .m-rs-rail {
   align-self: start;
-  background: var(--surface);
-  border: 1px solid var(--hair);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
   padding: 18px;
 }
 .m-rr-kicker {
@@ -309,7 +400,7 @@
 .m-rr-block {
   margin-top: 18px;
   padding-top: 16px;
-  border-top: 1px solid var(--hair);
+  border-top: 1px solid var(--hairA);
 }
 .m-rr-h {
   font-size: 12px;
@@ -343,7 +434,7 @@
   gap: 6px;
   margin-top: 9px;
 }
-/* The panel the Echo renderer draws sits inside the rail's own card, so it drops its shadow. */
+/* The panel the Echo renderer draws sits inside the rail's own pane, so it drops its shadow. */
 .m-rs-rail .m-panel {
   box-shadow: none;
   padding: 0;
@@ -351,22 +442,79 @@
   background: none;
 }
 
+/* The fleet chip: the run action on a row and in the rail. A chip, not a CTA pair; the desk
+   has many of these on screen at once. */
+.m-rs-run {
+  margin-top: 8px;
+}
+.m-rt .m-rs-run {
+  display: inline-flex;
+  margin-top: 6px;
+  min-height: 26px;
+  font-size: 10.5px;
+  padding: 0 10px;
+}
+
+/* --- member link previews ---------------------------------------------------------------- */
+
+/* Attributed link previews only (blueprint 7.3 C7): the cached og image, the outlet's name,
+   and the way out to the article. A fallback is a styled block, never a broken img. */
+.m-og-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 9px;
+  margin-top: 10px;
+}
+.m-og-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-decoration: none;
+}
+.m-og-img,
+.m-og-ph {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.m-og-img {
+  box-shadow: var(--m-relief-rest);
+}
+.m-og-ph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6px;
+  background: var(--m-paper);
+  box-shadow: var(--m-relief-pressed);
+  color: var(--sub);
+  font-size: 10px;
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+.m-og-outlet {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--body);
+}
+
 /* --- the archive table ------------------------------------------------------------------ */
 
 .m-rt-scroll {
   overflow-x: auto;
-  background: var(--surface);
-  border: 1px solid var(--hair);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
 }
 /* Fixed layout, so a long headline wraps instead of pushing the table wider than its column and
-   under the constellation beside it. The percentages are the column widths. */
+   under the constellation beside it. The percentages are the column widths. Tabular numerals on
+   the whole table: every digit a row paints is a statistic (house rule, blueprint 4.1.5). */
 .m-rt {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
   font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
 }
 .m-rt thead th:nth-child(1) { width: 30%; }
 .m-rt thead th:nth-child(2) { width: 14%; }
@@ -379,13 +527,14 @@
   text-align: left;
   vertical-align: top;
   padding: 11px 12px;
-  border-bottom: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hairA);
   font-weight: 400;
   overflow-wrap: break-word;
 }
 .m-rt tbody tr {
   cursor: pointer;
 }
+.m-rt tbody tr:hover { background: var(--fill); }
 .m-rt tbody tr:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: -2px;
@@ -422,4 +571,124 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
+}
+
+/* --- the replay console ------------------------------------------------------------------ */
+
+.m-rp {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.m-rp-scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 24, 0.35);
+}
+[data-theme='dark'] .m-rp-scrim { background: rgba(0, 0, 0, 0.55); }
+.m-rp-pane {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(720px, 100%);
+  max-height: min(78vh, 820px);
+  padding: 18px 20px 20px;
+}
+/* Glass panels scale from .98, never from 0 (motion vocabulary). Exit is an unmount. */
+@media (prefers-reduced-motion: no-preference) {
+  .m-rp-pane {
+    animation: m-rp-in var(--m-t-entrance) var(--m-ease) both;
+  }
+  @keyframes m-rp-in {
+    from {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+.m-rp-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.m-rp-run {
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+/* The record's own disclosure, pinned for the whole replay (blueprint 3.4). */
+.m-rp-disclosure {
+  margin-top: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--hairA);
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: var(--sub);
+  text-wrap: pretty;
+}
+.m-rp-body {
+  flex: 1;
+  overflow: auto;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-family: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, monospace;
+  font-size: 11.5px;
+  line-height: 1.55;
+}
+.m-rp-line {
+  color: var(--body);
+  overflow-wrap: break-word;
+}
+.m-rp-line[data-kind='slot'] { color: var(--ink); }
+/* The one accent on this page: a recorded gate block, in the missing red it means everywhere. */
+.m-rp-line[data-kind='block'] { color: var(--mis); }
+.m-rp-line[data-kind='refix'] { color: var(--sub); }
+.m-rp-published {
+  margin-top: 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--hairA);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.m-rp-pub-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.m-rp-token { color: var(--body); }
+.m-rp-qr {
+  width: 148px;
+  height: 148px;
+  color: var(--ink);
+  background: var(--m-paper);
+  border-radius: 12px;
+  box-shadow: var(--m-relief-rest);
+}
+.m-rp-scan {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--body);
+  max-width: 52ch;
+  text-wrap: pretty;
+}
+.m-rp-url {
+  color: var(--sub);
+  overflow-wrap: anywhere;
 }

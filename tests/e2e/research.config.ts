@@ -44,7 +44,7 @@ const REPO_ROOT = fileURLToPath(new URL('../..', import.meta.url));
 
 export default defineConfig({
   testDir: '.',
-  testMatch: ['research.spec.ts', 'wide-viewport.spec.ts', 'constellation-perf.spec.ts'],
+  testMatch: ['research.spec.ts', 'wide-viewport.spec.ts', 'constellation-perf.spec.ts', 'replay.spec.ts'],
   // Nothing in this gate screenshots yet (the six Appendix A desktop rows still belong to
   // matrix.spec.ts). The root is declared so the first one written lands beside its siblings
   // rather than in tests/e2e/.

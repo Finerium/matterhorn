@@ -44,6 +44,7 @@ import {
   type Line,
   type SlotValues,
 } from './copy';
+import { useCursor } from './cursor';
 import { useLanding } from './data';
 import { useChoreography } from './motion';
 import {
@@ -109,12 +110,17 @@ export default function Landing() {
   // `data-reveal` below and `data-beat` in setpieces.tsx are the seams; this only picks the path
   // that drives them, and on the CSS baseline it does nothing but say which one won.
   useChoreography(product !== null);
+  // The direction's cursor system: writes the custom properties surface.css consumes, and only
+  // on fine-pointer readers who have not asked for reduced motion.
+  useCursor();
   const values: SlotValues = data ?? PENDING;
   const say = (parts: Line): string => fill(parts, values);
   const shots = grammarShots(product);
 
   return (
-    <div className="m-l" data-testid="landing">
+    // `data-theme` mirrors the theme the shell stamped on `<body>` (its vocabulary is `data-mth`)
+    // into surface.css's, so the paper and glass tokens follow a dark reader arriving from /app.
+    <div className="m-l" data-testid="landing" data-theme={document.body.dataset.mth === 'dark' ? 'dark' : 'light'}>
       {/* 4.4.1. One `nav` on the page and it holds all three of 4.4.1's parts, so the collapsed
           mobile bar is a subset of the same landmark rather than a second one. */}
       <header className="m-l-nav">
@@ -146,8 +152,10 @@ export default function Landing() {
               </h1>
               <p className="m-l-lead">{HERO.subhead}</p>
               <div className="m-l-ctas">
-                <Link className="m-l-cta" to="/app">
-                  {HERO.ctaPrimary}
+                {/* One of the direction's two magnets; the inner span is the 40 percent
+                    counter-move surface.css drives. */}
+                <Link className="m-l-cta g-magnet" to="/app">
+                  <span className="g-magnet-inner">{HERO.ctaPrimary}</span>
                 </Link>
                 <Link className="m-l-cta m-l-cta-soft" to="/research">
                   {HERO.ctaSecondary}
@@ -171,7 +179,7 @@ export default function Landing() {
           </h2>
           <p className="m-l-lead">{PROBLEM.lead}</p>
           <div className="m-l-beats">
-            <div className="m-l-beats-fig">
+            <div className="m-l-beats-fig g-paper">
               <ProblemSpine />
             </div>
             <ol className="m-l-beatlist" role="list">
@@ -196,9 +204,11 @@ export default function Landing() {
           <p className="m-l-lead">{STAKES.lead}</p>
           <Cascade />
           <ul className="m-l-cases" role="list">
+            {/* The reveal stays on the li: its scroll-driven animation holds `transform: none` at
+                fill, so the glass card inside is what tilts and the two never share an element. */}
             {STAKES.cases.map((text) => (
               <li key={text} className="m-l-case" data-reveal>
-                {text}
+                <div className="m-l-case-in g-glass g-tilt">{text}</div>
               </li>
             ))}
           </ul>
@@ -215,7 +225,7 @@ export default function Landing() {
           <p className="m-l-lead">{FLEET.lead}</p>
           <div className="m-l-fleet">
             <div className="m-l-console-hold">
-              <ol className="m-l-console" role="list" data-testid="agent-console">
+              <ol className="m-l-console g-glass" role="list" data-testid="agent-console">
                 {FLEET.consoleLines.map((text, at) => (
                   <li key={text} className="m-l-cline" data-console-line={at + 1}>
                     <svg className="m-l-tick" width="13" height="13" viewBox="0 0 13 13" aria-hidden="true">
@@ -228,7 +238,7 @@ export default function Landing() {
             </div>
             <ul className="m-l-receipts" role="list">
               {FLEET.receipts.map((text) => (
-                <li key={text} className="m-l-receipt" data-testid="receipt-card" data-reveal>
+                <li key={text} className="m-l-receipt g-glass" data-testid="receipt-card" data-reveal>
                   {text}
                 </li>
               ))}
@@ -245,7 +255,7 @@ export default function Landing() {
           <p className="m-l-lead">{GRAMMAR.lead}</p>
           <ul className="m-l-grid" role="list">
             {GRAMMAR.cards.map((text, at) => (
-              <li key={text} className="m-l-gcard" data-testid="grammar-card" data-reveal>
+              <li key={text} className="m-l-gcard g-glass" data-testid="grammar-card" data-reveal>
                 <div className="m-l-shot" inert>
                   {shots[at]}
                 </div>
@@ -278,7 +288,7 @@ export default function Landing() {
           </h2>
           <ul className="m-l-icards" role="list">
             {INTEGRITY.cards.map((card) => (
-              <li key={say(card)} className="m-l-icard" data-reveal>
+              <li key={say(card)} className="m-l-icard g-paper" data-reveal>
                 {say(card)}
               </li>
             ))}
@@ -322,8 +332,9 @@ export default function Landing() {
             <DeskWindow product={product} />
           </div>
           <div className="m-l-ctas">
-            <Link className="m-l-cta" to="/app">
-              {TRY.ctaPrimary}
+            {/* The second magnet. Two per page, which is the direction's cap per viewport. */}
+            <Link className="m-l-cta g-magnet" to="/app">
+              <span className="g-magnet-inner">{TRY.ctaPrimary}</span>
             </Link>
             <Link className="m-l-cta m-l-cta-soft" to="/research">
               {TRY.ctaSecondary}

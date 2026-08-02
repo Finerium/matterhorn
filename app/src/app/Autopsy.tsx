@@ -25,6 +25,7 @@ import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import type {
   ClaimMapPanel,
   Narrative,
+  OgAttribution,
   Panel,
   ScaleCheckPanel,
   Source,
@@ -32,7 +33,7 @@ import type {
 } from '../../../contracts/types';
 import TECHNIQUE_TAGS from '../../../contracts/technique-tags.json';
 import { useT, type Key } from '../i18n';
-import { PATHS, useJson } from '../content';
+import { PATHS, useJson, useOgAttribution } from '../content';
 import { trapRef } from '../trap';
 import { makeCtx, t as copy, type RenderCtx } from '../renderers/ctx';
 import { dateLabel } from '../renderers/copy';
@@ -76,14 +77,17 @@ function PanelView({
   ctx,
   stopped,
   onToggle,
+  og,
 }: {
   panel: Panel;
   narrative: Narrative;
   ctx: RenderCtx;
   stopped: boolean;
   onToggle: () => void;
+  /** The link-preview record, for the family's member rows. Null until it has loaded. */
+  og: OgAttribution | null;
 }): ReactNode {
-  return <Boundary>{panelBody(panel, narrative, ctx, stopped, onToggle)}</Boundary>;
+  return <Boundary>{panelBody(panel, narrative, ctx, stopped, onToggle, og)}</Boundary>;
 }
 
 function panelBody(
@@ -92,6 +96,7 @@ function panelBody(
   ctx: RenderCtx,
   stopped: boolean,
   onToggle: () => void,
+  og: OgAttribution | null,
 ): ReactNode {
   switch (panel.type) {
     case 'claim_map':
@@ -109,7 +114,7 @@ function panelBody(
     case 'options':
       return <Options panel={panel} ctx={ctx} />;
     case 'family':
-      return <Family narrative={narrative} ctx={ctx} />;
+      return <Family narrative={narrative} ctx={ctx} og={og} />;
     default:
       return null;
   }
@@ -142,6 +147,10 @@ export default function Autopsy({ state, nav }: { state: AppState; nav: Nav }) {
   const t = useT();
   const narrative = useJson<Narrative>(PATHS.narrative(state.narrative));
   const sources = useJson<Source[]>(PATHS.sources);
+  // Blueprint 7.3: the family's member rows are attributed link previews, and this is the record
+  // that says which cached image belongs to which member. It arrives late and the rows render
+  // placeholders until it does, which is the same state a member with no preview keeps for good.
+  const og = useOgAttribution();
   const ctx = useMemo(
     () => makeCtx(sources.data ?? [], state.lang, state.theme),
     [sources.data, state.lang, state.theme],
@@ -356,6 +365,13 @@ export default function Autopsy({ state, nav }: { state: AppState; nav: Nav }) {
             {t('autopsy.prov', { sources: n.provenance.source_count })}
           </button>
           <span className="m-provcached">{t('autopsy.cached', { at: n.provenance.computed_at })}</span>
+          {/* docs/replay-protocol.md: the provenance line is where a republish belongs, because
+              what changed is when this was computed. Opening this screen is what consumes it. */}
+          {state.updated[n.id] === undefined ? null : (
+            <span className="m-updated" data-testid="updated-badge">
+              {t('badge.updated')}
+            </span>
+          )}
           {level === 'S0' && state.spar === 'gate' && !state.sparDemand ? (
             <button
               type="button"
@@ -519,6 +535,7 @@ export default function Autopsy({ state, nav }: { state: AppState; nav: Nav }) {
                     onToggle={() => {
                       nav.patch({ moneyStopped: !state.moneyStopped });
                     }}
+                    og={og.data}
                   />
                 ))}
                 {n.panels.some((panel) => panel.type === 'echo') ? null : (

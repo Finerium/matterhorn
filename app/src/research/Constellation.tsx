@@ -25,7 +25,7 @@
  * fast path; the table is the complete one.
  */
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent, type PointerEvent, type RefObject } from 'react';
-import type { Constellation as Graph } from '../../../contracts/types';
+import type { Constellation as Graph, Narrative } from '../../../contracts/types';
 import { layout, VIEW } from './graph';
 
 const ZOOM = { min: 0.6, max: 14 } as const;
@@ -104,7 +104,18 @@ export interface ConstellationProps {
   zoomOut: string;
   reset: string;
   lang: 'en' | 'id';
+  /**
+   * The published narratives, for the two per-node facts the picture encodes: size is the total
+   * of the derived counts (how much the dissection found), fill is the published lean, in the
+   * same three tones the rail's spread legend uses. A node whose narrative is in no loaded pack
+   * gets the base size and no lean, which is the honest render of "nothing published to read".
+   */
+  byNarrative: Map<string, Narrative>;
 }
+
+/** Counts total -> radius multiplier. Sqrt so a loud dissection reads bigger, not enormous. */
+const sizeOf = (total: number | null): number =>
+  total === null ? 0.75 : 0.75 + Math.min(Math.sqrt(total) * 0.22, 0.85);
 
 export default function Constellation({
   graph,
@@ -116,14 +127,32 @@ export default function Constellation({
   zoomOut,
   reset,
   lang,
+  byNarrative,
 }: ConstellationProps) {
   const box = useRef<HTMLDivElement>(null);
   const cam = useRef<SVGGElement>(null);
   const drag = useRef<{ id: number; x: number; y: number; moved: number; node: string | null } | null>(null);
   const [camera] = useState(() => makeCamera(box, cam));
+  const [hover, setHover] = useState<string | null>(null);
 
   const places = useMemo(() => layout(graph), [graph]);
   const radius = graph.nodes.length > 120 ? 0.75 : 1.5;
+
+  // Per-node radius, outside the draw memo because the selection ring and the label callout
+  // need it too. 500 map entries once per graph, nothing per frame.
+  const sizes = useMemo(() => {
+    const out = new Map<string, number>();
+    for (const node of graph.nodes) {
+      const counts = byNarrative.get(node.narrative_id)?.counts;
+      const total =
+        counts === undefined
+          ? null
+          : counts.missing + counts.unsourced + counts.disputed + counts.supported + counts.hidden;
+      out.set(node.id, radius * sizeOf(total));
+    }
+    return out;
+  }, [graph, byNarrative, radius]);
+  const rOf = (id: string): number => sizes.get(id) ?? radius;
 
   // Wheel has to be a native non-passive listener: React registers `wheel` passively at the root,
   // where preventDefault does nothing and the page scrolls out from under the zoom.
@@ -179,7 +208,15 @@ export default function Constellation({
             const at = places.get(node.id);
             if (at === undefined) return null;
             return (
-              <circle key={node.id} cx={at.x} cy={at.y} r={radius} data-node={node.id} data-on={dim(node.id)}>
+              <circle
+                key={node.id}
+                cx={at.x}
+                cy={at.y}
+                r={rOf(node.id)}
+                data-node={node.id}
+                data-on={dim(node.id)}
+                data-lean={byNarrative.get(node.narrative_id)?.lean}
+              >
                 {labelled ? <title>{lang === 'id' ? node.label.id : node.label.en}</title> : null}
               </circle>
             );
@@ -190,7 +227,7 @@ export default function Constellation({
             {graph.nodes.map((node) => {
               const at = places.get(node.id);
               if (at === undefined) return null;
-              const away = radius + 1.4;
+              const away = rOf(node.id) + 1.4;
               return (
                 <text
                   key={node.id}
@@ -207,9 +244,21 @@ export default function Constellation({
         )}
       </>
     );
-  }, [graph, places, inScope, radius, lang]);
+  }, [graph, places, inScope, sizes, byNarrative, lang]);
 
   const here = selected === null ? undefined : places.get(selected);
+
+  // The named node: hover wins, selection holds the name when the pointer leaves. The callout
+  // is drawn as overlay elements exactly like the selection ring, so naming a node re-renders
+  // two elements and never touches the memo above.
+  const named = hover ?? selected;
+  const calloutAt = named === null ? undefined : places.get(named);
+  const calloutNode = named === null ? undefined : graph.nodes.find((node) => node.id === named);
+
+  const onPointerOver = (event: PointerEvent<HTMLDivElement>) => {
+    if (drag.current !== null) return;
+    setHover((event.target as Element | null)?.getAttribute('data-node') ?? null);
+  };
 
   const onPointerDown = (event: PointerEvent<HTMLDivElement>) => {
     if (event.pointerType === 'mouse' && event.button !== 0) return;
@@ -294,6 +343,10 @@ export default function Constellation({
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
         onPointerCancel={onPointerUp}
+        onPointerOver={onPointerOver}
+        onPointerLeave={() => {
+          setHover(null);
+        }}
         onKeyDown={onKeyDown}
       >
         <svg className="m-rc-svg" viewBox={`0 0 ${VIEW.w} ${VIEW.h}`} aria-hidden="true">
@@ -325,10 +378,21 @@ export default function Constellation({
                   className="m-rc-ring"
                   cx={here.x}
                   cy={here.y}
-                  r={radius + 2}
+                  r={(selected === null ? radius : rOf(selected)) + 2}
                   vectorEffect="non-scaling-stroke"
                 />
               </>
+            )}
+            {calloutAt === undefined || calloutNode === undefined ? null : (
+              <text
+                className="m-rc-callout"
+                x={calloutAt.x}
+                y={calloutAt.y - rOf(calloutNode.id) - 1.7}
+                textAnchor="middle"
+                aria-hidden="true"
+              >
+                {lang === 'id' ? calloutNode.label.id : calloutNode.label.en}
+              </text>
             )}
           </g>
         </svg>

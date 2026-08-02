@@ -1,7 +1,9 @@
 /**
  * `/research`, blueprint 3.2 item 18: the analyst's surface. An archive table with filters, the
  * full interactive constellation, and a detail rail carrying velocity, lean spread, echoes, the
- * permalink, and CSV plus JSON export of the graph data.
+ * permalink, member link previews, and CSV plus JSON export of the graph data. The "Run the
+ * fleet" action on a row or in the rail opens the replay console (replay.tsx), which replays
+ * that narrative's recorded editorial run from content/replay.json.
  *
  * It is not a second app. It reads exactly what `/app` reads, through the same loader, and it
  * renders numbers through the same renderer layer: the count chips come from `renderers/Card`,
@@ -14,20 +16,26 @@
  * they are (`{n} outlets over {d} days`, a tally of published `lean` fields) rather than as rates
  * or scores, which would be figures nothing published.
  *
- * The whole view is in the URL: filters, the selected narrative, the selected point. An analyst's
- * finding is a link they can paste, `?tag=missing-link` is a filtered archive, and the Appendix A
- * desktop states are addressable without a state-jump hook. `useSearchParams` is the only state
- * this surface has; there is no second copy to drift.
+ * The whole view is in the URL: filters, the selected narrative, the selected point, the open
+ * replay. An analyst's finding is a link they can paste, `?tag=missing-link` is a filtered
+ * archive, and the Appendix A desktop states are addressable without a state-jump hook.
+ * `useSearchParams` is the only view state this surface has; there is no second copy to drift.
  *
  * Responsive, blueprint 4.3: at 1024 and up the table and the constellation sit side by side with
  * the rail under the graph; between 768 and 1024 it is one column with the constellation above
- * the table; below 768 it is a redirect card to `/app` with a way past it. The breakpoints are
- * CSS, so the surface never measures its own width, never re-measures on resize, and never paints
- * once at the wrong size.
+ * the table; below 768 it is a redirect card to `/app` with a way past it. The two desktop
+ * breakpoints are CSS; the redirect card is the one width decision made in JS (the Frame.tsx
+ * idiom), because 4.3 gives 768-and-up no redirect surface at all, and a card that is merely
+ * `display: none` is still a card in the DOM.
+ *
+ * Surfaces, per docs/design-direction.md: the fog background (licensed, duotone-graded in CSS)
+ * lies under a neumorphic paper ground, and everything the analyst works on floats over it as
+ * glass. The cursor system below is the direction's shared listener, copied per route on
+ * purpose: three copies of twenty lines beat one eager chunk shared across lazy routes.
  */
-import { useMemo, type KeyboardEvent } from 'react';
+import { useEffect, useMemo, useRef, useSyncExternalStore, type KeyboardEvent } from 'react';
 import { Link, useSearchParams } from 'react-router';
-import type { Source } from '../../../contracts/types';
+import type { OgAttribution, Replay, Source } from '../../../contracts/types';
 import { useLang, useT } from '../i18n';
 import { PATHS, useArchive, useConstellation, useJson } from '../content';
 import { LS, readStore } from '../app/state';
@@ -37,6 +45,7 @@ import { dateLabel } from '../renderers/copy';
 import Echo from '../renderers/Echo';
 import { SITE_URL } from '../site';
 import Constellation from './Constellation';
+import ReplayConsole from './replay';
 import {
   download,
   filtersActive,
@@ -65,6 +74,17 @@ const asLean = (raw: string): Filters['lean'] => (raw === 'gov' || raw === 'opp'
 /** A select or a text field writes its own key; 'all' and '' both mean "drop the parameter". */
 type Patch = Record<string, string>;
 
+/** Blueprint 4.3's floor. Kept in step by hand with the belt `@media` rule in research.css. */
+const NARROW = '(max-width: 767.98px)';
+
+const subscribeNarrow = (onChange: () => void): (() => void) => {
+  const query = window.matchMedia(NARROW);
+  query.addEventListener('change', onChange);
+  return () => {
+    query.removeEventListener('change', onChange);
+  };
+};
+
 export default function Research() {
   const t = useT();
   const lang = useLang();
@@ -74,8 +94,14 @@ export default function Research() {
   const constellation = useConstellation();
   const graph = constellation.data;
   const sources = useJson<Source[]>(PATHS.sources).data;
+  // Both are additive artifacts: the desk works without them, so neither gates `ready` and a
+  // failure surfaces as the affordance simply not appearing rather than as a dead page.
+  const replay = useJson<Replay>('replay.json').data;
+  const attribution = useJson<OgAttribution>('og_attribution.json').data;
   const theme: Theme = readStore(LS.theme) === 'dark' ? 'dark' : 'light';
   const ctx = useMemo(() => makeCtx(sources ?? [], lang, theme), [sources, lang, theme]);
+
+  const narrow = useSyncExternalStore(subscribeNarrow, () => window.matchMedia(NARROW).matches);
 
   // Read as primitives, then memoize: an object rebuilt from `params` every render would make the
   // scope a new object every render, and through it the constellation's element memo, which is
@@ -110,6 +136,25 @@ export default function Research() {
   // `?id=` alone still lights a point: the narrative's own, when the graph carries one.
   const nodeId = params.get('node') ?? rowOf?.nodeId ?? null;
   const node = nodeId === null ? undefined : graph?.nodes.find((entry) => entry.id === nodeId);
+
+  // The open replay, by URL like everything else. The record decides whether the affordance
+  // exists at all: a narrative the run log does not carry gets no button and no console.
+  const runOf = useMemo(
+    () => new Map((replay?.narratives ?? []).map((run) => [run.narrative_id, run])),
+    [replay],
+  );
+  const openRun = runOf.get(params.get('replay') ?? '');
+
+  // Member link previews for the chosen narrative: the additive og_attribution entries that
+  // carry `member_url`. `image_path` null is the recorded fallback and renders the styled
+  // placeholder, never a broken img (blueprint 7.3 C7; the file's own `policy` string).
+  const previews = useMemo(
+    () =>
+      (attribution?.entries ?? []).filter(
+        (entry) => entry.narrative_id === chosen?.id && entry.member_url !== undefined,
+      ),
+    [attribution, chosen],
+  );
 
   const slice: GraphSlice | null =
     graph === null
@@ -150,33 +195,94 @@ export default function Research() {
     patch({ id: narrativeId, node: point ?? '' });
   };
 
+  const root = useRef<HTMLDivElement>(null);
+
+  // The cursor system, the direction's one shared listener copied into this route: a single
+  // rAF-throttled pointermove writes --mx/--my on the surface root and panel-relative --px/--py
+  // on every .g-glass panel it owns. CSS consumes the variables; this never styles. Inert for
+  // touch, coarse pointers and reduced motion, whose rest state is the finished surface.
+  useEffect(() => {
+    const surface = root.current;
+    const fine = window.matchMedia('(prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine)');
+    if (surface === null || !fine.matches) return;
+    let frame = 0;
+    let x = 0;
+    let y = 0;
+    const clamp = (value: number): number => Math.min(Math.max(value, 0), 1);
+    const paint = () => {
+      frame = 0;
+      surface.style.setProperty('--mx', `${String(x)}px`);
+      surface.style.setProperty('--my', `${String(y)}px`);
+      for (const panel of surface.querySelectorAll<HTMLElement>('.g-glass')) {
+        const rect = panel.getBoundingClientRect();
+        panel.style.setProperty('--px', clamp((x - rect.left) / Math.max(rect.width, 1)).toFixed(3));
+        panel.style.setProperty('--py', clamp((y - rect.top) / Math.max(rect.height, 1)).toFixed(3));
+      }
+    };
+    const onMove = (event: PointerEvent) => {
+      x = event.clientX;
+      y = event.clientY;
+      if (frame === 0) frame = requestAnimationFrame(paint);
+    };
+    window.addEventListener('pointermove', onMove, { passive: true });
+    return () => {
+      window.removeEventListener('pointermove', onMove);
+      if (frame !== 0) cancelAnimationFrame(frame);
+    };
+  }, []);
+
   const failure = packs.error ?? constellation.error;
   const ready = packs.data !== null && graph !== null;
 
-  return (
-    <main className="m-rs" data-anyway={params.get('anyway') === '1' ? '1' : '0'} data-testid="research">
-      {/* Below 768 this is the whole page until the reader asks for the rest. */}
-      <section className="m-rs-narrow" data-testid="research-redirect">
-        <h1 className="m-rs-narrow-title">{t('research.narrow.title')}</h1>
-        <p className="m-rs-narrow-body">{t('research.narrow.body')}</p>
-        <Link className="m-cta m-rs-narrow-cta" to="/app" data-press="1">
-          {t('research.narrow.open')}
-        </Link>
-        <button
-          type="button"
-          className="m-page-link m-rs-anyway"
-          data-testid="research-continue"
-          onClick={() => {
-            patch({ anyway: '1' });
-          }}
-        >
-          {t('research.narrow.anyway')}
-        </button>
-        <p className="m-rs-narrow-foot">{t('research.narrow.foot')}</p>
-      </section>
+  const runButton = (narrativeId: string, point: string | null, testid: string) =>
+    runOf.has(narrativeId) ? (
+      <button
+        type="button"
+        className="m-fchip m-rs-run"
+        data-testid={testid}
+        onClick={(event) => {
+          event.stopPropagation();
+          patch({ replay: narrativeId, id: narrativeId, node: point ?? '' });
+        }}
+        onKeyDown={(event) => {
+          event.stopPropagation();
+        }}
+      >
+        {t('research.replay.run')}
+      </button>
+    ) : null;
 
-      <div className="m-rs-main">
-        <header className="m-rs-head">
+  return (
+    <main className="m-rs" data-theme={theme} data-anyway={params.get('anyway') === '1' ? '1' : '0'} data-testid="research">
+      {/* The licensed fog, graded into the paper system. Decorative, and behind everything: the
+          working column sits on panels, so the image never carries text (design direction). */}
+      <div className="m-rs-bg" aria-hidden="true" />
+
+      {/* Below 768 this is the whole page until the reader asks for the rest. Not rendered at
+          768 and up: blueprint 4.3 has no redirect surface there, and the spec counts nodes. */}
+      {narrow && params.get('anyway') !== '1' ? (
+        <section className="m-rs-narrow g-paper-raised" data-testid="research-redirect">
+          <h1 className="m-rs-narrow-title">{t('research.narrow.title')}</h1>
+          <p className="m-rs-narrow-body">{t('research.narrow.body')}</p>
+          <Link className="m-cta m-rs-narrow-cta" to="/app" data-press="1">
+            {t('research.narrow.open')}
+          </Link>
+          <button
+            type="button"
+            className="m-page-link m-rs-anyway"
+            data-testid="research-continue"
+            onClick={() => {
+              patch({ anyway: '1' });
+            }}
+          >
+            {t('research.narrow.anyway')}
+          </button>
+          <p className="m-rs-narrow-foot">{t('research.narrow.foot')}</p>
+        </section>
+      ) : null}
+
+      <div className="m-rs-main" ref={root}>
+        <header className="m-rs-head g-paper-raised g-enter">
           <div className="m-brand">{t('common.wordmark')}</div>
           <h1 className="m-rs-title">{t('research.title')}</h1>
           <p className="m-rs-body">{t('research.body')}</p>
@@ -189,12 +295,12 @@ export default function Research() {
           <p className="m-rs-note">{failure === null ? t('common.loading') : t('common.failed', { detail: failure })}</p>
         ) : (
           <div className="m-rs-grid">
-            <section className="m-rs-filters" aria-label={t('research.filters')}>
+            <section className="m-rs-filters g-glass g-enter" aria-label={t('research.filters')}>
               <div className="m-rf">
                 <label className="m-rf-field m-rf-wide">
                   <span className="m-rf-label">{t('research.filter.search')}</span>
                   <input
-                    className="m-rf-in"
+                    className="m-rf-in g-well"
                     type="search"
                     data-testid="research-search"
                     placeholder={t('research.filter.search.ph')}
@@ -207,7 +313,7 @@ export default function Research() {
                 <label className="m-rf-field">
                   <span className="m-rf-label">{t('research.filter.pack')}</span>
                   <select
-                    className="m-rf-in"
+                    className="m-rf-in g-well"
                     data-testid="research-filter-pack"
                     value={filters.pack}
                     onChange={(event) => {
@@ -222,7 +328,7 @@ export default function Research() {
                 <label className="m-rf-field">
                   <span className="m-rf-label">{t('research.filter.lean')}</span>
                   <select
-                    className="m-rf-in"
+                    className="m-rf-in g-well"
                     data-testid="research-filter-lean"
                     value={filters.lean}
                     onChange={(event) => {
@@ -238,7 +344,7 @@ export default function Research() {
                 <label className="m-rf-field">
                   <span className="m-rf-label">{t('research.filter.from')}</span>
                   <input
-                    className="m-rf-in m-num"
+                    className="m-rf-in g-well m-num"
                     type="date"
                     data-testid="research-date-from"
                     value={from}
@@ -250,7 +356,7 @@ export default function Research() {
                 <label className="m-rf-field">
                   <span className="m-rf-label">{t('research.filter.to')}</span>
                   <input
-                    className="m-rf-in m-num"
+                    className="m-rf-in g-well m-num"
                     type="date"
                     data-testid="research-date-to"
                     value={to}
@@ -295,11 +401,12 @@ export default function Research() {
               )}
             </section>
 
-            <section className="m-rs-graph" aria-label={t('research.graph.label')}>
+            <section className="m-rs-graph g-glass g-enter" aria-label={t('research.graph.label')}>
               <Constellation
                 graph={graph}
                 inScope={scope.nodeIds}
                 selected={nodeId}
+                byNarrative={byId}
                 onSelect={(id) => {
                   const hit = graph.nodes.find((entry) => entry.id === id);
                   patch({ node: id, id: hit === undefined ? '' : (byId.get(hit.narrative_id)?.id ?? '') });
@@ -323,7 +430,7 @@ export default function Research() {
               )}
             </section>
 
-            <aside className="m-rs-rail" aria-label={t('research.rail.title')} data-testid="research-rail">
+            <aside className="m-rs-rail g-glass g-enter" aria-label={t('research.rail.title')} data-testid="research-rail">
               {chosen === undefined ? (
                 node === undefined ? (
                   <p className="m-rs-note">{t('research.rail.empty')}</p>
@@ -342,6 +449,7 @@ export default function Research() {
                     {chosen.outlet} · {dateLabel(chosen.published_date, lang)} · {t(LEAN_KEY[chosen.lean])}
                   </p>
                   <CountChips counts={chosen.counts} ctx={ctx} />
+                  {runButton(chosen.id, rowOf?.nodeId ?? null, 'replay-run-rail')}
 
                   <div className="m-rr-block m-num" data-testid="rail-velocity">
                     <h3 className="m-rr-h">{t('research.rail.velocity')}</h3>
@@ -367,6 +475,38 @@ export default function Research() {
                       </p>
                     ) : null}
                   </div>
+
+                  {/* Member link previews, blueprint 7.3 C7: cached og images render only as
+                      attributed previews, outlet named, linking out. A recorded fallback is a
+                      styled placeholder; nothing here can render a broken image. */}
+                  {previews.length === 0 ? null : (
+                    <div className="m-rr-block" data-testid="rail-previews">
+                      <h3 className="m-rr-h">{t('research.members.title')}</h3>
+                      <div className="m-og-row">
+                        {previews.map((entry) => (
+                          <a
+                            key={entry.member_url}
+                            className="m-og-card"
+                            href={entry.member_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {typeof entry.image_path === 'string' ? (
+                              <img
+                                className="m-og-img"
+                                src={entry.image_path}
+                                alt={t('research.members.alt', { outlet: entry.outlet })}
+                                loading="lazy"
+                              />
+                            ) : (
+                              <span className="m-og-ph">{t('research.members.none')}</span>
+                            )}
+                            <span className="m-og-outlet">{entry.outlet}</span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   {/* The real Echo renderer, silence state and citation resolution included. */}
                   <div className="m-rr-block">
@@ -462,8 +602,8 @@ export default function Research() {
               )}
             </aside>
 
-            <section className="m-rs-table">
-              <div className="m-rt-scroll">
+            <section className="m-rs-table g-enter">
+              <div className="m-rt-scroll g-glass">
                 <table className="m-rt" data-testid="research-table">
                   <thead>
                     <tr>
@@ -503,6 +643,7 @@ export default function Research() {
                                 {t('research.row.untested', { fields: row.verdict.untested.join(', ') })}
                               </span>
                             )}
+                            {runButton(row.narrative.id, row.nodeId, 'replay-run-row')}
                           </th>
                           <td>{row.narrative.outlet}</td>
                           <td className="m-num">{dateLabel(row.narrative.published_date, lang)}</td>
@@ -522,6 +663,18 @@ export default function Research() {
           </div>
         )}
       </div>
+
+      {openRun === undefined || replay === null ? null : (
+        <ReplayConsole
+          run={openRun}
+          runId={replay.run_id}
+          disclosure={replay.disclosure[lang]}
+          lang={lang}
+          onClose={() => {
+            patch({ replay: '' });
+          }}
+        />
+      )}
     </main>
   );
 }

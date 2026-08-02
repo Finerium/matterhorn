@@ -24,6 +24,7 @@ import type {
   Feed,
   Methodology,
   Narrative,
+  OgAttribution,
   Source,
   UrlIndex,
 } from '../../contracts/types';
@@ -32,6 +33,16 @@ import type {
 declare const __CONTENT_BASE__: string;
 
 export const CONTENT_BASE: string = typeof __CONTENT_BASE__ === 'string' ? __CONTENT_BASE__ : '/content';
+
+/**
+ * What to prefix an artifact's absolute asset path with (`/assets/og/members/...`).
+ *
+ * The build stages `public/assets/` into the dist root (scripts/stage-dist.ts), so in production
+ * the artifact's own path is already right and the prefix is empty. A served app reaches nothing
+ * outside `app/public`, so dev takes the same /@fs route the content root takes: same switch,
+ * same reason, and `public/` is the content root's sibling on disk.
+ */
+export const ASSET_BASE: string = CONTENT_BASE === '/content' ? '' : CONTENT_BASE.replace(/\/content$/, '/public');
 
 export type Pack = Feed['pack'];
 
@@ -44,6 +55,7 @@ export const PATHS = {
   corrections: 'corrections.json',
   caseLibrary: 'case_library.json',
   constellation: 'constellation.json',
+  og: 'og_attribution.json',
 } as const;
 
 /** Every pack this build carries a feed for. The Archive reads all of them at once. */
@@ -191,3 +203,4 @@ export const useUrlIndex = () => useJson<UrlIndex>(PATHS.urlIndex);
 export const useCorrections = () => useJson<Corrections>(PATHS.corrections);
 export const useCaseLibrary = () => useJson<CaseLibrary>(PATHS.caseLibrary);
 export const useConstellation = () => useJson<Constellation>(PATHS.constellation);
+export const useOgAttribution = () => useJson<OgAttribution>(PATHS.og);
