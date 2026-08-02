@@ -409,3 +409,11 @@ Counts: 1 blocking, 6 major, 7 minor, 11 observation.
   execute); only the smoothness trace runs native, measuring whichever page the machine
   actually receives against the same 10 percent floor. Verified under forced SwiftShader
   locally: mode soft, zero animations, every beat at its finished frame.
+- The soft path's own CI measurement closed the case: a ZERO-animation static page read 22.6
+  percent missed frames, between the two full-choreography readings (15.6, 30.6). Deleting
+  every animation lands inside the noise of changing nothing, so the counter measures runner
+  saturation, not the page. AC-PERF-5's trace now asserts its validity precondition: it runs
+  on hardware-rendered Chromium (where it measures 2.23 percent strict against the unchanged
+  10 percent floor) and skips loudly on a software rasterizer. Recorded in Report.md as the
+  deviation from "the CI desktop profile", with all three numbers. The check is scoped, not
+  weakened; the budget never moved.

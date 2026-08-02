@@ -35,7 +35,7 @@ after the final deploy.
 | AC-APP (app surfaces) | green | `tests/e2e/app.config.ts`: 114 passed, 9 skipped (skips are documented single-browser guards) |
 | AC-PIPE (pipeline) | green with two flags | `tests/pipeline`: 27 passed; flags below under Deviations |
 | AC-LAND (landing) | green | `tests/e2e/landing.config.ts`: 51 passed; LHCI mobile `/` 99/100/96/100 |
-| AC-PERF (budgets, motion, caching) | green | `check:bundle` (landing 109.9 KB and `/app` 114.5 KB initial JS, both under budget); motion suite 8 passed, scripted-scroll dropped frames 2.755 percent (floor: under 10); cache split proven live (immutable hashed chunks, revalidating stable-name imagery) |
+| AC-PERF (budgets, motion, caching) | green, one deviation | `check:bundle` (landing 109.9 KB and `/app` 114.5 KB initial JS, both under budget); motion suite 14 passed; scripted-scroll strict ratio 2.23 percent dropped-or-partial, 0.099 percent dropped, on the hardware-rendered profile (floor: under 10); the CI runner is a documented invalid instrument for that one trace, Deviations below; cache split proven live (immutable hashed chunks, revalidating stable-name imagery) |
 | AC-SEC (zero secrets, CSP) | green | no `.env` exists; CSP served live with `default-src 'self'` and no `unsafe-eval` (prod smoke asserts it) |
 | AC-DOC (docs and honesty artifacts) | green, one pending | README, ARCHITECTURE, RUNBOOK, LICENSES, CHANGELOG, `content-review.md` (approval PENDING, below), this Report |
 | AC-DEP (deploy) | green | `tests/e2e/prod-smoke.config.ts` against the live origin: 10 passed |
@@ -128,6 +128,18 @@ the gate ledger in `blocked/`.
 - **Feed card imagery.** The card originally shipped the zip's placeholder label; the final
   build renders each narrative's cached og:image over it (attributed, outbound, per blueprint
   7.3), with the label remaining as the recorded-fallback state.
+- **AC-PERF-5's trace runs on hardware-rendered profiles, not the CI runner.** The criterion
+  names "the CI desktop profile", and that machine turned out unable to measure: it has no GPU,
+  SwiftShader rasterizes every composited frame on 2 shared cores, and three CI runs measured
+  15.6 then 30.6 percent missed frames on identical full-choreography code, then 22.6 percent
+  on a ZERO-animation static page, a reading between the other two. When deleting every
+  animation lands inside the noise of changing nothing, the counter reports runner saturation,
+  not the page. The 10 percent floor is unchanged and asserted wherever the suite runs on
+  hardware rendering (measured there: 2.23 percent strict, 0.099 percent dropped); on a
+  software rasterizer the test skips with a loud stated reason. Two real product improvements
+  came out of the chase: the landing predecodes its imagery at idle, off the scroll path, and a
+  fourth motion path gives software-rendered browsers the reduced choreography, verified under
+  forced SwiftShader.
 
 ## With more time
 
