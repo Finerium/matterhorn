@@ -368,3 +368,19 @@ Counts: 1 blocking, 6 major, 7 minor, 11 observation.
   4. So the false CLAIM was removed rather than left standing: `pipeline/run.ts` said "A3 is the evidence that embeddings recover the same grouping" and now says what the eval measured instead.
   5. The floor still has the teeth that matter: a never-merge clusterer scores recall exactly 0.000 and fails at 0.001, so the exact mutation that produced the false green is red again. The real recall prints on every run as evidence, so the weakness is visible rather than buried in a threshold.
 - What would clear this properly: give A3 article text to embed, then raise the floor back to a quality bar. That belongs in Report.md as a named gap with its upgrade path, not as a silent pass.
+
+## 2026-08-02, the endgame
+
+- The first full CI run on the pushed tree came back red on three jobs, and the fresh-context
+  acceptance reviewer returned DO-NOT-TAG with two blockers. All five were fixed without
+  weakening a check; commit 8e42193 carries the details. The instructive one: the feed-card
+  og:image change passed the local suite because the preview's HTTP cache masked the offline
+  gap, and only CI's cold profile surfaced it. The fix (og imagery in the service worker's
+  content cache) is what the product promise wanted anyway: a visited page reloads offline
+  complete, image included.
+- The reviewer's honesty findings were accepted verbatim into Report.md: the block ledger is
+  an after-the-fact transcription in all seven records, not two; six of seven pin their
+  candidate hash; slot executions number 70 pairs plus 4 stage summaries. The Vercel CLI
+  drops an OIDC token file under .vercel/ on every deploy; it was deleted again after the
+  final redeploy, and the Report sentence now describes the recurrence instead of denying it.
+- Production redeployed with the offline fix; smoke 10 of 10 against the live origin.

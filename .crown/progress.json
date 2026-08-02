@@ -1,35 +1,51 @@
 {
-  "gate": "C",
-  "status": "in_progress",
-  "completed_ac": [
-    "gate0-green",
-    "gate1-green",
-    "gate2-green",
-    "AC-INV-1",
-    "AC-INV-2",
-    "AC-INV-3",
-    "AC-INV-4",
-    "AC-INV-5",
-    "AC-INV-7",
-    "AC-INV-10",
-    "AC-GRAM-1..8",
-    "AC-GRAM-9-partial",
-    "gate3-green",
-    "AC-APP-2..14",
-    "AC-APP-16..20",
-    "AC-APP-22",
-    "AC-APP-23",
-    "AC-GRAM-9"
+ "gate": "8",
+ "status": "complete",
+ "completed_ac": [
+  "gate0-green",
+  "gate1-green",
+  "gate2-green",
+  "AC-INV-1",
+  "AC-INV-2",
+  "AC-INV-3",
+  "AC-INV-4",
+  "AC-INV-5",
+  "AC-INV-7",
+  "AC-INV-10",
+  "AC-GRAM-1..8",
+  "AC-GRAM-9-partial",
+  "gate3-green",
+  "AC-APP-2..14",
+  "AC-APP-16..20",
+  "AC-APP-22",
+  "AC-APP-23",
+  "AC-GRAM-9",
+  "gateC-green",
+  "gate4-green",
+  "gate5-green",
+  "gate6-green",
+  "gate7-green",
+  "gate8-green",
+  "AC-PIPE-1..7 (AC-PIPE-3 honest-weakness flag, AC-PIPE-7 quota deviation flag)",
+  "AC-LAND-1..11",
+  "AC-PERF-1..8",
+  "AC-SEC-1..5",
+  "AC-DOC-1..6",
+  "AC-DEP-1..7 (AC-DEP-7 operator-pending)"
+ ],
+ "pending_stop_and_asks": [
+  "content-review.md editorial sign-off (operator)",
+  "physical Android share-target checklist (operator)"
+ ],
+ "updated": "2026-08-02T09:30:00+07:00",
+ "snapshot": {
+  "sources": 44,
+  "og_fetched": 8,
+  "og_fallback": [
+   "migrant-crime",
+   "usaid-deaths"
   ],
-  "pending_stop_and_asks": [],
-  "updated": "2026-07-29T02:30:00+07:00",
-  "snapshot": {
-    "sources": 44,
-    "og_fetched": 8,
-    "og_fallback": [
-      "migrant-crime",
-      "usaid-deaths"
-    ],
-    "land_assets": 11
-  }
+  "land_assets": 11
+ },
+ "live_url": "https://matterhorn-app.vercel.app"
 }
