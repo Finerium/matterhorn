@@ -102,9 +102,10 @@ logs. The defects they caught are in the Fixed section below, not omitted from i
   the styled placeholder remaining as the recorded-fallback state. Responsive: a build-time
   480px variant per image (scripts/resize-og.mjs) feeds the card's srcset; the radar and
   autopsy heroes load eagerly at high priority, everything below the fold lazily (AC-LAND-11).
-- The shell paints a static copy of the landing hero before the bundle executes, and keeps it
-  as an under-layer rather than removing it, because Chromium drops an LCP candidate whose
-  node is removed. Landing LCP moved from 2.3 s to 1.66 s on the mobile emulation. A hashed
+- The shell paints a static copy of the landing hero before the bundle executes; the hydrated
+  landing paints over it and then removes it in a mount effect, which runs after the real
+  hero's first paint, so the early paint keeps the LCP (Chromium only emits a new entry on a
+  larger paint). Landing LCP moved from 2.3 s to under 2 s on the mobile emulation. A hashed
   inline script (allowed by exact sha256 in the CSP) stamps the remembered dark theme
   pre-paint and strips the static hero on every non-landing route.
 - Production deployment at https://matterhorn-app.vercel.app with a ten-test smoke suite run

@@ -26,7 +26,7 @@
  * one page that quotes headlines with their links is the app. AC-SEC-4 is satisfied by having
  * nothing to satisfy it with, and the moment that changes the rel goes on with the href.
  */
-import type { ReactNode } from 'react';
+import { useEffect, type ReactNode } from 'react';
 import { Link } from 'react-router';
 import {
   FLEET,
@@ -113,6 +113,16 @@ export default function Landing() {
   // The direction's cursor system: writes the custom properties surface.css consumes, and only
   // on fine-pointer readers who have not asked for reduced motion.
   useCursor();
+  // The shell's static hero (app/index.html) held the LCP while this component booted. The
+  // TIMING of this removal is the whole point: an effect runs after this tree's first paint,
+  // and Chromium only emits a new LCP entry on a LARGER PAINT, so removing the (equal-sized)
+  // under-layer after the real hero has painted retracts nothing. Removing it before that
+  // paint, the way unmounting #root children did, makes the real hero the next entry and gives
+  // the whole boot back to the metric. Removal, not hiding, because the duplicate copy must
+  // leave the text and accessibility trees once the real hero carries it.
+  useEffect(() => {
+    document.getElementById('static-hero')?.remove();
+  }, []);
   const values: SlotValues = data ?? PENDING;
   const say = (parts: Line): string => fill(parts, values);
   const shots = grammarShots(product);

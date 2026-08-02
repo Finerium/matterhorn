@@ -394,3 +394,8 @@ Counts: 1 blocking, 6 major, 7 minor, 11 observation.
   because Chromium discards the LCP candidacy of a removed node: LCP 2303ms to 1663ms.
   The 25 visual baselines were updated only after eyeballing the diffs: the only change is
   the intended imagery, light and dark.
+- Refinement the cross-browser suite forced: a permanent under-layer duplicates the hero text
+  for text locators and the accessibility tree, so Landing now removes the static hero in a
+  mount effect instead. The effect runs after the real hero's first paint, and Chromium only
+  emits a new LCP entry on a larger paint, so the early entry still stands: measured 1980ms
+  after the change, margin 520ms.

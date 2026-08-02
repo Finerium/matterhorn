@@ -18,10 +18,11 @@
     <!-- The static hero's own styles. The landing's LCP is its H1, and a client-rendered H1
          waits for the whole bundle to execute (measured: 80 percent of LCP is render delay).
          This paints the same text at the same metrics as .m-l-eyebrow/.m-l-h1 the moment the
-         render-blocking CSS arrives, and then STAYS in the document as an under-layer:
-         Chromium drops an LCP candidate whose node is removed, so the hydrated landing covers
-         it (an opaque page over a z-index:-1 layer) rather than replacing it. Equal paint size
-         means no later candidate, so the early paint remains the LCP. Tokens come from
+         render-blocking CSS arrives, as a z-index:-1 under-layer the hydrated landing paints
+         over. Landing.tsx removes it in a mount effect, which runs AFTER the real hero's first
+         paint: Chromium only emits a new LCP entry on a larger paint, so a removal that no
+         larger paint follows leaves the early entry standing, while removal BEFORE that paint
+         (what unmounting #root children did) hands the metric the whole boot. Tokens come from
          tokens.css (render-blocking, in the head), so both themes resolve before boot. -->
     <style>
       #static-hero{position:absolute;top:0;left:0;right:0;min-height:100vh;z-index:-1;pointer-events:none;user-select:none;background:var(--paper,#f2f1ec);color:var(--ink,#1a1a18);font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',sans-serif;padding-top:calc(76px + clamp(44px,6vw,92px))}
@@ -31,10 +32,11 @@
     </style>
   </head>
   <body class="mth">
-    <!-- Outside #root so React never unmounts it, aria-hidden because the hydrated landing
-         repeats this text for real. Paragraphs, not headings: the page's one H1 arrives with
-         hydration. The copy is HERO.eyebrow and HERO.h1 from app/src/landing/copy.ts,
-         verbatim. -->
+    <!-- Outside #root so React's mount does not remove it BEFORE the real hero paints; the
+         landing removes it itself, one effect after that paint. aria-hidden because the
+         hydrated landing repeats this text for real until then. Paragraphs, not headings: the
+         page's one H1 arrives with hydration. The copy is HERO.eyebrow and HERO.h1 from
+         app/src/landing/copy.ts, verbatim. -->
     <section id="static-hero" aria-hidden="true">
       <div>
         <p class="sh-e">A VERDICT-FREE CAUSAL LITERACY ENGINE</p>

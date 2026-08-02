@@ -21,9 +21,10 @@
  * navigated into yet. Everything else here is small and stays in the entry.
  *
  * The landing's LCP (AC-LAND-8) cannot afford to wait for this boot: the shell paints a static
- * copy of the hero (app/index.html #static-hero) that stays in the document as an under-layer
- * on `/`, so its early paint remains the LCP candidate while the hydrated landing covers it.
- * Chromium drops a candidate whose node is removed, which is why it is covered, not removed.
+ * copy of the hero (app/index.html #static-hero) as an under-layer on `/`, and Landing removes
+ * it in a mount effect, which runs after the real hero's first paint. The timing is the trick:
+ * Chromium emits a new LCP entry only on a larger paint, so a removal nothing larger follows
+ * leaves the early entry standing. Landing.tsx carries the full reasoning.
  */
 import { Suspense, lazy, useState, type ReactNode } from 'react';
 import { Link, Route, Routes, useParams, useSearchParams } from 'react-router';
