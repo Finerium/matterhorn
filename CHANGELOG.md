@@ -5,7 +5,7 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this
 project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2026-07-29
+## [1.0.0] - 2026-08-02
 
 First release. Grouped by the gates of the build spine, because that is the order the work was
 done in and the order the evidence was produced in. Gate reviews are adversarial by design: a
@@ -89,6 +89,22 @@ logs. The defects they caught are in the Fixed section below, not omitted from i
 - Documentation: `README.md` and this changelog, joining `LICENSES.md`, `content-review.md`,
   `docs/understanding.md`, and `.crown/notes.md`, the running build log that records the
   decisions, the defects and the deviations as they happened rather than after the fact.
+- The visual overhaul, "soft paper, hard glass" (`docs/design-direction.md`): a neumorphic
+  paper base fused with glass layers across all surfaces, cursor-interactive throughout
+  (magnetic pulls, tilt, sheen), every effect gated behind `prefers-reduced-motion:
+  no-preference` with hover and fine-pointer media guards.
+- The replay console on the research desk (`docs/replay-protocol.md`): replays the recorded
+  pipeline run from `content/replay.json` under a pinned compression disclosure, real block
+  records included, and publishes to a phone by QR (`/n/{id}?published=1`) and to a
+  same-machine app tab over BroadcastChannel `mth-updates`; opening the autopsy consumes the
+  update. Proven by four protocol tests in the research suite.
+- The feed card renders each narrative's cached og:image as an attributed link preview, with
+  the styled placeholder remaining as the recorded-fallback state.
+- Production deployment at https://matterhorn-app.vercel.app with a ten-test smoke suite run
+  against the live origin (CSP live, absolute og images, sitemap and robots, PWA icons,
+  service worker registration, and the immutable-versus-revalidating cache split), plus
+  Lighthouse CI assertions green on mobile and desktop. `Report.md` tells the honest story,
+  including the gaps.
 
 ### Fixed
 
