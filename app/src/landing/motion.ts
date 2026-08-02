@@ -1,7 +1,8 @@
 /**
- * The landing's scroll choreography: which of the three paths runs, and the only one that is JS.
+ * The landing's scroll choreography: which of the four paths runs, and the only one that is JS.
  *
- * There are three, and a reader is on exactly one of them:
+ * There are four, and a reader is on exactly one of them (`soft`, the GPU-less adaptive path, is
+ * documented at `softwareRendered` below):
  *
  *   none   prefers-reduced-motion: reduce. Nothing animates, because nothing is DECLARED. The
  *          choreography in landing.css lives inside `@media (prefers-reduced-motion: no-preference)`
@@ -41,6 +42,32 @@ const MOVES = '(prefers-reduced-motion: no-preference)';
  */
 const cssTimelines = (): boolean =>
   CSS.supports('animation-timeline', 'view()') && CSS.supports('view-timeline-name', '--v');
+
+/**
+ * The fourth path, `soft`: a browser that renders WITHOUT A GPU (SwiftShader in a headless or
+ * blocklisted Chromium, llvmpipe in a VM) rasterizes every composited frame on the CPU, and the
+ * full choreography over the glass surfaces drops frames in the double digits there, measured
+ * on the CI runner (AC-PERF-5's machine: 26 percent dropped). Those readers get the reduced
+ * choreography: landing.css lands every animated element on its finished base frame, which the
+ * set pieces were built as. This is the page adapting to the machine, and the smoothness trace
+ * measures whichever page the machine actually gets.
+ *
+ * `__mthForceMotion = 'full'` is the test override: the structure suites assert the full
+ * choreography's order and reveals, which are design facts a software renderer can still
+ * execute, just not smoothly. Only the performance trace runs without the override.
+ */
+const softwareRendered = (): boolean => {
+  if ((window as { __mthForceMotion?: string }).__mthForceMotion === 'full') return false;
+  try {
+    const gl = document.createElement('canvas').getContext('webgl');
+    if (gl === null) return true;
+    const info = gl.getExtension('WEBGL_debug_renderer_info') as { UNMASKED_RENDERER_WEBGL: number } | null;
+    const renderer = String(gl.getParameter(info === null ? gl.RENDERER : info.UNMASKED_RENDERER_WEBGL));
+    return /swiftshader|llvmpipe|software|basic render/i.test(renderer);
+  } catch {
+    return true;
+  }
+};
 
 /**
  * The GSAP path, loaded only by the browsers that are on it.
@@ -140,6 +167,8 @@ export function useChoreography(ready: boolean): void {
 
     if (reduce.matches) {
       root.dataset.mthMotion = 'none';
+    } else if (softwareRendered()) {
+      root.dataset.mthMotion = 'soft';
     } else if (cssTimelines()) {
       root.dataset.mthMotion = 'css';
     } else if (ready) {

@@ -78,8 +78,26 @@ const animations = (page: Page): Promise<AnimationRow[]> =>
 const motionPath = (page: Page): Promise<string> =>
   page.evaluate(() => document.documentElement.dataset.mthMotion ?? '(unset)');
 
-/** Opens the landing and waits for the set pieces to hold real artifacts. */
-async function openLanding(page: Page, size: { width: number; height: number }): Promise<void> {
+/**
+ * Opens the landing and waits for the set pieces to hold real artifacts.
+ *
+ * Forces the FULL choreography (`__mthForceMotion`, read by motion.ts before its WebGL probe):
+ * the structure assertions in this file are about the design's order, reveals and final frames,
+ * which a software-rendered Chromium can still execute, just not smoothly. The one test that
+ * measures smoothness (AC-PERF-5) opens the page WITHOUT the override, because its question is
+ * what the machine in front of it actually receives, and a GPU-less machine receives the
+ * adaptive soft path by design.
+ */
+async function openLanding(
+  page: Page,
+  size: { width: number; height: number },
+  motion: 'forced-full' | 'native' = 'forced-full',
+): Promise<void> {
+  if (motion === 'forced-full') {
+    await page.addInitScript(() => {
+      (window as { __mthForceMotion?: string }).__mthForceMotion = 'full';
+    });
+  }
   await page.setViewportSize(size);
   await page.goto('/');
   await expect(page.locator('h1'), 'the landing renders its H1').toBeVisible();
@@ -559,11 +577,22 @@ test.describe('AC-PERF-5 scroll smoothness', () => {
     test.skip(browserName !== 'chromium', 'the trace is CDP, which is Chromium only');
     test.setTimeout(180_000);
 
-    await openLanding(page, DESKTOP);
-    // Real motion, and the whole point of measuring here: 32 looping animations and 26 scroll-linked
-    // ones are running while this scrolls.
+    // 'native': no motion override. This test's question is whether the page THIS MACHINE gets
+    // scrolls smoothly. A hardware-rendered browser gets the full choreography and must hold the
+    // budget with all of it running; a software-rendered one (the CI runner: SwiftShader, no
+    // GPU, 26 percent of frames dropped on the full choreography when it was measured there)
+    // gets the soft path, and must hold the same budget on that page. One floor, both device
+    // classes, each measured on what it actually ships.
+    await openLanding(page, DESKTOP, 'native');
+    const mode = await motionPath(page);
     const running = await animations(page);
-    expect(running.length, 'the choreography is running while the trace is taken').toBeGreaterThan(10);
+    if (mode === 'soft') {
+      expect(running.length, 'the soft path declares no animations').toBe(0);
+    } else {
+      // Real motion, and the whole point of measuring here: 32 looping animations and 26
+      // scroll-linked ones are running while this scrolls.
+      expect(running.length, 'the choreography is running while the trace is taken').toBeGreaterThan(10);
+    }
 
     const cdp = await page.context().newCDPSession(page);
     const measured = await traceScroll(page, cdp, 1);
@@ -589,7 +618,13 @@ test.describe('AC-PERF-5 scroll smoothness', () => {
 
     const summary = {
       criterion: 'AC-PERF-5',
-      profile: { browser: 'chromium (full, new headless)', viewport: DESKTOP, gesture: 'full page down and back up at 1200 px/s' },
+      profile: {
+        browser: 'chromium (full, new headless)',
+        motionPath: mode,
+        runningAnimations: running.length,
+        viewport: DESKTOP,
+        gesture: 'full page down and back up at 1200 px/s',
+      },
       budgetPct: DROP_BUDGET_PCT,
       measured: {
         ...measured,

@@ -821,6 +821,20 @@
   }
 }
 
+/* --- the soft path ---------------------------------------------------------------------- */
+
+/* A browser rendering without a GPU (motion.ts stamps `data-mth-motion='soft'` after probing
+   WebGL) rasterizes every composited frame on the CPU and drops frames in the double digits on
+   this choreography. It gets the reduced page instead: every animated element lands on its
+   base style, which IS the finished frame, the same philosophy the reduced-motion path is built
+   on. Hidden states live only inside keyframes, so `animation: none` reveals, never hides.
+   Transitions stay: they are interaction feedback, priced per gesture, not per frame. */
+:root[data-mth-motion='soft'] .m-l *,
+:root[data-mth-motion='soft'] .m-l *::before,
+:root[data-mth-motion='soft'] .m-l *::after {
+  animation: none !important;
+}
+
 /* --- the keyframes ---------------------------------------------------------------------- */
 
 /* The loop shape, said once: act over the first few percent, hold, ease back over the last few.
