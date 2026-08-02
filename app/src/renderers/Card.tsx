@@ -22,6 +22,7 @@
  */
 import type { HTMLAttributes, KeyboardEvent, MouseEvent, ReactNode } from 'react';
 import type { DerivedCounts, DuelingPanel, Narrative } from '../../../contracts/types';
+import { ASSET_BASE } from '../content';
 import { CardContractError, resolveAll, t, type RenderCtx } from './ctx';
 import { COUNT_CHIPS, dateLabel, UI } from './copy';
 
@@ -136,6 +137,22 @@ export default function Card({ narrative, variant, ctx, onTap, meta }: CardProps
   // The zip's imgLabel, hero only: the placeholder names the outlet whose og:image belongs in
   // the slot. The compact card's 72px square carries the bare label, the way the zip draws it.
   const og = variant === 'hero' ? `${t(ctx, UI.ogPlaceholder)} · ${narrative.outlet}` : t(ctx, UI.ogPlaceholder);
+  // The slot's real content, blueprint 7.3: the article's cached og:image, attributed by the
+  // outlet name this same card draws in metaText, outbound via the card's Original affordance.
+  // The label stays underneath as the recorded-fallback state: a narrative whose fetch is
+  // `fallback` in og_attribution.json has no file here, the img 404s, and the placeholder shows.
+  const ogImg = (
+    <img
+      className="m-card-ogimg"
+      src={`${ASSET_BASE}/assets/og/${narrative.id}.jpg`}
+      alt=""
+      loading="lazy"
+      decoding="async"
+      onError={(event) => {
+        (event.target as HTMLImageElement).style.display = 'none';
+      }}
+    />
+  );
   // The zip's famLine. Section 6.4 calls the zip's family `note` the `skeleton`; same string.
   const famLine = `${narrative.family.skeleton}: ${narrative.family.members.map((m) => m.outlet).join(' · ')}`;
   // CF-1, as resolved in docs/understanding.md: the zip's compact teaser was fed by an authored
@@ -196,14 +213,20 @@ export default function Card({ narrative, variant, ctx, onTap, meta }: CardProps
           {dueling === undefined ? null : <div className="m-card-teaser">{t(ctx, dueling.rule_line)}</div>}
           {provenance}
         </div>
-        <div className="m-card-c-og">{og}</div>
+        <div className="m-card-c-og">
+          {og}
+          {ogImg}
+        </div>
       </article>
     );
   }
 
   return (
     <article className="m-card" data-press="1">
-      <div className="m-card-og">{og}</div>
+      <div className="m-card-og">
+        {og}
+        {ogImg}
+      </div>
       <div className="m-card-body">
         {metaRow}
         <div className="m-card-head" {...tap('open', '')}>
