@@ -41,7 +41,7 @@ describe('consoleLines is the record, in the record order', () => {
 
     expect(lines.map((line) => line.kind)).toEqual([
       // A1 to A9: the curation stages and the working slots, each followed by its output note.
-      ...Array<string>(9).fill(['slot', 'note']).flat(),
+      ...Array<string[]>(9).fill(['slot', 'note']).flat(),
       // The judges' started-work lines carry no note; their notes ride the verdicts.
       'slot',
       'slot',
@@ -68,7 +68,7 @@ describe('consoleLines is the record, in the record order', () => {
     const { lines, token } = consoleLines(run, 'en', t);
 
     expect(lines.map((line) => line.kind)).toEqual([
-      ...Array<string>(9).fill(['slot', 'note']).flat(),
+      ...Array<string[]>(9).fill(['slot', 'note']).flat(),
       'slot',
       'slot',
       'block',
