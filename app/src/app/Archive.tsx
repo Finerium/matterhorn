@@ -194,8 +194,12 @@ export default function Archive({ state, nav }: { state: AppState; nav: Nav }) {
                     nav.patch({ node: state.node === node.id ? null : node.id });
                   })}
                 />
+                {/* The dot wears its slug, the desktop constellation's ruling: a full headline is
+                    forty to sixty characters and this viewBox is a hundred units wide, so drawn
+                    headlines clip at the card and pile up over the ring. The headline stays the
+                    node's accessible name above, and the selection panel below says it in full. */}
                 <text x={text.x} y={text.y} textAnchor={text.anchor} className="m-const-label">
-                  {label}
+                  {node.narrative_id}
                 </text>
               </g>
             );
