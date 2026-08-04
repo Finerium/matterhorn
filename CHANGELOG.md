@@ -5,6 +5,46 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this
 project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-08-04
+
+The replay console learns to show the work, not just the workers, and the desk states its
+operating rhythm honestly.
+
+### Added
+
+- **Replay output notes, A1 to A13.** `pipeline/runs/run-2026-07-29/voices.json`: an editorial
+  distillation of each agent's recorded output, per narrative per role, both locales, written
+  after the run from the slot and stage files and adversarially verified against them (every
+  count recounted, every invented phrase refuted; the corrections are in the authoring log).
+  `build-replay` merges the notes into `content/replay.json`, so schema validation and the
+  lexicon lint cover them like any other user-facing copy. The console renders a note as an
+  indented line under its agent line; a note lands whole after one beat rather than typing.
+- **The whole span replays.** The curation stages (A1 to A4) and the release pair (A12, A13)
+  now appear as console lines, each only when the run directory or the published artifact set
+  carries that stage's evidence, marked `deterministic` where a slot line carries a model id.
+- **The desk's operating rhythm.** Three labelled registers in the research desk header: the
+  recorded run's facts, the reader-demand queue on this device (unresolved links from the paste
+  box and the share target now persist to `mth:queue`, newest first, capped at 20), and the
+  operating model stated as a plan. An ambient ticker murmurs recorded run lines under a chip
+  naming the run; reduced motion holds it still, a hidden tab skips its ticks.
+- **Build version on the desk**, from the one `package.json` field a release bumps.
+- e2e: every recorded narrative's replay is exercised (notes counted against the record, A1 and
+  A13 lines asserted); the desk rhythm panel and queue count have their own coverage.
+
+### Fixed
+
+- **Constellation teaser labels clipped and collided.** The Archive teaser drew full headlines
+  in a 100-unit viewBox; side labels ran off the card and the top labels piled up. The dot now
+  wears its permalink slug, the desktop constellation's own ruling; the headline stays the
+  node's accessible name and the selection panel below says it in full.
+- The replay disclosure names the output notes as an editorial distillation.
+
+### Attempted, unchanged
+
+- Refetching og images for the two EN fallback cards: cato.org still serves an anti-bot
+  challenge and thelancet.com still 403s automated clients, so the recorded honest fallbacks
+  stand.
+
 ## [1.0.0] - 2026-08-02
 
 First release. Grouped by the gates of the build spine, because that is the order the work was
