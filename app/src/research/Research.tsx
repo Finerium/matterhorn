@@ -33,12 +33,12 @@
  * glass. The cursor system below is the direction's shared listener, copied per route on
  * purpose: three copies of twenty lines beat one eager chunk shared across lazy routes.
  */
-import { useEffect, useMemo, useRef, useSyncExternalStore, type KeyboardEvent } from 'react';
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore, type KeyboardEvent } from 'react';
 import { Link, useSearchParams } from 'react-router';
-import type { OgAttribution, Replay, Source } from '../../../contracts/types';
+import type { Lang, OgAttribution, Replay, Source } from '../../../contracts/types';
 import { useLang, useT } from '../i18n';
 import { PATHS, useArchive, useConstellation, useJson } from '../content';
-import { LS, readStore } from '../app/state';
+import { LS, queuedLinks, readStore } from '../app/state';
 import { makeCtx, type Theme } from '../renderers/ctx';
 import { CountChips, headlineOf } from '../renderers/Card';
 import { dateLabel } from '../renderers/copy';
@@ -76,6 +76,46 @@ type Patch = Record<string, string>;
 
 /** Blueprint 4.3's floor. Kept in step by hand with the belt `@media` rule in research.css. */
 const NARROW = '(max-width: 767.98px)';
+
+declare const __MTH_VERSION__: string;
+
+/** Every recorded line the desk can murmur while idle: slots, blocks and verdicts, in run order. */
+const tickerLines = (replay: Replay, lang: Lang): string[] =>
+  replay.narratives.flatMap((run) =>
+    run.events.flatMap((event) => {
+      if (event.kind === 'slot') return [`${run.narrative_id} · ${event.role} · ${event.label[lang]}`];
+      if (event.kind === 'block') return [`${run.narrative_id} · gate ${event.gate}: block`];
+      if (event.kind === 'verdict') return [`${run.narrative_id} · gate ${event.gate}: ${event.verdict}`];
+      return [];
+    }),
+  );
+
+/**
+ * The idle murmur: one recorded line at a time, cycled slowly, under a chip that names the run
+ * it is replaying. Honesty of simulation: nothing here pretends to be live work, the chip and
+ * the cadence lines above it say recorded and plan out loud. Reduced motion holds the first
+ * line still; a hidden tab skips its ticks rather than animating for nobody.
+ */
+function Ticker({ replay, lang, label }: { replay: Replay; lang: Lang; label: string }) {
+  const lines = useMemo(() => tickerLines(replay, lang), [replay, lang]);
+  const [at, setAt] = useState(0);
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const timer = setInterval(() => {
+      if (!document.hidden) setAt((n) => n + 1);
+    }, 4000);
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+  if (lines.length === 0) return null;
+  return (
+    <p className="m-rs-ticker" data-testid="research-ticker">
+      <span className="m-rs-ticker-chip m-num">{label}</span>
+      <span className="m-rs-ticker-line m-num">{lines[at % lines.length]}</span>
+    </p>
+  );
+}
 
 const subscribeNarrow = (onChange: () => void): (() => void) => {
   const query = window.matchMedia(NARROW);
@@ -286,9 +326,31 @@ export default function Research() {
           <div className="m-brand">{t('common.wordmark')}</div>
           <h1 className="m-rs-title">{t('research.title')}</h1>
           <p className="m-rs-body">{t('research.body')}</p>
+          {/* The operating rhythm, three honest registers: what is recorded, what is waiting on
+              this device, and what is a plan said as a plan. The ticker below murmurs the
+              recorded run; nothing on this desk simulates live agents. */}
+          {replay === null ? null : (
+            <div className="m-rs-cad" data-testid="research-cadence">
+              <p className="m-rs-cad-line m-num">
+                {t('research.cadence.recorded', {
+                  run: replay.run_id,
+                  n: replay.narratives_total,
+                  b: replay.blocks_total,
+                })}
+              </p>
+              <p className="m-rs-cad-line m-num" data-testid="research-queue">
+                {t('research.cadence.queue', { n: queuedLinks().length })}
+              </p>
+              <p className="m-rs-cad-line">{t('research.cadence.plan')}</p>
+              <Ticker replay={replay} lang={lang} label={t('research.ticker.label', { run: replay.run_id })} />
+            </div>
+          )}
           <Link className="m-page-link" to="/app">
             {t('route.home.link')}
           </Link>
+          <p className="m-rs-ver m-num" data-testid="research-version">
+            {t('research.version', { v: __MTH_VERSION__ })}
+          </p>
         </header>
 
         {!ready ? (

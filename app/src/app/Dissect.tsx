@@ -24,7 +24,7 @@ import { trapRef } from '../trap';
 import { makeCtx } from '../renderers/ctx';
 import { CountChips, headlineOf } from '../renderers/Card';
 import { resolveUrl, roleUrl } from './resolve';
-import { FRESH_CAP, freshUsed, joinFeed, markFresh, type AppState } from './state';
+import { FRESH_CAP, freshUsed, joinFeed, markFresh, recordQueued, type AppState } from './state';
 import type { Nav } from './Onboarding';
 
 /**
@@ -80,6 +80,7 @@ export default function Dissect({ state, nav }: { state: AppState; nav: Nav }) {
       (data) => {
         const hit = resolveUrl(data, url);
         if (hit === null) {
+          recordQueued(url);
           nav.patch({ screen: 'queue', sheet: null });
           return;
         }
@@ -102,6 +103,7 @@ export default function Dissect({ state, nav }: { state: AppState; nav: Nav }) {
       () => {
         // An index that cannot be read cannot resolve a link, and a link that does not resolve
         // waits in the queue. Nothing is invented in the meantime, which is the same answer.
+        recordQueued(url);
         nav.patch({ screen: 'queue', sheet: null });
       },
     );

@@ -30,6 +30,8 @@ const APP_ROOT = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(APP_ROOT, '..');
 const CONTENT_ROOT = join(REPO_ROOT, 'content');
 const SEED_ROOT = join(REPO_ROOT, 'tests', 'fixtures', 'seed');
+// The one version string the product shows, from the one place a release bumps it.
+const VERSION = (JSON.parse(readFileSync(join(REPO_ROOT, 'package.json'), 'utf8')) as { version: string }).version;
 
 // Blueprint 6.7, FROZEN. Field values are quoted from the blueprint; the share_target action
 // stays relative (research Section 4 pitfall) and the icon set carries both purposes.
@@ -150,6 +152,7 @@ export default defineConfig(({ command, mode }) => {
     define: {
       __CONTENT_BASE__: JSON.stringify(serving ? `/@fs${CONTENT_ROOT}` : '/content'),
       __MTH_DEV__: JSON.stringify(serving),
+      __MTH_VERSION__: JSON.stringify(VERSION),
       ...(harness ? { __SEED_ROOT__: JSON.stringify(`/@fs${SEED_ROOT}`) } : {}),
     },
     // host pinned to IPv4: vite's default `localhost` binds ::1 only on some machines, and the

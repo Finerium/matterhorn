@@ -491,6 +491,9 @@ test.describe('AC-APP-6 dissect flows', () => {
     await expect(queue).toContainText(FROZEN.queueBody);
     await expect(page.locator('[data-stage]'), 'nothing is invented while a link waits').toHaveCount(0);
     await expect(page.locator('[data-screen="progress"]')).toHaveCount(0);
+    // The miss is recorded: the reader-demand queue the research desk counts carries the URL.
+    const queued = await page.evaluate(() => localStorage.getItem('mth:queue') ?? '');
+    expect(queued, 'the unresolved link joins the reader-demand queue').toContain(UNKNOWN_URL);
   });
 
   test('the third fresh attempt in a day opens the rate-limit sheet', async ({ page }) => {

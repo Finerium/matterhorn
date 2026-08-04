@@ -158,6 +158,8 @@ export const LS = {
   recents: 'mth:recents',
   /** `1` once the install hint has been dismissed. */
   installed: 'mth:install',
+  /** Links that resolved to nothing, most recent first: the reader-demand queue, device-local. */
+  queue: 'mth:queue',
 } as const;
 
 /**
@@ -191,6 +193,17 @@ function readList(key: string, fallback: string[]): string[] {
   } catch {
     return fallback;
   }
+}
+
+// --- the reader-demand queue -------------------------------------------------------------
+
+/** The links waiting on this device for an editorial run. The research desk shows the count. */
+export const queuedLinks = (): string[] => readList(LS.queue, []);
+
+/** ponytail: cap 20, newest first; a demand signal, not an archive of every miss. */
+export function recordQueued(url: string): void {
+  if (url === '') return;
+  writeStore(LS.queue, JSON.stringify([url, ...queuedLinks().filter((old) => old !== url)].slice(0, 20)));
 }
 
 // --- the update map, docs/replay-protocol.md --------------------------------------------

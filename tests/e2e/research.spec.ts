@@ -485,3 +485,28 @@ test.describe('blueprint 3.2 item 18, export CSV and JSON of graph data', () => 
     expect(exported, 'the CSV is the filtered view, not the whole graph').toEqual(expected);
   });
 });
+
+test.describe('the desk states its rhythm honestly', () => {
+  test('recorded run, device queue, the plan said as a plan, and the build version', async ({ page }) => {
+    await page.goto('/research');
+    const cadence = page.getByTestId('research-cadence');
+    await expect(cadence).toBeVisible();
+    await expect(cadence).toContainText('run-2026-07-29');
+    await expect(cadence, 'the operating model is labelled a plan, never live state').toContainText('plan');
+    await expect(page.getByTestId('research-queue')).toContainText(/\d/);
+    await expect(page.getByTestId('research-ticker'), 'the idle murmur names the run it replays').toContainText(
+      'run-2026-07-29',
+    );
+    await expect(page.getByTestId('research-version')).toContainText(/Build \d+\.\d+\.\d+/);
+  });
+
+  test('a queued link on this device raises the count the desk shows', async ({ page }) => {
+    // The write path (an unknown URL entering mth:queue) is proven in flows.spec, which runs
+    // where the paste box lives; here the desk's read of the same record is what is on trial.
+    await page.addInitScript(() => {
+      localStorage.setItem('mth:queue', JSON.stringify(['https://example.com/a-story-the-archive-does-not-carry']));
+    });
+    await page.goto('/research');
+    await expect(page.getByTestId('research-queue')).toContainText('1');
+  });
+});

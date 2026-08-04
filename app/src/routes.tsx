@@ -26,12 +26,12 @@
  * Chromium emits a new LCP entry only on a larger paint, so a removal nothing larger follows
  * leaves the early entry standing. Landing.tsx carries the full reasoning.
  */
-import { Suspense, lazy, useState, type ReactNode } from 'react';
+import { Suspense, lazy, useEffect, useState, type ReactNode } from 'react';
 import { Link, Route, Routes, useParams, useSearchParams } from 'react-router';
 import type { Lang } from '../../contracts/types';
 import { LangContext, useT } from './i18n';
 import { useUrlIndex } from './content';
-import { LS, readStore, type AppState } from './app/state';
+import { LS, readStore, recordQueued, type AppState } from './app/state';
 import Boundary from './app/Boundary';
 import MethodologyBody from './app/Methodology';
 import { resolveUrl, shareCandidate } from './app/resolve';
@@ -111,6 +111,12 @@ function Share() {
   const url = params.get('url') ?? '';
   const candidate = shareCandidate(url, text);
   const hit = data === null || candidate === '' ? null : resolveUrl(data, candidate);
+
+  // A shared link that resolves to nothing joins the reader-demand queue, the same record the
+  // paste box writes: the desk's queue count covers both doors into the miss state.
+  useEffect(() => {
+    if (data !== null && hit === null && candidate !== '') recordQueued(candidate);
+  }, [data, hit, candidate]);
 
   if (data === null) {
     return (
