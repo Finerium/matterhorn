@@ -115,6 +115,50 @@
   margin-top: 14px;
   text-wrap: pretty;
 }
+/* The operating rhythm strip: recorded facts, the device queue, the plan said as a plan. */
+.m-rs-cad {
+  border-top: 1px solid var(--hair2);
+  margin-top: 6px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-width: 84ch;
+}
+.m-rs-cad-line {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--sub);
+  text-wrap: pretty;
+}
+.m-rs-ticker {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 6px;
+  min-width: 0;
+}
+.m-rs-ticker-chip {
+  flex: none;
+  font-size: 10.5px;
+  letter-spacing: 0.02em;
+  color: var(--sub);
+  border: 1px solid var(--hair2);
+  border-radius: 999px;
+  padding: 1px 8px;
+  white-space: nowrap;
+}
+.m-rs-ticker-line {
+  font-size: 12px;
+  color: var(--body);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.m-rs-ver {
+  font-size: 11px;
+  color: var(--sub);
+}
 .m-rs :focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 2px;
@@ -656,6 +700,12 @@
   overflow-wrap: break-word;
 }
 .m-rp-line[data-kind='slot'] { color: var(--ink); }
+.m-rp-line[data-kind='note'] {
+  color: var(--sub);
+  padding-left: 1.1rem;
+  border-left: 1px solid var(--hair2);
+  margin-left: 0.15rem;
+}
 /* The one accent on this page: a recorded gate block, in the missing red it means everywhere. */
 .m-rp-line[data-kind='block'] { color: var(--mis); }
 .m-rp-line[data-kind='refix'] { color: var(--sub); }

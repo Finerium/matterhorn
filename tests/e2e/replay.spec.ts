@@ -14,6 +14,7 @@
  * completed timeline instantly and these tests read the finished state rather than racing a
  * typewriter.
  */
+import { readFileSync } from 'node:fs';
 import { expect, test } from '@playwright/test';
 
 test.describe('the replay console', () => {
@@ -70,5 +71,36 @@ test.describe('the replay console', () => {
     const persisted = await page.evaluate(() => localStorage.getItem('mth:updated') ?? '');
     expect(persisted, 'opening the autopsy consumes the persisted update').not.toContain('mbg-stop');
     await expect(page.getByTestId('updated-badge').first(), 'but the badge survives the visit').toBeVisible();
+  });
+});
+
+test.describe('the whole span, A1 to A13, with output notes', () => {
+  test('every recorded narrative replays: curation lines, output notes, release lines', async ({ page }) => {
+    const replay = JSON.parse(
+      readFileSync(new URL('../../content/replay.json', import.meta.url), 'utf8'),
+    ) as {
+      narratives: Array<{
+        narrative_id: string;
+        events: Array<{ kind: string; role?: string; note?: { en: string; id: string }; token?: string }>;
+      }>;
+    };
+    expect(replay.narratives.length, 'the run log carries ten narratives').toBe(10);
+    for (const run of replay.narratives) {
+      const notes = run.events.filter((event) => event.note !== undefined).length;
+      expect(notes, `${run.narrative_id} carries output notes for its agents`).toBeGreaterThan(0);
+
+      await page.goto(`/research?replay=${run.narrative_id}`);
+      const pane = page.getByTestId('replay-console');
+      await expect(pane).toBeVisible();
+      await expect(page.getByTestId('replay-disclosure')).toContainText('distillation');
+      // The record decides the lines: every note in the data is a note on screen, and the span
+      // runs from the Scout's curation to the Librarian's filing.
+      await expect(pane.locator('[data-kind="note"]')).toHaveCount(notes);
+      await expect(pane).toContainText('A1 ·');
+      await expect(pane).toContainText('A13 ·');
+      if (run.events.some((event) => event.kind === 'published' && event.token !== '')) {
+        await expect(page.getByTestId('replay-published')).toBeVisible();
+      }
+    }
   });
 });

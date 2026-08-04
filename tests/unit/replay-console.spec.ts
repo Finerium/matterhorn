@@ -2,10 +2,11 @@
  * PROVES: the replay console's line-builder is a faithful reading of content/replay.json.
  *
  * The console's honesty claim (docs/replay-protocol.md, blueprint 3.4) is that every fact on
- * screen is the record: roles, labels, models, block reasons, verdict summaries, the token.
- * The one line the builder adds is the refix connective between a block round and the pass
- * that follows it, so that is the one line these cases pin down: it appears exactly once per
- * contiguous block round and never anywhere else.
+ * screen is the record: roles, labels, models, block reasons, verdict summaries, output notes,
+ * the token. The one line the builder adds is the refix connective between a block round and
+ * the pass that follows it, so that is the one line these cases pin down: it appears exactly
+ * once per contiguous block round and never anywhere else. A note line renders only when its
+ * event carries one, and the judges' notes ride their verdicts, never their started-work lines.
  *
  * The cases run against the REAL published record read off disk, the research e2e's idiom: a
  * regenerated replay.json changes both sides of every assertion at once, so the suite cannot
@@ -33,15 +34,26 @@ const runOf = (id: string): ReplayRun => {
 };
 
 describe('consoleLines is the record, in the record order', () => {
-  it('a clean run is slots then pass verdicts, and nothing else', () => {
+  it('a clean run is slots with their output notes, then noted pass verdicts, then the release pair', () => {
     const run = runOf('mbg-cut');
     expect(run.blocked_rounds, 'mbg-cut is the recorded clean run').toBe(0);
     const { lines, token } = consoleLines(run, 'en', t);
 
     expect(lines.map((line) => line.kind)).toEqual([
-      ...Array<string>(7).fill('slot'),
+      // A1 to A9: the curation stages and the working slots, each followed by its output note.
+      ...Array<string>(9).fill(['slot', 'note']).flat(),
+      // The judges' started-work lines carry no note; their notes ride the verdicts.
+      'slot',
+      'slot',
       'verdict',
+      'note',
       'verdict',
+      'note',
+      // A12 and A13, the release pair, noted like the working slots.
+      'slot',
+      'note',
+      'slot',
+      'note',
     ]);
     expect(token).toBe('3fdc8c32d2bf');
 
@@ -56,11 +68,19 @@ describe('consoleLines is the record, in the record order', () => {
     const { lines, token } = consoleLines(run, 'en', t);
 
     expect(lines.map((line) => line.kind)).toEqual([
-      ...Array<string>(7).fill('slot'),
+      ...Array<string>(9).fill(['slot', 'note']).flat(),
+      'slot',
+      'slot',
       'block',
       'refix',
       'verdict',
+      'note',
       'verdict',
+      'note',
+      'slot',
+      'note',
+      'slot',
+      'note',
     ]);
     expect(token).toBe('f2468186c3b5');
 

@@ -11,6 +11,22 @@ visible for the whole replay (blueprint 3.4 honesty of simulation). No durations
 the console paces events theatrically and the disclosure says the pacing is compressed and not
 to scale.
 
+The console shows the whole span A1 to A13. The curation stages (A1 to A4) and the release pair
+(A12, A13) run as deterministic code, so their lines carry `deterministic` where a slot line
+carries a model id, and each line appears only when the run directory or the published artifact
+set actually carries that stage's evidence for the narrative (stage records, gate tokens, the
+constellation node).
+
+Output notes: `pipeline/runs/<run>/voices.json`, when present, adds a `note {en, id}` under slot
+and verdict events: what that agent's recorded output actually contains, said for readers. The
+file is an editorial distillation written AFTER the run from the slot and stage files, not a
+pipeline artifact, and the disclosure names it as a distillation. Every fact in a note must
+trace to the run directory; the notes ship through `content/replay.json`, so schema validation
+and the lexicon lint (validate-content check 5) cover them like any other user-facing copy. The
+console renders a note as an indented line under its agent line; a note lands whole after one
+beat rather than typing, because a typed 200-character note per agent would add a minute of
+theatre per replay.
+
 ## Channel: same machine, automatic
 
 - BroadcastChannel name: `mth-updates`

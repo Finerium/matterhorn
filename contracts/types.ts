@@ -347,9 +347,9 @@ export interface OgAttribution {
 // the label the console must keep visible for the whole replay.
 
 export type ReplayEvent =
-  | { kind: 'slot'; role: string; label: { en: string; id: string }; model: string; at: string }
+  | { kind: 'slot'; role: string; label: { en: string; id: string }; model: string; at: string; note?: { en: string; id: string } }
   | { kind: 'block'; role: string; gate: 'symmetry' | 'fidelity'; judged_by: string; reason: string }
-  | { kind: 'verdict'; role: string; gate: 'symmetry' | 'fidelity'; verdict: 'pass' | 'block'; model: string; summary: string }
+  | { kind: 'verdict'; role: string; gate: 'symmetry' | 'fidelity'; verdict: 'pass' | 'block'; model: string; summary: string; note?: { en: string; id: string } }
   | { kind: 'published'; token: string };
 
 export interface ReplayRun {

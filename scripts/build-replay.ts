@@ -46,6 +46,10 @@ function parseArgs(argv: string[]): { run: string; out: string } {
 
 /** The fleet's own names for its slots, the label a console line leads with. */
 const ROLE_LABEL: Record<string, { en: string; id: string }> = {
+  A1: { en: 'Scout · sweeping the feeds for candidate headlines', id: 'Scout · menyapu kanal berita mencari kandidat' },
+  A2: { en: 'Ingestor · archiving and normalising the articles', id: 'Ingestor · mengarsipkan dan menormalkan artikel' },
+  A3: { en: 'Clusterer · grouping members of the same story', id: 'Clusterer · mengelompokkan artikel satu cerita' },
+  A4: { en: 'Prioritizer · deciding what deserves a fleet run', id: 'Prioritizer · menentukan yang layak diteliti armada' },
   A5: { en: 'Causal Extractor · mapping the asserted spine', id: 'Causal Extractor · memetakan rangka klaim' },
   A6: { en: 'Hidden-Node Hunter · hunting what the story prices at zero', id: 'Hidden-Node Hunter · memburu yang dihargai nol oleh berita' },
   A7: { en: 'Evidence Grounder · attaching sources, refusing orphan numbers', id: 'Evidence Grounder · menambatkan sumber, menolak angka tanpa sumber' },
@@ -53,7 +57,21 @@ const ROLE_LABEL: Record<string, { en: string; id: string }> = {
   A9: { en: 'Narrator · writing both languages from the locked graph', id: 'Narrator · menulis dua bahasa dari graf terkunci' },
   A10: { en: 'Symmetry Auditor · dissecting the mirror framing', id: 'Symmetry Auditor · membedah bingkai cermin' },
   A11: { en: 'Fidelity Guard · tracing every sentence to the graph', id: 'Fidelity Guard · menelusuri tiap kalimat ke graf' },
+  A12: { en: 'Publisher · verifying the gate seals before release', id: 'Publisher · memverifikasi segel gerbang sebelum terbit' },
+  A13: { en: 'Librarian · filing the dissection into the library', id: 'Librarian · mengarsipkan hasil bedah ke pustaka' },
 };
+
+/** The curation stages run as deterministic code, and their console line says so. */
+const NO_MODEL = 'deterministic';
+
+/**
+ * `voices.json` in the run directory: an editorial distillation of each agent's recorded output,
+ * written after the run from the slot and stage files, per narrative per role, both locales. It
+ * is display prose, not a pipeline artifact, and the disclosure names it as a distillation; the
+ * facts inside it trace to the same directory this script reads. Absent file means no notes.
+ */
+type Note = { en: string; id: string };
+type Voices = { narratives: Record<string, Record<string, Note>> };
 
 interface Step {
   role: string;
@@ -91,6 +109,9 @@ function firstSentence(reason: string | undefined): string {
   return display.length > 220 ? `${display.slice(0, 217)}...` : display;
 }
 
+/** Stage evidence test: the file carries a member id of the narrative, `<id>-m1` and siblings. */
+const memberCheck = (rows: { id: string }[]) => (id: string) => rows.some((r) => r.id.startsWith(`${id}-m`));
+
 function main(): void {
   const args = parseArgs(process.argv.slice(2));
   const runManifest = readJson<{ run_id: string; generated_at: string; narratives: string[] }>(
@@ -102,23 +123,60 @@ function main(): void {
     .filter((f) => f.endsWith('.json'))
     .map((f) => readJson<BlockRecord>(join(blockedDir, f)));
 
+  const voicesPath = join(args.run, 'voices.json');
+  const voices: Voices = existsSync(voicesPath) ? readJson<Voices>(voicesPath) : { narratives: {} };
+
+  // The curation stages' evidence, read once: a stage line for a narrative appears only when
+  // that stage's recorded file actually carries the narrative's members or cluster.
+  const stageHas: Record<'A1' | 'A2' | 'A3' | 'A4', (id: string) => boolean> = {
+    A1: memberCheck(readJson<{ records: { id: string }[] }>(join(args.run, 'stages', 'A1.json')).records),
+    A2: memberCheck(readJson<{ records: { id: string }[] }>(join(args.run, 'stages', 'A2.json')).records),
+    A3: memberCheck(readJson<{ assignments: { id: string }[] }>(join(args.run, 'stages', 'A3.json')).assignments),
+    A4: (() => {
+      const ranked = readJson<{ ranked: { cluster: string }[] }>(join(args.run, 'stages', 'A4.json')).ranked;
+      return (id: string) => ranked.some((r) => r.cluster.startsWith(`c-${id}-`));
+    })(),
+  };
+  const constellation = readJson<{ nodes: { narrative_id: string }[] }>(join(args.out, 'constellation.json'));
+
   const modelsSeen = new Set<string>();
   const narratives = runManifest.narratives.map((id) => {
     const slotDir = join(args.run, 'slots', id);
     const steps = readJson<{ steps: Step[] }>(join(slotDir, 'steps.json')).steps;
+    const noteOf = (role: string): { note?: Note } => {
+      const note = voices.narratives[id]?.[role];
+      return note === undefined ? {} : { note };
+    };
 
-    const events: Dict[] = steps
-      .filter((s) => s.finished_at !== '' && ROLE_LABEL[s.role] !== undefined)
-      .map((s) => {
-        modelsSeen.add(s.model);
-        return {
-          kind: 'slot',
-          role: s.role,
-          label: ROLE_LABEL[s.role],
-          model: s.model,
-          at: s.started_at,
-        };
-      });
+    // A1 to A4 first: the curation acts recorded at run level, deterministic code, no model.
+    const events: Dict[] = (['A1', 'A2', 'A3', 'A4'] as const)
+      .filter((role) => stageHas[role](id))
+      .map((role) => ({
+        kind: 'slot',
+        role,
+        label: ROLE_LABEL[role],
+        model: NO_MODEL,
+        at: runManifest.generated_at,
+        ...noteOf(role),
+      }));
+
+    // The judges' notes describe their verdicts, so they ride the verdict events below, not the
+    // started-work slot lines: one note per role, said where it happened.
+    events.push(
+      ...steps
+        .filter((s) => s.finished_at !== '' && ROLE_LABEL[s.role] !== undefined)
+        .map((s) => {
+          modelsSeen.add(s.model);
+          return {
+            kind: 'slot',
+            role: s.role,
+            label: ROLE_LABEL[s.role],
+            model: s.model,
+            at: s.started_at,
+            ...(s.role === 'A10' || s.role === 'A11' ? {} : noteOf(s.role)),
+          };
+        }),
+    );
 
     // The block rounds this narrative actually went through, in file order, which is round
     // order by construction of the ledger's -1/-2 suffixes.
@@ -144,6 +202,7 @@ function main(): void {
         verdict: v.verdict,
         model: v.model ?? '',
         summary: firstSentence(v.reasons?.[0]),
+        ...noteOf(role),
       });
     }
 
@@ -155,6 +214,15 @@ function main(): void {
         .manifest?.gates;
       token = gates?.symmetry?.token?.slice(0, 12) ?? '';
     }
+
+    // A12 verified the seals it published with; A13's filing is the constellation node the
+    // artifact set actually carries. Both deterministic code, both only when the evidence is.
+    if (token !== '') {
+      events.push({ kind: 'slot', role: 'A12', label: ROLE_LABEL.A12, model: NO_MODEL, at: runManifest.generated_at, ...noteOf('A12') });
+    }
+    if (constellation.nodes.some((n) => n.narrative_id === id)) {
+      events.push({ kind: 'slot', role: 'A13', label: ROLE_LABEL.A13, model: NO_MODEL, at: runManifest.generated_at, ...noteOf('A13') });
+    }
     events.push({ kind: 'published', token });
 
     return { narrative_id: id, blocked_rounds: blocks.filter((x) => x.narrative_id === id).length, events };
@@ -165,8 +233,8 @@ function main(): void {
     generated_at: runManifest.generated_at,
     // The honest frame the UI must keep visible, both locales, no em dash, no emoji.
     disclosure: {
-      en: `Replay of editorial run ${runManifest.run_id}. Every step, model, verdict and block below is the recorded run; on-screen pacing is compressed and not to scale.`,
-      id: `Pemutaran ulang proses editorial ${runManifest.run_id}. Setiap langkah, model, putusan dan blokir di bawah ini adalah rekaman proses aslinya; tempo di layar dipadatkan dan tidak berskala.`,
+      en: `Replay of editorial run ${runManifest.run_id}. Every step, model, verdict and block below is the recorded run; the indented output lines are an editorial distillation of each agent's recorded output files; on-screen pacing is compressed and not to scale.`,
+      id: `Pemutaran ulang proses editorial ${runManifest.run_id}. Setiap langkah, model, putusan dan blokir di bawah ini adalah rekaman proses aslinya; baris keluaran yang menjorok adalah saripati editorial dari berkas keluaran tiap agen yang terekam; tempo di layar dipadatkan dan tidak berskala.`,
     },
     models: [...modelsSeen].sort((a, b) => a.localeCompare(b)),
     narratives_total: narratives.length,

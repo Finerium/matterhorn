@@ -59,7 +59,16 @@
                 "verdict": { "enum": ["pass", "block"] },
                 "reason": { "type": "string" },
                 "summary": { "type": "string" },
-                "token": { "type": "string" }
+                "token": { "type": "string" },
+                "note": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["en", "id"],
+                  "properties": {
+                    "en": { "type": "string", "minLength": 1 },
+                    "id": { "type": "string", "minLength": 1 }
+                  }
+                }
               }
             }
           }

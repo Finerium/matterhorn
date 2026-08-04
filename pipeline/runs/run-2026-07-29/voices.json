@@ -1,0 +1,546 @@
+{
+  "note": "Editorial distillation written after the run from the slot and stage records in this directory. Display prose for the replay console, not a pipeline artifact: every fact traces to those records, authorship is the editorial desk, and validate-content check 5 lints these strings once build-replay merges them into content/replay.json.",
+  "run_id": "run-2026-07-29",
+  "narratives": {
+    "mbg-stop": {
+      "A1": {
+        "en": "For this story I brought back three headlines: a Tribunnews challenge to stop MBG permanently to rescue the state budget, a Kompas video of a DPR member urging cuts to the MBG budget, and Antara reporting the programme's spending had reached Rp88.15 trillion.",
+        "id": "Untuk cerita ini saya membawa pulang tiga judul: tantangan Tribunnews menyetop MBG permanen demi menyelamatkan APBN, video Kompas berisi anggota DPR yang mendesak pemangkasan anggaran MBG, dan laporan Antara bahwa belanja program sudah mencapai Rp88,15 triliun."
+      },
+      "A2": {
+        "en": "I normalised those three articles into one clean record each: headline, outlet, date, language, and address. Tribunnews dated 20 June 2026, the Kompas video from June 2026, and the Antara piece dated 5 June 2026, all in Indonesian.",
+        "id": "Saya merapikan ketiga artikel itu menjadi satu catatan bersih per artikel: judul, media, tanggal, bahasa, dan alamat. Tribunnews 20 Juni 2026, video Kompas dari Juni 2026, dan artikel Antara 5 Juni 2026, semuanya berbahasa Indonesia."
+      },
+      "A3": {
+        "en": "At a similarity bar of 0.925 the three headlines refused to sit together: the Tribunnews challenge and the Kompas video each formed a group of their own, and the Antara spending figure moved in with the budget-cut family instead.",
+        "id": "Pada ambang kemiripan 0,925 ketiga judul tidak mau duduk bersama: tantangan Tribunnews dan video Kompas masing-masing menjadi kelompok sendiri, sedangkan angka belanja dari Antara justru bergabung dengan keluarga pemangkasan anggaran."
+      },
+      "A4": {
+        "en": "I ranked 22 clusters and put the Tribunnews stop-MBG headline first, score 3.25: one outlet, a one-day span, and causal density 1, meaning the headline itself claims a chain of cause and effect. Three other clusters matched that score; this one holds rank one.",
+        "id": "Saya memeringkat 22 klaster dan menaruh judul setop-MBG Tribunnews di posisi pertama, skor 3,25: satu media, rentang satu hari, kepadatan kausal 1, artinya judulnya sendiri mengklaim rantai sebab akibat. Tiga klaster lain menyamai skor itu; klaster inilah pemegang peringkat satu."
+      },
+      "A5": {
+        "en": "I traced the spine the story claims: stop MBG permanently, the whole allocation turns into savings, the budget is rescued, and uncovering corruption gets easier. Of four connecting steps, the headline alone voices two, and no article in the family states the other two.",
+        "id": "Saya menggambar tulang punggung klaimnya: MBG disetop permanen, seluruh alokasi menjadi penghematan, APBN terselamatkan, korupsi lebih mudah diungkap. Dari empat langkah penghubung, dua hanya disuarakan judul dan dua lagi tidak dinyatakan artikel mana pun di keluarganya."
+      },
+      "A6": {
+        "en": "The story prices six things at zero. The biggest: the total state budget the word rescued would be measured against (the denominator, the number the saving is divided by), and the recipient households whose daily meal stops the day the kitchens close.",
+        "id": "Cerita ini memberi harga nol pada enam hal. Yang terbesar: total APBN yang menjadi ukuran kata terselamatkan (penyebutnya, angka pembagi penghematan itu), dan rumah tangga penerima yang porsi makan hariannya berhenti begitu dapur tutup."
+      },
+      "A7": {
+        "en": "I priced the map: 27 figures placed, each pinned to the source registry. Rp88.15T already spent, the Rp3,842.7T total budget it sits inside, 29,679 kitchens, 63.13M meal recipients, 1.28M workers. Counts the programme reports about itself carry a flag.",
+        "id": "Saya mengisi angka petanya: 27 angka terpasang, semuanya terikat ke registri sumber. Rp88,15 T yang sudah terpakai, total belanja Rp3.842,7 T wadahnya, 29.679 dapur, 63,13 juta penerima makan, 1,28 juta pekerja. Angka laporan program soal dirinya sendiri diberi penanda."
+      },
+      "A8": {
+        "en": "I searched the case library for a historical echo and none of its four cases qualified: the nearest, the January 2025 VAT panic, has a different shape. A shared fiscal topic is not a shared structure, and no filed case runs on one lever priced as enough for a whole budget.",
+        "id": "Saya mencari gaung sejarah di pustaka kasus dan tak satu pun dari empat kasusnya memenuhi syarat: yang terdekat, panik PPN Januari 2025, bentuknya berbeda. Topik fiskal yang sama bukanlah struktur yang sama, dan tak ada kasus berpola satu tuas dianggap cukup bagi seluruh APBN."
+      },
+      "A9": {
+        "en": "I wrote the narration twice, six sentences in English and six in Indonesian, every sentence tied to named parts of the map. I also built three sparring questions and a guess-first prompt, and left eleven editorial notes on what I merged and why.",
+        "id": "Saya menulis narasinya dua kali, enam kalimat bahasa Inggris dan enam bahasa Indonesia, tiap kalimat terikat ke bagian peta yang disebut namanya. Saya juga menyusun tiga soal latih tanding dan satu ajakan menebak lebih dulu, serta sebelas catatan redaksi soal apa yang saya gabungkan dan alasannya."
+      },
+      "A10": {
+        "en": "I audited the draft for even-handedness and passed it: steps are graded blind to the side they favor, the programme's self-reported counts are flagged and questioned harder, not softer, the stop side's fiscal evidence gets full numbers, and zero loaded verdict words in 285 copy strings.",
+        "id": "Saya mengaudit keseimbangan draf dan meloloskannya: tiap langkah dinilai tanpa memandang pihak yang diuntungkan, angka lapor-diri program ditandai dan diperiksa lebih keras, bukan lebih lunak, bukti fiskal kubu penghentian diberi angka penuh, dan nol kata vonis di 285 teks tampilan."
+      },
+      "A11": {
+        "en": "I refused the draft first: one sentence in each language pointed at a family panel element the build had dropped, a reference resolving to nothing. Restored, I passed the page: 41 declared elements, 27 sourced figures, and every number in the prose traces to its sentence's bindings.",
+        "id": "Saya menolak draf lebih dulu: satu kalimat di tiap bahasa menunjuk elemen panel keluarga yang terjatuh saat perakitan, rujukan tanpa tujuan. Setelah dipulihkan saya meloloskannya: 41 elemen terdaftar, 27 angka bersumber, dan tiap angka dalam prosa tertelusur ke ikatan kalimatnya."
+      },
+      "A12": {
+        "en": "Before publishing I checked the gate tokens, the digital seals the two judges left: the symmetry pass and the fidelity pass carry the same sha256 seal, beginning f2468186, both stamped into the page's manifest. Seals verified, the page went out.",
+        "id": "Sebelum terbit saya memeriksa token gerbang, segel digital peninggalan dua juri: kelulusan simetri dan kelulusan fidelitas membawa segel sha256 yang sama, berawalan f2468186, keduanya tercap di manifes halaman. Segel cocok, halaman pun terbit."
+      },
+      "A13": {
+        "en": "I filed the published dissection: its node joined a constellation of ten, linked to the three sibling MBG stories through a shared Antara News source, and four addresses in the URL index now route to it, so pasting the headline's own link finds the page.",
+        "id": "Saya mengarsipkan bedah yang terbit: simpulnya bergabung ke konstelasi sepuluh simpul, tertaut ke tiga cerita MBG lain lewat sumber bersama Antara News, dan empat alamat di indeks URL kini mengarah padanya, sehingga tautan judulnya langsung menemukan halamannya."
+      }
+    },
+    "mbg-cut": {
+      "A1": {
+        "en": "I found three headlines in the wild for this story, all Indonesian: Kompas.com and Antara News in early June 2026, and a Databoks chart from May. Kompas and Antara carry MBG spending of Rp88.15 trillion through May 2026; the Databoks chart puts it at Rp88 trillion.",
+        "id": "Saya menemukan tiga judul di lapangan, semuanya berbahasa Indonesia: Kompas.com dan Antara News awal Juni 2026, serta grafik Databoks dari Mei. Kompas dan Antara memuat belanja MBG Rp88,15 triliun hingga Mei 2026; grafik Databoks mencatatnya Rp88 triliun."
+      },
+      "A2": {
+        "en": "I archived those three finds and normalised each into a clean record: id, headline, outlet, date, language and link. mbg-cut-m1 through m3 now sit in the run's ledger beside 24 records from other stories, ready for clustering.",
+        "id": "Saya mengarsipkan tiga temuan itu dan merapikannya menjadi catatan seragam: id, judul, media, tanggal, bahasa, dan tautan. mbg-cut-m1 sampai m3 kini duduk di buku besar run ini bersama 24 catatan cerita lain, siap dikelompokkan."
+      },
+      "A3": {
+        "en": "At a similarity bar of 0.925, the three headlines snapped into one cluster, c-mbg-cut-m1. Two neighbours joined them there: one headline shared with the mbg-jobs story and one with mbg-stop, five members in all.",
+        "id": "Dengan ambang kemiripan 0,925, tiga judul itu menyatu ke satu klaster, c-mbg-cut-m1. Dua tetangga ikut bergabung: satu judul yang juga dipakai cerita mbg-jobs dan satu dari mbg-stop, total lima anggota."
+      },
+      "A4": {
+        "en": "I scored every cluster for a fleet run. This one ranked 22nd of 22: score 0.885, five members across three outlets, a 37 day span, and causal density zero, meaning no cause and effect wording was counted in it. It still got its slot.",
+        "id": "Saya menilai semua klaster untuk dijalankan armada. Yang ini peringkat 22 dari 22: skor 0,885, lima anggota dari tiga media, rentang 37 hari, dan kepadatan kausal nol, artinya tak ada kata sebab-akibat yang terhitung. Slotnya tetap jalan."
+      },
+      "A5": {
+        "en": "I drew the story's spine in four steps: the 2026 MBG ceiling is cut, the programme keeps running and spends, realized spending through May goes on the record, and the rest of the year runs on a smaller envelope. Only the middle link carries an article's words; the two outer links carry none.",
+        "id": "Saya menggambar tulang punggung cerita dalam empat langkah: pagu MBG 2026 dipangkas, program tetap berjalan dan membelanjakan, realisasi hingga Mei tercatat, dan sisa tahun berjalan dengan ruang lebih kecil. Hanya sambungan tengah yang memuat kutipan artikel; dua sambungan luarnya tanpa kutipan."
+      },
+      "A6": {
+        "en": "The story prices six things at zero. Two of them: the ceiling the May figure is divided by, with what is left of it, and where the fiscal room freed by the cut lands. Also unpriced: kitchen crews, suppliers, households, and the queue of kitchens and regions not yet on line.",
+        "id": "Cerita ini menghargai enam hal dengan nol. Dua di antaranya: pagu pembagi angka Mei berikut sisa ruangnya, dan ke mana ruang fiskal hasil pemangkasan berpindah. Ikut tak dihitung: awak dapur, pemasok, rumah tangga, dan antrean dapur serta daerah yang belum terlayani."
+      },
+      "A7": {
+        "en": "I attached the run's numbers, 16 figures grounded on seven registry sources: the Rp268 trillion ceiling after the cut, Rp88.15 trillion spent by May, 29,679 kitchens, 63.13 million people reached, all set against Rp3,842.7 trillion of total state spending.",
+        "id": "Saya menautkan angka-angka run ini, 16 angka pada tujuh sumber terdaftar: pagu Rp268 triliun setelah pemangkasan, belanja Rp88,15 triliun hingga Mei, 29.679 dapur, 63,13 juta penerima, semuanya disandingkan dengan total belanja negara Rp3.842,7 triliun."
+      },
+      "A8": {
+        "en": "I searched the case library for a historical echo and filed none. All four cases were weighed; the closest, B-04, is a narrow rule retold wide. This cluster's shape differs: a figure missing the number it is divided by. Topic overlap alone does not clear my bar, so no echo panel ships.",
+        "id": "Saya memeriksa pustaka kasus untuk mencari gema sejarah dan tidak mengarsipkan satu pun. Empat kasus ditimbang; yang terdekat, B-04, adalah aturan sempit yang diceritakan melebar. Bentuk klaster ini beda: angka tanpa pembaginya. Kemiripan topik saja tak melewati ambang saya, jadi tanpa panel gema."
+      },
+      "A9": {
+        "en": "I wrote the narration twice, six sentences in English and six in Indonesian, every sentence bound to the map elements it speaks about, no number without its element in the same sentence. I also set three sparring questions and a prediction tap, and left 17 working notes on the choices behind them.",
+        "id": "Saya menulis narasinya dua kali, enam kalimat Inggris dan enam Indonesia, tiap kalimat terikat ke elemen peta yang dibicarakannya, tak ada angka tanpa elemennya di kalimat yang sama. Saya juga menyusun tiga pertanyaan tanding dan satu ketukan prediksi, plus 17 catatan kerja soal pilihannya."
+      },
+      "A10": {
+        "en": "I test whether the dissection leans. Verdict: pass, first round. The mirror reading of the same evidence gets identical treatment, hedge flags land on the draft's own side, and I left two non-blocking notes, including a family label that says two outlets while listing three.",
+        "id": "Saya menguji apakah bedahan ini berat sebelah. Putusan: lolos, ronde pertama. Pembacaan cermin atas bukti yang sama diperlakukan identik, penanda hati-hati jatuh ke sisi draf sendiri, dan saya meninggalkan dua catatan tak memblokir, satunya label keluarga menyebut dua media padahal daftarnya tiga."
+      },
+      "A11": {
+        "en": "I traced every sentence back to the map: 23 declared elements, and the bindings in all 12 sentences resolve; all 16 figures carry a source; every quoted title matches the registry word for word across seven sources. Verdict: pass, no block round needed.",
+        "id": "Saya menelusuri tiap kalimat kembali ke petanya: 23 elemen terdaftar, dan ikatan di 12 kalimat semuanya terhubung; 16 angka semuanya bersumber; tiap judul yang dikutip cocok kata demi kata dengan daftar sumber, tujuh sumber semuanya. Putusan: lolos, tanpa ronde blokir."
+      },
+      "A12": {
+        "en": "Before publishing I verified the two gate tokens, the digital seals the judges leave when they pass a draft. Symmetry and fidelity both read pass, both seals carry the same code starting 3fdc8c32, matching the manifest. The dissection went out.",
+        "id": "Sebelum terbit saya memverifikasi dua token gerbang, segel digital yang ditinggalkan juri saat meloloskan draf. Simetri dan fidelitas sama-sama lolos, kedua segel memuat kode yang sama berawalan 3fdc8c32, cocok dengan manifes. Bedahnya pun terbit."
+      },
+      "A13": {
+        "en": "I filed the published dissection where it can be found again: its node joined the constellation of ten stories with three links to its MBG siblings, each via the shared source Antara News, and I indexed the Kompas and Databoks URLs so a pasted link now lands on the dissection.",
+        "id": "Saya mengarsipkan bedahan yang terbit agar bisa ditemukan lagi: simpulnya bergabung ke konstelasi sepuluh cerita dengan tiga tautan ke saudara MBG-nya, semuanya lewat sumber bersama Antara News, dan saya mengindeks URL Kompas dan Databoks agar tautan yang ditempel mendarat di bedahannya."
+      }
+    },
+    "mbg-poisoning": {
+      "A1": {
+        "en": "Found three headlines in the wild, all in Indonesian: CNN Indonesia carries BGN's running total of 6,517 and JPPI's 8,649 children, Bloomberg Technoz carries the BPOM vs BGN data gap. Dated 29 September to 1 October 2025.",
+        "id": "Menemukan tiga judul di lapangan, semuanya berbahasa Indonesia: CNN Indonesia memuat total berjalan BGN 6.517 dan data JPPI 8.649 anak, Bloomberg Technoz memuat beda data BPOM vs BGN. Tanggalnya 29 September sampai 1 Oktober 2025."
+      },
+      "A2": {
+        "en": "Archived all three headlines and normalised each into one tidy record: id, language, headline, outlet, date, url. Two outlets, CNN Indonesia and Bloomberg Technoz, all three in Indonesian, ready for clustering.",
+        "id": "Mengarsipkan ketiga judul dan merapikan masing-masing menjadi satu catatan: id, bahasa, judul, media, tanggal, url. Dua media, CNN Indonesia dan Bloomberg Technoz, ketiganya berbahasa Indonesia, siap dikelompokkan."
+      },
+      "A3": {
+        "en": "At a similarity threshold of 0.925, the bar two headlines must clear to be grouped together, each of the three headlines landed in its own cluster: three separate phrasings, no pair similar enough to merge.",
+        "id": "Pada ambang kemiripan 0,925, batas yang harus dilewati dua judul agar masuk kelompok yang sama, ketiga judul mendarat di klasternya masing-masing: tiga rumusan terpisah, tidak ada pasangan yang cukup mirip untuk digabung."
+      },
+      "A4": {
+        "en": "Ranked all 22 clusters in the run. This story's three sat at ranks 9, 10 and 11, each scoring 1.25: one outlet, a one day span, causal density 0, meaning no cause and effect wording scored. The 6,517 headline's cluster, rank 9, went forward as the anchor of this dissection slot.",
+        "id": "Memeringkatkan 22 klaster dalam run ini. Tiga klaster cerita ini duduk di peringkat 9, 10, dan 11, masing-masing berskor 1,25: satu media, rentang satu hari, kepadatan kausal 0, artinya tanpa rumusan sebab akibat yang ternilai. Klaster judul 6.517, peringkat 9, maju sebagai jangkar slot bedah ini."
+      },
+      "A5": {
+        "en": "Mapped the story's chain, four steps: a national meal program, recipients (mostly schoolchildren) fall ill, the agency running it announces its own running count, and that figure stands as the full national scale. For that last step, no article in the family states it.",
+        "id": "Memetakan rantai cerita ini, empat langkah: program makan nasional, penerima, kebanyakan anak sekolah, jatuh sakit, badan pelaksana mengumumkan hitungan berjalannya sendiri, dan angka itu menjadi ukuran utuh skala nasional. Langkah terakhir itu tidak dinyatakan artikel mana pun di keluarga ini."
+      },
+      "A6": {
+        "en": "The story prices six things at zero. The biggest two: how a case enters each of the three ledgers, and the served base, the number of recipients and portions the count is never divided by. Also at zero: the households and frontline clinics that absorb each case first.",
+        "id": "Cerita ini menghargai enam hal dengan nol. Dua terbesar: bagaimana sebuah kasus masuk ke tiap pembukuan, dan basis penyaluran, jumlah penerima dan porsi yang tidak pernah menjadi pembagi hitungan itu. Ikut nol: rumah tangga dan faskes lini depan yang menanggung tiap kasus lebih dulu."
+      },
+      "A7": {
+        "en": "Built three panels: a claim map, the three counts side by side, and who absorbs the cases over time. Seven figures ship, each tied to the source registry: 63.13 million recipients, 1.28 million workers, the duel of 6,517 vs 9,089 vs 8,649, then 29,679 kitchens and 142,387 suppliers.",
+        "id": "Menyusun tiga panel: peta klaim, tiga hitungan berdampingan, dan siapa menanggung kasus dari waktu ke waktu. Tujuh angka dikirim, semuanya terikat registri sumber: 63,13 juta penerima, 1,28 juta pekerja, duel 6.517 vs 9.089 vs 8.649, lalu 29.679 dapur dan 142.387 pemasok."
+      },
+      "A8": {
+        "en": "Checked the four library cases for an echo of this shape, an agency's running total standing in for national scale. None repeats the reasoning at the conservative threshold; sector, institution class, country and period are surface overlap only, so the slot stays silent, as the blueprint permits.",
+        "id": "Memeriksa keempat kasus pustaka untuk gema bentuk ini: total berjalan sebuah badan menjadi ukuran skala nasional. Tak ada yang mengulang penalarannya pada ambang konservatif; sektor, kelas lembaga, negara, dan periode hanya mirip di permukaan, jadi slot dibiarkan hening, seizin cetak biru."
+      },
+      "A9": {
+        "en": "Wrote the narration twice, six sentences in English and six in Indonesian, every sentence bound to named elements of the graph, a universe of 22 elements. Added three sparring questions and 13 editorial notes, including one flagging a truncated input that a reviewer must sign off.",
+        "id": "Menulis narasi dua kali, enam kalimat bahasa Inggris dan enam bahasa Indonesia, tiap kalimat terikat pada elemen graf bernama, seluruhnya 22 elemen. Ditambah tiga pertanyaan sparring dan 13 catatan editorial, termasuk satu yang menandai input terpotong yang harus disetujui peninjau."
+      },
+      "A10": {
+        "en": "Pass. I rebuilt the piece with its lean flipped, the same event framed as 6,517 against 63.13 million served, and checked that every edge status holds both ways. It does, and each count carries exactly one limitation of comparable weight, so neither side gets a softer draft.",
+        "id": "Lolos. Saya bangun ulang sajian dengan arah dibalik: peristiwa sama dibingkai 6.517 berbanding 63,13 juta terlayani, lalu memeriksa status tiap tautan bertahan dua arah. Bertahan, dan tiap hitungan membawa tepat satu keterbatasan berbobot setara, jadi tak ada sisi yang mendapat draf lebih lunak."
+      },
+      "A11": {
+        "en": "I blocked the first draft: one English sentence tied the counted meals to 29,679 kitchens as of May 2026, though the counts stop in late 2025, and no element carries that join. After the fix I passed it: all 22 element bindings resolve in both languages, all seven figures carry a source.",
+        "id": "Saya memblokir draf pertama: satu kalimat Inggris mengaitkan porsi yang terhitung dengan 29.679 dapur per Mei 2026, padahal hitungannya berhenti akhir 2025, tanpa elemen yang memuat kaitan itu. Setelah perbaikan saya meloloskannya: 22 ikatan elemen tersambung di dua bahasa, ketujuh angka bersumber."
+      },
+      "A12": {
+        "en": "Before publishing I checked the manifest's two gates: symmetry and fidelity both read pass, each carrying a gate token, a digital seal that also sits on the two judges' own verdict records. The tokens match, so the dissection went out.",
+        "id": "Sebelum terbit saya memeriksa dua gerbang di manifes: symmetry dan fidelity sama-sama lolos, masing-masing membawa token gerbang, segel digital yang juga tercantum pada berkas putusan kedua juri. Tokennya cocok, maka bedahnya terbit."
+      },
+      "A13": {
+        "en": "Filed the published dissection. Its node joined the constellation of ten, linked to three neighbours (mbg-stop, mbg-cut, mbg-jobs) through a shared source, Antara News, and all three family URLs entered the index: paste any of those headline links and this dissection comes up.",
+        "id": "Membukukan bedah yang terbit. Nodenya bergabung ke konstelasi sepuluh node, tertaut ke tiga tetangga (mbg-stop, mbg-cut, mbg-jobs) lewat sumber bersama Antara News, dan ketiga URL keluarganya masuk indeks: tempel tautan judul mana pun dari keluarga itu dan bedah ini muncul."
+      }
+    },
+    "mbg-jobs": {
+      "A1": {
+        "en": "I came back from the wild with 27 headlines. Three feed this story: CNBC Indonesia's 1.28 million workers absorbed by MBG (May 2026), Kompas.com's 987,000 workers (February 2026), and Kompas.com's Rp88.15 trillion of MBG budget absorbed through May 2026.",
+        "id": "Saya pulang dari lapangan membawa 27 judul. Tiga mengisi cerita ini: CNBC Indonesia soal 1,28 juta tenaga kerja terserap MBG (Mei 2026), Kompas.com soal 987.000 pekerja (Februari 2026), dan Kompas.com soal anggaran MBG Rp88,15 triliun terserap hingga Mei 2026."
+      },
+      "A2": {
+        "en": "I archived all 27 headlines into uniform records, each carrying an id, a language tag, the headline, the outlet, the date and the original link. The three for this story sit among them, ready for the rest of the pipeline.",
+        "id": "Saya mengarsipkan ke-27 judul itu menjadi catatan seragam, masing-masing membawa id, penanda bahasa, judul, nama media, tanggal, dan tautan aslinya. Tiga catatan untuk cerita ini ada di antaranya, siap dipakai tahap-tahap berikutnya."
+      },
+      "A3": {
+        "en": "At a similarity bar of 0.925 the three headlines split three ways: the 1.28 million story stood alone, the 987,000 story stood alone, and the budget headline joined the cluster of Rp88.15 trillion budget stories.",
+        "id": "Dengan ambang kemiripan 0,925, tiga judul itu terpecah tiga arah: berita 1,28 juta berdiri sendiri, berita 987.000 berdiri sendiri, dan judul anggaran bergabung ke gugus berita anggaran Rp88,15 triliun."
+      },
+      "A4": {
+        "en": "I ranked what deserved a fleet run. The 1.28 million workers cluster took rank 7, score 1.25: one outlet, a span of one day, and causal density (how much cause-and-effect the wording carries) at zero. Its February sibling followed at rank 8.",
+        "id": "Saya mengurutkan gugus mana yang layak dibedah. Gugus 1,28 juta pekerja dapat peringkat 7, skor 1,25: satu media, rentang satu hari, dan kepadatan kausal (seberapa banyak sebab-akibat dalam kalimatnya) nol. Saudaranya dari Februari menyusul di peringkat 8."
+      },
+      "A5": {
+        "en": "I traced the chain the story claims, five steps: state budget into MBG, kitchens operating, workers absorbed, small suppliers earning, the programme's own headcount standing as its worth. Articles state the middle steps; none states the first or the last.",
+        "id": "Saya memetakan rantai yang diklaim cerita ini, lima langkah: anggaran negara ke MBG, dapur beroperasi, tenaga kerja terserap, pemasok kecil dapat pemasukan, angka serapan versi program jadi ukuran nilainya. Langkah tengah ada kutipannya; langkah pertama dan terakhir tak dinyatakan artikel mana pun."
+      },
+      "A6": {
+        "en": "The story prices eight things at zero. The most vivid: school canteen sellers whose daily sales the free meal lands in place of, and the payroll-grade count that never appears behind a headcount produced by multiplication.",
+        "id": "Cerita ini menghargai delapan hal dengan nol. Yang paling terasa: pedagang kantin sekolah yang omzet hariannya tergantikan porsi gratis, dan hitungan berbasis daftar gaji yang tidak pernah muncul di balik angka serapan hasil perkalian."
+      },
+      "A7": {
+        "en": "I grounded 16 figures, each tied to the source registry, across a claim map and a scale check: Rp88.15T spent, 29,679 kitchens, 1.28M workers, 142,387 suppliers, set inside Rp3,842.7T of state spending. Figures the programme reports about itself carry a self reported flag.",
+        "id": "Saya menautkan 16 angka ke registri sumber, tersebar di peta klaim dan panel skala: Rp88,15 triliun terpakai, 29.679 dapur, 1,28 juta pekerja, 142.387 pemasok, ditempatkan di dalam belanja negara Rp3.842,7 triliun. Angka yang dilaporkan program soal dirinya sendiri diberi tanda lapor-sendiri."
+      },
+      "A8": {
+        "en": "I combed the case library for a historical echo and filed silence: none of its four cases carries this shape, a self sourced input count standing where a net measure belongs. The nearest, a scope inflation panic, still fell short of the threshold.",
+        "id": "Saya menyisir pustaka kasus mencari gema sejarah dan mencatat hening: tak satu pun dari empat kasusnya membawa bentuk ini, angka masukan versi sumber sendiri yang berdiri di tempat ukuran bersih. Yang terdekat, panik inflasi cakupan, tetap di bawah ambang."
+      },
+      "A9": {
+        "en": "I narrated the dissection twice, six sentences in English and six in Indonesian, every sentence bound to the map elements it walks through, plus three sparring questions. My editorial notes leave one item for sign off: the two languages attach one hidden element to different sentences.",
+        "id": "Saya menarasikan bedahnya dua kali, enam kalimat Inggris dan enam kalimat Indonesia, tiap kalimat terikat ke elemen peta yang dibahasnya, plus tiga soal sparring. Catatan editorial saya menyisakan satu hal: kedua bahasa menautkan satu elemen tersembunyi ke kalimat yang berbeda."
+      },
+      "A10": {
+        "en": "I audited the draft for symmetry: one evidence rule governs every step, the eight hidden branches run against the story's own framing, and data favouring the programme, like 63.13M beneficiaries, is carried, not suppressed. Verdict: pass, with two small notes for the next run.",
+        "id": "Saya mengaudit simetri draf: satu aturan bukti berlaku untuk semua langkah, delapan cabang tersembunyi diuji terhadap bingkai ceritanya sendiri, dan data yang menguntungkan program, seperti 63,13 juta penerima manfaat, tetap dibawa, tidak disembunyikan. Putusan: lolos, dengan dua catatan kecil."
+      },
+      "A11": {
+        "en": "I recomputed everything before letting the draft through: 27 map elements, all 12 sentences, six per language, bound, 16 figures each with a source, the declared tallies rederived and matching, even 47 times 21,000 landing on 987,000. Verdict: pass.",
+        "id": "Saya menghitung ulang semuanya sebelum meloloskan draf: 27 elemen peta, 12 kalimat, enam per bahasa, semuanya terikat, 16 angka masing-masing bersumber, rekap yang dideklarasikan dihitung ulang dan cocok, bahkan 47 kali 21.000 tepat jatuh di 987.000. Putusan: lolos."
+      },
+      "A12": {
+        "en": "Before publishing I checked the manifest's two digital seals, one from the symmetry judge and one from the fidelity judge, each attached to a pass verdict and both reading the same code, beginning 9002cb45. They held, so the dissection shipped with status published.",
+        "id": "Sebelum terbit saya memeriksa dua segel digital di manifes, satu dari juri simetri dan satu dari juri fidelitas, masing-masing menempel pada putusan lolos dan keduanya berbunyi kode yang sama, berawalan 9002cb45. Segelnya utuh, maka bedah ini terbit dengan status published."
+      },
+      "A13": {
+        "en": "I filed the published dissection: its node joined the 10 node constellation, linked to three sibling MBG dissections through a shared source, Antara News, and two links entered the URL index, the CNBC canonical article and the February Kompas.com family member, so pasting either finds it.",
+        "id": "Saya mengarsipkan bedah yang terbit: simpulnya bergabung ke konstelasi 10 simpul, tertaut ke tiga bedah MBG lain lewat sumber bersama Antara News, dan dua tautan masuk indeks URL, artikel kanonik CNBC dan anggota keluarga Kompas.com edisi Februari, sehingga menempelkan tautan mana pun menemukannya."
+      }
+    },
+    "judol-turnover": {
+      "A1": {
+        "en": "I found three headlines in the wild, all dated 23 July 2026: Antara News, CNBC Indonesia and Kompas.com on PPATK's online gambling turnover figures. They went into the scout's haul of 27 records for this run.",
+        "id": "Saya temukan tiga judul di lapangan, semuanya bertanggal 23 Juli 2026: Antara News, CNBC Indonesia, dan Kompas.com soal angka perputaran dana judi online versi PPATK. Ketiganya masuk tangkapan pengintai untuk putaran ini, 27 catatan."
+      },
+      "A2": {
+        "en": "I archived the haul and normalised every record into one shape: id, language, headline, outlet, date, link. The three articles for this story came out of the wash exactly as the scout logged them, ready for clustering.",
+        "id": "Saya arsipkan hasil tangkapan dan seragamkan tiap catatan ke satu bentuk: id, bahasa, judul, media, tanggal, tautan. Tiga artikel untuk cerita ini keluar persis seperti dicatat pengintai, siap dikelompokkan."
+      },
+      "A3": {
+        "en": "I compared headlines at a similarity bar of 0.925: Antara and CNBC merged into one cluster, while the Kompas headline sat in a cluster of its own. Two groups out of three articles from the same day.",
+        "id": "Saya bandingkan judul pada ambang kemiripan 0,925: Antara dan CNBC melebur ke satu klaster, sedangkan judul Kompas berdiri di klaster sendiri. Dua kelompok dari tiga artikel bertanggal sama."
+      },
+      "A4": {
+        "en": "I ranked 22 clusters; the Antara and CNBC pair came in fifth with score 2.5: two outlets, a span of one day, and a causal density (how much cause-to-effect wording the headlines carry) of zero. That pair went forward as this story's slot.",
+        "id": "Saya peringkatkan 22 klaster; pasangan Antara dan CNBC di urutan kelima dengan skor 2,5: dua media, rentang satu hari, dan kepadatan kausal (kadar kalimat sebab-akibat pada judul) nol. Pasangan itu lanjut sebagai slot cerita ini."
+      },
+      "A5": {
+        "en": "I drew the spine the story claims, four steps: the Prabowo-era push against online gambling, PPATK's recorded turnover falling, the smaller figure read as the market itself shrinking, and gambling receding. The last join is one no article in the family states.",
+        "id": "Saya gambar tulang punggung yang diklaim cerita, empat langkah: gempuran era Prabowo terhadap judi online, perputaran tercatat PPATK turun, angka yang mengecil dibaca sebagai pasar yang menyusut, lalu judi online surut. Sambungan terakhir tidak dinyatakan artikel mana pun dalam keluarga."
+      },
+      "A6": {
+        "en": "The story prices seven things at zero. The biggest: how many times a deposited rupiah gets wagered again, the ratio its market reading rests on, and the count of active players behind all the rupiah figures.",
+        "id": "Cerita ini menghitung tujuh hal sebagai nol. Yang terbesar: berapa kali satu rupiah setoran diputar kembali, nisbah yang menopang pembacaan pasarnya, dan jumlah pemain aktif di balik semua angka rupiah itu."
+      },
+      "A7": {
+        "en": "I set twelve figures into three panels, a claim map, a scale check and dueling counts, each figure tied to a source registry entry: both years of turnover, Rp359.81T down to Rp286.84T, the deposit series beside them, and the new quarterly Rp40.3T.",
+        "id": "Saya pasang dua belas angka ke tiga panel, peta klaim, cek skala, dan hitungan berhadapan, tiap angka terikat ke daftar sumber: perputaran dua tahun, Rp359,81 triliun turun ke Rp286,84 triliun, deret setoran di sampingnya, dan Rp40,3 triliun triwulanan yang baru."
+      },
+      "A8": {
+        "en": "I weighed all four cases in the library and none met the echo threshold. B-04 came closest: a rule whose reach narrowed, retold as reaching everything. Here a monitoring instrument covers part of an activity yet is read as measuring all of it: alike in description, not causal shape. So, no echo.",
+        "id": "Saya timbang empat kasus di pustaka, tak satu pun lewat ambang gema. B-04 paling dekat: aturan yang jangkauannya menyempit diceritakan menjangkau segalanya. Di sini alat pantau mencakup sebagian kegiatan tapi dibaca mengukur seluruhnya: mirip deskripsi, bukan bentuk kausal. Jadi tanpa gema."
+      },
+      "A9": {
+        "en": "I wrote six sentences in English and six in Indonesian, each bound to elements of the graph, 26 in all, the same set in both languages. The Indonesian was authored in Indonesian, not carried over from the English.",
+        "id": "Saya tulis enam kalimat bahasa Inggris dan enam bahasa Indonesia, tiap kalimat terikat ke elemen graf, 26 elemen seluruhnya, himpunan yang sama di kedua bahasa. Versi Indonesia ditulis langsung dalam bahasa Indonesia, bukan dialihkan dari versi Inggris."
+      },
+      "A10": {
+        "en": "I blocked this draft twice: first for a headline that pinned a fall on the quarterly figure and dropped the PPATK credit, and for an English line flatly asserting that blocked money keeps moving elsewhere; then for the same flat voice in another sentence. Version three passed my symmetry check.",
+        "id": "Dua kali saya blokir draf ini: judul tampilan menempelkan kata turun pada angka triwulanan dan membuang atribusi PPATK, plus satu kalimat Inggris menyatakan begitu saja uang yang diblokir tetap berpindah; lalu nada datar yang sama muncul di kalimat lain. Versi ketiga lolos uji simetri saya."
+      },
+      "A11": {
+        "en": "I verified the final bytes by their sha256 fingerprint, then traced every binding: all 26 graph elements narrated in both languages, all 12 figures carrying a source, every number in the prose matching its element's display, no sentence upgrading an edge's status. Pass.",
+        "id": "Saya cek berkas akhir lewat sidik jari sha256, lalu telusuri semua ikatan: 26 elemen graf dinarasikan di dua bahasa, 12 angka semuanya bersumber, tiap angka dalam prosa cocok dengan tampilan elemennya, tak ada kalimat yang menaikkan status sambungan. Lolos."
+      },
+      "A12": {
+        "en": "Before publishing I checked the two gate tokens, the digital seals the two judges left: symmetry pass and fidelity pass, both carrying the identical seal beginning 523731e0. Only then did the dissection go out; its status now reads published.",
+        "id": "Sebelum menerbitkan saya periksa dua token gerbang, segel digital dari kedua hakim: simetri lolos dan fidelitas lolos, keduanya membawa segel identik berawalan 523731e0. Setelah itu barulah hasil bedahnya terbit; statusnya kini tercatat published."
+      },
+      "A13": {
+        "en": "I filed the published dissection: its node joined the constellation of ten, and the URL index now holds three addresses for it, the Antara canonical plus the CNBC and Kompas family members. Paste any of those three links and this page is findable.",
+        "id": "Saya arsipkan hasil bedah yang terbit: simpulnya bergabung ke konstelasi berisi sepuluh, dan indeks URL kini memuat tiga alamat untuknya, tautan kanonik Antara plus anggota keluarga CNBC dan Kompas. Tempel satu saja dari tiga tautan itu dan halamannya ketemu."
+      }
+    },
+    "ppn-panic": {
+      "A1": {
+        "en": "Found the raw trail: three Indonesian-language headlines dated 31 Dec 2024 to 2 Jan 2025, from three outlets, Bisnis.com, the national wire Antara, and the tax authority's own page on PMK 131/2024. Each logged with outlet, date and link.",
+        "id": "Jejak awalnya ketemu: tiga judul berbahasa Indonesia bertanggal 31 Des 2024 sampai 2 Jan 2025, dari tiga kanal, Bisnis.com, kantor berita Antara, dan halaman otoritas pajak tentang PMK 131/2024. Masing-masing tercatat dengan media, tanggal, dan tautannya."
+      },
+      "A2": {
+        "en": "Archived the scout's three finds and normalised them into one shape: id, language, headline, outlet, date, link. The stored records match the field versions word for word, headline text intact, so every stage downstream works from the same text.",
+        "id": "Tiga temuan pemandu saya arsipkan dan seragamkan ke satu bentuk: id, bahasa, judul, media, tanggal, tautan. Rekaman tersimpan sama persis dengan versi lapangan, teks judul utuh, jadi tahap-tahap berikutnya bekerja dari teks yang sama."
+      },
+      "A3": {
+        "en": "At a similarity bar of 0.925, the three headlines did not merge: each landed in a cluster of its own, c-ppn-panic-m1, m2 and m3. A regulation title, a wire line and an explainer headline sit below that bar with one another, so each stood alone at this stage.",
+        "id": "Dengan ambang kemiripan 0,925, ketiga judul tidak menyatu: masing-masing masuk klaster sendiri, c-ppn-panic-m1, m2, dan m3. Judul aturan, baris kantor berita, dan judul penjelas duduk di bawah ambang itu satu sama lain, jadi pada tahap ini ketiganya berdiri sendiri."
+      },
+      "A4": {
+        "en": "Ranked all 22 clusters in the run. The three PPN singletons sat at ranks 15, 16 and 17, each scoring 1.25: one outlet apiece, a one-day span, and causal density zero, the measure of cause-and-effect wording. Downstream they fed one story family, the ppn-panic slot.",
+        "id": "Saya memeringkat 22 klaster dalam run ini. Tiga klaster tunggal PPN duduk di peringkat 15, 16, dan 17, skor 1,25 tiap klaster: satu media, rentang satu hari, dan kepadatan kausal nol, ukuran kata sebab-akibat. Di hilir ketiganya mengisi satu keluarga cerita, slot ppn-panic."
+      },
+      "A5": {
+        "en": "Drew the spine the story claims, four steps: the finance ministry issues a new VAT tariff rule, a higher rate takes effect, that rate reaches every good and service in the basket, every price rises. Of the three links between the steps, only the first carries an article's words.",
+        "id": "Tulang punggung klaim cerita saya gambar, empat langkah: Kemenkeu menerbitkan aturan tarif PPN baru, tarif lebih tinggi mulai berlaku, tarif itu menjangkau semua barang dan jasa di keranjang, semua harga naik. Dari tiga sambungannya, hanya yang pertama memuat kata-kata artikel."
+      },
+      "A6": {
+        "en": "The story prices seven things at zero. The biggest two: how much of a household's basket the luxury list actually reaches, a ratio no article supplies either half of, and the sellers who had a single night to redo the arithmetic on every invoice, cash register and import declaration.",
+        "id": "Cerita ini menaruh harga nol pada tujuh hal. Dua yang terbesar: seberapa jauh daftar barang mewah menjangkau keranjang rumah tangga, rasio yang kedua sisinya tidak dimuat artikel mana pun, dan penjual yang cuma punya satu malam untuk mengubah hitungan tiap faktur, mesin kasir, dan dokumen impor."
+      },
+      "A7": {
+        "en": "I placed the seven figures the panels carry, each pinned to the source registry with an as-of date: the 12 percent rate, the effective 11 percent kept by everything off the luxury list, the Rp38.6T package beside it, and the 16 million recipients of its rice component.",
+        "id": "Tujuh angka yang dibawa panel saya tempatkan, semuanya terikat ke registri sumber dengan tanggal acuan: tarif 12 persen, tarif efektif 11 persen untuk segala yang di luar daftar mewah, paket Rp38,6 T di sebelahnya, dan 16 juta penerima komponen berasnya."
+      },
+      "A8": {
+        "en": "The case library held an echo: case B-04, Scope-inflation panic, January 2025, motif of scope inflation and manufactured urgency. On record: a whole consumption basket got priced for weeks after PMK 131/2024 drew the rise at luxury goods, and the clarification took a multi-channel effort.",
+        "id": "Pustaka kasus menyimpan gaungnya: kasus B-04, Panik inflasi cakupan, Januari 2025, motif inflasi cakupan dan urgensi semu. Catatannya: seluruh keranjang konsumsi ikut dihitung berminggu-minggu setelah PMK 131/2024 membatasi kenaikan pada barang mewah, dan klarifikasinya butuh upaya lintas kanal."
+      },
+      "A9": {
+        "en": "Wrote the narration in both languages, six sentences each, every sentence bound to named elements of the graph, plus three sparring questions and a reconciliation log. That log records exactly one narration fix: the English opener had put the rule and the rate on the same date.",
+        "id": "Narasinya saya tulis dalam dua bahasa, enam kalimat per bahasa, tiap kalimat terikat ke elemen grafnya, ditambah tiga pertanyaan sparring dan catatan rekonsiliasi. Catatan itu merekam tepat satu perbaikan narasi: pembuka versi Inggris sempat menaruh aturan dan tarif pada tanggal yang sama."
+      },
+      "A10": {
+        "en": "Passed the draft on first review, eight reasons on record: the hidden branches press the government's framing as hard as the panic chain, attribution verbs stay uniform, and the deepest scrutiny lands on the artifact's own framing. I signed it with the digital seal the publisher later checks.",
+        "id": "Draf lolos pada tinjauan pertama, delapan alasan tercatat: cabang tersembunyi menekan bingkai pemerintah sekeras menekan rantai paniknya, kata kerja atribusi seragam, dan telaah terdalam justru mengarah ke bingkai artefak sendiri. Saya membubuhkan segel digital yang nanti diperiksa penerbit."
+      },
+      "A11": {
+        "en": "The second judge with power to refuse publication, and I filed no objection: verdict pass with an empty reasons list. My digital seal matches the symmetry auditor's exactly, the same token character for character, which is what the publisher verifies before anything ships.",
+        "id": "Hakim kedua yang berwenang menolak penerbitan, dan saya tidak mengajukan keberatan: putusan lolos dengan daftar alasan kosong. Segel digital saya persis sama dengan milik auditor simetri, token yang sama karakter demi karakter, dan itulah yang diverifikasi penerbit sebelum apa pun terbit."
+      },
+      "A12": {
+        "en": "Checked the manifest's two gates before shipping: symmetry pass and fidelity pass, each carrying a token, a digital seal tying the judges' verdicts to this exact draft, and both tokens matched. ppn-panic went out with status published.",
+        "id": "Dua gerbang di manifes saya periksa sebelum rilis: simetri lolos dan fidelitas lolos, masing-masing membawa token, segel digital yang mengikat putusan juri ke draf persis ini, dan kedua token cocok. ppn-panic terbit dengan status published."
+      },
+      "A13": {
+        "en": "Filed the published dissection where readers can find it: node-ppn-panic joined the constellation, now 10 nodes, and three article links entered the 26-entry URL index, the Bisnis.com piece as canonical, the Antara wire as the fresh-dissect demo, the tax authority page as a family member.",
+        "id": "Bedahan yang terbit saya arsipkan agar mudah ditemukan: node-ppn-panic bergabung ke konstelasi yang kini 10 simpul, dan tiga tautan artikel masuk indeks URL berisi 26 entri, artikel Bisnis.com sebagai kanonik, berita Antara sebagai demo bedah segar, halaman otoritas pajak sebagai anggota keluarga."
+      }
+    },
+    "tariffs-pay": {
+      "A1": {
+        "en": "I found three headlines circulating for this claim: a FactCheck.org piece from January 2026 and two Committee for a Responsible Federal Budget blogs from late 2025, all in English, each logged with outlet, date and link.",
+        "id": "Saya menemukan tiga judul yang beredar untuk klaim ini: satu artikel FactCheck.org dari Januari 2026 dan dua blog Committee for a Responsible Federal Budget dari akhir 2025, semuanya berbahasa Inggris, tercatat dengan media, tanggal dan tautannya."
+      },
+      "A2": {
+        "en": "All three headlines came through the archive clean: each one normalised into the same six fields, id, language, headline, outlet, date and link, so the rest of the pipeline reads them in one uniform shape.",
+        "id": "Ketiga judul itu terarsip dengan rapi: masing-masing dinormalkan ke enam kolom yang sama, id, bahasa, judul, media, tanggal dan tautan, sehingga tahap-tahap berikutnya membacanya dalam satu bentuk seragam."
+      },
+      "A3": {
+        "en": "At a similarity threshold of 0.925 the three headlines stayed apart: none of them merged with anything, so each landed in its own cluster of one and entered the ranking as three separate singletons.",
+        "id": "Pada ambang kemiripan 0,925 ketiga judul itu tetap terpisah: tidak ada yang menyatu dengan apa pun, jadi masing-masing jatuh ke klaster berisi satu dan masuk pemeringkatan sebagai tiga klaster tunggal."
+      },
+      "A4": {
+        "en": "Of 22 ranked clusters, the FactCheck.org headline's cluster took rank 3, score 3.25: one outlet, a one-day span, causal density 1, meaning its wording carries a cause-and-effect chain. The two CRFB clusters trailed at ranks 18 and 19, and the rank 3 cluster is the one that went on to dissection.",
+        "id": "Dari 22 klaster terperingkat, klaster judul FactCheck.org meraih peringkat 3, skor 3,25: satu media, rentang satu hari, kepadatan kausal 1, artinya kalimatnya memuat rantai sebab-akibat. Dua klaster CRFB tertinggal di peringkat 18 dan 19, dan klaster peringkat 3 itulah yang lanjut dibedah."
+      },
+      "A5": {
+        "en": "I mapped the claim's spine in four steps: sweeping tariffs on imports, collections arriving as federal revenue, that revenue reaching the scale of everything proposed, and all of it paid from tariff money. For the final link, no article in the family states the step at all.",
+        "id": "Saya memetakan tulang punggung klaim dalam empat langkah: tarif menyeluruh atas impor, pungutan masuk sebagai penerimaan federal, penerimaan itu mencapai skala semua usulan, dan semuanya terbayar dari uang tarif. Untuk mata rantai terakhir, tak ada artikel keluarga ini yang menyatakan langkahnya."
+      },
+      "A6": {
+        "en": "The story prices seven things at zero. The biggest: the cost side of the agenda it never states, the divider its own comparison needs; and the importer who writes the check at the border, with the household behind it, before a cent counts as revenue.",
+        "id": "Narasinya menganggap tujuh hal bernilai nol. Yang terbesar: sisi biaya agenda yang tak pernah disebut, angka pembagi yang dibutuhkan perbandingannya sendiri; juga importir yang membayar duluan di perbatasan beserta rumah tangga di belakangnya, sebelum sepeser pun tercatat sebagai penerimaan."
+      },
+      "A7": {
+        "en": "Five panels, 25 figures, every figure tied to a source registry entry. I grounded the tariff line: $194.9B for FY2025 inside $5.23T of total receipts, a $4.1T score for the enacted package, and $1,338 per household if the tariff schedule is extended, $1,130 once buyers shift.",
+        "id": "Lima panel, 25 angka, semua terikat entri registri sumber. Saya membumikan garis tarifnya: US$194,9 miliar pada TA2025 dalam total penerimaan US$5,23 triliun, skor US$4,1 triliun paket yang disahkan, dan US$1.338 per rumah tangga jika jadwal tarif diperpanjang, US$1.130 setelah pembeli beralih."
+      },
+      "A8": {
+        "en": "I searched the case library for a historical echo and shipped none: all four cases fell short of the motif threshold. The closest, a scope-inflation panic, moves the opposite way: it enlarges a burden in the telling, while this claim's ordering of two sentences removes one.",
+        "id": "Saya menelusuri pustaka kasus mencari gema historis dan tidak mengirim satu pun: keempat kasus tak mencapai ambang motif. Yang terdekat, kepanikan penggelembungan cakupan, bergerak berlawanan arah: ia memperbesar beban dalam penuturan, sedangkan urutan dua kalimat klaim ini menghapus satu beban."
+      },
+      "A9": {
+        "en": "I wrote the narration twice, six sentences in English and six in Indonesian, every sentence bound to elements of the map, plus three sparring questions. My notes flag that the Indonesian set binds four elements the English set leaves out.",
+        "id": "Saya menulis narasinya dua kali, enam kalimat bahasa Inggris dan enam bahasa Indonesia, setiap kalimat terikat ke elemen peta, plus tiga pertanyaan tanding. Catatan saya menandai bahwa versi Indonesia mengikat empat elemen yang tak ada di versi Inggris."
+      },
+      "A10": {
+        "en": "I audited for symmetry and passed the draft: a mirrored claim would get the same treatment. Seven hidden branches is the run's median for either lean, the one supported link rests on a primary Treasury document, and the two look-alike scale panels separate on their first line.",
+        "id": "Saya mengaudit kesimetrisan dan meloloskan draf ini: klaim cermin akan menerima perlakuan yang sama. Tujuh cabang tersembunyi adalah median run untuk kedua haluan, satu-satunya mata rantai tertopang berdiri di dokumen primer Kas Negara, dan dua panel skala serupa terpisah sejak baris pertamanya."
+      },
+      "A11": {
+        "en": "I blocked the first draft: one Indonesian sentence grouped the protected producer among the payers, while the element behind it has buyers paying and the producer collecting income. After the rewrite I passed it: all 26 sentence bindings resolve and each of the 25 figures carries its source.",
+        "id": "Saya memblokir draf pertama: satu kalimat bahasa Indonesia memasukkan produsen terlindungi ke daftar para pembayar, padahal elemennya mencatat pembeli yang membayar dan produsen yang menerima. Setelah ditulis ulang saya meloloskannya: 26 ikatan kalimat tersambung semua, 25 angka bersumber semua."
+      },
+      "A12": {
+        "en": "Before publishing I checked the two digital seals, one per gate: the symmetry gate and the fidelity gate both read pass, each sealed with the same sha256 token beginning 68affdc3. Both seals sit in the published manifest, and with them in place the dissection went out.",
+        "id": "Sebelum terbit saya memeriksa dua segel digital, satu per gerbang: gerbang simetri dan gerbang fidelitas sama-sama berstatus lolos, masing-masing tersegel token sha256 yang sama berawalan 68affdc3. Kedua segel ada di manifes yang terbit, dan dengan itu diseksi ini keluar."
+      },
+      "A13": {
+        "en": "I filed the published dissection: its node joined the constellation as one of ten, and I indexed three URLs, the FactCheck.org piece as canonical plus the two CRFB family members, so pasting any of those links now finds this dissection.",
+        "id": "Saya mengarsipkan diseksi yang terbit: simpulnya bergabung ke konstelasi sebagai satu dari sepuluh, dan saya mengindeks tiga URL, artikel FactCheck.org sebagai kanonis plus dua anggota keluarga dari CRFB, sehingga menempelkan tautan mana pun dari ketiganya kini menemukan diseksi ini."
+      }
+    },
+    "usaid-deficit": {
+      "A1": {
+        "en": "I found two entries for this claim, both in English: a KFF health tracking poll published 4 March 2025 on the public's views on global health and USAID, and the US Treasury's final Monthly Treasury Statement for fiscal year 2025, the September 2025 issue.",
+        "id": "Saya menemukan dua entri untuk klaim ini, keduanya berbahasa Inggris: jajak pendapat kesehatan KFF terbit 4 Maret 2025 tentang pandangan publik atas kesehatan global dan USAID, serta Laporan Bulanan Treasury AS edisi September 2025 untuk tahun fiskal 2025."
+      },
+      "A2": {
+        "en": "I archived both entries and normalised them into one shape: id, language, outlet, date, headline and URL. The KFF poll page and the Treasury statement PDF now sit in the run as uniform records the later agents can cite.",
+        "id": "Kedua entri saya arsipkan dan seragamkan ke satu bentuk: id, bahasa, media, tanggal, judul, dan URL. Halaman jajak pendapat KFF dan PDF laporan Treasury kini tersimpan sebagai rekaman seragam yang bisa dikutip agen berikutnya."
+      },
+      "A3": {
+        "en": "I compared entries at a similarity threshold of 0.925. The poll and the Treasury statement did not clear that bar to merge, so each sits in its own group of one; the slot's family file is what later carries them side by side.",
+        "id": "Saya membandingkan entri pada ambang kemiripan 0,925. Jajak pendapat dan laporan Treasury tidak melewati ambang itu untuk digabung, jadi masing-masing berdiri dalam kelompok berisi satu; berkas keluarga di slot yang kemudian memuat keduanya berdampingan."
+      },
+      "A4": {
+        "en": "I ranked the run's clusters. The two groups behind this claim scored 1.25 each, ranks 20 and 21: one outlet apiece, a one-day span, and zero causal density, my count of cause-and-effect wording. The claim chosen for the slot: foreign aid is about a quarter of the federal budget.",
+        "id": "Saya memeringkat klaster run ini. Dua kelompok di balik klaim ini masing-masing bernilai 1,25, peringkat 20 dan 21: satu media, rentang satu hari, kepadatan kausal nol, hitungan saya atas bahasa sebab-akibat. Klaim terpilih untuk slot: bantuan luar negeri sekitar seperempat anggaran federal."
+      },
+      "A5": {
+        "en": "I drew the spine the story claims: foreign aid takes a very large share of the federal budget, cutting it frees spending on that same scale, and the deficit narrows substantially. Two joins hold that chain together, and no article in the family states either one.",
+        "id": "Saya menggambar tulang punggung yang diklaim cerita ini: bantuan luar negeri memakan porsi sangat besar anggaran federal, memangkasnya membebaskan belanja sebesar itu, lalu defisit menyusut berarti. Dua sambungan menopang rantai itu, dan tidak ada artikel dalam keluarga ini yang menyatakan satu pun."
+      },
+      "A6": {
+        "en": "The story prices five things at zero. The biggest: the line's annual outlay in dollars, the amount a cut could free, and the size of the deficit any narrowing would be measured against. Also unpriced: the payees whose income stops the moment the cut lands.",
+        "id": "Cerita ini menghargai lima hal dengan nol. Yang terbesar: belanja tahunan pos itu dalam dolar, jumlah yang bisa dibebaskan pemangkasan, dan besar defisit yang menjadi pembanding penyusutan. Juga tak dihitung: pihak yang pendapatannya berhenti saat pemangkasan jatuh."
+      },
+      "A7": {
+        "en": "I built two panels, a claim map and a scale check. Six values carry sources, all tied to the KFF poll: the 26 percent average guess, used twice as bar and base, about 1 percent stated as actual, the 11 percent who guessed it, and support at 58 before and 34 after seeing the actual share.",
+        "id": "Saya membangun dua panel, peta klaim dan cek skala. Enam nilai bersumber, semuanya ke jajak KFF: tebakan rata-rata 26 persen, dipakai dua kali sebagai batang dan pembanding, sekitar 1 persen porsi aktual, 11 persen menebak tepat, serta dukungan 58 sebelum dan 34 sesudah porsi aktual ditunjukkan."
+      },
+      "A8": {
+        "en": "No echo ships. All four cases in the library were weighed and none matched at the structural threshold; the nearest, a scope-inflation panic from January 2025, shares the budget topic but not the shape, and topic overlap is expressly not the threshold. The blueprint permits silence.",
+        "id": "Tidak ada gema yang dikirim. Keempat kasus di pustaka ditimbang dan tak satu pun cocok pada ambang struktural; yang terdekat, panik inflasi-cakupan Januari 2025, berbagi topik anggaran tapi tidak bentuknya, dan kesamaan topik tegas bukan ambangnya. Cetak biru mengizinkan diam."
+      },
+      "A9": {
+        "en": "Six sentences per language, each bound to the elements it describes, 17 elements in identical groupings, plus three sparring questions. After both gates blocked, I rewrote the four spans still describing the old panel: sentence five and the denominator question, in both languages.",
+        "id": "Enam kalimat per bahasa, tiap kalimat terikat pada elemen yang digambarkannya, 17 elemen dalam pengelompokan identik, plus tiga pertanyaan sparring. Setelah kedua gerbang memblokir, saya menulis ulang empat bagian yang masih memuat panel lama: kalimat kelima dan soal pembanding, di kedua bahasa."
+      },
+      "A10": {
+        "en": "I refused the draft first: it read the poll's shares against a $5,234.6 billion Treasury total the rebuilt panel had dropped, the very move it faults the claim for. After the rewrite I swept all 261 strings, found no stray dollar figure, and passed it.",
+        "id": "Saya menahan draf itu lebih dulu: ia membaca porsi jajak pendapat terhadap total Treasury US$5.234,6 miliar yang sudah dibuang panel, persis langkah yang ia persoalkan pada klaim. Setelah penulisan ulang saya menyisir 261 string, tak ada angka dolar tersisa, lalu meloloskannya."
+      },
+      "A11": {
+        "en": "I blocked the draft once: sentence five and the denominator question, in both languages, cited a $5,234.6 billion total no element carries, the amount the panel itself says cannot sit on either bar. Re-authored, all 17 bound elements resolve and every figure traces to its source: pass.",
+        "id": "Saya memblokir draf sekali: kalimat kelima dan soal pembanding, di kedua bahasa, mengutip total US$5.234,6 miliar yang tak dibawa elemen mana pun, jumlah yang menurut panel tak bisa duduk di kedua batang. Ditulis ulang, 17 elemen terikat terhubung dan tiap angka tertelusur ke sumbernya: lolos."
+      },
+      "A12": {
+        "en": "Before publishing I checked the manifest's two gates: symmetry and fidelity both read pass, each carrying a digital seal (a sha256 token), and the two seals match, beginning 7cf4a40f. Only with those seals verified did the piece go out.",
+        "id": "Sebelum terbit saya memeriksa dua gerbang di manifes: simetri dan fidelitas sama-sama lolos, masing-masing membawa segel digital (token sha256), dan kedua segel itu identik, berawalan 7cf4a40f. Baru setelah segel terverifikasi, karya ini terbit."
+      },
+      "A13": {
+        "en": "I filed the published dissection: its node joined the constellation, linked to the USAID deaths piece through a shared source, The Lancet, and both family URLs now lead to it in the lookup index, the KFF poll page as canonical and the Treasury statement as a family member.",
+        "id": "Saya mengarsipkan bedah yang terbit: simpulnya bergabung ke konstelasi, tertaut ke karya soal kematian USAID lewat sumber bersama, The Lancet, dan kedua URL keluarganya kini mengarah ke sana di indeks: halaman jajak KFF sebagai kanonik, laporan Treasury sebagai anggota keluarga."
+      }
+    },
+    "migrant-crime": {
+      "A1": {
+        "en": "I found three English headlines in the wild for this family: a Cato Institute policy analysis from August 2025, a PNAS study of Texas records from December 2020, and the FBI's release of 2024 reported crime statistics.",
+        "id": "Saya menemukan tiga judul berbahasa Inggris untuk keluarga ini: analisis kebijakan Cato Institute dari Agustus 2025, studi PNAS tentang catatan Texas dari Desember 2020, dan rilis FBI tentang statistik kejahatan terlapor tahun 2024."
+      },
+      "A2": {
+        "en": "I archived the three headlines and normalised them into uniform records, each carrying an id, language, headline, outlet, date and URL. The Cato analysis, the PNAS Texas study and the FBI release now sit in the pipeline in identical shape.",
+        "id": "Ketiga judul saya arsipkan dan seragamkan menjadi catatan baku, masing-masing memuat id, bahasa, judul, media, tanggal, dan URL. Analisis Cato, studi Texas PNAS, dan rilis FBI kini duduk dalam pipeline dengan bentuk yang sama."
+      },
+      "A3": {
+        "en": "At a similarity threshold of 0.925 these three headlines did not merge: each landed in a cluster of its own, three clusters of one. A policy analysis, a state arrest study and a national crime release read as three distinct stories.",
+        "id": "Pada ambang kemiripan 0,925 ketiga judul ini tidak menyatu: masing-masing mendarat di klasternya sendiri, tiga klaster berisi satu. Analisis kebijakan, studi penangkapan satu negara bagian, dan rilis kejahatan nasional terbaca sebagai tiga cerita berbeda."
+      },
+      "A4": {
+        "en": "I ranked 22 clusters to decide what deserved a fleet run. The three migrant-crime clusters sat at ranks 12, 13 and 14, each scoring 1.25: one outlet apiece, a one-day span, and zero causal density, meaning no cause-and-effect wording measured in the cluster.",
+        "id": "Saya memeringkat 22 klaster untuk memutuskan mana yang layak dijalankan armada. Tiga klaster migrant-crime duduk di peringkat 12, 13, dan 14, masing-masing bernilai 1,25: satu media per klaster, rentang satu hari, dan kepadatan kausal nol, artinya tak ada kata sebab-akibat yang terukur di klaster."
+      },
+      "A5": {
+        "en": "The story's spine runs in three steps: more immigrants enter and settle, they offend at a rate above the rest of the population, and the national trend surges into a wave. I recorded both connecting steps as stated by no article in this family.",
+        "id": "Tulang punggung cerita berjalan tiga langkah: lebih banyak imigran masuk dan menetap, mereka berbuat pidana dengan laju melebihi penduduk lain, lalu tren nasional melonjak menjadi gelombang. Kedua sambungan antarlangkah saya catat tidak dinyatakan oleh satu artikel pun di keluarga ini."
+      },
+      "A6": {
+        "en": "The story prices seven things at zero. The most vivid: the population divisor that settlement itself keeps growing, so counts can rise while the per-person rate falls, and the same immigrants standing on the victim side of the wave they are named to drive.",
+        "id": "Cerita ini menghargai tujuh hal dengan nol. Yang paling mencolok: pembagi populasi yang justru membesar karena pemukiman, sehingga jumlah kejadian bisa naik sementara laju per orang turun, dan imigran yang sama berdiri di sisi korban gelombang yang disebut mereka gerakkan."
+      },
+      "A7": {
+        "en": "Across the claim map and the dueling panel I set seven figures, every one sealed to the source registry: victimization 44 percent lower, reporting 29 percent higher, an over 2 times arrest comparator, murder down 14.9 percent, reported offenses down 4.5 percent, from Cato, PNAS and the FBI.",
+        "id": "Di peta klaim dan panel angka bertanding saya menaruh tujuh angka, semuanya terikat registri sumber: viktimisasi 44 persen lebih rendah, pelaporan 29 persen lebih tinggi, penangkapan lebih dari 2 kali, pembunuhan turun 14,9 persen, tindak pidana terlapor turun 4,5 persen, dari Cato, PNAS, dan FBI."
+      },
+      "A8": {
+        "en": "No echo ships. I checked the library's four historical cases at the motif level; the nearest, a scope-inflation panic from January 2025, still fell short because the resemblance sits in a hidden node, not the spine. Under the conservative threshold, the answer is silence with a reason.",
+        "id": "Tak ada gema tayang. Saya memeriksa empat kasus historis di pustaka pada tingkat motif; yang terdekat, panik inflasi cakupan Januari 2025, tetap tak memenuhi syarat karena kemiripannya ada di simpul tersembunyi, bukan di tulang punggung. Dengan ambang konservatif, jawabannya diam disertai alasan."
+      },
+      "A9": {
+        "en": "I wrote six sentences per language, twelve in all, and bound every sentence to graph elements: both locales cover the same 17 elements. Three sparring questions and a prediction tap ride along, and my editorial notes log the cross-locale fixes that keep both pages saying the same thing.",
+        "id": "Saya menulis enam kalimat per bahasa, dua belas seluruhnya, dan mengikat setiap kalimat ke elemen graf: kedua bahasa mencakup 17 elemen yang sama. Ada tiga pertanyaan sparring dan satu tebakan pembuka, dan catatan editorial saya merekam perbaikan lintas bahasa agar kedua halaman berkata sama."
+      },
+      "A10": {
+        "en": "Pass. I rebuilt the dissection with the lean flipped, immigrants named driver of the crime decline. Both spine edges stay missing either way, five of seven hidden branches are direction-neutral machinery, and the two whose numbers favor the flip carry the limits a mirror audit would demand.",
+        "id": "Lolos. Saya membangun ulang bedahnya dengan arah dibalik, imigran dinamai penggerak penurunan kejahatan. Kedua sambungan tulang punggung tetap hilang di dua arah, lima dari tujuh cabang tersembunyi netral arah, dan dua cabang yang angkanya memihak arah balik memuat batas yang dituntut audit cermin."
+      },
+      "A11": {
+        "en": "Pass, no block round. All 12 sentences resolve every element they bind, all 17 declared elements are covered in both languages, all 7 figures carry a source that resolves in the registry, and the counts recomputed from the graph match exactly. I scanned 206 copy strings: zero lexicon hits.",
+        "id": "Lolos tanpa putaran blokir. Seluruh 12 kalimat terikat pada elemen yang ada, 17 elemen tercakup di kedua bahasa, 7 angka membawa sumber yang ada di registri, dan hitungan yang saya hitung ulang dari graf cocok persis. Saya memindai 206 string naskah: nol temuan leksikon."
+      },
+      "A12": {
+        "en": "Before publishing I verified the two gate tokens in the manifest, digital seals left by the judges: symmetry pass and fidelity pass, both sealed with the same digest beginning 591735f0. Both seals checked out, so the dissection shipped with status published.",
+        "id": "Sebelum terbit saya memverifikasi dua token gerbang di manifes, segel digital yang ditinggalkan kedua juri: simetri lolos dan fidelitas lolos, keduanya tersegel dengan digest sama berawalan 591735f0. Kedua segel cocok, maka bedah ini tayang dengan status terbit."
+      },
+      "A13": {
+        "en": "I filed the published dissection: its node joined the constellation as one of ten, under its own headline, and three URLs became findable in the index, the Cato page as canonical plus the PNAS and FBI pages as family members.",
+        "id": "Saya mengarsipkan bedah yang terbit: simpulnya bergabung ke konstelasi sebagai satu dari sepuluh, di bawah judulnya sendiri, dan tiga URL menjadi mudah ditemukan di indeks, halaman Cato sebagai kanonik serta halaman PNAS dan FBI sebagai anggota keluarga."
+      }
+    },
+    "usaid-deaths": {
+      "A1": {
+        "en": "Out in the wild I found one headline for this story: The Lancet, 30 June 2025, a study projecting what defunding USAID does to mortality up to 2030. One outlet, one article, logged with its date and link among the 27 records of this run.",
+        "id": "Di lapangan saya menemukan satu judul untuk cerita ini: The Lancet, 30 Juni 2025, studi yang memproyeksikan dampak penghentian dana USAID terhadap kematian hingga 2030. Satu media, satu artikel, tercatat dengan tanggal dan tautannya di antara 27 rekaman putaran ini."
+      },
+      "A2": {
+        "en": "I archived that single Lancet record and normalised it: id usaid-deaths-m1, language English, outlet The Lancet, date 2025-06-30 and the full article URL, stored in the same shape as every other record so the rest of the pipeline can read it.",
+        "id": "Saya arsipkan rekaman tunggal dari The Lancet itu dan merapikannya: id usaid-deaths-m1, bahasa Inggris, media The Lancet, tanggal 2025-06-30, dan URL artikel lengkap, disimpan dalam bentuk seragam agar tahap pipeline berikutnya bisa membacanya."
+      },
+      "A3": {
+        "en": "At a similarity threshold of 0.925 I sifted the run's 27 records. No other record told this story, so usaid-deaths-m1 stands alone in its own cluster, c-usaid-deaths-m1: a group of one.",
+        "id": "Dengan ambang kemiripan 0,925 saya saring 27 rekaman putaran ini. Tidak ada rekaman lain yang menceritakan kisah yang sama, jadi usaid-deaths-m1 berdiri sendiri di klasternya, c-usaid-deaths-m1: kelompok beranggota satu."
+      },
+      "A4": {
+        "en": "I scored all 22 clusters and ranked this one 4th at 3.25. One outlet, a one day span, but causal density 1: the headline itself asserts a cause driving an effect, a funding stop driving deaths, and only the four clusters carrying such a claim scored 3.25.",
+        "id": "Saya menilai 22 klaster; yang ini peringkat 4 dengan skor 3,25. Satu media, rentang satu hari, tetapi kepadatan kausal 1: judulnya sendiri menyatakan sebab yang mendorong akibat, penghentian dana mendorong kematian, dan hanya empat klaster dengan klaim seperti itu yang meraih 3,25."
+      },
+      "A5": {
+        "en": "The story's spine has four steps: USAID is defunded, programmes on its support stop, mortality rises where they reached, and extra deaths by 2030 hit the projected total. The article states only the long jump from first step to last; no article in this family states the three middle links.",
+        "id": "Tulangnya empat langkah: dana USAID dihentikan, programnya berhenti, kematian naik di populasi yang dijangkau, kematian tambahan 2030 mencapai angka proyeksi. Artikel hanya menyatakan lompatan langkah pertama ke terakhir; tiga tautan tengahnya tak dinyatakan artikel mana pun di keluarga ini."
+      },
+      "A6": {
+        "en": "The story prices eight things at zero. The most vivid: food, medicines and bednets already bought, sitting in warehouses and ports when the programmes stop, and the households who meet the gap first, paying out of pocket for medicines at market price.",
+        "id": "Cerita ini menghargai delapan hal dengan nol. Yang paling terasa: bantuan pangan, obat, dan kelambu yang terlanjur dibeli dan tertahan di gudang serta pelabuhan saat program berhenti, dan rumah tangga yang lebih dulu menambal celahnya, merogoh kantong sendiri untuk obat berharga pasar."
+      },
+      "A7": {
+        "en": "I drew three panels: a claim map, a scale check and a who-feels-it-first timeline. Nine figures in them carry a source, all tied to one registry entry, the Lancet paper: 14.05 million central, the 8.48 to 19.66 million range, 4.5 million under five, 91.8 million prevented, all dated June 2025.",
+        "id": "Saya susun tiga panel: peta klaim, uji skala, dan lini masa siapa merasakan lebih dulu. Sembilan angka membawa sumber, semua ke satu entri registri, makalah The Lancet: 14,05 juta angka tengah, rentang 8,48 sampai 19,66 juta, 4,5 juta balita, 91,8 juta dicegah, bertanggal Juni 2025."
+      },
+      "A8": {
+        "en": "I searched the case library, four cases, for an echo of this shape: a conditional projection travelling as a finished count. None matched at the conservative threshold. The closest, B-04, scope-inflation panic, needs a written rule the telling outruns; none exists here, so the panel is withheld.",
+        "id": "Saya telusuri pustaka kasus, empat kasus, mencari gema bentuk ini: proyeksi bersyarat yang berkeliling sebagai angka jadi. Tidak ada yang lolos ambang konservatif. Yang terdekat, B-04, panik inflasi cakupan, butuh aturan tertulis yang dilampaui; di sini tidak ada, jadi panelnya ditahan."
+      },
+      "A9": {
+        "en": "I wrote the narration in both languages, six sentences in English and six in Indonesian, each bound to named elements of the graph and panels. The Indonesian was authored natively, not translated, and my editorial notes record the three edits made to reconcile the two locales.",
+        "id": "Saya menulis narasinya dalam dua bahasa, enam kalimat Inggris dan enam kalimat Indonesia, tiap kalimat terikat ke elemen grafik dan panel yang disebut namanya. Versi Indonesia ditulis langsung, bukan terjemahan, dan catatan editorial saya merekam tiga suntingan untuk menyelaraskan kedua bahasa."
+      },
+      "A10": {
+        "en": "I audited the dissection for even-handedness and passed it on the first round. The forward 14.05 million projection and the backward 91.8 million credit get the same depth of scrutiny, four of the eight hidden branches cut against the draft's own framing, and my digital seal went on the record.",
+        "id": "Saya periksa keseimbangan hasil bedah ini dan meloloskannya pada putaran pertama. Proyeksi maju 14,05 juta dan kredit mundur 91,8 juta mendapat pemeriksaan sama dalamnya, empat dari delapan cabang tersembunyi justru menekan bingkai draf sendiri, lalu segel digital saya terpasang."
+      },
+      "A11": {
+        "en": "I traced every sentence back to the structure: each binding in the 12 sentences resolves to the declared 28 elements, all 9 figures carry a source, and the stored counts recompute exactly: 3 missing links, 1 supported, 8 hidden. Passed on the first round, sealed.",
+        "id": "Saya lacak tiap kalimat kembali ke strukturnya: setiap ikatan pada 12 kalimat mengarah ke 28 elemen yang dideklarasikan, seluruh 9 angka membawa sumber, dan hitungan tersimpan terhitung ulang persis: 3 tautan hilang, 1 didukung, 8 tersembunyi. Lolos pada putaran pertama, tersegel."
+      },
+      "A12": {
+        "en": "Before publishing I checked the two gates in the manifest, symmetry and fidelity, both passes, each carrying its judge's token, a digital seal over the approved dissection. Both tokens matched the judges' records, so this one went out with status published.",
+        "id": "Sebelum terbit saya periksa dua gerbang di manifes, simetri dan fidelitas, keduanya lolos dan masing-masing membawa token jurinya, segel digital atas hasil bedah yang disetujui. Kedua token cocok dengan catatan para juri, maka yang ini keluar dengan status published."
+      },
+      "A13": {
+        "en": "I filed the published dissection: its node joined the constellation of 10 nodes, linked to the usaid-deficit node through their shared source, The Lancet, and the paper's URL went into the index as this story's canonical address, so anyone pasting that link finds the dissection.",
+        "id": "Saya arsipkan hasil bedah yang terbit: simpulnya bergabung ke konstelasi berisi 10 simpul, tertaut ke simpul usaid-deficit lewat sumber yang sama, The Lancet, dan URL makalah masuk indeks sebagai alamat kanonik cerita ini, jadi siapa pun yang menempel tautan itu menemukan hasil bedahnya."
+      }
+    }
+  }
+}

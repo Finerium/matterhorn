@@ -29,7 +29,7 @@ import { trapRef } from '../trap';
 import { SITE_URL } from '../site';
 
 export interface ConsoleLine {
-  kind: 'slot' | 'block' | 'refix' | 'verdict';
+  kind: 'slot' | 'block' | 'refix' | 'verdict' | 'note';
   text: string;
 }
 
@@ -52,6 +52,7 @@ export function consoleLines(run: ReplayRun, lang: Lang, t: T): { lines: Console
     }
     if (event.kind === 'slot') {
       lines.push({ kind: 'slot', text: `${event.role} · ${event.label[lang]} · ${event.model}` });
+      if (event.note !== undefined) lines.push({ kind: 'note', text: event.note[lang] });
     } else if (event.kind === 'block') {
       lines.push({
         kind: 'block',
@@ -61,6 +62,7 @@ export function consoleLines(run: ReplayRun, lang: Lang, t: T): { lines: Console
     } else if (event.kind === 'verdict') {
       const head = t('research.replay.pass', { gate: event.gate, model: event.model });
       lines.push({ kind: 'verdict', text: event.summary === '' ? head : `${head} ${event.summary}` });
+      if (event.note !== undefined) lines.push({ kind: 'note', text: event.note[lang] });
     } else {
       token = event.token;
     }
@@ -95,6 +97,8 @@ export interface ReplayConsoleProps {
 /** 24 ms per character, 180 ms line pauses: the design direction's numbers, verbatim. */
 const CHAR_MS = 24;
 const LINE_MS = 180;
+/** An output note lands whole after one beat: typed at 24 ms it would add a minute per replay. */
+const NOTE_MS = 300;
 
 export default function ReplayConsole({ run, runId, disclosure, lang, onClose }: ReplayConsoleProps) {
   const t: T = (key, vars) => translate(lang, key, vars);
@@ -110,11 +114,16 @@ export default function ReplayConsole({ run, runId, disclosure, lang, onClose }:
     const current = lines[at.line];
     if (current === undefined) return;
     const finished = at.chars >= current.text.length;
+    const block = current.kind === 'note' && !finished;
     const timer = setTimeout(
       () => {
-        setAt(finished ? { line: at.line + 1, chars: 0 } : { line: at.line, chars: at.chars + 1 });
+        setAt(
+          finished
+            ? { line: at.line + 1, chars: 0 }
+            : { line: at.line, chars: block ? current.text.length : at.chars + 1 },
+        );
       },
-      finished ? LINE_MS : CHAR_MS,
+      finished ? LINE_MS : block ? NOTE_MS : CHAR_MS,
     );
     return () => {
       clearTimeout(timer);
