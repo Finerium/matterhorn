@@ -53,7 +53,9 @@ const SKIP_LABELS = new Set(['register', 'set piece']);
  * Mid-line labels that name a field inside one line. The label word itself is structure, so it is
  * dropped with the split: `Sources: Komnas HAM` is checked as `Komnas HAM`, because a module is
  * free to hold the list and let the renderer write the word. Any other `Word: ` in a value is
- * copy and stays (`Launch packs: Indonesia, in depth`, `Figures: Kemenkeu realisasi May 2026`).
+ * copy and stays: 4.4.7's `Launch packs: `, and the `Figures: ` that opens 4.4.3's source
+ * microline. Named by their label rather than quoted, because a frozen string typed in here is a
+ * second copy of the blueprint that can rot.
  */
 const FIELD = /(?<=\. )(CTA secondary|Microlines|Microline|Links|Button|Mobile|Body|Sources): (?=\S)/;
 

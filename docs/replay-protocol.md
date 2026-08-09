@@ -11,6 +11,11 @@ visible for the whole replay (blueprint 3.4 honesty of simulation). No durations
 the console paces events theatrically and the disclosure says the pacing is compressed and not
 to scale.
 
+The record MAY span several recorded runs: `run_ids` lists every one of them, and each narrative
+carries the `run_id` of the run whose `slots/<id>/steps.json` recorded it, which the console
+prints in its header. One disclosure covers them all, naming every run, and no narrative is ever
+attributed to a run that did not record it.
+
 The console shows the whole span A1 to A13. The curation stages (A1 to A4) and the release pair
 (A12, A13) run as deterministic code, so their lines carry `deterministic` where a slot line
 carries a model id, and each line appears only when the run directory or the published artifact

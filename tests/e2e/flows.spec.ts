@@ -117,6 +117,9 @@ const urlFor = (id: string, role: UrlIndex['entries'][number]['role']): string =
  * is S1 with the dueling panel; ppn-panic is S0, carries the echo, and is the via_dissect item.
  */
 const STOP = read<Narrative>('narratives/mbg-stop.json');
+/** The id-pack hero, derived from the feed rather than pinned, so a flagship change moves both sides. */
+const ID_FEED = read<{ items: Array<{ narrative_id: string; slot: string }> }>('packs/id/feed.json');
+const HERO = read<Narrative>(`narratives/${ID_FEED.items.find((i) => i.slot === 'hero')?.narrative_id ?? ''}.json`);
 const POISON = read<Narrative>('narratives/mbg-poisoning.json');
 const PPN = read<Narrative>('narratives/ppn-panic.json');
 const SOURCES = read<Source[]>('sources.json');
@@ -384,8 +387,9 @@ test.describe('AC-APP-4 radar states', () => {
 
     // The default app language is en and the default pack is id, so an id-pack narrative shows
     // its en headline with the EN <- ID translated marker. Two independent settings, on purpose.
-    await expect(page.locator(`[data-feed-item="${STOP.id}"] .m-card`)).toBeVisible();
-    await expect(page.locator(`[data-feed-item="${STOP.id}"]`)).toContainText(STOP.headline.en);
+    await expect(page.locator(`[data-feed-item="${HERO.id}"] .m-card`)).toBeVisible();
+    await expect(page.locator(`[data-feed-item="${HERO.id}"]`)).toContainText(HERO.headline.en);
+    await expect(page.locator(`[data-feed-item="${STOP.id}"] .m-card-c`)).toBeVisible();
     await expect(page.locator(`[data-feed-item="${POISON.id}"] .m-card-c`)).toBeVisible();
     await expect(page.locator(`[data-feed-item="${POISON.id}"]`)).toContainText(POISON.headline.en);
 

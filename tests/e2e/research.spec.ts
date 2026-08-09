@@ -492,11 +492,12 @@ test.describe('the desk states its rhythm honestly', () => {
     const cadence = page.getByTestId('research-cadence');
     await expect(cadence).toBeVisible();
     await expect(cadence).toContainText('run-2026-07-29');
+    await expect(cadence, 'the archive spans both recorded runs and says so').toContainText('run-2026-08-10');
     await expect(cadence, 'the operating model is labelled a plan, never live state').toContainText('plan');
     await expect(page.getByTestId('research-queue')).toContainText(/\d/);
-    await expect(page.getByTestId('research-ticker'), 'the idle murmur names the run it replays').toContainText(
-      'run-2026-07-29',
-    );
+    const ticker = page.getByTestId('research-ticker');
+    await expect(ticker, 'the idle murmur names the runs it replays').toContainText('run-2026-07-29');
+    await expect(ticker, 'the idle murmur names the runs it replays').toContainText('run-2026-08-10');
     await expect(page.getByTestId('research-version')).toContainText(/Build \d+\.\d+\.\d+/);
   });
 

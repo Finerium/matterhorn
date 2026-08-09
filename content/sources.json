@@ -526,5 +526,53 @@
     "self_reported": false,
     "liveness": "live",
     "notes": "The tariff-ratio source (blueprint 7.2.11): customs duties net $194,866M ($194.9B; gross $202,357M less $7,492M refunds, Table 4) and total federal net receipts $5,234,616M ($5.23T). Derived ratio 3.7 percent: the PRD's under-2-percent phrasing is contradicted by the primary document and never ships. Use net figures for both sides. Directly fetchable PDF (curl 200, 4.0 MB)."
+  },
+  {
+    "id": "id-bbc-demo-wave-2026",
+    "title": "Mengapa konten demo mahasiswa yang lama ramai lagi di media sosial? - 'Ada pola terorganisir dan mustahil dilakukan secara manual'",
+    "publisher": "BBC News Indonesia",
+    "url": "https://www.bbc.com/indonesia/articles/cx2dxwdqv8wo",
+    "retrieved_at": "2026-08-09",
+    "period": "wave of 26 Jul-1 Aug 2026, published 2026-08-04",
+    "kind": "outlet",
+    "self_reported": false,
+    "liveness": "live",
+    "notes": "Verbatim-confirmed 2026-08-09 with a browser UA fetch. Carries: the circulating hooks quoted verbatim (incl 'Demo sebesar ini enggak diliput media?'); wave ran almost two weeks; part of the recycled footage is from the Universitas Indonesia student demo at Bundaran HI on 12 June; Monash University Indonesia analysis across X, Instagram, TikTok, YouTube, Facebook, 26 Jul-1 Aug 2026, keywords demo/demonstrasi/aksi/mahasiswa/video/liput/liputan, 197.000 unggahan; sentiment 57% netral, 42% negatif, 0,9% positif; of 34.935 X posts analysed 99,46% were retweets; one account made nine retweets in about 105 milliseconds; seed-and-amplify structure; one post (@dieddfish) 13.446 retweets = 38,7% of all retweets; the top 10 source posts up to 88,5% of activity; spikes 27 Jul (50.000 posts) and 30 Jul (34.000); real protest context (Kejaksaan Agung actions 20-23 Jul re eks-Jampidsus Febrie Ardiansyah; journalist-association protests 26-27 Jul over the presidential 'Londo Ireng' remark; BEM UI action at MK; Patung Kuda and Pati actions on 30 Jul); media-blackout and signal-jamming claims circulated; Polda Metro Jaya clarified the viral 30 Jul clash video as recycled 12 June footage. Live headline's en dash normalized to hyphen in this title per C8."
+  },
+  {
+    "id": "id-detik-monash-2026",
+    "title": "Peneliti Monash University Ungkap Pola Video Lama Demo Diviralkan Lagi",
+    "publisher": "detik",
+    "url": "https://news.detik.com/berita/d-8605791/peneliti-monash-university-ungkap-pola-video-lama-demo-diviralkan-lagi",
+    "retrieved_at": "2026-08-09",
+    "period": "published 2026-08-05 17:38 WIB",
+    "kind": "outlet",
+    "self_reported": false,
+    "liveness": "live",
+    "notes": "Verbatim-confirmed 2026-08-09. Reports the Monash University Indonesia findings: 197.000 unggahan, 26 Jul-1 Aug window, five platforms, peak 27 Jul sekitar 50 ribu; 34.935 X posts analysed with 13.446 retweets from one post = 38,7% of retweets (X subset, not the 197k total); researcher attribution Ika Idris. og:image is a generic X logo stock image, recorded so the member preview ships as an honest fallback."
+  },
+  {
+    "id": "id-kompas-megapolitan-monash-2026",
+    "title": "Ada Dugaan Pola Amplifikasi Terkoordinasi di Balik Isu Demo Agustus di Media Sosial",
+    "publisher": "Kompas.com",
+    "url": "https://megapolitan.kompas.com/read/2026/08/06/07553011/ada-dugaan-pola-amplifikasi-terkoordinasi-di-balik-isu-demo-agustus-di",
+    "retrieved_at": "2026-08-09",
+    "period": "published 2026-08-06 07:55 WIB",
+    "kind": "outlet",
+    "self_reported": false,
+    "liveness": "live",
+    "notes": "Verbatim-confirmed 2026-08-09 (fetched with ?page=all; first page truncates). Richest record: volume curve (peak 27 Jul sekitar 50.000 unggahan/30.000 akun unik; dip 28-29 Jul 10.000-20.000; rise 30 Jul sekitar 34.000 percakapan/20.000 pengguna); six narrative patterns verbatim: urgency hook ('DEMO HARI INI','DARURAT','TERNYATA INI', sekitar 68,1% disebut), inflation of scale (incl 1998 comparison), suppression claim (media sengaja bungkam / algoritma menyembunyikan), repression claim (sinyal dihilangkan), emotional judgement ('rezim','media dibungkam', dst), call to amplify; automation evidence (sembilan retweet berbeda dalam sekitar 105 milidetik; jeda kurang dari satu detik); concentration (13.446 retweet = 38,7%; top 10 = 88,5%); direct Ika Idris quotes on likely-automated behaviour and on the public being the main casualty; DM (52) arrest in Ciamis (TikTok sekitar 33.400 pengikut); police statements: no information of a planned large August demonstration (Kombes Pol Budi Hermanto), Preventive Strike team, cyber patrols. Coordination consistently hedged as dugaan/kemungkinan; do not assert it as established. og:image is a 2019 archive photo with watermark, weak as preview art."
+  },
+  {
+    "id": "id-kompas-cekfakta-demo-2026",
+    "title": "Narasi Hoaks Bertema Demonstrasi Mahasiswa Diduga Terkoordinasi, Jangan Mudah Percaya",
+    "publisher": "Kompas.com Cek Fakta",
+    "url": "https://www.kompas.com/cekfakta/read/2026/08/06/100100782/narasi-hoaks-bertema-demonstrasi-mahasiswa-diduga-terkoordinasi-jangan",
+    "retrieved_at": "2026-08-09",
+    "period": "published 2026-08-06 10:01 WIB",
+    "kind": "outlet",
+    "self_reported": false,
+    "liveness": "live",
+    "notes": "Verbatim-confirmed 2026-08-09. The title's verdict word is the publisher's own, quoted under the registry title exemption; the dissection itself never adopts it. Carries: footage dating by Kompas.com's own checks (Bundaran HI student demo 12 June 2026; riot footage from the 2025 Makassar DPRD building fire); Ika Idris quote naming the two video types (old reframed as current; AI-made or mislocated); the shared 'media nasional tidak memberitakan' pattern; calls to like/reshare; actor unknown, coordination suspected from the pattern; Ika's view that students may be the harmed party, and her advice to cross-check before reacting. og:image is a press photo of the 19 June 2026 student demonstration at the DPR building (ANTARA FOTO/Sulthony Hasanuddin via Kompas.com), 1200x675, verified 200."
   }
 ]

@@ -1,0 +1,33 @@
+{
+  "narrative_id": "demo-agustus",
+  "family_skeleton": "old protest footage recirculated as a live emergency, inside a chain that reads absent coverage as proof of suppression, carried without the dates of the footage or the concentration of the accounts pushing it",
+  "members": [
+    {
+      "id": "demo-agustus-m1",
+      "lang": "id",
+      "headline": "Mengapa konten demo mahasiswa yang lama ramai lagi di media sosial? - 'Ada pola terorganisir dan mustahil dilakukan secara manual'",
+      "outlet": "BBC News Indonesia",
+      "date": "2026-08-04",
+      "url": "https://www.bbc.com/indonesia/articles/cx2dxwdqv8wo",
+      "note": "Documents the claim wave rather than carrying it: the circulating claim lived in social posts, and this article records the hook phrasings verbatim, including the one this narrative quotes as its original text. Live headline uses an en dash, normalized to a hyphen here per C8. Verified live 2026-08-09."
+    },
+    {
+      "id": "demo-agustus-m2",
+      "lang": "id",
+      "headline": "Peneliti Monash University Ungkap Pola Video Lama Demo Diviralkan Lagi",
+      "outlet": "detik",
+      "date": "2026-08-05",
+      "url": "https://news.detik.com/berita/d-8605791/peneliti-monash-university-ungkap-pola-video-lama-demo-diviralkan-lagi",
+      "note": "Documents the wave; reports the Monash University Indonesia analysis figures. Verified live 2026-08-09; og:image is a generic X logo, so the member preview ships as an honest fallback."
+    },
+    {
+      "id": "demo-agustus-m3",
+      "lang": "id",
+      "headline": "Ada Dugaan Pola Amplifikasi Terkoordinasi di Balik Isu Demo Agustus di Media Sosial",
+      "outlet": "Kompas.com",
+      "date": "2026-08-06",
+      "url": "https://megapolitan.kompas.com/read/2026/08/06/07553011/ada-dugaan-pola-amplifikasi-terkoordinasi-di-balik-isu-demo-agustus-di",
+      "note": "Documents the wave; carries the six-pattern breakdown and both Ika Idris direct quotes. Coordination is hedged as dugaan (suspicion) throughout; the dissection must keep that attribution. Verified live 2026-08-09."
+    }
+  ]
+}

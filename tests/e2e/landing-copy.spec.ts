@@ -69,8 +69,8 @@ const readJson = <T>(rel: string): T => JSON.parse(readFileSync(contentPath(rel)
 
 const METHODOLOGY = readJson<Methodology>('methodology.json');
 
-/** The hero set piece is the mbg-stop claim map: blueprint 4.4.2 names its headline chip. */
-const HERO_NARRATIVE = readJson<Narrative>('narratives/mbg-stop.json');
+/** The hero set piece is the demo-agustus claim map: blueprint 4.4.2 names its headline chip. */
+const HERO_NARRATIVE = readJson<Narrative>('narratives/demo-agustus.json');
 
 /**
  * Every slot in blueprint 4.4, resolved from disk rather than restated, so a hardcoded numeral
@@ -317,9 +317,9 @@ test.describe('AC-LAND-3 data-bound slots resolve', () => {
     await openLanding(page);
     const chips = flatten(await page.getByTestId('hero-counts').innerText());
     // Scoped to the chips rather than the page for the same reason as the symmetry card. The
-    // expected string is built from mbg-stop's own counts.json values, so a developer who typed
+    // expected string is built from demo-agustus's own published counts, so a developer who typed
     // the numbers in goes red the next time the pipeline republishes that narrative.
-    expect(chips, 'AC-LAND-3: the hero count chips are bound to mbg-stop counts').toContain(
+    expect(chips, 'AC-LAND-3: the hero count chips are bound to demo-agustus counts').toContain(
       flatten(fill(HERO.setPiece.countChips, SLOT_VALUES)),
     );
   });

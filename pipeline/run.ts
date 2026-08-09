@@ -896,6 +896,7 @@ interface Published {
   headline: { en: string; id?: string };
   family: { members: Array<{ url: string }> };
   manifest: { steps: Array<{ started_at: string; finished_at: string }> };
+  provenance: { run_id: string };
 }
 
 function readPublished(out: string): Published[] {
@@ -1009,17 +1010,33 @@ function stageA13(args: Args): void {
   const symmetry = { gov: 0, neutral: 0, opp: 0, computed_at: manifest.generated_at };
   for (const artifact of published) symmetry[artifact.lean] += 1;
 
-  const judged = manifest.narratives.filter((id) =>
-    existsSync(slotPath(args.run, id, 'A10.json')),
+  // Metrics are measured from each published narrative's OWN run ledger: the archive now spans
+  // more than one recorded run, and a page aggregating only the latest run would silently drop
+  // the earlier fleet's judging, blocks and latency, hardest on exactly the narratives a gate
+  // sent back. provenance.run_id names the ledger each artifact came from.
+  const runsRoot = dirname(resolve(args.run));
+  const runDirOf = (artifact: Published): string => join(runsRoot, artifact.provenance.run_id);
+  const runIds = [...new Set(published.map((artifact) => artifact.provenance.run_id))].sort();
+  const runsLabel = runIds.join(' + ');
+
+  const judged = published.filter((artifact) =>
+    existsSync(slotPath(runDirOf(artifact), artifact.id, 'A10.json')),
   );
   const passed = judged.filter(
-    (id) => asStr(at(readJson(slotPath(args.run, id, 'A10.json')), 'verdict')) === 'pass',
+    (artifact) =>
+      asStr(at(readJson(slotPath(runDirOf(artifact), artifact.id, 'A10.json')), 'verdict')) === 'pass',
   );
-  const blockDir = join(args.run, 'blocked');
-  const blockFiles = existsSync(blockDir) ? readdirSync(blockDir).filter((f) => f.endsWith('.json')) : [];
+  const blockFiles = [...new Set(published.map((artifact) => runDirOf(artifact)))].flatMap((dir) => {
+    const blockDir = join(dir, 'blocked');
+    return existsSync(blockDir)
+      ? readdirSync(blockDir)
+          .filter((f) => f.endsWith('.json'))
+          .map((f) => join(blockDir, f))
+      : [];
+  });
   const blocks = {
     total: blockFiles.length,
-    narratives: new Set(blockFiles.map((f) => asStr(at(readJson(join(blockDir, f)), 'narrative_id')))).size,
+    narratives: new Set(blockFiles.map((f) => asStr(at(readJson(f), 'narrative_id')))).size,
   };
   // Timed from the RUN LOG, not from the published manifest. The manifest is stamped at A9 and
   // signed by the gate tokens, so it structurally cannot contain A10 and A11; timing off it
@@ -1027,7 +1044,7 @@ function stageA13(args: Args): void {
   // back, which is the flattering direction. The label says the span includes re-judging, so the
   // number has to.
   const walls = published
-    .map((artifact) => wallSeconds(readSteps(args.run, artifact.id)))
+    .map((artifact) => wallSeconds(readSteps(runDirOf(artifact), artifact.id)))
     .filter((s): s is number => s !== undefined)
     .sort((a, b) => a - b);
   const median =
@@ -1041,10 +1058,10 @@ function stageA13(args: Args): void {
   const metrics = [
     {
       key: 'published',
-      label: { en: 'Dissections published in this run', id: 'Diseksi yang diterbitkan pada proses ini' },
+      label: { en: 'Dissections published from the recorded runs', id: 'Diseksi yang diterbitkan dari proses terekam' },
       kind: 'measured',
       value: String(published.length),
-      run_id: manifest.run_id,
+      run_id: runsLabel,
     },
     {
       key: 'audit_pass',
@@ -1057,7 +1074,7 @@ function stageA13(args: Args): void {
       },
       kind: 'measured',
       value: judged.length === 0 ? 'not run' : `${passed.length} of ${judged.length}`,
-      run_id: manifest.run_id,
+      run_id: runsLabel,
     },
     {
       // The falsifiable companion to audit_pass: this one can read zero, and did not.
@@ -1068,7 +1085,7 @@ function stageA13(args: Args): void {
       },
       kind: 'measured',
       value: `${String(blocks.narratives)} of ${String(published.length)}, across ${String(blocks.total)} block(s)`,
-      run_id: manifest.run_id,
+      run_id: runsLabel,
     },
     {
       key: 'orphan_numbers',
@@ -1078,7 +1095,7 @@ function stageA13(args: Args): void {
       },
       kind: 'measured',
       value: String(orphans),
-      run_id: manifest.run_id,
+      run_id: runsLabel,
     },
     // AC-PIPE-8 and D-3: the sub-3-minute figure ships as measured only if this run actually
     // hit it, otherwise it ships as the design target it is. The companion measurement is
@@ -1096,7 +1113,7 @@ function stageA13(args: Args): void {
             },
             kind: 'measured',
             value: humanDuration(median),
-            run_id: manifest.run_id,
+            run_id: runsLabel,
           },
         ]
       : [
@@ -1107,8 +1124,8 @@ function stageA13(args: Args): void {
               id: 'Waktu untuk menghasilkan satu diseksi',
             },
             kind: 'design_target',
-            value: `under ${String(Math.round(LATENCY_TARGET_SECONDS / 60))} minutes, not met in this run`,
-            run_id: manifest.run_id,
+            value: `under ${String(Math.round(LATENCY_TARGET_SECONDS / 60))} minutes, not met in the recorded runs`,
+            run_id: runsLabel,
           },
           ...(median === undefined
             ? []
@@ -1116,12 +1133,12 @@ function stageA13(args: Args): void {
                 {
                   key: 'latency_median',
                   label: {
-                    en: 'Median wall clock per dissection in this run, fleet run concurrently, including any re-judging after a gate block',
-                    id: 'Median waktu jam dinding per diseksi pada proses ini, armada berjalan serentak, termasuk penilaian ulang setelah gerbang memblokir',
+                    en: 'Median wall clock per dissection across the recorded runs, fleets run concurrently, including any re-judging after a gate block',
+                    id: 'Median waktu jam dinding per diseksi sepanjang proses terekam, armada berjalan serentak, termasuk penilaian ulang setelah gerbang memblokir',
                   },
                   kind: 'measured',
                   value: humanDuration(median),
-                  run_id: manifest.run_id,
+                  run_id: runsLabel,
                 },
               ]),
         ]),
@@ -1132,8 +1149,8 @@ function stageA13(args: Args): void {
     metrics,
     policy_65: POLICY_65,
     disclosure: {
-      en: `Every dissection here was produced by an automated agent fleet and is labelled as such. Each artifact names the models that generated it and the run it came from, and the analysis is computed once, before anyone asks for it. This page aggregates run ${manifest.run_id}.`,
-      id: `Setiap diseksi di sini diproduksi oleh armada agen otomatis dan diberi label demikian. Tiap artefak menyebut model yang menghasilkannya dan proses asalnya, dan analisisnya dihitung sekali, sebelum ada yang memintanya. Halaman ini merangkum proses ${manifest.run_id}.`,
+      en: `Every dissection here was produced by an automated agent fleet and is labelled as such. Each artifact names the models that generated it and the run it came from, and the analysis is computed once, before anyone asks for it. This page aggregates ${runIds.length === 1 ? 'run' : 'runs'} ${runsLabel}.`,
+      id: `Setiap diseksi di sini diproduksi oleh armada agen otomatis dan diberi label demikian. Tiap artefak menyebut model yang menghasilkannya dan proses asalnya, dan analisisnya dihitung sekali, sebelum ada yang memintanya. Halaman ini merangkum proses ${runsLabel}.`,
     },
   });
 

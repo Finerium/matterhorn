@@ -32,9 +32,10 @@ test.describe('production smoke', () => {
       localStorage.setItem('mth:onboarded', '1');
     });
     await page.goto(`${SITE_URL}/app`);
-    // mbg-stop is the id-pack hero and the app boots in English, so the EN display headline is
-    // the one on screen.
-    await expect(page.getByText('Stop MBG Permanently', { exact: false }).first()).toBeVisible({
+    // demo-agustus is the id-pack hero and the app boots in English, so the EN display headline is
+    // the one on screen. Matched on the opening clause, which carries no apostrophe: the headline's
+    // "Won't" is one straightening away from a substring that never matches.
+    await expect(page.getByText('A Demo This Big', { exact: false }).first()).toBeVisible({
       timeout: 20000,
     });
   });

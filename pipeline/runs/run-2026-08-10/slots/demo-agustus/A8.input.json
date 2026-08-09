@@ -1,0 +1,175 @@
+{
+  "narrative_id": "demo-agustus",
+  "cluster": {
+    "narrative_id": "demo-agustus",
+    "family_skeleton": "old protest footage recirculated as a live emergency, inside a chain that reads absent coverage as proof of suppression, carried without the dates of the footage or the concentration of the accounts pushing it",
+    "members": [
+      {
+        "id": "demo-agustus-m1",
+        "lang": "id",
+        "headline": "Mengapa konten demo mahasiswa yang lama ramai lagi di media sosial? - 'Ada pola terorganisir dan mustahil dilakukan secara manual'",
+        "outlet": "BBC News Indonesia",
+        "date": "2026-08-04",
+        "url": "https://www.bbc.com/indonesia/articles/cx2dxwdqv8wo",
+        "note": "Documents the claim wave rather than carrying it: the circulating claim lived in social posts, and this article records the hook phrasings verbatim, including the one this narrative quotes as its original text. Live headline uses an en dash, normalized to a hyphen here per C8. Verified live 2026-08-09."
+      },
+      {
+        "id": "demo-agustus-m2",
+        "lang": "id",
+        "headline": "Peneliti Monash University Ungkap Pola Video Lama Demo Diviralkan Lagi",
+        "outlet": "detik",
+        "date": "2026-08-05",
+        "url": "https://news.detik.com/berita/d-8605791/peneliti-monash-university-ungkap-pola-video-lama-demo-diviralkan-lagi",
+        "note": "Documents the wave; reports the Monash University Indonesia analysis figures. Verified live 2026-08-09; og:image is a generic X logo, so the member preview ships as an honest fallback."
+      },
+      {
+        "id": "demo-agustus-m3",
+        "lang": "id",
+        "headline": "Ada Dugaan Pola Amplifikasi Terkoordinasi di Balik Isu Demo Agustus di Media Sosial",
+        "outlet": "Kompas.com",
+        "date": "2026-08-06",
+        "url": "https://megapolitan.kompas.com/read/2026/08/06/07553011/ada-dugaan-pola-amplifikasi-terkoordinasi-di-balik-isu-demo-agustus-di",
+        "note": "Documents the wave; carries the six-pattern breakdown and both Ika Idris direct quotes. Coordination is hedged as dugaan (suspicion) throughout; the dissection must keep that attribution. Verified live 2026-08-09."
+      }
+    ]
+  },
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "demoagustus-n1",
+        "label": {
+          "en": "A massive demonstration is happening right now",
+          "id": "Demonstrasi besar-besaran sedang berlangsung saat ini"
+        }
+      },
+      {
+        "el_id": "demoagustus-n2",
+        "label": {
+          "en": "The national media are not covering it",
+          "id": "Media nasional tidak meliputnya"
+        }
+      },
+      {
+        "el_id": "demoagustus-n3",
+        "label": {
+          "en": "The demonstration is being deliberately silenced",
+          "id": "Demonstrasi itu sengaja dibungkam"
+        }
+      },
+      {
+        "el_id": "demoagustus-n4",
+        "label": {
+          "en": "Users must act now: like, repost, raise the hashtags",
+          "id": "Warganet harus bertindak sekarang: beri tanda suka, unggah ulang, naikkan tagar"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "demoagustus-e1",
+        "from": "demoagustus-n1",
+        "to": "demoagustus-n2",
+        "quote": "Demo sebesar ini enggak diliput media?"
+      },
+      {
+        "el_id": "demoagustus-e2",
+        "from": "demoagustus-n2",
+        "to": "demoagustus-n3",
+        "quote": "Tahap berikutnya adalah suppression claim, yaitu tuduhan bahwa media nasional sengaja bungkam atau algoritma media sosial sengaja menyembunyikan informasi demonstrasi."
+      },
+      {
+        "el_id": "demoagustus-e3",
+        "from": "demoagustus-n3",
+        "to": "demoagustus-n4",
+        "quote": "Terakhir adalah call to amplify, yakni ajakan kepada pengguna lain untuk memberikan tanda suka, membagikan ulang, serta membantu menaikkan tagar agar informasi tidak \"dikalahkan algoritma\"."
+      }
+    ]
+  },
+  "case_library": {
+    "cases": [
+      {
+        "id": "B-01",
+        "title": {
+          "en": "Casualty-inflation cascade",
+          "id": "Kaskade inflasi korban"
+        },
+        "period": "May 2019",
+        "motif": {
+          "en": "moral shock, fabricated count",
+          "id": "kejutan moral, angka rekaan"
+        },
+        "documented_outcome": {
+          "en": "A fabricated \"60 shot dead\" claim spread faster than any correction and amplified the post-election riots in Jakarta. The final human-rights investigation documented 10 people unlawfully killed, four of them minors.",
+          "id": "Klaim rekaan \"60 orang tewas ditembak\" menyebar lebih cepat dari koreksi mana pun dan memperbesar kerusuhan pasca pemilu di Jakarta. Investigasi hak asasi manusia final mendokumentasikan 10 orang terbunuh secara tidak sah, empat di antaranya anak-anak."
+        },
+        "citations": [
+          "id-aljazeera-2019-riots",
+          "id-tempo-cekfakta-60",
+          "id-liputan6-amnesty-2019"
+        ]
+      },
+      {
+        "id": "B-02",
+        "title": {
+          "en": "Fabricated-provision cascade",
+          "id": "Kaskade pasal rekaan"
+        },
+        "period": "Oct 2020",
+        "motif": {
+          "en": "scope inflation, fabricated provisions",
+          "id": "inflasi cakupan, pasal rekaan"
+        },
+        "documented_outcome": {
+          "en": "Invented provisions of a law whose final text was not yet public, from a minimum wage abolished to severance eliminated, fueled nationwide demonstrations. The communications ministry catalogued \"12 hoaks\" about the bill in a single list.",
+          "id": "Pasal-pasal rekaan atas undang-undang yang naskah finalnya belum terbit, dari upah minimum dihapus sampai pesangon ditiadakan, menyulut demonstrasi nasional. Kementerian komunikasi mengatalogkan \"12 hoaks\" tentang RUU itu dalam satu daftar."
+        },
+        "citations": [
+          "id-suara-kominfo-12hoax",
+          "id-kompas-omnibus-8hoax"
+        ]
+      },
+      {
+        "id": "B-03",
+        "title": {
+          "en": "Moral-shock acceleration",
+          "id": "Akselerasi kejutan moral"
+        },
+        "period": "Aug 2025",
+        "motif": {
+          "en": "moral shock, acceleration",
+          "id": "kejutan moral, akselerasi"
+        },
+        "documented_outcome": {
+          "en": "A viral death video mobilized nationwide protests within hours. In the escalations that followed, a regional parliament building fire in Makassar killed three people.",
+          "id": "Video kematian yang viral memobilisasi unjuk rasa nasional dalam hitungan jam. Dalam eskalasi yang menyusul, kebakaran gedung DPRD di Makassar menewaskan tiga orang."
+        },
+        "citations": [
+          "id-detik-timeline-aug2025",
+          "id-jakartapost-makassar-fire",
+          "id-jakartaglobe-protest-toll"
+        ]
+      },
+      {
+        "id": "B-04",
+        "title": {
+          "en": "Scope-inflation panic",
+          "id": "Panik inflasi cakupan"
+        },
+        "period": "Jan 2025",
+        "motif": {
+          "en": "scope inflation, manufactured urgency",
+          "id": "inflasi cakupan, urgensi semu"
+        },
+        "documented_outcome": {
+          "en": "The 12 percent VAT panic priced the whole consumption basket for weeks after PMK 131/2024 had restricted the rise to luxury goods already under the luxury sales tax; the clarification required a multi-channel communication effort.",
+          "id": "Panik PPN 12 persen menghitung seluruh keranjang konsumsi selama berminggu-minggu setelah PMK 131/2024 membatasi kenaikan pada barang mewah yang sudah dikenai pajak penjualan barang mewah; klarifikasinya menuntut upaya komunikasi lintas kanal."
+        },
+        "citations": [
+          "id-pajak-pmk131",
+          "id-antara-ppn-luxury",
+          "id-bisnis-ppn-luxury"
+        ]
+      }
+    ]
+  }
+}

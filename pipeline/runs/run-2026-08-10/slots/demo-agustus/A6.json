@@ -1,0 +1,101 @@
+{
+  "hidden": [
+    {
+      "el_id": "demoagustus-h1",
+      "label": {
+        "en": "The recording dates of the circulating clips",
+        "id": "Tanggal perekaman potongan video yang beredar"
+      },
+      "why_hidden": {
+        "en": "The chain's first step, a massive demonstration happening right now, rests entirely on the clips as live evidence. Every recording carries a recording date, and that date is the one quantity that decides whether the footage can support the word 'now'. The chain uses the videos and never states when any of them were filmed.",
+        "id": "Langkah pertama rantai ini, demonstrasi besar yang sedang berlangsung saat ini, bertumpu sepenuhnya pada potongan video sebagai bukti langsung. Setiap rekaman membawa tanggal perekaman, dan tanggal itulah besaran yang menentukan apakah rekaman tersebut sanggup menopang kata 'sekarang'. Rantai ini memakai video-video itu tanpa pernah menyebut kapan masing-masing direkam."
+      },
+      "where_to_look": "Original upload records and archived first postings of each clip; police and newsroom identifications matching individual clips to dated, located events."
+    },
+    {
+      "el_id": "demoagustus-h2",
+      "label": {
+        "en": "The dated events of the same window and the coverage they received",
+        "id": "Peristiwa bertanggal pada rentang waktu yang sama dan pemberitaan yang diterimanya"
+      },
+      "why_hidden": {
+        "en": "The step 'the national media are not covering it' is a claim about a ratio: events that happened against reports that ran. The chain asserts the numerator is zero and never opens the denominator: which actions actually took place in those days, and how much reporting each one received. Smaller dated actions did occur in the window, and the chain never checks what was written about them.",
+        "id": "Langkah 'media nasional tidak meliputnya' adalah klaim tentang sebuah rasio: peristiwa yang terjadi dibandingkan berita yang terbit. Rantai ini menyatakan pembilangnya nol tanpa pernah membuka penyebutnya: aksi-aksi apa yang memang berlangsung pada hari-hari itu, dan seberapa banyak pemberitaan yang diterima masing-masing. Sejumlah aksi kecil bertanggal memang terjadi pada rentang itu, dan rantai ini tidak pernah memeriksa apa yang sudah ditulis tentangnya."
+      },
+      "where_to_look": "News archives for the last week of July 2026; outlet publication lists on the specific documented actions at prosecutors' offices, courts, and press gatherings in that window."
+    },
+    {
+      "el_id": "demoagustus-h3",
+      "label": {
+        "en": "The operating chain a deliberate silencing would need",
+        "id": "Rantai kerja yang diperlukan sebuah pembungkaman yang disengaja"
+      },
+      "why_hidden": {
+        "en": "The step from 'no coverage' to 'deliberately silenced' asserts an act with an actor. A silencing that spans competing national newsrooms and platform ranking systems needs an instruction, a channel to deliver it, and compliance from rivals who normally profit from each other's omissions. The chain names none of these parts and stops at the word 'deliberate'.",
+        "id": "Langkah dari 'tidak ada liputan' menuju 'sengaja dibungkam' menegaskan adanya sebuah tindakan beserta pelakunya. Pembungkaman yang menjangkau ruang-ruang redaksi nasional yang saling bersaing serta sistem peringkat platform membutuhkan sebuah perintah, saluran penyampainya, dan kepatuhan dari para pesaing yang biasanya justru diuntungkan oleh kelalaian pihak lain. Rantai ini tidak menyebut satu pun bagian itu dan berhenti pada kata 'sengaja'."
+      },
+      "where_to_look": "Newsroom and press association statements from the period; platform transparency or policy notices covering the period."
+    },
+    {
+      "el_id": "demoagustus-h4",
+      "label": {
+        "en": "The concentration of accounts behind the apparent scale",
+        "id": "Konsentrasi akun di balik kesan skala"
+      },
+      "why_hidden": {
+        "en": "The impression of a massive event is carried by post volume. Volume has a composition: how many distinct sources produce it, and what share of it the most active handful account for. That concentration figure is the denominator the scale impression needs, and the chain never states it. Researchers who examined the wave describe activity they suspect was concentrated in few sources; the chain prices that composition at zero.",
+        "id": "Kesan adanya peristiwa besar ditopang oleh volume unggahan. Volume punya komposisi: berapa banyak sumber berbeda yang menghasilkannya, dan berapa porsi yang berasal dari segelintir akun paling aktif. Angka konsentrasi itulah penyebut yang dibutuhkan oleh kesan skala tersebut, dan rantai ini tidak pernah menyebutnya. Peneliti yang menelaah gelombang ini menggambarkan aktivitas yang mereka duga terpusat pada sedikit sumber; rantai ini menghargai komposisi itu nol."
+      },
+      "where_to_look": "The published social media analyses of the wave: source concentration tables and the share of total activity attributed to the top accounts."
+    },
+    {
+      "el_id": "demoagustus-h5",
+      "label": {
+        "en": "The share of the scale generated by the chain's own final step",
+        "id": "Porsi skala yang dihasilkan oleh langkah terakhir rantai itu sendiri"
+      },
+      "why_hidden": {
+        "en": "The call to amplify asks users to like, repost, and raise hashtags. Every complied request adds to the very volume the first step reads as proof of a massive event. The chain therefore feeds its own evidence: the measure of scale grows on every pass of the loop regardless of what happens on any street. The composition of that volume, original posts against reshares and the timing patterns researchers describe as suspected automation, is never mentioned by the chain.",
+        "id": "Ajakan menggencarkan meminta pengguna memberi tanda suka, mengunggah ulang, dan menaikkan tagar. Setiap ajakan yang dipatuhi menambah volume yang oleh langkah pertama dibaca sebagai bukti peristiwa besar. Rantai ini dengan demikian memberi makan buktinya sendiri: ukuran skala tumbuh pada tiap putaran, terlepas dari apa yang terjadi di jalan mana pun. Komposisi volume itu, unggahan asli dibandingkan unggahan ulang serta pola waktu yang oleh peneliti diduga terotomatisasi, tidak pernah disinggung oleh rantai ini."
+      },
+      "where_to_look": "Platform activity breakdowns in the published analyses: original-to-reshare ratios and reshare timing distributions."
+    },
+    {
+      "el_id": "demoagustus-h6",
+      "label": {
+        "en": "The people visible in the recycled footage",
+        "id": "Orang-orang yang terlihat dalam rekaman yang diedarkan ulang"
+      },
+      "why_hidden": {
+        "en": "Reframing an old clip as a live emergency reaches the identifiable people in the frame: students filmed at a dated, located event are re-exposed under a description of an event they did not attend. The chain uses their faces as its evidence and never counts them as a party the reuse touches.",
+        "id": "Membingkai ulang rekaman lama sebagai keadaan darurat yang sedang berlangsung menjangkau orang-orang yang teridentifikasi dalam gambar: mahasiswa yang terekam pada peristiwa bertanggal dan bertempat jelas kembali terpapar di bawah keterangan peristiwa yang tidak mereka hadiri. Rantai ini memakai wajah mereka sebagai bukti dan tidak pernah menghitung mereka sebagai pihak yang tersentuh oleh pemakaian ulang itu."
+      },
+      "where_to_look": "Statements from the campus and civil organizations whose documented actions supplied the footage."
+    },
+    {
+      "el_id": "demoagustus-h7",
+      "label": {
+        "en": "The individual reposters who meet legal exposure first",
+        "id": "Pengunggah ulang perorangan yang menanggung risiko hukum lebih dulu"
+      },
+      "why_hidden": {
+        "en": "The call to act lands on individual accounts. When authorities open cases over the reframed clips, the first party to answer is the small account that pressed repost, not the accounts far more central to the volume pattern. The chain moves that exposure onto its smallest participants and never names it. Detentions over the recirculated clips had already begun while the wave was running.",
+        "id": "Ajakan bertindak jatuh ke akun-akun perorangan. Ketika aparat membuka perkara atas potongan video yang dibingkai ulang, pihak pertama yang harus menjawab adalah akun kecil yang menekan tombol unggah ulang, bukan akun-akun yang jauh lebih sentral dalam pola volumenya. Rantai ini memindahkan risiko itu ke peserta terkecilnya dan tidak pernah menyebutnya. Penahanan atas potongan video yang diedarkan ulang sudah mulai terjadi selama gelombang berlangsung."
+      },
+      "where_to_look": "Police statements on cases opened over the recirculated clips during the wave."
+    },
+    {
+      "el_id": "demoagustus-h8",
+      "label": {
+        "en": "The journalists and newsrooms cast as the silencing's agents",
+        "id": "Jurnalis dan ruang redaksi yang diposisikan sebagai pelaksana pembungkaman"
+      },
+      "why_hidden": {
+        "en": "The silencing step needs an agent, and the nearest available one is the national press: the accusation reaches reporters' credibility and safety at a moment when press organizations were themselves holding documented protests over a separate matter. The chain spends their reputation as its proof and never counts them as a touched party.",
+        "id": "Langkah pembungkaman membutuhkan pelaku, dan pihak terdekat yang tersedia adalah pers nasional: tuduhan itu menjangkau kredibilitas dan keselamatan para wartawan justru pada pekan ketika organisasi pers sendiri tengah menggelar aksi terdokumentasi mengenai persoalan lain. Rantai ini membelanjakan reputasi mereka sebagai bukti dan tidak pernah menghitung mereka sebagai pihak yang tersentuh."
+      },
+      "where_to_look": "Press association statements and coverage of the press organizations' own documented actions in the same week."
+    }
+  ],
+  "model": "claude-fable-5"
+}

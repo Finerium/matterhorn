@@ -1,0 +1,24 @@
+{
+  "narrative_id": "usaid-deficit",
+  "family_skeleton": "a spending line the public believes is a quarter of the budget, carried as though the belief were the size",
+  "members": [
+    {
+      "id": "usaid-deficit-m1",
+      "lang": "en",
+      "headline": "KFF Health Tracking Poll February 2025: The Public's Views on Global Health and USAID",
+      "outlet": "KFF",
+      "date": "2025-03-04",
+      "url": "https://www.kff.org/global-health-policy/kff-health-tracking-poll-february-2025-the-publics-views-on-global-health-and-usaid/",
+      "note": "Verbatim title from content/sources.json (en-kff-tracking-feb2025). Average guess 26 percent of the federal budget against about 1 percent actual; 11 percent guessed correctly; support flips 58 to 34 once informed. The $43.8B dollar figure is NOT on this page and does not ship."
+    },
+    {
+      "id": "usaid-deficit-m2",
+      "lang": "en",
+      "headline": "Final Monthly Treasury Statement, Fiscal Year 2025 (September 2025 issue)",
+      "outlet": "U.S. Department of the Treasury",
+      "date": "2025-09",
+      "url": "https://fiscaldata.treasury.gov/static-data/published-reports/mts/MonthlyTreasuryStatement_202509.pdf",
+      "note": "Verbatim title from content/sources.json (en-treasury-mts-fy2025). The denominator: total federal net receipts $5,234,616M. Not a news article, and listed here because the family panel shows what the claim would have to be read against."
+    }
+  ]
+}

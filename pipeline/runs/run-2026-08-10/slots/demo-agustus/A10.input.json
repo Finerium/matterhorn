@@ -1,0 +1,1076 @@
+{
+  "narrative_id": "demo-agustus",
+  "candidate": {
+    "id": "demo-agustus",
+    "pack": "id",
+    "lean": "opp",
+    "status": "published",
+    "headline": {
+      "en": "A Demo This Big, and the Media Won't Show It?",
+      "id": "Demo Sebesar Ini Enggak Diliput Media?"
+    },
+    "original": {
+      "text": "Demo sebesar ini enggak diliput media?",
+      "lang": "id"
+    },
+    "outlet": "BBC News Indonesia",
+    "published_date": "2026-08-04",
+    "url": "https://www.bbc.com/indonesia/articles/cx2dxwdqv8wo",
+    "og": {
+      "image_path": "/assets/og/demo-agustus.jpg",
+      "fetched_at": "2026-08-09",
+      "attribution": "Link preview image from BBC News Indonesia, shown with the outlet name and an outbound link.",
+      "fallback": false
+    },
+    "tags": [
+      "missing-link",
+      "scope-inflation",
+      "emotional-trigger"
+    ],
+    "counts": {
+      "missing": 0,
+      "unsourced": 4,
+      "disputed": 0,
+      "supported": 0,
+      "hidden": 8
+    },
+    "provenance": {
+      "analyzed_by": "claude-fable-5",
+      "narrated_by": "claude-opus-5",
+      "source_count": 4,
+      "computed_at": "2026-08-09",
+      "run_id": "run-2026-08-10"
+    },
+    "family": {
+      "skeleton": "old protest footage recirculated as a live emergency, inside a chain that reads absent coverage as proof of suppression, carried without the dates of the footage or the concentration of the accounts pushing it",
+      "members": [
+        {
+          "outlet": "BBC News Indonesia",
+          "headline": "Mengapa konten demo mahasiswa yang lama ramai lagi di media sosial? - 'Ada pola terorganisir dan mustahil dilakukan secara manual'",
+          "url": "https://www.bbc.com/indonesia/articles/cx2dxwdqv8wo",
+          "date": "2026-08-04"
+        },
+        {
+          "outlet": "detik",
+          "headline": "Peneliti Monash University Ungkap Pola Video Lama Demo Diviralkan Lagi",
+          "url": "https://news.detik.com/berita/d-8605791/peneliti-monash-university-ungkap-pola-video-lama-demo-diviralkan-lagi",
+          "date": "2026-08-05"
+        },
+        {
+          "outlet": "Kompas.com",
+          "headline": "Ada Dugaan Pola Amplifikasi Terkoordinasi di Balik Isu Demo Agustus di Media Sosial",
+          "url": "https://megapolitan.kompas.com/read/2026/08/06/07553011/ada-dugaan-pola-amplifikasi-terkoordinasi-di-balik-isu-demo-agustus-di",
+          "date": "2026-08-06"
+        }
+      ]
+    },
+    "scaffold_default": "S3",
+    "sparring": {
+      "questions": [
+        {
+          "move": "mechanism",
+          "q": {
+            "en": "The last step asks the reader to like, repost and raise the hashtags. What does each act of compliance do to the evidence the first step stands on?",
+            "id": "Langkah terakhir meminta pembaca memberi tanda suka, mengunggah ulang, dan menaikkan tagar. Apa yang dilakukan tiap ajakan yang dipatuhi terhadap bukti yang menopang langkah pertama?"
+          },
+          "options": [
+            {
+              "en": "It brings more outlets in, which is the coverage the chain says is absent.",
+              "id": "Ia mendatangkan lebih banyak media, yaitu liputan yang menurut rantai itu tidak ada."
+            },
+            {
+              "en": "It leaves the evidence untouched, since resharing a clip does not change what the clip shows.",
+              "id": "Ia tidak menyentuh buktinya, sebab membagikan ulang sebuah rekaman tidak mengubah isi rekaman itu."
+            },
+            {
+              "en": "It adds to the post volume that the first step reads back as proof of a massive event.",
+              "id": "Ia menambah volume unggahan yang dibaca balik oleh langkah pertama sebagai bukti peristiwa besar."
+            }
+          ],
+          "correct": 2,
+          "note": {
+            "en": "The hidden card on the chain's own last step sets this out, and the scale panel measures the loop it closes: inside the analysed sample of 34,935 posts on X, 99.46 percent were retweets. Bringing outlets in is what the story is asking for, and no entry in this artifact records an outlet arriving because of it. Resharing does leave the clip itself unchanged, and the first step is not counting what the clip shows; it is counting posts.",
+            "id": "Kartu tersembunyi tentang langkah terakhir rantai ini menerangkannya, dan panel skala mengukur putaran yang ditutupnya: di dalam sampel 34.935 unggahan X yang dianalisis, 99,46 persen berupa retweet. Mendatangkan media memang yang diminta cerita ini, dan tidak ada catatan dalam artefak ini yang merekam satu media pun datang karenanya. Membagikan ulang memang tidak mengubah isi rekamannya, dan yang dihitung langkah pertama bukan isi rekaman itu, melainkan unggahan."
+          }
+        },
+        {
+          "move": "denominator",
+          "q": {
+            "en": "The wave is sized at about 197,000 posts across five platforms. The 99.46 percent retweet share is a share of which base?",
+            "id": "Gelombang ini diukur sekitar 197.000 unggahan di lima platform. Porsi retweet 99,46 persen itu adalah porsi dari basis yang mana?"
+          },
+          "options": [
+            {
+              "en": "Of all of the roughly 197,000 posts counted across the five platforms.",
+              "id": "Dari keseluruhan sekitar 197.000 unggahan yang terhitung di lima platform."
+            },
+            {
+              "en": "Of the 34,935 posts on X whose composition was analysed.",
+              "id": "Dari 34.935 unggahan X yang komposisinya dianalisis."
+            },
+            {
+              "en": "Of the 63,000 unique accounts behind the counted posts.",
+              "id": "Dari 63.000 akun unik di balik unggahan yang terhitung."
+            }
+          ],
+          "correct": 1,
+          "note": {
+            "en": "The scale panel keeps the two quantities apart: composition was measured on X, inside a sample of 34,935 posts, while the 197,000 count spans five platforms whose composition no figure here opens. The 63,000 figure counts accounts rather than posts, so a share of posts cannot sit on it. The other shares in the panel run on the same analysed base: ten source posts carry about 88.5 percent of that retweet activity, and the single most amplified post carries 13,446 retweets, or 38.7 percent of it.",
+            "id": "Panel skala menjaga kedua besaran itu tetap terpisah: komposisinya diukur di X, di dalam sampel 34.935 unggahan, sementara hitungan 197.000 mencakup lima platform yang komposisinya tidak dibuka angka mana pun di sini. Angka 63.000 menghitung akun, bukan unggahan, sehingga porsi unggahan tidak bisa berpijak padanya. Porsi-porsi lain di panel itu berpijak pada basis terukur yang sama: sepuluh unggahan sumber membawa sekitar 88,5 persen aktivitas retweet tersebut, dan satu unggahan yang paling banyak digencarkan membawa 13.446 retweet, atau 38,7 persen di antaranya."
+          }
+        },
+        {
+          "move": "incidence",
+          "q": {
+            "en": "Cases were opened over the recirculated clips. Which party does this artifact record as answering first?",
+            "id": "Perkara dibuka atas potongan video yang diedarkan ulang. Pihak mana yang dicatat artefak ini sebagai yang lebih dulu harus menjawab?"
+          },
+          "options": [
+            {
+              "en": "An individual account holder, detained in Ciamis, with about 33,400 followers.",
+              "id": "Seorang pemilik akun perorangan yang ditahan di Ciamis, dengan sekitar 33.400 pengikut."
+            },
+            {
+              "en": "The ten source posts carrying about 88.5 percent of the analysed retweet activity.",
+              "id": "Sepuluh unggahan sumber yang membawa sekitar 88,5 persen aktivitas retweet yang dianalisis."
+            },
+            {
+              "en": "The national newsrooms named as the silencing's agent.",
+              "id": "Ruang redaksi nasional yang disebut sebagai pelaksana pembungkaman."
+            }
+          ],
+          "correct": 0,
+          "note": {
+            "en": "The reposter lane of the incidence panel records the detention in Ciamis and sizes that account at about 33,400 followers, which is the size the registry has for it. The accounts most central to the volume pattern are described in the analysis by their behaviour rather than by name, and no entry in this registry records a case opened against any of them. The newsrooms carry a different cost, the accusation itself, in the same days their own organizations were holding dated protests.",
+            "id": "Jalur pengunggah ulang pada panel insidensi mencatat penahanan di Ciamis dan mengukur akun itu pada sekitar 33.400 pengikut, yakni ukuran yang dipegang registri untuknya. Akun-akun yang paling sentral dalam pola volume digambarkan dalam analisis lewat perilakunya, bukan lewat namanya, dan tidak ada catatan dalam registri ini yang merekam perkara terhadap satu pun di antaranya. Ruang redaksi menanggung ongkos yang berbeda, yaitu tuduhannya sendiri, pada hari-hari ketika organisasi mereka justru sedang menggelar aksi bertanggal."
+          }
+        }
+      ]
+    },
+    "prediction_tap": {
+      "prompt": {
+        "en": "Before the panels open: in a story carried by footage and a count of posts, which side goes missing first?",
+        "id": "Sebelum panelnya dibuka: dalam cerita yang ditopang rekaman video dan hitungan unggahan, sisi mana yang paling dulu hilang?"
+      },
+      "options": [
+        {
+          "en": "The recording dates of the clips.",
+          "id": "Tanggal perekaman potongan videonya."
+        },
+        {
+          "en": "The actions that did take place in those same days, and the reporting they received.",
+          "id": "Aksi yang memang berlangsung pada hari-hari yang sama, beserta pemberitaan yang diterimanya."
+        },
+        {
+          "en": "The accounts behind the volume, as opposed to the posts.",
+          "id": "Akun di balik volume itu, bukan jumlah unggahannya."
+        },
+        {
+          "en": "The people whose faces are in the footage.",
+          "id": "Orang-orang yang wajahnya ada di dalam rekaman."
+        }
+      ]
+    },
+    "panels": [
+      {
+        "type": "claim_map",
+        "el_id": "demoagustus-p-claim_map",
+        "spine": [
+          {
+            "el_id": "demoagustus-n1",
+            "label": {
+              "en": "A massive demonstration is happening right now",
+              "id": "Demonstrasi besar-besaran sedang berlangsung saat ini"
+            }
+          },
+          {
+            "el_id": "demoagustus-n2",
+            "label": {
+              "en": "The national media are not covering it",
+              "id": "Media nasional tidak meliputnya"
+            }
+          },
+          {
+            "el_id": "demoagustus-n3",
+            "label": {
+              "en": "The demonstration is being deliberately silenced",
+              "id": "Demonstrasi itu sengaja dibungkam"
+            }
+          },
+          {
+            "el_id": "demoagustus-n4",
+            "label": {
+              "en": "Users must act now: like, repost, raise the hashtags",
+              "id": "Warganet harus bertindak sekarang: beri tanda suka, unggah ulang, naikkan tagar"
+            }
+          }
+        ],
+        "edges": [
+          {
+            "el_id": "demoagustus-e1",
+            "from": "demoagustus-n1",
+            "to": "demoagustus-n2",
+            "status": "unsourced",
+            "ev": {
+              "quote": "Demo sebesar ini enggak diliput media?",
+              "source_id": "id-bbc-demo-wave-2026",
+              "why": {
+                "en": "The quote is the wave's own phrasing, recorded verbatim by the outlet that documented it. No registry entry states the step. Part of the footage carried under it is dated by these outlets to the student action at Bundaran HI on 12 June 2026, and other clips to riot footage from the Makassar regional assembly building in August 2025, while the dated actions that did take place between 26 July and 1 August 2026 were reported by the same outlets. The move from a live event to an absence of coverage rests on the posts alone.",
+                "id": "Kutipan itu adalah kalimat gelombang unggahan itu sendiri, tercatat apa adanya oleh media yang mendokumentasikannya. Tidak ada catatan registri yang menyatakan langkah ini. Sebagian rekaman yang dibawa di bawahnya ditarikhkan media-media ini ke aksi mahasiswa di Bundaran HI pada 12 Juni 2026, dan potongan lain ke rekaman kerusuhan di gedung DPRD Makassar pada Agustus 2025, sementara aksi-aksi bertanggal yang memang berlangsung pada 26 Juli hingga 1 Agustus 2026 diberitakan oleh media yang sama. Perpindahan dari peristiwa yang sedang berlangsung menuju ketiadaan liputan bertumpu pada unggahan semata."
+              }
+            }
+          },
+          {
+            "el_id": "demoagustus-e2",
+            "from": "demoagustus-n2",
+            "to": "demoagustus-n3",
+            "status": "unsourced",
+            "ev": {
+              "quote": "Tahap berikutnya adalah suppression claim, yaitu tuduhan bahwa media nasional sengaja bungkam atau algoritma media sosial sengaja menyembunyikan informasi demonstrasi.",
+              "source_id": "id-kompas-megapolitan-monash-2026",
+              "why": {
+                "en": "The registry records this step as a recurring element of the wave's phrasing, which is a record of what the posts say and not a source for what they assert. No entry names an instruction, a channel that carried it, or a newsroom that received it. The nearest institutional statement in this family is the communications minister saying the government did not restrict reporting of the actions and did not prohibit outlets from covering them. What remains is the accusation, and the accusation is what the source describes.",
+                "id": "Registri mencatat langkah ini sebagai elemen berulang dalam susunan kalimat gelombang unggahan, yakni catatan tentang apa yang dikatakan unggahan, bukan sumber bagi apa yang ditegaskannya. Tidak ada catatan yang menyebut sebuah perintah, saluran yang membawanya, atau ruang redaksi yang menerimanya. Pernyataan kelembagaan terdekat dalam keluarga artikel ini adalah Menteri Komunikasi dan Digital yang menyatakan pemerintah tidak berusaha membatasi pemberitaan aksi dan tidak melarang media melakukan peliputan. Yang tersisa adalah tuduhannya, dan tuduhan itulah yang digambarkan sumber."
+              }
+            }
+          },
+          {
+            "el_id": "demoagustus-e3",
+            "from": "demoagustus-n3",
+            "to": "demoagustus-n4",
+            "status": "unsourced",
+            "ev": {
+              "quote": "Terakhir adalah call to amplify, yakni ajakan kepada pengguna lain untuk memberikan tanda suka, membagikan ulang, serta membantu menaikkan tagar agar informasi tidak \"dikalahkan algoritma\".",
+              "source_id": "id-kompas-megapolitan-monash-2026",
+              "why": {
+                "en": "The source documents the call as the closing element of the pattern, which records what the posts ask for rather than supporting the step. No registry entry sets out why an absence of coverage would oblige a reader to amplify. The composition figures in this dissection run the other way: within the sample of posts on X that was analysed, 99.46 percent were retweets, so each act of amplification adds to the same volume the first step reads back as proof of scale.",
+                "id": "Sumber mendokumentasikan ajakan itu sebagai elemen penutup pola, yang mencatat apa yang diminta unggahan alih-alih menopang langkahnya. Tidak ada catatan registri yang menerangkan mengapa ketiadaan liputan mewajibkan pembaca ikut menggencarkan. Angka komposisi dalam pembedahan ini justru berjalan ke arah sebaliknya: di dalam sampel unggahan X yang dianalisis, 99,46 persen berupa retweet, sehingga tiap tindakan menggencarkan menambah volume yang dibaca balik oleh langkah pertama sebagai bukti skala."
+              }
+            }
+          }
+        ],
+        "hidden": [
+          {
+            "el_id": "demoagustus-h1",
+            "label": {
+              "en": "The recording dates of the circulating clips",
+              "id": "Tanggal perekaman potongan video yang beredar"
+            },
+            "why_hidden": {
+              "en": "The chain's first step, a massive demonstration happening right now, rests entirely on the clips as live evidence. Every recording carries a recording date, and that date is the one quantity that decides whether the footage can support the word 'now'. The chain uses the videos and never states when any of them were filmed.",
+              "id": "Langkah pertama rantai ini, demonstrasi besar yang sedang berlangsung saat ini, bertumpu sepenuhnya pada potongan video sebagai bukti langsung. Setiap rekaman membawa tanggal perekaman, dan tanggal itulah besaran yang menentukan apakah rekaman tersebut sanggup menopang kata 'sekarang'. Rantai ini memakai video-video itu tanpa pernah menyebut kapan masing-masing direkam."
+            },
+            "ev": {
+              "quote": "Jika dicermati, sebagian video dan foto tersebut berasal dari demonstrasi mahasiswa Universitas Indonesia di Bundaran Hotel Indonesia yang berlangsung pada 12 Juni lalu.",
+              "source_id": "id-bbc-demo-wave-2026"
+            }
+          },
+          {
+            "el_id": "demoagustus-h2",
+            "label": {
+              "en": "The dated events of the same window and the coverage they received",
+              "id": "Peristiwa bertanggal pada rentang waktu yang sama dan pemberitaan yang diterimanya"
+            },
+            "why_hidden": {
+              "en": "The step 'the national media are not covering it' is a claim about a ratio: events that happened against reports that ran. The chain asserts the numerator is zero and never opens the denominator: which actions actually took place in those days, and how much reporting each one received. Smaller dated actions did occur in the window, and the chain never checks what was written about them.",
+              "id": "Langkah 'media nasional tidak meliputnya' adalah klaim tentang sebuah rasio: peristiwa yang terjadi dibandingkan berita yang terbit. Rantai ini menyatakan pembilangnya nol tanpa pernah membuka penyebutnya: aksi-aksi apa yang memang berlangsung pada hari-hari itu, dan seberapa banyak pemberitaan yang diterima masing-masing. Sejumlah aksi kecil bertanggal memang terjadi pada rentang itu, dan rantai ini tidak pernah memeriksa apa yang sudah ditulis tentangnya."
+            },
+            "ev": {
+              "quote": "Topik yang paling banyak diperbincangkan saat itu adalah aksi demonstrasi di Kejaksaan Agung yang menuntut pengusutan sejumlah perkara hukum, termasuk dugaan kasus yang melibatkan mantan Jaksa Agung Muda Tindak Pidana Khusus.",
+              "source_id": "id-kompas-megapolitan-monash-2026"
+            }
+          },
+          {
+            "el_id": "demoagustus-h3",
+            "label": {
+              "en": "The operating chain a deliberate silencing would need",
+              "id": "Rantai kerja yang diperlukan sebuah pembungkaman yang disengaja"
+            },
+            "why_hidden": {
+              "en": "The step from 'no coverage' to 'deliberately silenced' asserts an act with an actor. A silencing that spans competing national newsrooms and platform ranking systems needs an instruction, a channel to deliver it, and compliance from rivals who normally profit from each other's omissions. The chain names none of these parts and stops at the word 'deliberate'.",
+              "id": "Langkah dari 'tidak ada liputan' menuju 'sengaja dibungkam' menegaskan adanya sebuah tindakan beserta pelakunya. Pembungkaman yang menjangkau ruang-ruang redaksi nasional yang saling bersaing serta sistem peringkat platform membutuhkan sebuah perintah, saluran penyampainya, dan kepatuhan dari para pesaing yang biasanya justru diuntungkan oleh kelalaian pihak lain. Rantai ini tidak menyebut satu pun bagian itu dan berhenti pada kata 'sengaja'."
+            }
+          },
+          {
+            "el_id": "demoagustus-h4",
+            "label": {
+              "en": "The concentration of accounts behind the apparent scale",
+              "id": "Konsentrasi akun di balik kesan skala"
+            },
+            "why_hidden": {
+              "en": "The impression of a massive event is carried by post volume. Volume has a composition: how many distinct sources produce it, and what share of it the most active handful account for. That concentration figure is the denominator the scale impression needs, and the chain never states it. Researchers who examined the wave describe activity they suspect was concentrated in few sources; the chain prices that composition at zero.",
+              "id": "Kesan adanya peristiwa besar ditopang oleh volume unggahan. Volume punya komposisi: berapa banyak sumber berbeda yang menghasilkannya, dan berapa porsi yang berasal dari segelintir akun paling aktif. Angka konsentrasi itulah penyebut yang dibutuhkan oleh kesan skala tersebut, dan rantai ini tidak pernah menyebutnya. Peneliti yang menelaah gelombang ini menggambarkan aktivitas yang mereka duga terpusat pada sedikit sumber; rantai ini menghargai komposisi itu nol."
+            },
+            "value": {
+              "amount": 88.5,
+              "unit": "percent",
+              "display": {
+                "en": "about 88.5 percent",
+                "id": "sekitar 88,5 persen"
+              },
+              "source_id": "id-kompas-megapolitan-monash-2026",
+              "as_of": "share of the analysed retweet activity, 26 July to 1 August 2026"
+            },
+            "ev": {
+              "quote": "Bahkan, sepuluh unggahan sumber teratas menyumbang sekitar 88,5 persen dari keseluruhan aktivitas retweet.",
+              "source_id": "id-kompas-megapolitan-monash-2026"
+            }
+          },
+          {
+            "el_id": "demoagustus-h5",
+            "label": {
+              "en": "The share of the scale generated by the chain's own final step",
+              "id": "Porsi skala yang dihasilkan oleh langkah terakhir rantai itu sendiri"
+            },
+            "why_hidden": {
+              "en": "The call to amplify asks users to like, repost, and raise hashtags. Every complied request adds to the very volume the first step reads as proof of a massive event. The chain therefore feeds its own evidence: the measure of scale grows on every pass of the loop regardless of what happens on any street. The composition of that volume, original posts against reshares and the timing patterns researchers describe as suspected automation, is never mentioned by the chain.",
+              "id": "Ajakan menggencarkan meminta pengguna memberi tanda suka, mengunggah ulang, dan menaikkan tagar. Setiap ajakan yang dipatuhi menambah volume yang oleh langkah pertama dibaca sebagai bukti peristiwa besar. Rantai ini dengan demikian memberi makan buktinya sendiri: ukuran skala tumbuh pada tiap putaran, terlepas dari apa yang terjadi di jalan mana pun. Komposisi volume itu, unggahan asli dibandingkan unggahan ulang serta pola waktu yang oleh peneliti diduga terotomatisasi, tidak pernah disinggung oleh rantai ini."
+            },
+            "value": {
+              "amount": 99.46,
+              "unit": "percent",
+              "display": {
+                "en": "99.46 percent",
+                "id": "99,46 persen"
+              },
+              "source_id": "id-kompas-megapolitan-monash-2026",
+              "as_of": "retweet share of the 34,935 posts on X analysed, 26 July to 1 August 2026"
+            },
+            "ev": {
+              "quote": "Sebagai contoh, terdapat akun yang melakukan sembilan retweet berbeda hanya dalam waktu sekitar 105 milidetik.",
+              "source_id": "id-kompas-megapolitan-monash-2026"
+            }
+          },
+          {
+            "el_id": "demoagustus-h6",
+            "label": {
+              "en": "The people visible in the recycled footage",
+              "id": "Orang-orang yang terlihat dalam rekaman yang diedarkan ulang"
+            },
+            "why_hidden": {
+              "en": "Reframing an old clip as a live emergency reaches the identifiable people in the frame: students filmed at a dated, located event are re-exposed under a description of an event they did not attend. The chain uses their faces as its evidence and never counts them as a party the reuse touches.",
+              "id": "Membingkai ulang rekaman lama sebagai keadaan darurat yang sedang berlangsung menjangkau orang-orang yang teridentifikasi dalam gambar: mahasiswa yang terekam pada peristiwa bertanggal dan bertempat jelas kembali terpapar di bawah keterangan peristiwa yang tidak mereka hadiri. Rantai ini memakai wajah mereka sebagai bukti dan tidak pernah menghitung mereka sebagai pihak yang tersentuh oleh pemakaian ulang itu."
+            },
+            "ev": {
+              "quote": "Nah masalahnya siapa yang mendapatkan keuntungan dari sana? Menurut saya si bukan mahasiswa ya. Mahasiswa ini jangan-jangan dirugikan menurut saya",
+              "source_id": "id-kompas-cekfakta-demo-2026"
+            }
+          },
+          {
+            "el_id": "demoagustus-h7",
+            "label": {
+              "en": "The individual reposters who meet legal exposure first",
+              "id": "Pengunggah ulang perorangan yang menanggung risiko hukum lebih dulu"
+            },
+            "why_hidden": {
+              "en": "The call to act lands on individual accounts. When authorities open cases over the reframed clips, the first party to answer is the small account that pressed repost, not the accounts far more central to the volume pattern. The chain moves that exposure onto its smallest participants and never names it. Detentions over the recirculated clips had already begun while the wave was running.",
+              "id": "Ajakan bertindak jatuh ke akun-akun perorangan. Ketika aparat membuka perkara atas potongan video yang dibingkai ulang, pihak pertama yang harus menjawab adalah akun kecil yang menekan tombol unggah ulang, bukan akun-akun yang jauh lebih sentral dalam pola volumenya. Rantai ini memindahkan risiko itu ke peserta terkecilnya dan tidak pernah menyebutnya. Penahanan atas potongan video yang diedarkan ulang sudah mulai terjadi selama gelombang berlangsung."
+            },
+            "value": {
+              "amount": 33400,
+              "unit": "count",
+              "display": {
+                "en": "about 33,400 followers",
+                "id": "sekitar 33.400 pengikut"
+              },
+              "source_id": "id-kompas-megapolitan-monash-2026",
+              "as_of": "the account in the Ciamis case, as reported 6 August 2026"
+            },
+            "ev": {
+              "quote": "Seorang perempuan berinisial DM (52) ditangkap di Ciamis, Jawa Barat, karena diduga menyebarkan informasi mengenai rencana demonstrasi melalui akun TikTok miliknya.",
+              "source_id": "id-kompas-megapolitan-monash-2026"
+            }
+          },
+          {
+            "el_id": "demoagustus-h8",
+            "label": {
+              "en": "The journalists and newsrooms cast as the silencing's agents",
+              "id": "Jurnalis dan ruang redaksi yang diposisikan sebagai pelaksana pembungkaman"
+            },
+            "why_hidden": {
+              "en": "The silencing step needs an agent, and the nearest available one is the national press: the accusation reaches reporters' credibility and safety at a moment when press organizations were themselves holding documented protests over a separate matter. The chain spends their reputation as its proof and never counts them as a touched party.",
+              "id": "Langkah pembungkaman membutuhkan pelaku, dan pihak terdekat yang tersedia adalah pers nasional: tuduhan itu menjangkau kredibilitas dan keselamatan para wartawan justru pada pekan ketika organisasi pers sendiri tengah menggelar aksi terdokumentasi mengenai persoalan lain. Rantai ini membelanjakan reputasi mereka sebagai bukti dan tidak pernah menghitung mereka sebagai pihak yang tersentuh."
+            },
+            "ev": {
+              "quote": "Jurnalis dari berbagai organisasi, termasuk PWI, AJI, IJTI, dan PFI di wilayah Malang Raya dan Yogyakarta, menggelar aksi protes pada 27 dan 26 Juli 2026.",
+              "source_id": "id-bbc-demo-wave-2026"
+            }
+          }
+        ]
+      },
+      {
+        "type": "scale_check",
+        "el_id": "demoagustus-p-scale_check",
+        "denominator": {
+          "label": {
+            "en": "Posts counted across five platforms in the monitored window",
+            "id": "Unggahan yang terhitung di lima platform selama rentang pemantauan"
+          },
+          "value": {
+            "amount": 197000,
+            "unit": "count",
+            "display": {
+              "en": "about 197,000 posts",
+              "id": "sekitar 197.000 unggahan"
+            },
+            "source_id": "id-kompas-megapolitan-monash-2026",
+            "as_of": "26 July to 1 August 2026"
+          }
+        },
+        "segments": [
+          {
+            "el_id": "demoagustus-seg-x-analysed",
+            "label": {
+              "en": "Posts on X whose composition was analysed",
+              "id": "Unggahan X yang komposisinya dianalisis"
+            },
+            "value": {
+              "amount": 34935,
+              "unit": "count",
+              "display": {
+                "en": "34,935 posts",
+                "id": "34.935 unggahan"
+              },
+              "source_id": "id-bbc-demo-wave-2026",
+              "as_of": "26 July to 1 August 2026"
+            }
+          },
+          {
+            "el_id": "demoagustus-seg-one-post-retweets",
+            "label": {
+              "en": "Retweets carried by the single most amplified post",
+              "id": "Retweet yang dibawa satu unggahan yang paling banyak digencarkan"
+            },
+            "value": {
+              "amount": 13446,
+              "unit": "count",
+              "display": {
+                "en": "13,446 retweets",
+                "id": "13.446 retweet"
+              },
+              "source_id": "id-kompas-megapolitan-monash-2026",
+              "as_of": "26 July to 1 August 2026"
+            }
+          }
+        ],
+        "takeaway": {
+          "en": "The headline quantity of this window is a count of posts, not a count of people. Where composition was measured, on X, the analysed sample of 34,935 posts was 99.46 percent retweets, and 13,446 of those retweets carried one source post. The bars place the measured sample and that single post against the whole monitored volume; the accounts behind the volume, and the shares that belong to other bases, are held separately in the context labels.",
+          "id": "Besaran utama pada rentang ini adalah hitungan unggahan, bukan hitungan orang. Di tempat komposisinya diukur, yakni X, sampel 34.935 unggahan yang dianalisis berisi 99,46 persen retweet, dan 13.446 di antara retweet itu membawa satu unggahan sumber. Batang-batang ini menempatkan sampel terukur dan satu unggahan tersebut terhadap keseluruhan volume yang dipantau; akun di balik volume, serta porsi-porsi yang berpijak pada penyebut lain, ditempatkan terpisah pada label konteks."
+        },
+        "context_chips": [
+          {
+            "el_id": "demoagustus-chip-unique-accounts",
+            "label": {
+              "en": "Unique accounts behind the counted posts",
+              "id": "Akun unik di balik unggahan yang terhitung"
+            },
+            "value": {
+              "amount": 63000,
+              "unit": "people",
+              "display": {
+                "en": "63,000 unique accounts",
+                "id": "63.000 akun unik"
+              },
+              "source_id": "id-kompas-megapolitan-monash-2026",
+              "as_of": "26 July to 1 August 2026"
+            }
+          },
+          {
+            "el_id": "demoagustus-chip-retweet-share",
+            "label": {
+              "en": "Retweet share of the analysed sample of posts on X",
+              "id": "Porsi retweet dalam sampel unggahan X yang dianalisis"
+            },
+            "value": {
+              "amount": 99.46,
+              "unit": "percent",
+              "display": {
+                "en": "99.46 percent",
+                "id": "99,46 persen"
+              },
+              "source_id": "id-kompas-megapolitan-monash-2026",
+              "as_of": "of 34,935 posts on X, 26 July to 1 August 2026"
+            }
+          },
+          {
+            "el_id": "demoagustus-chip-top10-share",
+            "label": {
+              "en": "Share of retweet activity carried by the ten leading source posts",
+              "id": "Porsi aktivitas retweet yang dibawa sepuluh unggahan sumber teratas"
+            },
+            "value": {
+              "amount": 88.5,
+              "unit": "percent",
+              "display": {
+                "en": "about 88.5 percent",
+                "id": "sekitar 88,5 persen"
+              },
+              "source_id": "id-kompas-megapolitan-monash-2026",
+              "as_of": "of the analysed retweet activity, 26 July to 1 August 2026"
+            }
+          },
+          {
+            "el_id": "demoagustus-chip-one-post-share",
+            "label": {
+              "en": "Share of the analysed retweets carried by that single post",
+              "id": "Porsi retweet yang dianalisis yang dibawa satu unggahan itu"
+            },
+            "value": {
+              "amount": 38.7,
+              "unit": "percent",
+              "display": {
+                "en": "38.7 percent",
+                "id": "38,7 persen"
+              },
+              "source_id": "id-detik-monash-2026",
+              "as_of": "of the analysed retweets on X, 26 July to 1 August 2026"
+            }
+          },
+          {
+            "el_id": "demoagustus-chip-peak-27jul",
+            "label": {
+              "en": "Posts on the peak day, 27 July 2026",
+              "id": "Unggahan pada hari puncak, 27 Juli 2026"
+            },
+            "value": {
+              "amount": 50000,
+              "unit": "count",
+              "display": {
+                "en": "about 50,000 posts",
+                "id": "sekitar 50.000 unggahan"
+              },
+              "source_id": "id-detik-monash-2026",
+              "as_of": "27 July 2026"
+            }
+          },
+          {
+            "el_id": "demoagustus-chip-second-spike-30jul",
+            "label": {
+              "en": "Conversations on the second spike, 30 July 2026",
+              "id": "Percakapan pada lonjakan kedua, 30 Juli 2026"
+            },
+            "value": {
+              "amount": 34000,
+              "unit": "count",
+              "display": {
+                "en": "about 34,000 conversations",
+                "id": "sekitar 34.000 percakapan"
+              },
+              "source_id": "id-kompas-megapolitan-monash-2026",
+              "as_of": "30 July 2026"
+            }
+          },
+          {
+            "el_id": "demoagustus-chip-urgency-hook",
+            "label": {
+              "en": "Share of the amplification pattern opening with an urgency hook",
+              "id": "Porsi pola amplifikasi yang dibuka dengan kalimat pemantik mendesak"
+            },
+            "value": {
+              "amount": 68.1,
+              "unit": "percent",
+              "display": {
+                "en": "about 68.1 percent",
+                "id": "sekitar 68,1 persen"
+              },
+              "source_id": "id-kompas-megapolitan-monash-2026",
+              "as_of": "of the amplification pattern, 26 July to 1 August 2026",
+              "flags": [
+                "estimate"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "incidence",
+        "el_id": "demoagustus-p-incidence",
+        "horizons": [
+          {
+            "key": "weeks",
+            "label": {
+              "en": "Within weeks",
+              "id": "Dalam hitungan pekan"
+            }
+          },
+          {
+            "key": "months",
+            "label": {
+              "en": "Within months",
+              "id": "Dalam hitungan bulan"
+            }
+          },
+          {
+            "key": "beyond",
+            "label": {
+              "en": "Beyond that",
+              "id": "Lebih jauh dari itu"
+            }
+          }
+        ],
+        "lanes": [
+          {
+            "el_id": "demoagustus-lane-filmed",
+            "who": {
+              "en": "Students filmed at the dated actions the clips came from",
+              "id": "Mahasiswa yang terekam pada aksi bertanggal asal potongan video itu"
+            },
+            "cells": [
+              {
+                "horizon": "weeks",
+                "text": {
+                  "en": "Their faces circulate again under a description of an event they did not attend. Part of the footage is dated by these outlets to the student action at Bundaran HI on 12 June 2026, and the people in frame were at that action, not at the one the caption names.",
+                  "id": "Wajah mereka kembali beredar di bawah keterangan peristiwa yang tidak mereka hadiri. Sebagian rekaman ditarikhkan media-media ini ke aksi mahasiswa di Bundaran HI pada 12 Juni 2026, dan orang-orang dalam gambar berada di aksi itu, bukan di aksi yang disebut keterangannya."
+                },
+                "ev": {
+                  "quote": "Jika dicermati, sebagian video dan foto tersebut berasal dari demonstrasi mahasiswa Universitas Indonesia di Bundaran Hotel Indonesia yang berlangsung pada 12 Juni lalu.",
+                  "source_id": "id-bbc-demo-wave-2026"
+                }
+              },
+              {
+                "horizon": "months",
+                "text": {
+                  "en": "The same clips remain available for the next relabelling, and whether anyone in frame asked for a correction is carried by no entry in this registry.",
+                  "id": "Potongan video yang sama tetap tersedia untuk pelabelan ulang berikutnya, dan apakah ada orang dalam gambar yang meminta ralat tidak dibawa oleh catatan mana pun dalam registri ini."
+                }
+              },
+              {
+                "horizon": "beyond",
+                "text": {
+                  "en": "The researcher who examined the wave puts the students among the parties who lose from it, and reads the beneficiary question as open. No count in the registry measures what an action loses once its footage has been reused.",
+                  "id": "Peneliti yang menelaah gelombang ini menempatkan mahasiswa di antara pihak yang dirugikan olehnya, dan membiarkan pertanyaan siapa yang diuntungkan tetap terbuka. Tidak ada hitungan dalam registri yang mengukur apa yang hilang dari sebuah aksi setelah rekamannya dipakai ulang."
+                },
+                "ev": {
+                  "quote": "Nah masalahnya siapa yang mendapatkan keuntungan dari sana? Menurut saya si bukan mahasiswa ya. Mahasiswa ini jangan-jangan dirugikan menurut saya",
+                  "source_id": "id-kompas-cekfakta-demo-2026"
+                }
+              }
+            ]
+          },
+          {
+            "el_id": "demoagustus-lane-reposters",
+            "who": {
+              "en": "Individual accounts that liked, reposted, and raised the hashtags",
+              "id": "Akun perorangan yang menyukai, mengunggah ulang, dan menaikkan tagar"
+            },
+            "cells": [
+              {
+                "horizon": "weeks",
+                "text": {
+                  "en": "Police cyber patrols ran while the wave was running, and one account holder was detained in Ciamis over posts about the planned demonstration. The exposure landed on an individual account, and the size the registry records for it is its follower count.",
+                  "id": "Patroli siber kepolisian berjalan selama gelombang berlangsung, dan seorang pemilik akun ditahan di Ciamis atas unggahan mengenai rencana demonstrasi. Risiko itu jatuh pada satu akun perorangan, dan ukuran yang dicatat registri untuknya adalah jumlah pengikutnya."
+                },
+                "value": {
+                  "amount": 33400,
+                  "unit": "count",
+                  "display": {
+                    "en": "about 33,400 followers",
+                    "id": "sekitar 33.400 pengikut"
+                  },
+                  "source_id": "id-kompas-megapolitan-monash-2026",
+                  "as_of": "the account in the Ciamis case, as reported 6 August 2026"
+                },
+                "ev": {
+                  "quote": "Seorang perempuan berinisial DM (52) ditangkap di Ciamis, Jawa Barat, karena diduga menyebarkan informasi mengenai rencana demonstrasi melalui akun TikTok miliknya.",
+                  "source_id": "id-kompas-megapolitan-monash-2026"
+                }
+              },
+              {
+                "horizon": "months",
+                "text": {
+                  "en": "Investigators said they were still examining whether other parties were involved and what the motive was, so the question of who else answers for the reposting stays open at the level of one case.",
+                  "id": "Penyidik menyatakan masih mendalami kemungkinan keterlibatan pihak lain dan motifnya, sehingga pertanyaan siapa lagi yang menjawab atas pengunggahan ulang itu tetap terbuka pada tingkat satu perkara."
+                },
+                "ev": {
+                  "quote": "Wakil Direktur Reserse Siber Polda Metro Jaya AKBP Ardian Satrio Utomo mengatakan penyidik masih mendalami kemungkinan keterlibatan pihak lain maupun motif penyebaran konten tersebut.",
+                  "source_id": "id-kompas-megapolitan-monash-2026"
+                }
+              },
+              {
+                "horizon": "beyond",
+                "text": {
+                  "en": "The accounts most central to the volume pattern are described in the analysis by their behaviour and not by name, and no entry in this registry records a case opened against any of them.",
+                  "id": "Akun-akun yang paling sentral dalam pola volume digambarkan dalam analisis lewat perilakunya, bukan lewat namanya, dan tidak ada catatan dalam registri ini yang merekam perkara yang dibuka terhadap satu pun di antaranya."
+                }
+              }
+            ]
+          },
+          {
+            "el_id": "demoagustus-lane-newsrooms",
+            "who": {
+              "en": "Journalists and newsrooms named as the silencing's agent",
+              "id": "Jurnalis dan ruang redaksi yang disebut sebagai pelaksana pembungkaman"
+            },
+            "cells": [
+              {
+                "horizon": "weeks",
+                "text": {
+                  "en": "The accusation ran through the same days in which press organizations were holding their own dated protests over a separate matter, so the profession named as the silencer was on the street in the window the chain describes as silent.",
+                  "id": "Tuduhan itu berjalan pada hari-hari yang sama ketika organisasi pers tengah menggelar aksi bertanggal mereka sendiri mengenai persoalan lain, sehingga profesi yang disebut sebagai pembungkam justru berada di jalan pada rentang yang oleh rantai ini digambarkan sunyi."
+                },
+                "ev": {
+                  "quote": "Jurnalis dari berbagai organisasi, termasuk PWI, AJI, IJTI, dan PFI di wilayah Malang Raya dan Yogyakarta, menggelar aksi protes pada 27 dan 26 Juli 2026.",
+                  "source_id": "id-bbc-demo-wave-2026"
+                }
+              },
+              {
+                "horizon": "months",
+                "text": {
+                  "en": "The communications ministry put its own position on the record, stating that the government did not restrict reporting of the actions and did not prohibit outlets from covering them. That statement answers the accusation; it does not measure what the accusation costs a newsroom.",
+                  "id": "Kementerian komunikasi dan digital mencatatkan posisinya sendiri, yakni pemerintah tidak berusaha membatasi pemberitaan aksi dan tidak melarang media melakukan peliputan. Pernyataan itu menjawab tuduhannya; ia tidak mengukur apa yang harus dibayar sebuah ruang redaksi akibat tuduhan tersebut."
+                },
+                "ev": {
+                  "quote": "Menteri Komunikasi dan Digital (Menkomdigi) Meutya Hafid berkata pemerintah tidak berusaha membatasi pemberitaan aksi demonstrasi dan tidak melarang media melakukan peliputan.",
+                  "source_id": "id-bbc-demo-wave-2026"
+                }
+              },
+              {
+                "horizon": "beyond",
+                "text": {
+                  "en": "A readership that has accepted the silencing step reads the next absence of a story the same way, and no figure in this registry tracks the credibility a newsroom carries into the next wave.",
+                  "id": "Pembaca yang sudah menerima langkah pembungkaman akan membaca ketiadaan berita berikutnya dengan cara yang sama, dan tidak ada angka dalam registri ini yang melacak kredibilitas yang dibawa sebuah ruang redaksi ke gelombang berikutnya."
+                }
+              }
+            ]
+          },
+          {
+            "el_id": "demoagustus-lane-readers",
+            "who": {
+              "en": "Everyone reading the timeline",
+              "id": "Semua orang yang membaca lini masa"
+            },
+            "cells": [
+              {
+                "horizon": "weeks",
+                "text": {
+                  "en": "The conversation the reader met was mostly neutral in tone, with a large negative share beside it, and the volume that made it feel like an event was composed almost entirely of reshares.",
+                  "id": "Percakapan yang ditemui pembaca sebagian besar bernada netral, dengan porsi negatif yang besar di sampingnya, sementara volume yang membuatnya terasa seperti sebuah peristiwa hampir seluruhnya tersusun dari unggahan ulang."
+                },
+                "value": {
+                  "amount": 42,
+                  "unit": "percent",
+                  "display": {
+                    "en": "42 percent negative",
+                    "id": "42 persen negatif"
+                  },
+                  "source_id": "id-kompas-megapolitan-monash-2026",
+                  "as_of": "sentiment of the monitored conversation, 26 July to 1 August 2026"
+                },
+                "ev": {
+                  "quote": "Dari sisi sentimen, percakapan didominasi sentimen netral sebesar 57 persen. Namun, sentimen negatif mencapai 42 persen, sedangkan sentimen positif hanya sekitar 0,9 persen.",
+                  "source_id": "id-kompas-megapolitan-monash-2026"
+                }
+              },
+              {
+                "horizon": "months",
+                "text": {
+                  "en": "The researcher who examined the wave places the cost on the public's capacity to tell an event apart from a description of one, rather than on any political side.",
+                  "id": "Peneliti yang menelaah gelombang ini menempatkan ongkosnya pada kemampuan publik membedakan sebuah peristiwa dari keterangan tentangnya, bukan pada pihak politik mana pun."
+                },
+                "ev": {
+                  "quote": "Dalam kondisi seperti ini, korban utamanya bukan satu pihak politik, melainkan kemampuan publik untuk membedakan mana yang nyata dan mana yang bukan",
+                  "source_id": "id-kompas-megapolitan-monash-2026"
+                }
+              },
+              {
+                "horizon": "beyond",
+                "text": {
+                  "en": "Once relabelled clips are expected, an action that did take place can be doubted on the same reflex. No count in this registry measures that second effect, and the chain never prices it.",
+                  "id": "Begitu potongan video berlabel ulang menjadi hal yang diperkirakan ada, aksi yang memang terjadi pun bisa diragukan lewat refleks yang sama. Tidak ada hitungan dalam registri ini yang mengukur efek kedua itu, dan rantai ini tidak pernah menghargainya."
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "options",
+        "el_id": "demoagustus-p-options",
+        "options": [
+          {
+            "el_id": "demoagustus-opt-amplify",
+            "label": {
+              "en": "Amplify immediately: like, repost, raise the hashtags",
+              "id": "Langsung ikut mengangkat: beri tanda suka, unggah ulang, naikkan tagar"
+            },
+            "proponent": {
+              "name": "Unggahan yang beredar, pola call to amplify dalam pemantauan Monash University Indonesia",
+              "source_id": "id-kompas-megapolitan-monash-2026"
+            },
+            "tradeoff": {
+              "en": "It costs nothing and takes a second, and it adds to the same post volume the first step reads as proof of scale. Inside the analysed sample of posts on X, 99.46 percent were retweets, so a reader who complies is producing the measure rather than testing it.",
+              "id": "Langkah ini tidak berbiaya dan hanya perlu sedetik, dan ia menambah volume unggahan yang oleh langkah pertama dibaca sebagai bukti skala. Di dalam sampel unggahan X yang dianalisis, 99,46 persen berupa retweet, sehingga pembaca yang menurutinya sedang memproduksi ukurannya, bukan mengujinya."
+            }
+          },
+          {
+            "el_id": "demoagustus-opt-check-footage",
+            "label": {
+              "en": "Check the date and location of the footage first",
+              "id": "Periksa dulu tanggal dan lokasi rekaman"
+            },
+            "proponent": {
+              "name": "Peneliti Monash University Indonesia Ika Idris",
+              "source_id": "id-kompas-cekfakta-demo-2026"
+            },
+            "tradeoff": {
+              "en": "The check costs minutes and can start from the post itself: the place and date in the caption either match a documented action or they do not. It catches both clip types the researcher describes, an older action framed as current and footage whose location does not match the caption, and it delays the reader by exactly the time the check takes.",
+              "id": "Pemeriksaan ini memakan waktu beberapa menit dan bisa dimulai dari unggahannya sendiri: tempat dan tanggal pada keterangan cocok dengan aksi yang terdokumentasi atau tidak. Ia menangkap kedua jenis potongan video yang digambarkan peneliti, yakni aksi lama yang dibingkai sebagai peristiwa kini dan rekaman yang lokasinya tidak sesuai dengan keterangannya, dan ia menunda pembaca persis selama pemeriksaan itu berlangsung."
+            }
+          },
+          {
+            "el_id": "demoagustus-opt-ground-confirm",
+            "label": {
+              "en": "Wait for confirmation from the location before sharing",
+              "id": "Tunggu konfirmasi dari lokasi sebelum membagikan"
+            },
+            "proponent": {
+              "name": "Kabid Humas Polda Metro Jaya Kombes Pol Budi Hermanto",
+              "source_id": "id-kompas-megapolitan-monash-2026"
+            },
+            "tradeoff": {
+              "en": "Waiting keeps an unconfirmed clip off the reader's timeline, and it also means an action that is happening circulates later than it happens. The institution asking for the wait is the same one that opens cases over the clips, and by its own statement it had received no information of a large demonstration planned for August 2026.",
+              "id": "Menunggu membuat potongan video yang belum terkonfirmasi tidak masuk ke lini masa pembaca, dan itu juga berarti aksi yang sedang berlangsung beredar lebih lambat daripada kejadiannya. Lembaga yang meminta penundaan itu adalah lembaga yang sama yang membuka perkara atas potongan video tersebut, dan menurut pernyataannya sendiri ia belum menerima informasi mengenai rencana demonstrasi besar pada Agustus 2026."
+            }
+          }
+        ],
+        "playbook": [
+          {
+            "el_id": "demoagustus-play-locate",
+            "action": {
+              "en": "Search the place and the date named in the caption against news archives before resharing. The actions that did take place between 26 July and 1 August 2026 are indexed by outlet and by date.",
+              "id": "Cari tempat dan tanggal yang disebut dalam keterangan unggahan di arsip berita sebelum membagikan ulang. Aksi-aksi yang memang berlangsung pada 26 Juli hingga 1 Agustus 2026 terindeks menurut media dan tanggalnya."
+            },
+            "channel": {
+              "en": "Outlet news archives and their date indexes",
+              "id": "Arsip berita media dan indeks tanggalnya"
+            }
+          },
+          {
+            "el_id": "demoagustus-play-origin",
+            "action": {
+              "en": "Look for the earliest posting of the clip rather than the copy on the timeline, and read the recording date that copy carries.",
+              "id": "Telusuri unggahan paling awal dari potongan video itu, bukan salinan yang muncul di lini masa, lalu baca tanggal perekaman yang dibawa salinan tersebut."
+            },
+            "channel": {
+              "en": "Platform upload records and archived first postings",
+              "id": "Catatan unggahan platform dan arsip unggahan pertama"
+            }
+          },
+          {
+            "el_id": "demoagustus-play-ask",
+            "action": {
+              "en": "Ask the campus or civil organization named in the clip, and the police public information channel, whether an action took place at that place on that date.",
+              "id": "Tanyakan kepada kampus atau organisasi masyarakat sipil yang disebut dalam potongan video itu, serta kepada saluran humas kepolisian, apakah ada aksi di tempat dan tanggal tersebut."
+            },
+            "channel": {
+              "en": "Statements from the organizations involved and the police public information channel",
+              "id": "Pernyataan organisasi yang terlibat dan saluran humas kepolisian"
+            }
+          }
+        ]
+      },
+      {
+        "type": "family",
+        "el_id": "demoagustus-p-family"
+      }
+    ],
+    "echo": null,
+    "narration": {
+      "en": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "Four steps carry this story: a massive demonstration is happening right now, the national media are not covering it, that silence is deliberate, and so users must like, repost and raise the hashtags.",
+            "els": [
+              "demoagustus-p-claim_map",
+              "demoagustus-n1",
+              "demoagustus-n2",
+              "demoagustus-n3",
+              "demoagustus-n4"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "The graph marks all three joins between those steps unsourced, and the clips the first step rests on carry no recording date: the outlets that documented the wave place part of the footage at a student action at Bundaran HI on 12 June 2026, and other clips at riot footage from the Makassar regional assembly building in August 2025.",
+            "els": [
+              "demoagustus-e1",
+              "demoagustus-e2",
+              "demoagustus-e3",
+              "demoagustus-h1"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "The second step is a claim about a ratio, and the chain never opens the denominator: dated actions did take place between 26 July and 1 August 2026 and the same outlets reported them, which is why the place and date named in a caption can be searched against those archives in the minutes before a repost.",
+            "els": [
+              "demoagustus-n2",
+              "demoagustus-h2",
+              "demoagustus-p-options",
+              "demoagustus-opt-check-footage",
+              "demoagustus-play-locate"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "A silencing that reaches competing newsrooms and platform ranking needs an instruction, a channel to carry it and newsrooms that complied, and no article in this family names any of those parts; the nearest statement on the record is the communications minister saying the government did not restrict reporting of the actions.",
+            "els": [
+              "demoagustus-n3",
+              "demoagustus-h3",
+              "demoagustus-e2",
+              "demoagustus-p-family"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "What makes the event feel massive is a count of posts rather than a count of people: about 197,000 posts across five platforms between 26 July and 1 August 2026, from 63,000 unique accounts, and inside the 34,935 posts on X whose composition was analysed, 99.46 percent were retweets, about 88.5 percent of that retweet activity came from ten source posts, and 13,446 of those retweets carried one source post.",
+            "els": [
+              "demoagustus-p-scale_check",
+              "demoagustus-chip-unique-accounts",
+              "demoagustus-seg-x-analysed",
+              "demoagustus-chip-retweet-share",
+              "demoagustus-chip-top10-share",
+              "demoagustus-seg-one-post-retweets",
+              "demoagustus-h4"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "The last step asks the reader to add to that same volume, and the people it reaches are already inside the frame: the students filmed at Bundaran HI, the individual accounts that reposted, one of them detained in Ciamis with about 33,400 followers, the journalists cast as the silencer in the same days their own organizations were holding protests over a separate matter, and everyone reading the timeline.",
+            "els": [
+              "demoagustus-n4",
+              "demoagustus-e3",
+              "demoagustus-h5",
+              "demoagustus-p-incidence",
+              "demoagustus-lane-filmed",
+              "demoagustus-lane-reposters",
+              "demoagustus-lane-newsrooms",
+              "demoagustus-lane-readers",
+              "demoagustus-h6",
+              "demoagustus-h7",
+              "demoagustus-h8"
+            ]
+          }
+        ]
+      },
+      "id": {
+        "sentences": [
+          {
+            "id": "v-1",
+            "text": "Cerita ini berjalan dalam empat langkah: ada demonstrasi besar-besaran yang sedang berlangsung, media nasional tidak meliputnya, kesunyian itu disengaja, maka warganet harus memberi tanda suka, mengunggah ulang, dan menaikkan tagar.",
+            "els": [
+              "demoagustus-p-claim_map",
+              "demoagustus-n1",
+              "demoagustus-n2",
+              "demoagustus-n3",
+              "demoagustus-n4"
+            ]
+          },
+          {
+            "id": "v-2",
+            "text": "Rekaman yang menopang langkah pertama tidak pernah membawa tanggal perekaman, padahal tanggal itulah yang menentukan apakah gambarnya sanggup menopang kata sekarang: media yang mendokumentasikan gelombang ini menempatkan sebagian video pada aksi mahasiswa di Bundaran HI, 12 Juni 2026, dan potongan lain pada rekaman kerusuhan di gedung DPRD Makassar, Agustus 2025.",
+            "els": [
+              "demoagustus-h1",
+              "demoagustus-n1",
+              "demoagustus-e1"
+            ]
+          },
+          {
+            "id": "v-3",
+            "text": "Langkah kedua adalah klaim tentang rasio, dan penyebutnya tidak pernah dibuka: aksi bertanggal memang berlangsung pada 26 Juli hingga 1 Agustus 2026 dan diberitakan media yang sama, sehingga tempat dan tanggal pada keterangan unggahan bisa dicari di arsip berita dalam beberapa menit sebelum tombol unggah ulang ditekan.",
+            "els": [
+              "demoagustus-n2",
+              "demoagustus-h2",
+              "demoagustus-p-options",
+              "demoagustus-opt-check-footage",
+              "demoagustus-play-locate"
+            ]
+          },
+          {
+            "id": "v-4",
+            "text": "Ketiga sisi penghubung pada peta itu ditandai tanpa sumber, dan langkah menuju pembungkaman yang disengaja membutuhkan sebuah perintah, saluran yang membawanya, serta ruang redaksi yang menurutinya: tidak ada artikel dalam keluarga ini yang menyebut satu pun bagian tersebut, sementara pernyataan kelembagaan terdekat datang dari Menteri Komunikasi dan Digital yang menyatakan pemerintah tidak berusaha membatasi pemberitaan aksi.",
+            "els": [
+              "demoagustus-e1",
+              "demoagustus-e2",
+              "demoagustus-e3",
+              "demoagustus-n3",
+              "demoagustus-h3",
+              "demoagustus-p-family"
+            ]
+          },
+          {
+            "id": "v-5",
+            "text": "Yang membuat peristiwa ini terasa besar adalah hitungan unggahan, bukan hitungan orang: sekitar 197.000 unggahan di lima platform pada 26 Juli hingga 1 Agustus 2026, dari 63.000 akun unik, dan di dalam 34.935 unggahan X yang komposisinya dianalisis, 99,46 persen berupa retweet, sekitar 88,5 persen aktivitas retweet itu berasal dari sepuluh unggahan sumber, dan 13.446 di antara retweet itu membawa satu unggahan sumber.",
+            "els": [
+              "demoagustus-p-scale_check",
+              "demoagustus-chip-unique-accounts",
+              "demoagustus-seg-x-analysed",
+              "demoagustus-chip-retweet-share",
+              "demoagustus-chip-top10-share",
+              "demoagustus-seg-one-post-retweets",
+              "demoagustus-h4"
+            ]
+          },
+          {
+            "id": "v-6",
+            "text": "Langkah terakhir meminta pembaca menambah volume yang sama itu, dan orang-orang yang dijangkaunya sudah berada di dalam bingkai: mahasiswa yang terekam di Bundaran HI, akun perorangan yang mengunggah ulang, seorang di antaranya ditahan di Ciamis dengan akun berpengikut sekitar 33.400, para jurnalis yang diposisikan sebagai pembungkam justru pada hari-hari ketika organisasi mereka sendiri menggelar aksi mengenai persoalan lain, dan semua orang yang membaca lini masa.",
+            "els": [
+              "demoagustus-n4",
+              "demoagustus-e3",
+              "demoagustus-h5",
+              "demoagustus-p-incidence",
+              "demoagustus-lane-filmed",
+              "demoagustus-lane-reposters",
+              "demoagustus-lane-newsrooms",
+              "demoagustus-lane-readers",
+              "demoagustus-h6",
+              "demoagustus-h7",
+              "demoagustus-h8"
+            ]
+          }
+        ]
+      }
+    },
+    "manifest": {
+      "run_id": "run-2026-08-10",
+      "generated_at": "2026-08-09T16:25:13Z",
+      "steps": [
+        {
+          "role": "A5",
+          "model": "claude-fable-5",
+          "started_at": "2026-08-09T16:25:28Z",
+          "finished_at": "2026-08-09T16:31:52Z",
+          "input_hash": "e1c683f293d8a3a19a48b2c7cba74fd1b6dacaa77b3e51e7e79c8782a7a73698"
+        },
+        {
+          "role": "A6",
+          "model": "claude-fable-5",
+          "started_at": "2026-08-09T16:31:52Z",
+          "finished_at": "2026-08-09T16:35:05Z",
+          "input_hash": "c4438e37065e2f8005d670f3df064c1fa34a45b04f08ce69682a634b05e11262"
+        },
+        {
+          "role": "A7",
+          "model": "claude-opus-5",
+          "started_at": "2026-08-09T16:35:06Z",
+          "finished_at": "2026-08-09T16:47:44Z",
+          "input_hash": "c7dae8e6e8d7f60b8bcb9e7034bf6a4dfc18d136c374db1c46b2ef624bdd1370"
+        },
+        {
+          "role": "A8",
+          "model": "claude-opus-5",
+          "started_at": "2026-08-09T16:47:44Z",
+          "finished_at": "2026-08-09T16:49:42Z",
+          "input_hash": "f88d376aa3d9dd390bbad049268b82557fbb9dabd46a16064230f4bf83dbceee"
+        },
+        {
+          "role": "A9",
+          "model": "claude-opus-5",
+          "started_at": "2026-08-09T16:49:43Z",
+          "finished_at": "2026-08-09T16:58:19Z",
+          "input_hash": "a18dfe629d3f5c349deb5b2dc7c2386f2dd854a7f7f673fbbed432723872f7f7"
+        }
+      ]
+    }
+  },
+  "mirror_brief": null
+}

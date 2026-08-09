@@ -1,6 +1,15 @@
 {
   "nodes": [
     {
+      "id": "node-demo-agustus",
+      "narrative_id": "demo-agustus",
+      "label": {
+        "en": "A Demo This Big, and the Media Won't Show It?",
+        "id": "Demo Sebesar Ini Enggak Diliput Media?"
+      },
+      "pack": "id"
+    },
+    {
       "id": "node-mbg-stop",
       "narrative_id": "mbg-stop",
       "label": {

@@ -1,0 +1,33 @@
+{
+  "narrative_id": "mbg-poisoning",
+  "family_skeleton": "one institution's running count published as the count, without the two other counts that disagree with it and without the method that separates them",
+  "members": [
+    {
+      "id": "mbg-poisoning-m1",
+      "lang": "id",
+      "headline": "Kepala BGN: Korban Keracunan MBG Capai 6.517 Orang Sejak Januari 2025",
+      "outlet": "CNN Indonesia",
+      "date": "2025-10-01",
+      "url": "https://www.cnnindonesia.com/nasional/20251001125738-20-1279693/kepala-bgn-korban-keracunan-mbg-capai-6517-orang-sejak-januari-2025",
+      "note": "Verbatim title from content/sources.json (id-cnn-bgn-poisoning-6517). BGN counting incidents in its own program: the figure ships flagged self_reported."
+    },
+    {
+      "id": "mbg-poisoning-m2",
+      "lang": "id",
+      "headline": "Beda Data KLB Keracunan MBG: BPOM vs BGN",
+      "outlet": "Bloomberg Technoz",
+      "date": "2025-10-01",
+      "url": "https://www.bloombergtechnoz.com/detail-news/85713/beda-data-klb-keracunan-mbg-bpom-vs-bgn",
+      "note": "Verbatim title from content/sources.json (id-bloombergtechnoz-bpom-9089). Carries the BPOM count of 9,089 as a direct quote of Taruna Ikrar. The 9,083 variant reported by one outlet does not ship; the 4,711 figure the PRD carried was never verified and does not ship at all."
+    },
+    {
+      "id": "mbg-poisoning-m3",
+      "lang": "id",
+      "headline": "Data JPPI: Per September, 8.649 Anak Keracunan MBG",
+      "outlet": "CNN Indonesia",
+      "date": "2025-09-29",
+      "url": "https://www.cnnindonesia.com/nasional/20250929085833-20-1278711/data-jppi-per-september-8649-anak-keracunan-mbg",
+      "note": "Verbatim title from content/sources.json (id-cnn-jppi-8649). The third count, from a civil-society network. The three are never reconciled, which is the dueling panel."
+    }
+  ]
+}

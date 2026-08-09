@@ -1,0 +1,273 @@
+{
+  "narration": {
+    "en": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Four steps carry this story: a massive demonstration is happening right now, the national media are not covering it, that silence is deliberate, and so users must like, repost and raise the hashtags.",
+          "els": [
+            "demoagustus-p-claim_map",
+            "demoagustus-n1",
+            "demoagustus-n2",
+            "demoagustus-n3",
+            "demoagustus-n4"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "The graph marks all three joins between those steps unsourced, and the clips the first step rests on carry no recording date: the outlets that documented the wave place part of the footage at a student action at Bundaran HI on 12 June 2026, and other clips at riot footage from the Makassar regional assembly building in August 2025.",
+          "els": [
+            "demoagustus-e1",
+            "demoagustus-e2",
+            "demoagustus-e3",
+            "demoagustus-h1"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "The second step is a claim about a ratio, and the chain never opens the denominator: dated actions did take place between 26 July and 1 August 2026 and the same outlets reported them, which is why the place and date named in a caption can be searched against those archives in the minutes before a repost.",
+          "els": [
+            "demoagustus-n2",
+            "demoagustus-h2",
+            "demoagustus-p-options",
+            "demoagustus-opt-check-footage",
+            "demoagustus-play-locate"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "A silencing that reaches competing newsrooms and platform ranking needs an instruction, a channel to carry it and newsrooms that complied, and no article in this family names any of those parts; the nearest statement on the record is the communications minister saying the government did not restrict reporting of the actions.",
+          "els": [
+            "demoagustus-n3",
+            "demoagustus-h3",
+            "demoagustus-e2",
+            "demoagustus-p-family"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "What makes the event feel massive is a count of posts rather than a count of people: about 197,000 posts across five platforms between 26 July and 1 August 2026, from 63,000 unique accounts, and inside the 34,935 posts on X whose composition was analysed, 99.46 percent were retweets, about 88.5 percent of that retweet activity came from ten source posts, and 13,446 of those retweets carried one source post.",
+          "els": [
+            "demoagustus-p-scale_check",
+            "demoagustus-chip-unique-accounts",
+            "demoagustus-seg-x-analysed",
+            "demoagustus-chip-retweet-share",
+            "demoagustus-chip-top10-share",
+            "demoagustus-seg-one-post-retweets",
+            "demoagustus-h4"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "The last step asks the reader to add to that same volume, and the people it reaches are already inside the frame: the students filmed at Bundaran HI, the individual accounts that reposted, one of them detained in Ciamis with about 33,400 followers, the journalists cast as the silencer in the same days their own organizations were holding protests over a separate matter, and everyone reading the timeline.",
+          "els": [
+            "demoagustus-n4",
+            "demoagustus-e3",
+            "demoagustus-h5",
+            "demoagustus-p-incidence",
+            "demoagustus-lane-filmed",
+            "demoagustus-lane-reposters",
+            "demoagustus-lane-newsrooms",
+            "demoagustus-lane-readers",
+            "demoagustus-h6",
+            "demoagustus-h7",
+            "demoagustus-h8"
+          ]
+        }
+      ]
+    },
+    "id": {
+      "sentences": [
+        {
+          "id": "v-1",
+          "text": "Cerita ini berjalan dalam empat langkah: ada demonstrasi besar-besaran yang sedang berlangsung, media nasional tidak meliputnya, kesunyian itu disengaja, maka warganet harus memberi tanda suka, mengunggah ulang, dan menaikkan tagar.",
+          "els": [
+            "demoagustus-p-claim_map",
+            "demoagustus-n1",
+            "demoagustus-n2",
+            "demoagustus-n3",
+            "demoagustus-n4"
+          ]
+        },
+        {
+          "id": "v-2",
+          "text": "Rekaman yang menopang langkah pertama tidak pernah membawa tanggal perekaman, padahal tanggal itulah yang menentukan apakah gambarnya sanggup menopang kata sekarang: media yang mendokumentasikan gelombang ini menempatkan sebagian video pada aksi mahasiswa di Bundaran HI, 12 Juni 2026, dan potongan lain pada rekaman kerusuhan di gedung DPRD Makassar, Agustus 2025.",
+          "els": [
+            "demoagustus-h1",
+            "demoagustus-n1",
+            "demoagustus-e1"
+          ]
+        },
+        {
+          "id": "v-3",
+          "text": "Langkah kedua adalah klaim tentang rasio, dan penyebutnya tidak pernah dibuka: aksi bertanggal memang berlangsung pada 26 Juli hingga 1 Agustus 2026 dan diberitakan media yang sama, sehingga tempat dan tanggal pada keterangan unggahan bisa dicari di arsip berita dalam beberapa menit sebelum tombol unggah ulang ditekan.",
+          "els": [
+            "demoagustus-n2",
+            "demoagustus-h2",
+            "demoagustus-p-options",
+            "demoagustus-opt-check-footage",
+            "demoagustus-play-locate"
+          ]
+        },
+        {
+          "id": "v-4",
+          "text": "Ketiga sisi penghubung pada peta itu ditandai tanpa sumber, dan langkah menuju pembungkaman yang disengaja membutuhkan sebuah perintah, saluran yang membawanya, serta ruang redaksi yang menurutinya: tidak ada artikel dalam keluarga ini yang menyebut satu pun bagian tersebut, sementara pernyataan kelembagaan terdekat datang dari Menteri Komunikasi dan Digital yang menyatakan pemerintah tidak berusaha membatasi pemberitaan aksi.",
+          "els": [
+            "demoagustus-e1",
+            "demoagustus-e2",
+            "demoagustus-e3",
+            "demoagustus-n3",
+            "demoagustus-h3",
+            "demoagustus-p-family"
+          ]
+        },
+        {
+          "id": "v-5",
+          "text": "Yang membuat peristiwa ini terasa besar adalah hitungan unggahan, bukan hitungan orang: sekitar 197.000 unggahan di lima platform pada 26 Juli hingga 1 Agustus 2026, dari 63.000 akun unik, dan di dalam 34.935 unggahan X yang komposisinya dianalisis, 99,46 persen berupa retweet, sekitar 88,5 persen aktivitas retweet itu berasal dari sepuluh unggahan sumber, dan 13.446 di antara retweet itu membawa satu unggahan sumber.",
+          "els": [
+            "demoagustus-p-scale_check",
+            "demoagustus-chip-unique-accounts",
+            "demoagustus-seg-x-analysed",
+            "demoagustus-chip-retweet-share",
+            "demoagustus-chip-top10-share",
+            "demoagustus-seg-one-post-retweets",
+            "demoagustus-h4"
+          ]
+        },
+        {
+          "id": "v-6",
+          "text": "Langkah terakhir meminta pembaca menambah volume yang sama itu, dan orang-orang yang dijangkaunya sudah berada di dalam bingkai: mahasiswa yang terekam di Bundaran HI, akun perorangan yang mengunggah ulang, seorang di antaranya ditahan di Ciamis dengan akun berpengikut sekitar 33.400, para jurnalis yang diposisikan sebagai pembungkam justru pada hari-hari ketika organisasi mereka sendiri menggelar aksi mengenai persoalan lain, dan semua orang yang membaca lini masa.",
+          "els": [
+            "demoagustus-n4",
+            "demoagustus-e3",
+            "demoagustus-h5",
+            "demoagustus-p-incidence",
+            "demoagustus-lane-filmed",
+            "demoagustus-lane-reposters",
+            "demoagustus-lane-newsrooms",
+            "demoagustus-lane-readers",
+            "demoagustus-h6",
+            "demoagustus-h7",
+            "demoagustus-h8"
+          ]
+        }
+      ]
+    }
+  },
+  "sparring": {
+    "questions": [
+      {
+        "move": "mechanism",
+        "q": {
+          "en": "The last step asks the reader to like, repost and raise the hashtags. What does each act of compliance do to the evidence the first step stands on?",
+          "id": "Langkah terakhir meminta pembaca memberi tanda suka, mengunggah ulang, dan menaikkan tagar. Apa yang dilakukan tiap ajakan yang dipatuhi terhadap bukti yang menopang langkah pertama?"
+        },
+        "options": [
+          {
+            "en": "It brings more outlets in, which is the coverage the chain says is absent.",
+            "id": "Ia mendatangkan lebih banyak media, yaitu liputan yang menurut rantai itu tidak ada."
+          },
+          {
+            "en": "It leaves the evidence untouched, since resharing a clip does not change what the clip shows.",
+            "id": "Ia tidak menyentuh buktinya, sebab membagikan ulang sebuah rekaman tidak mengubah isi rekaman itu."
+          },
+          {
+            "en": "It adds to the post volume that the first step reads back as proof of a massive event.",
+            "id": "Ia menambah volume unggahan yang dibaca balik oleh langkah pertama sebagai bukti peristiwa besar."
+          }
+        ],
+        "correct": 2,
+        "note": {
+          "en": "The hidden card on the chain's own last step sets this out, and the scale panel measures the loop it closes: inside the analysed sample of 34,935 posts on X, 99.46 percent were retweets. Bringing outlets in is what the story is asking for, and no entry in this artifact records an outlet arriving because of it. Resharing does leave the clip itself unchanged, and the first step is not counting what the clip shows; it is counting posts.",
+          "id": "Kartu tersembunyi tentang langkah terakhir rantai ini menerangkannya, dan panel skala mengukur putaran yang ditutupnya: di dalam sampel 34.935 unggahan X yang dianalisis, 99,46 persen berupa retweet. Mendatangkan media memang yang diminta cerita ini, dan tidak ada catatan dalam artefak ini yang merekam satu media pun datang karenanya. Membagikan ulang memang tidak mengubah isi rekamannya, dan yang dihitung langkah pertama bukan isi rekaman itu, melainkan unggahan."
+        }
+      },
+      {
+        "move": "denominator",
+        "q": {
+          "en": "The wave is sized at about 197,000 posts across five platforms. The 99.46 percent retweet share is a share of which base?",
+          "id": "Gelombang ini diukur sekitar 197.000 unggahan di lima platform. Porsi retweet 99,46 persen itu adalah porsi dari basis yang mana?"
+        },
+        "options": [
+          {
+            "en": "Of all of the roughly 197,000 posts counted across the five platforms.",
+            "id": "Dari keseluruhan sekitar 197.000 unggahan yang terhitung di lima platform."
+          },
+          {
+            "en": "Of the 34,935 posts on X whose composition was analysed.",
+            "id": "Dari 34.935 unggahan X yang komposisinya dianalisis."
+          },
+          {
+            "en": "Of the 63,000 unique accounts behind the counted posts.",
+            "id": "Dari 63.000 akun unik di balik unggahan yang terhitung."
+          }
+        ],
+        "correct": 1,
+        "note": {
+          "en": "The scale panel keeps the two quantities apart: composition was measured on X, inside a sample of 34,935 posts, while the 197,000 count spans five platforms whose composition no figure here opens. The 63,000 figure counts accounts rather than posts, so a share of posts cannot sit on it. The other shares in the panel run on the same analysed base: ten source posts carry about 88.5 percent of that retweet activity, and the single most amplified post carries 13,446 retweets, or 38.7 percent of it.",
+          "id": "Panel skala menjaga kedua besaran itu tetap terpisah: komposisinya diukur di X, di dalam sampel 34.935 unggahan, sementara hitungan 197.000 mencakup lima platform yang komposisinya tidak dibuka angka mana pun di sini. Angka 63.000 menghitung akun, bukan unggahan, sehingga porsi unggahan tidak bisa berpijak padanya. Porsi-porsi lain di panel itu berpijak pada basis terukur yang sama: sepuluh unggahan sumber membawa sekitar 88,5 persen aktivitas retweet tersebut, dan satu unggahan yang paling banyak digencarkan membawa 13.446 retweet, atau 38,7 persen di antaranya."
+        }
+      },
+      {
+        "move": "incidence",
+        "q": {
+          "en": "Cases were opened over the recirculated clips. Which party does this artifact record as answering first?",
+          "id": "Perkara dibuka atas potongan video yang diedarkan ulang. Pihak mana yang dicatat artefak ini sebagai yang lebih dulu harus menjawab?"
+        },
+        "options": [
+          {
+            "en": "An individual account holder, detained in Ciamis, with about 33,400 followers.",
+            "id": "Seorang pemilik akun perorangan yang ditahan di Ciamis, dengan sekitar 33.400 pengikut."
+          },
+          {
+            "en": "The ten source posts carrying about 88.5 percent of the analysed retweet activity.",
+            "id": "Sepuluh unggahan sumber yang membawa sekitar 88,5 persen aktivitas retweet yang dianalisis."
+          },
+          {
+            "en": "The national newsrooms named as the silencing's agent.",
+            "id": "Ruang redaksi nasional yang disebut sebagai pelaksana pembungkaman."
+          }
+        ],
+        "correct": 0,
+        "note": {
+          "en": "The reposter lane of the incidence panel records the detention in Ciamis and sizes that account at about 33,400 followers, which is the size the registry has for it. The accounts most central to the volume pattern are described in the analysis by their behaviour rather than by name, and no entry in this registry records a case opened against any of them. The newsrooms carry a different cost, the accusation itself, in the same days their own organizations were holding dated protests.",
+          "id": "Jalur pengunggah ulang pada panel insidensi mencatat penahanan di Ciamis dan mengukur akun itu pada sekitar 33.400 pengikut, yakni ukuran yang dipegang registri untuknya. Akun-akun yang paling sentral dalam pola volume digambarkan dalam analisis lewat perilakunya, bukan lewat namanya, dan tidak ada catatan dalam registri ini yang merekam perkara terhadap satu pun di antaranya. Ruang redaksi menanggung ongkos yang berbeda, yaitu tuduhannya sendiri, pada hari-hari ketika organisasi mereka justru sedang menggelar aksi bertanggal."
+        }
+      }
+    ]
+  },
+  "prediction_tap": {
+    "prompt": {
+      "en": "Before the panels open: in a story carried by footage and a count of posts, which side goes missing first?",
+      "id": "Sebelum panelnya dibuka: dalam cerita yang ditopang rekaman video dan hitungan unggahan, sisi mana yang paling dulu hilang?"
+    },
+    "options": [
+      {
+        "en": "The recording dates of the clips.",
+        "id": "Tanggal perekaman potongan videonya."
+      },
+      {
+        "en": "The actions that did take place in those same days, and the reporting they received.",
+        "id": "Aksi yang memang berlangsung pada hari-hari yang sama, beserta pemberitaan yang diterimanya."
+      },
+      {
+        "en": "The accounts behind the volume, as opposed to the posts.",
+        "id": "Akun di balik volume itu, bukan jumlah unggahannya."
+      },
+      {
+        "en": "The people whose faces are in the footage.",
+        "id": "Orang-orang yang wajahnya ada di dalam rekaman."
+      }
+    ]
+  },
+  "editorial_notes": [
+    "Mechanism answer is index 2, the volume option: hidden card demoagustus-h5 states that every complied request adds to the volume the first step reads as proof, and the scale panel supplies the measured composition (99.46 percent retweets inside the analysed X sample). The outlets option at index 0 is what the posts themselves ask for, so a reader who picks it has read the story accurately and not the panel. The untouched-evidence option at index 1 is accurate about the clip and misses the unit the first step counts, which is posts.",
+    "Denominator answer is index 1, the analysed X sample: the 99.46 percent chip declares its own base as 34,935 posts on X, while the 197,000 count spans five platforms. Index 0 is the share read against a total that is not its parent, which is the exact move the panel separates. Index 2 swaps units, accounts for posts. The note also names 88.5 percent and 38.7 percent so the reader sees all three shares sitting on the same analysed base.",
+    "Incidence answer is index 0, the individual account holder: the reposter lane records the Ciamis detention and the 33,400 follower count. The newsroom option at index 2 is a real cost in the artifact but a different one, the accusation rather than a case. The top-ten-posts option at index 1 is the party the volume figures point at and the one the registry records no case against, which is the asymmetry the question exists to surface. Correct indices across the three questions are 2, 1, 0, deliberately not a single column.",
+    "Verdict-free handling: nowhere is the claim called anything. The narration says which joins the graph marks unsourced, which quantity the chain never states, and who stands in the frame. The Indonesian was written around the whole-word lint: v-6 uses 'seorang di antaranya' rather than the ordinary phrase for 'one of them', which carries a listed word, and the minister's position stays in her own reported terms ('tidak berusaha membatasi pemberitaan aksi') rather than any adjudicating word.",
+    "Coordination stayed out of our voice. The panels carry researchers' suspicion of automation (the 105 millisecond retweet burst in demoagustus-h5) and of concentration in few sources (demoagustus-h4). The narration uses only the hard composition figures, 99.46 percent, about 88.5 percent, 13,446, so nothing in the reading layer asserts coordination at all. If a reviewer wants the suspicion visible in the narration, it has to arrive attributed to the researchers by name of role, and it would cost the length of v-5.",
+    "Not said, deliberately: the 42 percent negative sentiment (demoagustus-lane-readers), the 27 July and 30 July spike figures, and the 68.1 percent urgency-hook figure, which carries an estimate flag. All three are live in the panels and none of them is load-bearing for the structure the reader is being walked through.",
+    "No political actor is accused in our voice. The only named institution in the narration is the communications ministry, and it appears as a statement on the record answering the accusation, per demoagustus-e2. The police appear only through the detention already recorded in the incidence panel."
+  ],
+  "model": "claude-opus-5"
+}

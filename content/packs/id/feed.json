@@ -1,10 +1,14 @@
 {
   "pack": "id",
-  "updated_at": "2026-07-28T21:52:08Z",
+  "updated_at": "2026-08-09T16:25:13Z",
   "items": [
     {
-      "narrative_id": "mbg-stop",
+      "narrative_id": "demo-agustus",
       "slot": "hero"
+    },
+    {
+      "narrative_id": "mbg-stop",
+      "slot": "compact"
     },
     {
       "narrative_id": "mbg-cut",

@@ -1,0 +1,125 @@
+{
+  "threshold": 0.925,
+  "assignments": [
+    {
+      "id": "demo-agustus-m1",
+      "cluster": "c-demo-agustus-m1"
+    },
+    {
+      "id": "demo-agustus-m2",
+      "cluster": "c-demo-agustus-m2"
+    },
+    {
+      "id": "demo-agustus-m3",
+      "cluster": "c-demo-agustus-m3"
+    },
+    {
+      "id": "judol-turnover-m1",
+      "cluster": "c-judol-turnover-m1"
+    },
+    {
+      "id": "judol-turnover-m2",
+      "cluster": "c-judol-turnover-m1"
+    },
+    {
+      "id": "judol-turnover-m3",
+      "cluster": "c-judol-turnover-m3"
+    },
+    {
+      "id": "mbg-cut-m1",
+      "cluster": "c-mbg-cut-m1"
+    },
+    {
+      "id": "mbg-cut-m2",
+      "cluster": "c-mbg-cut-m1"
+    },
+    {
+      "id": "mbg-cut-m3",
+      "cluster": "c-mbg-cut-m1"
+    },
+    {
+      "id": "mbg-jobs-m1",
+      "cluster": "c-mbg-jobs-m1"
+    },
+    {
+      "id": "mbg-jobs-m2",
+      "cluster": "c-mbg-jobs-m2"
+    },
+    {
+      "id": "mbg-jobs-m3",
+      "cluster": "c-mbg-cut-m1"
+    },
+    {
+      "id": "mbg-poisoning-m1",
+      "cluster": "c-mbg-poisoning-m1"
+    },
+    {
+      "id": "mbg-poisoning-m2",
+      "cluster": "c-mbg-poisoning-m2"
+    },
+    {
+      "id": "mbg-poisoning-m3",
+      "cluster": "c-mbg-poisoning-m3"
+    },
+    {
+      "id": "mbg-stop-m1",
+      "cluster": "c-mbg-stop-m1"
+    },
+    {
+      "id": "mbg-stop-m2",
+      "cluster": "c-mbg-stop-m2"
+    },
+    {
+      "id": "mbg-stop-m3",
+      "cluster": "c-mbg-cut-m1"
+    },
+    {
+      "id": "migrant-crime-m1",
+      "cluster": "c-migrant-crime-m1"
+    },
+    {
+      "id": "migrant-crime-m2",
+      "cluster": "c-migrant-crime-m2"
+    },
+    {
+      "id": "migrant-crime-m3",
+      "cluster": "c-migrant-crime-m3"
+    },
+    {
+      "id": "ppn-panic-m1",
+      "cluster": "c-ppn-panic-m1"
+    },
+    {
+      "id": "ppn-panic-m2",
+      "cluster": "c-ppn-panic-m2"
+    },
+    {
+      "id": "ppn-panic-m3",
+      "cluster": "c-ppn-panic-m3"
+    },
+    {
+      "id": "tariffs-pay-m1",
+      "cluster": "c-tariffs-pay-m1"
+    },
+    {
+      "id": "tariffs-pay-m2",
+      "cluster": "c-tariffs-pay-m2"
+    },
+    {
+      "id": "tariffs-pay-m3",
+      "cluster": "c-tariffs-pay-m3"
+    },
+    {
+      "id": "usaid-deaths-m1",
+      "cluster": "c-usaid-deaths-m1"
+    },
+    {
+      "id": "usaid-deficit-m1",
+      "cluster": "c-usaid-deficit-m1"
+    },
+    {
+      "id": "usaid-deficit-m2",
+      "cluster": "c-usaid-deficit-m2"
+    }
+  ]
+}

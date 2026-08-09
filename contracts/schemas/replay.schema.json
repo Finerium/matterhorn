@@ -2,13 +2,13 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "replay.schema.json",
   "title": "Fleet replay record",
-  "description": "content/replay.json. The data behind the research desk's replay console: a distillation of the committed run log, produced by scripts/build-replay.ts. Additive to the Section 6 contract set, never referenced by the frozen artifact schemas. The honesty rule it encodes: every model, verdict and block traces to the run directory, no durations are carried because the recorded timestamps bracket ingest rather than agent wall clock, and the disclosure strings are the label the UI must keep visible while replaying.",
+  "description": "content/replay.json. The data behind the research desk's replay console: a distillation of the committed run log, produced by scripts/build-replay.ts. Additive to the Section 6 contract set, never referenced by the frozen artifact schemas. The record may span several recorded runs: run_ids names them all, each narrative names the run_id it was recorded in, generated_at is the newest run's and the counts are the union. The honesty rule it encodes: every model, verdict and block traces to the run directory of the run its narrative names, no durations are carried because the recorded timestamps bracket ingest rather than agent wall clock, and the disclosure strings are the label the UI must keep visible while replaying.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["run_id", "generated_at", "disclosure", "models", "narratives_total", "narratives_blocked", "blocks_total", "narratives"],
+  "required": ["run_ids", "generated_at", "disclosure", "models", "narratives_total", "narratives_blocked", "blocks_total", "narratives"],
   "properties": {
     "seed": { "const": true, "type": "boolean" },
-    "run_id": { "type": "string", "minLength": 1 },
+    "run_ids": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
     "generated_at": { "type": "string", "minLength": 1 },
     "disclosure": {
       "type": "object",
@@ -29,9 +29,10 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["narrative_id", "blocked_rounds", "events"],
+        "required": ["narrative_id", "run_id", "blocked_rounds", "events"],
         "properties": {
           "narrative_id": { "type": "string", "minLength": 1 },
+          "run_id": { "type": "string", "minLength": 1 },
           "blocked_rounds": { "type": "integer", "minimum": 0 },
           "events": {
             "type": "array",

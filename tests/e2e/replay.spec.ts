@@ -24,6 +24,7 @@ test.describe('the replay console', () => {
     await page.locator('[data-testid="research-row"][data-narrative="usaid-deficit"]').getByTestId('replay-run-row').click();
     await expect(page.getByTestId('replay-console')).toBeVisible();
     await expect(page.getByTestId('replay-disclosure')).toContainText('run-2026-07-29');
+    await expect(page.getByTestId('replay-disclosure')).toContainText('run-2026-08-10');
     await expect(page.getByTestId('replay-disclosure')).toContainText('compressed');
     await expect(page.getByTestId('replay-console')).toContainText('claude-fable-5');
     await expect(
@@ -81,10 +82,11 @@ test.describe('the whole span, A1 to A13, with output notes', () => {
     ) as {
       narratives: Array<{
         narrative_id: string;
+        run_id: string;
         events: Array<{ kind: string; role?: string; note?: { en: string; id: string }; token?: string }>;
       }>;
     };
-    expect(replay.narratives.length, 'the run log carries ten narratives').toBe(10);
+    expect(replay.narratives.length, 'the two run logs carry eleven narratives between them').toBe(11);
     for (const run of replay.narratives) {
       const notes = run.events.filter((event) => event.note !== undefined).length;
       expect(notes, `${run.narrative_id} carries output notes for its agents`).toBeGreaterThan(0);
@@ -96,6 +98,9 @@ test.describe('the whole span, A1 to A13, with output notes', () => {
       // The record decides the lines: every note in the data is a note on screen, and the span
       // runs from the Scout's curation to the Librarian's filing.
       await expect(pane.locator('[data-kind="note"]')).toHaveCount(notes);
+      await expect(pane, 'the header names the run this narrative was recorded in').toContainText(
+        `${run.run_id} · ${run.narrative_id}`,
+      );
       await expect(pane).toContainText('A1 ·');
       await expect(pane).toContainText('A13 ·');
       if (run.events.some((event) => event.kind === 'published' && event.token !== '')) {

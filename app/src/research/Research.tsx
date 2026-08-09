@@ -91,7 +91,7 @@ const tickerLines = (replay: Replay, lang: Lang): string[] =>
   );
 
 /**
- * The idle murmur: one recorded line at a time, cycled slowly, under a chip that names the run
+ * The idle murmur: one recorded line at a time, cycled slowly, under a chip that names the runs
  * it is replaying. Honesty of simulation: nothing here pretends to be live work, the chip and
  * the cadence lines above it say recorded and plan out loud. Reduced motion holds the first
  * line still; a hidden tab skips its ticks rather than animating for nobody.
@@ -138,6 +138,9 @@ export default function Research() {
   // failure surfaces as the affordance simply not appearing rather than as a dead page.
   const replay = useJson<Replay>('replay.json').data;
   const attribution = useJson<OgAttribution>('og_attribution.json').data;
+  // The record spans more than one recorded run, and both the cadence line and the ticker chip
+  // must name every one of them: one label, so the two can never disagree.
+  const runsLabel = replay === null ? '' : replay.run_ids.join(' + ');
   const theme: Theme = readStore(LS.theme) === 'dark' ? 'dark' : 'light';
   const ctx = useMemo(() => makeCtx(sources ?? [], lang, theme), [sources, lang, theme]);
 
@@ -328,12 +331,12 @@ export default function Research() {
           <p className="m-rs-body">{t('research.body')}</p>
           {/* The operating rhythm, three honest registers: what is recorded, what is waiting on
               this device, and what is a plan said as a plan. The ticker below murmurs the
-              recorded run; nothing on this desk simulates live agents. */}
+              recorded runs; nothing on this desk simulates live agents. */}
           {replay === null ? null : (
             <div className="m-rs-cad" data-testid="research-cadence">
               <p className="m-rs-cad-line m-num">
                 {t('research.cadence.recorded', {
-                  run: replay.run_id,
+                  runs: runsLabel,
                   n: replay.narratives_total,
                   b: replay.blocks_total,
                 })}
@@ -342,7 +345,7 @@ export default function Research() {
                 {t('research.cadence.queue', { n: queuedLinks().length })}
               </p>
               <p className="m-rs-cad-line">{t('research.cadence.plan')}</p>
-              <Ticker replay={replay} lang={lang} label={t('research.ticker.label', { run: replay.run_id })} />
+              <Ticker replay={replay} lang={lang} label={t('research.ticker.label', { runs: runsLabel })} />
             </div>
           )}
           <Link className="m-page-link" to="/app">
@@ -729,7 +732,7 @@ export default function Research() {
       {openRun === undefined || replay === null ? null : (
         <ReplayConsole
           run={openRun}
-          runId={replay.run_id}
+          runId={openRun.run_id}
           disclosure={replay.disclosure[lang]}
           lang={lang}
           onClose={() => {

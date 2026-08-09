@@ -8,6 +8,12 @@
     },
     {
       "match": "exact",
+      "pattern": "https://www.bbc.com/indonesia/articles/cx2dxwdqv8wo",
+      "narrative_id": "demo-agustus",
+      "role": "canonical"
+    },
+    {
+      "match": "exact",
       "pattern": "https://www.tribunnews.com/nasional/7844542",
       "narrative_id": "mbg-stop",
       "role": "canonical"
@@ -65,6 +71,18 @@
       "pattern": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01186-9/fulltext",
       "narrative_id": "usaid-deaths",
       "role": "canonical"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://news.detik.com/berita/d-8605791/peneliti-monash-university-ungkap-pola-video-lama-demo-diviralkan-lagi",
+      "narrative_id": "demo-agustus",
+      "role": "family_member"
+    },
+    {
+      "match": "exact",
+      "pattern": "https://megapolitan.kompas.com/read/2026/08/06/07553011/ada-dugaan-pola-amplifikasi-terkoordinasi-di-balik-isu-demo-agustus-di",
+      "narrative_id": "demo-agustus",
+      "role": "family_member"
     },
     {
       "match": "exact",

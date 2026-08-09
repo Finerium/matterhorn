@@ -345,6 +345,10 @@ export interface OgAttribution {
 // contracts/schemas/replay.schema.json. Additive to the Section 6 set, read only by the
 // research desk's replay console. No durations are carried, and the disclosure strings are
 // the label the console must keep visible for the whole replay.
+// The record spans every recorded run the archive was published from: `run_ids` names them all,
+// each narrative carries the `run_id` it was recorded in, `generated_at` is the newest run's,
+// and the counts are the union. A narrative may only be attributed to the run that has its
+// recorded steps, so no id appears twice.
 
 export type ReplayEvent =
   | { kind: 'slot'; role: string; label: { en: string; id: string }; model: string; at: string; note?: { en: string; id: string } }
@@ -354,12 +358,13 @@ export type ReplayEvent =
 
 export interface ReplayRun {
   narrative_id: string;
+  run_id: string;
   blocked_rounds: number;
   events: ReplayEvent[];
 }
 
 export interface Replay {
-  run_id: string;
+  run_ids: string[];
   generated_at: string;
   disclosure: { en: string; id: string };
   models: string[];

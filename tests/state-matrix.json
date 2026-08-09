@@ -82,7 +82,7 @@
       "name": "radar.hero",
       "goto": "radar.hero",
       "screen": "main-radar",
-      "visible": "[data-feed-item=\"mbg-stop\"] .m-card",
+      "visible": "[data-feed-item=\"demo-agustus\"] .m-card",
       "note": "The hero slot. Same feed as radar.default, scrolled to and framed on the hero card."
     },
     {

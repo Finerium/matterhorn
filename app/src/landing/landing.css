@@ -713,18 +713,21 @@
   .m-l-mount-hero .m-map > div:first-child > div:nth-child(7) { animation-delay: 1.15s; }
 
   /* The edges draw. A stroke that grows is `scaleY` from its top, not a dash offset: dashoffset
-     is neither transform nor opacity, and the dash pattern here is carrying the status. */
+     is neither transform nor opacity, and the dash pattern here is carrying the status.
+
+     One beat for every join rather than one per status: every join in the hero artifact carries
+     `unsourced`, and each one is the second div of its own spine row, so neither a status nor an
+     nth-of-type selector can tell them apart. ponytail: the joins draw together. Reach for the
+     `.m-map > div:first-child > div:nth-child(n)` chain above if the stagger is ever wanted back. */
   .m-l-mount-hero .m-edge svg {
     transform-origin: top center;
-    animation: mth-draw var(--loop) infinite both;
+    animation: mth-draw var(--loop) 1.3s infinite both;
   }
-  .m-l-mount-hero .m-edge[data-st='supported'] svg { animation-delay: 1.3s; }
-  .m-l-mount-hero .m-edge[data-st='missing'] svg { animation-delay: 1.6s; }
   /* The gap pulse, on its own short cycle rather than the 14 s one: it is a property of the gap,
      not a step in the assembly, and it is the one thing on this page that keeps moving. */
-  .m-l-mount-hero .m-edge[data-st='missing'] svg line { animation: mth-pulse 2.6s ease-in-out infinite; }
+  .m-l-mount-hero .m-edge[data-st='unsourced'] svg line { animation: mth-pulse 2.6s ease-in-out infinite; }
 
-  /* The hidden branches, in from the right. Six is what the published artifact carries. */
+  /* The hidden branches, in from the right. Eight is what the published artifact carries. */
   .m-l-mount-hero .m-hidden { animation: mth-slide var(--loop) infinite both; }
   .m-l-mount-hero .m-hidden:nth-child(1) { animation-delay: 1.9s; }
   .m-l-mount-hero .m-hidden:nth-child(2) { animation-delay: 2.02s; }
@@ -732,6 +735,8 @@
   .m-l-mount-hero .m-hidden:nth-child(4) { animation-delay: 2.26s; }
   .m-l-mount-hero .m-hidden:nth-child(5) { animation-delay: 2.38s; }
   .m-l-mount-hero .m-hidden:nth-child(6) { animation-delay: 2.5s; }
+  .m-l-mount-hero .m-hidden:nth-child(7) { animation-delay: 2.62s; }
+  .m-l-mount-hero .m-hidden:nth-child(8) { animation-delay: 2.74s; }
 
   /* The callouts arrive with the thing each one names, and the counts pop last. */
   .m-l-callout { animation: mth-pop var(--loop) infinite both; }

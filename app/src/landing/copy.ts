@@ -70,15 +70,21 @@ export const HERO = {
   microline: 'Free · No account needed · Runs in your browser',
   /**
    * The five labels drawn inside the claim-map animation. 4.4 quotes each one; those quotation
-   * marks are its delimiters and are not part of the copy. The side panel's "+4" is frozen as a
+   * marks are its delimiters and are not part of the copy. The side panel's "+8" is frozen as a
    * literal while the count chips right below it are data-bound, which is 4.4's own asymmetry and
    * is left standing.
+   *
+   * The headline chip is the hero narrative's own EN headline and outlet, in the order a Card
+   * writes them. Every join in that narrative's claim map carries status `unsourced`, so both edge
+   * labels open with that word: the label beside a stroke names the stroke that is on screen. The
+   * two keys are 4.4's first and second edge label in document order and name no status; the
+   * status each callout draws is set where it renders, in setpieces.tsx.
    */
   setPiece: {
-    headlineChip: 'Stop MBG Permanently to Save the State Budget · Tribunnews',
-    edgeSupported: 'supported · the budget math checks out',
-    edgeMissing: 'missing link · the mechanism is never stated',
-    sidePanel: '+4 hidden branches the headline priced at zero',
+    headlineChip: "A Demo This Big, and the Media Won't Show It? · BBC News Indonesia",
+    edgeSupported: 'unsourced · no registry entry states the step',
+    edgeMissing: 'unsourced · the call to amplify adds to the count of posts',
+    sidePanel: '+8 hidden branches the chain priced at zero',
     countChips: line(
       { slot: 'missing' },
       ' missing link · ',
@@ -100,20 +106,24 @@ export const PROBLEM = {
   // Beat 1 is the one body 4.4 writes inside quotation marks, because it quotes the headline's
   // promise. The marks are transcribed with it; the other three bodies carry none.
   beats: [
-    { kicker: 'A headline makes a promise.', body: '"Stop one program, and the economy is saved."' },
-    { kicker: 'The facts inside it are real.', body: 'The spending figure is official. The budget math checks out.' },
+    { kicker: 'A headline makes a promise.', body: '"A demo this big, and the media won\'t show it?"' },
+    {
+      kicker: 'The facts inside it are real.',
+      body: 'The clips are real recordings. The volume is real too: about 197,000 posts in one week.',
+    },
     {
       kicker: 'The arrow between them was never stated.',
-      body: 'How does an unspent budget line become a rescued economy? No article in the family ever says.',
+      body: 'How does an absence of coverage become a deliberate silencing? No article in the family ever says.',
     },
     {
       kicker: 'And the hidden branches were priced at zero.',
-      body: '142,387 supplier contracts. 1.28 million program workers. 63 million daily meals. None of them appear in the headline.',
+      body: '63,000 accounts behind the posts. Ten source posts driving about 88.5 percent of the analysed retweets. Footage the outlets date to 12 June. None of them appear in the headline.',
     },
   ],
   closing:
     'Four blindnesses recur across every domain: no mechanism, no denominator, no counterfactual, no incidence. Matterhorn makes all four visible in seconds.',
-  sourceMicroline: 'Figures: Kemenkeu realisasi May 2026 · BGN registry, self-reported and flagged as such.',
+  sourceMicroline:
+    'Figures: Monash University Indonesia monitoring, 26 July to 1 August 2026 · reported by BBC News Indonesia and Kompas.com.',
 } as const;
 
 /** 4.4.4, section 2. */

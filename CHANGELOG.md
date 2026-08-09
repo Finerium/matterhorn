@@ -5,6 +5,35 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this
 project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-08-10
+
+The archive gains its eleventh dissection and a new flagship: the late-July 2026
+recycled-protest-footage claim wave, produced by a second recorded editorial run.
+
+### Added
+
+- **demo-agustus, run-2026-08-10.** A claim-wave dissection ("A Demo This Big, and the Media
+  Won't Show It?"): old protest footage recirculated as a live emergency, absence of coverage
+  read as suppression. Anchored to BBC News Indonesia's documentation of the wave, grounded in
+  four verbatim-confirmed sources (BBC, detik, Kompas.com Megapolitan, Kompas.com Cek Fakta)
+  carrying the Monash University Indonesia monitoring figures (about 197,000 posts, 63,000
+  accounts, 26 July to 1 August 2026; 34,935 X posts analysed, 99.46 percent retweets; one post
+  at 13,446 retweets, the top ten at about 88.5 percent of activity). Both judges passed the
+  candidate first round; the suppression chain's joins ship unsourced by structure, coordination
+  stays the researchers' attributed suspicion, and no actor is accused in the artifact's voice.
+- **Second recorded run in the replay.** `content/replay.json` now spans both runs, each
+  narrative naming its run; voices authored and adversarially verified for the new run;
+  research desk header states plural runs.
+- **Cross-run methodology.** A13 aggregates gates, blocks and latency from each published
+  narrative's own run ledger: "5 of 11, across 7 block(s)", median 1h 39m across both fleets.
+
+### Changed
+
+- **Flagship moved to demo-agustus everywhere.** The id-pack feed hero, the landing hero set
+  piece and the landing problem section now carry the demo case (blueprint 4.4 amended in
+  lockstep with the frozen-copy checker); mbg-stop remains published as an ordinary card.
+  The radar hero e2e derives the hero from the feed instead of pinning an id.
+
 ## [1.0.1] - 2026-08-04
 
 The replay console learns to show the work, not just the workers, and the desk states its

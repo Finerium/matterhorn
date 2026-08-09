@@ -52,14 +52,16 @@ import { HERO } from './copy';
 import { HERO_ID } from './data';
 
 /**
- * The two artifacts the hero narrative cannot supply. Grammar cards 5 and 6 are Dueling Numbers
- * and Cascade Echo, and `mbg-stop` carries neither panel: a narrative carries the panels its
- * story needs, so a grid that insisted on one artifact would be a grid with two empty cards.
+ * The three artifacts the hero narrative cannot supply. Grammar cards 3, 5 and 6 are Money Flow,
+ * Dueling Numbers and Cascade Echo, and `demo-agustus` carries none of those panels: a narrative
+ * carries the panels its story needs, so a grid that insisted on one artifact would be a grid with
+ * three empty cards.
  *
- * Both ids are picked to carry their panel in BOTH content roots. Dev and e2e read the seed
+ * All three ids are picked to carry their panel in BOTH content roots. Dev and e2e read the seed
  * fixture and production reads the published archive, and a card fed by an id that only one of
  * them carries is a card that renders in the suite and not on the site, or the reverse.
  */
+const MONEY_ID = 'mbg-stop';
 const DUEL_ID = 'mbg-poisoning';
 const ECHO_ID = 'ppn-panic';
 
@@ -74,6 +76,7 @@ const { headlineChip } = HERO.setPiece;
 export interface Product {
   ctx: RenderCtx;
   hero: Narrative;
+  money: Narrative;
   duel: Narrative;
   echo: Narrative;
   graph: Constellation;
@@ -86,24 +89,27 @@ const panelOf = <T extends Panel>(narrative: Narrative, type: T['type']): T | un
 const bodyTheme = (): Theme => (document.body.dataset.mth === 'dark' ? 'dark' : 'light');
 
 /**
- * The four artifacts the figures draw from, or null until all of them are in hand. Reads go
+ * The five artifacts the figures draw from, or null until all of them are in hand. Reads go
  * through `content.ts`, so a reader arriving from `/app` pays for none of them twice and the
  * seed-mode switch points dev and e2e at the fixture root exactly as it does everywhere else.
  *
  * The feed is deliberately not read here. `useRadar` would pull every narrative in the pack for
- * the three cards section 5 shows, and the three artifacts already loaded are three real cards.
+ * the three cards section 5 shows, and the artifacts already loaded are three real cards.
  */
 export function useProduct(): Product | null {
   const sources = useJson<Source[]>(PATHS.sources).data;
   const hero = useJson<Narrative>(PATHS.narrative(HERO_ID)).data;
+  const money = useJson<Narrative>(PATHS.narrative(MONEY_ID)).data;
   const duel = useJson<Narrative>(PATHS.narrative(DUEL_ID)).data;
   const echo = useJson<Narrative>(PATHS.narrative(ECHO_ID)).data;
   const graph = useJson<Constellation>(PATHS.constellation).data;
   // English only, per 4.4, and still: every mount on this page is a picture (blueprint 4.4.6).
   const ctx = useMemo(() => makeCtx(sources ?? [], 'en', bodyTheme(), true), [sources]);
 
-  if (sources === null || hero === null || duel === null || echo === null || graph === null) return null;
-  return { ctx, hero, duel, echo, graph };
+  if (sources === null || hero === null || money === null || duel === null || echo === null || graph === null) {
+    return null;
+  }
+  return { ctx, hero, money, duel, echo, graph };
 }
 
 /** A renderer at landing scale: the real component, out of reach. */
@@ -123,7 +129,9 @@ function Mount({ className, testId, children }: { className: string; testId?: st
  * chip, cascades the spine, draws the edges and pops the counts from exactly this.
  *
  * The callout strokes are the renderer layer's own `DASH` patterns, so the line beside a label
- * is the line inside the map (colourblind safety travels with the copy, not beside it).
+ * is the line inside the map (colourblind safety travels with the copy, not beside it). Which is
+ * why the first two are `unsourced`: every join in the hero narrative's claim map carries that
+ * status, and a legend entry for a stroke the map never draws is a legend that lies.
  */
 export function HeroPiece({ product, counts }: { product: Product | null; counts: string }) {
   const panel = product === null ? undefined : panelOf<ClaimMapPanel>(product.hero, 'claim_map');
@@ -134,8 +142,8 @@ export function HeroPiece({ product, counts }: { product: Product | null; counts
         {panel === undefined || product === null ? null : <ClaimMap panel={panel} ctx={product.ctx} />}
       </Mount>
       <ul className="m-l-callouts" role="list">
-        <Callout status="supported" text={HERO.setPiece.edgeSupported} />
-        <Callout status="missing" text={HERO.setPiece.edgeMissing} />
+        <Callout status="unsourced" text={HERO.setPiece.edgeSupported} />
+        <Callout status="unsourced" text={HERO.setPiece.edgeMissing} />
         <Callout status="hidden" text={HERO.setPiece.sidePanel} />
       </ul>
       <p className="m-l-counts" data-testid="hero-counts">
@@ -229,10 +237,10 @@ export function Cascade() {
  */
 export function grammarShots(product: Product | null): ReactNode[] {
   if (product === null) return [];
-  const { ctx, hero, duel, echo, graph } = product;
+  const { ctx, hero, money: moneyNarrative, duel, echo, graph } = product;
   const claimMap = panelOf<ClaimMapPanel>(hero, 'claim_map');
   const scale = panelOf<ScaleCheckPanel>(hero, 'scale_check');
-  const money = panelOf<MoneyFlowPanel>(hero, 'money_flow');
+  const money = panelOf<MoneyFlowPanel>(moneyNarrative, 'money_flow');
   const incidence = panelOf<IncidencePanel>(hero, 'incidence');
   const dueling = panelOf<DuelingPanel>(duel, 'dueling');
   return [

@@ -1,0 +1,21 @@
+{
+  "run_id": "run-2026-08-10",
+  "generated_at": "2026-08-09T16:25:13Z",
+  "narratives": [
+    "mbg-stop",
+    "mbg-cut",
+    "mbg-poisoning",
+    "mbg-jobs",
+    "judol-turnover",
+    "ppn-panic",
+    "tariffs-pay",
+    "usaid-deficit",
+    "migrant-crime",
+    "usaid-deaths",
+    "demo-agustus"
+  ],
+  "fresh_demo": {
+    "narrative_id": "ppn-panic",
+    "url": "https://www.antaranews.com/berita/4559522/kemenkeu-rilis-aturan-ppn-12-persen-hanya-untuk-barang-mewah"
+  }
+}

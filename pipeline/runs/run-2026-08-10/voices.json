@@ -1,0 +1,60 @@
+{
+  "note": "Editorial distillation written after the run from the slot and stage records in this directory. Display prose for the replay console, not a pipeline artifact: every fact traces to those records, authorship is the editorial desk, and validate-content check 5 lints these strings once build-replay merges them into content/replay.json.",
+  "run_id": "run-2026-08-10",
+  "narratives": {
+    "demo-agustus": {
+      "A1": {
+        "en": "I ingested the run's 30 records, a count I made myself; this narrative's three members, demo-agustus-m1 to m3, come from BBC News Indonesia (4 August), detik (5 August) and Kompas.com (6 August 2026).",
+        "id": "Saya menghimpun 30 entri putaran ini, hasil hitungan saya sendiri; tiga anggota narasi ini, demo-agustus-m1 sampai m3, berasal dari BBC News Indonesia (4 Agustus), detik (5 Agustus), dan Kompas.com (6 Agustus 2026)."
+      },
+      "A2": {
+        "en": "I normalized the 30 records; my diff of the recorded output against intake shows the files identical, so this narrative's three members went through unchanged, with headlines, outlets, dates and links intact.",
+        "id": "Saya menormalkan 30 entri itu; pembandingan saya antara keluaran terekam dan berkas masuknya menunjukkan keduanya identik, jadi ketiga anggota narasi ini lewat tanpa perubahan, dengan judul, media, tanggal, dan tautan tetap utuh."
+      },
+      "A3": {
+        "en": "I grouped the 30 records into clusters at a similarity threshold of 0.925; I counted 25 clusters in the result, and each of this narrative's three members landed in a cluster of its own.",
+        "id": "Saya mengelompokkan 30 entri itu pada ambang kemiripan 0,925; saya menghitung 25 klaster pada hasilnya, dan ketiga anggota narasi ini masing-masing menempati klaster tersendiri."
+      },
+      "A4": {
+        "en": "I ranked the 25 clusters on size, outlets, time span, velocity and causal density; this narrative's three clusters each scored 1.25, at ranks 6, 7 and 8, and its family of three members went forward as one slot.",
+        "id": "Saya memeringkatkan 25 klaster menurut ukuran, jumlah media, rentang waktu, kecepatan, dan kepadatan kausal; tiga klaster narasi ini masing-masing bernilai 1,25, di peringkat 6, 7, dan 8, lalu keluarganya yang beranggota tiga maju sebagai satu slot."
+      },
+      "A5": {
+        "en": "I mapped the chain the story asserts as four steps, from a massive demonstration happening right now to the call to like, repost and raise the hashtags, joined by three quoted edges, and sketched a skeleton of five panels with three reader options.",
+        "id": "Saya memetakan rantai yang dinyatakan cerita ini sebagai empat langkah, dari demonstrasi besar yang sedang berlangsung sampai ajakan menyukai, mengunggah ulang, dan menaikkan tagar, dengan tiga sisi penghubung berkutipan, lalu merancang kerangka lima panel berisi tiga pilihan pembaca."
+      },
+      "A6": {
+        "en": "I wrote the eight hidden cards, things the chain uses but never states: the clips' recording dates, the coverage that week's dated actions received, what a silencing would need to operate, who produces the volume, and the people the reuse touches.",
+        "id": "Saya menulis delapan kartu tersembunyi, hal yang dipakai rantai ini tanpa pernah disebut: tanggal perekaman klip, pemberitaan atas aksi bertanggal pekan itu, syarat kerja sebuah pembungkaman, siapa penghasil volumenya, serta orang-orang yang terkena pemakaian ulang itu."
+      },
+      "A7": {
+        "en": "I built the panels and kept the bases apart: about 197,000 posts from 63,000 accounts, and on X a sample of 34,935 posts, 99.46 percent retweets. I logged 7 dropped figures, each with a reason; a count of accounts acting together stays the researchers' suspicion.",
+        "id": "Saya menyusun panel dengan basis angka terpisah: sekitar 197.000 unggahan dari 63.000 akun, dan di X sampel 34.935 unggahan, 99,46 persen retweet. Saya mencatat 7 angka yang digugurkan beserta alasannya; hitungan akun yang bergerak bersama tetap dugaan para peneliti."
+      },
+      "A8": {
+        "en": "I compared this story against all four cases in our echo library, B-01 to B-04, and none matched at the motif level, so the narrative carries no Echo panel; the nearest, B-03, I rejected on structure, and blueprint D-15 permits the silence.",
+        "id": "Saya membandingkan cerita ini dengan keempat kasus di pustaka gema kami, B-01 sampai B-04, dan tak satu pun cocok pada tingkat motif, sehingga narasi ini tanpa panel Gema; yang terdekat, B-03, saya tolak atas dasar struktur, dan cetak biru D-15 mengizinkan kekosongan itu."
+      },
+      "A9": {
+        "en": "I narrated the artifact in six sentences per language, wrote three sparring questions with the answer key at varied positions, plus one prediction tap; the coordination suspicion never enters my own voice, only composition figures do: 99.46 percent, about 88.5 percent, 13,446.",
+        "id": "Saya menarasikan artefak ini dalam enam kalimat per bahasa, menulis tiga soal latih tanding dengan kunci di posisi berbeda, plus satu tebakan pembuka; dugaan koordinasi tak pernah masuk suara saya sendiri, hanya angka komposisi: 99,46 persen, sekitar 88,5 persen, 13.446."
+      },
+      "A10": {
+        "en": "I ran the symmetry gate: I rebuilt the same skeleton as a pro-government wave and checked that every edge and hidden branch transfers one for one; it does, so I passed the artifact on the first round, logging two small faults for upstream, a tally and a unit label.",
+        "id": "Saya menjalankan gerbang simetri: kerangka yang sama saya susun ulang sebagai gelombang pro-pemerintah dan tiap sisi serta cabang tersembunyi saya uji berpindah satu lawan satu; lolos pada putaran pertama, dengan dua cacat kecil dicatat untuk hulu, soal penghitungan dan label satuan."
+      },
+      "A11": {
+        "en": "I walked all 12 narration sentences back against 39 declared element ids and 15 sourced values from 4 sources; every figure kept its base and its softener like 'about', the counts recompute, so I passed the fidelity gate on the first round.",
+        "id": "Saya menelusuri balik ke-12 kalimat narasi terhadap 39 id elemen yang dideklarasikan dan 15 nilai bersumber dari 4 sumber; tiap angka menjaga basis dan kata pelunaknya seperti 'sekitar', penghitungannya terhitung ulang, jadi gerbang fidelitas saya loloskan pada putaran pertama."
+      },
+      "A12": {
+        "en": "I assembled the published narrative file with its manifest: five recorded authoring steps, A5 to A9, with models and timings, and both gates, symmetry and fidelity, stamped with the same digital seal beginning 27f0fe43fd67; status now reads published.",
+        "id": "Saya merakit berkas narasi terbit beserta manifesnya: lima langkah penyusunan terekam, A5 sampai A9, dengan model dan waktunya, dan kedua gerbang, simetri dan fidelitas, tertera segel digital yang sama berawalan 27f0fe43fd67; statusnya kini terbit."
+      },
+      "A13": {
+        "en": "I filed the narrative into the constellation, which I count at 11 nodes and 7 links, with node-demo-agustus labeled by its headline; I also added its 3 url index entries, the BBC link as canonical and the detik and Kompas.com links as family members.",
+        "id": "Saya mengarsipkan narasi ini ke konstelasi, yang saya hitung berisi 11 simpul dan 7 tautan antarsimpul, dengan node-demo-agustus berlabel judulnya; saya juga menambah 3 entri indeks URL miliknya: tautan BBC sebagai kanonik, detik dan Kompas.com sebagai anggota keluarga."
+      }
+    }
+  }
+}

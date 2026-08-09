@@ -22,12 +22,12 @@ import type { Feed, Methodology, Narrative } from '../../../contracts/types';
 import { PACKS, PATHS, loadJson, peek } from '../content';
 
 /**
- * The hero set piece is the Tribunnews claim map the frozen copy names ("Stop MBG Permanently to
- * Save the State Budget"), which is this artifact. Its count chips and its graph have to be one
- * narrative or the chips describe a map nobody is looking at, so the id lives here once and the
- * hero section draws from `PATHS.narrative(HERO_ID)`, a cache hit off the read below.
+ * The hero set piece is the claim map the frozen copy names ("A Demo This Big, and the Media Won't
+ * Show It?"), which is this artifact. Its count chips and its graph have to be one narrative or the
+ * chips describe a map nobody is looking at, so the id lives here once and the hero section draws
+ * from `PATHS.narrative(HERO_ID)`, a cache hit off the read below.
  */
-export const HERO_ID = 'mbg-stop';
+export const HERO_ID = 'demo-agustus';
 
 /**
  * The two slots no artifact carries. Deriving these from content would not drift, it would answer
@@ -36,7 +36,8 @@ export const HERO_ID = 'mbg-stop';
  * COMPONENTS is the grammar. Blueprint 6.4 fixes the panel schemas at eight, AC-GRAM checks all
  * eight, and 4.4.6 ships exactly eight frozen cards. Counting panel types across the published set
  * would report whatever this archive happens to use, and a narrative carries only the panels its
- * story needs (mbg-stop has six) while constellation is a global file rather than a panel at all.
+ * story needs (demo-agustus has five) while constellation is a global file rather than a panel at
+ * all.
  *
  * AGENTS is the fleet. Blueprint 5.4 defines A1 to A13, and the frozen H2 three sections above the
  * stats band already says thirteen, so a figure derived to disagree with it would contradict the

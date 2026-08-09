@@ -1,0 +1,100 @@
+{
+  "asserted_graph": {
+    "spine": [
+      {
+        "el_id": "demoagustus-n1",
+        "label": {
+          "en": "A massive demonstration is happening right now",
+          "id": "Demonstrasi besar-besaran sedang berlangsung saat ini"
+        }
+      },
+      {
+        "el_id": "demoagustus-n2",
+        "label": {
+          "en": "The national media are not covering it",
+          "id": "Media nasional tidak meliputnya"
+        }
+      },
+      {
+        "el_id": "demoagustus-n3",
+        "label": {
+          "en": "The demonstration is being deliberately silenced",
+          "id": "Demonstrasi itu sengaja dibungkam"
+        }
+      },
+      {
+        "el_id": "demoagustus-n4",
+        "label": {
+          "en": "Users must act now: like, repost, raise the hashtags",
+          "id": "Warganet harus bertindak sekarang: beri tanda suka, unggah ulang, naikkan tagar"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "el_id": "demoagustus-e1",
+        "from": "demoagustus-n1",
+        "to": "demoagustus-n2",
+        "quote": "Demo sebesar ini enggak diliput media?"
+      },
+      {
+        "el_id": "demoagustus-e2",
+        "from": "demoagustus-n2",
+        "to": "demoagustus-n3",
+        "quote": "Tahap berikutnya adalah suppression claim, yaitu tuduhan bahwa media nasional sengaja bungkam atau algoritma media sosial sengaja menyembunyikan informasi demonstrasi."
+      },
+      {
+        "el_id": "demoagustus-e3",
+        "from": "demoagustus-n3",
+        "to": "demoagustus-n4",
+        "quote": "Terakhir adalah call to amplify, yakni ajakan kepada pengguna lain untuk memberikan tanda suka, membagikan ulang, serta membantu menaikkan tagar agar informasi tidak \"dikalahkan algoritma\"."
+      }
+    ]
+  },
+  "panel_skeleton": [
+    {
+      "type": "claim_map",
+      "el_id": "demoagustus-p-claim_map"
+    },
+    {
+      "type": "scale_check",
+      "el_id": "demoagustus-p-scale_check"
+    },
+    {
+      "type": "incidence",
+      "el_id": "demoagustus-p-incidence"
+    },
+    {
+      "type": "options",
+      "el_id": "demoagustus-p-options",
+      "option_slots": [
+        {
+          "el_id": "demoagustus-opt-amplify",
+          "label": {
+            "en": "Amplify immediately: like, repost, raise the hashtags",
+            "id": "Langsung ikut mengangkat: beri tanda suka, unggah ulang, naikkan tagar"
+          }
+        },
+        {
+          "el_id": "demoagustus-opt-check-footage",
+          "label": {
+            "en": "Check the date and location of the footage first",
+            "id": "Periksa dulu tanggal dan lokasi rekaman"
+          }
+        },
+        {
+          "el_id": "demoagustus-opt-ground-confirm",
+          "label": {
+            "en": "Wait for confirmation from the location before sharing",
+            "id": "Tunggu konfirmasi dari lokasi sebelum membagikan"
+          }
+        }
+      ]
+    },
+    {
+      "type": "family",
+      "el_id": "demoagustus-p-family"
+    }
+  ],
+  "model": "claude-fable-5"
+}
