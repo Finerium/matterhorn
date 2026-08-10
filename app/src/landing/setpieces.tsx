@@ -177,17 +177,24 @@ export function ProblemSpine() {
   const branches = [0, 1, 2, 3];
   return (
     <svg className="m-l-spine" viewBox="0 0 240 272" aria-hidden="true">
+      {/* Micro-labels, not sentences: the diagram stays schematic (the words live in the
+          numbered beats beside it), but each shape names its role, because a first-time
+          reader saw the unlabelled skeleton as a rendering fault, not a diagram. */}
       <g data-beat="1">
         <rect className="m-l-sp-head" x="4" y="6" width="150" height="38" rx="12" />
+        <text className="m-l-sp-headtxt" x="79" y="29">THE HEADLINE</text>
       </g>
       <g data-beat="2">
         <line className="m-l-sp-rail" x1="34" y1="44" x2="34" y2="78" />
         <rect className="m-l-sp-node" x="4" y="78" width="150" height="34" rx="11" />
+        <text className="m-l-sp-nodetxt" x="79" y="99">REAL FACT</text>
         <rect className="m-l-sp-node" x="4" y="228" width="150" height="34" rx="11" />
+        <text className="m-l-sp-nodetxt" x="79" y="249">REAL FACT</text>
       </g>
       <g data-beat="3">
         <line className="m-l-sp-gap" x1="34" y1="112" x2="34" y2="228" />
         <circle className="m-l-sp-break" cx="34" cy="132" r="9" />
+        <text className="m-l-sp-breaktxt" x="50" y="135">NEVER STATED</text>
       </g>
       <g data-beat="4">
         {branches.map((at) => {
@@ -196,6 +203,9 @@ export function ProblemSpine() {
             <g key={at}>
               <line className="m-l-sp-branch" x1="34" y1={y} x2="168" y2={y} />
               <rect className="m-l-sp-hidden" x="168" y={y - 8} width="68" height="16" rx="8" />
+              <text className="m-l-sp-hiddentxt" x="202" y={y + 3}>
+                HIDDEN
+              </text>
             </g>
           );
         })}
