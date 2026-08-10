@@ -660,3 +660,31 @@ test.describe('AC-PERF-5 scroll smoothness', () => {
     ).toBeLessThan(DROP_BUDGET_PCT);
   });
 });
+
+test.describe('a blocked WebGL probe is not a software renderer', () => {
+  test.use({ contextOptions: { reducedMotion: 'no-preference' } });
+
+  // REGRESSION. Safari's fingerprinting protection returns null from getContext('webgl') on
+  // perfectly GPU-composited machines, and the probe used to read that null as "no GPU" and
+  // ship those readers the static soft page: the whole scroll choreography, gone, for readers
+  // whose machines run it fine. An unanswerable probe must not cost the design; only a renderer
+  // that names a CPU rasterizer is soft, and the CI rasterizers self-identify (AC-PERF-5).
+  test('with WebGL unavailable, the path is a real choreography, never soft', async ({ page }) => {
+    await page.addInitScript(() => {
+      const orig = HTMLCanvasElement.prototype.getContext;
+      HTMLCanvasElement.prototype.getContext = function (
+        this: HTMLCanvasElement,
+        type: string,
+        ...rest: unknown[]
+      ) {
+        if (type === 'webgl' || type === 'experimental-webgl' || type === 'webgl2') return null;
+        return (orig as (this: HTMLCanvasElement, t: string, ...r: unknown[]) => unknown).call(this, type, ...rest);
+      } as typeof orig;
+    });
+    await openLanding(page, DESKTOP, 'native');
+    await expect
+      .poll(() => motionPath(page), { message: 'a choreography path settles' })
+      .not.toBe('(unset)');
+    expect(await motionPath(page), 'a blocked probe keeps the choreography').not.toBe('soft');
+  });
+});

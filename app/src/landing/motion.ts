@@ -60,12 +60,17 @@ const softwareRendered = (): boolean => {
   if ((window as { __mthForceMotion?: string }).__mthForceMotion === 'full') return false;
   try {
     const gl = document.createElement('canvas').getContext('webgl');
-    if (gl === null) return true;
+    // An unavailable probe is not a software renderer. Safari's fingerprinting protection
+    // returns null here on perfectly GPU-composited machines, and treating that null as
+    // "no GPU" shipped those readers the static page. Only a renderer that NAMES a CPU
+    // rasterizer is classified soft; when the probe cannot answer, the choreography runs,
+    // because the CI rasterizers this path exists for (AC-PERF-5) do self-identify.
+    if (gl === null) return false;
     const info = gl.getExtension('WEBGL_debug_renderer_info') as { UNMASKED_RENDERER_WEBGL: number } | null;
     const renderer = String(gl.getParameter(info === null ? gl.RENDERER : info.UNMASKED_RENDERER_WEBGL));
     return /swiftshader|llvmpipe|software|basic render/i.test(renderer);
   } catch {
-    return true;
+    return false;
   }
 };
 
